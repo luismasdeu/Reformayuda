@@ -1,0 +1,1274 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Encuentra las ayudas y subvenciones para reformar o construir tu casa, prepara la solicitud y calcula la deducción del IRPF. Gratis y sin registro.">
+<meta name="theme-color" content="#0D7A63">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<style>
+/* Reset base (equivalente al del prototipo) */
+:root{color-scheme:light;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+body{margin:0;font:14px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+img{max-width:100%}
+[hidden]{display:none!important}
+</style>
+<title>Reformayuda</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Nunito+Sans:opsz,wght@6..12,400;6..12,600;6..12,800&display=swap">
+<style>
+/* Layout: app shell — header with location chip, view tabs (top on desktop, bottom bar on phone), one view at a time */
+:root{
+  --bg:#F3F7F5; --surface:#FFFFFF; --surface-2:#E8F0EC; --ink:#11302A; --muted:#55706A; --line:#D5E2DC;
+  --brand:#0D7A63; --brand-ink:#FFFFFF; --sun:#FFC23D; --coral:#FF6B4A; --sky:#3EA6E8; --leaf:#2DB36F; --orange:#F28A1E; --teal:#16A3A3; --plum:#A35BC9;
+  --ok:#1E9E5A; --warn:#D98A00; --bad:#D9472B;
+  --ok-bg:#DDF4E6; --warn-bg:#FFF1CC; --bad-bg:#FFE2DA; --info-bg:#DDEFFB;
+  --shadow:0 6px 20px rgba(17,48,42,.08);
+  --f-display:"Bricolage Grotesque", "Avenir Next", system-ui, sans-serif;
+  --f-body:"Nunito Sans", "Segoe UI", system-ui, sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0E1A17; --surface:#16251F; --surface-2:#1E3029; --ink:#E6F2EE; --muted:#9DB8B0; --line:#2A3F38;
+  --brand:#33C29E; --brand-ink:#06201A; --sun:#FFCB57; --coral:#FF8466; --sky:#5DB8F0; --leaf:#45C882; --orange:#F59C3F; --teal:#2EC0C0; --plum:#C084E0;
+  --ok:#4CD38A; --warn:#F2B33D; --bad:#FF7A5C;
+  --ok-bg:#163A28; --warn-bg:#3A2F12; --bad-bg:#3D1F18; --info-bg:#132F42;
+  --shadow:0 6px 20px rgba(0,0,0,.35); color-scheme:dark }}
+:root[data-theme="dark"]{
+  --bg:#0E1A17; --surface:#16251F; --surface-2:#1E3029; --ink:#E6F2EE; --muted:#9DB8B0; --line:#2A3F38;
+  --brand:#33C29E; --brand-ink:#06201A; --sun:#FFCB57; --coral:#FF8466; --sky:#5DB8F0; --leaf:#45C882; --orange:#F59C3F; --teal:#2EC0C0; --plum:#C084E0;
+  --ok:#4CD38A; --warn:#F2B33D; --bad:#FF7A5C;
+  --ok-bg:#163A28; --warn-bg:#3A2F12; --bad-bg:#3D1F18; --info-bg:#132F42;
+  --shadow:0 6px 20px rgba(0,0,0,.35); color-scheme:dark }
+
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:15px;line-height:1.5;padding-bottom:84px}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:30;background:var(--bg)}
+h1,h2,h3{font-family:var(--f-display);line-height:1.15;text-wrap:balance;margin:0}
+h1{font-size:clamp(1.7rem,4.5vw,2.6rem);font-weight:800;letter-spacing:-.02em}
+h2{font-size:1.35rem;font-weight:800}
+h3{font-size:1.05rem;font-weight:600}
+p{margin:0}
+a{color:var(--brand)}
+button,input,select{font:inherit;color:inherit}
+:focus-visible{outline:3px solid var(--sun);outline-offset:2px;border-radius:8px}
+.wrap{max-width:1120px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.eyebrow{font-size:.72rem;font-weight:800;letter-spacing:.09em;text-transform:uppercase;color:var(--muted)}
+.muted{color:var(--muted)}
+.ico{width:22px;height:22px;flex:none;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+
+/* header */
+header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--bg);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;gap:12px;padding-block:10px;flex-wrap:wrap}
+.logo{display:flex;align-items:center;gap:8px;font-family:var(--f-display);font-weight:800;font-size:1.3rem;text-decoration:none;color:var(--ink)}
+.logo-mark{width:34px;height:34px;border-radius:10px;background:var(--brand);display:grid;place-items:center;color:var(--brand-ink)}
+.logo b{color:var(--coral)}
+.loc{margin-left:auto;display:flex;align-items:center;gap:6px;background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:4px 6px 4px 12px}
+.loc select{border:0;background:transparent;font-weight:700;max-width:170px;padding:4px}
+.tabs{display:flex;gap:4px}
+.tab{display:flex;align-items:center;gap:6px;border:0;background:transparent;padding:8px 12px;border-radius:999px;font-weight:700;color:var(--muted);cursor:pointer}
+.tab[aria-current="page"]{background:var(--ink);color:var(--bg)}
+.tab .count{background:var(--coral);color:#fff;border-radius:999px;font-size:.7rem;padding:0 6px;min-width:18px;text-align:center}
+@media (max-width:820px){
+  .top .tabs{position:fixed;left:0;right:0;bottom:0;z-index:25;background:var(--surface);border-top:1px solid var(--line);justify-content:space-around;
+    padding:6px max(8px,env(safe-area-inset-right,0px)) calc(6px + env(safe-area-inset-bottom,0px)) max(8px,env(safe-area-inset-left,0px))}
+  .tab{flex-direction:column;gap:2px;font-size:.7rem;padding:6px 8px;position:relative}
+  .tab .count{position:absolute;top:0;right:6px}
+  .loc select{max-width:130px}
+}
+
+.demo{background:var(--warn-bg);color:var(--ink);font-size:.82rem}
+.demo .wrap{padding-block:7px;display:flex;gap:8px;align-items:center}
+
+main{padding-block:22px 40px}
+section.view{display:flex;flex-direction:column;gap:22px}
+
+/* hero */
+.hero{display:grid;grid-template-columns:1.3fr 1fr;gap:20px;align-items:stretch}
+.hero-main{background:var(--brand);color:var(--brand-ink);border-radius:24px;padding:26px;display:flex;flex-direction:column;gap:16px;position:relative;overflow:hidden}
+.hero-main::after{content:"";position:absolute;right:-50px;top:-50px;width:190px;height:190px;border-radius:50%;background:var(--sun);opacity:.9}
+.hero-main::before{content:"";position:absolute;right:70px;top:90px;width:70px;height:70px;border-radius:18px;background:var(--coral);transform:rotate(18deg);opacity:.9}
+.hero-main > *{position:relative;z-index:1;max-width:520px}
+.search{display:flex;align-items:center;gap:8px;background:var(--surface);color:var(--ink);border-radius:16px;padding:6px 6px 6px 14px;box-shadow:var(--shadow)}
+.search input{border:0;background:transparent;flex:1;min-width:0;padding:8px 0;outline:none}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:6px;border:0;border-radius:12px;padding:10px 16px;font-weight:800;cursor:pointer;text-decoration:none;background:var(--ink);color:var(--bg)}
+.btn.alt{background:var(--surface-2);color:var(--ink)}
+.btn.brand{background:var(--brand);color:var(--brand-ink)}
+.btn.sm{padding:6px 10px;font-size:.85rem;border-radius:10px}
+.btn:disabled{opacity:.45;cursor:not-allowed}
+.stats{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.stat{background:var(--surface);border-radius:20px;padding:16px;display:flex;flex-direction:column;gap:4px;border:1px solid var(--line);cursor:pointer;text-align:left}
+.stat b{font-family:var(--f-display);font-size:2rem;font-weight:800;font-variant-numeric:tabular-nums;line-height:1}
+.stat.s1 b{color:var(--ok)} .stat.s2 b{color:var(--bad)} .stat.s3 b{color:var(--sky)} .stat.s4 b{color:var(--orange)}
+
+/* quick icons */
+.quick{display:grid;grid-template-columns:repeat(8,1fr);gap:10px}
+.qi{display:flex;flex-direction:column;align-items:center;gap:8px;border:0;background:transparent;cursor:pointer;font-weight:700;font-size:.82rem;text-align:center;padding:4px}
+.qi span.b{width:62px;height:62px;border-radius:20px;display:grid;place-items:center;color:#fff;transition:transform .15s}
+.qi:hover span.b{transform:translateY(-3px) rotate(-4deg)}
+.qi .ico{width:28px;height:28px}
+@media (max-width:820px){.hero{grid-template-columns:1fr}.quick{grid-template-columns:repeat(4,1fr)}}
+.c-eficiencia{background:var(--leaf)} .c-solar{background:var(--sun);color:#3A2A00!important} .c-accesibilidad{background:var(--sky)}
+.c-rehabilitacion{background:var(--coral)} .c-construccion{background:var(--orange)} .c-ventanas{background:var(--teal)} .c-aerotermia{background:var(--plum)} .c-irpf{background:var(--ink);color:var(--bg)!important}
+
+.row-head{display:flex;align-items:baseline;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.linkbtn{border:0;background:none;color:var(--brand);font-weight:800;cursor:pointer;padding:0}
+
+/* cards */
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:14px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:16px;display:flex;flex-direction:column;gap:10px;min-width:0}
+.card-top{display:flex;gap:12px;align-items:flex-start}
+.card-ico{width:44px;height:44px;border-radius:14px;display:grid;place-items:center;color:#fff;flex:none}
+.card-title{flex:1;min-width:0}
+.card-title h3{font-size:1rem}
+.org{font-size:.8rem;color:var(--muted)}
+.fav{border:0;background:var(--surface-2);width:36px;height:36px;border-radius:50%;display:grid;place-items:center;cursor:pointer;color:var(--muted);flex:none}
+.fav[aria-pressed="true"]{color:var(--coral)}
+.fav[aria-pressed="true"] .ico{fill:var(--coral)}
+.amount{font-family:var(--f-display);font-weight:800;font-size:1.25rem}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{font-size:.74rem;font-weight:800;padding:3px 9px;border-radius:999px;background:var(--surface-2);color:var(--ink);display:inline-flex;align-items:center;gap:4px;white-space:nowrap}
+.chip.ok{background:var(--ok-bg);color:var(--ok)} .chip.warn{background:var(--warn-bg);color:var(--warn)} .chip.bad{background:var(--bad-bg);color:var(--bad)} .chip.info{background:var(--info-bg);color:var(--sky)}
+.chip.irpf{background:var(--ink);color:var(--bg)}
+.chip .ico{width:13px;height:13px}
+.card-foot{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-top:auto;padding-top:6px;border-top:1px dashed var(--line);flex-wrap:wrap}
+.deadline{font-size:.85rem;font-weight:700;display:flex;align-items:center;gap:6px}
+.bar{height:6px;border-radius:6px;background:var(--surface-2);overflow:hidden}
+.bar i{display:block;height:100%;border-radius:6px}
+
+/* filters */
+.filters{display:flex;flex-direction:column;gap:12px;background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:14px}
+.frow{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.pill{border:1.5px solid var(--line);background:var(--bg);border-radius:999px;padding:6px 12px;font-weight:700;font-size:.85rem;cursor:pointer;display:inline-flex;align-items:center;gap:6px}
+.pill .dot{width:10px;height:10px;border-radius:50%}
+.pill[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.flabel{font-size:.72rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);min-width:70px}
+select.sel,input.inp{background:var(--bg);border:1.5px solid var(--line);border-radius:12px;padding:8px 10px;min-width:0}
+.empty{padding:30px;text-align:center;border:2px dashed var(--line);border-radius:20px;color:var(--muted)}
+
+/* drawer */
+.scrim{position:fixed;inset:0;background:rgba(5,20,16,.45);z-index:40}
+.drawer{position:fixed;top:0;right:0;bottom:0;width:min(560px,100%);background:var(--bg);z-index:41;overflow-y:auto;
+  padding:calc(18px + env(safe-area-inset-top,0px)) max(18px,env(safe-area-inset-right,0px)) calc(24px + env(safe-area-inset-bottom,0px)) 18px;display:flex;flex-direction:column;gap:16px;box-shadow:-10px 0 40px rgba(0,0,0,.2)}
+.drawer .close{align-self:flex-end}
+.box{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:16px;display:flex;flex-direction:column;gap:10px}
+ul.list{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:8px}
+ul.list li{display:flex;gap:10px;align-items:flex-start}
+ul.list li .ico{color:var(--brand);width:18px;height:18px;margin-top:2px}
+ol.steps{margin:0;padding:0;list-style:none;counter-reset:s;display:flex;flex-direction:column;gap:10px}
+ol.steps li{counter-increment:s;display:flex;gap:10px}
+ol.steps li::before{content:counter(s);flex:none;width:26px;height:26px;border-radius:50%;background:var(--sun);color:#3A2A00;font-weight:800;display:grid;place-items:center;font-size:.85rem}
+
+/* wizard */
+.wiz-head{display:flex;gap:8px;flex-wrap:wrap}
+.wstep{flex:1;min-width:120px;display:flex;align-items:center;gap:8px;padding:10px 12px;border-radius:14px;background:var(--surface);border:1.5px solid var(--line);cursor:pointer;font-weight:700;font-size:.88rem;text-align:left}
+.wstep .n{width:24px;height:24px;border-radius:50%;background:var(--surface-2);display:grid;place-items:center;font-size:.8rem;flex:none}
+.wstep[aria-current="step"]{border-color:var(--brand)}
+.wstep[aria-current="step"] .n{background:var(--brand);color:var(--brand-ink)}
+.wstep.done .n{background:var(--ok);color:#fff}
+.check{display:flex;gap:10px;align-items:flex-start;padding:10px 12px;border-radius:12px;background:var(--bg);cursor:pointer}
+.check input{width:20px;height:20px;accent-color:var(--brand);flex:none;margin-top:1px}
+.doc{display:flex;align-items:center;gap:10px;padding:10px 12px;border-radius:12px;background:var(--bg);flex-wrap:wrap}
+.doc .name{flex:1;min-width:160px}
+.doc .file{font-size:.8rem;color:var(--ok);font-weight:700}
+.upl{position:relative;overflow:hidden}
+.upl input{position:absolute;inset:0;opacity:0;cursor:pointer}
+.form{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.form label{display:flex;flex-direction:column;gap:4px;font-weight:700;font-size:.85rem}
+.form .full{grid-column:1/-1}
+@media (max-width:560px){.form{grid-template-columns:1fr}}
+.progress{display:flex;align-items:center;gap:10px;font-weight:800}
+.progress .bar{flex:1;height:10px}
+pre.sum{white-space:pre-wrap;background:var(--bg);border-radius:12px;padding:12px;font-size:.85rem;margin:0;font-family:ui-monospace,Menlo,monospace;overflow-x:auto}
+.two{display:grid;grid-template-columns:1.2fr 1fr;gap:16px;align-items:start}
+@media (max-width:820px){.two{grid-template-columns:1fr}}
+
+/* irpf */
+.mods{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+@media (max-width:620px){.mods{grid-template-columns:1fr}}
+.mod{border:2px solid var(--line);background:var(--surface);border-radius:18px;padding:14px;cursor:pointer;text-align:left;display:flex;flex-direction:column;gap:4px}
+.mod b{font-family:var(--f-display);font-size:2rem;font-weight:800;line-height:1}
+.mod[aria-pressed="true"]{border-color:var(--brand);background:var(--ok-bg)}
+.mod small{color:var(--muted);font-size:.8rem}
+.tbl-wrap{overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:.88rem}
+th{text-align:left;font-size:.72rem;letter-spacing:.07em;text-transform:uppercase;color:var(--muted);padding:6px 8px;border-bottom:1px solid var(--line)}
+td{padding:6px 8px;border-bottom:1px solid var(--line);vertical-align:middle}
+td input,td select{width:100%;min-width:90px;background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:5px 7px}
+td.num,th.num{text-align:right;font-variant-numeric:tabular-nums}
+.rm{border:0;background:none;color:var(--bad);cursor:pointer;padding:4px}
+.result{background:var(--ink);color:var(--bg);border-radius:20px;padding:18px;display:flex;flex-direction:column;gap:8px}
+.result .big{font-family:var(--f-display);font-size:2.6rem;font-weight:800;color:var(--sun);line-height:1;font-variant-numeric:tabular-nums}
+.kv{display:flex;justify-content:space-between;gap:10px;font-size:.9rem;font-variant-numeric:tabular-nums}
+.alert{display:flex;gap:10px;align-items:flex-start;padding:10px 12px;border-radius:12px;font-size:.88rem}
+.alert.bad{background:var(--bad-bg)} .alert.ok{background:var(--ok-bg)} .alert.info{background:var(--info-bg)}
+.drop{border:2px dashed var(--brand);border-radius:16px;padding:18px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:6px;background:var(--bg)}
+.drop.over{background:var(--ok-bg)}
+
+/* avisos */
+.toggle{display:flex;align-items:center;gap:12px;justify-content:space-between;padding:10px 0;border-bottom:1px solid var(--line)}
+.sw{appearance:none;width:46px;height:26px;border-radius:999px;background:var(--line);position:relative;cursor:pointer;flex:none;transition:background .15s}
+.sw::after{content:"";position:absolute;top:3px;left:3px;width:20px;height:20px;border-radius:50%;background:#fff;transition:left .15s}
+.sw:checked{background:var(--brand)} .sw:checked::after{left:23px}
+.src{display:flex;gap:12px;align-items:flex-start}
+.src .card-ico{width:38px;height:38px;border-radius:12px}
+.toast{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(96px + env(safe-area-inset-bottom,0px));background:var(--ink);color:var(--bg);padding:10px 16px;border-radius:12px;font-weight:700;z-index:60}
+.btn.danger{background:var(--bad);color:#fff}
+.foot{border-top:1px solid var(--line);font-size:.85rem;color:var(--muted)}
+.foot .wrap{padding-block:18px;display:flex;flex-direction:column;gap:10px}
+.cookie{position:fixed;left:0;right:0;bottom:0;z-index:50;padding:0 max(12px,env(safe-area-inset-right,0px)) calc(12px + env(safe-area-inset-bottom,0px)) max(12px,env(safe-area-inset-left,0px))}
+.cookie{pointer-events:none}
+.cookie .in{pointer-events:auto;max-width:760px;margin:0 auto;background:var(--surface);border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow);padding:16px;display:flex;flex-direction:column;gap:10px}
+@media (max-width:820px){.cookie{bottom:calc(64px + env(safe-area-inset-bottom,0px));padding-bottom:12px}}
+.legal{display:flex;flex-direction:column;gap:10px;max-width:65ch}
+.legal h3{margin-top:8px}
+.legal p,.legal li{font-size:.9rem}
+.legal ul{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:4px}
+.legal .ph{background:var(--warn-bg);padding:0 4px;border-radius:4px}
+.legal-mini{display:grid;gap:4px;font-size:.8rem;color:var(--muted);border-top:1px dashed var(--line);padding-top:8px}
+.legal-mini b{color:var(--ink);margin-right:6px}
+button.loc{font:inherit;font-weight:700;color:var(--ink);cursor:pointer;padding:7px 14px;max-width:240px}
+#loc-label{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;min-width:0}
+.onb{position:fixed;inset:0;z-index:47;background:rgba(5,20,16,.5);display:grid;place-items:center;padding:calc(16px + env(safe-area-inset-top,0px)) max(16px,env(safe-area-inset-right,0px)) calc(16px + env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px));overflow-y:auto}
+.onb-card{background:var(--surface);border-radius:24px;width:min(560px,100%);padding:22px;display:flex;flex-direction:column;gap:14px;box-shadow:0 20px 50px rgba(0,0,0,.3)}
+.onb-dots{display:flex;gap:6px}
+.onb-dots i{flex:1;height:6px;border-radius:6px;background:var(--surface-2)}
+.onb-dots i.on{background:var(--brand)}
+.opts{display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:8px}
+.opt{display:flex;align-items:center;gap:10px;border:2px solid var(--line);background:var(--bg);border-radius:14px;padding:10px;cursor:pointer;font-weight:700;text-align:left;font-size:.9rem}
+.opt .card-ico{width:34px;height:34px;border-radius:10px}
+.opt .card-ico .ico{width:18px;height:18px}
+.opt[aria-pressed="true"]{border-color:var(--brand);background:var(--ok-bg)}
+.opts.col{grid-template-columns:1fr}
+.perfil{display:flex;align-items:center;gap:10px;flex-wrap:wrap;background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:10px 14px}
+.chip.fit{background:var(--sun);color:#3A2A00}
+/* chat */
+.chat-fab{position:fixed;right:max(16px,env(safe-area-inset-right,0px));bottom:calc(20px + env(safe-area-inset-bottom,0px));z-index:35;display:flex;align-items:center;gap:8px;border:0;border-radius:999px;padding:12px 18px 12px 14px;background:var(--coral);color:#fff;font-weight:800;cursor:pointer;box-shadow:var(--shadow)}
+.chat{position:fixed;right:max(16px,env(safe-area-inset-right,0px));bottom:calc(20px + env(safe-area-inset-bottom,0px));z-index:45;width:min(390px,calc(100% - 32px));height:min(600px,calc(100% - 120px));background:var(--surface);border:1px solid var(--line);border-radius:22px;box-shadow:0 20px 50px rgba(0,0,0,.25);display:flex;flex-direction:column;overflow:hidden}
+.chat-head{display:flex;align-items:center;gap:10px;padding:12px 14px;background:var(--brand);color:var(--brand-ink)}
+.chat-head .close{margin-left:auto;border:0;background:rgba(255,255,255,.2);color:inherit;width:32px;height:32px;border-radius:50%;cursor:pointer;display:grid;place-items:center}
+.chat-log{flex:1;overflow-y:auto;padding:14px;display:flex;flex-direction:column;gap:10px;background:var(--bg)}
+.msg{max-width:88%;padding:10px 12px;border-radius:16px;font-size:.92rem;min-width:0}
+.msg.bot{background:var(--surface);border:1px solid var(--line);border-bottom-left-radius:4px;align-self:flex-start}
+.msg.me{background:var(--ink);color:var(--bg);border-bottom-right-radius:4px;align-self:flex-end}
+.msg p+p{margin-top:6px}
+.sugg{display:flex;flex-wrap:wrap;gap:6px}
+.sugg button{border:1.5px solid var(--brand);background:var(--surface);color:var(--brand);border-radius:999px;padding:5px 10px;font-weight:700;font-size:.8rem;cursor:pointer;text-align:left}
+.chat-in{display:flex;gap:8px;padding:10px;border-top:1px solid var(--line)}
+.chat-in input{flex:1;min-width:0;background:var(--bg);border:1.5px solid var(--line);border-radius:12px;padding:9px 12px}
+@media (max-width:820px){
+  .chat-fab{bottom:calc(76px + env(safe-area-inset-bottom,0px));padding:12px}
+  .chat-fab .lbl{display:none}
+  .chat{right:0;left:0;bottom:0;width:100%;height:85%;border-radius:22px 22px 0 0;padding-bottom:env(safe-area-inset-bottom,0px)}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-home" viewBox="0 0 24 24"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/><path d="M10 20v-6h4v6"/></symbol>
+  <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></symbol>
+  <symbol id="i-eficiencia" viewBox="0 0 24 24"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></symbol>
+  <symbol id="i-solar" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></symbol>
+  <symbol id="i-accesibilidad" viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 9l3-3 3 3M9 15l3 3 3-3"/></symbol>
+  <symbol id="i-rehabilitacion" viewBox="0 0 24 24"><path d="M4 21V5l8-3 8 3v16"/><path d="M9 21v-4h6v4M8 8h2M14 8h2M8 12h2M14 12h2"/></symbol>
+  <symbol id="i-construccion" viewBox="0 0 24 24"><path d="M3 21h18M6 21V8l6-5 6 5v13"/><path d="M14 13l-4 4M10 13l4 4"/></symbol>
+  <symbol id="i-ventanas" viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="18" rx="1"/><path d="M12 3v18M4 12h16"/></symbol>
+  <symbol id="i-aerotermia" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="10" cy="12" r="4"/><path d="M10 8v8M6 12h8M17 9h1M17 12h1M17 15h1"/></symbol>
+  <symbol id="i-irpf" viewBox="0 0 24 24"><path d="M6 3h9l4 4v14H6z"/><path d="M15 3v4h4"/><path d="M14 11.5a3 3 0 100 4M9 13h4M9 14.5h4"/></symbol>
+  <symbol id="i-doc" viewBox="0 0 24 24"><path d="M6 3h9l4 4v14H6z"/><path d="M15 3v4h4M9 12h6M9 16h6"/></symbol>
+  <symbol id="i-bell" viewBox="0 0 24 24"><path d="M6 16V11a6 6 0 1112 0v5l2 2H4z"/><path d="M10 21h4"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s7-6.5 7-12a7 7 0 10-14 0c0 5.5 7 12 7 12z"/><circle cx="12" cy="9" r="2.5"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12l5 5 9-10"/></symbol>
+  <symbol id="i-heart" viewBox="0 0 24 24"><path d="M12 20s-7-4.4-7-10a4 4 0 017-2.6A4 4 0 0119 10c0 5.6-7 10-7 10z"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+  <symbol id="i-upload" viewBox="0 0 24 24"><path d="M12 16V4M7 9l5-5 5 5"/><path d="M4 16v4h16v-4"/></symbol>
+  <symbol id="i-x" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></symbol>
+  <symbol id="i-ext" viewBox="0 0 24 24"><path d="M14 4h6v6M20 4l-9 9"/><path d="M18 14v6H4V6h6"/></symbol>
+  <symbol id="i-send" viewBox="0 0 24 24"><path d="M4 12l16-8-6 16-2-7z"/></symbol>
+  <symbol id="i-trash" viewBox="0 0 24 24"><path d="M4 7h16M9 7V4h6v3M6 7l1 13h10l1-13"/></symbol>
+  <symbol id="i-copy" viewBox="0 0 24 24"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V4H4v12h4"/></symbol>
+  <symbol id="i-boe" viewBox="0 0 24 24"><path d="M4 4h12l4 4v12H4z"/><path d="M8 10h8M8 14h8M8 18h5"/></symbol>
+  <symbol id="i-db" viewBox="0 0 24 24"><ellipse cx="12" cy="6" rx="7" ry="3"/><path d="M5 6v12c0 1.7 3.1 3 7 3s7-1.3 7-3V6M5 12c0 1.7 3.1 3 7 3s7-1.3 7-3"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z"/><path d="M8 10h8M8 13h5"/></symbol>
+  <symbol id="i-city" viewBox="0 0 24 24"><path d="M3 21h18M5 21V10l5-3v14M10 21V4l9 4v13M13 10h3M13 14h3M13 18h3"/></symbol>
+</svg>
+
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="#inicio" data-go="inicio"><img src="icons/icon.svg" width="34" height="34" alt="" style="border-radius:10px"><span>Reform<b>ayuda</b></span></a>
+    <button class="loc" id="loc-btn" title="Dónde está la obra" aria-label="Cambiar dónde está la obra">
+      <svg class="ico" style="width:18px;height:18px;color:var(--coral)"><use href="#i-pin"/></svg>
+      <span id="loc-label"></span><span aria-hidden="true" class="muted">▾</span>
+    </button>
+    <nav class="tabs" aria-label="Secciones">
+      <button class="tab" data-go="inicio"><svg class="ico"><use href="#i-home"/></svg>Inicio</button>
+      <button class="tab" data-go="ayudas"><svg class="ico"><use href="#i-search"/></svg>Ayudas</button>
+      <button class="tab" data-go="solicitud"><svg class="ico"><use href="#i-send"/></svg>Solicitar</button>
+      <button class="tab" data-go="irpf"><svg class="ico"><use href="#i-irpf"/></svg>IRPF</button>
+      <button class="tab" data-go="avisos"><svg class="ico"><use href="#i-bell"/></svg>Avisos<span class="count" id="fav-count" hidden>0</span></button>
+    </nav>
+  </div>
+</header>
+<div class="demo"><div class="wrap"><svg class="ico" style="width:18px;height:18px;color:var(--warn)"><use href="#i-clock"/></svg>
+  <span><b>Versión beta.</b> Revisamos los boletines oficiales cada día y vamos añadiendo ayudas. Comprueba siempre plazos e importes en la fuente oficial antes de solicitar.</span></div></div>
+
+<main class="wrap">
+
+<!-- INICIO -->
+<section class="view" id="v-inicio">
+  <div id="home-alerts"></div>
+  <div class="hero">
+    <div class="hero-main">
+      <span class="eyebrow" style="color:inherit;opacity:.85">Ayudas para reformar o construir tu casa</span>
+      <h1>Encuentra tu subvención y pídela sin perderte en el BOE</h1>
+      <form class="search" id="hero-search" role="search">
+        <svg class="ico" style="color:var(--muted)"><use href="#i-search"/></svg>
+        <input id="hero-q" placeholder="Ventanas, ascensor, placas solares…" aria-label="Buscar ayudas">
+        <button class="btn brand" type="submit">Buscar</button>
+      </form>
+      <span style="display:flex;gap:8px;align-items:center;font-weight:700;font-size:.9rem">✓ Sin registro ni email. Busca, compara y calcula gratis.</span>
+    </div>
+    <div class="stats" id="stats"></div>
+  </div>
+
+  <div id="perfil-bar"></div>
+  <div id="fit-wrap" hidden><div class="row-head" style="margin-bottom:12px"><h2>Recomendadas para tu obra</h2><button class="linkbtn" id="fit-all">Ver todas →</button></div><div class="grid" id="home-fit"></div></div>
+
+  <div class="row-head"><h2>¿Qué vas a hacer?</h2><span class="muted">Toca un icono y te mostramos las ayudas</span></div>
+  <div class="quick" id="quick"></div>
+
+  <div class="row-head"><h2>Cierran pronto en <span id="loc-name-1"></span></h2><button class="linkbtn" data-go="ayudas">Ver todas →</button></div>
+  <div class="grid" id="home-soon"></div>
+
+  <div class="box" style="flex-direction:row;align-items:center;gap:16px;flex-wrap:wrap;background:var(--ink);color:var(--bg);border:0">
+    <span class="card-ico c-solar" style="width:54px;height:54px"><svg class="ico"><use href="#i-irpf"/></svg></span>
+    <div style="flex:1;min-width:220px"><h3 style="font-size:1.2rem">Tu reforma puede desgravar hasta un 60 % en el IRPF</h3>
+      <p style="opacity:.8">Pon el coste de tu obra y calcula cuánto te devuelve Hacienda por mejorar la eficiencia energética.</p></div>
+    <button class="btn" style="background:var(--sun);color:#3A2A00" data-go="irpf">Calcular deducción</button>
+  </div>
+</section>
+
+<!-- AYUDAS -->
+<section class="view" id="v-ayudas" hidden>
+  <div class="row-head"><h1 style="font-size:1.9rem">Ayudas para tu obra</h1><span class="muted" id="res-count"></span></div>
+  <div class="filters">
+    <div class="search" style="box-shadow:none;border:1.5px solid var(--line);background:var(--bg)">
+      <svg class="ico" style="color:var(--muted)"><use href="#i-search"/></svg>
+      <input id="q" placeholder="Busca por palabra: aislamiento, rampa, aerotermia…" aria-label="Buscar">
+    </div>
+    <div class="frow"><span class="flabel">Obra</span><div class="frow" id="f-tipo"></div></div>
+    <div class="frow"><span class="flabel">Estado</span><div class="frow" id="f-estado"></div></div>
+    <div class="frow"><span class="flabel">Ámbito</span><div class="frow" id="f-ambito"></div></div>
+    <div class="frow"><span class="flabel">Para</span><div class="frow" id="f-dest"></div>
+      <span class="flabel" style="margin-left:auto;min-width:0">Orden</span>
+      <select class="sel" id="f-sort" aria-label="Ordenar"><option value="fit">Para ti</option><option value="plazo">Cierre más próximo</option><option value="importe">Mayor importe</option><option value="ambito">Más cercana (pueblo y provincia primero)</option></select>
+    </div>
+  </div>
+  <div class="grid" id="list"></div>
+</section>
+
+<!-- SOLICITUD -->
+<section class="view" id="v-solicitud" hidden>
+  <div class="row-head"><h1 style="font-size:1.9rem">Asistente de solicitud</h1>
+    <label class="frow"><span class="flabel">Ayuda</span><select class="sel" id="w-aid" aria-label="Ayuda a solicitar" style="max-width:340px"></select></label></div>
+  <div class="wiz-head" id="w-head"></div>
+  <div class="two">
+    <div class="box" id="w-body"></div>
+    <div class="box" id="w-side"></div>
+  </div>
+</section>
+
+<!-- IRPF -->
+<section class="view" id="v-irpf" hidden>
+  <div class="row-head"><h1 style="font-size:1.9rem">Deducción en el IRPF por tu reforma</h1></div>
+  <p class="muted" style="max-width:70ch">Deducciones estatales por obras de mejora de la eficiencia energética (disposición adicional 50.ª de la Ley del IRPF). Necesitas certificado energético antes y después de la obra y pagar por tarjeta o transferencia, nunca en efectivo.</p>
+  <div class="mods" id="mods"></div>
+  <div class="two">
+    <div class="box">
+      <div class="row-head"><h2>Tu obra</h2><span class="chip" id="o-ej">Ejemplo</span></div>
+      <form class="form" id="obra-form">
+        <label class="full">Coste de la obra, IVA incluido (€)<input class="inp" id="o-coste" inputmode="decimal" placeholder="Ej.: 11.200"></label>
+        <label>Subvenciones recibidas para esta obra (€)<input class="inp" id="o-subv" inputmode="decimal" placeholder="0"></label>
+        <label>¿Cómo la has pagado?<select class="sel" id="o-pago"><option value="banco">Tarjeta o transferencia</option><option value="mixto">Una parte en efectivo</option><option value="efectivo">Todo en efectivo</option></select></label>
+        <label class="full" id="o-cash-wrap" hidden>Parte pagada en efectivo (€)<input class="inp" id="o-cash" inputmode="decimal"></label>
+      </form>
+      <div class="alert info"><span>Guarda tú las facturas y los justificantes de pago: Hacienda puede pedírtelos durante 4 años. Aquí no se suben archivos.</span></div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:14px">
+      <div class="result" id="irpf-result"></div>
+      <div class="box">
+        <h3>Requisitos para deducir</h3>
+        <div id="irpf-req" style="display:flex;flex-direction:column;gap:6px"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AVISOS -->
+<section class="view" id="v-avisos" hidden>
+  <div class="row-head"><h1 style="font-size:1.9rem">Avisos, plazos y tus datos</h1></div>
+  <div class="two">
+    <div style="display:flex;flex-direction:column;gap:14px">
+      <div class="box"><h2>Mis ayudas guardadas</h2><div id="fav-list" style="display:flex;flex-direction:column;gap:10px"></div></div>
+      <div class="box" id="privacy-box"></div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:14px">
+      <div class="box"><h2>Avísame cuando…</h2><p class="muted" style="font-size:.85rem">Te avisamos al abrir Reformayuda, sin email ni cuenta. Para que no se te pase, añade los plazos a tu calendario desde cada ayuda. En la app instalada en el móvil también llegarán como notificación.</p><div id="alerts"></div></div>
+      <div class="box"><h2>De dónde salen los datos</h2><div id="sources" style="display:flex;flex-direction:column;gap:12px"></div>
+        <p class="muted" style="font-size:.82rem" id="sync"></p></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="foot"><div class="wrap">
+  <div><b style="color:var(--ink)">Reformayuda</b> · Información orientativa sobre ayudas públicas a la vivienda. No somos un organismo oficial ni presentamos solicitudes: lo que vale es lo publicado en el boletín oficial.</div>
+  <nav class="frow" aria-label="Legal"><button class="linkbtn" data-legal="aviso">Aviso legal</button><button class="linkbtn" data-legal="privacidad">Privacidad</button><button class="linkbtn" data-legal="cookies">Cookies</button><button class="linkbtn" data-go="avisos">Mis datos</button></nav>
+</div></footer>
+
+<div class="cookie" id="cookie" hidden role="region" aria-label="Aviso de cookies"><div class="in">
+  <b>Tu privacidad, primero</b>
+  <p style="font-size:.9rem">Guardamos en tu dispositivo lo necesario para que la app funcione: tu zona, favoritos y borradores. Si aceptas, también mediremos el uso de forma anónima para mejorarla. Sin publicidad. <button class="linkbtn" data-legal="cookies">Más información</button></p>
+  <div class="frow"><button class="btn sm" id="ck-rej">Solo necesarias</button><button class="btn sm" id="ck-acc">Aceptar</button><button class="btn alt sm" data-legal="cookies">Configurar</button></div>
+</div></div>
+
+<button class="chat-fab" id="chat-fab" aria-label="Abrir el asistente de dudas"><svg class="ico"><use href="#i-chat"/></svg><span class="lbl">¿Dudas?</span></button>
+<section class="chat" id="chat" hidden aria-label="Asistente de dudas">
+  <div class="chat-head"><span class="logo-mark" style="background:var(--sun);color:#3A2A00"><svg class="ico"><use href="#i-chat"/></svg></span>
+    <div><b>Pregunta a Reformayuda</b><div style="font-size:.75rem;opacity:.85">Respuestas orientativas · no sale de tu móvil</div></div>
+    <button class="close" id="chat-close" aria-label="Cerrar"><svg class="ico" style="width:16px;height:16px"><use href="#i-x"/></svg></button></div>
+  <div class="chat-log" id="chat-log" aria-live="polite"></div>
+  <form class="chat-in" id="chat-form"><input id="chat-q" placeholder="Ej.: ¿ayudas para el tejado?" aria-label="Tu pregunta" autocomplete="off"><button class="btn brand" type="submit" aria-label="Enviar"><svg class="ico" style="width:18px;height:18px"><use href="#i-send"/></svg></button></form>
+</section>
+
+<div class="onb" id="onb" hidden role="dialog" aria-modal="true" aria-label="Personaliza tus ayudas"><div class="onb-card" id="onb-card"></div></div>
+<div class="scrim" id="scrim" hidden></div>
+<aside class="drawer" id="drawer" hidden aria-modal="true" role="dialog"></aside>
+<div class="toast" id="toast" hidden></div>
+
+<script>
+const TODAY = new Date(); TODAY.setHours(0,0,0,0);
+const CCAA = ["Andalucía","Aragón","Asturias","Illes Balears","Canarias","Cantabria","Castilla y León","Castilla-La Mancha","Cataluña","Comunitat Valenciana","Extremadura","Galicia","Comunidad de Madrid","Región de Murcia","Navarra","País Vasco","La Rioja","Ceuta","Melilla"];
+const TIPOS = {
+  eficiencia:{n:"Eficiencia",l:"Aislamiento y eficiencia"}, solar:{n:"Placas solares",l:"Autoconsumo solar"},
+  aerotermia:{n:"Aerotermia",l:"Calefacción y aerotermia"}, ventanas:{n:"Ventanas",l:"Ventanas y cerramientos"},
+  accesibilidad:{n:"Accesibilidad",l:"Ascensor y accesibilidad"}, rehabilitacion:{n:"Rehabilitar",l:"Rehabilitar edificio"},
+  construccion:{n:"Construir",l:"Construir vivienda"}
+};
+const PERM={
+  dr:{l:"Declaración responsable",c:"ok",d:"Presentas un papel en el ayuntamiento y puedes empezar"},
+  dep:{l:"Depende de la obra",c:"warn",d:"Unas partes con declaración, otras con licencia"},
+  lic:{l:"Licencia de obra",c:"bad",d:"Tienes que esperar a que el ayuntamiento te la dé"}};
+const PERM_T={
+  eficiencia:["dep","Aislar por dentro: declaración responsable. Aislar la fachada o el tejado por fuera: licencia en muchos municipios."],
+  solar:["dr","En la mayoría de comunidades basta con declaración responsable o comunicación previa. En edificios protegidos o suelo rústico, licencia."],
+  aerotermia:["dr","Declaración responsable. Si la máquina exterior va en la fachada o en el tejado común, avisa también a la comunidad."],
+  ventanas:["dr","Declaración responsable si mantienes el aspecto de la fachada. Si lo cambias, licencia y permiso de la comunidad."],
+  accesibilidad:["dep","Rampas, baño adaptado o salvaescaleras: declaración responsable. Ascensor nuevo: licencia con proyecto."],
+  rehabilitacion:["lic","Si tocas estructura, fachada o tejado: licencia. Si solo son acabados interiores: declaración responsable."],
+  construccion:["lic","Siempre licencia de obra mayor, con proyecto de arquitecto."]};
+const permLevel=a=>a.tipo.map(t=>PERM_T[t][0]).reduce((m,x)=>["dr","dep","lic"].indexOf(x)>["dr","dep","lic"].indexOf(m)?x:m,"dr");
+function permBox(a){return `<div class="box"><h3>¿Licencia o declaración responsable?</h3>
+   <ul class="list">${a.tipo.map(t=>{const [lv,tx]=PERM_T[t];return `<li style="flex-direction:column;gap:4px"><span class="chips"><span class="chip">${TIPOS[t].n}</span><span class="chip ${PERM[lv].c}">${PERM[lv].l}</span></span><span style="font-size:.9rem">${tx}</span></li>`}).join("")}</ul>
+   <p class="muted" style="font-size:.82rem">Con <b>declaración responsable</b> empiezas al presentarla. Con <b>licencia</b> esperas a que te la concedan. Lo decide cada ayuntamiento: confírmalo antes de empezar.</p></div>`}
+const BOE="https://www.boe.es/", BDNS="https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias", AEAT="https://sede.agenciatributaria.gob.es/", MIVAU="https://www.mivau.gob.es/";
+
+let AIDS = [], META = {};
+
+/* ---------- state ---------- */
+const PFX="rfm_";
+const store = {
+  get(k,d){try{const v=localStorage.getItem(PFX+k);return v?JSON.parse(v):d}catch(e){return d}},
+  set(k,v){try{localStorage.setItem(PFX+k,JSON.stringify(v))}catch(e){}}
+};
+const S = {
+  ccaa: store.get("ccaa","Comunidad de Madrid"),
+  ...store.get("loc",{prov:"",muni:"",hab:0}), ambito:"todas",
+  favs: new Set(store.get("favs",[])),
+  q:"", tipos:new Set(), estado:"activas", dest:"todas", sort:"plazo",
+  wiz: store.get("wiz",{}), wAid:"mad-rehab", wStep:0,
+  mod: store.get("mod",40),
+  obra: store.get("obra",{coste:11200,subv:0,pago:"banco",cash:0,ej:true}),
+  alerts: Object.assign({nuevas:true,cierre:true,abre:true},store.get("alerts",{})),
+  perfil: store.get("perfil",null)
+};
+const $=s=>document.querySelector(s);
+const PREV_VISIT=(()=>{try{return localStorage.getItem("rfm_lastvisit")}catch(e){return null}})();
+const esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const icon=(n,cls="ico",st="")=>`<svg class="${cls}" style="${st}"><use href="#i-${n}"/></svg>`;
+const eur=n=>new Intl.NumberFormat("es-ES",{style:"currency",currency:"EUR",maximumFractionDigits:0}).format(n||0);
+const fdate=s=>new Date(s+"T00:00").toLocaleDateString("es-ES",{day:"numeric",month:"short",year:"numeric"});
+const days=s=>Math.round((new Date(s+"T00:00")-TODAY)/864e5);
+const pad=n=>String(n).padStart(2,"0");
+const shiftDate=(s,n)=>{const d=new Date(s+"T00:00");d.setDate(d.getDate()+n);return `${d.getFullYear()}-${pad(d.getMonth()+1)}-${pad(d.getDate())}`};
+function calEvents(a){
+  const st=status(a);
+  if(st.k==="proxima")return [["El día que abre",a.abre,"Abre: "+a.title]];
+  if(st.k==="cerrada"||!a.cierra)return [];
+  const ev=[];
+  if(days(a.cierra)>7)ev.push(["Una semana antes",shiftDate(a.cierra,-7),"Quedan 7 días: "+a.title]);
+  ev.push(["El último día",a.cierra,"Último día: "+a.title]);
+  return ev;
+}
+function calLinks(a,[label,date,title]){
+  const e=encodeURIComponent, end=shiftDate(date,1);
+  const det=`${a.org}\n${a.imp}\nPlazo: ${a.cierra?"hasta "+fdate(a.cierra):a.plazo}\nFuente oficial: ${a.url}\n\nRecordatorio creado con Reformayuda.`;
+  const g=`https://calendar.google.com/calendar/render?action=TEMPLATE&text=${e(title)}&dates=${date.replace(/-/g,"")}/${end.replace(/-/g,"")}&details=${e(det)}`;
+  const o=`https://outlook.live.com/calendar/0/deeplink/compose?path=%2Fcalendar%2Faction%2Fcompose&rru=addevent&subject=${e(title)}&startdt=${date}&enddt=${end}&allday=true&body=${e(det)}`;
+  return `<div class="doc" style="padding:8px 10px"><div class="name"><b>${label}</b><div class="muted" style="font-size:.8rem">${fdate(date)}</div></div>
+    <a class="btn alt sm" href="${g}" target="_blank" rel="noopener">${icon("clock","ico","width:15px;height:15px")}Google</a>
+    <a class="btn alt sm" href="${o}" target="_blank" rel="noopener">${icon("clock","ico","width:15px;height:15px")}Outlook</a></div>`;
+}
+function remindBox(a){
+  const ev=calEvents(a); if(!ev.length&&!a.cierra&&status(a).k!=="proxima")return `<div class="box"><h3>No te olvides</h3><p class="muted" style="font-size:.9rem">Esta ayuda no tiene una fecha fija de cierre: ${esc(a.plazo||"consulta la convocatoria")}. Guárdala y te avisaremos si cambia.</p>${favBtn(a)}</div>`;
+  if(!ev.length)return "";
+  return `<div class="box"><h3>No te olvides del plazo</h3>
+    <div class="frow">${favBtn(a)}<span class="muted" style="font-size:.85rem;flex:1;min-width:180px">${S.favs.has(a.id)?"Te avisaremos al abrir Reformayuda cuando queden 7 días.":"Guárdala y te avisaremos al abrir Reformayuda."}</span></div>
+    <span class="eyebrow" style="margin-top:4px">Añadir a tu calendario</span>
+    ${ev.map(x=>calLinks(a,x)).join("")}
+    <p class="muted" style="font-size:.78rem">Se abre tu calendario con el evento ya escrito; solo tienes que guardarlo. Reformayuda no ve tu calendario.</p></div>`;
+}
+const favBtn=a=>`<button class="btn ${S.favs.has(a.id)?"alt":"brand"} sm" data-fav="${a.id}" aria-pressed="${S.favs.has(a.id)}">${icon(S.favs.has(a.id)?"check":"bell","ico","width:16px;height:16px")}${S.favs.has(a.id)?"Te avisaremos":"Avisarme"}</button>`;
+
+function status(a){
+  if(days(a.abre)>0) return {k:"proxima",t:`Abre en ${days(a.abre)} días`,c:"info"};
+  if(!a.cierra) return {k:"abierta",t:"Abierta",c:"ok"};
+  const d=days(a.cierra);
+  if(d<0) return {k:"cerrada",t:"Cerrada",c:"bad"};
+  if(d<=15) return {k:"abierta",t:d===0?"Cierra hoy":`Cierra en ${d} días`,c:"warn",soon:true};
+  return {k:"abierta",t:"Abierta",c:"ok"};
+}
+function inZone(a){
+  if(a.ccaa!=="all"&&a.ccaa!==S.ccaa)return false;
+  if(a.prov&&S.prov&&a.prov!==S.prov)return false;
+  if(a.muni&&S.muni&&norm(a.muni)!==norm(S.muni))return false;
+  if(a.maxHab&&S.hab&&S.hab>a.maxHab)return false;
+  const ed=S.perfil&&S.perfil.edad;
+  if(a.edad&&ed){if(a.edad.max&&ed!=="joven")return false;if(a.edad.min&&ed!=="mayor")return false}
+  return true}
+const fmtN=n=>new Intl.NumberFormat("es-ES").format(n);
+const scopeLabel=a=>a.scope==="estatal"?"Estatal":a.scope==="autonomica"?a.ccaa:a.scope==="provincial"?"Provincia de "+a.prov:a.muni?"Ayto. de "+a.muni:"Tu ayuntamiento";
+const limChips=a=>(a.edad?`<span class="chip info">${a.edad.max?"Menores de "+a.edad.max:"Mayores de "+a.edad.min}</span>`:"")+(a.maxHab?`<span class="chip warn">Municipios &lt; ${fmtN(a.maxHab)} hab.</span>`:"")+((a.muni&&!S.muni)||(a.prov&&!S.prov)?`<span class="chip">Solo en ${esc(a.muni||a.prov)}</span>`:"");
+const pDest=()=>S.perfil?(S.perfil.uso==="edificio"?"edificio":"vivienda"):null;
+function fit(a){if(!S.perfil)return 0;const t=a.tipo.filter(x=>S.perfil.tipos.includes(x)).length;if(!t)return 0;
+  return t*2+(a.dest.includes(pDest())?2:0)+(a.scope!=="estatal"?.5:0)+(status(a).k==="abierta"?1:0)}
+const fits=a=>S.perfil&&a.tipo.some(x=>S.perfil.tipos.includes(x))&&a.dest.includes(pDest());
+const mainTipo=a=>a.tipo[0];
+function toast(t){const el=$("#toast");el.textContent=t;el.hidden=false;clearTimeout(toast.t);toast.t=setTimeout(()=>el.hidden=true,2200)}
+
+/* ---------- nav ---------- */
+const VIEWS=["inicio","ayudas","solicitud","irpf","avisos"];
+function go(v){
+  if(!VIEWS.includes(v)) v="inicio";
+  VIEWS.forEach(x=>$("#v-"+x).hidden=x!==v);
+  document.querySelectorAll(".tab").forEach(b=>b.setAttribute("aria-current",b.dataset.go===v?"page":"false"));
+  try{history.replaceState(null,"","#"+v)}catch(e){}
+  window.scrollTo({top:0});
+  render();
+}
+document.addEventListener("click",e=>{const g=e.target.closest("[data-go]");if(g){e.preventDefault();go(g.dataset.go)}});
+
+/* ---------- location ---------- */
+const PROV={"Andalucía":["Almería","Cádiz","Córdoba","Granada","Huelva","Jaén","Málaga","Sevilla"],"Aragón":["Huesca","Teruel","Zaragoza"],"Asturias":["Asturias"],"Illes Balears":["Illes Balears"],
+ "Canarias":["Las Palmas","Santa Cruz de Tenerife"],"Cantabria":["Cantabria"],"Castilla y León":["Ávila","Burgos","León","Palencia","Salamanca","Segovia","Soria","Valladolid","Zamora"],
+ "Castilla-La Mancha":["Albacete","Ciudad Real","Cuenca","Guadalajara","Toledo"],"Cataluña":["Barcelona","Girona","Lleida","Tarragona"],"Comunitat Valenciana":["Alicante","Castellón","Valencia"],
+ "Extremadura":["Badajoz","Cáceres"],"Galicia":["A Coruña","Lugo","Ourense","Pontevedra"],"Comunidad de Madrid":["Madrid"],"Región de Murcia":["Murcia"],"Navarra":["Navarra"],
+ "País Vasco":["Álava","Bizkaia","Gipuzkoa"],"La Rioja":["La Rioja"],"Ceuta":["Ceuta"],"Melilla":["Melilla"]};
+const HABS=[[1000,"Menos de 1.000"],[5000,"De 1.000 a 5.000"],[10000,"De 5.000 a 10.000"],[20000,"De 10.000 a 20.000"],[50000,"De 20.000 a 50.000"],[9000000,"Más de 50.000"]];
+const multiProv=()=>(PROV[S.ccaa]||[]).length>1;
+const locShort=()=>S.muni||(S.prov&&multiProv()?S.prov:"")||S.ccaa;
+const locLong=()=>[S.muni,S.prov,S.ccaa].filter(Boolean).filter((x,i,a)=>a.indexOf(x)===i).join(", ");
+function updLocBtn(){$("#loc-label").textContent=locShort()}
+function setLoc(v){S.ccaa=v.ccaa;S.prov=v.prov||"";S.muni=(v.muni||"").trim();S.hab=+v.hab||0;
+  store.set("ccaa",S.ccaa);store.set("loc",{prov:S.prov,muni:S.muni,hab:S.hab});updLocBtn()}
+function locForm(el,v,onCh){
+  const provs=PROV[v.ccaa]||[]; if(provs.length===1)v.prov=provs[0];
+  const id=el.id, ch=()=>onCh&&onCh();
+  el.innerHTML=`<div class="form">
+   <label>Comunidad autónoma<select class="sel" id="${id}-c">${CCAA.map(c=>`<option ${c===v.ccaa?"selected":""}>${c}</option>`).join("")}</select></label>
+   <label>Provincia<select class="sel" id="${id}-p">${provs.length>1?`<option value="">No lo sé</option>`:""}${provs.map(p=>`<option ${p===v.prov?"selected":""}>${p}</option>`).join("")}</select></label>
+   <label>Municipio <span class="muted" style="font-weight:600">(opcional)</span><input class="inp" id="${id}-m" value="${esc(v.muni||"")}" placeholder="Ej.: Úbeda" autocomplete="address-level2"></label>
+   <label>Habitantes del municipio<select class="sel" id="${id}-h"><option value="">No lo sé</option>${HABS.map(([n,l])=>`<option value="${n}" ${+v.hab===n?"selected":""}>${l}</option>`).join("")}</select></label></div>`;
+  $(`#${id}-c`).onchange=e=>{v.ccaa=e.target.value;v.prov="";v.muni="";locForm(el,v,onCh);ch()};
+  $(`#${id}-p`).onchange=e=>{v.prov=e.target.value;ch()};
+  $(`#${id}-m`).oninput=e=>{v.muni=e.target.value;ch()};
+  $(`#${id}-h`).onchange=e=>{v.hab=+e.target.value||0;ch()};
+}
+function openLoc(){
+  const v={ccaa:S.ccaa,prov:S.prov,muni:S.muni,hab:S.hab}, d=$("#drawer");
+  d.innerHTML=`<button class="btn alt sm close" id="d-close">${icon("x","ico","width:16px;height:16px")}Cerrar</button>
+   <span class="eyebrow">Ubicación de la obra</span><h2>¿Dónde está la obra?</h2>
+   <p class="muted">Cuanto más concretes, más ayudas encontramos: también las de tu diputación, las de tu ayuntamiento y las que son solo para pueblos pequeños.</p>
+   <div class="box" id="loc-f"></div>
+   <div class="box" style="gap:8px"><span class="eyebrow">Buscaremos ayudas de</span><div class="chips" id="loc-levels"></div></div>
+   <button class="btn brand" id="loc-save" style="align-self:flex-start">Guardar ubicación</button>`;
+  const lv=()=>{$("#loc-levels").innerHTML=[["España","BOE"],[v.ccaa,"boletín autonómico"],v.prov?["Provincia de "+v.prov,"diputación · BOP"]:null,v.muni.trim()?["Ayto. de "+v.muni.trim(),"ordenanzas y ayudas locales"]:null]
+     .filter(Boolean).map(([a,b])=>`<span class="chip ok">${icon("check")}${esc(a)} <span style="font-weight:600;opacity:.8">· ${b}</span></span>`).join("")+
+     (v.hab?`<span class="chip fit">Municipio: ${esc(HABS.find(h=>h[0]===+v.hab)[1].toLowerCase())} hab.</span>`:"")};
+  locForm($("#loc-f"),v,lv);lv();
+  d.hidden=false;$("#scrim").hidden=false;$("#d-close").onclick=closeDrawer;$("#d-close").focus();
+  $("#loc-save").onclick=()=>{setLoc(v);closeDrawer();render();toast("Mostrando ayudas para "+locShort())};
+}
+$("#loc-btn").onclick=openLoc;
+updLocBtn();
+
+/* ---------- card ---------- */
+function card(a){
+  const st=status(a), t=mainTipo(a);
+  let barPct=0, barCol="var(--ok)";
+  if(a.cierra&&st.k==="abierta"){const tot=days(a.cierra)-days(a.abre);barPct=Math.max(4,Math.min(100,100*(-days(a.abre))/tot));barCol=st.soon?"var(--warn)":"var(--ok)"}
+  return `<article class="card">
+    <div class="card-top">
+      <span class="card-ico c-${t}">${icon(t)}</span>
+      <div class="card-title"><h3>${esc(a.title)}</h3><div class="org">${esc(a.org)}</div></div>
+      <button class="fav" data-fav="${a.id}" aria-pressed="${S.favs.has(a.id)}" aria-label="Guardar">${icon("heart","ico","width:18px;height:18px")}</button>
+    </div>
+    <div class="amount">${esc(a.imp)}</div>
+    <div class="chips">
+      <span class="chip ${st.c}">${icon("clock")}${st.t}</span>
+      <span class="chip">${esc(scopeLabel(a))}</span>${limChips(a)}
+      ${fits(a)?`<span class="chip fit">${icon("check")}Encaja contigo</span>`:""}
+      ${a.irpf?`<span class="chip irpf">${icon("irpf")}Desgrava IRPF</span>`:""}
+      ${a.ejemplo?`<span class="chip">Ejemplo</span>`:""}
+    </div>
+    ${barPct?`<div class="bar" title="Plazo transcurrido"><i style="width:${barPct}%;background:${barCol}"></i></div>`:""}
+    <div class="card-foot">
+      <span class="deadline muted">${icon("clock","ico","width:16px;height:16px")}${a.cierra?"Hasta "+fdate(a.cierra):esc(a.plazo)}</span>
+      <button class="btn sm" data-open="${a.id}">Ver y solicitar</button>
+    </div></article>`;
+}
+document.addEventListener("click",e=>{
+  const f=e.target.closest("[data-fav]");
+  if(f){const id=f.dataset.fav;S.favs.has(id)?S.favs.delete(id):S.favs.add(id);store.set("favs",[...S.favs]);
+    toast(S.favs.has(id)?"Guardada. Te avisaremos al abrir Reformayuda":"Quitada de tus ayudas");render();
+    if(!$("#drawer").hidden&&$("#drawer").dataset.id===id)openDrawer(id);return}
+  const o=e.target.closest("[data-open]"); if(o) openDrawer(o.dataset.open);
+  const s=e.target.closest("[data-start]"); if(s){closeDrawer();S.wAid=s.dataset.start;S.wStep=0;go("solicitud")}
+});
+
+/* ---------- drawer ---------- */
+function openDrawer(id){
+  const a=AIDS.find(x=>x.id===id), st=status(a), t=mainTipo(a);
+  const d=$("#drawer");d.dataset.id=id;
+  d.innerHTML=`<button class="btn alt sm close" id="d-close">${icon("x","ico","width:16px;height:16px")}Cerrar</button>
+   <div class="card-top"><span class="card-ico c-${t}" style="width:54px;height:54px">${icon(t)}</span>
+     <div class="card-title"><span class="eyebrow">${esc(a.fuente)}</span><h2>${esc(a.title)}</h2><div class="org">${esc(a.org)}</div></div></div>
+   <div class="chips"><span class="chip ${st.c}">${icon("clock")}${st.t}</span><span class="chip">${esc(scopeLabel(a))}</span>${limChips(a)}${a.tipo.map(x=>`<span class="chip">${TIPOS[x].n}</span>`).join("")}${a.irpf?`<span class="chip irpf">Compatible con deducción IRPF</span>`:""}</div>
+   <div class="box" style="flex-direction:row;gap:20px;flex-wrap:wrap">
+     <div><span class="eyebrow">Importe</span><div class="amount">${esc(a.imp)}</div></div>
+     <div><span class="eyebrow">Plazo</span><div style="font-weight:800">${a.cierra?fdate(a.abre)+" – "+fdate(a.cierra):esc(a.plazo)}</div></div>
+   </div>
+   <p>${esc(a.resumen)}</p>
+   ${remindBox(a)}
+   <div class="box"><h3>Requisitos</h3><ul class="list">${a.req.map(r=>`<li>${icon("check")}${esc(r)}</li>`).join("")}</ul></div>
+   <div class="box"><h3>Documentos que necesitas</h3><ul class="list">${a.docs.map(r=>`<li>${icon("doc")}${esc(r)}</li>`).join("")}</ul></div>
+   ${permBox(a)}
+   <div class="box"><h3>Cómo se pide</h3><ol class="steps">${a.pasos.map(p=>`<li>${esc(p)}</li>`).join("")}</ol></div>
+   <div class="frow">
+     <button class="btn brand" data-start="${a.id}" ${st.k==="cerrada"?"disabled":""}>${icon("send","ico","width:18px;height:18px")}Empezar solicitud</button>
+     <a class="btn alt" href="${a.url}" target="_blank" rel="noopener">${icon("ext","ico","width:18px;height:18px")}Ver fuente oficial</a>
+     <button class="btn alt" data-fav="${a.id}" aria-pressed="${S.favs.has(a.id)}">${icon("heart","ico","width:18px;height:18px")}${S.favs.has(a.id)?"Guardada":"Guardar"}</button>
+   </div>
+   ${a.revisada?`<p class="muted" style="font-size:.8rem">Revisada por Reformayuda el ${fdate(a.revisada)}. Si ves algún error, escríbenos.</p>`:""}`;
+  d.hidden=false;$("#scrim").hidden=false;$("#d-close").focus();
+  $("#d-close").onclick=closeDrawer;
+}
+function closeDrawer(){$("#drawer").dataset.id="";$("#drawer").hidden=true;$("#scrim").hidden=true}
+$("#scrim").onclick=closeDrawer;
+document.addEventListener("keydown",e=>{if(e.key==="Escape")closeDrawer()});
+
+/* ---------- inicio ---------- */
+let alertsDismissed=false;
+function notices(){
+  const out=[];
+  if(S.alerts.cierre)AIDS.filter(a=>S.favs.has(a.id)&&status(a).k==="abierta"&&a.cierra&&days(a.cierra)<=7)
+    .forEach(a=>out.push({a,c:"bad",t:days(a.cierra)===0?"Hoy es el último día":`Quedan ${days(a.cierra)} días`}));
+  if(S.alerts.abre)AIDS.filter(a=>S.favs.has(a.id)).forEach(a=>{const d=days(a.abre);
+    if(d>0&&d<=7)out.push({a,c:"info",t:`Abre en ${d} días`});
+    else if(PREV_VISIT&&d<=0&&a.abre>PREV_VISIT)out.push({a,c:"ok",t:"Ya está abierta"})});
+  if(S.alerts.nuevas&&PREV_VISIT)AIDS.filter(a=>!S.favs.has(a.id)&&inZone(a)&&a.abre>PREV_VISIT&&days(a.abre)<=0&&status(a).k==="abierta"&&(!S.perfil||fit(a)>0))
+    .forEach(a=>out.push({a,c:"fit",t:"Nueva en tu zona"}));
+  return out;
+}
+function renderNotices(){
+  const n=alertsDismissed?[]:notices();
+  $("#home-alerts").innerHTML=n.length?`<div class="box" style="border:2px solid var(--coral);gap:8px">
+    <div class="row-head"><h3>${icon("bell","ico","width:18px;height:18px;color:var(--coral);vertical-align:-3px")} Tienes ${n.length} ${n.length===1?"aviso":"avisos"}</h3><button class="linkbtn" id="al-dismiss">Entendido</button></div>
+    ${n.map(({a,c,t})=>`<div class="doc"><span class="chip ${c}">${t}</span><div class="name"><b>${esc(a.title)}</b><div class="muted" style="font-size:.8rem">${esc(a.org)}</div></div><button class="btn sm" data-open="${a.id}">Ver</button></div>`).join("")}</div>`:"";
+  if(n.length)$("#al-dismiss").onclick=()=>{alertsDismissed=true;renderNotices()};
+}
+function renderHome(){
+  renderNotices();
+  const zone=AIDS.filter(inZone), open=zone.filter(a=>status(a).k==="abierta");
+  const soon=open.filter(a=>status(a).soon), next=zone.filter(a=>status(a).k==="proxima");
+  $("#stats").innerHTML=`
+   <button class="stat s1" data-preset="activas"><b>${open.length}</b><span>ayudas abiertas en ${esc(locShort())}</span></button>
+   <button class="stat s2" data-preset="soon"><b>${soon.length}</b><span>cierran en menos de 15 días</span></button>
+   <button class="stat s3" data-preset="proximas"><b>${next.length}</b><span>abren próximamente</span></button>
+   <button class="stat s4" data-go="irpf"><b>60 %</b><span>máximo que desgrava tu reforma</span></button>`;
+  $("#loc-name-1").textContent=locShort();
+  const P=S.perfil;
+  $("#perfil-bar").innerHTML=P?`<div class="perfil">${icon("pin","ico","color:var(--coral)")}<span style="flex:1;min-width:200px"><b>Tu obra:</b> ${P.tipos.map(t=>TIPOS[t].n).join(", ")||"sin elegir"} · ${{vivienda:"Mi casa o piso",edificio:"Mi comunidad de vecinos",campo:"Casa de campo o segunda vivienda"}[P.uso]}${P.edad?" · "+EDADES.find(e=>e[0]===P.edad)[1].toLowerCase()+" años":""} · ${esc(locLong())}</span><button class="btn alt sm" id="perfil-edit">Cambiar</button></div>`
+    :`<div class="perfil"><span style="flex:1;min-width:200px"><b>¿Te enseñamos primero las que encajan contigo?</b> Son 3 preguntas y puedes cambiarlas cuando quieras.</span><button class="btn brand sm" id="perfil-edit">Personalizar</button></div>`;
+  $("#perfil-edit").onclick=()=>openOnb();
+  const rec=P?zone.filter(a=>status(a).k!=="cerrada"&&fit(a)>0).sort((a,b)=>fit(b)-fit(a)).slice(0,3):[];
+  $("#fit-wrap").hidden=!P;
+  $("#home-fit").innerHTML=rec.length?rec.map(card).join(""):`<div class="empty">No hay ayudas abiertas para esa obra en ${esc(S.ccaa)} ahora mismo. Activa los avisos y te diremos cuándo salga una.</div>`;
+  const list=[...open].filter(a=>a.cierra).sort((a,b)=>days(a.cierra)-days(b.cierra)).slice(0,3);
+  $("#home-soon").innerHTML=list.length?list.map(card).join(""):`<div class="empty">No hay plazos a punto de cerrar en ${esc(S.ccaa)}.</div>`;
+}
+$("#quick").innerHTML=Object.entries(TIPOS).map(([k,v])=>`<button class="qi" data-tipo="${k}"><span class="b c-${k}">${icon(k)}</span>${v.n}</button>`).join("")+
+  `<button class="qi" data-go="irpf"><span class="b c-irpf">${icon("irpf")}</span>IRPF</button>`;
+document.addEventListener("click",e=>{
+  const q=e.target.closest("[data-tipo]");
+  if(q){S.tipos=new Set([q.dataset.tipo]);S.estado="activas";S.q="";$("#q").value="";go("ayudas")}
+  const dd=e.target.closest("[data-dest]");
+  if(dd){S.dest=dd.dataset.dest;S.tipos.clear();S.q="";$("#q").value="";S.estado="todas";go("ayudas")}
+  const p=e.target.closest("[data-preset]");
+  if(p){S.tipos.clear();S.q="";$("#q").value="";S.estado=p.dataset.preset==="soon"?"activas":p.dataset.preset;S.sort="plazo";$("#f-sort").value="plazo";go("ayudas")}
+});
+$("#fit-all").onclick=()=>{S.tipos.clear();S.q="";$("#q").value="";S.estado="todas";S.sort="fit";$("#f-sort").value="fit";go("ayudas")};
+$("#hero-search").onsubmit=e=>{e.preventDefault();S.q=$("#hero-q").value.trim();$("#q").value=S.q;S.tipos.clear();S.estado="todas";go("ayudas")};
+
+/* ---------- ayudas ---------- */
+function pills(el,opts,isOn,onClick){
+  el.innerHTML=opts.map(([k,l,dot])=>`<button class="pill" data-k="${k}" aria-pressed="${isOn(k)}">${dot?`<span class="dot c-${k}"></span>`:""}${l}</button>`).join("");
+  el.querySelectorAll(".pill").forEach(b=>b.onclick=()=>{onClick(b.dataset.k);renderList()});
+}
+const norm=s=>s.toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g,"");
+function renderList(){
+  pills($("#f-tipo"),Object.entries(TIPOS).map(([k,v])=>[k,v.n,true]),k=>S.tipos.has(k),k=>S.tipos.has(k)?S.tipos.delete(k):S.tipos.add(k));
+  pills($("#f-ambito"),[["todas","Todos"],["estatal","Estatal"],["autonomica","Comunidad"],["provincial","Provincia"],["municipal","Ayuntamiento"]],k=>S.ambito===k,k=>S.ambito=k);
+  pills($("#f-estado"),[["activas","Abiertas"],["proximas","Próximas"],["todas","Todas"]],k=>S.estado===k,k=>S.estado=k);
+  pills($("#f-dest"),[["todas","Todo"],["vivienda","Mi vivienda"],["edificio","Mi comunidad de vecinos"]],k=>S.dest===k,k=>S.dest=k);
+  const q=norm(S.q);
+  let r=AIDS.filter(inZone).filter(a=>{
+    const st=status(a).k;
+    if(S.estado==="activas"&&st!=="abierta")return false;
+    if(S.estado==="proximas"&&st!=="proxima")return false;
+    if(S.ambito!=="todas"&&a.scope!==S.ambito)return false;
+    if(S.tipos.size&&!a.tipo.some(t=>S.tipos.has(t)))return false;
+    if(S.dest!=="todas"&&!a.dest.includes(S.dest))return false;
+    if(q&&!norm([a.title,a.org,a.resumen,a.req.join(" "),a.tipo.map(t=>TIPOS[t].l).join(" ")].join(" ")).includes(q))return false;
+    return true});
+  const rank={municipal:0,provincial:1,autonomica:2,estatal:3};
+  const byPlazo=(a,b)=>(a.cierra?days(a.cierra):9999)-(b.cierra?days(b.cierra):9999);
+  r.sort(S.sort==="fit"?(a,b)=>fit(b)-fit(a)||byPlazo(a,b):S.sort==="importe"?(a,b)=>b.importe-a.importe:S.sort==="ambito"?(a,b)=>rank[a.scope]-rank[b.scope]:(a,b)=>(a.cierra?days(a.cierra):9999)-(b.cierra?days(b.cierra):9999));
+  $("#res-count").textContent=`${r.length} ${r.length===1?"ayuda":"ayudas"} en ${locLong()}`;
+  $("#list").innerHTML=r.length?r.map(card).join(""):`<div class="empty">Ninguna ayuda con estos filtros en ${esc(S.ccaa)}. Prueba a quitar algún filtro o elige “Todas”.</div>`;
+}
+$("#q").oninput=e=>{S.q=e.target.value;renderList()};
+$("#f-sort").onchange=e=>{S.sort=e.target.value;renderList()};
+
+/* ---------- solicitud (wizard) ---------- */
+const WSTEPS=["¿Cumplo los requisitos?","Documentos","Ir a presentarla"];
+function wstate(id){if(!S.wiz[id])S.wiz[id]={req:{},docs:{}};return S.wiz[id]}
+Object.values(S.wiz).forEach(w=>{delete w.data;delete w.email;delete w.ok;delete w.news});store.set("wiz",S.wiz);
+const saveW=()=>store.set("wiz",S.wiz);
+function renderWizard(){
+  const opts=AIDS.filter(a=>status(a).k!=="cerrada");
+  if(!opts.find(a=>a.id===S.wAid))S.wAid=opts[0].id;
+  $("#w-aid").innerHTML=opts.map(a=>`<option value="${a.id}" ${a.id===S.wAid?"selected":""}>${esc(a.title)}${inZone(a)?"":" · fuera de tu zona"}</option>`).join("");
+  const a=AIDS.find(x=>x.id===S.wAid), w=wstate(a.id);
+  const reqOk=a.req.filter((_,i)=>w.req[i]).length, docOk=a.docs.filter((_,i)=>w.docs[i]).length;
+  const done=[reqOk===a.req.length,docOk===a.docs.length,false];
+  $("#w-head").innerHTML=WSTEPS.map((s,i)=>`<button class="wstep ${done[i]?"done":""}" data-ws="${i}" aria-current="${S.wStep===i?"step":"false"}"><span class="n">${done[i]?"✓":i+1}</span>${s}</button>`).join("");
+  $("#w-head").querySelectorAll("[data-ws]").forEach(b=>b.onclick=()=>{S.wStep=+b.dataset.ws;renderWizard()});
+  const body=$("#w-body");
+  if(S.wStep===0){
+    body.innerHTML=`<h2>Marca lo que cumples</h2><p class="muted">Si cumples todo, puedes pedirla. Si te falta algo, te decimos qué hacer.</p>
+     ${a.req.map((r,i)=>`<label class="check"><input type="checkbox" id="rq-${a.id}-${i}" data-rq="${i}" ${w.req[i]?"checked":""}><span>${esc(r)}</span></label>`).join("")}
+     <div class="alert ${reqOk===a.req.length?"ok":"info"}">${icon(reqOk===a.req.length?"check":"clock","ico","width:18px;height:18px")}
+       <span>${reqOk===a.req.length?"Cumples todos los requisitos. Sigue con los documentos.":`Te faltan ${a.req.length-reqOk} requisitos por confirmar.`}</span></div>`;
+    body.querySelectorAll("[data-rq]").forEach(c=>c.onchange=()=>{w.req[c.dataset.rq]=c.checked;saveW();renderWizard()});
+  } else if(S.wStep===1){
+    body.innerHTML=`<h2>Reúne los documentos</h2><p class="muted">Marca los que ya tienes. No hace falta subirlos aquí: los adjuntarás tú en la sede oficial.</p>
+     ${a.docs.map((d,i)=>{const v=w.docs[i];return `<div class="doc">${icon("doc","ico","color:var(--brand)")}<div class="name"><b>${esc(d)}</b>${v?`<div class="file">${icon("check","ico","width:13px;height:13px")} ${v===true?"Lo tengo":esc(v)}</div>`:""}</div>
+       <button class="btn sm ${v?"alt":""}" data-have="${i}">${v?"Quitar":"Lo tengo"}</button></div>`}).join("")}`;
+    body.querySelectorAll("[data-have]").forEach(b=>b.onclick=()=>{const i=b.dataset.have;w.docs[i]=w.docs[i]?false:true;saveW();renderWizard()});
+  } else {
+    const sum=`SOLICITUD · ${a.title}
+Organismo: ${a.org}
+Fuente: ${a.fuente}
+Plazo: ${a.cierra?"hasta "+fdate(a.cierra):a.plazo}
+
+Ubicación de la obra: ${locLong()}
+Permiso de obra: ${PERM[permLevel(a)].l}
+
+Requisitos confirmados: ${reqOk}/${a.req.length}
+Documentos:
+${a.docs.map((d,i)=>`  ${w.docs[i]?"[x]":"[ ]"} ${d}${typeof w.docs[i]==="string"?" ("+w.docs[i]+")":""}`).join("\n")}`;
+    const ready=done[0]&&done[1];
+    body.innerHTML=`<h2>Presenta tu solicitud</h2>
+     <div class="alert ${ready?"ok":"bad"}">${icon(ready?"check":"x","ico","width:18px;height:18px")}<span>${ready?"Todo listo. Copia el resumen y entra en la sede oficial para presentarla tú.":"Aún faltan pasos marcados sin ✓. Puedes presentarla igualmente, pero revisa lo pendiente."}</span></div>
+     <pre class="sum" id="w-sum">${esc(sum)}</pre>
+     <div class="frow"><button class="btn alt" id="w-copy">${icon("copy","ico","width:18px;height:18px")}Copiar resumen</button>
+       <a class="btn brand" id="w-sede" href="${a.url}" target="_blank" rel="noopener">${icon("ext","ico","width:18px;height:18px")}Ir a la sede oficial</a></div>
+     <p class="muted" style="font-size:.85rem">Reformayuda no presenta la solicitud ni actúa en tu nombre. Te lo dejamos todo preparado y te llevamos a la sede del organismo; allí te identificas como te pida y la envías tú.</p>`;
+    $("#w-copy").onclick=()=>{navigator.clipboard?.writeText(sum).then(()=>toast("Resumen copiado"),()=>{const r=document.createRange();r.selectNodeContents($("#w-sum"));getSelection().removeAllRanges();getSelection().addRange(r);toast("Selecciona y copia el texto")})};
+  }
+  body.insertAdjacentHTML("beforeend",`<div class="frow" style="justify-content:space-between;margin-top:6px">
+    <button class="btn alt" id="w-prev" ${S.wStep===0?"disabled":""}>← Atrás</button>
+    ${S.wStep<2?`<button class="btn" id="w-next">Siguiente →</button>`:""}</div>`);
+  $("#w-prev").onclick=()=>{S.wStep--;renderWizard()};
+  if($("#w-next"))$("#w-next").onclick=()=>{S.wStep++;renderWizard()};
+  const st=status(a), total=a.req.length+a.docs.length, got=reqOk+docOk, pct=Math.round(100*got/total);
+  $("#w-side").innerHTML=`<div class="card-top"><span class="card-ico c-${mainTipo(a)}">${icon(mainTipo(a))}</span><div class="card-title"><h3>${esc(a.title)}</h3><div class="org">${esc(a.org)}</div></div></div>
+   <div class="progress"><div class="bar"><i style="width:${pct}%;background:var(--brand)"></i></div>${pct}%</div>
+   <div class="chips"><span class="chip ${st.c}">${icon("clock")}${st.t}</span>${a.irpf?`<span class="chip irpf">Desgrava IRPF</span>`:""}</div>
+   <div class="kv"><span class="muted">Importe</span><b>${esc(a.imp)}</b></div>
+   <div class="kv"><span class="muted">Plazo</span><b>${a.cierra?fdate(a.cierra):"Ver convocatoria"}</b></div>
+   <div class="kv"><span class="muted">Requisitos</span><b>${reqOk}/${a.req.length}</b></div>
+   <div class="kv"><span class="muted">Documentos</span><b>${docOk}/${a.docs.length}</b></div>
+   <div class="kv"><span class="muted">Permiso de obra</span><span class="chip ${PERM[permLevel(a)].c}">${PERM[permLevel(a)].l}</span></div>
+   ${calEvents(a).length?`<span class="eyebrow">Plazo en tu calendario</span>${calLinks(a,calEvents(a)[calEvents(a).length-1])}`:""}
+   ${a.irpf?`<button class="btn alt sm" data-go="irpf" style="align-self:flex-start">Calcular también la deducción IRPF →</button>`:""}`;
+}
+$("#w-aid").onchange=e=>{S.wAid=e.target.value;S.wStep=0;renderWizard()};
+
+/* ---------- IRPF ---------- */
+const MODS={
+  20:{t:"Reducir demanda",d:"Calefacción y refrigeración bajan un 7 % o más",lim:5000,acc:null,ej:"Ventanas, toldos, aislamiento en tu vivienda"},
+  40:{t:"Reducir consumo",d:"Energía no renovable baja un 30 % o más, o llegas a A o B",lim:7500,acc:null,ej:"Aerotermia, aislamiento integral"},
+  60:{t:"Obra del edificio",d:"Rehabilitación energética de todo el edificio residencial",lim:5000,acc:15000,ej:"Fachada o cubierta de la comunidad"}
+};
+function renderIrpf(){
+  $("#mods").innerHTML=Object.entries(MODS).map(([k,m])=>`<button class="mod" data-mod="${k}" aria-pressed="${S.mod==k}"><b>${k} %</b><span style="font-weight:800">${m.t}</span><small>${m.d}</small><small>Ej.: ${m.ej}</small></button>`).join("");
+  $("#mods").querySelectorAll("[data-mod]").forEach(b=>b.onclick=()=>{S.mod=+b.dataset.mod;store.set("mod",S.mod);renderIrpf()});
+  const o=S.obra;
+  $("#o-coste").value=o.coste||"";$("#o-subv").value=o.subv||"";$("#o-pago").value=o.pago;$("#o-cash").value=o.cash||"";
+  $("#o-cash-wrap").hidden=o.pago!=="mixto";$("#o-ej").hidden=!o.ej;
+  calcIrpf();
+}
+const num=v=>parseFloat(String(v).replace(/\./g,"").replace(",","."))||0;
+const saveObra=()=>store.set("obra",S.obra);
+[["o-coste","coste"],["o-subv","subv"],["o-cash","cash"]].forEach(([id,f])=>$("#"+id).addEventListener("input",e=>{S.obra[f]=num(e.target.value);S.obra.ej=false;$("#o-ej").hidden=true;saveObra();calcIrpf()}));
+$("#o-pago").onchange=e=>{S.obra.pago=e.target.value;S.obra.ej=false;$("#o-ej").hidden=true;$("#o-cash-wrap").hidden=S.obra.pago!=="mixto";saveObra();calcIrpf()};
+$("#obra-form").onsubmit=e=>e.preventDefault();
+function calcIrpf(){
+  const m=MODS[S.mod], o=S.obra;
+  const paid=o.pago==="efectivo"?0:Math.max(0,o.coste-(o.pago==="mixto"?o.cash:0));
+  const base=Math.max(0,paid-o.subv), year=Math.min(base,m.lim), ded=year*S.mod/100;
+  const excess=m.acc?Math.min(base,m.acc)-year:0;
+  $("#irpf-result").innerHTML=`<span class="eyebrow" style="color:inherit;opacity:.75">Deducción estimada este año</span>
+   <div class="big">${eur(ded)}</div>
+   <div class="kv"><span style="opacity:.75">Pagado por banco o tarjeta</span><b>${eur(paid)}</b></div>
+   <div class="kv"><span style="opacity:.75">Menos subvenciones</span><b>− ${eur(o.subv)}</b></div>
+   <div class="kv"><span style="opacity:.75">Base deducible (máx. ${eur(m.lim)}/año)</span><b>${eur(year)}</b></div>
+   ${excess>0?`<div class="kv"><span style="opacity:.75">Pasa a los 4 años siguientes</span><b>${eur(excess)} de base</b></div>`:""}
+   ${base>year&&!m.acc?`<div class="kv"><span style="opacity:.75">Por encima del límite (no deducible)</span><b>${eur(base-year)}</b></div>`:""}
+   <button class="btn" id="irpf-copy" style="background:var(--sun);color:#3A2A00;margin-top:6px">${icon("copy","ico","width:18px;height:18px")}Copiar resumen para la Renta</button>`;
+  $("#irpf-copy").onclick=()=>{const t=`Deducción por obras de mejora de eficiencia energética (${S.mod} %)\nCoste pagado por banco: ${eur(paid)}\nSubvenciones: ${eur(o.subv)}\nBase deducible: ${eur(year)}\nDeducción estimada: ${eur(ded)}`;
+    navigator.clipboard?.writeText(t).then(()=>toast("Resumen copiado"),()=>toast("Tu navegador no deja copiar"))};
+  const hasCert=store.get("cert",{a:false,b:false});
+  $("#irpf-req").innerHTML=`
+   ${o.pago!=="banco"?`<div class="alert bad">${icon("x","ico","width:18px;height:18px;color:var(--bad)")}<span>${o.pago==="efectivo"?"Lo pagado en efectivo no desgrava. Con todo en efectivo no hay deducción.":"La parte pagada en efectivo no desgrava; la hemos descontado."}</span></div>`:""}
+   <label class="check"><input type="checkbox" id="cert-a" ${hasCert.a?"checked":""}><span>Tengo el certificado energético de <b>antes</b> de la obra</span></label>
+   <label class="check"><input type="checkbox" id="cert-b" ${hasCert.b?"checked":""}><span>Tengo el certificado energético de <b>después</b>, registrado en mi comunidad</span></label>
+   <label class="check"><input type="checkbox" id="cert-c" ${hasCert.c?"checked":""}><span>Las facturas están a mi nombre y guardo los justificantes de pago</span></label>
+   <div class="alert info">${icon("clock","ico","width:18px;height:18px")}<span>La deducción se aplica en la Renta del año en que se expide el certificado final. Obras hasta el 31/12/2026; comprueba si hay prórroga.</span></div>`;
+  ["a","b","c"].forEach(k=>$("#cert-"+k).onchange=e=>{hasCert[k]=e.target.checked;store.set("cert",hasCert)});
+}
+
+/* ---------- avisos ---------- */
+function renderAvisos(){
+  const favs=AIDS.filter(a=>S.favs.has(a.id)).sort((a,b)=>(a.cierra?days(a.cierra):9999)-(b.cierra?days(b.cierra):9999));
+  $("#fav-list").innerHTML=favs.length?favs.map(a=>{const st=status(a);return `<div class="doc">
+     <span class="card-ico c-${mainTipo(a)}" style="width:38px;height:38px">${icon(mainTipo(a))}</span>
+     <div class="name"><b>${esc(a.title)}</b><div class="chips" style="margin-top:4px"><span class="chip ${st.c}">${st.t}</span>${a.cierra?`<span class="chip">Hasta ${fdate(a.cierra)}</span>`:""}</div></div>
+     <button class="btn sm" data-open="${a.id}">Abrir</button></div>`}).join(""):`<div class="empty">Toca el corazón de una ayuda para seguir su plazo aquí.</div>`;
+  const AL=[["cierre","Quedan 7 días para que cierre una ayuda guardada"],["abre","Abre una ayuda guardada que estaba pendiente"],["nuevas",`Hay ayudas nuevas en ${locShort()} desde mi última visita`]];
+  $("#alerts").innerHTML=AL.map(([k,l])=>`<label class="toggle"><span>${l}</span><input type="checkbox" class="sw" id="al-${k}" data-al="${k}" ${S.alerts[k]?"checked":""}></label>`).join("");
+  $("#alerts").querySelectorAll("[data-al]").forEach(c=>c.onchange=()=>{S.alerts[c.dataset.al]=c.checked;store.set("alerts",S.alerts);toast(c.checked?"Aviso activado":"Aviso desactivado")});
+  const SRC=[["boe","c-rehabilitacion","BOE","Sumario diario por API de datos abiertos: reales decretos y planes estatales.","https://www.boe.es/datosabiertos/"],
+    ["db","c-eficiencia","Base de Datos Nacional de Subvenciones","Todas las convocatorias registradas por las administraciones, en JSON y CSV.","https://www.infosubvenciones.es/"],
+    ["doc","c-accesibilidad","Boletines autonómicos","BOJA, BOCM, DOGC, DOGV, DOG, BOPV y el resto, revisados a diario.",null],
+    ["city","c-construccion","Ayuntamientos y diputaciones","Ordenanzas fiscales (IBI, ICIO) y ayudas locales.",null],
+    ["irpf","c-irpf","Agencia Tributaria","Deducciones del IRPF y cambios normativos.","https://sede.agenciatributaria.gob.es/"]];
+  $("#sources").innerHTML=SRC.map(([i,c,t,d,u])=>`<div class="src"><span class="card-ico ${c}">${icon(i,"ico","width:18px;height:18px")}</span><div style="min-width:0"><b>${u?`<a href="${u}" target="_blank" rel="noopener">${t}</a>`:t}</b><div class="muted" style="font-size:.85rem">${d}</div></div></div>`).join("");
+  $("#sync").textContent=META.actualizado?`Ayudas revisadas por última vez el ${fdate(META.actualizado)}. Buscamos novedades en los boletines cada mañana.`:"";
+  renderPrivacy();
+}
+
+/* ---------- mis datos ---------- */
+function renderPrivacy(){
+  const nW=Object.values(S.wiz).filter(w=>Object.keys(w.req||{}).length||Object.keys(w.docs||{}).length||false).length;
+  $("#privacy-box").innerHTML=`<h2 id="mis-datos">Mis datos</h2>
+   <p class="muted" style="font-size:.88rem">Reformayuda no tiene cuentas ni pide tu email. Todo se guarda solo en este dispositivo y a nosotros no nos llega nada.</p>
+   <div class="kv"><span class="muted">Ayudas guardadas</span><b>${S.favs.size}</b></div>
+   <div class="kv"><span class="muted">Solicitudes en preparación</span><b>${nW}</b></div>
+   <div class="kv"><span class="muted">Cálculo del IRPF</span><b>${S.obra.coste?eur(S.obra.coste):"Vacío"}</b></div>
+   <div class="frow">
+     <button class="btn alt sm" id="pd-copy">${icon("copy","ico","width:16px;height:16px")}Copiar mis datos</button>
+     <button class="btn sm danger" id="pd-all">${icon("trash","ico","width:16px;height:16px")}Borrar todo</button>
+   </div>
+   <div id="pd-confirm"></div>
+   <p class="muted" style="font-size:.8rem">«Borrar todo» lo elimina de este dispositivo al momento. Si usas Reformayuda en otro móvil, bórralo también allí. <button class="linkbtn" data-legal="privacidad">Política de privacidad</button></p>`;
+  $("#pd-copy").onclick=()=>{const t=JSON.stringify({zona:{comunidad:S.ccaa,provincia:S.prov,municipio:S.muni,habitantes:S.hab},guardadas:[...S.favs],solicitudes:S.wiz,obra:S.obra,perfil:S.perfil,avisos:S.alerts,cookies:S.consent},null,2);
+    navigator.clipboard?.writeText(t).then(()=>toast("Tus datos están copiados"),()=>toast("Tu navegador no deja copiar"))};
+  $("#pd-all").onclick=()=>askDelete("all");
+}
+function askDelete(kind){
+  const all=kind==="all";
+  $("#pd-confirm").innerHTML=`<div class="alert bad" style="flex-direction:column"><b>${all?"¿Borrar todo?":"¿Borrar tu email?"}</b>
+    <span>${all?"Se eliminan tu email, ayudas guardadas, solicitudes en preparación, cálculo del IRPF y preferencias. No se puede deshacer.":"Se desconecta tu email y se borra de tus solicitudes. Lo demás se queda en este dispositivo."}</span>
+    <div class="frow"><button class="btn sm danger" id="pd-yes">Sí, borrar</button><button class="btn alt sm" id="pd-no">Cancelar</button></div></div>`;
+  $("#pd-no").onclick=()=>$("#pd-confirm").innerHTML="";
+  $("#pd-yes").onclick=()=>{
+    if(all){
+      try{Object.keys(localStorage).filter(k=>k.startsWith(PFX)).forEach(k=>localStorage.removeItem(k))}catch(e){}
+      S.favs=new Set();S.wiz={};S.obra={coste:0,subv:0,pago:"banco",cash:0};S.alerts={nuevas:false,cierre:false,abre:false};S.consent=null;S.perfil=null;S.prov="";S.muni="";S.hab=0;updLocBtn();S.sort="plazo";$("#f-sort").value="plazo";
+      store.set("favs",[]);store.set("obra",S.obra);store.set("alerts",S.alerts);
+      $("#cookie").hidden=false;toast("Todo borrado");
+    } else {
+      Object.values(S.wiz).forEach(w=>{delete w.email;delete w.ok;delete w.news});saveW();toast("Email desconectado y borrado");
+    }
+    render();
+  };
+}
+
+/* ---------- legal ---------- */
+const PH=t=>`<span class="ph">[${t}]</span>`;
+const LEGAL={
+ aviso:`<span class="eyebrow">Última actualización: 25 de octubre de 2026</span><h2>Aviso legal</h2>
+  <h3>Quién está detrás</h3><p>Titular: ${PH("Nombre y apellidos")}, persona física, NIF ${PH("NIF")} · Contacto: ${PH("email de contacto")}. Reformayuda es un proyecto personal, gratuito y sin actividad comercial ni publicidad.</p>
+  <h3>Qué es Reformayuda</h3><p>Una herramienta gratuita con información orientativa sobre ayudas públicas para reformar o construir vivienda, y utilidades para preparar la solicitud y calcular deducciones. Reformayuda no es una administración pública ni está vinculada a ninguna, no presenta solicitudes y no actúa como representante del usuario.</p>
+  <h3>Exactitud de la información</h3><p>Recogemos los datos de fuentes oficiales (BOE, Base de Datos Nacional de Subvenciones, boletines autonómicos y provinciales, Agencia Tributaria) y los revisamos a menudo, pero pueden tener errores o cambiar. Lo que vale siempre es el texto publicado en el boletín oficial. Los cálculos del IRPF son estimaciones y no son asesoramiento fiscal ni jurídico.</p>
+  <h3>Enlaces</h3><p>Enlazamos a sedes y boletines oficiales. No respondemos de su contenido ni de su disponibilidad.</p>
+  <h3>Propiedad intelectual</h3><p>La marca, el diseño y el código de Reformayuda son de su titular. Las normas y actos oficiales que citamos no están protegidos por derechos de autor (art. 13 de la Ley de Propiedad Intelectual).</p>
+  <h3>Ley aplicable</h3><p>Ley española. Si eres consumidor, son competentes los juzgados de tu domicilio.</p>`,
+ privacidad:`<span class="eyebrow">Última actualización: 25 de octubre de 2026</span><h2>Política de privacidad</h2>
+  <p><b>Resumen: Reformayuda no te pide ningún dato personal.</b> No hay registro, ni cuentas, ni email. Lo que haces en la app se queda en tu dispositivo y a nosotros no nos llega.</p>
+  <h3>1. Responsable</h3><p>${PH("Nombre y apellidos")}, persona física, NIF ${PH("NIF")}. Contacto: ${PH("email de contacto")}.</p>
+  <h3>2. Qué datos se guardan y dónde</h3><ul>
+   <li><b>En tu dispositivo, nunca en nuestros servidores:</b> la ubicación de la obra, las respuestas del test (incluida tu franja de edad si la das), las ayudas guardadas, los requisitos y documentos que marcas y el cálculo del IRPF.</li>
+   <li><b>Nada más.</b> No pedimos nombre, NIF, dirección, teléfono ni email, y no recibimos ni almacenamos archivos.</li></ul>
+  <h3>3. Datos técnicos</h3><p>Como cualquier web, el servidor que aloja Reformayuda recibe tu dirección IP para poder enviarte la página. No la usamos para identificarte ni para crear perfiles. Si tu proveedor de alojamiento guarda registros, se borran en un plazo máximo de 30 días.</p>
+  <h3>4. Recursos de terceros</h3><p>Las tipografías se cargan desde Google Fonts, que recibe tu IP al descargarlas. En la versión final las alojaremos en nuestro propio servidor para evitarlo.</p>
+  <h3>5. Enlaces a sedes oficiales</h3><p>Cuando vas a la sede de un organismo para presentar la solicitud, sales de Reformayuda. Allí se aplica la política de privacidad de ese organismo.</p>
+  <h3>6. Tus derechos</h3><p>Como todo está en tu dispositivo, tú controlas tus datos: puedes verlos, copiarlos o borrarlos desde «Mis datos». Para cualquier duda, escríbenos a ${PH("email de contacto")}. También puedes reclamar ante la Agencia Española de Protección de Datos (<a href="https://www.aepd.es" target="_blank" rel="noopener">aepd.es</a>).</p>
+  <h3>7. Cambios</h3><p>Si en el futuro añadimos algo que necesite datos personales (por ejemplo, avisos por email), será opcional, te lo pediremos de forma expresa y actualizaremos esta política antes.</p>`,
+ cookies:`<span class="eyebrow">Última actualización: 25 de octubre de 2026</span><h2>Política de cookies</h2>
+  <p>Reformayuda no usa cookies de publicidad ni de seguimiento. Usamos almacenamiento local de tu navegador, de primera parte y técnico, para que la app funcione. Según el art. 22.2 de la LSSI no necesita consentimiento, pero te lo explicamos:</p>
+  <div class="tbl-wrap"><table><thead><tr><th>Nombre</th><th>Para qué</th><th>Duración</th></tr></thead><tbody>
+   <tr><td>rfm_ccaa, rfm_loc</td><td>Recordar dónde está tu obra (comunidad, provincia, municipio y tamaño)</td><td>Hasta que lo borres</td></tr>
+   <tr><td>rfm_favs</td><td>Ayudas guardadas</td><td>Hasta que lo borres</td></tr>
+   <tr><td>rfm_wiz</td><td>Borradores de solicitud</td><td>Hasta que lo borres</td></tr>
+   <tr><td>rfm_obra, rfm_mod, rfm_cert</td><td>Cálculo del IRPF</td><td>Hasta que lo borres</td></tr>
+   <tr><td>rfm_perfil, rfm_onbskip</td><td>Tus respuestas del test inicial (obra, uso y, si la das, tu franja de edad), para ordenar las ayudas</td><td>Hasta que lo borres</td></tr>
+   <tr><td>rfm_alerts</td><td>Tus preferencias de avisos</td><td>Hasta que lo borres</td></tr>
+   <tr><td>rfm_lastvisit</td><td>Fecha de tu última visita, para avisarte de ayudas nuevas</td><td>Hasta que lo borres</td></tr>
+   <tr><td>rfm_consent</td><td>Recordar tu elección sobre cookies</td><td>12 meses</td></tr></tbody></table></div>
+  <h3>Medición anónima (opcional)</h3><p>Solo si la activas, contaríamos visitas y uso de cada sección de forma agregada y sin identificarte, para mejorar la app. Está desactivada por defecto.</p>
+  <h3>Cómo borrarlo</h3><p>Desde «Mis datos» → «Borrar todo», o desde los ajustes de tu navegador.</p>`
+};
+function openLegal(k){
+  const d=$("#drawer");
+  d.innerHTML=`<button class="btn alt sm close" id="d-close">${icon("x","ico","width:16px;height:16px")}Cerrar</button><div class="legal">${LEGAL[k]}</div>`+(k==="cookies"?`<div class="box"><h3>Tus preferencias</h3>
+    <label class="toggle"><span><b>Necesarias</b><br><span class="muted" style="font-size:.85rem">Siempre activas: sin ellas la app no recuerda nada</span></span><input type="checkbox" class="sw" checked disabled></label>
+    <label class="toggle"><span><b>Medición anónima</b><br><span class="muted" style="font-size:.85rem">Nos ayuda a saber qué mejorar</span></span><input type="checkbox" class="sw" id="ck-stats" ${S.consent&&S.consent.stats?"checked":""}></label>
+    <button class="btn brand" id="ck-save" style="align-self:flex-start">Guardar preferencias</button></div>`:"");
+  d.hidden=false;$("#scrim").hidden=false;$("#d-close").onclick=closeDrawer;$("#d-close").focus();
+  if(k==="cookies")$("#ck-save").onclick=()=>{setConsent($("#ck-stats").checked);closeDrawer()};
+}
+document.addEventListener("click",e=>{const l=e.target.closest("[data-legal]");if(l){e.preventDefault();openLegal(l.dataset.legal)}});
+function setConsent(stats){S.consent={stats,fecha:new Date().toISOString()};store.set("consent",S.consent);$("#cookie").hidden=true;toast(stats?"Preferencias guardadas":"Solo usamos las necesarias")}
+
+/* ---------- test inicial ---------- */
+let onbShown=false;
+const EDADES=[["joven","Menos de 35"],["adulto","De 35 a 64"],["mayor","65 o más"],["","Prefiero no decirlo"]];
+const USOS=[["vivienda","Mi casa o piso","home"],["edificio","Mi comunidad de vecinos","rehabilitacion"],["campo","Casa de campo o segunda vivienda","construccion"]];
+function openOnb(){
+  onbShown=true;
+  const d=S.perfil?JSON.parse(JSON.stringify(S.perfil)):{tipos:[],uso:"vivienda"};
+  Object.assign(d,{ccaa:S.ccaa,prov:S.prov,muni:S.muni,hab:S.hab});
+  let step=0;
+  const draw=()=>{
+    const dots=`<div class="onb-dots">${[0,1,2].map(i=>`<i class="${i<=step?"on":""}"></i>`).join("")}</div>`;
+    let body="";
+    if(step===0) body=`<span class="eyebrow">Pregunta 1 de 3</span><h2>¿Dónde está la obra?</h2>
+      <p class="muted">Con la provincia y el pueblo encontramos también las ayudas de tu diputación y tu ayuntamiento.</p><div id="onb-loc"></div>`;
+    if(step===1) body=`<span class="eyebrow">Pregunta 2 de 3</span><h2>¿Qué vas a hacer?</h2><p class="muted">Elige todas las que quieras.</p>
+      <div class="opts">${Object.entries(TIPOS).map(([k,v])=>`<button class="opt" data-ot="${k}" aria-pressed="${d.tipos.includes(k)}"><span class="card-ico c-${k}">${icon(k)}</span>${v.n}</button>`).join("")}</div>`;
+    if(step===2) body=`<span class="eyebrow">Pregunta 3 de 3</span><h2>¿Para qué es la obra?</h2>
+      <div class="opts col">${USOS.map(([k,l,ic])=>`<button class="opt" data-ou="${k}" aria-pressed="${d.uso===k}"><span class="card-ico c-${ic==="home"?"eficiencia":ic}">${icon(ic)}</span>${l}</button>`).join("")}</div>
+      <span class="eyebrow" style="margin-top:4px">Tu edad (opcional)</span>
+      <div class="frow">${EDADES.map(([k,l])=>`<button class="pill" data-oe="${k}" aria-pressed="${(d.edad||"")===k}">${l}</button>`).join("")}</div>
+      <p class="muted" style="font-size:.8rem;margin-top:-6px">Así no te enseñamos ayudas solo para jóvenes o solo para mayores si no te tocan.</p>
+      ${d.uso==="campo"?`<div class="alert info">${icon("clock","ico","width:18px;height:18px")}<span>En una segunda vivienda las deducciones del IRPF del 20 % y del 40 % solo valen si la alquilas. Las ayudas de rehabilitación rural sí pueden servirte.</span></div>`:""}`;
+    $("#onb-card").innerHTML=dots+body+`<div class="frow" style="justify-content:space-between">
+      <button class="btn alt sm" id="onb-skip">${S.perfil?"Cancelar":"Saltar, ver todas"}</button>
+      <div class="frow">${step>0?`<button class="btn alt" id="onb-back">Atrás</button>`:""}
+      <button class="btn brand" id="onb-next" ${step===1&&!d.tipos.length?"disabled":""}>${step<2?"Siguiente":"Ver mis ayudas"}</button></div></div>
+      <p class="muted" style="font-size:.78rem">Se guarda solo en tu dispositivo. No cambia las ayudas que puedes ver: solo cuáles salen primero.</p>`;
+    if(step===0)locForm($("#onb-loc"),d);
+    $("#onb-card").querySelectorAll("[data-ot]").forEach(b=>b.onclick=()=>{const k=b.dataset.ot;d.tipos.includes(k)?d.tipos.splice(d.tipos.indexOf(k),1):d.tipos.push(k);draw()});
+    $("#onb-card").querySelectorAll("[data-ou]").forEach(b=>b.onclick=()=>{d.uso=b.dataset.ou;draw()});
+    $("#onb-card").querySelectorAll("[data-oe]").forEach(b=>b.onclick=()=>{d.edad=b.dataset.oe;draw()});
+    $("#onb-skip").onclick=()=>{if(!S.perfil)store.set("onbskip",true);closeOnb()};
+    if($("#onb-back"))$("#onb-back").onclick=()=>{step--;draw()};
+    $("#onb-next").onclick=()=>{if(step<2){step++;draw();return}
+      S.perfil=d;store.set("perfil",d);setLoc(d);
+      S.sort="fit";$("#f-sort").value="fit";S.dest=d.uso==="edificio"?"edificio":"todas";closeOnb();go("inicio");toast("Listo: primero verás las que encajan contigo")};
+    const f=$("#onb-card").querySelector("select,button.opt,#onb-next");if(f)f.focus();
+  };
+  $("#cookie").hidden=true;$("#onb").hidden=false;draw();
+}
+function closeOnb(){$("#onb").hidden=true;if(!S.consent)$("#cookie").hidden=false;render()}
+document.addEventListener("keydown",e=>{if(e.key==="Escape"&&!$("#onb").hidden)closeOnb()});
+
+/* ---------- chat ---------- */
+const B=(attr,label)=>`<button class="btn sm" ${attr}>${label}</button>`;
+const FAQ=[
+ {q:"¿Qué ayudas hay para mi obra?",k:["que ayudas","ayudas hay","para mi","subvenciones hay","que hay","busco ayuda","mi obra"],
+  a:"<p>Depende de dónde esté la obra y de qué vayas a hacer. Pon arriba dónde está la obra (el icono del mapa): comunidad, provincia y, si quieres, el pueblo y toca el tipo de obra en el inicio.</p><p>Ahora mismo estás viendo <b>"+"${S.ccaa}"+"</b>.</p>",act:()=>B('data-go="ayudas"',"Ver ayudas")},
+ {q:"¿Puedo pedirla si ya empecé la obra?",k:["empece","empezado","ya empec","iniciad","ya hecha","hecha la obra","terminad","antes de empezar"],
+  a:"<p>Casi todas las subvenciones exigen que la obra <b>no haya empezado</b> cuando la pides. Lee bien ese requisito en la convocatoria.</p><p>La deducción del IRPF sí se puede aplicar a una obra terminada, pero necesitas el certificado energético de <b>antes</b> de empezar.</p>"},
+ {q:"¿Qué es el certificado energético?",k:["certificado","energetico","calificacion","etiqueta"],
+  a:"<p>Es un informe que hace un técnico (arquitecto, aparejador o ingeniero) y da a tu casa una letra de la A a la G según lo que consume.</p><p>Para las ayudas y el IRPF suele hacer falta uno <b>antes</b> y otro <b>después</b> de la obra, registrados en tu comunidad autónoma. En un piso suele costar entre 60 y 250 €, según la zona.</p>"},
+ {q:"¿Cuánto desgrava cambiar las ventanas?",k:["ventana","cerramiento","aislamiento","aislar","toldo"],
+  a:"<p>Si la obra reduce al menos un 7 % la demanda de calefacción y refrigeración, desgravas el <b>20 %</b> con un límite de 5.000 € al año: como mucho, 1.000 € de deducción.</p><p>Si con otras mejoras bajas un 30 % el consumo o llegas a la letra A o B, pasa al <b>40 %</b>.</p>",act:()=>B('data-go="irpf"',"Calcular")},
+ {q:"¿Hay ayudas para placas solares?",k:["placa","solar","fotovolt","autoconsumo","paneles"],
+  a:"<p>Sí, por tres vías:</p><p>1) <b>IRPF</b>: hasta el 40 % si baja un 30 % el consumo de energía no renovable.<br>2) <b>IBI</b>: muchos ayuntamientos lo rebajan entre un 25 % y un 50 % durante varios años.<br>3) <b>ICIO</b>: rebaja del impuesto de obras al pedir la licencia.</p>",act:()=>B('data-tipo="solar"',"Ver ayudas solares")},
+ {q:"¿Y la aerotermia?",k:["aerotermia","bomba de calor","caldera","calefaccion"],
+  a:"<p>Cambiar una caldera de gas o gasóleo por aerotermia suele reducir más de un 30 % el consumo no renovable. Eso da derecho al <b>40 %</b> en el IRPF (hasta 3.000 € al año) y a algunas ayudas autonómicas.</p>",act:()=>B('data-tipo="aerotermia"',"Ver ayudas")},
+ {q:"¿Hay ayudas para poner un ascensor?",k:["ascensor","rampa","accesib","silla","movilidad","salvaescal"],
+  a:"<p>Sí. El Plan Estatal de Vivienda 2026-2030 da hasta <b>22.000 € por vivienda</b> para accesibilidad. Lo pide la comunidad de propietarios, normalmente a través del administrador de fincas.</p>",act:()=>B('data-tipo="accesibilidad"',"Ver ayudas")},
+ {q:"¿Puedo sumar varias ayudas?",k:["sumar","compatib","varias","juntar","acumular","dos ayudas"],
+  a:"<p>Normalmente puedes sumar una <b>subvención</b> y la <b>deducción del IRPF</b>, pero en el IRPF tienes que restar la subvención del coste.</p><p>Dos subvenciones para el mismo gasto a veces no son compatibles: lo dice cada convocatoria en el apartado de compatibilidad.</p>"},
+ {q:"¿Cuándo cobro la ayuda?",k:["cuando cobro","cobrar","pagan","tardan","cuanto tarda","plazo de pago","anticipo"],
+  a:"<p>Suele ir así: solicitas, resuelven en 3 a 6 meses, haces la obra, presentas facturas y certificado final, y entonces cobras.</p><p>Algunas convocatorias adelantan una parte al aprobarla.</p>"},
+ {q:"¿Tengo que declarar la subvención?",k:["declarar","tributa","hacienda la subvencion","renta la ayuda","ganancia"],
+  a:"<p>En general sí: cuenta como ganancia patrimonial en la Renta del año en que la cobras. Algunas ayudas a la rehabilitación están exentas por ley.</p><p>Mira la resolución de tu ayuda o los datos fiscales en Renta Web.</p>"},
+ {q:"¿Necesito Cl@ve o certificado digital?",k:["clave","cl@ve","certificado digital","firma","dni electronico","identificar"],
+  a:"<p>Reformayuda no te pide ninguna clave. Para <b>presentar</b> la solicitud en la sede oficial sí suele hacer falta Cl@ve, certificado digital o DNI electrónico.</p><p>En una comunidad de vecinos la presenta el presidente o el administrador.</p>"},
+ {q:"¿Hay ayudas para construir una casa?",k:["construir","casa nueva","obra nueva","vivienda nueva","edificar","solar para"],
+  a:"<p>Hay menos que para reformar. Las más habituales son para <b>jóvenes en municipios pequeños</b> y para viviendas de consumo casi nulo en el medio rural.</p><p>Si la casa nueva lleva aerotermia o placas solares, también puedes tener rebajas en el IBI y el ICIO.</p>",act:()=>B('data-tipo="construccion"',"Ver ayudas")},
+ {q:"¿Puedo pagar en efectivo?",k:["efectivo","metalico","en mano","cash"],
+  a:"<p>Mejor no. Lo pagado en efectivo <b>no desgrava</b> en el IRPF y muchas subvenciones no lo aceptan. Paga con tarjeta, transferencia o cheque nominativo y guarda el justificante.</p>"},
+ {q:"Vivo de alquiler, ¿puedo pedirlas?",k:["alquiler","inquilino","alquilad","arrendat","casero"],
+  a:"<p>Las deducciones del 20 % y del 40 % también sirven al <b>propietario</b> de una vivienda alquilada.</p><p>Si eres inquilino, algunas subvenciones te dejan pedirla con permiso del propietario. Revisa quién puede ser beneficiario en cada convocatoria.</p>"},
+ {q:"¿Hay límite de ingresos?",k:["ingresos","iprem","renta baja","cuanto gano","sueldo","limite de renta"],
+  a:"<p>Depende de la ayuda. Muchas de rehabilitación no tienen límite, y otras ponen uno en veces el IPREM o dan más dinero a hogares con menos ingresos.</p><p>Lo verás en los requisitos de cada ficha.</p>"},
+ {q:"¿Qué documentos me van a pedir?",k:["documento","papeles","que necesito","acta","presupuesto","dni"],
+  a:"<p>Lo más habitual es: DNI o NIE, presupuesto desglosado, certificado energético previo, escritura o nota simple y, en edificios, el acta de la junta.</p><p>El asistente te da la lista exacta de cada ayuda.</p>",act:()=>B('data-go="solicitud"',"Abrir asistente")},
+ {q:"¿Reformayuda presenta la solicitud por mí?",k:["presenta","presentais","por mi","en mi nombre","tramitais","gestionais","oficial","organismo"],
+  a:"<p>No. Reformayuda no es un organismo oficial ni te representa. Te ayuda a encontrar la ayuda, comprobar requisitos y reunir los papeles, y te lleva a la sede oficial para que la presentes tú.</p>"},
+ {q:"¿Qué hacéis con mis datos?",k:["datos","privacidad","borrar","email","correo","baja","eliminar"],
+  a:"<p>Reformayuda no te pide email ni ningún dato personal, y no hay cuentas. Todo se queda en tu móvil y puedes borrarlo con un botón en «Mis datos».</p>",act:()=>B('data-go="avisos"',"Mis datos")+" "+B('data-legal="privacidad"',"Privacidad")},
+ /* --- dentro de casa --- */
+ {cat:"casa",q:"¿Hay ayudas para reformar el baño?",k:["bano","ducha","plato de ducha","banera","sanitario","inodoro"],
+  a:"<p>Una reforma del baño solo por estética no suele tener subvención. Sí la tiene si es para <b>accesibilidad</b>: cambiar la bañera por un plato de ducha a ras de suelo, poner barras o ensanchar puertas para personas mayores o con discapacidad.</p><p>Mira las ayudas de accesibilidad y las de servicios sociales de tu comunidad (adaptación del hogar). Y recuerda que la obra puede llevar <b>IVA del 10 %</b>.</p>",act:()=>B('data-tipo="accesibilidad"',"Ver ayudas de accesibilidad")},
+ {cat:"casa",q:"¿Y para reformar la cocina?",k:["cocina","encimera","muebles de cocina","vitro","induccion"],
+  a:"<p>Cambiar muebles no suele tener ayuda. Algunas comunidades tienen planes «Renove» de electrodomésticos o de cocinas eficientes, por ejemplo al pasar de gas a inducción. Comprueba si hay alguno abierto.</p><p>Lo que casi siempre puedes aprovechar es el <b>IVA reducido del 10 %</b> si la obra la contrata el propietario.</p>"},
+ {cat:"casa",q:"¿Pago menos IVA en una reforma?",k:["iva","10 %","10%","iva reducido","impuesto"],
+  a:"<p>Sí, puede ser del <b>10 % en lugar del 21 %</b> si se cumplen tres cosas:</p><p>1) La obra la contrata una persona física para su vivienda.<br>2) La vivienda tiene más de 2 años.<br>3) Los materiales que pone el contratista no superan el 40 % del total.</p><p>Si los compras tú por tu cuenta, pagan IVA del 21 %.</p>"},
+ {cat:"casa",q:"¿Hay ayudas para una reforma integral?",k:["reforma integral","reformar entera","toda la casa","reforma completa","reforma total"],
+  a:"<p>Sí, si la reforma <b>mejora la eficiencia energética</b>. Las ayudas de rehabilitación y el IRPF premian bajar el consumo: aislamiento, ventanas, calefacción eficiente y renovables.</p><p>Pide el certificado energético <b>antes</b> de empezar para no perder ninguna ayuda.</p>",act:()=>B('data-tipo="rehabilitacion"',"Ver ayudas")},
+ {cat:"casa",q:"¿Desgrava cambiar las puertas?",k:["puerta","blindada","puerta de entrada","portal"],
+  a:"<p>Una puerta de entrada aislante ayuda a bajar la demanda de calefacción. Si, junto con otras mejoras, la reducción llega al 7 %, entra en la deducción del <b>20 %</b> del IRPF. Lo comprueba el técnico con los certificados de antes y después.</p>"},
+ {cat:"casa",q:"¿Hay ayudas para quitar humedades?",k:["humedad","moho","condensacion","capilaridad","goteras"],
+  a:"<p>Arreglar humedades no suele tener ayuda por sí solo. Sí entra si forma parte de una rehabilitación: aislar la fachada o la cubierta, impermeabilizar o poner ventilación con recuperador de calor.</p><p>Muchas humedades de condensación se resuelven precisamente mejorando el aislamiento.</p>"},
+ {cat:"casa",q:"¿Desgrava poner luces LED?",k:["led","bombilla","iluminacion","luces"],
+  a:"<p>Las luces LED no tienen ayuda ni deducción por sí solas en una vivienda: ahorran en la factura, pero no cuentan en el certificado energético de una casa. En las zonas comunes de un edificio sí pueden entrar en una rehabilitación.</p>"},
+ {cat:"casa",q:"¿Hay ayudas para domótica?",k:["domotica","casa inteligente","termostato","automatiza","alexa"],
+  a:"<p>Sí en dos casos:</p><p>1) Si es para <b>accesibilidad</b> (persianas, puertas o luces automáticas para personas mayores o con discapacidad): el plan estatal la incluye.<br>2) Si forma parte de una mejora de eficiencia, como termostatos y control de la calefacción.</p>"},
+ {cat:"casa",q:"¿Hay ayudas para salvaescaleras en una casa unifamiliar?",k:["salvaescaleras","silla salva","elevador","plataforma","escalera"],
+  a:"<p>Sí. Las ayudas de accesibilidad también sirven para viviendas unifamiliares: salvaescaleras, plataformas elevadoras y rampas. Suelen dar más dinero si vive alguien mayor de 65 años o con discapacidad.</p>",act:()=>B('data-tipo="accesibilidad"',"Ver ayudas")},
+
+ /* --- exterior --- */
+ {cat:"exterior",q:"¿Hay ayudas para arreglar el tejado?",k:["tejado","cubierta","teja","tejas","goteras del tejado"],
+  a:"<p>Cambiar tejas sin más suele contar como mantenimiento. Pero si al arreglarlo <b>aíslas la cubierta</b>, entra en las ayudas de rehabilitación energética y en el IRPF (20 % o 40 %, según cuánto ahorres).</p><p>En edificios, el plan estatal también ayuda a la conservación de la cubierta.</p>",act:()=>B('data-tipo="eficiencia"',"Ver ayudas")},
+ {cat:"exterior",q:"¿Y para aislar la fachada?",k:["fachada","sate","aislamiento exterior","aislar por fuera","cappotto"],
+  a:"<p>Es una de las obras con más ayudas. Aislar la fachada por fuera (sistema SATE) suele bajar mucho la demanda de calefacción.</p><p>En un edificio puede llegar al <b>60 %</b> del IRPF por vecino, además de la subvención. En una casa, al 20 % o al 40 %.</p>",act:()=>B('data-tipo="eficiencia"',"Ver ayudas")},
+ {cat:"exterior",q:"¿Hay ayudas para quitar la uralita (amianto)?",k:["uralita","amianto","fibrocemento","asbesto"],
+  a:"<p>Sí. Varias convocatorias de rehabilitación suman una <b>cantidad extra por retirar amianto</b>, y algunos ayuntamientos tienen ayudas propias.</p><p>La retirada la tiene que hacer una empresa inscrita en el registro de empresas con riesgo de amianto (RERA). No la quites tú.</p>"},
+ {cat:"exterior",q:"¿Puedo cerrar la terraza con ayudas?",k:["terraza","cerrar terraza","acristalar","cortinas de cristal","galeria"],
+  a:"<p>Cerrar la terraza no suele tener ayuda y muchas veces necesita permiso de la comunidad y del ayuntamiento. Si con buen vidrio reduces la demanda de calefacción, podría entrar en el 20 % del IRPF; lo valora el técnico.</p>"},
+ {cat:"exterior",q:"¿Hay ayudas para una piscina?",k:["piscina","jacuzzi","spa"],
+  a:"<p>No. Las piscinas no tienen subvención y además pagan el impuesto de obras (ICIO) y la tasa de licencia. Si quieres climatizarla, la bomba de calor tampoco desgrava en el IRPF.</p>"},
+ {cat:"exterior",q:"¿Y para aprovechar el agua de lluvia?",k:["agua de lluvia","aljibe","riego","xerojardin","ahorro de agua","cesped"],
+  a:"<p>Algunos ayuntamientos y comunidades con sequía ayudan a instalar depósitos de agua de lluvia, riego por goteo o jardines de bajo consumo. No son ayudas estatales: búscalas en la web de tu ayuntamiento.</p>"},
+ {cat:"exterior",q:"¿Qué es la ITE o el informe del edificio?",k:["ite","iee","inspeccion tecnica","informe de evaluacion","edificio antiguo"],
+  a:"<p>La ITE es la inspección técnica que deben pasar los edificios antiguos (en muchos sitios, a partir de 45 o 50 años). El IEE (Informe de Evaluación del Edificio) la completa con accesibilidad y eficiencia.</p><p>Muchas ayudas de rehabilitación lo piden y algunas pagan parte de su coste.</p>"},
+
+ /* --- energía --- */
+ {cat:"energia",q:"¿Hay ayudas para una caldera de biomasa o una estufa de pellets?",k:["biomasa","pellet","estufa","lena","chimenea","hueso de aceituna"],
+  a:"<p>Sustituir una caldera de gasóleo o una eléctrica por <b>biomasa</b> (pellets, astilla, hueso de aceituna) baja el consumo de energía no renovable. Puede entrar en el <b>40 %</b> del IRPF y en ayudas autonómicas de renovables.</p><p>Una chimenea abierta tradicional no cuenta: tiene que ser un equipo eficiente y certificado.</p>"},
+ {cat:"energia",q:"¿Desgravan las baterías para las placas solares?",k:["bateria","almacenamiento","acumulador"],
+  a:"<p>Las baterías forman parte de la instalación de autoconsumo. Si la instalación completa baja un 30 % el consumo no renovable, entran en el <b>40 %</b> del IRPF. Algunas comunidades han tenido ayudas específicas para almacenamiento: mira si hay alguna abierta.</p>",act:()=>B('data-tipo="solar"',"Ver ayudas solares")},
+ {cat:"energia",q:"¿Hay ayudas para un cargador del coche eléctrico?",k:["cargador","coche electrico","punto de recarga","wallbox","moves"],
+  a:"<p>El programa <b>MOVES</b> ha financiado puntos de recarga en viviendas y garajes, y ha existido una deducción del IRPF para instalarlos. Las dos han tenido varias prórrogas: comprueba en tu comunidad y en la Agencia Tributaria si siguen vigentes este año.</p>"},
+ {cat:"energia",q:"¿Desgrava un aire acondicionado?",k:["aire acondicionado","split","climatizacion","refrigeracion","conductos"],
+  a:"<p>Un aire acondicionado que solo enfría, no. Una <b>bomba de calor</b> que sustituye a la calefacción de gas o gasóleo sí puede entrar en el 40 % del IRPF si baja un 30 % el consumo no renovable.</p>",act:()=>B('data-tipo="aerotermia"',"Ver ayudas")},
+ {cat:"energia",q:"¿Hay ayudas para placas solares de agua caliente (solar térmica)?",k:["solar termica","agua caliente","termo","acs","calentador"],
+  a:"<p>Sí. La solar térmica para el agua caliente reduce el consumo y puede entrar en el IRPF (20 % o 40 %) y en ayudas de renovables. Cambiar un termo eléctrico por uno de <b>aerotermia</b> también cuenta.</p>"},
+ {cat:"energia",q:"¿Desgrava el suelo radiante?",k:["suelo radiante","radiadores","calefaccion por suelo","emisores"],
+  a:"<p>El suelo radiante no desgrava solo. Combinado con <b>aerotermia</b> mejora mucho el rendimiento y puede ayudarte a llegar al 30 % de ahorro que pide la deducción del 40 %.</p>"},
+ {cat:"energia",q:"¿Hay ayudas para un molino eólico pequeño?",k:["eolica","molino","aerogenerador","viento"],
+  a:"<p>La minieólica para autoconsumo cuenta como renovable, igual que las placas. Entra en el IRPF si baja el consumo no renovable y en algunas ayudas autonómicas. Antes, pregunta en el ayuntamiento: muchas ordenanzas limitan la altura.</p>"},
+ {cat:"energia",q:"¿Hay ayudas para ventilación con recuperador de calor?",k:["ventilacion","recuperador","vmc","renovacion de aire"],
+  a:"<p>Sí. La ventilación mecánica con recuperación de calor reduce la pérdida de energía y ayuda contra la condensación. Suele entrar en las rehabilitaciones energéticas y en el 20 % o el 40 % del IRPF.</p>"},
+
+ /* --- casa de campo --- */
+ {cat:"campo",q:"¿Hay ayudas para rehabilitar una casa de campo?",k:["casa de campo","casa rural","casa de pueblo","aldea","masia","cortijo","caserio","pueblo"],
+  a:"<p>Sí, y muchas veces dan <b>más dinero en el medio rural</b>. Mira tres sitios:</p><p>1) Las ayudas de rehabilitación del plan estatal (hay línea rural).<br>2) Los programas de tu comunidad contra la despoblación.<br>3) La diputación provincial.</p><p>Si va a ser tu vivienda habitual o la vas a alquilar, suele contar a favor.</p>",act:()=>B('data-tipo="rehabilitacion"',"Ver ayudas")},
+ {cat:"campo",q:"¿Puedo convertir un pajar o una nave en vivienda?",k:["pajar","nave","cuadra","granero","establo","cambio de uso","convertir en vivienda"],
+  a:"<p>Depende del suelo. En <b>suelo urbano</b> suele bastar con licencia de cambio de uso. En <b>suelo rústico</b> es más difícil: muchas normas solo lo permiten si el edificio es tradicional y ya existía.</p><p>Pide un informe urbanístico en el ayuntamiento antes de comprar o invertir. Después, la obra puede optar a las ayudas de rehabilitación rural.</p>"},
+ {cat:"campo",q:"¿Puedo construir en suelo rústico?",k:["rustico","finca","parcela","no urbanizable","terreno","construir en el campo"],
+  a:"<p>Es complicado: en suelo rústico la vivienda suele estar muy limitada o prohibida, salvo excepciones (por ejemplo, vinculada a una explotación agraria o con una parcela mínima grande).</p><p>Consulta el planeamiento de tu municipio antes de nada. Sin licencia no hay ayudas, y te arriesgas a una orden de derribo.</p>"},
+ {cat:"campo",q:"Mi casa de campo no tiene luz: ¿hay ayudas?",k:["sin luz","sin electricidad","no hay luz","placa","casa de campo","aislada","off grid","sin red","no tiene luz","enganche","acometida"],
+  a:"<p>Una instalación solar <b>aislada</b> (con baterías) suele salir más barata que llevar la línea eléctrica. Tiene las mismas ayudas que el autoconsumo: IRPF si es vivienda habitual o alquilada, y programas de renovables en algunas comunidades.</p>",act:()=>B('data-tipo="solar"',"Ver ayudas solares")},
+ {cat:"campo",q:"¿Hay ayudas para una fosa séptica o depuradora?",k:["fosa","septica","depuradora","saneamiento","alcantarillado","aguas residuales"],
+  a:"<p>Si no hay alcantarillado, necesitas una depuradora o fosa homologada y la autorización de vertido de la confederación hidrográfica. Algunas diputaciones y comunidades tienen ayudas para el saneamiento en núcleos pequeños: pregunta en tu ayuntamiento.</p>"},
+ {cat:"campo",q:"¿Puedo hacer un pozo?",k:["pozo","hacer un pozo","sondeo","agua subterranea","perforacion"],
+  a:"<p>Necesitas permiso de la <b>confederación hidrográfica</b> de tu cuenca (para uso doméstico, normalmente hasta 7.000 m³ al año). No suele haber subvención, pero sí se puede bombear con energía solar.</p>"},
+ {cat:"campo",q:"¿Hay ayudas si la convierto en casa rural de turismo?",k:["turismo rural","turista","casa rural para turistas","alojamiento rural","casa rural para alquilar","leader","grupo de accion local","negocio"],
+  a:"<p>Sí, pero ya es un <b>negocio</b>. Los Grupos de Acción Local (programa LEADER, con fondos europeos) ayudan a inversiones de turismo rural. Para pedirlas te tendrás que dar de alta como autónomo o crear una empresa, y registrar la casa como alojamiento turístico.</p>"},
+ {cat:"campo",q:"¿Hay ayudas por tener la casa vacía en un pueblo?",k:["vacia","casa vacia","casa vacia en el pueblo","sin usar","despoblacion","alquilar en el pueblo","bolsa de vivienda"],
+  a:"<p>Varias comunidades y diputaciones pagan parte de la reforma si después <b>alquilas la casa</b> durante unos años, a menudo a jóvenes o familias, a través de bolsas de vivienda contra la despoblación. Mira en tu comunidad y en tu diputación.</p>"},
+ {cat:"campo",q:"¿Qué tengo que hacer contra los incendios en una casa de campo?",k:["incendio","fuego","franja","desbroce","limpiar el monte","forestal"],
+  a:"<p>Si la casa está cerca del monte, muchas comunidades obligan a mantener limpia una franja alrededor (a menudo de 25 a 50 m). Algunas tienen ayudas para la limpieza o para cubiertas y cerramientos resistentes. Infórmate en el ayuntamiento o en medio ambiente de tu comunidad.</p>"},
+ {cat:"campo",q:"Mi casa es antigua o protegida: ¿hay ayudas?",k:["protegida","patrimonio","bic","historica","catalogada","piedra","centro historico"],
+  a:"<p>Si el edificio está catalogado o es Bien de Interés Cultural, suele haber ayudas de <b>patrimonio</b> de tu comunidad y descuentos en el IBI. Ten en cuenta que la obra necesitará más permisos y puede tener límites en materiales y ventanas.</p>"},
+ {cat:"campo",q:"¿Hay ayudas para una casa prefabricada o modular?",k:["prefabricada","modular","madera","casa de madera","contenedor","industrializada"],
+  a:"<p>Se tratan como una casa nueva: necesitan parcela edificable y licencia de obra. Si es de consumo casi nulo (letra A) y la construyes en un municipio pequeño, puede entrar en las ayudas de vivienda nueva rural o para jóvenes.</p>",act:()=>B('data-tipo="construccion"',"Ver ayudas")},
+
+ /* --- trámites --- */
+ {cat:"tramites",q:"¿Hay ayudas de mi diputación o de mi pueblo?",k:["diputacion","mi pueblo","ayuntamiento da","provincia","ayudas locales","ayudas municipales","de mi ayuntamiento","comarca","cabildo","consell"],
+  a:"<p>Sí, y a menudo son las menos conocidas. Las <b>diputaciones</b> (cabildos y consells en las islas) suelen tener ayudas para pueblos pequeños, y muchos <b>ayuntamientos</b> dan rebajas en el IBI y el ICIO o ayudas propias.</p><p>Pon tu provincia, tu pueblo y su número de habitantes en la ubicación (icono del mapa) y te las enseñamos.</p>",act:()=>B('id="chat-loc"',"Poner mi ubicación")},
+ {cat:"tramites",q:"¿Cómo me avisáis de los plazos sin email?",k:["avisar","avisos","avisais","recordatorio","recordar","calendario","notificacion","se me pase","olvide"],
+  a:"<p>De dos formas, sin email ni cuenta:</p><p>1) Toca <b>«Avisarme»</b> en una ayuda: al abrir Reformayuda te diremos si quedan 7 días, si acaba de abrir o si hay ayudas nuevas en tu zona.<br>2) Toca <b>Google</b> u <b>Outlook</b> en «Añadir a tu calendario» y el plazo queda en tu agenda del móvil, con sus avisos.</p>",act:()=>B('data-go="avisos"',"Mis avisos")},
+ {cat:"tramites",q:"¿Hay ayudas según mi edad?",k:["edad","joven","jovenes","menor de 35","mayor de 65","jubilado","pensionista","tercera edad","anos tengo"],
+  a:"<p>Sí. Hay ayudas solo para <b>menores de 35</b> (comprar o construir en pueblos pequeños) y solo para <b>mayores de 65</b> (adaptar la casa), y las de accesibilidad dan más si en casa vive alguien mayor.</p><p>Indica tu franja de edad en «Tu obra → Cambiar» y te quitamos las que no te tocan. Es opcional y no sale de tu móvil.</p>",act:()=>B('id="chat-perfil"',"Indicar mi edad")},
+ {cat:"permisos",q:"¿Qué es una declaración responsable?",k:["que es una declaracion responsable","que es la declaracion","declaracion responsable que es","en que consiste"],
+  a:"<p>Es un escrito que presentas en el ayuntamiento diciendo que tu obra cumple las normas y que tienes los papeles necesarios. <b>No esperas respuesta</b>: con presentarla puedes empezar.</p><p>El ayuntamiento puede revisarla después y, si algo no cuadra, parar la obra.</p>"},
+ {cat:"permisos",q:"¿Qué obras van con declaración responsable?",k:["que obras van con declaracion","obras con declaracion","obra menor","obras pequenas","cuales van con declaracion"],
+  a:"<p>Normalmente las <b>obras pequeñas que no tocan la estructura</b> ni cambian la fachada:</p><p>• Reformar baño o cocina, cambiar suelos o alicatados.<br>• Pintar, cambiar puertas interiores, fontanería y electricidad.<br>• Cambiar ventanas sin cambiar su aspecto.<br>• Placas solares, aerotermia o una caldera nueva, en la mayoría de comunidades.</p><p>Cada ayuntamiento tiene su lista; búscala en su web como «obras sujetas a declaración responsable».</p>"},
+ {cat:"permisos",q:"¿Qué obras necesitan licencia?",k:["que obras necesitan licencia","obras con licencia","obra mayor","cuando hace falta licencia","necesitan licencia"],
+  a:"<p>Las que afectan a la seguridad o al aspecto del edificio:</p><p>• Tocar la <b>estructura</b>: muros de carga, vigas, forjados, cimientos.<br>• Cambiar la <b>fachada</b> o el <b>tejado</b>, o aislarlos por fuera.<br>• <b>Ampliar</b>, levantar una planta, poner un ascensor nuevo.<br>• <b>Construir</b> una casa o cambiar el uso de un local o un pajar a vivienda.<br>• Cualquier obra en un edificio <b>protegido</b> o en suelo rústico.</p>"},
+ {cat:"permisos",q:"¿Qué diferencia hay entre declaración responsable y comunicación previa?",k:["comunicacion previa","diferencia con la comunicacion","aviso previo"],
+  a:"<p>Son muy parecidas. En la <b>comunicación previa</b> solo avisas de que vas a hacer la obra. En la <b>declaración responsable</b>, además, firmas que cumples las normas y que tienes los documentos que pide el ayuntamiento.</p><p>Según el municipio usan una u otra para las obras pequeñas; en la práctica funcionan casi igual.</p>"},
+ {cat:"permisos",q:"¿Puedo empezar la obra el mismo día?",k:["mismo dia","empezar ya","cuando puedo empezar","empezar la obra","esperar para empezar"],
+  a:"<p>Con <b>declaración responsable</b>, en general sí: desde que la presentas con todos los documentos. Algunos ayuntamientos piden esperar unos días; lo pone en su formulario.</p><p>Con <b>licencia</b>, no: tienes que esperar a que te la concedan por escrito.</p>"},
+ {cat:"permisos",q:"¿Cuánto tarda en llegar una licencia?",k:["cuanto tarda la licencia","dar la licencia","tarda el ayuntamiento","en dar la licencia","tarda una licencia","tardan en dar","plazo de la licencia","silencio"],
+  a:"<p>Suele tardar de <b>1 a 3 meses</b>, y más en ciudades grandes o si falta algún documento.</p><p>Ojo: en las obras importantes, si el ayuntamiento no contesta, normalmente <b>no</b> se entiende concedida. No empieces sin la licencia por escrito.</p>"},
+ {cat:"permisos",q:"¿Cuánto cuesta la licencia o la declaración responsable?",k:["cuanto cuesta la licencia","precio de la licencia","tasa","icio","cuanto se paga","impuesto de obras"],
+  a:"<p>Pagas dos cosas al ayuntamiento:</p><p>• El <b>ICIO</b> (impuesto de construcciones), hasta el 4 % del presupuesto de la obra.<br>• Una <b>tasa</b> por tramitarla, que varía mucho según el municipio.</p><p>Si la obra es de eficiencia energética, renovables o accesibilidad, pide la <b>bonificación del ICIO</b>: puede llegar al 95 %.</p>"},
+ {cat:"permisos",q:"¿Qué papeles lleva una declaración responsable?",k:["papeles de la declaracion","que lleva la declaracion","documentos de la declaracion","formulario","que tengo que presentar"],
+  a:"<p>Lo habitual es:</p><p>• El <b>formulario</b> del ayuntamiento, firmado.<br>• Una descripción de la obra y el <b>presupuesto</b>.<br>• Fotos del estado actual.<br>• El justificante de pago de la tasa y del ICIO.<br>• A veces, cómo vas a gestionar los escombros (y una fianza).</p><p>Si la obra lo necesita, también un documento técnico firmado.</p>"},
+ {cat:"permisos",q:"¿Necesito arquitecto para pedir el permiso?",k:["necesito arquitecto","necesito un tecnico","necesito aparejador","proyecto para la licencia","firma de tecnico"],
+  a:"<p>Para una <b>declaración responsable</b> de obra pequeña, normalmente no.</p><p>Para una <b>licencia</b> con estructura, fachada, ampliación u obra nueva, sí: hace falta un <b>proyecto</b> firmado por un arquitecto o un arquitecto técnico. Para las ayudas, muchas veces también piden una memoria técnica.</p>"},
+ {cat:"permisos",q:"¿Qué pasa si hago la obra sin permiso?",k:["sin permiso","sin licencia","ilegal","multa","me pillan","inspeccion","paralizar"],
+  a:"<p>Te pueden <b>multar</b>, <b>parar la obra</b> y obligarte a legalizarla o incluso a deshacerla. Además, <b>pierdes las ayudas</b>: casi todas piden la licencia o la declaración presentada.</p><p>Si ya la hiciste, pregunta en el ayuntamiento por la legalización: suele salir más barato que esperar a una inspección.</p>"},
+ {cat:"permisos",q:"¿Y si me equivoco en la declaración responsable?",k:["me equivoco","equivoque","equivocado","equivocacion","error en la declaracion","mentir","falso","dato falso","responsabilidad"],
+  a:"<p>Lo que firmas es tu responsabilidad. Si el ayuntamiento revisa la obra y no coincide con lo declarado, puede pararla, pedirte que la ajustes y multarte.</p><p>Si te das cuenta de un error, presenta una nueva declaración corregida antes de seguir.</p>"},
+ {cat:"permisos",q:"¿Necesito permiso para poner un contenedor o un andamio en la calle?",k:["contenedor","andamio","via publica","acera","escombros","cuba"],
+  a:"<p>Sí. Ocupar la acera o la calle con un contenedor, un andamio o material necesita un <b>permiso de ocupación de la vía pública</b>, con su tasa. Normalmente lo pide la empresa que hace la obra; pregúntale si lo incluye en el presupuesto.</p>"},
+ {cat:"permisos",q:"¿Qué es la licencia de primera ocupación?",k:["primera ocupacion","cedula","habitabilidad","dar de alta la luz","contratar la luz"],
+  a:"<p>Cuando terminas una casa nueva, o cambias un local o un pajar a vivienda, el ayuntamiento comprueba que se ha hecho como en el proyecto y te da la <b>licencia o declaración de primera ocupación</b> (en algunas comunidades, cédula de habitabilidad).</p><p>Sin ella no puedes contratar la luz y el agua definitivas, ni escriturar o vender la casa como vivienda.</p>"},
+ {cat:"permisos",q:"Además del ayuntamiento, ¿necesito permiso de la comunidad?",k:["permiso de la comunidad","permiso de los vecinos","elementos comunes","tocar la fachada","junta para la obra"],
+  a:"<p>Si la obra es solo dentro de tu piso y no toca la estructura, no. Necesitas el acuerdo de la junta si afecta a <b>elementos comunes</b> o a la imagen del edificio: fachada, tejado, patio, máquinas en la fachada, muros de carga.</p><p>Avisa siempre al administrador antes de empezar: evita problemas con el ruido y los horarios.</p>"},
+ {cat:"permisos",q:"¿Qué diferencia hay entre licencia y declaración responsable?",k:["declaracion responsable","diferencia","comunicacion previa","licencia o","necesito permiso","sin licencia"],
+  a:"<p>• <b>Declaración responsable</b> o comunicación previa: presentas en el ayuntamiento un papel diciendo que cumples las normas y puedes empezar ya. Sirve para obras pequeñas: baño, cocina, ventanas, placas o aerotermia.</p><p>• <b>Licencia de obra</b>: tienes que esperar a que te la den. Hace falta si tocas estructura, fachada o tejado, si amplías o si construyes.</p><p>Cada ficha de ayuda te dice qué suele hacer falta.</p>"},
+ {cat:"permisos",q:"¿Necesito licencia para la obra?",k:["licencia","permiso","declaracion responsable","obra menor","obra mayor","ayuntamiento"],
+  a:"<p>Casi siempre necesitas algo del ayuntamiento:</p><p>• <b>Declaración responsable o comunicación previa</b> para obras pequeñas (cocina, baño, suelos).<br>• <b>Licencia de obra</b> si tocas la estructura, la fachada o haces una ampliación.</p><p>Pagarás el ICIO (entre el 2 % y el 4 % del presupuesto) y una tasa. Pregunta por la bonificación si la obra es de eficiencia o accesibilidad.</p>"},
+ {cat:"tramites",q:"¿Quién hace el proyecto o la memoria técnica?",k:["proyecto","memoria tecnica","arquitecto","aparejador","tecnico","ingeniero"],
+  a:"<p>Un arquitecto, un arquitecto técnico (aparejador) o un ingeniero, según la obra. Para las ayudas casi siempre hace falta una memoria o un proyecto firmado. En muchas convocatorias, sus honorarios también son subvencionables.</p>"},
+ /* --- comunidad de vecinos --- */
+ {cat:"comunidad",q:"¿Qué ayudas hay para mi comunidad de vecinos?",k:["comunidad de vecinos","mi comunidad de vecinos","ayudas para la comunidad","para comunidades","edificio de viviendas","bloque","mi edificio"],
+  a:"<p>Las más importantes son:</p><p>• <b>Plan Estatal de Vivienda 2026-2030</b>: rehabilitación, eficiencia y accesibilidad (hasta 13.000 € por vivienda, y 22.000 € en accesibilidad).<br>• <b>Programas de tu comunidad autónoma</b> y de tu ayuntamiento.<br>• <b>Deducción del 60 % en el IRPF</b> para cada propietario, si la obra mejora la eficiencia del edificio.</p>",act:()=>B('data-dest="edificio"',"Ayudas para comunidades")},
+ {cat:"comunidad",q:"¿Qué mayoría hace falta para aprobar la obra?",k:["mayoria","votacion","votar","aprobar en junta","acuerdo de junta","quorum","cuantos votos"],
+  a:"<p>Depende de la obra (Ley de Propiedad Horizontal):</p><p>• <b>Eficiencia energética y rehabilitación con ayudas</b>: mayoría simple, si lo que paga cada vecino después de las ayudas no supera 12 cuotas ordinarias.<br>• <b>Placas solares comunes</b>: un tercio de propietarios y cuotas.<br>• <b>Ascensor y accesibilidad</b>: mayoría simple.<br>• <b>Reparaciones necesarias</b> de conservación: obligatorias, sin votación.</p><p>Tu administrador de fincas te confirmará el caso concreto.</p>"},
+ {cat:"comunidad",q:"¿Es obligatorio poner el ascensor si lo pide un vecino mayor?",k:["obligatorio","vecino mayor","mayor de 70","discapacidad","obligar a la comunidad","no quieren ascensor","no quiere ascensor","no quiere poner el ascensor","mi madre","mi padre","abuel","80 anos","85 anos","90 anos"],
+  a:"<p>Sí, en muchos casos. Si lo pide un propietario (o alguien que vive en su casa) <b>mayor de 70 años o con discapacidad</b>, la comunidad está obligada a hacer las obras de accesibilidad, sin votación. Se aplica cuando lo que cuesta al año a cada vecino, después de las ayudas, no supera 12 cuotas ordinarias.</p><p>Si cuesta más, también es obligatorio cuando las ayudas públicas cubren al menos el 75 %.</p>",act:()=>B('data-tipo="accesibilidad"',"Ver ayudas de accesibilidad")},
+ {cat:"comunidad",q:"¿Tienen que pagar el ascensor los bajos y los locales?",k:["pagar el ascensor","paga el ascensor","bajos","locales","primero","no usa el ascensor","exentos"],
+  a:"<p>En general, sí: los gastos se reparten <b>según la cuota de participación</b> de cada piso o local, aunque no use el ascensor. Solo se libran si los estatutos o un acuerdo de la junta lo dicen expresamente.</p>"},
+ {cat:"comunidad",q:"¿Qué pasa si un vecino no quiere o no puede pagar?",k:["no quiere pagar","no puede pagar","moroso","no paga","vecino que no paga","derrama"],
+  a:"<p>Si la obra se aprobó correctamente, <b>todos los propietarios tienen que pagar</b> su parte, aunque hayan votado en contra (salvo las mejoras no necesarias más caras, de las que puede librarse quien vote en contra). La comunidad puede reclamarlo por vía judicial (proceso monitorio).</p><p>Para quien tenga pocos ingresos existen ayudas personales extra y préstamos para la comunidad. Pregunta antes de votar.</p>"},
+ {cat:"comunidad",q:"¿Quién pide la ayuda en una comunidad?",k:["quien pide","quien solicita","presidente","administrador","representante","firma la solicitud"],
+  a:"<p>La pide la <b>comunidad de propietarios</b>, con su CIF. Normalmente la firma el presidente o el administrador de fincas, tras el acuerdo de la junta.</p><p>También puede hacerlo un <b>agente o gestor de la rehabilitación</b>: una empresa que tramita las ayudas y a veces adelanta el dinero.</p>"},
+ {cat:"comunidad",q:"¿Qué es un agente rehabilitador?",k:["agente rehabilitador","gestor de la rehabilitacion","agente","adelanta","adelantar el dinero","cesion del cobro"],
+  a:"<p>Es una empresa o profesional que se encarga de todo: proyecto, solicitud, obra y justificación. Muchos <b>adelantan el dinero de la ayuda</b> y lo cobran después directamente de la Administración.</p><p>Antes de firmar, compara presupuestos y lee bien qué pasa si la ayuda no llega.</p>"},
+ {cat:"comunidad",q:"¿Puede la comunidad pedir un préstamo para la obra?",k:["prestamo","financiacion","financiar","credito","banco","ico","aval"],
+  a:"<p>Sí. Las comunidades pueden pedir préstamos a nombre de la comunidad para rehabilitar, y el Estado ha creado líneas de aval del <b>ICO</b> para facilitarlos. Así cada vecino paga poco a poco con la cuota en lugar de una derrama grande.</p><p>El fondo de reserva también puede usarse para estas obras.</p>"},
+ {cat:"comunidad",q:"¿Cómo funciona la deducción del 60 % para cada vecino?",k:["60","60 %","cada vecino","cada propietario","deduccion comunidad","irpf comunidad"],
+  a:"<p>Si la obra del edificio baja al menos un 30 % el consumo no renovable, o el edificio llega a la letra A o B, <b>cada propietario</b> puede deducir el 60 % de lo que pagó: hasta 5.000 € al año y 15.000 € en total, que se pueden repartir en varios años.</p><p>Pide a la comunidad un certificado con lo que ha pagado cada vecino.</p>",act:()=>B('data-go="irpf"',"Calcular")},
+ {cat:"comunidad",q:"¿Cómo declaro en la Renta la ayuda que cobró la comunidad?",k:["declarar la ayuda de la comunidad","renta comunidad","imputar","cobro la comunidad","atribucion"],
+  a:"<p>La ayuda se reparte entre los vecinos según su cuota, y cada uno la declara en su Renta en el año de cobro (normalmente como ganancia patrimonial). Algunas ayudas a la rehabilitación están exentas.</p><p>El administrador suele dar a cada vecino un certificado con lo que le corresponde.</p>"},
+ {cat:"comunidad",q:"¿Cómo se ponen placas solares en una comunidad?",k:["placas en la comunidad","autoconsumo colectivo","placas comunidad","tejado comun","azotea","reparto de energia"],
+  a:"<p>Se hace <b>autoconsumo colectivo</b>: se instalan en la cubierta y la energía se reparte entre los vecinos que se apunten. Se aprueba con un tercio de los votos y solo pagan los que participan.</p><p>Tiene ayudas autonómicas, rebaja del IBI en muchos municipios y puede entrar en el IRPF.</p>",act:()=>B('data-tipo="solar"',"Ver ayudas solares")},
+ {cat:"comunidad",q:"¿Puedo poner un cargador del coche en el garaje comunitario?",k:["garaje","plaza de garaje","cargador en el garaje","recarga en el garaje","parking"],
+  a:"<p>Sí, y <b>no necesitas votación</b>: basta con comunicarlo por escrito a la comunidad. Tú pagas la instalación y el consumo, que va con un contador propio.</p>"},
+ {cat:"comunidad",q:"Quiero cambiar solo mis ventanas: ¿necesito permiso de la comunidad?",k:["mis ventanas","solo mi piso","solo mis ventanas","cambiar ventanas en un piso","estetica de la fachada","color de la ventana"],
+  a:"<p>Si mantienes el mismo aspecto exterior (color, despiece y material parecido), normalmente basta con avisar. Si cambia la imagen de la fachada, necesitas el acuerdo de la junta.</p><p>Es una obra individual: puede entrar en el <b>20 % o el 40 %</b> del IRPF con tus certificados energéticos.</p>",act:()=>B('data-go="irpf"',"Calcular")},
+ {cat:"comunidad",q:"¿Cuánto tarda todo el proceso en una comunidad?",k:["cuanto tarda la comunidad","proceso","pasos en la comunidad","por donde empiezo","como empezar","calendario"],
+  a:"<p>Suele llevar de <b>1 a 2 años</b>:</p><p>1) Informe del edificio y certificado energético (1-2 meses).<br>2) Junta y aprobación (1-2 meses).<br>3) Proyecto y licencia (2-4 meses).<br>4) Solicitud y resolución (3-6 meses).<br>5) Obra (3-9 meses).<br>6) Justificación y cobro.</p>",act:()=>B('data-go="solicitud"',"Abrir asistente")},
+ {cat:"comunidad",q:"¿Los inquilinos pueden votar o pedir ayudas?",k:["inquilino vota","inquilinos votan","puedo votar","inquilino puedo votar","alquilado en la comunidad","no soy propietario"],
+  a:"<p>No votan en la junta: vota el propietario. Pero sí cuentan para la obligación de accesibilidad (si vive en el piso una persona mayor de 70 años o con discapacidad) y pueden tener ayudas personales según la convocatoria.</p>"},
+ {cat:"comunidad",q:"¿Cuentan los locales comerciales del edificio?",k:["local comercial","locales del edificio","tienda en el bajo","uso residencial","70 %"],
+  a:"<p>Para las ayudas de rehabilitación residencial, el edificio suele tener que destinar a vivienda al menos un <b>70 % de su superficie</b>. Los locales pagan su parte de la obra según su cuota. La parte subvencionada para ellos puede ser menor o ninguna.</p>"},
+ {cat:"tramites",q:"¿Qué pasa si no justifico la ayuda a tiempo?",k:["justificar","justificacion","reintegro","devolver","perder la ayuda"],
+  a:"<p>Puedes <b>perder la ayuda</b> o tener que devolverla con intereses. Apunta la fecha límite en cuanto te la concedan y guarda facturas, justificantes de pago, fotos de antes y después y el certificado final.</p>",act:()=>B('data-go="avisos"',"Ver mis plazos")}
+];
+const CATS={casa:"Dentro de casa",exterior:"Tejado, fachada y jardín",energia:"Energía y calefacción",campo:"Casa de campo",comunidad:"Comunidad de vecinos",permisos:"Licencias y permisos",tramites:"Trámites y dinero"};
+const CAT0=["tramites","tramites","energia","casa","energia","energia","casa","tramites","tramites","tramites","tramites","campo","tramites","tramites","tramites","tramites","tramites","tramites"];
+FAQ.forEach((f,i)=>{if(!f.cat)f.cat=CAT0[i]||"tramites"});
+const topics=()=>`<div class="sugg">${Object.entries(CATS).map(([k,v])=>`<button data-topic="${k}" style="border-color:var(--ink);color:var(--ink)">${v} (${FAQ.filter(f=>f.cat===k).length})</button>`).join("")}</div>`;
+const GREET=["hola","buenas","hey","buenos dias","buenas tardes"], THANKS=["gracias","genial","perfecto","vale"];
+const chatLog=$("#chat-log"); const asked=new Set();
+function addMsg(who,html){const d=document.createElement("div");d.className="msg "+who;d.innerHTML=html;chatLog.appendChild(d);chatLog.scrollTop=chatLog.scrollHeight}
+function suggest(n=3,cat){let rest=FAQ.map((f,i)=>i).filter(i=>!asked.has(i));if(!rest.length)rest=FAQ.map((f,i)=>i);
+  const same=cat?rest.filter(i=>FAQ[i].cat===cat):[];const pick=[...same,...rest.filter(i=>!same.includes(i))].slice(0,n);
+  return `<div class="sugg">${pick.map(i=>`<button data-ask="${i}">${FAQ[i].q}</button>`).join("")}<button data-topics="1" style="border-color:var(--ink);color:var(--ink)">Ver todos los temas</button></div>`}
+function answer(i){const f=FAQ[i];asked.add(i);addMsg("bot",f.a.replace("${S.ccaa}",esc(locLong()))+(f.act?`<div class="frow" style="margin-top:8px">${f.act()}</div>`:"")+`<p class="muted" style="font-size:.78rem;margin-top:8px">Otras dudas:</p>${suggest(3,f.cat)}`)}
+function match(t){const n=norm(t);let best=-1,score=0;FAQ.forEach((f,i)=>{const sc=f.k.filter(k=>n.includes(k)).reduce((a,k)=>a+k.length,0);if(sc>score){score=sc;best=i}});return best}
+function ask(t){addMsg("me",esc(t));const n=norm(t);
+  setTimeout(()=>{
+    if(GREET.some(g=>n.trim().startsWith(g))&&n.length<20){addMsg("bot","<p>¡Hola! Pregúntame lo que quieras sobre ayudas para reformar o construir.</p>"+suggest(4));return}
+    if(THANKS.some(g=>n.includes(g))&&n.length<25){addMsg("bot","<p>¡A ti! Si te surge otra duda, aquí estoy.</p>");return}
+    const i=match(t); if(i>=0)answer(i);
+    else addMsg("bot","<p>Esa todavía no la sé. Prueba con otras palabras o elige un tema:</p>"+topics());
+  },250)}
+function openChat(){$("#chat").hidden=false;$("#chat-fab").hidden=true;if(!chatLog.children.length)addMsg("bot","<p>¡Hola! Soy el asistente de Reformayuda. Te explico las ayudas, los plazos y el IRPF en sencillo, para tu piso, tu casa, tu casa de campo o tu comunidad de vecinos.</p><p>Escribe tu duda o elige un tema:</p>"+topics());$("#chat-q").focus()}
+function closeChat(){$("#chat").hidden=true;$("#chat-fab").hidden=false}
+$("#chat-fab").onclick=openChat; $("#chat-close").onclick=closeChat;
+$("#chat-form").onsubmit=e=>{e.preventDefault();const t=$("#chat-q").value.trim();if(!t)return;$("#chat-q").value="";ask(t)};
+chatLog.addEventListener("click",e=>{const tp=e.target.closest("[data-topic]");
+  if(tp){const k=tp.dataset.topic;addMsg("me",esc(CATS[k]));setTimeout(()=>addMsg("bot",`<p><b>${CATS[k]}</b>: elige una pregunta.</p><div class="sugg">${FAQ.map((f,i)=>[f,i]).filter(([f])=>f.cat===k).map(([f,i])=>`<button data-ask="${i}">${f.q}</button>`).join("")}</div>`),200);return}
+  if(e.target.closest("#chat-loc")){closeChat();openLoc();return}
+  if(e.target.closest("#chat-perfil")){closeChat();openOnb();return}
+  if(e.target.closest("[data-topics]")){addMsg("bot","<p>Elige un tema:</p>"+topics());return}
+  const b=e.target.closest("[data-ask]");if(b){addMsg("me",esc(FAQ[+b.dataset.ask].q));setTimeout(()=>answer(+b.dataset.ask),250)}
+  else if(e.target.closest("[data-go],[data-tipo],[data-dest]")&&matchMedia("(max-width:820px)").matches)closeChat()});
+
+/* ---------- render ---------- */
+function render(){
+  const v=VIEWS.find(x=>!$("#v-"+x).hidden);
+  const fc=$("#fav-count");fc.textContent=S.favs.size;fc.hidden=!S.favs.size;
+  if(v==="inicio")renderHome(); else if(v==="ayudas")renderList(); else if(v==="solicitud")renderWizard(); else if(v==="irpf")renderIrpf(); else renderAvisos();
+}
+try{localStorage.setItem("rfm_lastvisit",new Date().toISOString().slice(0,10))}catch(e){}
+S.consent=store.get("consent",null);
+if(!S.consent)$("#cookie").hidden=false;
+$("#ck-acc").onclick=()=>setConsent(true);
+$("#ck-rej").onclick=()=>setConsent(false);
+if(S.perfil){S.sort="fit";$("#f-sort").value="fit"}
+async function cargarDatos(){
+  try{const r=await fetch("data/ayudas.json",{cache:"no-cache"});const d=await r.json();AIDS=d.ayudas||[];META={actualizado:d.actualizado}}
+  catch(e){toast("No hemos podido cargar las ayudas. Revisa tu conexión.")}
+}
+cargarDatos().then(()=>{
+  const h=(location.hash||"#inicio").slice(1);
+  go(h);
+  if(LEGAL[h])openLegal(h);
+  else if(!S.perfil&&!store.get("onbskip",false)&&!onbShown)openOnb();
+});
+if("serviceWorker" in navigator)window.addEventListener("load",()=>navigator.serviceWorker.register("sw.js").catch(()=>{}));
+</script>
+</body>
+</html>

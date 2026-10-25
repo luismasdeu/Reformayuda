@@ -1,0 +1,23 @@
+{
+  "name": "Reformayuda",
+  "short_name": "Reformayuda",
+  "description": "Ayudas y subvenciones para reformar o construir tu casa. Gratis y sin registro.",
+  "lang": "es",
+  "start_url": "./?origen=app",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#F3F7F5",
+  "theme_color": "#0D7A63",
+  "categories": ["finance", "lifestyle", "utilities"],
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" },
+    { "src": "icons/icon-monochrome-512.png", "sizes": "512x512", "type": "image/png", "purpose": "monochrome" }
+  ],
+  "shortcuts": [
+    { "name": "Buscar ayudas", "url": "./#ayudas", "icons": [{ "src": "icons/icon-192.png", "sizes": "192x192" }] },
+    { "name": "Calcular IRPF", "url": "./#irpf", "icons": [{ "src": "icons/icon-192.png", "sizes": "192x192" }] }
+  ]
+}

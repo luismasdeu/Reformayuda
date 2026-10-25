@@ -1,0 +1,173 @@
+{
+ "_leeme": "Ayudas publicadas en la app. Edita con cuidado: el formato se comprueba antes de publicar (scripts/validar.py).",
+ "actualizado": "2026-10-25",
+ "ayudas": [
+  {
+   "id": "pev-rehab",
+   "title": "Plan Estatal de Vivienda 2026-2030: rehabilitación de edificios",
+   "org": "Ministerio de Vivienda · gestiona tu comunidad",
+   "scope": "estatal",
+   "ccaa": "all",
+   "tipo": [
+    "rehabilitacion",
+    "eficiencia",
+    "accesibilidad"
+   ],
+   "dest": [
+    "edificio",
+    "vivienda"
+   ],
+   "importe": 13000,
+   "imp": "Hasta 13.000 € por vivienda",
+   "abre": "2026-04-24",
+   "cierra": null,
+   "plazo": "Según la convocatoria de tu comunidad",
+   "irpf": true,
+   "fuente": "BOE · RD 326/2026",
+   "url": "https://www.boe.es/",
+   "resumen": "Línea de fomento de la rehabilitación, accesibilidad y renovación urbana y rural del nuevo plan estatal. Las cuantías suben en accesibilidad universal (hasta 22.000 €) y en hogares con mayores de 65 o personas con discapacidad.",
+   "req": [
+    "Edificio de uso residencial o vivienda habitual",
+    "Obra no iniciada antes de la solicitud (salvo lo que diga la convocatoria)",
+    "Proyecto o memoria técnica firmada",
+    "Acuerdo de la comunidad de propietarios si es un edificio",
+    "Estar al corriente con Hacienda y la Seguridad Social"
+   ],
+   "docs": [
+    "DNI/NIE del solicitante",
+    "Acta de la junta de propietarios",
+    "Presupuesto desglosado de la obra",
+    "Proyecto o memoria técnica",
+    "Certificado de eficiencia energética previo",
+    "Certificados de estar al corriente con AEAT y TGSS"
+   ],
+   "pasos": [
+    "Consulta la convocatoria de tu comunidad autónoma",
+    "Encarga la memoria técnica y el certificado energético",
+    "Aprobad la obra en junta (si es un edificio)",
+    "Presenta la solicitud en la sede electrónica autonómica",
+    "Ejecuta la obra y justifica con facturas y certificado final"
+   ],
+   "revisada": "2026-10-25"
+  },
+  {
+   "id": "irpf-ee",
+   "title": "Deducción IRPF por obras de eficiencia energética (20 %, 40 % y 60 %)",
+   "org": "Agencia Tributaria",
+   "scope": "estatal",
+   "ccaa": "all",
+   "tipo": [
+    "eficiencia",
+    "ventanas",
+    "aerotermia",
+    "solar"
+   ],
+   "dest": [
+    "vivienda",
+    "edificio"
+   ],
+   "importe": 15000,
+   "imp": "Hasta 9.000 € de deducción",
+   "abre": "2021-10-06",
+   "cierra": "2026-12-31",
+   "plazo": "Obras realizadas hasta el 31/12/2026 (edificios: consulta ampliación)",
+   "irpf": true,
+   "fuente": "BOE · DA 50.ª LIRPF y RDL 7/2026",
+   "url": "https://sede.agenciatributaria.gob.es/",
+   "resumen": "Deducción en la declaración de la renta por reducir la demanda de calefacción y refrigeración (20 %), el consumo de energía primaria no renovable (40 %) o por obras en el edificio (60 %). Calcúlala en la pestaña IRPF.",
+   "req": [
+    "Vivienda habitual o en alquiler (20 % y 40 %); edificio residencial (60 %)",
+    "Certificado de eficiencia energética antes y después de la obra",
+    "Pago con tarjeta, transferencia o cheque nominativo, nunca en efectivo",
+    "Facturas a nombre del contribuyente"
+   ],
+   "docs": [
+    "Certificado energético inicial",
+    "Certificado energético final",
+    "Facturas de la obra",
+    "Justificantes de pago bancario"
+   ],
+   "pasos": [
+    "Pide el certificado energético antes de empezar",
+    "Haz la obra y guarda facturas y justificantes",
+    "Registra el certificado final en tu comunidad",
+    "Aplica la deducción en Renta Web el año en que se expide el certificado final"
+   ],
+   "revisada": "2026-10-25"
+  },
+  {
+   "id": "mun-ibi",
+   "title": "Bonificación del IBI por instalar placas solares",
+   "org": "Tu ayuntamiento · ordenanza fiscal",
+   "scope": "municipal",
+   "ccaa": "all",
+   "tipo": [
+    "solar"
+   ],
+   "dest": [
+    "vivienda",
+    "edificio"
+   ],
+   "importe": 3000,
+   "imp": "Hasta 50 % del IBI durante 3-5 años",
+   "abre": "2026-01-01",
+   "cierra": null,
+   "plazo": "Todo el año, según la ordenanza",
+   "irpf": false,
+   "fuente": "Boletín de la provincia",
+   "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias",
+   "resumen": "Muchos ayuntamientos rebajan el IBI si instalas autoconsumo solar. La rebaja y la duración dependen de cada ordenanza.",
+   "req": [
+    "Instalación legalizada y registrada",
+    "Recibo del IBI a tu nombre"
+   ],
+   "docs": [
+    "Certificado de instalación",
+    "Factura",
+    "Recibo del IBI"
+   ],
+   "pasos": [
+    "Instala y legaliza",
+    "Solicita en la sede del ayuntamiento",
+    "La rebaja se aplica en el siguiente recibo"
+   ],
+   "revisada": "2026-10-25"
+  },
+  {
+   "id": "mun-icio",
+   "title": "Bonificación del ICIO para obras de eficiencia y accesibilidad",
+   "org": "Tu ayuntamiento · ordenanza fiscal",
+   "scope": "municipal",
+   "ccaa": "all",
+   "tipo": [
+    "solar",
+    "accesibilidad",
+    "eficiencia"
+   ],
+   "dest": [
+    "vivienda",
+    "edificio"
+   ],
+   "importe": 2000,
+   "imp": "Hasta 95 % del impuesto de obras",
+   "abre": "2026-01-01",
+   "cierra": null,
+   "plazo": "Al pedir la licencia de obra",
+   "irpf": false,
+   "fuente": "Boletín de la provincia",
+   "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias",
+   "resumen": "Descuento en el impuesto de construcciones al solicitar la licencia, si la obra es de accesibilidad o energía renovable.",
+   "req": [
+    "Pedirla junto con la licencia o comunicación de obra"
+   ],
+   "docs": [
+    "Solicitud de licencia",
+    "Presupuesto"
+   ],
+   "pasos": [
+    "Pide la bonificación al solicitar la licencia"
+   ],
+   "revisada": "2026-10-25"
+  }
+ ]
+}

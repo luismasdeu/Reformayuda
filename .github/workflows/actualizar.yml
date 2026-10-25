@@ -1,0 +1,60 @@
+# Cada mañana busca ayudas nuevas en el BOE y en la BDNS.
+# Las deja en revision/candidatas.json y te avisa con una incidencia («issue») de GitHub.
+name: Buscar ayudas nuevas
+
+on:
+  schedule:
+    - cron: "17 5 * * *"   # todos los días a las 5:17 UTC (6:17 o 7:17 en la península)
+  workflow_dispatch:
+    inputs:
+      dias:
+        description: "Días hacia atrás que se revisan"
+        default: "3"
+
+permissions:
+  contents: write
+  issues: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: publicar
+  cancel-in-progress: false
+
+jobs:
+  buscar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Buscar en el BOE y en la BDNS
+        id: buscar
+        run: python scripts/actualizar.py --dias "${{ github.event.inputs.dias || '3' }}"
+
+      - name: Guardar las candidatas
+        run: |
+          git config user.name "reformayuda-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add revision/candidatas.json
+          git diff --cached --quiet || (git commit -m "Ayudas candidatas $(date +%F)" && git push)
+
+      - name: Avisarte si hay novedades
+        if: steps.buscar.outputs.nuevas != '0'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh label create revisar --color FF6B4A --description "Ayudas por revisar" 2>/dev/null || true
+          n=$(gh issue list --label revisar --state open --json number -q '.[0].number')
+          if [ -n "$n" ]; then
+            gh issue comment "$n" --body-file revision/resumen.md
+          else
+            gh issue create --title "Ayudas nuevas por revisar" --label revisar --body-file revision/resumen.md
+          fi
+
+  publicar:
+    needs: buscar
+    uses: ./.github/workflows/publicar.yml

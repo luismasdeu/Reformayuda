@@ -1,0 +1,10 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "es.reformayuda.app",
+      "sha256_cert_fingerprints": ["PEGA_AQUI_LA_HUELLA_SHA256_QUE_TE_DA_GOOGLE_PLAY"]
+    }
+  }
+]
