@@ -1,6 +1,2158 @@
 {
  "_leeme": "Ayudas detectadas automáticamente en los boletines. Revísalas: pon \"estado\": \"aprobada\" o \"descartada\". Mira README.md.",
- "ultima_busqueda": null,
- "candidatas": [],
- "boe": []
+ "ultima_busqueda": "2026-10-25T20:02",
+ "candidatas": [
+  {
+   "id": "bdns-937626",
+   "estado": "pendiente",
+   "title": "CONVOCATORIA DE CONCESIÓN DE AYUDAS AL FOMENTO DE LA REHABILITACIÓN DE VIVIENDAS DE TITULARIDAD PRIVADA DENTRO DEL PROGRAMA PARA COMBATIR LA DESPOBLACIÓN EN EL ",
+   "org": "TAZACORTE · AYUNTAMIENTO DE TAZACORTE",
+   "scope": "municipal",
+   "ccaa": "Canarias",
+   "tipo": [
+    "rehabilitacion"
+   ],
+   "dest": [
+    "vivienda"
+   ],
+   "importe": 0,
+   "imp": "Consulta la convocatoria",
+   "abre": "2026-10-23",
+   "cierra": null,
+   "plazo": "Consulta el plazo en la convocatoria",
+   "irpf": false,
+   "fuente": "BDNS nº 937626",
+   "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/937626",
+   "resumen": "Acceso a la vivienda y fomento de la edificación",
+   "req": [
+    "Consulta los requisitos en la convocatoria oficial"
+   ],
+   "docs": [
+    "Consulta la documentación en la convocatoria oficial"
+   ],
+   "pasos": [
+    "Lee la convocatoria oficial",
+    "Prepara la documentación",
+    "Presenta la solicitud en la sede del organismo"
+   ],
+   "_revisar": {
+    "presupuesto_total": 139205.8,
+    "bases_reguladoras": "https://www.bopsantacruzdetenerife.es/boletines/2026/16-9-26/16-9-26.pdf",
+    "abierta_segun_bdns": false,
+    "beneficiarios": "PERSONAS FÍSICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
+    "nota": "Revisa importe por vivienda, requisitos, documentos y pasos antes de aprobar."
+   },
+   "prov": "Santa Cruz de Tenerife",
+   "muni": "Tazacorte"
+  },
+  {
+   "id": "bdns-937551",
+   "estado": "pendiente",
+   "title": "Convocatoria de este ejercicio 2026 para el otorgamiento de subvenciones destinadas al arreglo de viviendas para favorecer la accesibilidad y mejorar la calidad",
+   "org": "MANRESA · AYUNTAMIENTO DE MANRESA",
+   "scope": "municipal",
+   "ccaa": "Cataluña",
+   "tipo": [
+    "accesibilidad"
+   ],
+   "dest": [
+    "vivienda"
+   ],
+   "importe": 0,
+   "imp": "Consulta la convocatoria",
+   "abre": "2026-10-23",
+   "cierra": null,
+   "plazo": "Consulta el plazo en la convocatoria",
+   "irpf": false,
+   "fuente": "BDNS nº 937551",
+   "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/937551",
+   "resumen": "Otras Prestaciones económicas",
+   "req": [
+    "Consulta los requisitos en la convocatoria oficial"
+   ],
+   "docs": [
+    "Consulta la documentación en la convocatoria oficial"
+   ],
+   "pasos": [
+    "Lee la convocatoria oficial",
+    "Prepara la documentación",
+    "Presenta la solicitud en la sede del organismo"
+   ],
+   "_revisar": {
+    "presupuesto_total": 50000,
+    "bases_reguladoras": "https://www.boe.es/eli/es/l/2003/11/17/38",
+    "abierta_segun_bdns": false,
+    "beneficiarios": "PERSONAS JURÍDICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
+    "nota": "Revisa importe por vivienda, requisitos, documentos y pasos antes de aprobar."
+   },
+   "prov": "Barcelona",
+   "muni": "Manresa"
+  },
+  {
+   "id": "bdns-937506",
+   "estado": "pendiente",
+   "title": "2ª Convocatoria Ayudas relacionadas con la vivienda",
+   "org": "LEGANÉS · AYUNTAMIENTO DE LEGANÉS",
+   "scope": "municipal",
+   "ccaa": "Comunidad de Madrid",
+   "tipo": [
+    "rehabilitacion"
+   ],
+   "dest": [
+    "vivienda"
+   ],
+   "importe": 0,
+   "imp": "Consulta la convocatoria",
+   "abre": "2026-10-23",
+   "cierra": null,
+   "plazo": "Consulta el plazo en la convocatoria",
+   "irpf": false,
+   "fuente": "BDNS nº 937506",
+   "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/937506",
+   "resumen": "Servicios Sociales y Promoción Social",
+   "req": [
+    "Consulta los requisitos en la convocatoria oficial"
+   ],
+   "docs": [
+    "Consulta la documentación en la convocatoria oficial"
+   ],
+   "pasos": [
+    "Lee la convocatoria oficial",
+    "Prepara la documentación",
+    "Presenta la solicitud en la sede del organismo"
+   ],
+   "_revisar": {
+    "presupuesto_total": 150000,
+    "bases_reguladoras": "https://www.bocm.es/boletin/CM_Orden_BOCM/2023/03/28/BOCM-20230328-62.PDF",
+    "abierta_segun_bdns": false,
+    "beneficiarios": "PERSONAS FÍSICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
+    "nota": "Revisa importe por vivienda, requisitos, documentos y pasos antes de aprobar."
+   },
+   "muni": "Leganés"
+  },
+  {
+   "id": "bdns-937501",
+   "estado": "pendiente",
+   "title": "CONVENIO DE SUBVENCION NOMINATIVA DEL AYUNTAMIENTO DE MOLINA DE SEGURA A CRUZ ROJA PARA PRESTACIONES ECONOMICAS DE ALQUILER DE VIVIENDA.",
+   "org": "MOLINA DE SEGURA · AYUNTAMIENTO DE MOLINA DE SEGURA",
+   "scope": "municipal",
+   "ccaa": "Región de Murcia",
+   "tipo": [
+    "rehabilitacion"
+   ],
+   "dest": [
+    "vivienda"
+   ],
+   "importe": 0,
+   "imp": "Consulta la convocatoria",
+   "abre": "2026-10-23",
+   "cierra": null,
+   "plazo": "Consulta el plazo en la convocatoria",
+   "irpf": false,
+   "fuente": "BDNS nº 937501",
+   "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/937501",
+   "resumen": "Acceso a la vivienda y fomento de la edificación",
+   "req": [
+    "Consulta los requisitos en la convocatoria oficial"
+   ],
+   "docs": [
+    "Consulta la documentación en la convocatoria oficial"
+   ],
+   "pasos": [
+    "Lee la convocatoria oficial",
+    "Prepara la documentación",
+    "Presenta la solicitud en la sede del organismo"
+   ],
+   "_revisar": {
+    "presupuesto_total": 45000,
+    "bases_reguladoras": "https://sedeelectronica.molinadesegura.es/subvenciones/",
+    "abierta_segun_bdns": false,
+    "beneficiarios": "PERSONAS JURÍDICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
+    "nota": "Revisa importe por vivienda, requisitos, documentos y pasos antes de aprobar."
+   },
+   "prov": "Murcia",
+   "muni": "Molina De Segura"
+  },
+  {
+   "id": "bdns-937140",
+   "estado": "pendiente",
+   "title": "CONVOCATORIA PARA LA CONCESIÓN DE AYUDAS ECONÓMICAS MUNICIPALES PARA AFRONTAR OBLIGACIONES DERIVADAS DE LA TITULARIDAD DE LA VIVIENDA HABITUAL DURANTE EL EJERCI",
+   "org": "LENA · AYUNTAMIENTO DE LENA",
+   "scope": "municipal",
+   "ccaa": "Asturias",
+   "tipo": [
+    "rehabilitacion"
+   ],
+   "dest": [
+    "vivienda"
+   ],
+   "importe": 0,
+   "imp": "Consulta la convocatoria",
+   "abre": "2026-10-22",
+   "cierra": null,
+   "plazo": "Consulta el plazo en la convocatoria",
+   "irpf": false,
+   "fuente": "BDNS nº 937140",
+   "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/937140",
+   "resumen": "Servicios Sociales y Promoción Social",
+   "req": [
+    "Consulta los requisitos en la convocatoria oficial"
+   ],
+   "docs": [
+    "Consulta la documentación en la convocatoria oficial"
+   ],
+   "pasos": [
+    "Lee la convocatoria oficial",
+    "Prepara la documentación",
+    "Presenta la solicitud en la sede del organismo"
+   ],
+   "_revisar": {
+    "presupuesto_total": 10000,
+    "bases_reguladoras": "https://miprincipado.asturias.es/bopa/disposiciones?p_p_id=pa_sede_bopa_web_portlet_SedeBopaDispositionWeb&p_p_lifecycle=0&_pa_sede_bopa_web_portlet_SedeBopaDispositionWeb_mvcRenderCommandName=%2Fdisposition%2Fdetail&p_r_p_dispositionText=2026-08253&p_r_p",
+    "abierta_segun_bdns": false,
+    "beneficiarios": "PERSONAS FÍSICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
+    "nota": "Revisa importe por vivienda, requisitos, documentos y pasos antes de aprobar."
+   },
+   "muni": "Lena"
+  },
+  {
+   "id": "bdns-937124",
+   "estado": "pendiente",
+   "title": "CONVOCATORIA POR EL OTORGAMIENTO DEL PROGRAMA DE ARREGLO DE VIVIENDAS DE LA DIPUTACIÓN DE BARCELONA PARA PERSONAS CON DEPENDENCIA Y/O DISCAPACIDAD 2026",
+   "org": "SANT JOAN DE VILATORRADA · AYUNTAMIENTO DE SANT JOAN DE VILATORRADA",
+   "scope": "municipal",
+   "ccaa": "Cataluña",
+   "tipo": [
+    "accesibilidad"
+   ],
+   "dest": [
+    "vivienda"
+   ],
+   "importe": 0,
+   "imp": "Consulta la convocatoria",
+   "abre": "2026-10-27",
+   "cierra": "2026-11-16",
+   "plazo": "Consulta el plazo en la convocatoria",
+   "irpf": false,
+   "fuente": "BDNS nº 937124",
+   "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/937124",
+   "resumen": "Servicios Sociales y Promoción Social",
+   "req": [
+    "Consulta los requisitos en la convocatoria oficial"
+   ],
+   "docs": [
+    "Consulta la documentación en la convocatoria oficial"
+   ],
+   "pasos": [
+    "Lee la convocatoria oficial",
+    "Prepara la documentación",
+    "Presenta la solicitud en la sede del organismo"
+   ],
+   "_revisar": {
+    "presupuesto_total": 32000,
+    "bases_reguladoras": "https://bop.diba.cat/anunci/3875544/aprovacio-definitiva-del-pressupost-general-de-la-corporacio-per-a-l-any-2026-ajuntament-de-sant-joan-de-vilatorrada",
+    "abierta_segun_bdns": false,
+    "beneficiarios": "PERSONAS FÍSICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
+    "nota": "Revisa importe por vivienda, requisitos, documentos y pasos antes de aprobar."
+   },
+   "prov": "Barcelona",
+   "muni": "Sant Joan De Vilatorrada"
+  },
+  {
+   "id": "bdns-936759",
+   "estado": "pendiente",
+   "title": "CONVOCATORIA DE SUBVENCIONES PARA PERSONAS ARRENDATARIAS O CONCESIONARIAS DE VIVIENDAS EN EL TERMINO MUNICIPAL DE VALLS. 2026",
+   "org": "VALLS · AYUNTAMIENTO DE VALLS",
+   "scope": "municipal",
+   "ccaa": "Cataluña",
+   "tipo": [
+    "rehabilitacion"
+   ],
+   "dest": [
+    "vivienda"
+   ],
+   "importe": 0,
+   "imp": "Consulta la convocatoria",
+   "abre": "2026-10-27",
+   "cierra": "2026-11-10",
+   "plazo": "Consulta el plazo en la convocatoria",
+   "irpf": false,
+   "fuente": "BDNS nº 936759",
+   "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/936759",
+   "resumen": "Acceso a la vivienda y fomento de la edificación",
+   "req": [
+    "Consulta los requisitos en la convocatoria oficial"
+   ],
+   "docs": [
+    "Consulta la documentación en la convocatoria oficial"
+   ],
+   "pasos": [
+    "Lee la convocatoria oficial",
+    "Prepara la documentación",
+    "Presenta la solicitud en la sede del organismo"
+   ],
+   "_revisar": {
+    "presupuesto_total": 15000,
+    "bases_reguladoras": "https://www.diputaciodetarragona.cat/ebop/index.php?op=anunci&id=8393&ebop_any=2021",
+    "abierta_segun_bdns": false,
+    "beneficiarios": "PERSONAS FÍSICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
+    "nota": "Revisa importe por vivienda, requisitos, documentos y pasos antes de aprobar."
+   },
+   "muni": "Valls"
+  },
+  {
+   "id": "bdns-936628",
+   "estado": "pendiente",
+   "title": "Convocatoria para la concesión de ayudas para el fomento del parque de vivienda en alquiler en Tavernes Blanques, en régimen de concurrencia competitiva",
+   "org": "TAVERNES BLANQUES · AYUNTAMIENTO DE TAVERNES BLANQUES",
+   "scope": "municipal",
+   "ccaa": "Comunitat Valenciana",
+   "tipo": [
+    "rehabilitacion"
+   ],
+   "dest": [
+    "vivienda"
+   ],
+   "importe": 0,
+   "imp": "Consulta la convocatoria",
+   "abre": "2026-10-21",
+   "cierra": "2026-11-30",
+   "plazo": "Consulta el plazo en la convocatoria",
+   "irpf": false,
+   "fuente": "BDNS nº 936628",
+   "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/936628",
+   "resumen": "Acceso a la vivienda y fomento de la edificación",
+   "req": [
+    "Consulta los requisitos en la convocatoria oficial"
+   ],
+   "docs": [
+    "Consulta la documentación en la convocatoria oficial"
+   ],
+   "pasos": [
+    "Lee la convocatoria oficial",
+    "Prepara la documentación",
+    "Presenta la solicitud en la sede del organismo"
+   ],
+   "_revisar": {
+    "presupuesto_total": 100000,
+    "bases_reguladoras": "https://tavernesblanques.sede.dival.es/tablondeanuncios/anuncio.aspx?id=76574",
+    "abierta_segun_bdns": false,
+    "beneficiarios": "PERSONAS FÍSICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
+    "nota": "Revisa importe por vivienda, requisitos, documentos y pasos antes de aprobar."
+   },
+   "prov": "Valencia",
+   "muni": "Tavernes Blanques"
+  },
+  {
+   "id": "bdns-936480",
+   "estado": "pendiente",
+   "title": "CONVOCATORIA SUBVENCIONES AYUNTAMIENTOS REHABILITACIÓN DE VIVIENDA MUNICIPAL PLAN SORIA 2026",
+   "org": "DIPUTACIÓN PROV. DE SORIA · DIPUTACIÓN PROVINCIAL DE SORIA",
+   "scope": "provincial",
+   "ccaa": "Castilla y León",
+   "tipo": [
+    "rehabilitacion"
+   ],
+   "dest": [
+    "vivienda"
+   ],
+   "importe": 0,
+   "imp": "Consulta la convocatoria",
+   "abre": "2026-10-20",
+   "cierra": null,
+   "plazo": "Consulta el plazo en la convocatoria",
+   "irpf": false,
+   "fuente": "BDNS nº 936480",
+   "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/936480",
+   "resumen": "Acceso a la vivienda y fomento de la edificación",
+   "req": [
+    "Consulta los requisitos en la convocatoria oficial"
+   ],
+   "docs": [
+    "Consulta la documentación en la convocatoria oficial"
+   ],
+   "pasos": [
+    "Lee la convocatoria oficial",
+    "Prepara la documentación",
+    "Presenta la solicitud en la sede del organismo"
+   ],
+   "_revisar": {
+    "presupuesto_total": 200000,
+    "bases_reguladoras": "http://www.dipsoria.es/sites/dipsoria/files/public/paginas/archivos/ordenanza_general_reguladora_de_la_concesion_de_subvenciones.pdf",
+    "abierta_segun_bdns": false,
+    "beneficiarios": "PERSONAS JURÍDICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
+    "nota": "Revisa importe por vivienda, requisitos, documentos y pasos antes de aprobar."
+   },
+   "prov": "Soria"
+  },
+  {
+   "id": "bdns-936357",
+   "estado": "pendiente",
+   "title": "SUBVENCIONES 2026 A PERSONAS DE 65 AÑOS O MÁS - FOMENTO DERECHO A VIVIENDA",
+   "org": "MARTORELL · AYUNTAMIENTO DE MARTORELL",
+   "scope": "municipal",
+   "ccaa": "Cataluña",
+   "tipo": [
+    "rehabilitacion"
+   ],
+   "dest": [
+    "vivienda"
+   ],
+   "importe": 0,
+   "imp": "Consulta la convocatoria",
+   "abre": "2026-01-01",
+   "cierra": "2026-12-31",
+   "plazo": "Consulta el plazo en la convocatoria",
+   "irpf": false,
+   "fuente": "BDNS nº 936357",
+   "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/936357",
+   "resumen": "Acceso a la vivienda y fomento de la edificación",
+   "req": [
+    "Consulta los requisitos en la convocatoria oficial"
+   ],
+   "docs": [
+    "Consulta la documentación en la convocatoria oficial"
+   ],
+   "pasos": [
+    "Lee la convocatoria oficial",
+    "Prepara la documentación",
+    "Presenta la solicitud en la sede del organismo"
+   ],
+   "_revisar": {
+    "presupuesto_total": 3613.92,
+    "bases_reguladoras": "http://martorell.eadministracio.cat/transparency/d52b5af5-5399-428e-aba3-2f375b94f275/",
+    "abierta_segun_bdns": false,
+    "beneficiarios": "PERSONAS FÍSICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA",
+    "nota": "Revisa importe por vivienda, requisitos, documentos y pasos antes de aprobar."
+   },
+   "prov": "Barcelona",
+   "muni": "Martorell"
+  },
+  {
+   "id": "bdns-936354",
+   "estado": "pendiente",
+   "title": "SUBVENCIONES 2026 A FAMILIAS CON RENTAS INSUFICIENTES - FOMENTO DERECHO A VIVIENDA",
+   "org": "MARTORELL · AYUNTAMIENTO DE MARTORELL",
+   "scope": "municipal",
+   "ccaa": "Cataluña",
+   "tipo": [
+    "rehabilitacion"
+   ],
+   "dest": [
+    "vivienda"
+   ],
+   "importe": 0,
+   "imp": "Consulta la convocatoria",
+   "abre": "2026-01-01",
+   "cierra": "2026-12-31",
+   "plazo": "Consulta el plazo en la convocatoria",
+   "irpf": false,
+   "fuente": "BDNS nº 936354",
+   "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/936354",
+   "resumen": "Acceso a la vivienda y fomento de la edificación",
+   "req": [
+    "Consulta los requisitos en la convocatoria oficial"
+   ],
+   "docs": [
+    "Consulta la documentación en la convocatoria oficial"
+   ],
+   "pasos": [
+    "Lee la convocatoria oficial",
+    "Prepara la documentación",
+    "Presenta la solicitud en la sede del organismo"
+   ],
+   "_revisar": {
+    "presupuesto_total": 2962.43,
+    "bases_reguladoras": "http://martorell.eadministracio.cat/transparency/d52b5af5-5399-428e-aba3-2f375b94f275/",
+    "abierta_segun_bdns": false,
+    "beneficiarios": "PERSONAS FÍSICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA",
+    "nota": "Revisa importe por vivienda, requisitos, documentos y pasos antes de aprobar."
+   },
+   "prov": "Barcelona",
+   "muni": "Martorell"
+  },
+  {
+   "id": "bdns-936353",
+   "estado": "pendiente",
+   "title": "SUBVENCIONES 2026 A FAMILIAS MONOPARENTALES - FOMENTO DERECHO A VIVIENDA",
+   "org": "MARTORELL · AYUNTAMIENTO DE MARTORELL",
+   "scope": "municipal",
+   "ccaa": "Cataluña",
+   "tipo": [
+    "rehabilitacion"
+   ],
+   "dest": [
+    "vivienda"
+   ],
+   "importe": 0,
+   "imp": "Consulta la convocatoria",
+   "abre": "2026-01-01",
+   "cierra": "2026-12-31",
+   "plazo": "Consulta el plazo en la convocatoria",
+   "irpf": false,
+   "fuente": "BDNS nº 936353",
+   "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/936353",
+   "resumen": "Acceso a la vivienda y fomento de la edificación",
+   "req": [
+    "Consulta los requisitos en la convocatoria oficial"
+   ],
+   "docs": [
+    "Consulta la documentación en la convocatoria oficial"
+   ],
+   "pasos": [
+    "Lee la convocatoria oficial",
+    "Prepara la documentación",
+    "Presenta la solicitud en la sede del organismo"
+   ],
+   "_revisar": {
+    "presupuesto_total": 6176.32,
+    "bases_reguladoras": "http://martorell.eadministracio.cat/transparency/d52b5af5-5399-428e-aba3-2f375b94f275/",
+    "abierta_segun_bdns": false,
+    "beneficiarios": "PERSONAS FÍSICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA",
+    "nota": "Revisa importe por vivienda, requisitos, documentos y pasos antes de aprobar."
+   },
+   "prov": "Barcelona",
+   "muni": "Martorell"
+  },
+  {
+   "id": "bdns-936251",
+   "estado": "pendiente",
+   "title": "CONVOCATORIA DE SUBVENCIONES PARA FACILLITAR EL ACCESO DE LAS PERSONAS JÓVENES A LA VIVIENDA DE ALQUILER.2026",
+   "org": "VALLS · AYUNTAMIENTO DE VALLS",
+   "scope": "municipal",
+   "ccaa": "Cataluña",
+   "tipo": [
+    "rehabilitacion"
+   ],
+   "dest": [
+    "vivienda"
+   ],
+   "importe": 0,
+   "imp": "Consulta la convocatoria",
+   "abre": "2026-10-26",
+   "cierra": "2026-10-31",
+   "plazo": "Consulta el plazo en la convocatoria",
+   "irpf": false,
+   "fuente": "BDNS nº 936251",
+   "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/936251",
+   "resumen": "Acceso a la vivienda y fomento de la edificación",
+   "req": [
+    "Consulta los requisitos en la convocatoria oficial"
+   ],
+   "docs": [
+    "Consulta la documentación en la convocatoria oficial"
+   ],
+   "pasos": [
+    "Lee la convocatoria oficial",
+    "Prepara la documentación",
+    "Presenta la solicitud en la sede del organismo"
+   ],
+   "_revisar": {
+    "presupuesto_total": 11000,
+    "bases_reguladoras": "https://www.diputaciodetarragona.cat/ebop/index.php?op=anunci&id=8393&ebop_any=2021",
+    "abierta_segun_bdns": false,
+    "beneficiarios": "PERSONAS FÍSICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
+    "nota": "Revisa importe por vivienda, requisitos, documentos y pasos antes de aprobar."
+   },
+   "prov": "Tarragona",
+   "muni": "Valls",
+   "edad": {
+    "max": 35
+   }
+  },
+  {
+   "id": "bdns-936227",
+   "estado": "pendiente",
+   "title": "SUBVENCIONES PARA EL ALQUILER DE VIVIENDAS DESTINADAS A JÓVENES DE 18 A 35 AÑOS RESIDENTES EN ZALDIBAR",
+   "org": "ZALDIBAR · AYUNTAMIENTO DE ZALDIBAR",
+   "scope": "municipal",
+   "ccaa": "País Vasco",
+   "tipo": [
+    "rehabilitacion"
+   ],
+   "dest": [
+    "vivienda"
+   ],
+   "importe": 0,
+   "imp": "Consulta la convocatoria",
+   "abre": "2026-10-19",
+   "cierra": "2026-12-31",
+   "plazo": "Consulta el plazo en la convocatoria",
+   "irpf": false,
+   "fuente": "BDNS nº 936227",
+   "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/936227",
+   "resumen": "Otras Prestaciones económicas",
+   "req": [
+    "Consulta los requisitos en la convocatoria oficial"
+   ],
+   "docs": [
+    "Consulta la documentación en la convocatoria oficial"
+   ],
+   "pasos": [
+    "Lee la convocatoria oficial",
+    "Prepara la documentación",
+    "Presenta la solicitud en la sede del organismo"
+   ],
+   "_revisar": {
+    "presupuesto_total": 9000,
+    "bases_reguladoras": "https://www.bizkaia.eus/lehendakaritza/Bao_bob/2026/09/30/II-5006_cas.pdf",
+    "abierta_segun_bdns": false,
+    "beneficiarios": "PERSONAS FÍSICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
+    "nota": "Revisa importe por vivienda, requisitos, documentos y pasos antes de aprobar."
+   },
+   "prov": "Bizkaia",
+   "muni": "Zaldibar",
+   "edad": {
+    "max": 35
+   }
+  },
+  {
+   "id": "bdns-935990",
+   "estado": "pendiente",
+   "title": "AYUDAS PARA GASTOS DE NOTARÍA Y REGISTRO A JÓVENES QUE ADQUIERAN SU PRIMERA VIVIENDA O DEL SUELO PARA LA CONSTRUCCIÓN DE ÉSTA EN EL MUNICIPIO DE CARIÑENA. ANUAL",
+   "org": "CARIÑENA · AYUNTAMIENTO DE CARIÑENA",
+   "scope": "municipal",
+   "ccaa": "Aragón",
+   "tipo": [
+    "rehabilitacion"
+   ],
+   "dest": [
+    "vivienda"
+   ],
+   "importe": 0,
+   "imp": "Consulta la convocatoria",
+   "abre": "2026-10-17",
+   "cierra": "2026-12-09",
+   "plazo": "Consulta el plazo en la convocatoria",
+   "irpf": false,
+   "fuente": "BDNS nº 935990",
+   "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/935990",
+   "resumen": "Acceso a la vivienda y fomento de la edificación",
+   "req": [
+    "Consulta los requisitos en la convocatoria oficial"
+   ],
+   "docs": [
+    "Consulta la documentación en la convocatoria oficial"
+   ],
+   "pasos": [
+    "Lee la convocatoria oficial",
+    "Prepara la documentación",
+    "Presenta la solicitud en la sede del organismo"
+   ],
+   "_revisar": {
+    "presupuesto_total": 3737.52,
+    "bases_reguladoras": "https://carinena.sedelectronica.es/transparency",
+    "abierta_segun_bdns": false,
+    "beneficiarios": "PERSONAS FÍSICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
+    "nota": "Revisa importe por vivienda, requisitos, documentos y pasos antes de aprobar."
+   },
+   "prov": "Zaragoza",
+   "muni": "Cariñena",
+   "edad": {
+    "max": 35
+   }
+  },
+  {
+   "id": "bdns-935742",
+   "estado": "pendiente",
+   "title": "Acuerdo Junta de Gobierno Local de 14 de octubre de 2026 que aprueba la convocatoria de subvenciones a las obras de adecuación de la accesibilidad universal en ",
+   "org": "LOGROÑO · AYUNTAMIENTO DE LOGROÑO",
+   "scope": "municipal",
+   "ccaa": "La Rioja",
+   "tipo": [
+    "accesibilidad"
+   ],
+   "dest": [
+    "vivienda"
+   ],
+   "importe": 0,
+   "imp": "Consulta la convocatoria",
+   "abre": "2026-10-16",
+   "cierra": null,
+   "plazo": "Consulta el plazo en la convocatoria",
+   "irpf": false,
+   "fuente": "BDNS nº 935742",
+   "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/935742",
+   "resumen": "Otras actuaciones de carácter económico",
+   "req": [
+    "Consulta los requisitos en la convocatoria oficial"
+   ],
+   "docs": [
+    "Consulta la documentación en la convocatoria oficial"
+   ],
+   "pasos": [
+    "Lee la convocatoria oficial",
+    "Prepara la documentación",
+    "Presenta la solicitud en la sede del organismo"
+   ],
+   "_revisar": {
+    "presupuesto_total": 140000,
+    "bases_reguladoras": "https://logrono.es/becas-y-subvenciones",
+    "abierta_segun_bdns": false,
+    "beneficiarios": "PERSONAS FÍSICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
+    "nota": "Revisa importe por vivienda, requisitos, documentos y pasos antes de aprobar."
+   },
+   "muni": "Logroño"
+  },
+  {
+   "id": "bdns-935669",
+   "estado": "pendiente",
+   "title": "Convocatoria 2026 de subvenciones para gastos vivienda habitual dirigida a personas jubiladas y familias monoparentales con rentas bajas",
+   "org": "CASSÀ DE LA SELVA · AYUNTAMIENTO DE CASSÀ DE LA SELVA",
+   "scope": "municipal",
+   "ccaa": "Cataluña",
+   "tipo": [
+    "rehabilitacion"
+   ],
+   "dest": [
+    "vivienda"
+   ],
+   "importe": 0,
+   "imp": "Consulta la convocatoria",
+   "abre": "2026-10-16",
+   "cierra": null,
+   "plazo": "Consulta el plazo en la convocatoria",
+   "irpf": false,
+   "fuente": "BDNS nº 935669",
+   "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/935669",
+   "resumen": "Otras actuaciones de carácter económico",
+   "req": [
+    "Consulta los requisitos en la convocatoria oficial"
+   ],
+   "docs": [
+    "Consulta la documentación en la convocatoria oficial"
+   ],
+   "pasos": [
+    "Lee la convocatoria oficial",
+    "Prepara la documentación",
+    "Presenta la solicitud en la sede del organismo"
+   ],
+   "_revisar": {
+    "presupuesto_total": 8000,
+    "bases_reguladoras": "https://ssl4.ddgi.cat/bopV1/pdf/2026/193/202619308493.pdf",
+    "abierta_segun_bdns": false,
+    "beneficiarios": "PERSONAS FÍSICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
+    "nota": "Revisa importe por vivienda, requisitos, documentos y pasos antes de aprobar."
+   },
+   "prov": "Girona",
+   "muni": "Cassà De La Selva"
+  },
+  {
+   "id": "bdns-935567",
+   "estado": "pendiente",
+   "title": "RESOLUCIÓN de Vicepr. Primera y Conselleria de Vivienda, Empleo, Juventud e Igualdad que apruebam bases reguladoras de subvenciones para  limpieza y reparación ",
+   "org": "COMUNITAT VALENCIANA · SECRETARÍA AUTONÓMICA DE VIVIENDA",
+   "scope": "autonomica",
+   "ccaa": "Comunitat Valenciana",
+   "tipo": [
+    "eficiencia"
+   ],
+   "dest": [
+    "vivienda"
+   ],
+   "importe": 0,
+   "imp": "Consulta la convocatoria",
+   "abre": "2026-10-15",
+   "cierra": null,
+   "plazo": "Consulta el plazo en la convocatoria",
+   "irpf": false,
+   "fuente": "BDNS nº 935567",
+   "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/935567",
+   "resumen": "Acceso a la vivienda y fomento de la edificación",
+   "req": [
+    "Consulta los requisitos en la convocatoria oficial"
+   ],
+   "docs": [
+    "Consulta la documentación en la convocatoria oficial"
+   ],
+   "pasos": [
+    "Lee la convocatoria oficial",
+    "Prepara la documentación",
+    "Presenta la solicitud en la sede del organismo"
+   ],
+   "_revisar": {
+    "presupuesto_total": 4000000,
+    "bases_reguladoras": "https://habitatge.gva.es/es/web/arquitectura/ajudes/2026/f_dana",
+    "abierta_segun_bdns": false,
+    "beneficiarios": "GRAN EMPRESA PERSONAS FÍSICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA PERSONAS JURÍDICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA",
+    "nota": "Revisa importe por vivienda, requisitos, documentos y pasos antes de aprobar."
+   }
+  },
+  {
+   "id": "bdns-935530",
+   "estado": "pendiente",
+   "title": "RESOLUCIÓN de  Vicep. Primera y Conselleria de Vivienda, Empleo, Juventud e Igualdad de aprobación de bases reguladoras de subvenc. para la reparación o sustitu",
+   "org": "COMUNITAT VALENCIANA · SECRETARÍA AUTONÓMICA DE VIVIENDA",
+   "scope": "autonomica",
+   "ccaa": "Comunitat Valenciana",
+   "tipo": [
+    "accesibilidad"
+   ],
+   "dest": [
+    "vivienda"
+   ],
+   "importe": 0,
+   "imp": "Consulta la convocatoria",
+   "abre": "2026-10-15",
+   "cierra": null,
+   "plazo": "Consulta el plazo en la convocatoria",
+   "irpf": false,
+   "fuente": "BDNS nº 935530",
+   "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/935530",
+   "resumen": "Acceso a la vivienda y fomento de la edificación",
+   "req": [
+    "Consulta los requisitos en la convocatoria oficial"
+   ],
+   "docs": [
+    "Consulta la documentación en la convocatoria oficial"
+   ],
+   "pasos": [
+    "Lee la convocatoria oficial",
+    "Prepara la documentación",
+    "Presenta la solicitud en la sede del organismo"
+   ],
+   "_revisar": {
+    "presupuesto_total": 4000000,
+    "bases_reguladoras": "https://habitatge.gva.es/es/web/arquitectura/ajudes/2026/a2dana",
+    "abierta_segun_bdns": false,
+    "beneficiarios": "GRAN EMPRESA PERSONAS FÍSICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA PERSONAS JURÍDICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA",
+    "nota": "Revisa importe por vivienda, requisitos, documentos y pasos antes de aprobar."
+   }
+  },
+  {
+   "id": "bdns-935296",
+   "estado": "pendiente",
+   "title": "Resolución 2026/3017 de 9 de octubre de 2026 por la que se convocan ayudas del Ayuntamiento de Durango para la rehabilitación de viviendas vacías para su inclus",
+   "org": "DURANGO · AYUNTAMIENTO DE DURANGO",
+   "scope": "municipal",
+   "ccaa": "País Vasco",
+   "tipo": [
+    "rehabilitacion"
+   ],
+   "dest": [
+    "vivienda"
+   ],
+   "importe": 0,
+   "imp": "Consulta la convocatoria",
+   "abre": "2026-10-14",
+   "cierra": null,
+   "plazo": "Consulta el plazo en la convocatoria",
+   "irpf": false,
+   "fuente": "BDNS nº 935296",
+   "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/935296",
+   "resumen": "Acceso a la vivienda y fomento de la edificación",
+   "req": [
+    "Consulta los requisitos en la convocatoria oficial"
+   ],
+   "docs": [
+    "Consulta la documentación en la convocatoria oficial"
+   ],
+   "pasos": [
+    "Lee la convocatoria oficial",
+    "Prepara la documentación",
+    "Presenta la solicitud en la sede del organismo"
+   ],
+   "_revisar": {
+    "presupuesto_total": 40000,
+    "bases_reguladoras": "https://www.durango.eus/documents/36953/54700/Reguladora+de+Subvenciones+y+Ayudas.pdf/d27dcff4-b992-d438-1356-7b85d6933263?t=1604496634039",
+    "abierta_segun_bdns": true,
+    "beneficiarios": "PERSONAS FÍSICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
+    "nota": "Revisa importe por vivienda, requisitos, documentos y pasos antes de aprobar."
+   },
+   "prov": "Bizkaia",
+   "muni": "Durango"
+  },
+  {
+   "id": "bdns-935190",
+   "estado": "pendiente",
+   "title": "Ordenanza Reguladora para la concesión de ayudas para el alquiler de viviendas aprobado por el Pleno Ordinario el 20/12/2018",
+   "org": "LEGORRETA · AYUNTAMIENTO DE LEGORRETA",
+   "scope": "municipal",
+   "ccaa": "País Vasco",
+   "tipo": [
+    "rehabilitacion"
+   ],
+   "dest": [
+    "vivienda"
+   ],
+   "importe": 0,
+   "imp": "Consulta la convocatoria",
+   "abre": "2020-01-01",
+   "cierra": "2020-12-31",
+   "plazo": "Consulta el plazo en la convocatoria",
+   "irpf": false,
+   "fuente": "BDNS nº 935190",
+   "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/935190",
+   "resumen": "Acceso a la vivienda y fomento de la edificación",
+   "req": [
+    "Consulta los requisitos en la convocatoria oficial"
+   ],
+   "docs": [
+    "Consulta la documentación en la convocatoria oficial"
+   ],
+   "pasos": [
+    "Lee la convocatoria oficial",
+    "Prepara la documentación",
+    "Presenta la solicitud en la sede del organismo"
+   ],
+   "_revisar": {
+    "presupuesto_total": 1652.44,
+    "bases_reguladoras": "\\\\ZERBITZARIA\\MUNIGEX\\Documentos\\2020\\IDIR\\0004\\2020IDIR0004-005-002.pdf",
+    "abierta_segun_bdns": false,
+    "beneficiarios": "PERSONAS FÍSICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
+    "nota": "Revisa importe por vivienda, requisitos, documentos y pasos antes de aprobar."
+   },
+   "prov": "Gipuzkoa",
+   "muni": "Legorreta"
+  },
+  {
+   "id": "bdns-934971",
+   "estado": "pendiente",
+   "title": "SUBV. ASOCIACIÓN PROVIVIENDA. PROGRAMA DE ACCESO A LA VIVIENDA PARA PERSONAS VULNERABLES",
+   "org": "CABILDO INSULAR DE LA PALMA · EXCMO. CABILDO INSULAR DE LA PALMA",
+   "scope": "provincial",
+   "ccaa": "Canarias",
+   "tipo": [
+    "rehabilitacion"
+   ],
+   "dest": [
+    "vivienda"
+   ],
+   "importe": 0,
+   "imp": "Consulta la convocatoria",
+   "abre": "2026-10-13",
+   "cierra": null,
+   "plazo": "Consulta el plazo en la convocatoria",
+   "irpf": false,
+   "fuente": "BDNS nº 934971",
+   "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/934971",
+   "resumen": "Servicios Sociales y Promoción Social",
+   "req": [
+    "Consulta los requisitos en la convocatoria oficial"
+   ],
+   "docs": [
+    "Consulta la documentación en la convocatoria oficial"
+   ],
+   "pasos": [
+    "Lee la convocatoria oficial",
+    "Prepara la documentación",
+    "Presenta la solicitud en la sede del organismo"
+   ],
+   "_revisar": {
+    "presupuesto_total": 20000,
+    "bases_reguladoras": "https://transparencia.cabildodelapalma.es/media/r/economico-financiera/presupuesto/2026/Estado%20de%20gastos.pdf",
+    "abierta_segun_bdns": true,
+    "beneficiarios": "PERSONAS JURÍDICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
+    "nota": "Revisa importe por vivienda, requisitos, documentos y pasos antes de aprobar."
+   },
+   "prov": "Santa Cruz de Tenerife"
+  },
+  {
+   "id": "bdns-934938",
+   "estado": "pendiente",
+   "title": "CONVOCATORIA DE AYUDAS PARA FINANCIAR GASTOS BASICOS DE VIVIENDA 2026",
+   "org": "DIPUTACIÓN PROV. DE SORIA · DIPUTACIÓN PROVINCIAL DE SORIA",
+   "scope": "provincial",
+   "ccaa": "Castilla y León",
+   "tipo": [
+    "rehabilitacion"
+   ],
+   "dest": [
+    "vivienda"
+   ],
+   "importe": 0,
+   "imp": "Consulta la convocatoria",
+   "abre": "2026-03-21",
+   "cierra": "2026-04-21",
+   "plazo": "Consulta el plazo en la convocatoria",
+   "irpf": false,
+   "fuente": "BDNS nº 934938",
+   "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/934938",
+   "resumen": "Servicios Sociales y Promoción Social",
+   "req": [
+    "Consulta los requisitos en la convocatoria oficial"
+   ],
+   "docs": [
+    "Consulta la documentación en la convocatoria oficial"
+   ],
+   "pasos": [
+    "Lee la convocatoria oficial",
+    "Prepara la documentación",
+    "Presenta la solicitud en la sede del organismo"
+   ],
+   "_revisar": {
+    "presupuesto_total": 150000,
+    "bases_reguladoras": "https://bop.dipsoria.es/",
+    "abierta_segun_bdns": false,
+    "beneficiarios": "PERSONAS FÍSICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
+    "nota": "Revisa importe por vivienda, requisitos, documentos y pasos antes de aprobar."
+   },
+   "prov": "Soria"
+  },
+  {
+   "id": "bdns-934927",
+   "estado": "pendiente",
+   "title": "Bases para subvenciones para la adaptación al riesgo de inundación  de las viviendas en Esquiroz y Salinas de Pamplona",
+   "org": "GALAR · AYUNTAMIENTO DE GALAR",
+   "scope": "municipal",
+   "ccaa": "Navarra",
+   "tipo": [
+    "rehabilitacion"
+   ],
+   "dest": [
+    "vivienda"
+   ],
+   "importe": 0,
+   "imp": "Consulta la convocatoria",
+   "abre": "2026-10-13",
+   "cierra": "2026-12-31",
+   "plazo": "Consulta el plazo en la convocatoria",
+   "irpf": false,
+   "fuente": "BDNS nº 934927",
+   "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/934927",
+   "resumen": "Seguridad Ciudadana e Instituciones Penitenciarias",
+   "req": [
+    "Consulta los requisitos en la convocatoria oficial"
+   ],
+   "docs": [
+    "Consulta la documentación en la convocatoria oficial"
+   ],
+   "pasos": [
+    "Lee la convocatoria oficial",
+    "Prepara la documentación",
+    "Presenta la solicitud en la sede del organismo"
+   ],
+   "_revisar": {
+    "presupuesto_total": 30000,
+    "bases_reguladoras": "https://sedeelectronica.cendeadegalar.es/tablondeanuncios/anuncio.aspx?id=27482",
+    "abierta_segun_bdns": false,
+    "beneficiarios": "PERSONAS FÍSICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
+    "nota": "Revisa importe por vivienda, requisitos, documentos y pasos antes de aprobar."
+   },
+   "prov": "Navarra",
+   "muni": "Galar"
+  },
+  {
+   "id": "bdns-934826",
+   "estado": "pendiente",
+   "title": "AYUDAS AL ALQUILER- PLAN MUNICIPAL DE VIVIENDA 2026",
+   "org": "ANDÚJAR · AYUNTAMIENTO DE ANDÚJAR",
+   "scope": "municipal",
+   "ccaa": "Andalucía",
+   "tipo": [
+    "rehabilitacion"
+   ],
+   "dest": [
+    "vivienda"
+   ],
+   "importe": 0,
+   "imp": "Consulta la convocatoria",
+   "abre": "2026-10-13",
+   "cierra": null,
+   "plazo": "Consulta el plazo en la convocatoria",
+   "irpf": false,
+   "fuente": "BDNS nº 934826",
+   "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/934826",
+   "resumen": "Acceso a la vivienda y fomento de la edificación",
+   "req": [
+    "Consulta los requisitos en la convocatoria oficial"
+   ],
+   "docs": [
+    "Consulta la documentación en la convocatoria oficial"
+   ],
+   "pasos": [
+    "Lee la convocatoria oficial",
+    "Prepara la documentación",
+    "Presenta la solicitud en la sede del organismo"
+   ],
+   "_revisar": {
+    "presupuesto_total": 160000,
+    "bases_reguladoras": "https://www.andujar.es",
+    "abierta_segun_bdns": false,
+    "beneficiarios": "PERSONAS FÍSICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
+    "nota": "Revisa importe por vivienda, requisitos, documentos y pasos antes de aprobar."
+   },
+   "prov": "Jaén",
+   "muni": "Andújar"
+  },
+  {
+   "id": "bdns-934548",
+   "estado": "pendiente",
+   "title": "CONVOCATORIA ABIERTA DE SUBVENCIONES CON DESTINO A ACTUACIONES DE ADAPTACIÓN DE BAÑO MEDIANTE SUSTITUCIÓN DE BAÑERA POR PLATO DE DUCHA EN VIVIENDAS DE PERSONAS ",
+   "org": "CAMARGO · AYUNTAMIENTO DE CAMARGO",
+   "scope": "municipal",
+   "ccaa": "Cantabria",
+   "tipo": [
+    "accesibilidad"
+   ],
+   "dest": [
+    "vivienda"
+   ],
+   "importe": 0,
+   "imp": "Consulta la convocatoria",
+   "abre": "2026-10-09",
+   "cierra": null,
+   "plazo": "Consulta el plazo en la convocatoria",
+   "irpf": false,
+   "fuente": "BDNS nº 934548",
+   "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/934548",
+   "resumen": "Servicios Sociales y Promoción Social",
+   "req": [
+    "Consulta los requisitos en la convocatoria oficial"
+   ],
+   "docs": [
+    "Consulta la documentación en la convocatoria oficial"
+   ],
+   "pasos": [
+    "Lee la convocatoria oficial",
+    "Prepara la documentación",
+    "Presenta la solicitud en la sede del organismo"
+   ],
+   "_revisar": {
+    "presupuesto_total": 60000,
+    "bases_reguladoras": "https://boc.cantabria.es/boces/verAnuncioAction.do?idAnuBlob=234460",
+    "abierta_segun_bdns": false,
+    "beneficiarios": "PERSONAS FÍSICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
+    "nota": "Revisa importe por vivienda, requisitos, documentos y pasos antes de aprobar."
+   },
+   "prov": "Cantabria",
+   "muni": "Camargo",
+   "edad": {
+    "min": 65
+   }
+  },
+  {
+   "id": "bdns-934466",
+   "estado": "pendiente",
+   "title": "CONVOCATORIA DE CONCESIÓN DIRECTA DE LA SUBVENCIÓN PARA LA REHABILITACIÓN DE VIVIENDAS PARA EL 2026 DEL EXCMO. AYUNTAMIENTO DE ARRECIFE.",
+   "org": "ARRECIFE · AYUNTAMIENTO DE ARRECIFE",
+   "scope": "municipal",
+   "ccaa": "Canarias",
+   "tipo": [
+    "rehabilitacion"
+   ],
+   "dest": [
+    "vivienda"
+   ],
+   "importe": 0,
+   "imp": "Consulta la convocatoria",
+   "abre": "2026-10-08",
+   "cierra": "2026-11-01",
+   "plazo": "Consulta el plazo en la convocatoria",
+   "irpf": false,
+   "fuente": "BDNS nº 934466",
+   "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/934466",
+   "resumen": "Acceso a la vivienda y fomento de la edificación",
+   "req": [
+    "Consulta los requisitos en la convocatoria oficial"
+   ],
+   "docs": [
+    "Consulta la documentación en la convocatoria oficial"
+   ],
+   "pasos": [
+    "Lee la convocatoria oficial",
+    "Prepara la documentación",
+    "Presenta la solicitud en la sede del organismo"
+   ],
+   "_revisar": {
+    "presupuesto_total": 206767.68,
+    "bases_reguladoras": "https://arrecife.sedeelectronica.es/info.0",
+    "abierta_segun_bdns": false,
+    "beneficiarios": "PERSONAS FÍSICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
+    "nota": "Revisa importe por vivienda, requisitos, documentos y pasos antes de aprobar."
+   },
+   "prov": "Las Palmas",
+   "muni": "Arrecife"
+  },
+  {
+   "id": "bdns-934248",
+   "estado": "pendiente",
+   "title": "CONVOCATORIA DE AYUDAS ECONÓMICAS MUNICIPALES PARA AFRONTAR OBLIGACIONES DERIVADAS DE LA TITULARIDAD DE LA VIVIENDA HABITUAL. AÑO 2026",
+   "org": "MIERES · AYUNTAMIENTO DE MIERES (ASTURIAS)",
+   "scope": "municipal",
+   "ccaa": "Asturias",
+   "tipo": [
+    "rehabilitacion"
+   ],
+   "dest": [
+    "vivienda"
+   ],
+   "importe": 0,
+   "imp": "Consulta la convocatoria",
+   "abre": "2026-10-08",
+   "cierra": null,
+   "plazo": "Consulta el plazo en la convocatoria",
+   "irpf": false,
+   "fuente": "BDNS nº 934248",
+   "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/934248",
+   "resumen": "Acceso a la vivienda y fomento de la edificación",
+   "req": [
+    "Consulta los requisitos en la convocatoria oficial"
+   ],
+   "docs": [
+    "Consulta la documentación en la convocatoria oficial"
+   ],
+   "pasos": [
+    "Lee la convocatoria oficial",
+    "Prepara la documentación",
+    "Presenta la solicitud en la sede del organismo"
+   ],
+   "_revisar": {
+    "presupuesto_total": 20000,
+    "bases_reguladoras": "https://miprincipado.asturias.es/bopa/2026/09/02/2026-07104.pdf",
+    "abierta_segun_bdns": false,
+    "beneficiarios": "PERSONAS FÍSICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
+    "nota": "Revisa importe por vivienda, requisitos, documentos y pasos antes de aprobar."
+   },
+   "muni": "Mieres (Asturias)"
+  },
+  {
+   "id": "bdns-934203",
+   "estado": "pendiente",
+   "title": "CONVOCATORIA AYUDAS FOMENTO DEL ALQUILER Y LA GESTIÓN DE VIVIENDA ASEQUIBLE 2026",
+   "org": "CONSELL COMARCAL DE ANOIA · CONSELL COMARCAL DE ANOIA",
+   "scope": "provincial",
+   "ccaa": "Cataluña",
+   "tipo": [
+    "rehabilitacion"
+   ],
+   "dest": [
+    "vivienda"
+   ],
+   "importe": 0,
+   "imp": "Consulta la convocatoria",
+   "abre": "2026-10-07",
+   "cierra": "2026-11-13",
+   "plazo": "Consulta el plazo en la convocatoria",
+   "irpf": false,
+   "fuente": "BDNS nº 934203",
+   "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/934203",
+   "resumen": "Acceso a la vivienda y fomento de la edificación",
+   "req": [
+    "Consulta los requisitos en la convocatoria oficial"
+   ],
+   "docs": [
+    "Consulta la documentación en la convocatoria oficial"
+   ],
+   "pasos": [
+    "Lee la convocatoria oficial",
+    "Prepara la documentación",
+    "Presenta la solicitud en la sede del organismo"
+   ],
+   "_revisar": {
+    "presupuesto_total": 10000,
+    "bases_reguladoras": "https://bop.diba.cat/anunci/3107683/aprovacio-inicial-de-les-bases-reguladores-dels-ajuts-per-al-foment-del-lloguer-a-l-habitatge-assequible-consell-comarcal-de-l-anoia",
+    "abierta_segun_bdns": false,
+    "beneficiarios": "PERSONAS FÍSICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
+    "nota": "Revisa importe por vivienda, requisitos, documentos y pasos antes de aprobar."
+   },
+   "prov": "Barcelona"
+  },
+  {
+   "id": "bdns-934112",
+   "estado": "pendiente",
+   "title": "CONVOCATORIA DEL OCTAVO PLAN DE IMPULSO PARA LA REACTIVACIÓN ECONÓMICA DE PILAR DE LA HORADADA\nBONOS VIVIENDA 2026",
+   "org": "PILAR DE LA HORADADA · AYUNTAMIENTO DE PILAR DE LA HORADADA",
+   "scope": "municipal",
+   "ccaa": "Comunitat Valenciana",
+   "tipo": [
+    "rehabilitacion"
+   ],
+   "dest": [
+    "vivienda"
+   ],
+   "importe": 0,
+   "imp": "Consulta la convocatoria",
+   "abre": "2023-11-03",
+   "cierra": "2023-11-23",
+   "plazo": "Consulta el plazo en la convocatoria",
+   "irpf": false,
+   "fuente": "BDNS nº 934112",
+   "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/934112",
+   "resumen": "Otras Prestaciones económicas",
+   "req": [
+    "Consulta los requisitos en la convocatoria oficial"
+   ],
+   "docs": [
+    "Consulta la documentación en la convocatoria oficial"
+   ],
+   "pasos": [
+    "Lee la convocatoria oficial",
+    "Prepara la documentación",
+    "Presenta la solicitud en la sede del organismo"
+   ],
+   "_revisar": {
+    "presupuesto_total": 342130,
+    "bases_reguladoras": "(https://sede.pilardelahoradada.org/)",
+    "abierta_segun_bdns": false,
+    "beneficiarios": "PERSONAS FÍSICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
+    "nota": "Revisa importe por vivienda, requisitos, documentos y pasos antes de aprobar."
+   },
+   "prov": "Alicante",
+   "muni": "Pilar De La Horadada"
+  },
+  {
+   "id": "bdns-933993",
+   "estado": "pendiente",
+   "title": "BASES SUBVENCIÓN PARA LA COMPRA O AUTOPROMOCIÓN DE PRIMERA VIVIENDA, EJERCICIO 2026",
+   "org": "ALMUSSAFES · AYUNTAMIENTO DE ALMUSSAFES",
+   "scope": "municipal",
+   "ccaa": "Comunitat Valenciana",
+   "tipo": [
+    "rehabilitacion"
+   ],
+   "dest": [
+    "vivienda"
+   ],
+   "importe": 0,
+   "imp": "Consulta la convocatoria",
+   "abre": "2026-10-07",
+   "cierra": null,
+   "plazo": "Consulta el plazo en la convocatoria",
+   "irpf": false,
+   "fuente": "BDNS nº 933993",
+   "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/933993",
+   "resumen": "Acceso a la vivienda y fomento de la edificación",
+   "req": [
+    "Consulta los requisitos en la convocatoria oficial"
+   ],
+   "docs": [
+    "Consulta la documentación en la convocatoria oficial"
+   ],
+   "pasos": [
+    "Lee la convocatoria oficial",
+    "Prepara la documentación",
+    "Presenta la solicitud en la sede del organismo"
+   ],
+   "_revisar": {
+    "presupuesto_total": 35000,
+    "bases_reguladoras": "https://wp.me/PanQjS-1mD",
+    "abierta_segun_bdns": false,
+    "beneficiarios": "PERSONAS FÍSICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
+    "nota": "Revisa importe por vivienda, requisitos, documentos y pasos antes de aprobar."
+   },
+   "prov": "Valencia",
+   "muni": "Almussafes"
+  },
+  {
+   "id": "bdns-933977",
+   "estado": "pendiente",
+   "title": "Actuaciones de rehabilitación y mejora de la eficiencia energética en viviendas y edificios de viviendas de CLM, cofinanciadas FEDER 2021-2027. Convocatoria 202",
+   "org": "CASTILLA-LA MANCHA · DIRECCIÓN GENERAL DE VIVIENDA",
+   "scope": "autonomica",
+   "ccaa": "Castilla-La Mancha",
+   "tipo": [
+    "eficiencia",
+    "rehabilitacion"
+   ],
+   "dest": [
+    "vivienda",
+    "edificio"
+   ],
+   "importe": 0,
+   "imp": "Consulta la convocatoria",
+   "abre": "2026-10-27",
+   "cierra": "2026-11-30",
+   "plazo": "Consulta el plazo en la convocatoria",
+   "irpf": true,
+   "fuente": "BDNS nº 933977",
+   "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/933977",
+   "resumen": "Acceso a la vivienda y fomento de la edificación",
+   "req": [
+    "Consulta los requisitos en la convocatoria oficial"
+   ],
+   "docs": [
+    "Consulta la documentación en la convocatoria oficial"
+   ],
+   "pasos": [
+    "Lee la convocatoria oficial",
+    "Prepara la documentación",
+    "Presenta la solicitud en la sede del organismo"
+   ],
+   "_revisar": {
+    "presupuesto_total": 50000000,
+    "bases_reguladoras": "https://www.jccm.es",
+    "abierta_segun_bdns": false,
+    "beneficiarios": "PERSONAS FÍSICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
+    "nota": "Revisa importe por vivienda, requisitos, documentos y pasos antes de aprobar."
+   }
+  },
+  {
+   "id": "bdns-937585",
+   "estado": "pendiente",
+   "title": "Subvención nominativa a ALUME SAÚDE MENTAL para la financiación del Programa pluriasistencial de apoyo y rehabilitación para enfermos mentales. Año 2026.",
+   "org": "LUGO · CONCELLO DE LUGO",
+   "scope": "municipal",
+   "ccaa": "Galicia",
+   "tipo": [
+    "rehabilitacion"
+   ],
+   "dest": [
+    "vivienda"
+   ],
+   "importe": 0,
+   "imp": "Consulta la convocatoria",
+   "abre": "2026-10-23",
+   "cierra": null,
+   "plazo": "Consulta el plazo en la convocatoria",
+   "irpf": false,
+   "fuente": "BDNS nº 937585",
+   "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/937585",
+   "resumen": "Servicios Sociales y Promoción Social",
+   "req": [
+    "Consulta los requisitos en la convocatoria oficial"
+   ],
+   "docs": [
+    "Consulta la documentación en la convocatoria oficial"
+   ],
+   "pasos": [
+    "Lee la convocatoria oficial",
+    "Prepara la documentación",
+    "Presenta la solicitud en la sede del organismo"
+   ],
+   "_revisar": {
+    "presupuesto_total": 10000,
+    "bases_reguladoras": "https://concellodelugo.gal",
+    "abierta_segun_bdns": true,
+    "beneficiarios": "PERSONAS JURÍDICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
+    "nota": "Revisa importe por vivienda, requisitos, documentos y pasos antes de aprobar."
+   },
+   "prov": "Lugo"
+  },
+  {
+   "id": "bdns-937578",
+   "estado": "pendiente",
+   "title": "Subvención nominativa a ALUCEM para el financiamiento del programa de rehabilitación fisioterapéutica. Año 2026.",
+   "org": "LUGO · CONCELLO DE LUGO",
+   "scope": "municipal",
+   "ccaa": "Galicia",
+   "tipo": [
+    "rehabilitacion"
+   ],
+   "dest": [
+    "vivienda"
+   ],
+   "importe": 0,
+   "imp": "Consulta la convocatoria",
+   "abre": "2026-10-23",
+   "cierra": null,
+   "plazo": "Consulta el plazo en la convocatoria",
+   "irpf": false,
+   "fuente": "BDNS nº 937578",
+   "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/937578",
+   "resumen": "Servicios Sociales y Promoción Social",
+   "req": [
+    "Consulta los requisitos en la convocatoria oficial"
+   ],
+   "docs": [
+    "Consulta la documentación en la convocatoria oficial"
+   ],
+   "pasos": [
+    "Lee la convocatoria oficial",
+    "Prepara la documentación",
+    "Presenta la solicitud en la sede del organismo"
+   ],
+   "_revisar": {
+    "presupuesto_total": 2500,
+    "bases_reguladoras": "https://concellodelugo.gal",
+    "abierta_segun_bdns": true,
+    "beneficiarios": "PERSONAS JURÍDICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
+    "nota": "Revisa importe por vivienda, requisitos, documentos y pasos antes de aprobar."
+   },
+   "prov": "Lugo"
+  },
+  {
+   "id": "bdns-937482",
+   "estado": "pendiente",
+   "title": "AYUDAS A LA REHABILITACIÓN Y RESTAURACIÓN DE LAS FACHADAS DEL CASCO ANTIGUO. CALLE DEL ARENY N.º 20",
+   "org": "LLORET DE MAR · AYUNTAMIENTO DE LLORET DE MAR",
+   "scope": "municipal",
+   "ccaa": "Cataluña",
+   "tipo": [
+    "eficiencia",
+    "rehabilitacion"
+   ],
+   "dest": [
+    "vivienda"
+   ],
+   "importe": 0,
+   "imp": "Consulta la convocatoria",
+   "abre": "2026-10-23",
+   "cierra": null,
+   "plazo": "Consulta el plazo en la convocatoria",
+   "irpf": false,
+   "fuente": "BDNS nº 937482",
+   "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/937482",
+   "resumen": "Otras Prestaciones económicas",
+   "req": [
+    "Consulta los requisitos en la convocatoria oficial"
+   ],
+   "docs": [
+    "Consulta la documentación en la convocatoria oficial"
+   ],
+   "pasos": [
+    "Lee la convocatoria oficial",
+    "Prepara la documentación",
+    "Presenta la solicitud en la sede del organismo"
+   ],
+   "_revisar": {
+    "presupuesto_total": 2256.79,
+    "bases_reguladoras": "https://www.lloret.cat/ajuntament/subvencions-i-ajuts-1",
+    "abierta_segun_bdns": false,
+    "beneficiarios": "PERSONAS FÍSICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
+    "nota": "Revisa importe por vivienda, requisitos, documentos y pasos antes de aprobar."
+   },
+   "prov": "Girona",
+   "muni": "Lloret De Mar"
+  },
+  {
+   "id": "bdns-937189",
+   "estado": "pendiente",
+   "title": "Convocatoria de solicitudes de subvenciones para la rehabilitación de fachadas en el municipio de Navata, ejercicio 2026 (Expediente n.º: X2026000299)",
+   "org": "NAVATA · AYUNTAMIENTO DE NAVATA",
+   "scope": "municipal",
+   "ccaa": "Cataluña",
+   "tipo": [
+    "eficiencia",
+    "rehabilitacion"
+   ],
+   "dest": [
+    "vivienda"
+   ],
+   "importe": 0,
+   "imp": "Consulta la convocatoria",
+   "abre": "2026-10-26",
+   "cierra": "2026-11-26",
+   "plazo": "Consulta el plazo en la convocatoria",
+   "irpf": false,
+   "fuente": "BDNS nº 937189",
+   "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/937189",
+   "resumen": "Acceso a la vivienda y fomento de la edificación",
+   "req": [
+    "Consulta los requisitos en la convocatoria oficial"
+   ],
+   "docs": [
+    "Consulta la documentación en la convocatoria oficial"
+   ],
+   "pasos": [
+    "Lee la convocatoria oficial",
+    "Prepara la documentación",
+    "Presenta la solicitud en la sede del organismo"
+   ],
+   "_revisar": {
+    "presupuesto_total": 2400,
+    "bases_reguladoras": "https://ssl4.ddgi.cat/bopV1/pdf/2026/152/202615207000.pdf",
+    "abierta_segun_bdns": false,
+    "beneficiarios": "PERSONAS FÍSICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
+    "nota": "Revisa importe por vivienda, requisitos, documentos y pasos antes de aprobar."
+   },
+   "prov": "Girona",
+   "muni": "Navata"
+  },
+  {
+   "id": "bdns-936884",
+   "estado": "pendiente",
+   "title": "APROBAR LA CONVOCATORIA Y BASES PARTICULARES PARA LA CONCESIÓN DESUBVENCIONES EN RÉGIMEN DE CONCURRENCIA NO COMPETITIVA PARA PROPIETARIOS QUE DESARROLLEN OBRAS ",
+   "org": "HOSPITALET DE LLOBREGAT, L' · AYUNTAMIENTO DE HOSPITALET DE LLOBREGAT, L'",
+   "scope": "municipal",
+   "ccaa": "Cataluña",
+   "tipo": [
+    "rehabilitacion"
+   ],
+   "dest": [
+    "vivienda"
+   ],
+   "importe": 0,
+   "imp": "Consulta la convocatoria",
+   "abre": "2026-10-21",
+   "cierra": null,
+   "plazo": "Consulta el plazo en la convocatoria",
+   "irpf": false,
+   "fuente": "BDNS nº 936884",
+   "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/936884",
+   "resumen": "Cultura",
+   "req": [
+    "Consulta los requisitos en la convocatoria oficial"
+   ],
+   "docs": [
+    "Consulta la documentación en la convocatoria oficial"
+   ],
+   "pasos": [
+    "Lee la convocatoria oficial",
+    "Prepara la documentación",
+    "Presenta la solicitud en la sede del organismo"
+   ],
+   "_revisar": {
+    "presupuesto_total": 150000,
+    "bases_reguladoras": "https://seu-e.cat/ca/web/hospitaletdellobregat/govern-obert-i-transparencia/contractes-convenis-i-subvencions",
+    "abierta_segun_bdns": false,
+    "beneficiarios": "PERSONAS FÍSICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
+    "nota": "Revisa importe por vivienda, requisitos, documentos y pasos antes de aprobar."
+   },
+   "prov": "Barcelona",
+   "muni": "Hospitalet De Llobregat, L'"
+  },
+  {
+   "id": "bdns-936835",
+   "estado": "pendiente",
+   "title": "Concesión de subvención nominativa a la FUNDACION NIPACE para el proyecto de \"Rehabilitación física de los niños con parálisis cerebral\". Ejercicio 2026.",
+   "org": "GUADALAJARA · AYUNTAMIENTO DE GUADALAJARA",
+   "scope": "municipal",
+   "ccaa": "Castilla-La Mancha",
+   "tipo": [
+    "rehabilitacion"
+   ],
+   "dest": [
+    "vivienda"
+   ],
+   "importe": 0,
+   "imp": "Consulta la convocatoria",
+   "abre": "2026-10-21",
+   "cierra": null,
+   "plazo": "Consulta el plazo en la convocatoria",
+   "irpf": false,
+   "fuente": "BDNS nº 936835",
+   "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/936835",
+   "resumen": "Servicios Sociales y Promoción Social",
+   "req": [
+    "Consulta los requisitos en la convocatoria oficial"
+   ],
+   "docs": [
+    "Consulta la documentación en la convocatoria oficial"
+   ],
+   "pasos": [
+    "Lee la convocatoria oficial",
+    "Prepara la documentación",
+    "Presenta la solicitud en la sede del organismo"
+   ],
+   "_revisar": {
+    "presupuesto_total": 5000,
+    "bases_reguladoras": "https://www.guadalajara.es/recursos/doc/portal/2017/08/30 /2016-ordenanza-general-de-subvenciones-publicas-del- ayuntamiento-de-guadalajara-.pdf",
+    "abierta_segun_bdns": true,
+    "beneficiarios": "PERSONAS JURÍDICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
+    "nota": "Revisa importe por vivienda, requisitos, documentos y pasos antes de aprobar."
+   },
+   "prov": "Guadalajara",
+   "muni": "Guadalajara"
+  },
+  {
+   "id": "bdns-936799",
+   "estado": "pendiente",
+   "title": "GC Subvención directa nominativa al Ayuntamiento de Firgas para Seguridad y rehabilitación en centros escolares.",
+   "org": "CABILDO INSULAR DE GRAN CANARIA · CABILDO INSULAR DE GRAN CANARIA",
+   "scope": "provincial",
+   "ccaa": "Canarias",
+   "tipo": [
+    "rehabilitacion"
+   ],
+   "dest": [
+    "vivienda"
+   ],
+   "importe": 0,
+   "imp": "Consulta la convocatoria",
+   "abre": "2026-10-21",
+   "cierra": null,
+   "plazo": "Consulta el plazo en la convocatoria",
+   "irpf": false,
+   "fuente": "BDNS nº 936799",
+   "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/936799",
+   "resumen": "Infraestructuras",
+   "req": [
+    "Consulta los requisitos en la convocatoria oficial"
+   ],
+   "docs": [
+    "Consulta la documentación en la convocatoria oficial"
+   ],
+   "pasos": [
+    "Lee la convocatoria oficial",
+    "Prepara la documentación",
+    "Presenta la solicitud en la sede del organismo"
+   ],
+   "_revisar": {
+    "presupuesto_total": 50000,
+    "bases_reguladoras": "https://cabildogc.grancanaria.com/documents/10180/11297340/Ordenanza+General+de+Subvenciones+del+Cabildo+de+Gran+Canaria/33077d88-3822-4049-bca7-af8199d49ef4",
+    "abierta_segun_bdns": false,
+    "beneficiarios": "PERSONAS JURÍDICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
+    "nota": "Revisa importe por vivienda, requisitos, documentos y pasos antes de aprobar."
+   },
+   "prov": "Las Palmas"
+  },
+  {
+   "id": "bdns-935420",
+   "estado": "pendiente",
+   "title": "GC Subvención directa  al Ayuntamiento de Arucas para Rehabilitación del parque infantil del Paseo Marítimo de Los Charcones.",
+   "org": "CABILDO INSULAR DE GRAN CANARIA · CABILDO INSULAR DE GRAN CANARIA",
+   "scope": "provincial",
+   "ccaa": "Canarias",
+   "tipo": [
+    "rehabilitacion"
+   ],
+   "dest": [
+    "vivienda"
+   ],
+   "importe": 0,
+   "imp": "Consulta la convocatoria",
+   "abre": "2026-10-15",
+   "cierra": null,
+   "plazo": "Consulta el plazo en la convocatoria",
+   "irpf": false,
+   "fuente": "BDNS nº 935420",
+   "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/935420",
+   "resumen": "Infraestructuras",
+   "req": [
+    "Consulta los requisitos en la convocatoria oficial"
+   ],
+   "docs": [
+    "Consulta la documentación en la convocatoria oficial"
+   ],
+   "pasos": [
+    "Lee la convocatoria oficial",
+    "Prepara la documentación",
+    "Presenta la solicitud en la sede del organismo"
+   ],
+   "_revisar": {
+    "presupuesto_total": 50000,
+    "bases_reguladoras": "https://cabildogc.grancanaria.com/documents/10180/11297340/Ordenanza+General+de+Subvenciones+del+Cabildo+de+Gran+Canaria/33077d88-3822-4049-bca7-af8199d49ef4",
+    "abierta_segun_bdns": false,
+    "beneficiarios": "PERSONAS JURÍDICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
+    "nota": "Revisa importe por vivienda, requisitos, documentos y pasos antes de aprobar."
+   },
+   "prov": "Las Palmas"
+  },
+  {
+   "id": "bdns-935393",
+   "estado": "pendiente",
+   "title": "GC Subvención nominada a la ENTIDAD GABINETE LITERARIO DE LAS PALMAS DE GRAN CANARIA a fin de financiar el Proyecto “Gabinete Literario, Proyecto Obra de Rehabi",
+   "org": "CABILDO INSULAR DE GRAN CANARIA · CABILDO INSULAR DE GRAN CANARIA",
+   "scope": "provincial",
+   "ccaa": "Canarias",
+   "tipo": [
+    "rehabilitacion"
+   ],
+   "dest": [
+    "vivienda"
+   ],
+   "importe": 0,
+   "imp": "Consulta la convocatoria",
+   "abre": "2026-10-15",
+   "cierra": null,
+   "plazo": "Consulta el plazo en la convocatoria",
+   "irpf": false,
+   "fuente": "BDNS nº 935393",
+   "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/935393",
+   "resumen": "Otras Prestaciones económicas",
+   "req": [
+    "Consulta los requisitos en la convocatoria oficial"
+   ],
+   "docs": [
+    "Consulta la documentación en la convocatoria oficial"
+   ],
+   "pasos": [
+    "Lee la convocatoria oficial",
+    "Prepara la documentación",
+    "Presenta la solicitud en la sede del organismo"
+   ],
+   "_revisar": {
+    "presupuesto_total": 150000,
+    "bases_reguladoras": "https://cabildogc.grancanaria.com/documents/10180/11297340/Ordenanza+General+de+Subvenciones+del+Cabildo+de+Gran+Canaria/33077d88-3822-4049-bca7-af8199d49ef4",
+    "abierta_segun_bdns": false,
+    "beneficiarios": "PERSONAS JURÍDICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
+    "nota": "Revisa importe por vivienda, requisitos, documentos y pasos antes de aprobar."
+   },
+   "prov": "Las Palmas"
+  },
+  {
+   "id": "bdns-934468",
+   "estado": "pendiente",
+   "title": "Subvención nominativa al Ayuntamiento de Miravet para la rehabilitación y adecuación de edificio municipal (Ribera d'Ebre).",
+   "org": "CATALUÑA · DEPARTAMENT DE LA PRESIDÈNCIA",
+   "scope": "autonomica",
+   "ccaa": "Cataluña",
+   "tipo": [
+    "rehabilitacion"
+   ],
+   "dest": [
+    "edificio"
+   ],
+   "importe": 0,
+   "imp": "Consulta la convocatoria",
+   "abre": "2026-10-08",
+   "cierra": null,
+   "plazo": "Consulta el plazo en la convocatoria",
+   "irpf": false,
+   "fuente": "BDNS nº 934468",
+   "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/934468",
+   "resumen": "Otras actuaciones de carácter económico",
+   "req": [
+    "Consulta los requisitos en la convocatoria oficial"
+   ],
+   "docs": [
+    "Consulta la documentación en la convocatoria oficial"
+   ],
+   "pasos": [
+    "Lee la convocatoria oficial",
+    "Prepara la documentación",
+    "Presenta la solicitud en la sede del organismo"
+   ],
+   "_revisar": {
+    "presupuesto_total": 394220.17,
+    "bases_reguladoras": "https://economia.gencat.cat/ca/ambits-actuacio/ajuts-subvencions/plans-estrategics/",
+    "abierta_segun_bdns": false,
+    "beneficiarios": "PERSONAS JURÍDICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
+    "nota": "Revisa importe por vivienda, requisitos, documentos y pasos antes de aprobar."
+   }
+  },
+  {
+   "id": "bdns-933998",
+   "estado": "pendiente",
+   "title": "CONVENIO DE COLABORACIÓN ENTRE El AYUNTAMIENTO DE PONTEVEDRA Y LA ASOCIACIÓN ESPAÑOLA CONTRA EL CÁNCER PARA EL DESARROLLO DE UN PROGRAMA DE REHABILITACIÓN PSICO",
+   "org": "PONTEVEDRA · AYUNTAMIENTO DE PONTEVEDRA",
+   "scope": "municipal",
+   "ccaa": "Galicia",
+   "tipo": [
+    "rehabilitacion"
+   ],
+   "dest": [
+    "vivienda"
+   ],
+   "importe": 0,
+   "imp": "Consulta la convocatoria",
+   "abre": "2026-10-07",
+   "cierra": null,
+   "plazo": "Consulta el plazo en la convocatoria",
+   "irpf": false,
+   "fuente": "BDNS nº 933998",
+   "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/933998",
+   "resumen": "Servicios Sociales y Promoción Social",
+   "req": [
+    "Consulta los requisitos en la convocatoria oficial"
+   ],
+   "docs": [
+    "Consulta la documentación en la convocatoria oficial"
+   ],
+   "pasos": [
+    "Lee la convocatoria oficial",
+    "Prepara la documentación",
+    "Presenta la solicitud en la sede del organismo"
+   ],
+   "_revisar": {
+    "presupuesto_total": 27000,
+    "bases_reguladoras": "https://sede.pontevedra.gal/public/publications/list/municipalregulations/ORDE/details/36867062",
+    "abierta_segun_bdns": false,
+    "beneficiarios": "PERSONAS JURÍDICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
+    "nota": "Revisa importe por vivienda, requisitos, documentos y pasos antes de aprobar."
+   },
+   "prov": "Pontevedra",
+   "muni": "Pontevedra"
+  },
+  {
+   "id": "bdns-933869",
+   "estado": "pendiente",
+   "title": "GC Subvención directa a la entidad ASOC DE VECINOS ARTHARAIZ para el proyecto de inversión “Rehabilitación y Acondicionamiento del Local Social”.",
+   "org": "CABILDO INSULAR DE GRAN CANARIA · CABILDO INSULAR DE GRAN CANARIA",
+   "scope": "provincial",
+   "ccaa": "Canarias",
+   "tipo": [
+    "rehabilitacion"
+   ],
+   "dest": [
+    "vivienda"
+   ],
+   "importe": 0,
+   "imp": "Consulta la convocatoria",
+   "abre": "2026-10-06",
+   "cierra": null,
+   "plazo": "Consulta el plazo en la convocatoria",
+   "irpf": false,
+   "fuente": "BDNS nº 933869",
+   "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/933869",
+   "resumen": "Otras Prestaciones económicas",
+   "req": [
+    "Consulta los requisitos en la convocatoria oficial"
+   ],
+   "docs": [
+    "Consulta la documentación en la convocatoria oficial"
+   ],
+   "pasos": [
+    "Lee la convocatoria oficial",
+    "Prepara la documentación",
+    "Presenta la solicitud en la sede del organismo"
+   ],
+   "_revisar": {
+    "presupuesto_total": 20609.12,
+    "bases_reguladoras": "https://cabildogc.grancanaria.com/documents/10180/11297340/Ordenanza+General+de+Subvenciones+del+Cabildo+de+Gran+Canaria/33077d88-3822-4049-bca7-af8199d49ef4",
+    "abierta_segun_bdns": false,
+    "beneficiarios": "PERSONAS JURÍDICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
+    "nota": "Revisa importe por vivienda, requisitos, documentos y pasos antes de aprobar."
+   },
+   "prov": "Las Palmas"
+  },
+  {
+   "id": "bdns-933808",
+   "estado": "pendiente",
+   "title": "A la ASSOCIACIÓ ARTISTES VISUALS DE VALÈNCIA, ALACANT I CASTELLÓ para  la rehabilitación y adecuación de  los espacios de trabajo y  sus equipamientos,  apor Re",
+   "org": "MINISTERIO DE CULTURA · DIRECCIÓN GENERAL DE PATRIMONIO CULTURAL Y BELLAS ARTES",
+   "scope": "estatal",
+   "ccaa": "all",
+   "tipo": [
+    "rehabilitacion"
+   ],
+   "dest": [
+    "vivienda"
+   ],
+   "importe": 0,
+   "imp": "Consulta la convocatoria",
+   "abre": "2026-07-24",
+   "cierra": "2026-08-13",
+   "plazo": "Consulta el plazo en la convocatoria",
+   "irpf": false,
+   "fuente": "BDNS nº 933808",
+   "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/933808",
+   "resumen": "Cultura",
+   "req": [
+    "Consulta los requisitos en la convocatoria oficial"
+   ],
+   "docs": [
+    "Consulta la documentación en la convocatoria oficial"
+   ],
+   "pasos": [
+    "Lee la convocatoria oficial",
+    "Prepara la documentación",
+    "Presenta la solicitud en la sede del organismo"
+   ],
+   "_revisar": {
+    "presupuesto_total": 100000,
+    "bases_reguladoras": "https://www.boe.es/eli/es/rd/2026/07/22/614",
+    "abierta_segun_bdns": false,
+    "beneficiarios": "PERSONAS JURÍDICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
+    "nota": "Revisa importe por vivienda, requisitos, documentos y pasos antes de aprobar."
+   }
+  },
+  {
+   "id": "bdns-933754",
+   "estado": "pendiente",
+   "title": "GC Subvención nominada a la ENTIDAD GABINETE LITERARIO DE LAS PALMAS DE GRAN CANARIA a fin de financiar el Proyecto “Gabinete Literario, Proyecto Obra de Rehabi",
+   "org": "CABILDO INSULAR DE GRAN CANARIA · CABILDO INSULAR DE GRAN CANARIA",
+   "scope": "provincial",
+   "ccaa": "Canarias",
+   "tipo": [
+    "rehabilitacion"
+   ],
+   "dest": [
+    "vivienda"
+   ],
+   "importe": 0,
+   "imp": "Consulta la convocatoria",
+   "abre": "2026-10-06",
+   "cierra": null,
+   "plazo": "Consulta el plazo en la convocatoria",
+   "irpf": false,
+   "fuente": "BDNS nº 933754",
+   "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/933754",
+   "resumen": "Otras Prestaciones económicas",
+   "req": [
+    "Consulta los requisitos en la convocatoria oficial"
+   ],
+   "docs": [
+    "Consulta la documentación en la convocatoria oficial"
+   ],
+   "pasos": [
+    "Lee la convocatoria oficial",
+    "Prepara la documentación",
+    "Presenta la solicitud en la sede del organismo"
+   ],
+   "_revisar": {
+    "presupuesto_total": 200000,
+    "bases_reguladoras": "https://cabildogc.grancanaria.com/documents/10180/11297340/Ordenanza+General+de+Subvenciones+del+Cabildo+de+Gran+Canaria/33077d88-3822-4049-bca7-af8199d49ef4",
+    "abierta_segun_bdns": false,
+    "beneficiarios": "PERSONAS JURÍDICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
+    "nota": "Revisa importe por vivienda, requisitos, documentos y pasos antes de aprobar."
+   },
+   "prov": "Las Palmas"
+  },
+  {
+   "id": "bdns-933482",
+   "estado": "pendiente",
+   "title": "A la FUNDACIÓ CUIXART para la rehabilitación del taller de Modest Cuixart, por Real Decreto 614/2026 de 22 de julio, por el que se regula la concesión directa d",
+   "org": "MINISTERIO DE CULTURA · DIRECCIÓN GENERAL DE PATRIMONIO CULTURAL Y BELLAS ARTES",
+   "scope": "estatal",
+   "ccaa": "all",
+   "tipo": [
+    "rehabilitacion"
+   ],
+   "dest": [
+    "vivienda"
+   ],
+   "importe": 0,
+   "imp": "Consulta la convocatoria",
+   "abre": "2026-07-24",
+   "cierra": "2026-08-13",
+   "plazo": "Consulta el plazo en la convocatoria",
+   "irpf": false,
+   "fuente": "BDNS nº 933482",
+   "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/933482",
+   "resumen": "Cultura",
+   "req": [
+    "Consulta los requisitos en la convocatoria oficial"
+   ],
+   "docs": [
+    "Consulta la documentación en la convocatoria oficial"
+   ],
+   "pasos": [
+    "Lee la convocatoria oficial",
+    "Prepara la documentación",
+    "Presenta la solicitud en la sede del organismo"
+   ],
+   "_revisar": {
+    "presupuesto_total": 50000,
+    "bases_reguladoras": "https://www.boe.es/eli/es/rd/2026/07/22/614",
+    "abierta_segun_bdns": false,
+    "beneficiarios": "PERSONAS JURÍDICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
+    "nota": "Revisa importe por vivienda, requisitos, documentos y pasos antes de aprobar."
+   }
+  },
+  {
+   "id": "bdns-933122",
+   "estado": "pendiente",
+   "title": "Rehabilitación del muro perimetral del cementerio municipal de Olmeda de la Cuesta. Subvención Nominativa Inversiones Municipales",
+   "org": "DIPUTACIÓN PROV. DE CUENCA · DIPUTACIÓN PROVINCIAL DE CUENCA",
+   "scope": "provincial",
+   "ccaa": "Castilla-La Mancha",
+   "tipo": [
+    "rehabilitacion"
+   ],
+   "dest": [
+    "vivienda"
+   ],
+   "importe": 0,
+   "imp": "Consulta la convocatoria",
+   "abre": "2026-01-01",
+   "cierra": "2027-10-31",
+   "plazo": "Consulta el plazo en la convocatoria",
+   "irpf": false,
+   "fuente": "BDNS nº 933122",
+   "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/933122",
+   "resumen": "Infraestructuras",
+   "req": [
+    "Consulta los requisitos en la convocatoria oficial"
+   ],
+   "docs": [
+    "Consulta la documentación en la convocatoria oficial"
+   ],
+   "pasos": [
+    "Lee la convocatoria oficial",
+    "Prepara la documentación",
+    "Presenta la solicitud en la sede del organismo"
+   ],
+   "_revisar": {
+    "presupuesto_total": 15000,
+    "bases_reguladoras": "https://www.dipucuenca.es/documents/12423/560665/ORDENANZA+REGULADORA+DE+SUBVENCIONES.pdf",
+    "abierta_segun_bdns": false,
+    "beneficiarios": "PERSONAS JURÍDICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
+    "nota": "Revisa importe por vivienda, requisitos, documentos y pasos antes de aprobar."
+   },
+   "prov": "Cuenca"
+  },
+  {
+   "id": "bdns-933040",
+   "estado": "pendiente",
+   "title": "CONVOCATORIA PARA LA CONCESIÓN DE SUBVENCIONES EN MATERIA DE SUBVENCIONES PARA LA REHABILITACIÓN DE INMUEBLES - CONVOCATORIA 2026",
+   "org": "ALMENDRO, EL · AYUNTAMIENTO DE ALMENDRO, EL",
+   "scope": "municipal",
+   "ccaa": "Andalucía",
+   "tipo": [
+    "rehabilitacion"
+   ],
+   "dest": [
+    "vivienda"
+   ],
+   "importe": 0,
+   "imp": "Consulta la convocatoria",
+   "abre": "2026-10-02",
+   "cierra": null,
+   "plazo": "Consulta el plazo en la convocatoria",
+   "irpf": false,
+   "fuente": "BDNS nº 933040",
+   "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/933040",
+   "resumen": "Acceso a la vivienda y fomento de la edificación",
+   "req": [
+    "Consulta los requisitos en la convocatoria oficial"
+   ],
+   "docs": [
+    "Consulta la documentación en la convocatoria oficial"
+   ],
+   "pasos": [
+    "Lee la convocatoria oficial",
+    "Prepara la documentación",
+    "Presenta la solicitud en la sede del organismo"
+   ],
+   "_revisar": {
+    "presupuesto_total": 5000,
+    "bases_reguladoras": "https://sede.diphuelva.es/opencms/system/modules/gsede/elements/contenido/BOP.jsp",
+    "abierta_segun_bdns": false,
+    "beneficiarios": "PERSONAS FÍSICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
+    "nota": "Revisa importe por vivienda, requisitos, documentos y pasos antes de aprobar."
+   },
+   "prov": "Huelva",
+   "muni": "Almendro, El"
+  },
+  {
+   "id": "bdns-932619",
+   "estado": "pendiente",
+   "title": "REHABILITACIÓN DE ZONA DE EDIFICIO CASA CONSISTORIAL DE CAÑETE PARA NUEVA ADMINISTRACIÓN Y SECRETARÍA. Subvención Nominativa Inversiones Municipales",
+   "org": "DIPUTACIÓN PROV. DE CUENCA · DIPUTACIÓN PROVINCIAL DE CUENCA",
+   "scope": "provincial",
+   "ccaa": "Castilla-La Mancha",
+   "tipo": [
+    "rehabilitacion"
+   ],
+   "dest": [
+    "edificio"
+   ],
+   "importe": 0,
+   "imp": "Consulta la convocatoria",
+   "abre": "2026-01-01",
+   "cierra": "2027-10-31",
+   "plazo": "Consulta el plazo en la convocatoria",
+   "irpf": false,
+   "fuente": "BDNS nº 932619",
+   "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/932619",
+   "resumen": "Infraestructuras",
+   "req": [
+    "Consulta los requisitos en la convocatoria oficial"
+   ],
+   "docs": [
+    "Consulta la documentación en la convocatoria oficial"
+   ],
+   "pasos": [
+    "Lee la convocatoria oficial",
+    "Prepara la documentación",
+    "Presenta la solicitud en la sede del organismo"
+   ],
+   "_revisar": {
+    "presupuesto_total": 50000,
+    "bases_reguladoras": "https://www.dipucuenca.es/documents/12423/560665/ORDENANZA+REGULADORA+DE+SUBVENCIONES.pdf",
+    "abierta_segun_bdns": false,
+    "beneficiarios": "PERSONAS JURÍDICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
+    "nota": "Revisa importe por vivienda, requisitos, documentos y pasos antes de aprobar."
+   },
+   "prov": "Cuenca"
+  }
+ ],
+ "boe": [
+  {
+   "id": "BOE-A-2026-21241",
+   "fecha": "2026-10-12",
+   "titulo": "Resolución de 22 de septiembre de 2026, de la Universidad Católica de Valencia San Vicente Mártir, por la que se publica la modificación del plan de estudios de Máster Universitario en Rehabilitación del Enfermo Neurológico.",
+   "url": "https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-21241",
+   "pdf": "https://www.boe.es/boe/dias/2026/10/12/pdfs/BOE-A-2026-21241.pdf"
+  },
+  {
+   "id": "BOE-A-2026-20471",
+   "fecha": "2026-10-02",
+   "titulo": "Real Decreto 765/2026, de 30 de septiembre, por el que se regula la concesión directa de subvenciones en materia de vivienda para la financiación de iniciativas locales que contribuyan a la consecución de los objetivos de la línea 13.4 del Marco de actuaciones para el desarrollo territorial sostenible del área de influencia del Espacio Natural de Doñana en 2026.",
+   "url": "https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-20471",
+   "pdf": "https://www.boe.es/boe/dias/2026/10/02/pdfs/BOE-A-2026-20471.pdf"
+  }
+ ]
 }
