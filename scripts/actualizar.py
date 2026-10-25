@@ -37,12 +37,18 @@ BDNS_BUSQUEDAS = ["vivienda", "rehabilitación", "eficiencia energética", "acce
 MAX_FICHAS_BDNS = 80  # fichas de detalle por ejecución, para no cargar el servicio
 
 # Palabras que indican que una convocatoria nos interesa (se comparan sin tildes y en minúsculas).
-TEMA = ["vivienda", "rehabilit", "eficiencia energetica", "accesibilidad", "ascensor", "fachada", "cubierta",
+TEMA = ["vivienda", "eficiencia energetica", "accesibilidad", "ascensor", "fachada", "cubierta",
         "aislamiento", "autoconsumo", "fotovoltaic", "aerotermia", "bomba de calor", "biomasa", "amianto",
         "edificio residencial", "comunidad de propietarios", "renovacion urbana", "regeneracion urbana"]
 AYUDA = ["ayuda", "subvencion", "convocatoria", "bases reguladoras", "programa de", "plan de"]
-EXCLUIR = ["alquiler social", "bono alquiler", "bono joven", "desahucio", "personal funcionario", "oposicion",
-           "contratacion", "licitacion", "nombramiento", "empresa", "pyme", "industria", "agrari", "ganader"]
+EXCLUIR = ["alquiler", "arrendatari", "desahucio", "personal funcionario", "oposicion", "contratacion", "licitacion",
+           "nombramiento", "empresa", "pyme", "industria", "agrari", "ganader", "universidad", "plan de estudios",
+           # subvenciones a entidades concretas, no abiertas a particulares
+           "nominativa", "nominada", "subvencion directa a", "convenio", "fundacio", "asociacio", "a ayuntamientos",
+           "subvenciones ayuntamientos", "entidades locales",
+           # «rehabilitación» en otros sentidos u obras públicas
+           "fisioterap", "salud mental", "saude mental", "rehabilitacion fisica", "drogodependencia",
+           "cementerio", "casa consistorial", "parque infantil", "gastos basicos", "notaria"]
 
 # Tipo de obra a partir de palabras clave.
 TIPOS = {
@@ -87,7 +93,9 @@ def contiene(texto, palabras):
 
 def es_de_vivienda(texto):
     t = sin_tildes(texto)
-    return contiene(t, TEMA) and contiene(t, AYUDA) and not contiene(t, EXCLUIR)
+    # «rehabilitación» solo cuenta si habla de viviendas o edificios (no de fisioterapia ni de obras públicas)
+    rehab = "rehabilit" in t and contiene(t, ["vivienda", "edific", "fachada", "inmueble"])
+    return (contiene(t, TEMA) or rehab) and contiene(t, AYUDA) and not contiene(t, EXCLUIR)
 
 
 def pedir_json(url, params=None, intentos=4):
@@ -323,7 +331,10 @@ def buscar_bdns(dias):
         # Fuera las que son solo para empresas; dentro particulares y comunidades de propietarios.
         solo_empresas = contiene(benef, ["pyme", "empresa"]) and not contiene(benef, ["no desarrollan actividad", "personas fisicas que no", "comunidad"])
         if es_de_vivienda(texto) and not solo_empresas:
-            candidatas.append(candidata_bdns(ficha))
+            c = candidata_bdns(ficha)
+            if c["cierra"] and c["cierra"] < dt.date.today().isoformat():
+                continue  # ya cerrada: no merece la pena revisarla
+            candidatas.append(c)
         time.sleep(0.4)
     print(f"BDNS: {len(numeros)} convocatorias revisadas, {len(candidatas)} de vivienda")
     return candidatas
