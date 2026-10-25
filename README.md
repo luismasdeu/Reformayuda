@@ -109,8 +109,8 @@ python3 scripts/validar.py
 
 ## 4. Pendiente antes del lanzamiento
 
-- [ ] Registrar `reformayuda.es` y conectarlo (apartado 1.3).
-- [ ] Rellenar tu nombre, NIF y email de contacto en los textos legales (busca `PH(` en `web/index.html`).
+- [x] Registrar `reformayuda.es` y conectarlo (apartado 1.3).
+- [x] Datos del titular y email de contacto en los textos legales.
 - [ ] Cargar las ayudas autonómicas y provinciales (primera búsqueda de 30 días + revisión).
 - [ ] Alojar las tipografías en la propia web en lugar de Google Fonts (lo dice la política de privacidad).
 - [ ] Que un abogado o gestor revise los textos legales y las respuestas del chat sobre leyes (propiedad horizontal, licencias).

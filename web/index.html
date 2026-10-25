@@ -426,7 +426,7 @@ button.loc{font:inherit;font-weight:700;color:var(--ink);cursor:pointer;padding:
 </main>
 
 <footer class="foot"><div class="wrap">
-  <div><b style="color:var(--ink)">Reformayuda</b> · Información orientativa sobre ayudas públicas a la vivienda. No somos un organismo oficial ni presentamos solicitudes: lo que vale es lo publicado en el boletín oficial.</div>
+  <div><b style="color:var(--ink)">Reformayuda</b> · Información orientativa sobre ayudas públicas a la vivienda. No somos un organismo oficial ni presentamos solicitudes: lo que vale es lo publicado en el boletín oficial. Contacto: <a href="mailto:contacto@reformayuda.es">contacto@reformayuda.es</a></div>
   <nav class="frow" aria-label="Legal"><button class="linkbtn" data-legal="aviso">Aviso legal</button><button class="linkbtn" data-legal="privacidad">Privacidad</button><button class="linkbtn" data-legal="cookies">Cookies</button><button class="linkbtn" data-go="avisos">Mis datos</button></nav>
 </div></footer>
 
@@ -673,7 +673,7 @@ function openDrawer(id){
      <a class="btn alt" href="${a.url}" target="_blank" rel="noopener">${icon("ext","ico","width:18px;height:18px")}Ver fuente oficial</a>
      <button class="btn alt" data-fav="${a.id}" aria-pressed="${S.favs.has(a.id)}">${icon("heart","ico","width:18px;height:18px")}${S.favs.has(a.id)?"Guardada":"Guardar"}</button>
    </div>
-   ${a.revisada?`<p class="muted" style="font-size:.8rem">Revisada por Reformayuda el ${fdate(a.revisada)}. Si ves algún error, escríbenos.</p>`:""}`;
+   ${a.revisada?`<p class="muted" style="font-size:.8rem">Revisada por Reformayuda el ${fdate(a.revisada)}. Si ves algún error, escríbenos a <a href="mailto:contacto@reformayuda.es">contacto@reformayuda.es</a>.</p>`:""}`;
   d.hidden=false;$("#scrim").hidden=false;$("#d-close").focus();
   $("#d-close").onclick=closeDrawer;
 }
@@ -935,7 +935,7 @@ function askDelete(kind){
 const PH=t=>`<span class="ph">[${t}]</span>`;
 const LEGAL={
  aviso:`<span class="eyebrow">Última actualización: 25 de octubre de 2026</span><h2>Aviso legal</h2>
-  <h3>Quién está detrás</h3><p>Titular: ${PH("Nombre y apellidos")}, persona física, NIF ${PH("NIF")} · Contacto: ${PH("email de contacto")}. Reformayuda es un proyecto personal, gratuito y sin actividad comercial ni publicidad.</p>
+  <h3>Quién está detrás</h3><p>Titular: Luis Eduardo Masdeu Cano, persona física. Contacto: <a href="mailto:contacto@reformayuda.es">contacto@reformayuda.es</a>. Reformayuda es un proyecto personal, gratuito y sin actividad comercial ni publicidad.</p>
   <h3>Qué es Reformayuda</h3><p>Una herramienta gratuita con información orientativa sobre ayudas públicas para reformar o construir vivienda, y utilidades para preparar la solicitud y calcular deducciones. Reformayuda no es una administración pública ni está vinculada a ninguna, no presenta solicitudes y no actúa como representante del usuario.</p>
   <h3>Exactitud de la información</h3><p>Recogemos los datos de fuentes oficiales (BOE, Base de Datos Nacional de Subvenciones, boletines autonómicos y provinciales, Agencia Tributaria) y los revisamos a menudo, pero pueden tener errores o cambiar. Lo que vale siempre es el texto publicado en el boletín oficial. Los cálculos del IRPF son estimaciones y no son asesoramiento fiscal ni jurídico.</p>
   <h3>Enlaces</h3><p>Enlazamos a sedes y boletines oficiales. No respondemos de su contenido ni de su disponibilidad.</p>
@@ -943,14 +943,14 @@ const LEGAL={
   <h3>Ley aplicable</h3><p>Ley española. Si eres consumidor, son competentes los juzgados de tu domicilio.</p>`,
  privacidad:`<span class="eyebrow">Última actualización: 25 de octubre de 2026</span><h2>Política de privacidad</h2>
   <p><b>Resumen: Reformayuda no te pide ningún dato personal.</b> No hay registro, ni cuentas, ni email. Lo que haces en la app se queda en tu dispositivo y a nosotros no nos llega.</p>
-  <h3>1. Responsable</h3><p>${PH("Nombre y apellidos")}, persona física, NIF ${PH("NIF")}. Contacto: ${PH("email de contacto")}.</p>
+  <h3>1. Responsable</h3><p>Luis Eduardo Masdeu Cano, persona física. Contacto: <a href="mailto:contacto@reformayuda.es">contacto@reformayuda.es</a>.</p>
   <h3>2. Qué datos se guardan y dónde</h3><ul>
    <li><b>En tu dispositivo, nunca en nuestros servidores:</b> la ubicación de la obra, las respuestas del test (incluida tu franja de edad si la das), las ayudas guardadas, los requisitos y documentos que marcas y el cálculo del IRPF.</li>
    <li><b>Nada más.</b> No pedimos nombre, NIF, dirección, teléfono ni email, y no recibimos ni almacenamos archivos.</li></ul>
   <h3>3. Datos técnicos</h3><p>Como cualquier web, el servidor que aloja Reformayuda recibe tu dirección IP para poder enviarte la página. No la usamos para identificarte ni para crear perfiles. Si tu proveedor de alojamiento guarda registros, se borran en un plazo máximo de 30 días.</p>
   <h3>4. Recursos de terceros</h3><p>Las tipografías se cargan desde Google Fonts, que recibe tu IP al descargarlas. En la versión final las alojaremos en nuestro propio servidor para evitarlo.</p>
   <h3>5. Enlaces a sedes oficiales</h3><p>Cuando vas a la sede de un organismo para presentar la solicitud, sales de Reformayuda. Allí se aplica la política de privacidad de ese organismo.</p>
-  <h3>6. Tus derechos</h3><p>Como todo está en tu dispositivo, tú controlas tus datos: puedes verlos, copiarlos o borrarlos desde «Mis datos». Para cualquier duda, escríbenos a ${PH("email de contacto")}. También puedes reclamar ante la Agencia Española de Protección de Datos (<a href="https://www.aepd.es" target="_blank" rel="noopener">aepd.es</a>).</p>
+  <h3>6. Tus derechos</h3><p>Como todo está en tu dispositivo, tú controlas tus datos: puedes verlos, copiarlos o borrarlos desde «Mis datos». Para cualquier duda, escríbenos a <a href="mailto:contacto@reformayuda.es">contacto@reformayuda.es</a>. También puedes reclamar ante la Agencia Española de Protección de Datos (<a href="https://www.aepd.es" target="_blank" rel="noopener">aepd.es</a>).</p>
   <h3>7. Cambios</h3><p>Si en el futuro añadimos algo que necesite datos personales (por ejemplo, avisos por email), será opcional, te lo pediremos de forma expresa y actualizaremos esta política antes.</p>`,
  cookies:`<span class="eyebrow">Última actualización: 25 de octubre de 2026</span><h2>Política de cookies</h2>
   <p>Reformayuda no usa cookies de publicidad ni de seguimiento. Usamos almacenamiento local de tu navegador, de primera parte y técnico, para que la app funcione. Según el art. 22.2 de la LSSI no necesita consentimiento, pero te lo explicamos:</p>
