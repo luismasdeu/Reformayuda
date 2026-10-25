@@ -1,5 +1,5 @@
 // Service worker de Reformayuda: la app funciona sin conexión y las ayudas se actualizan al volver la red.
-const VERSION = "reformayuda-v1";
+const VERSION = "reformayuda-v2";
 const SHELL = ["./", "index.html", "data/ayudas.json", "manifest.webmanifest", "icons/icon.svg", "icons/icon-192.png", "icons/icon-512.png"];
 
 self.addEventListener("install", e => {
@@ -15,11 +15,11 @@ self.addEventListener("activate", e => {
 self.addEventListener("fetch", e => {
   const url = new URL(e.request.url);
   if (e.request.method !== "GET" || url.origin !== location.origin) return;
-  // Datos de ayudas: primero la red (para tener lo último) y, sin conexión, la copia guardada.
-  if (url.pathname.endsWith("/data/ayudas.json")) {
+  // La página y los datos de ayudas: primero la red (para ver siempre lo último) y, sin conexión, la copia guardada.
+  if (e.request.mode === "navigate" || url.pathname.endsWith("/data/ayudas.json") || url.pathname.endsWith("/index.html")) {
     e.respondWith(fetch(e.request).then(r => {
       const copy = r.clone(); caches.open(VERSION).then(c => c.put(e.request, copy)); return r;
-    }).catch(() => caches.match(e.request)));
+    }).catch(() => caches.match(e.request).then(r => r || caches.match("index.html"))));
     return;
   }
   // Resto: primero la copia guardada y se refresca en segundo plano.
