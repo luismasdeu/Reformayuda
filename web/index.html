@@ -16,9 +16,13 @@ img{max-width:100%}
 [hidden]{display:none!important}
 </style>
 <title>Reformayuda</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Nunito+Sans:opsz,wght@6..12,400;6..12,600;6..12,800&display=swap">
+<link rel="preload" href="fonts/nunito-sans.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/bricolage-grotesque.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+/* Tipografías alojadas en la propia web (licencia SIL Open Font License, ver fonts/) */
+@font-face{font-family:"Bricolage Grotesque";src:url(fonts/bricolage-grotesque.woff2) format("woff2-variations"),url(fonts/bricolage-grotesque.woff2) format("woff2");font-weight:200 800;font-style:normal;font-display:swap}
+@font-face{font-family:"Nunito Sans";src:url(fonts/nunito-sans.woff2) format("woff2-variations"),url(fonts/nunito-sans.woff2) format("woff2");font-weight:200 1000;font-style:normal;font-display:swap}
+</style>
 <style>
 /* Layout: app shell — header with location chip, view tabs (top on desktop, bottom bar on phone), one view at a time */
 :root{
@@ -218,6 +222,7 @@ td.num,th.num{text-align:right;font-variant-numeric:tabular-nums}
 .btn.danger{background:var(--bad);color:#fff}
 .foot{border-top:1px solid var(--line);font-size:.85rem;color:var(--muted)}
 .foot .wrap{padding-block:18px;display:flex;flex-direction:column;gap:10px}
+.app-cta{display:flex;gap:12px;align-items:center;flex-wrap:wrap;background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:12px 14px}
 .cookie{position:fixed;left:0;right:0;bottom:0;z-index:50;padding:0 max(12px,env(safe-area-inset-right,0px)) calc(12px + env(safe-area-inset-bottom,0px)) max(12px,env(safe-area-inset-left,0px))}
 .cookie{pointer-events:none}
 .cookie .in{pointer-events:auto;max-width:760px;margin:0 auto;background:var(--surface);border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow);padding:16px;display:flex;flex-direction:column;gap:10px}
@@ -426,6 +431,11 @@ button.loc{font:inherit;font-weight:700;color:var(--ink);cursor:pointer;padding:
 </main>
 
 <footer class="foot"><div class="wrap">
+  <div class="app-cta" id="app-cta">
+    <img src="icons/icon.svg" width="44" height="44" alt="" style="border-radius:12px;flex:none">
+    <div style="flex:1;min-width:200px"><b style="color:var(--ink)">Lleva Reformayuda en tu móvil</b><br>Gratis, sin anuncios y funciona sin conexión. <span class="chip" style="margin-left:2px">Próximamente en Google Play</span></div>
+    <button class="btn brand" id="btn-install">Instalar la app</button>
+  </div>
   <div><b style="color:var(--ink)">Reformayuda</b> · Información orientativa sobre ayudas públicas a la vivienda. No somos un organismo oficial ni presentamos solicitudes: lo que vale es lo publicado en el boletín oficial. Contacto: <a href="mailto:contacto@reformayuda.es">contacto@reformayuda.es</a></div>
   <nav class="frow" aria-label="Legal"><button class="linkbtn" data-legal="aviso">Aviso legal</button><button class="linkbtn" data-legal="privacidad">Privacidad</button><button class="linkbtn" data-legal="cookies">Cookies</button><button class="linkbtn" data-go="avisos">Mis datos</button></nav>
 </div></footer>
@@ -948,7 +958,7 @@ const LEGAL={
    <li><b>En tu dispositivo, nunca en nuestros servidores:</b> la ubicación de la obra, las respuestas del test (incluida tu franja de edad si la das), las ayudas guardadas, los requisitos y documentos que marcas y el cálculo del IRPF.</li>
    <li><b>Nada más.</b> No pedimos nombre, NIF, dirección, teléfono ni email, y no recibimos ni almacenamos archivos.</li></ul>
   <h3>3. Datos técnicos</h3><p>Como cualquier web, el servidor que aloja Reformayuda recibe tu dirección IP para poder enviarte la página. No la usamos para identificarte ni para crear perfiles. Si tu proveedor de alojamiento guarda registros, se borran en un plazo máximo de 30 días.</p>
-  <h3>4. Recursos de terceros</h3><p>Las tipografías se cargan desde Google Fonts, que recibe tu IP al descargarlas. En la versión final las alojaremos en nuestro propio servidor para evitarlo.</p>
+  <h3>4. Recursos de terceros</h3><p>Ninguno. Las tipografías, los iconos y los datos se sirven desde nuestra propia web: al usar Reformayuda no se envía nada a Google ni a otras empresas.</p>
   <h3>5. Enlaces a sedes oficiales</h3><p>Cuando vas a la sede de un organismo para presentar la solicitud, sales de Reformayuda. Allí se aplica la política de privacidad de ese organismo.</p>
   <h3>6. Tus derechos</h3><p>Como todo está en tu dispositivo, tú controlas tus datos: puedes verlos, copiarlos o borrarlos desde «Mis datos». Para cualquier duda, escríbenos a <a href="mailto:contacto@reformayuda.es">contacto@reformayuda.es</a>. También puedes reclamar ante la Agencia Española de Protección de Datos (<a href="https://www.aepd.es" target="_blank" rel="noopener">aepd.es</a>).</p>
   <h3>7. Cambios</h3><p>Si en el futuro añadimos algo que necesite datos personales (por ejemplo, avisos por email), será opcional, te lo pediremos de forma expresa y actualizaremos esta política antes.</p>`,
@@ -1258,6 +1268,29 @@ if(!S.consent)$("#cookie").hidden=false;
 $("#ck-acc").onclick=()=>setConsent(true);
 $("#ck-rej").onclick=()=>setConsent(false);
 if(S.perfil){S.sort="fit";$("#f-sort").value="fit"}
+/* ---------- instalar la app ---------- */
+let installEvt=null;
+window.addEventListener("beforeinstallprompt",e=>{e.preventDefault();installEvt=e});
+window.addEventListener("appinstalled",()=>{$("#app-cta").hidden=true;toast("¡Instalada! La tienes en tu pantalla de inicio")});
+const enApp=()=>matchMedia("(display-mode: standalone)").matches||navigator.standalone===true;
+if(enApp())$("#app-cta").hidden=true;
+$("#btn-install").onclick=async()=>{
+  if(installEvt){installEvt.prompt();await installEvt.userChoice;installEvt=null;return}
+  const ua=navigator.userAgent, ios=/iphone|ipad|ipod/i.test(ua)||(/macintosh/i.test(ua)&&navigator.maxTouchPoints>1), android=/android/i.test(ua);
+  const pasos={
+    ios:["Abre reformayuda.es en <b>Safari</b>.","Toca el botón <b>Compartir</b> (el cuadrado con una flecha hacia arriba).","Elige <b>«Añadir a pantalla de inicio»</b> y pulsa <b>Añadir</b>."],
+    android:["Abre reformayuda.es en <b>Chrome</b>.","Toca el menú <b>⋮</b> de arriba a la derecha.","Elige <b>«Instalar aplicación»</b> o <b>«Añadir a pantalla de inicio»</b>."],
+    pc:["Abre reformayuda.es en <b>Chrome</b> o <b>Edge</b>.","Pulsa el icono de <b>instalar</b> que aparece a la derecha de la barra de direcciones.","Confirma con <b>Instalar</b>."]};
+  const orden=ios?["ios","android","pc"]:android?["android","ios","pc"]:["pc","android","ios"];
+  const tit={ios:"iPhone o iPad",android:"Android",pc:"Ordenador"};
+  const d=$("#drawer");d.dataset.id="";
+  d.innerHTML=`<button class="btn alt sm close" id="d-close">${icon("x","ico","width:16px;height:16px")}Cerrar</button>
+   <span class="eyebrow">Gratis y sin registro</span><h2>Instala Reformayuda</h2>
+   <p class="muted">Se instala como cualquier app, ocupa muy poco y funciona aunque no tengas conexión.</p>
+   ${orden.map((k,i)=>`<div class="box"${i?' style="opacity:.85"':''}><h3>${tit[k]}</h3><ol class="steps">${pasos[k].map(t=>`<li><span>${t}</span></li>`).join("")}</ol></div>`).join("")}
+   <p class="muted" style="font-size:.85rem">Muy pronto también en Google Play.</p>`;
+  d.hidden=false;$("#scrim").hidden=false;$("#d-close").onclick=closeDrawer;$("#d-close").focus();
+};
 async function cargarDatos(){
   try{const r=await fetch("data/ayudas.json",{cache:"no-cache"});const d=await r.json();AIDS=d.ayudas||[];META={actualizado:d.actualizado}}
   catch(e){toast("No hemos podido cargar las ayudas. Revisa tu conexión.")}
