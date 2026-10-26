@@ -27,6 +27,8 @@ La app de Android es la misma web, empaquetada como **Trusted Web Activity (TWA)
 4. Comprueba que `https://reformayuda.es/.well-known/assetlinks.json` muestra el archivo. Si no, la app enseñará una barra de navegador arriba.
 
 ## 4. Ficha de Google Play
+
+> Textos listos para copiar, gráfico y capturas: `docs/google-play/ficha.md`.
 - **Nombre:** Reformayuda
 - **Descripción corta (80 caracteres):** Ayudas para reformar o construir tu casa. Gratis, sin registro y sin anuncios.
 - **Icono:** `web/icons/icon-512.png`
