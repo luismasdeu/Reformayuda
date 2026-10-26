@@ -265,7 +265,8 @@ def candidata_bdns(ficha):
         "irpf": contiene(t, ["eficiencia energetica", "rehabilitacion energetica"]),
         "fuente": f"BDNS nº {codigo}",
         "url": BDNS_FICHA.format(codigo=codigo),
-        "resumen": (finalidad or titulo)[:400],
+        # La «finalidad» de la BDNS suele ser una categoría genérica; si es corta, mejor el título.
+        "resumen": (finalidad if len(finalidad) > 80 else titulo)[:400],
         "req": ["Consulta los requisitos en la convocatoria oficial"],
         "docs": ["Consulta la documentación en la convocatoria oficial"],
         "pasos": ["Lee la convocatoria oficial", "Prepara la documentación", "Presenta la solicitud en la sede del organismo"],

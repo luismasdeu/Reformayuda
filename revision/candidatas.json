@@ -3,6 +3,177 @@
  "ultima_busqueda": "2026-10-26T05:49",
  "candidatas": [
   {
+   "id": "bdns-934548",
+   "estado": "pendiente",
+   "title": "Cambiar la bañera por un plato de ducha en Camargo",
+   "org": "Ayuntamiento de Camargo · Servicios Sociales",
+   "scope": "municipal",
+   "ccaa": "Cantabria",
+   "tipo": [
+    "accesibilidad"
+   ],
+   "dest": [
+    "vivienda"
+   ],
+   "importe": 0,
+   "imp": "Consulta el importe por vivienda en las bases",
+   "abre": "2026-10-09",
+   "cierra": null,
+   "plazo": "Convocatoria abierta hasta agotar el presupuesto (60.000 €)",
+   "irpf": false,
+   "fuente": "BDNS nº 934548",
+   "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/934548",
+   "resumen": "Ayuda municipal para quitar la bañera y poner un plato de ducha a ras de suelo en casas de personas mayores, para evitar caídas.",
+   "req": [
+    "Vivir en Camargo (Cantabria) y que sea tu vivienda habitual",
+    "Ser persona mayor o con movilidad reducida (confirma la edad en las bases)",
+    "Pedirla antes de hacer la obra"
+   ],
+   "docs": [
+    "DNI/NIE",
+    "Certificado de empadronamiento",
+    "Presupuesto de la obra",
+    "Fotos del baño actual"
+   ],
+   "pasos": [
+    "Lee las bases en el Boletín Oficial de Cantabria",
+    "Pide presupuesto a un instalador",
+    "Presenta la solicitud en el Ayuntamiento de Camargo (Servicios Sociales)",
+    "Haz la obra cuando te la concedan y justifícala con la factura"
+   ],
+   "_revisar": {
+    "presupuesto_total": 60000,
+    "bases_reguladoras": "https://boc.cantabria.es/boces/verAnuncioAction.do?idAnuBlob=234460",
+    "abierta_segun_bdns": false,
+    "beneficiarios": "PERSONAS FÍSICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
+    "nota": "EJEMPLO PREPARADO: ya está casi lista. Abre las bases (bases_reguladoras), comprueba lo de «confirmar», corrige si hace falta y cambia «estado» a «aprobada».",
+    "confirmar": [
+     "Importe máximo por vivienda → «imp» e «importe»",
+     "Edad o requisito exacto (¿mayores de 65?, ¿movilidad reducida?) → «edad» y «req»",
+     "Si hay límite de ingresos → añádelo a «req»",
+     "Si la obra puede estar empezada → «req»"
+    ]
+   },
+   "prov": "Cantabria",
+   "muni": "Camargo",
+   "edad": {
+    "min": 65
+   }
+  },
+  {
+   "id": "bdns-933977",
+   "estado": "pendiente",
+   "title": "Rehabilitación y eficiencia energética de viviendas y edificios",
+   "org": "Junta de Comunidades de Castilla-La Mancha · Dirección General de Vivienda",
+   "scope": "autonomica",
+   "ccaa": "Castilla-La Mancha",
+   "tipo": [
+    "eficiencia",
+    "rehabilitacion",
+    "ventanas",
+    "aerotermia"
+   ],
+   "dest": [
+    "vivienda",
+    "edificio"
+   ],
+   "importe": 0,
+   "imp": "Consulta la cuantía por vivienda en la convocatoria",
+   "abre": "2026-10-27",
+   "cierra": "2026-11-30",
+   "plazo": "Consulta el plazo en la convocatoria",
+   "irpf": true,
+   "fuente": "BDNS nº 933977",
+   "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/933977",
+   "resumen": "Ayudas cofinanciadas con fondos europeos (FEDER) para mejorar el aislamiento, las ventanas, la calefacción y la eficiencia de viviendas y edificios de viviendas de Castilla-La Mancha. Presupuesto total: 50 millones de euros.",
+   "req": [
+    "Vivienda o edificio de viviendas en Castilla-La Mancha",
+    "Que la obra mejore la eficiencia energética (confirma el ahorro mínimo exigido)",
+    "Pedirla antes de empezar la obra (confírmalo en la convocatoria)"
+   ],
+   "docs": [
+    "DNI/NIE (o CIF de la comunidad de propietarios)",
+    "Certificado de eficiencia energética antes de la obra",
+    "Presupuesto desglosado",
+    "Memoria técnica de la obra",
+    "Acta de la junta, si es un edificio"
+   ],
+   "pasos": [
+    "Encarga el certificado energético y la memoria técnica",
+    "Si es un edificio, aprobad la obra en junta",
+    "Presenta la solicitud en la sede electrónica de la Junta (jccm.es) entre el 27/10 y el 30/11/2026",
+    "Haz la obra y justifícala con facturas y el certificado energético final"
+   ],
+   "_revisar": {
+    "presupuesto_total": 50000000,
+    "bases_reguladoras": "https://www.jccm.es",
+    "abierta_segun_bdns": false,
+    "beneficiarios": "PERSONAS FÍSICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
+    "nota": "EJEMPLO PREPARADO: ya está casi lista. Abre las bases (bases_reguladoras), comprueba lo de «confirmar», corrige si hace falta y cambia «estado» a «aprobada».",
+    "confirmar": [
+     "Cuantía por vivienda o % subvencionado → «imp» e «importe»",
+     "Ahorro energético mínimo exigido → «req»",
+     "Enlace directo a la convocatoria en jccm.es → «url» (ahora apunta a la BDNS)",
+     "Si hay límite de ingresos o de antigüedad del edificio → «req»"
+    ]
+   }
+  },
+  {
+   "id": "bdns-937189",
+   "estado": "pendiente",
+   "title": "Rehabilitación de fachadas en Navata",
+   "org": "Ayuntamiento de Navata (Girona)",
+   "scope": "municipal",
+   "ccaa": "Cataluña",
+   "tipo": [
+    "rehabilitacion"
+   ],
+   "dest": [
+    "vivienda",
+    "edificio"
+   ],
+   "importe": 0,
+   "imp": "Ayuda municipal pequeña: 2.400 € en total para todo el municipio",
+   "abre": "2026-10-26",
+   "cierra": "2026-11-26",
+   "plazo": "Consulta el plazo en la convocatoria",
+   "irpf": false,
+   "fuente": "BDNS nº 937189",
+   "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/937189",
+   "resumen": "Subvención del Ayuntamiento de Navata para arreglar y pintar las fachadas de casas y edificios del municipio en 2026. El presupuesto total es pequeño, así que conviene pedirla pronto.",
+   "req": [
+    "Casa o edificio en el municipio de Navata",
+    "Que la obra sea de rehabilitación de la fachada",
+    "Pedirla antes de hacer la obra (confírmalo en las bases)"
+   ],
+   "docs": [
+    "DNI/NIE",
+    "Presupuesto de la obra",
+    "Fotos de la fachada actual",
+    "Licencia o comunicación de obra del ayuntamiento"
+   ],
+   "pasos": [
+    "Lee las bases en el Boletín Oficial de la Provincia de Girona",
+    "Pide presupuesto y tramita el permiso de obra",
+    "Presenta la solicitud en el Ayuntamiento de Navata antes del 26/11/2026",
+    "Haz la obra y justifícala con la factura"
+   ],
+   "_revisar": {
+    "presupuesto_total": 2400,
+    "bases_reguladoras": "https://ssl4.ddgi.cat/bopV1/pdf/2026/152/202615207000.pdf",
+    "abierta_segun_bdns": false,
+    "beneficiarios": "PERSONAS FÍSICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
+    "nota": "EJEMPLO PREPARADO: ya está casi lista. Abre las bases (bases_reguladoras), comprueba lo de «confirmar», corrige si hace falta y cambia «estado» a «aprobada».",
+    "confirmar": [
+     "Importe o % máximo por fachada → «imp» e «importe»",
+     "Si exige casco antiguo o una zona concreta → «req»",
+     "Si la obra puede estar hecha ya en 2026 → «req»"
+    ]
+   },
+   "prov": "Girona",
+   "muni": "Navata"
+  },
+  {
    "id": "bdns-937626",
    "estado": "pendiente",
    "title": "CONVOCATORIA DE CONCESIÓN DE AYUDAS AL FOMENTO DE LA REHABILITACIÓN DE VIVIENDAS DE TITULARIDAD PRIVADA DENTRO DEL PROGRAMA PARA COMBATIR LA DESPOBLACIÓN EN EL ",
@@ -598,52 +769,6 @@
    "muni": "Galar"
   },
   {
-   "id": "bdns-934548",
-   "estado": "pendiente",
-   "title": "CONVOCATORIA ABIERTA DE SUBVENCIONES CON DESTINO A ACTUACIONES DE ADAPTACIÓN DE BAÑO MEDIANTE SUSTITUCIÓN DE BAÑERA POR PLATO DE DUCHA EN VIVIENDAS DE PERSONAS ",
-   "org": "CAMARGO · AYUNTAMIENTO DE CAMARGO",
-   "scope": "municipal",
-   "ccaa": "Cantabria",
-   "tipo": [
-    "accesibilidad"
-   ],
-   "dest": [
-    "vivienda"
-   ],
-   "importe": 0,
-   "imp": "Consulta la convocatoria",
-   "abre": "2026-10-09",
-   "cierra": null,
-   "plazo": "Consulta el plazo en la convocatoria",
-   "irpf": false,
-   "fuente": "BDNS nº 934548",
-   "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/934548",
-   "resumen": "Servicios Sociales y Promoción Social",
-   "req": [
-    "Consulta los requisitos en la convocatoria oficial"
-   ],
-   "docs": [
-    "Consulta la documentación en la convocatoria oficial"
-   ],
-   "pasos": [
-    "Lee la convocatoria oficial",
-    "Prepara la documentación",
-    "Presenta la solicitud en la sede del organismo"
-   ],
-   "_revisar": {
-    "presupuesto_total": 60000,
-    "bases_reguladoras": "https://boc.cantabria.es/boces/verAnuncioAction.do?idAnuBlob=234460",
-    "abierta_segun_bdns": false,
-    "beneficiarios": "PERSONAS FÍSICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
-    "nota": "Revisa importe por vivienda, requisitos, documentos y pasos antes de aprobar."
-   },
-   "prov": "Cantabria",
-   "muni": "Camargo",
-   "edad": {
-    "min": 65
-   }
-  },
-  {
    "id": "bdns-934466",
    "estado": "pendiente",
    "title": "CONVOCATORIA DE CONCESIÓN DIRECTA DE LA SUBVENCIÓN PARA LA REHABILITACIÓN DE VIVIENDAS PARA EL 2026 DEL EXCMO. AYUNTAMIENTO DE ARRECIFE.",
@@ -772,49 +897,6 @@
    "muni": "Almussafes"
   },
   {
-   "id": "bdns-933977",
-   "estado": "pendiente",
-   "title": "Actuaciones de rehabilitación y mejora de la eficiencia energética en viviendas y edificios de viviendas de CLM, cofinanciadas FEDER 2021-2027. Convocatoria 202",
-   "org": "CASTILLA-LA MANCHA · DIRECCIÓN GENERAL DE VIVIENDA",
-   "scope": "autonomica",
-   "ccaa": "Castilla-La Mancha",
-   "tipo": [
-    "eficiencia",
-    "rehabilitacion"
-   ],
-   "dest": [
-    "vivienda",
-    "edificio"
-   ],
-   "importe": 0,
-   "imp": "Consulta la convocatoria",
-   "abre": "2026-10-27",
-   "cierra": "2026-11-30",
-   "plazo": "Consulta el plazo en la convocatoria",
-   "irpf": true,
-   "fuente": "BDNS nº 933977",
-   "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/933977",
-   "resumen": "Acceso a la vivienda y fomento de la edificación",
-   "req": [
-    "Consulta los requisitos en la convocatoria oficial"
-   ],
-   "docs": [
-    "Consulta la documentación en la convocatoria oficial"
-   ],
-   "pasos": [
-    "Lee la convocatoria oficial",
-    "Prepara la documentación",
-    "Presenta la solicitud en la sede del organismo"
-   ],
-   "_revisar": {
-    "presupuesto_total": 50000000,
-    "bases_reguladoras": "https://www.jccm.es",
-    "abierta_segun_bdns": false,
-    "beneficiarios": "PERSONAS FÍSICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
-    "nota": "Revisa importe por vivienda, requisitos, documentos y pasos antes de aprobar."
-   }
-  },
-  {
    "id": "bdns-937482",
    "estado": "pendiente",
    "title": "AYUDAS A LA REHABILITACIÓN Y RESTAURACIÓN DE LAS FACHADAS DEL CASCO ANTIGUO. CALLE DEL ARENY N.º 20",
@@ -857,50 +939,6 @@
    },
    "prov": "Girona",
    "muni": "Lloret De Mar"
-  },
-  {
-   "id": "bdns-937189",
-   "estado": "pendiente",
-   "title": "Convocatoria de solicitudes de subvenciones para la rehabilitación de fachadas en el municipio de Navata, ejercicio 2026 (Expediente n.º: X2026000299)",
-   "org": "NAVATA · AYUNTAMIENTO DE NAVATA",
-   "scope": "municipal",
-   "ccaa": "Cataluña",
-   "tipo": [
-    "eficiencia",
-    "rehabilitacion"
-   ],
-   "dest": [
-    "vivienda"
-   ],
-   "importe": 0,
-   "imp": "Consulta la convocatoria",
-   "abre": "2026-10-26",
-   "cierra": "2026-11-26",
-   "plazo": "Consulta el plazo en la convocatoria",
-   "irpf": false,
-   "fuente": "BDNS nº 937189",
-   "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/937189",
-   "resumen": "Acceso a la vivienda y fomento de la edificación",
-   "req": [
-    "Consulta los requisitos en la convocatoria oficial"
-   ],
-   "docs": [
-    "Consulta la documentación en la convocatoria oficial"
-   ],
-   "pasos": [
-    "Lee la convocatoria oficial",
-    "Prepara la documentación",
-    "Presenta la solicitud en la sede del organismo"
-   ],
-   "_revisar": {
-    "presupuesto_total": 2400,
-    "bases_reguladoras": "https://ssl4.ddgi.cat/bopV1/pdf/2026/152/202615207000.pdf",
-    "abierta_segun_bdns": false,
-    "beneficiarios": "PERSONAS FÍSICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
-    "nota": "Revisa importe por vivienda, requisitos, documentos y pasos antes de aprobar."
-   },
-   "prov": "Girona",
-   "muni": "Navata"
   },
   {
    "id": "bdns-933040",
