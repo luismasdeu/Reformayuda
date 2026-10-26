@@ -29,11 +29,12 @@ La app de Android es la misma web, empaquetada como **Trusted Web Activity (TWA)
 ## 4. Ficha de Google Play
 
 > Textos listos para copiar, gráfico y capturas: `docs/google-play/ficha.md`.
-- **Nombre:** Reformayuda
-- **Descripción corta (80 caracteres):** Ayudas para reformar o construir tu casa. Gratis, sin registro y sin anuncios.
+
+- **Nombre:** Reformayuda: subvenciones casa
+- **Descripción corta y completa:** en `docs/google-play/ficha.md`
 - **Icono:** `web/icons/icon-512.png`
-- **Gráfico de cabecera:** 1024 × 500 (se puede hacer con el verde de la app y el icono).
-- **Capturas:** al menos 2 del móvil (inicio, buscador, ficha de ayuda, IRPF, chat).
+- **Gráfico de cabecera:** `docs/google-play/grafico-1024x500.png`
+- **Capturas:** `docs/google-play/capturas/` (6 imágenes)
 - **Categoría:** Finanzas o Casa y hogar.
 - **Política de privacidad:** `https://reformayuda.es/#privacidad`
 - **Seguridad de los datos:** «Esta app no recoge ni comparte datos de usuario».
