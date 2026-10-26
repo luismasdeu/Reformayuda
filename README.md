@@ -137,7 +137,16 @@ python3 scripts/validar.py
 - [ ] Que un abogado o gestor revise los textos legales y las respuestas del chat sobre leyes (propiedad horizontal, licencias).
 - [ ] Publicar en Google Play: ver `docs/google-play.md`.
 
-## 6. Qué no hace todavía
+## 6. Para cuando esté publicada en Google Play: darla a conocer
+
+Plan acordado (todo gratis):
+
+- [ ] **Automático:** feed RSS de ayudas nuevas (`/feed.xml`) generado al publicar, y publicación automática de cada ayuda aprobada en un **canal de Telegram** y en **Bluesky** desde GitHub Actions. Hace falta crear el canal y la cuenta y guardar sus claves como *secrets* del repositorio.
+- [ ] **Semiautomático con el RSS:** Facebook e Instagram con Buffer o Make.com (planes gratuitos).
+- [ ] **Manual:** compartir ayudas concretas en grupos de Facebook (reformas, comunidades de vecinos, pueblos), escribir a administradores de fincas, nota de prensa a medios locales y vídeos cortos (TikTok, Reels, Shorts).
+- [ ] Antes de anunciarla: tener publicadas al menos 20-30 ayudas de varias comunidades.
+
+## 7. Qué no hace todavía
 
 - **Boletines autonómicos y provinciales:** se cubren a través de la BDNS, donde las administraciones registran sus convocatorias. Leer cada boletín directamente es una mejora futura.
 - **Notificaciones con la app cerrada:** los avisos salen al abrir la app y en el calendario del usuario. Las notificaciones push necesitan un pequeño servidor.
