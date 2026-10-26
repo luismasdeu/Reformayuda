@@ -448,7 +448,7 @@ button.loc{font:inherit;font-weight:700;color:var(--ink);cursor:pointer;padding:
     <button class="btn brand" id="btn-install">Instalar la app</button>
   </div>
   <div><b style="color:var(--ink)">Reformayuda</b> · Información orientativa sobre ayudas públicas a la vivienda. No somos un organismo oficial ni presentamos solicitudes: lo que vale es lo publicado en el boletín oficial. Contacto: <a href="mailto:contacto@reformayuda.es">contacto@reformayuda.es</a></div>
-  <nav class="frow" aria-label="Legal"><button class="linkbtn" data-legal="aviso">Aviso legal</button><button class="linkbtn" data-legal="privacidad">Privacidad</button><button class="linkbtn" data-legal="cookies">Cookies</button><button class="linkbtn" data-go="avisos">Mis datos</button></nav>
+  <nav class="frow" aria-label="Legal"><button class="linkbtn" data-legal="aviso">Aviso legal</button><button class="linkbtn" data-legal="privacidad">Privacidad</button><button class="linkbtn" data-legal="cookies">Cookies</button><button class="linkbtn" data-go="avisos">Mis datos</button><a class="linkbtn" href="/subvenciones/" style="text-decoration:none">Todas las ayudas</a><a class="linkbtn" href="/preguntas/" style="text-decoration:none">Preguntas frecuentes</a></nav>
 </div></footer>
 
 <div class="cookie" id="cookie" hidden role="region" aria-label="Aviso de cookies"><div class="in">
@@ -1053,202 +1053,8 @@ function closeOnb(){$("#onb").hidden=true;if(!S.consent)$("#cookie").hidden=fals
 document.addEventListener("keydown",e=>{if(e.key==="Escape"&&!$("#onb").hidden)closeOnb()});
 
 /* ---------- chat ---------- */
-const B=(attr,label)=>`<button class="btn sm" ${attr}>${label}</button>`;
-const FAQ=[
- {q:"¿Qué ayudas hay para mi obra?",k:["que ayudas","ayudas hay","para mi","subvenciones hay","que hay","busco ayuda","mi obra"],
-  a:"<p>Depende de dónde esté la obra y de qué vayas a hacer. Pon arriba dónde está la obra (el icono del mapa): comunidad, provincia y, si quieres, el pueblo y toca el tipo de obra en el inicio.</p><p>Ahora mismo estás viendo <b>"+"${S.ccaa}"+"</b>.</p>",act:()=>B('data-go="ayudas"',"Ver ayudas")},
- {q:"¿Puedo pedirla si ya empecé la obra?",k:["empece","empezado","ya empec","iniciad","ya hecha","hecha la obra","terminad","antes de empezar"],
-  a:"<p>Casi todas las subvenciones exigen que la obra <b>no haya empezado</b> cuando la pides. Lee bien ese requisito en la convocatoria.</p><p>La deducción del IRPF sí se puede aplicar a una obra terminada, pero necesitas el certificado energético de <b>antes</b> de empezar.</p>"},
- {q:"¿Qué es el certificado energético?",k:["certificado","energetico","calificacion","etiqueta"],
-  a:"<p>Es un informe que hace un técnico (arquitecto, aparejador o ingeniero) y da a tu casa una letra de la A a la G según lo que consume.</p><p>Para las ayudas y el IRPF suele hacer falta uno <b>antes</b> y otro <b>después</b> de la obra, registrados en tu comunidad autónoma. En un piso suele costar entre 60 y 250 €, según la zona.</p>"},
- {q:"¿Cuánto desgrava cambiar las ventanas?",k:["ventana","cerramiento","aislamiento","aislar","toldo"],
-  a:"<p>Si la obra reduce al menos un 7 % la demanda de calefacción y refrigeración, desgravas el <b>20 %</b> con un límite de 5.000 € al año: como mucho, 1.000 € de deducción.</p><p>Si con otras mejoras bajas un 30 % el consumo o llegas a la letra A o B, pasa al <b>40 %</b>.</p>",act:()=>B('data-go="irpf"',"Calcular")},
- {q:"¿Hay ayudas para placas solares?",k:["placa","solar","fotovolt","autoconsumo","paneles"],
-  a:"<p>Sí, por tres vías:</p><p>1) <b>IRPF</b>: hasta el 40 % si baja un 30 % el consumo de energía no renovable.<br>2) <b>IBI</b>: muchos ayuntamientos lo rebajan entre un 25 % y un 50 % durante varios años.<br>3) <b>ICIO</b>: rebaja del impuesto de obras al pedir la licencia.</p>",act:()=>B('data-tipo="solar"',"Ver ayudas solares")},
- {q:"¿Y la aerotermia?",k:["aerotermia","bomba de calor","caldera","calefaccion"],
-  a:"<p>Cambiar una caldera de gas o gasóleo por aerotermia suele reducir más de un 30 % el consumo no renovable. Eso da derecho al <b>40 %</b> en el IRPF (hasta 3.000 € al año) y a algunas ayudas autonómicas.</p>",act:()=>B('data-tipo="aerotermia"',"Ver ayudas")},
- {q:"¿Hay ayudas para poner un ascensor?",k:["ascensor","rampa","accesib","silla","movilidad","salvaescal"],
-  a:"<p>Sí. El Plan Estatal de Vivienda 2026-2030 da hasta <b>22.000 € por vivienda</b> para accesibilidad. Lo pide la comunidad de propietarios, normalmente a través del administrador de fincas.</p>",act:()=>B('data-tipo="accesibilidad"',"Ver ayudas")},
- {q:"¿Puedo sumar varias ayudas?",k:["sumar","compatib","varias","juntar","acumular","dos ayudas"],
-  a:"<p>Normalmente puedes sumar una <b>subvención</b> y la <b>deducción del IRPF</b>, pero en el IRPF tienes que restar la subvención del coste.</p><p>Dos subvenciones para el mismo gasto a veces no son compatibles: lo dice cada convocatoria en el apartado de compatibilidad.</p>"},
- {q:"¿Cuándo cobro la ayuda?",k:["cuando cobro","cobrar","pagan","tardan","cuanto tarda","plazo de pago","anticipo"],
-  a:"<p>Suele ir así: solicitas, resuelven en 3 a 6 meses, haces la obra, presentas facturas y certificado final, y entonces cobras.</p><p>Algunas convocatorias adelantan una parte al aprobarla.</p>"},
- {q:"¿Tengo que declarar la subvención?",k:["declarar","tributa","hacienda la subvencion","renta la ayuda","ganancia"],
-  a:"<p>En general sí: cuenta como ganancia patrimonial en la Renta del año en que la cobras. Algunas ayudas a la rehabilitación están exentas por ley.</p><p>Mira la resolución de tu ayuda o los datos fiscales en Renta Web.</p>"},
- {q:"¿Necesito Cl@ve o certificado digital?",k:["clave","cl@ve","certificado digital","firma","dni electronico","identificar"],
-  a:"<p>Reformayuda no te pide ninguna clave. Para <b>presentar</b> la solicitud en la sede oficial sí suele hacer falta Cl@ve, certificado digital o DNI electrónico.</p><p>En una comunidad de vecinos la presenta el presidente o el administrador.</p>"},
- {q:"¿Hay ayudas para construir una casa?",k:["construir","casa nueva","obra nueva","vivienda nueva","edificar","solar para"],
-  a:"<p>Hay menos que para reformar. Las más habituales son para <b>jóvenes en municipios pequeños</b> y para viviendas de consumo casi nulo en el medio rural.</p><p>Si la casa nueva lleva aerotermia o placas solares, también puedes tener rebajas en el IBI y el ICIO.</p>",act:()=>B('data-tipo="construccion"',"Ver ayudas")},
- {q:"¿Puedo pagar en efectivo?",k:["efectivo","metalico","en mano","cash"],
-  a:"<p>Mejor no. Lo pagado en efectivo <b>no desgrava</b> en el IRPF y muchas subvenciones no lo aceptan. Paga con tarjeta, transferencia o cheque nominativo y guarda el justificante.</p>"},
- {q:"Vivo de alquiler, ¿puedo pedirlas?",k:["alquiler","inquilino","alquilad","arrendat","casero"],
-  a:"<p>Las deducciones del 20 % y del 40 % también sirven al <b>propietario</b> de una vivienda alquilada.</p><p>Si eres inquilino, algunas subvenciones te dejan pedirla con permiso del propietario. Revisa quién puede ser beneficiario en cada convocatoria.</p>"},
- {q:"¿Hay límite de ingresos?",k:["ingresos","iprem","renta baja","cuanto gano","sueldo","limite de renta"],
-  a:"<p>Depende de la ayuda. Muchas de rehabilitación no tienen límite, y otras ponen uno en veces el IPREM o dan más dinero a hogares con menos ingresos.</p><p>Lo verás en los requisitos de cada ficha.</p>"},
- {q:"¿Qué documentos me van a pedir?",k:["documento","papeles","que necesito","acta","presupuesto","dni"],
-  a:"<p>Lo más habitual es: DNI o NIE, presupuesto desglosado, certificado energético previo, escritura o nota simple y, en edificios, el acta de la junta.</p><p>El asistente te da la lista exacta de cada ayuda.</p>",act:()=>B('data-go="solicitud"',"Abrir asistente")},
- {q:"¿Reformayuda presenta la solicitud por mí?",k:["presenta","presentais","por mi","en mi nombre","tramitais","gestionais","oficial","organismo"],
-  a:"<p>No. Reformayuda no es un organismo oficial ni te representa. Te ayuda a encontrar la ayuda, comprobar requisitos y reunir los papeles, y te lleva a la sede oficial para que la presentes tú.</p>"},
- {q:"¿Qué hacéis con mis datos?",k:["datos","privacidad","borrar","email","correo","baja","eliminar"],
-  a:"<p>Reformayuda no te pide email ni ningún dato personal, y no hay cuentas. Todo se queda en tu móvil y puedes borrarlo con un botón en «Mis datos».</p>",act:()=>B('data-go="avisos"',"Mis datos")+" "+B('data-legal="privacidad"',"Privacidad")},
- /* --- dentro de casa --- */
- {cat:"casa",q:"¿Hay ayudas para reformar el baño?",k:["bano","ducha","plato de ducha","banera","sanitario","inodoro"],
-  a:"<p>Una reforma del baño solo por estética no suele tener subvención. Sí la tiene si es para <b>accesibilidad</b>: cambiar la bañera por un plato de ducha a ras de suelo, poner barras o ensanchar puertas para personas mayores o con discapacidad.</p><p>Mira las ayudas de accesibilidad y las de servicios sociales de tu comunidad (adaptación del hogar). Y recuerda que la obra puede llevar <b>IVA del 10 %</b>.</p>",act:()=>B('data-tipo="accesibilidad"',"Ver ayudas de accesibilidad")},
- {cat:"casa",q:"¿Y para reformar la cocina?",k:["cocina","encimera","muebles de cocina","vitro","induccion"],
-  a:"<p>Cambiar muebles no suele tener ayuda. Algunas comunidades tienen planes «Renove» de electrodomésticos o de cocinas eficientes, por ejemplo al pasar de gas a inducción. Comprueba si hay alguno abierto.</p><p>Lo que casi siempre puedes aprovechar es el <b>IVA reducido del 10 %</b> si la obra la contrata el propietario.</p>"},
- {cat:"casa",q:"¿Pago menos IVA en una reforma?",k:["iva","10 %","10%","iva reducido","impuesto"],
-  a:"<p>Sí, puede ser del <b>10 % en lugar del 21 %</b> si se cumplen tres cosas:</p><p>1) La obra la contrata una persona física para su vivienda.<br>2) La vivienda tiene más de 2 años.<br>3) Los materiales que pone el contratista no superan el 40 % del total.</p><p>Si los compras tú por tu cuenta, pagan IVA del 21 %.</p>"},
- {cat:"casa",q:"¿Hay ayudas para una reforma integral?",k:["reforma integral","reformar entera","toda la casa","reforma completa","reforma total"],
-  a:"<p>Sí, si la reforma <b>mejora la eficiencia energética</b>. Las ayudas de rehabilitación y el IRPF premian bajar el consumo: aislamiento, ventanas, calefacción eficiente y renovables.</p><p>Pide el certificado energético <b>antes</b> de empezar para no perder ninguna ayuda.</p>",act:()=>B('data-tipo="rehabilitacion"',"Ver ayudas")},
- {cat:"casa",q:"¿Desgrava cambiar las puertas?",k:["puerta","blindada","puerta de entrada","portal"],
-  a:"<p>Una puerta de entrada aislante ayuda a bajar la demanda de calefacción. Si, junto con otras mejoras, la reducción llega al 7 %, entra en la deducción del <b>20 %</b> del IRPF. Lo comprueba el técnico con los certificados de antes y después.</p>"},
- {cat:"casa",q:"¿Hay ayudas para quitar humedades?",k:["humedad","moho","condensacion","capilaridad","goteras"],
-  a:"<p>Arreglar humedades no suele tener ayuda por sí solo. Sí entra si forma parte de una rehabilitación: aislar la fachada o la cubierta, impermeabilizar o poner ventilación con recuperador de calor.</p><p>Muchas humedades de condensación se resuelven precisamente mejorando el aislamiento.</p>"},
- {cat:"casa",q:"¿Desgrava poner luces LED?",k:["led","bombilla","iluminacion","luces"],
-  a:"<p>Las luces LED no tienen ayuda ni deducción por sí solas en una vivienda: ahorran en la factura, pero no cuentan en el certificado energético de una casa. En las zonas comunes de un edificio sí pueden entrar en una rehabilitación.</p>"},
- {cat:"casa",q:"¿Hay ayudas para domótica?",k:["domotica","casa inteligente","termostato","automatiza","alexa"],
-  a:"<p>Sí en dos casos:</p><p>1) Si es para <b>accesibilidad</b> (persianas, puertas o luces automáticas para personas mayores o con discapacidad): el plan estatal la incluye.<br>2) Si forma parte de una mejora de eficiencia, como termostatos y control de la calefacción.</p>"},
- {cat:"casa",q:"¿Hay ayudas para salvaescaleras en una casa unifamiliar?",k:["salvaescaleras","silla salva","elevador","plataforma","escalera"],
-  a:"<p>Sí. Las ayudas de accesibilidad también sirven para viviendas unifamiliares: salvaescaleras, plataformas elevadoras y rampas. Suelen dar más dinero si vive alguien mayor de 65 años o con discapacidad.</p>",act:()=>B('data-tipo="accesibilidad"',"Ver ayudas")},
-
- /* --- exterior --- */
- {cat:"exterior",q:"¿Hay ayudas para arreglar el tejado?",k:["tejado","cubierta","teja","tejas","goteras del tejado"],
-  a:"<p>Cambiar tejas sin más suele contar como mantenimiento. Pero si al arreglarlo <b>aíslas la cubierta</b>, entra en las ayudas de rehabilitación energética y en el IRPF (20 % o 40 %, según cuánto ahorres).</p><p>En edificios, el plan estatal también ayuda a la conservación de la cubierta.</p>",act:()=>B('data-tipo="eficiencia"',"Ver ayudas")},
- {cat:"exterior",q:"¿Y para aislar la fachada?",k:["fachada","sate","aislamiento exterior","aislar por fuera","cappotto"],
-  a:"<p>Es una de las obras con más ayudas. Aislar la fachada por fuera (sistema SATE) suele bajar mucho la demanda de calefacción.</p><p>En un edificio puede llegar al <b>60 %</b> del IRPF por vecino, además de la subvención. En una casa, al 20 % o al 40 %.</p>",act:()=>B('data-tipo="eficiencia"',"Ver ayudas")},
- {cat:"exterior",q:"¿Hay ayudas para quitar la uralita (amianto)?",k:["uralita","amianto","fibrocemento","asbesto"],
-  a:"<p>Sí. Varias convocatorias de rehabilitación suman una <b>cantidad extra por retirar amianto</b>, y algunos ayuntamientos tienen ayudas propias.</p><p>La retirada la tiene que hacer una empresa inscrita en el registro de empresas con riesgo de amianto (RERA). No la quites tú.</p>"},
- {cat:"exterior",q:"¿Puedo cerrar la terraza con ayudas?",k:["terraza","cerrar terraza","acristalar","cortinas de cristal","galeria"],
-  a:"<p>Cerrar la terraza no suele tener ayuda y muchas veces necesita permiso de la comunidad y del ayuntamiento. Si con buen vidrio reduces la demanda de calefacción, podría entrar en el 20 % del IRPF; lo valora el técnico.</p>"},
- {cat:"exterior",q:"¿Hay ayudas para una piscina?",k:["piscina","jacuzzi","spa"],
-  a:"<p>No. Las piscinas no tienen subvención y además pagan el impuesto de obras (ICIO) y la tasa de licencia. Si quieres climatizarla, la bomba de calor tampoco desgrava en el IRPF.</p>"},
- {cat:"exterior",q:"¿Y para aprovechar el agua de lluvia?",k:["agua de lluvia","aljibe","riego","xerojardin","ahorro de agua","cesped"],
-  a:"<p>Algunos ayuntamientos y comunidades con sequía ayudan a instalar depósitos de agua de lluvia, riego por goteo o jardines de bajo consumo. No son ayudas estatales: búscalas en la web de tu ayuntamiento.</p>"},
- {cat:"exterior",q:"¿Qué es la ITE o el informe del edificio?",k:["ite","iee","inspeccion tecnica","informe de evaluacion","edificio antiguo"],
-  a:"<p>La ITE es la inspección técnica que deben pasar los edificios antiguos (en muchos sitios, a partir de 45 o 50 años). El IEE (Informe de Evaluación del Edificio) la completa con accesibilidad y eficiencia.</p><p>Muchas ayudas de rehabilitación lo piden y algunas pagan parte de su coste.</p>"},
-
- /* --- energía --- */
- {cat:"energia",q:"¿Hay ayudas para una caldera de biomasa o una estufa de pellets?",k:["biomasa","pellet","estufa","lena","chimenea","hueso de aceituna"],
-  a:"<p>Sustituir una caldera de gasóleo o una eléctrica por <b>biomasa</b> (pellets, astilla, hueso de aceituna) baja el consumo de energía no renovable. Puede entrar en el <b>40 %</b> del IRPF y en ayudas autonómicas de renovables.</p><p>Una chimenea abierta tradicional no cuenta: tiene que ser un equipo eficiente y certificado.</p>"},
- {cat:"energia",q:"¿Desgravan las baterías para las placas solares?",k:["bateria","almacenamiento","acumulador"],
-  a:"<p>Las baterías forman parte de la instalación de autoconsumo. Si la instalación completa baja un 30 % el consumo no renovable, entran en el <b>40 %</b> del IRPF. Algunas comunidades han tenido ayudas específicas para almacenamiento: mira si hay alguna abierta.</p>",act:()=>B('data-tipo="solar"',"Ver ayudas solares")},
- {cat:"energia",q:"¿Hay ayudas para un cargador del coche eléctrico?",k:["cargador","coche electrico","punto de recarga","wallbox","moves"],
-  a:"<p>El programa <b>MOVES</b> ha financiado puntos de recarga en viviendas y garajes, y ha existido una deducción del IRPF para instalarlos. Las dos han tenido varias prórrogas: comprueba en tu comunidad y en la Agencia Tributaria si siguen vigentes este año.</p>"},
- {cat:"energia",q:"¿Desgrava un aire acondicionado?",k:["aire acondicionado","split","climatizacion","refrigeracion","conductos"],
-  a:"<p>Un aire acondicionado que solo enfría, no. Una <b>bomba de calor</b> que sustituye a la calefacción de gas o gasóleo sí puede entrar en el 40 % del IRPF si baja un 30 % el consumo no renovable.</p>",act:()=>B('data-tipo="aerotermia"',"Ver ayudas")},
- {cat:"energia",q:"¿Hay ayudas para placas solares de agua caliente (solar térmica)?",k:["solar termica","agua caliente","termo","acs","calentador"],
-  a:"<p>Sí. La solar térmica para el agua caliente reduce el consumo y puede entrar en el IRPF (20 % o 40 %) y en ayudas de renovables. Cambiar un termo eléctrico por uno de <b>aerotermia</b> también cuenta.</p>"},
- {cat:"energia",q:"¿Desgrava el suelo radiante?",k:["suelo radiante","radiadores","calefaccion por suelo","emisores"],
-  a:"<p>El suelo radiante no desgrava solo. Combinado con <b>aerotermia</b> mejora mucho el rendimiento y puede ayudarte a llegar al 30 % de ahorro que pide la deducción del 40 %.</p>"},
- {cat:"energia",q:"¿Hay ayudas para un molino eólico pequeño?",k:["eolica","molino","aerogenerador","viento"],
-  a:"<p>La minieólica para autoconsumo cuenta como renovable, igual que las placas. Entra en el IRPF si baja el consumo no renovable y en algunas ayudas autonómicas. Antes, pregunta en el ayuntamiento: muchas ordenanzas limitan la altura.</p>"},
- {cat:"energia",q:"¿Hay ayudas para ventilación con recuperador de calor?",k:["ventilacion","recuperador","vmc","renovacion de aire"],
-  a:"<p>Sí. La ventilación mecánica con recuperación de calor reduce la pérdida de energía y ayuda contra la condensación. Suele entrar en las rehabilitaciones energéticas y en el 20 % o el 40 % del IRPF.</p>"},
-
- /* --- casa de campo --- */
- {cat:"campo",q:"¿Hay ayudas para rehabilitar una casa de campo?",k:["casa de campo","casa rural","casa de pueblo","aldea","masia","cortijo","caserio","pueblo"],
-  a:"<p>Sí, y muchas veces dan <b>más dinero en el medio rural</b>. Mira tres sitios:</p><p>1) Las ayudas de rehabilitación del plan estatal (hay línea rural).<br>2) Los programas de tu comunidad contra la despoblación.<br>3) La diputación provincial.</p><p>Si va a ser tu vivienda habitual o la vas a alquilar, suele contar a favor.</p>",act:()=>B('data-tipo="rehabilitacion"',"Ver ayudas")},
- {cat:"campo",q:"¿Puedo convertir un pajar o una nave en vivienda?",k:["pajar","nave","cuadra","granero","establo","cambio de uso","convertir en vivienda"],
-  a:"<p>Depende del suelo. En <b>suelo urbano</b> suele bastar con licencia de cambio de uso. En <b>suelo rústico</b> es más difícil: muchas normas solo lo permiten si el edificio es tradicional y ya existía.</p><p>Pide un informe urbanístico en el ayuntamiento antes de comprar o invertir. Después, la obra puede optar a las ayudas de rehabilitación rural.</p>"},
- {cat:"campo",q:"¿Puedo construir en suelo rústico?",k:["rustico","finca","parcela","no urbanizable","terreno","construir en el campo"],
-  a:"<p>Es complicado: en suelo rústico la vivienda suele estar muy limitada o prohibida, salvo excepciones (por ejemplo, vinculada a una explotación agraria o con una parcela mínima grande).</p><p>Consulta el planeamiento de tu municipio antes de nada. Sin licencia no hay ayudas, y te arriesgas a una orden de derribo.</p>"},
- {cat:"campo",q:"Mi casa de campo no tiene luz: ¿hay ayudas?",k:["sin luz","sin electricidad","no hay luz","placa","casa de campo","aislada","off grid","sin red","no tiene luz","enganche","acometida"],
-  a:"<p>Una instalación solar <b>aislada</b> (con baterías) suele salir más barata que llevar la línea eléctrica. Tiene las mismas ayudas que el autoconsumo: IRPF si es vivienda habitual o alquilada, y programas de renovables en algunas comunidades.</p>",act:()=>B('data-tipo="solar"',"Ver ayudas solares")},
- {cat:"campo",q:"¿Hay ayudas para una fosa séptica o depuradora?",k:["fosa","septica","depuradora","saneamiento","alcantarillado","aguas residuales"],
-  a:"<p>Si no hay alcantarillado, necesitas una depuradora o fosa homologada y la autorización de vertido de la confederación hidrográfica. Algunas diputaciones y comunidades tienen ayudas para el saneamiento en núcleos pequeños: pregunta en tu ayuntamiento.</p>"},
- {cat:"campo",q:"¿Puedo hacer un pozo?",k:["pozo","hacer un pozo","sondeo","agua subterranea","perforacion"],
-  a:"<p>Necesitas permiso de la <b>confederación hidrográfica</b> de tu cuenca (para uso doméstico, normalmente hasta 7.000 m³ al año). No suele haber subvención, pero sí se puede bombear con energía solar.</p>"},
- {cat:"campo",q:"¿Hay ayudas si la convierto en casa rural de turismo?",k:["turismo rural","turista","casa rural para turistas","alojamiento rural","casa rural para alquilar","leader","grupo de accion local","negocio"],
-  a:"<p>Sí, pero ya es un <b>negocio</b>. Los Grupos de Acción Local (programa LEADER, con fondos europeos) ayudan a inversiones de turismo rural. Para pedirlas te tendrás que dar de alta como autónomo o crear una empresa, y registrar la casa como alojamiento turístico.</p>"},
- {cat:"campo",q:"¿Hay ayudas por tener la casa vacía en un pueblo?",k:["vacia","casa vacia","casa vacia en el pueblo","sin usar","despoblacion","alquilar en el pueblo","bolsa de vivienda"],
-  a:"<p>Varias comunidades y diputaciones pagan parte de la reforma si después <b>alquilas la casa</b> durante unos años, a menudo a jóvenes o familias, a través de bolsas de vivienda contra la despoblación. Mira en tu comunidad y en tu diputación.</p>"},
- {cat:"campo",q:"¿Qué tengo que hacer contra los incendios en una casa de campo?",k:["incendio","fuego","franja","desbroce","limpiar el monte","forestal"],
-  a:"<p>Si la casa está cerca del monte, muchas comunidades obligan a mantener limpia una franja alrededor (a menudo de 25 a 50 m). Algunas tienen ayudas para la limpieza o para cubiertas y cerramientos resistentes. Infórmate en el ayuntamiento o en medio ambiente de tu comunidad.</p>"},
- {cat:"campo",q:"Mi casa es antigua o protegida: ¿hay ayudas?",k:["protegida","patrimonio","bic","historica","catalogada","piedra","centro historico"],
-  a:"<p>Si el edificio está catalogado o es Bien de Interés Cultural, suele haber ayudas de <b>patrimonio</b> de tu comunidad y descuentos en el IBI. Ten en cuenta que la obra necesitará más permisos y puede tener límites en materiales y ventanas.</p>"},
- {cat:"campo",q:"¿Hay ayudas para una casa prefabricada o modular?",k:["prefabricada","modular","madera","casa de madera","contenedor","industrializada"],
-  a:"<p>Se tratan como una casa nueva: necesitan parcela edificable y licencia de obra. Si es de consumo casi nulo (letra A) y la construyes en un municipio pequeño, puede entrar en las ayudas de vivienda nueva rural o para jóvenes.</p>",act:()=>B('data-tipo="construccion"',"Ver ayudas")},
-
- /* --- trámites --- */
- {cat:"tramites",q:"¿Hay ayudas de mi diputación o de mi pueblo?",k:["diputacion","mi pueblo","ayuntamiento da","provincia","ayudas locales","ayudas municipales","de mi ayuntamiento","comarca","cabildo","consell"],
-  a:"<p>Sí, y a menudo son las menos conocidas. Las <b>diputaciones</b> (cabildos y consells en las islas) suelen tener ayudas para pueblos pequeños, y muchos <b>ayuntamientos</b> dan rebajas en el IBI y el ICIO o ayudas propias.</p><p>Pon tu provincia, tu pueblo y su número de habitantes en la ubicación (icono del mapa) y te las enseñamos.</p>",act:()=>B('id="chat-loc"',"Poner mi ubicación")},
- {cat:"tramites",q:"¿Cómo me avisáis de los plazos sin email?",k:["avisar","avisos","avisais","recordatorio","recordar","calendario","notificacion","se me pase","olvide"],
-  a:"<p>De dos formas, sin email ni cuenta:</p><p>1) Toca <b>«Avisarme»</b> en una ayuda: al abrir Reformayuda te diremos si quedan 7 días, si acaba de abrir o si hay ayudas nuevas en tu zona.<br>2) Toca <b>Google</b> u <b>Outlook</b> en «Añadir a tu calendario» y el plazo queda en tu agenda del móvil, con sus avisos.</p>",act:()=>B('data-go="avisos"',"Mis avisos")},
- {cat:"tramites",q:"¿Hay ayudas según mi edad?",k:["edad","joven","jovenes","menor de 35","mayor de 65","jubilado","pensionista","tercera edad","anos tengo"],
-  a:"<p>Sí. Hay ayudas solo para <b>menores de 35</b> (comprar o construir en pueblos pequeños) y solo para <b>mayores de 65</b> (adaptar la casa), y las de accesibilidad dan más si en casa vive alguien mayor.</p><p>Indica tu franja de edad en «Tu obra → Cambiar» y te quitamos las que no te tocan. Es opcional y no sale de tu móvil.</p>",act:()=>B('id="chat-perfil"',"Indicar mi edad")},
- {cat:"permisos",q:"¿Qué es una declaración responsable?",k:["que es una declaracion responsable","que es la declaracion","declaracion responsable que es","en que consiste"],
-  a:"<p>Es un escrito que presentas en el ayuntamiento diciendo que tu obra cumple las normas y que tienes los papeles necesarios. <b>No esperas respuesta</b>: con presentarla puedes empezar.</p><p>El ayuntamiento puede revisarla después y, si algo no cuadra, parar la obra.</p>"},
- {cat:"permisos",q:"¿Qué obras van con declaración responsable?",k:["que obras van con declaracion","obras con declaracion","obra menor","obras pequenas","cuales van con declaracion"],
-  a:"<p>Normalmente las <b>obras pequeñas que no tocan la estructura</b> ni cambian la fachada:</p><p>• Reformar baño o cocina, cambiar suelos o alicatados.<br>• Pintar, cambiar puertas interiores, fontanería y electricidad.<br>• Cambiar ventanas sin cambiar su aspecto.<br>• Placas solares, aerotermia o una caldera nueva, en la mayoría de comunidades.</p><p>Cada ayuntamiento tiene su lista; búscala en su web como «obras sujetas a declaración responsable».</p>"},
- {cat:"permisos",q:"¿Qué obras necesitan licencia?",k:["que obras necesitan licencia","obras con licencia","obra mayor","cuando hace falta licencia","necesitan licencia"],
-  a:"<p>Las que afectan a la seguridad o al aspecto del edificio:</p><p>• Tocar la <b>estructura</b>: muros de carga, vigas, forjados, cimientos.<br>• Cambiar la <b>fachada</b> o el <b>tejado</b>, o aislarlos por fuera.<br>• <b>Ampliar</b>, levantar una planta, poner un ascensor nuevo.<br>• <b>Construir</b> una casa o cambiar el uso de un local o un pajar a vivienda.<br>• Cualquier obra en un edificio <b>protegido</b> o en suelo rústico.</p>"},
- {cat:"permisos",q:"¿Qué diferencia hay entre declaración responsable y comunicación previa?",k:["comunicacion previa","diferencia con la comunicacion","aviso previo"],
-  a:"<p>Son muy parecidas. En la <b>comunicación previa</b> solo avisas de que vas a hacer la obra. En la <b>declaración responsable</b>, además, firmas que cumples las normas y que tienes los documentos que pide el ayuntamiento.</p><p>Según el municipio usan una u otra para las obras pequeñas; en la práctica funcionan casi igual.</p>"},
- {cat:"permisos",q:"¿Puedo empezar la obra el mismo día?",k:["mismo dia","empezar ya","cuando puedo empezar","empezar la obra","esperar para empezar"],
-  a:"<p>Con <b>declaración responsable</b>, en general sí: desde que la presentas con todos los documentos. Algunos ayuntamientos piden esperar unos días; lo pone en su formulario.</p><p>Con <b>licencia</b>, no: tienes que esperar a que te la concedan por escrito.</p>"},
- {cat:"permisos",q:"¿Cuánto tarda en llegar una licencia?",k:["cuanto tarda la licencia","dar la licencia","tarda el ayuntamiento","en dar la licencia","tarda una licencia","tardan en dar","plazo de la licencia","silencio"],
-  a:"<p>Suele tardar de <b>1 a 3 meses</b>, y más en ciudades grandes o si falta algún documento.</p><p>Ojo: en las obras importantes, si el ayuntamiento no contesta, normalmente <b>no</b> se entiende concedida. No empieces sin la licencia por escrito.</p>"},
- {cat:"permisos",q:"¿Cuánto cuesta la licencia o la declaración responsable?",k:["cuanto cuesta la licencia","precio de la licencia","tasa","icio","cuanto se paga","impuesto de obras"],
-  a:"<p>Pagas dos cosas al ayuntamiento:</p><p>• El <b>ICIO</b> (impuesto de construcciones), hasta el 4 % del presupuesto de la obra.<br>• Una <b>tasa</b> por tramitarla, que varía mucho según el municipio.</p><p>Si la obra es de eficiencia energética, renovables o accesibilidad, pide la <b>bonificación del ICIO</b>: puede llegar al 95 %.</p>"},
- {cat:"permisos",q:"¿Qué papeles lleva una declaración responsable?",k:["papeles de la declaracion","que lleva la declaracion","documentos de la declaracion","formulario","que tengo que presentar"],
-  a:"<p>Lo habitual es:</p><p>• El <b>formulario</b> del ayuntamiento, firmado.<br>• Una descripción de la obra y el <b>presupuesto</b>.<br>• Fotos del estado actual.<br>• El justificante de pago de la tasa y del ICIO.<br>• A veces, cómo vas a gestionar los escombros (y una fianza).</p><p>Si la obra lo necesita, también un documento técnico firmado.</p>"},
- {cat:"permisos",q:"¿Necesito arquitecto para pedir el permiso?",k:["necesito arquitecto","necesito un tecnico","necesito aparejador","proyecto para la licencia","firma de tecnico"],
-  a:"<p>Para una <b>declaración responsable</b> de obra pequeña, normalmente no.</p><p>Para una <b>licencia</b> con estructura, fachada, ampliación u obra nueva, sí: hace falta un <b>proyecto</b> firmado por un arquitecto o un arquitecto técnico. Para las ayudas, muchas veces también piden una memoria técnica.</p>"},
- {cat:"permisos",q:"¿Qué pasa si hago la obra sin permiso?",k:["sin permiso","sin licencia","ilegal","multa","me pillan","inspeccion","paralizar"],
-  a:"<p>Te pueden <b>multar</b>, <b>parar la obra</b> y obligarte a legalizarla o incluso a deshacerla. Además, <b>pierdes las ayudas</b>: casi todas piden la licencia o la declaración presentada.</p><p>Si ya la hiciste, pregunta en el ayuntamiento por la legalización: suele salir más barato que esperar a una inspección.</p>"},
- {cat:"permisos",q:"¿Y si me equivoco en la declaración responsable?",k:["me equivoco","equivoque","equivocado","equivocacion","error en la declaracion","mentir","falso","dato falso","responsabilidad"],
-  a:"<p>Lo que firmas es tu responsabilidad. Si el ayuntamiento revisa la obra y no coincide con lo declarado, puede pararla, pedirte que la ajustes y multarte.</p><p>Si te das cuenta de un error, presenta una nueva declaración corregida antes de seguir.</p>"},
- {cat:"permisos",q:"¿Necesito permiso para poner un contenedor o un andamio en la calle?",k:["contenedor","andamio","via publica","acera","escombros","cuba"],
-  a:"<p>Sí. Ocupar la acera o la calle con un contenedor, un andamio o material necesita un <b>permiso de ocupación de la vía pública</b>, con su tasa. Normalmente lo pide la empresa que hace la obra; pregúntale si lo incluye en el presupuesto.</p>"},
- {cat:"permisos",q:"¿Qué es la licencia de primera ocupación?",k:["primera ocupacion","cedula","habitabilidad","dar de alta la luz","contratar la luz"],
-  a:"<p>Cuando terminas una casa nueva, o cambias un local o un pajar a vivienda, el ayuntamiento comprueba que se ha hecho como en el proyecto y te da la <b>licencia o declaración de primera ocupación</b> (en algunas comunidades, cédula de habitabilidad).</p><p>Sin ella no puedes contratar la luz y el agua definitivas, ni escriturar o vender la casa como vivienda.</p>"},
- {cat:"permisos",q:"Además del ayuntamiento, ¿necesito permiso de la comunidad?",k:["permiso de la comunidad","permiso de los vecinos","elementos comunes","tocar la fachada","junta para la obra"],
-  a:"<p>Si la obra es solo dentro de tu piso y no toca la estructura, no. Necesitas el acuerdo de la junta si afecta a <b>elementos comunes</b> o a la imagen del edificio: fachada, tejado, patio, máquinas en la fachada, muros de carga.</p><p>Avisa siempre al administrador antes de empezar: evita problemas con el ruido y los horarios.</p>"},
- {cat:"permisos",q:"¿Qué diferencia hay entre licencia y declaración responsable?",k:["declaracion responsable","diferencia","comunicacion previa","licencia o","necesito permiso","sin licencia"],
-  a:"<p>• <b>Declaración responsable</b> o comunicación previa: presentas en el ayuntamiento un papel diciendo que cumples las normas y puedes empezar ya. Sirve para obras pequeñas: baño, cocina, ventanas, placas o aerotermia.</p><p>• <b>Licencia de obra</b>: tienes que esperar a que te la den. Hace falta si tocas estructura, fachada o tejado, si amplías o si construyes.</p><p>Cada ficha de ayuda te dice qué suele hacer falta.</p>"},
- {cat:"permisos",q:"¿Necesito licencia para la obra?",k:["licencia","permiso","declaracion responsable","obra menor","obra mayor","ayuntamiento"],
-  a:"<p>Casi siempre necesitas algo del ayuntamiento:</p><p>• <b>Declaración responsable o comunicación previa</b> para obras pequeñas (cocina, baño, suelos).<br>• <b>Licencia de obra</b> si tocas la estructura, la fachada o haces una ampliación.</p><p>Pagarás el ICIO (entre el 2 % y el 4 % del presupuesto) y una tasa. Pregunta por la bonificación si la obra es de eficiencia o accesibilidad.</p>"},
- {cat:"tramites",q:"¿Quién hace el proyecto o la memoria técnica?",k:["proyecto","memoria tecnica","arquitecto","aparejador","tecnico","ingeniero"],
-  a:"<p>Un arquitecto, un arquitecto técnico (aparejador) o un ingeniero, según la obra. Para las ayudas casi siempre hace falta una memoria o un proyecto firmado. En muchas convocatorias, sus honorarios también son subvencionables.</p>"},
- /* --- comunidad de vecinos --- */
- {cat:"comunidad",q:"¿Qué ayudas hay para mi comunidad de vecinos?",k:["comunidad de vecinos","mi comunidad de vecinos","ayudas para la comunidad","para comunidades","edificio de viviendas","bloque","mi edificio"],
-  a:"<p>Las más importantes son:</p><p>• <b>Plan Estatal de Vivienda 2026-2030</b>: rehabilitación, eficiencia y accesibilidad (hasta 13.000 € por vivienda, y 22.000 € en accesibilidad).<br>• <b>Programas de tu comunidad autónoma</b> y de tu ayuntamiento.<br>• <b>Deducción del 60 % en el IRPF</b> para cada propietario, si la obra mejora la eficiencia del edificio.</p>",act:()=>B('data-dest="edificio"',"Ayudas para comunidades")},
- {cat:"comunidad",q:"¿Qué mayoría hace falta para aprobar la obra?",k:["mayoria","votacion","votar","aprobar en junta","acuerdo de junta","quorum","cuantos votos"],
-  a:"<p>Depende de la obra (Ley de Propiedad Horizontal):</p><p>• <b>Eficiencia energética y rehabilitación con ayudas</b>: mayoría simple, si lo que paga cada vecino después de las ayudas no supera 12 cuotas ordinarias.<br>• <b>Placas solares comunes</b>: un tercio de propietarios y cuotas.<br>• <b>Ascensor y accesibilidad</b>: mayoría simple.<br>• <b>Reparaciones necesarias</b> de conservación: obligatorias, sin votación.</p><p>Tu administrador de fincas te confirmará el caso concreto.</p>"},
- {cat:"comunidad",q:"¿Es obligatorio poner el ascensor si lo pide un vecino mayor?",k:["obligatorio","vecino mayor","mayor de 70","discapacidad","obligar a la comunidad","no quieren ascensor","no quiere ascensor","no quiere poner el ascensor","mi madre","mi padre","abuel","80 anos","85 anos","90 anos"],
-  a:"<p>Sí, en muchos casos. Si lo pide un propietario (o alguien que vive en su casa) <b>mayor de 70 años o con discapacidad</b>, la comunidad está obligada a hacer las obras de accesibilidad, sin votación. Se aplica cuando lo que cuesta al año a cada vecino, después de las ayudas, no supera 12 cuotas ordinarias.</p><p>Si cuesta más, también es obligatorio cuando las ayudas públicas cubren al menos el 75 %.</p>",act:()=>B('data-tipo="accesibilidad"',"Ver ayudas de accesibilidad")},
- {cat:"comunidad",q:"¿Tienen que pagar el ascensor los bajos y los locales?",k:["pagar el ascensor","paga el ascensor","bajos","locales","primero","no usa el ascensor","exentos"],
-  a:"<p>En general, sí: los gastos se reparten <b>según la cuota de participación</b> de cada piso o local, aunque no use el ascensor. Solo se libran si los estatutos o un acuerdo de la junta lo dicen expresamente.</p>"},
- {cat:"comunidad",q:"¿Qué pasa si un vecino no quiere o no puede pagar?",k:["no quiere pagar","no puede pagar","moroso","no paga","vecino que no paga","derrama"],
-  a:"<p>Si la obra se aprobó correctamente, <b>todos los propietarios tienen que pagar</b> su parte, aunque hayan votado en contra (salvo las mejoras no necesarias más caras, de las que puede librarse quien vote en contra). La comunidad puede reclamarlo por vía judicial (proceso monitorio).</p><p>Para quien tenga pocos ingresos existen ayudas personales extra y préstamos para la comunidad. Pregunta antes de votar.</p>"},
- {cat:"comunidad",q:"¿Quién pide la ayuda en una comunidad?",k:["quien pide","quien solicita","presidente","administrador","representante","firma la solicitud"],
-  a:"<p>La pide la <b>comunidad de propietarios</b>, con su CIF. Normalmente la firma el presidente o el administrador de fincas, tras el acuerdo de la junta.</p><p>También puede hacerlo un <b>agente o gestor de la rehabilitación</b>: una empresa que tramita las ayudas y a veces adelanta el dinero.</p>"},
- {cat:"comunidad",q:"¿Qué es un agente rehabilitador?",k:["agente rehabilitador","gestor de la rehabilitacion","agente","adelanta","adelantar el dinero","cesion del cobro"],
-  a:"<p>Es una empresa o profesional que se encarga de todo: proyecto, solicitud, obra y justificación. Muchos <b>adelantan el dinero de la ayuda</b> y lo cobran después directamente de la Administración.</p><p>Antes de firmar, compara presupuestos y lee bien qué pasa si la ayuda no llega.</p>"},
- {cat:"comunidad",q:"¿Puede la comunidad pedir un préstamo para la obra?",k:["prestamo","financiacion","financiar","credito","banco","ico","aval"],
-  a:"<p>Sí. Las comunidades pueden pedir préstamos a nombre de la comunidad para rehabilitar, y el Estado ha creado líneas de aval del <b>ICO</b> para facilitarlos. Así cada vecino paga poco a poco con la cuota en lugar de una derrama grande.</p><p>El fondo de reserva también puede usarse para estas obras.</p>"},
- {cat:"comunidad",q:"¿Cómo funciona la deducción del 60 % para cada vecino?",k:["60","60 %","cada vecino","cada propietario","deduccion comunidad","irpf comunidad"],
-  a:"<p>Si la obra del edificio baja al menos un 30 % el consumo no renovable, o el edificio llega a la letra A o B, <b>cada propietario</b> puede deducir el 60 % de lo que pagó: hasta 5.000 € al año y 15.000 € en total, que se pueden repartir en varios años.</p><p>Pide a la comunidad un certificado con lo que ha pagado cada vecino.</p>",act:()=>B('data-go="irpf"',"Calcular")},
- {cat:"comunidad",q:"¿Cómo declaro en la Renta la ayuda que cobró la comunidad?",k:["declarar la ayuda de la comunidad","renta comunidad","imputar","cobro la comunidad","atribucion"],
-  a:"<p>La ayuda se reparte entre los vecinos según su cuota, y cada uno la declara en su Renta en el año de cobro (normalmente como ganancia patrimonial). Algunas ayudas a la rehabilitación están exentas.</p><p>El administrador suele dar a cada vecino un certificado con lo que le corresponde.</p>"},
- {cat:"comunidad",q:"¿Cómo se ponen placas solares en una comunidad?",k:["placas en la comunidad","autoconsumo colectivo","placas comunidad","tejado comun","azotea","reparto de energia"],
-  a:"<p>Se hace <b>autoconsumo colectivo</b>: se instalan en la cubierta y la energía se reparte entre los vecinos que se apunten. Se aprueba con un tercio de los votos y solo pagan los que participan.</p><p>Tiene ayudas autonómicas, rebaja del IBI en muchos municipios y puede entrar en el IRPF.</p>",act:()=>B('data-tipo="solar"',"Ver ayudas solares")},
- {cat:"comunidad",q:"¿Puedo poner un cargador del coche en el garaje comunitario?",k:["garaje","plaza de garaje","cargador en el garaje","recarga en el garaje","parking"],
-  a:"<p>Sí, y <b>no necesitas votación</b>: basta con comunicarlo por escrito a la comunidad. Tú pagas la instalación y el consumo, que va con un contador propio.</p>"},
- {cat:"comunidad",q:"Quiero cambiar solo mis ventanas: ¿necesito permiso de la comunidad?",k:["mis ventanas","solo mi piso","solo mis ventanas","cambiar ventanas en un piso","estetica de la fachada","color de la ventana"],
-  a:"<p>Si mantienes el mismo aspecto exterior (color, despiece y material parecido), normalmente basta con avisar. Si cambia la imagen de la fachada, necesitas el acuerdo de la junta.</p><p>Es una obra individual: puede entrar en el <b>20 % o el 40 %</b> del IRPF con tus certificados energéticos.</p>",act:()=>B('data-go="irpf"',"Calcular")},
- {cat:"comunidad",q:"¿Cuánto tarda todo el proceso en una comunidad?",k:["cuanto tarda la comunidad","proceso","pasos en la comunidad","por donde empiezo","como empezar","calendario"],
-  a:"<p>Suele llevar de <b>1 a 2 años</b>:</p><p>1) Informe del edificio y certificado energético (1-2 meses).<br>2) Junta y aprobación (1-2 meses).<br>3) Proyecto y licencia (2-4 meses).<br>4) Solicitud y resolución (3-6 meses).<br>5) Obra (3-9 meses).<br>6) Justificación y cobro.</p>",act:()=>B('data-go="solicitud"',"Abrir asistente")},
- {cat:"comunidad",q:"¿Los inquilinos pueden votar o pedir ayudas?",k:["inquilino vota","inquilinos votan","puedo votar","inquilino puedo votar","alquilado en la comunidad","no soy propietario"],
-  a:"<p>No votan en la junta: vota el propietario. Pero sí cuentan para la obligación de accesibilidad (si vive en el piso una persona mayor de 70 años o con discapacidad) y pueden tener ayudas personales según la convocatoria.</p>"},
- {cat:"comunidad",q:"¿Cuentan los locales comerciales del edificio?",k:["local comercial","locales del edificio","tienda en el bajo","uso residencial","70 %"],
-  a:"<p>Para las ayudas de rehabilitación residencial, el edificio suele tener que destinar a vivienda al menos un <b>70 % de su superficie</b>. Los locales pagan su parte de la obra según su cuota. La parte subvencionada para ellos puede ser menor o ninguna.</p>"},
- {cat:"tramites",q:"¿Qué pasa si no justifico la ayuda a tiempo?",k:["justificar","justificacion","reintegro","devolver","perder la ayuda"],
-  a:"<p>Puedes <b>perder la ayuda</b> o tener que devolverla con intereses. Apunta la fecha límite en cuanto te la concedan y guarda facturas, justificantes de pago, fotos de antes y después y el certificado final.</p>",act:()=>B('data-go="avisos"',"Ver mis plazos")}
-];
-const CATS={casa:"Dentro de casa",exterior:"Tejado, fachada y jardín",energia:"Energía y calefacción",campo:"Casa de campo",comunidad:"Comunidad de vecinos",permisos:"Licencias y permisos",tramites:"Trámites y dinero"};
-const CAT0=["tramites","tramites","energia","casa","energia","energia","casa","tramites","tramites","tramites","tramites","campo","tramites","tramites","tramites","tramites","tramites","tramites"];
-FAQ.forEach((f,i)=>{if(!f.cat)f.cat=CAT0[i]||"tramites"});
+// Las preguntas del asistente están en data/preguntas.json (las comparten la app y las páginas de preguntas frecuentes).
+let FAQ=[], CATS={};
 const topics=()=>`<div class="sugg">${Object.entries(CATS).map(([k,v])=>`<button data-topic="${k}" style="border-color:var(--ink);color:var(--ink)">${v} (${FAQ.filter(f=>f.cat===k).length})</button>`).join("")}</div>`;
 const GREET=["hola","buenas","hey","buenos dias","buenas tardes"], THANKS=["gracias","genial","perfecto","vale"];
 const chatLog=$("#chat-log"); const asked=new Set();
@@ -1256,7 +1062,7 @@ function addMsg(who,html){const d=document.createElement("div");d.className="msg
 function suggest(n=3,cat){let rest=FAQ.map((f,i)=>i).filter(i=>!asked.has(i));if(!rest.length)rest=FAQ.map((f,i)=>i);
   const same=cat?rest.filter(i=>FAQ[i].cat===cat):[];const pick=[...same,...rest.filter(i=>!same.includes(i))].slice(0,n);
   return `<div class="sugg">${pick.map(i=>`<button data-ask="${i}">${FAQ[i].q}</button>`).join("")}<button data-topics="1" style="border-color:var(--ink);color:var(--ink)">Ver todos los temas</button></div>`}
-function answer(i){const f=FAQ[i];asked.add(i);addMsg("bot",f.a.replace("${S.ccaa}",esc(locLong()))+(f.act?`<div class="frow" style="margin-top:8px">${f.act()}</div>`:"")+`<p class="muted" style="font-size:.78rem;margin-top:8px">Otras dudas:</p>${suggest(3,f.cat)}`)}
+function answer(i){const f=FAQ[i];asked.add(i);addMsg("bot",f.a.replace("${S.ccaa}",esc(locLong()))+(f.act?`<div class="frow" style="margin-top:8px">${f.act}</div>`:"")+`<p class="muted" style="font-size:.78rem;margin-top:8px">Otras dudas:</p>${suggest(3,f.cat)}`)}
 function match(t){const n=norm(t);let best=-1,score=0;FAQ.forEach((f,i)=>{const sc=f.k.filter(k=>n.includes(k)).reduce((a,k)=>a+k.length,0);if(sc>score){score=sc;best=i}});return best}
 function ask(t){addMsg("me",esc(t));const n=norm(t);
   setTimeout(()=>{
@@ -1315,11 +1121,16 @@ $("#btn-install").onclick=async()=>{
 async function cargarDatos(){
   try{const r=await fetch("data/ayudas.json",{cache:"no-cache"});const d=await r.json();AIDS=d.ayudas||[];META={actualizado:d.actualizado}}
   catch(e){toast("No hemos podido cargar las ayudas. Revisa tu conexión.")}
+  try{const r=await fetch("data/preguntas.json",{cache:"no-cache"});const d=await r.json();FAQ=d.preguntas||[];CATS=d.categorias||{}}
+  catch(e){}
 }
 cargarDatos().then(()=>{
   const h=(location.hash||"#inicio").slice(1);
   go(h);
-  if(LEGAL[h])openLegal(h);
+  const qs=new URLSearchParams(location.search);
+  if(qs.get("ayuda")&&AIDS.some(a=>a.id===qs.get("ayuda"))){onbShown=true;openDrawer(qs.get("ayuda"))}
+  else if(qs.has("pregunta")&&FAQ[+qs.get("pregunta")]){onbShown=true;openChat();answer(+qs.get("pregunta"))}
+  else if(LEGAL[h])openLegal(h);
   else if(!S.perfil&&!store.get("onbskip",false)&&!onbShown)openOnb();
 });
 if("serviceWorker" in navigator)window.addEventListener("load",()=>navigator.serviceWorker.register("sw.js").catch(()=>{}));

@@ -1,3 +1,8 @@
 revision/resumen.md
 __pycache__/
 .DS_Store
+web/ayudas/
+web/subvenciones/
+web/preguntas/
+web/llms.txt
+web/sitemap.xml

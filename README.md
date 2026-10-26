@@ -89,10 +89,31 @@ Para corregir una ayuda ya publicada, edita directamente `web/data/ayudas.json`.
 
 ---
 
-## 3. Probarla en tu ordenador
+## 3. Páginas para Google y las inteligencias artificiales
+
+La app vive en una sola página que se rellena con JavaScript. Para que Google y las IA (ChatGPT, Claude, Perplexity…) encuentren cada ayuda, en cada publicación `scripts/generar_paginas.py` crea páginas con el texto ya escrito:
+
+| Dirección | Contenido |
+|---|---|
+| `/ayudas/<nombre>/` | Una página por ayuda: importe, plazo, requisitos, documentos, permiso de obra y enlace oficial |
+| `/subvenciones/` | Todas las ayudas, con enlaces por tipo de obra y por comunidad |
+| `/subvenciones/<tipo>/` | Por tipo de obra (placas solares, ventanas…) |
+| `/subvenciones/<comunidad>/` | Por comunidad autónoma, y por tipo dentro de ella |
+| `/preguntas/` | Las preguntas del asistente (salen de `web/data/preguntas.json`) |
+| `/llms.txt` | Resumen de la web para inteligencias artificiales |
+| `/sitemap.xml` | Todas las direcciones, para Google |
+
+No se guardan en el repositorio: se regeneran siempre a partir de `web/data/`. Las páginas sin contenido propio (por ejemplo, una comunidad sin ayudas autonómicas todavía) llevan «no indexar» para que Google no las vea como repetidas.
+
+Cada página tiene un botón que abre la app directamente en esa ayuda (`/?ayuda=<id>`) o en esa pregunta (`/?pregunta=<n>`).
+
+Para cambiar o añadir preguntas del asistente, edita `web/data/preguntas.json`.
+
+## 4. Probarla en tu ordenador
 
 ```bash
 cd web
+python3 ../scripts/generar_paginas.py   # opcional: crea las páginas para Google
 python3 -m http.server 8000
 # abre http://localhost:8000
 ```
@@ -107,7 +128,7 @@ python3 scripts/validar.py
 
 ---
 
-## 4. Pendiente antes del lanzamiento
+## 5. Pendiente antes del lanzamiento
 
 - [x] Registrar `reformayuda.es` y conectarlo (apartado 1.3).
 - [x] Datos del titular y email de contacto en los textos legales.
@@ -116,7 +137,7 @@ python3 scripts/validar.py
 - [ ] Que un abogado o gestor revise los textos legales y las respuestas del chat sobre leyes (propiedad horizontal, licencias).
 - [ ] Publicar en Google Play: ver `docs/google-play.md`.
 
-## 5. Qué no hace todavía
+## 6. Qué no hace todavía
 
 - **Boletines autonómicos y provinciales:** se cubren a través de la BDNS, donde las administraciones registran sus convocatorias. Leer cada boletín directamente es una mejora futura.
 - **Notificaciones con la app cerrada:** los avisos salen al abrir la app y en el calendario del usuario. Las notificaciones push necesitan un pequeño servidor.

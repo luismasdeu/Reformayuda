@@ -1,0 +1,44 @@
+/* Estilos de las páginas estáticas (ayudas, listados y preguntas). Mismos colores y letras que la app. */
+@font-face{font-family:"Bricolage Grotesque";src:url(/fonts/bricolage-grotesque.woff2) format("woff2");font-weight:200 800;font-display:swap}
+@font-face{font-family:"Nunito Sans";src:url(/fonts/nunito-sans.woff2) format("woff2");font-weight:200 1000;font-display:swap}
+:root{--bg:#F3F7F5;--surface:#fff;--ink:#11302A;--muted:#55706A;--line:#D5E2DC;--brand:#0D7A63;--brand-ink:#fff;--sun:#FFC23D;--coral:#FF6B4A;--ok:#1E9E5A;--ok-bg:#DDF4E6;--warn:#B87500;--warn-bg:#FFF1CC;--bad:#D9472B;--bad-bg:#FFE2DA;color-scheme:light}
+@media (prefers-color-scheme:dark){:root{--bg:#0E1A17;--surface:#16251F;--ink:#E6F2EE;--muted:#9DB8B0;--line:#2A3F38;--brand:#33C29E;--brand-ink:#06201A;--ok:#4CD38A;--ok-bg:#163A28;--warn:#F2B33D;--warn-bg:#3A2F12;--bad:#FF7A5C;--bad-bg:#3D1F18;color-scheme:dark}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 "Nunito Sans",system-ui,sans-serif}
+a{color:var(--brand)}
+h1,h2,h3{font-family:"Bricolage Grotesque",system-ui,sans-serif;line-height:1.2;text-wrap:balance}
+h1{font-size:clamp(1.7rem,5vw,2.4rem);margin:.3em 0}
+h2{font-size:1.35rem;margin:1.6em 0 .5em}
+h3{font-size:1.05rem;margin:0}
+.wrap{max-width:820px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+header.top{background:var(--surface);border-bottom:1px solid var(--line)}
+header.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-block:10px}
+.logo{display:flex;align-items:center;gap:8px;text-decoration:none;color:var(--ink);font-family:"Bricolage Grotesque",sans-serif;font-weight:800;font-size:1.25rem}
+.logo img{border-radius:9px}.logo b{color:var(--coral)}
+.btn{display:inline-block;background:var(--brand);color:var(--brand-ink);text-decoration:none;font-weight:800;padding:9px 16px;border-radius:12px;margin:4px 6px 4px 0}
+.btn.alt{background:var(--surface);color:var(--ink);border:1.5px solid var(--line)}
+.btn.grande{padding:12px 20px}
+main{padding-block:12px 40px}
+.migas{font-size:.85rem;color:var(--muted);margin:10px 0}.migas a{color:var(--muted)}
+.eyebrow{font-size:.75rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0}
+.lead{font-size:1.1rem;max-width:65ch}
+.tabla{overflow-x:auto;margin:18px 0}
+table{border-collapse:collapse;width:100%;background:var(--surface);border-radius:14px;overflow:hidden}
+th,td{text-align:left;padding:10px 14px;border-bottom:1px solid var(--line);vertical-align:top}
+th{width:38%;color:var(--muted);font-weight:700}
+ul,ol{padding-left:22px}li{margin:4px 0}
+.ayudas{list-style:none;padding:0;display:grid;gap:12px}
+.ayuda{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:14px 16px;margin:0}
+.ayuda a{text-decoration:none;color:var(--ink)}.ayuda a:hover h3{color:var(--brand)}
+.ayuda p{margin:4px 0}.org{color:var(--muted);font-size:.9rem}
+.estado{font-weight:700}.estado.abierta{color:var(--ok)}.estado.proxima{color:var(--warn)}.estado.cerrada{color:var(--bad)}
+.chip{background:var(--ink);color:var(--bg);border-radius:999px;padding:1px 9px;font-size:.78rem;font-weight:800}
+.enlaces{list-style:none;padding:0;display:flex;flex-wrap:wrap;gap:8px}
+.enlaces a{display:inline-block;background:var(--surface);border:1.5px solid var(--line);border-radius:999px;padding:6px 12px;text-decoration:none;font-weight:700}
+.pregunta{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:14px 16px;margin:10px 0}
+.pregunta p{margin:.5em 0}.pregunta .btn{display:none}
+.alerta{background:var(--bad-bg);border-radius:12px;padding:10px 14px}
+.nota,.vacio{color:var(--muted);font-size:.9rem}
+.aviso{margin-top:32px;padding:12px 14px;border-radius:12px;background:var(--warn-bg);font-size:.9rem}
+footer.pie{border-top:1px solid var(--line);color:var(--muted);font-size:.9rem}
+footer.pie .wrap{padding-block:18px}

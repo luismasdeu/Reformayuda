@@ -38,6 +38,9 @@ jobs:
       - name: Comprobar que las ayudas están bien escritas
         run: python scripts/validar.py
 
+      - name: Generar las páginas para Google y las inteligencias artificiales
+        run: python scripts/generar_paginas.py
+
       - name: Guardar los cambios
         run: |
           git config user.name "reformayuda-bot"
