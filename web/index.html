@@ -3,7 +3,18 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="description" content="Encuentra las ayudas y subvenciones para reformar o construir tu casa, prepara la solicitud y calcula la deducción del IRPF. Gratis y sin registro.">
+<meta name="description" content="Buscador de ayudas y subvenciones para reformar, rehabilitar o construir tu casa en España: estatales, de tu comunidad, tu diputación y tu ayuntamiento. Calcula la deducción del IRPF. Gratis y sin registro.">
+<link rel="canonical" href="https://reformayuda.es/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://reformayuda.es/">
+<meta property="og:title" content="Reformayuda · Ayudas y subvenciones para reformar tu casa">
+<meta property="og:description" content="Encuentra las subvenciones para tu obra, comprueba si cumples los requisitos y calcula cuánto te desgrava en el IRPF. Gratis y sin registro.">
+<meta property="og:image" content="https://reformayuda.es/og.png">
+<meta property="og:locale" content="es_ES">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"Reformayuda","url":"https://reformayuda.es/","applicationCategory":"FinanceApplication","operatingSystem":"Android, iOS, Web","inLanguage":"es","isAccessibleForFree":true,"offers":{"@type":"Offer","price":"0","priceCurrency":"EUR"},"description":"Buscador de ayudas y subvenciones para reformar, rehabilitar o construir vivienda en España, con calculadora de la deducción del IRPF por eficiencia energética."}
+</script>
 <meta name="theme-color" content="#0D7A63">
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
@@ -15,7 +26,7 @@ body{margin:0;font:14px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif
 img{max-width:100%}
 [hidden]{display:none!important}
 </style>
-<title>Reformayuda</title>
+<title>Reformayuda · Ayudas y subvenciones para reformar tu casa</title>
 <link rel="preload" href="fonts/nunito-sans.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="fonts/bricolage-grotesque.woff2" as="font" type="font/woff2" crossorigin>
 <style>
@@ -328,11 +339,11 @@ button.loc{font:inherit;font-weight:700;color:var(--ink);cursor:pointer;padding:
   <div id="home-alerts"></div>
   <div class="hero">
     <div class="hero-main">
-      <span class="eyebrow" style="color:inherit;opacity:.85">Ayudas para reformar o construir tu casa</span>
+      <span class="eyebrow" style="color:inherit;opacity:.85">Ayudas y subvenciones para reformar o construir tu casa</span>
       <h1>Encuentra tu subvención y pídela sin perderte en el BOE</h1>
       <form class="search" id="hero-search" role="search">
         <svg class="ico" style="color:var(--muted)"><use href="#i-search"/></svg>
-        <input id="hero-q" placeholder="Ventanas, ascensor, placas solares…" aria-label="Buscar ayudas">
+        <input id="hero-q" placeholder="Subvenciones para ventanas, ascensor…" aria-label="Buscar ayudas y subvenciones">
         <button class="btn brand" type="submit">Buscar</button>
       </form>
       <span style="display:flex;gap:8px;align-items:center;font-weight:700;font-size:.9rem">✓ Sin registro ni email. Busca, compara y calcula gratis.</span>
@@ -359,11 +370,11 @@ button.loc{font:inherit;font-weight:700;color:var(--ink);cursor:pointer;padding:
 
 <!-- AYUDAS -->
 <section class="view" id="v-ayudas" hidden>
-  <div class="row-head"><h1 style="font-size:1.9rem">Ayudas para tu obra</h1><span class="muted" id="res-count"></span></div>
+  <div class="row-head"><h1 style="font-size:1.9rem">Ayudas y subvenciones para tu obra</h1><span class="muted" id="res-count"></span></div>
   <div class="filters">
     <div class="search" style="box-shadow:none;border:1.5px solid var(--line);background:var(--bg)">
       <svg class="ico" style="color:var(--muted)"><use href="#i-search"/></svg>
-      <input id="q" placeholder="Busca por palabra: aislamiento, rampa, aerotermia…" aria-label="Buscar">
+      <input id="q" placeholder="Busca ayudas o subvenciones: aislamiento, rampa, aerotermia…" aria-label="Buscar ayudas y subvenciones">
     </div>
     <div class="frow"><span class="flabel">Obra</span><div class="frow" id="f-tipo"></div></div>
     <div class="frow"><span class="flabel">Estado</span><div class="frow" id="f-estado"></div></div>
@@ -750,12 +761,21 @@ function pills(el,opts,isOn,onClick){
   el.querySelectorAll(".pill").forEach(b=>b.onclick=()=>{onClick(b.dataset.k);renderList()});
 }
 const norm=s=>s.toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g,"");
+// Buscador: ignora palabras genéricas («ayuda», «subvención», «para mi casa»…) y busca por la raíz de cada palabra.
+const STOP=new Set("ayuda ayudas subvencion subvenciones subsidio subsidios bonificacion bonificaciones dinero quiero busco buscar hay para por de del la el los las lo un una unos unas mi mis tu en y o a al con que como cual cuales obra obras casa casas hogar piso pisos vivienda viviendas me se es".split(" "));
+const SYN={placa:"solar",panel:"solar",fotov:"solar",autoc:"solar",calde:"aerot",calef:"aerot",bomba:"aerot",clima:"aerot",aisla:"efici",termi:"efici",ahorr:"efici",rampa:"acces",silla:"acces",mayor:"acces",escal:"acces",tejad:"cubie",facha:"rehab",refor:"rehab",arreg:"rehab",nueva:"const"};
+const stem=w=>w.length>5?w.slice(0,5):w;
+function searchTerms(q){return norm(q||"").split(/[^a-z0-9ñ]+/).filter(w=>w.length>2&&!STOP.has(w)).map(stem)}
+function searchScore(a,terms){
+  const t=norm([a.title,a.org,a.resumen,a.req.join(" "),a.tipo.map(x=>TIPOS[x].l+" "+x).join(" "),a.ccaa,a.prov||"",a.muni||""].join(" "));
+  return terms.reduce((n,w)=>n+(t.includes(w)||(SYN[w]&&t.includes(SYN[w]))?1:0),0);
+}
 function renderList(){
   pills($("#f-tipo"),Object.entries(TIPOS).map(([k,v])=>[k,v.n,true]),k=>S.tipos.has(k),k=>S.tipos.has(k)?S.tipos.delete(k):S.tipos.add(k));
   pills($("#f-ambito"),[["todas","Todos"],["estatal","Estatal"],["autonomica","Comunidad"],["provincial","Provincia"],["municipal","Ayuntamiento"]],k=>S.ambito===k,k=>S.ambito=k);
   pills($("#f-estado"),[["activas","Abiertas"],["proximas","Próximas"],["todas","Todas"]],k=>S.estado===k,k=>S.estado=k);
   pills($("#f-dest"),[["todas","Todo"],["vivienda","Mi vivienda"],["edificio","Mi comunidad de vecinos"]],k=>S.dest===k,k=>S.dest=k);
-  const q=norm(S.q);
+  const terms=searchTerms(S.q);
   let r=AIDS.filter(inZone).filter(a=>{
     const st=status(a).k;
     if(S.estado==="activas"&&st!=="abierta")return false;
@@ -763,9 +783,10 @@ function renderList(){
     if(S.ambito!=="todas"&&a.scope!==S.ambito)return false;
     if(S.tipos.size&&!a.tipo.some(t=>S.tipos.has(t)))return false;
     if(S.dest!=="todas"&&!a.dest.includes(S.dest))return false;
-    if(q&&!norm([a.title,a.org,a.resumen,a.req.join(" "),a.tipo.map(t=>TIPOS[t].l).join(" ")].join(" ")).includes(q))return false;
+    if(terms.length&&!searchScore(a,terms))return false;
     return true});
   const rank={municipal:0,provincial:1,autonomica:2,estatal:3};
+  if(terms.length){r.sort((a,b)=>searchScore(b,terms)-searchScore(a,terms));}
   const byPlazo=(a,b)=>(a.cierra?days(a.cierra):9999)-(b.cierra?days(b.cierra):9999);
   r.sort(S.sort==="fit"?(a,b)=>fit(b)-fit(a)||byPlazo(a,b):S.sort==="importe"?(a,b)=>b.importe-a.importe:S.sort==="ambito"?(a,b)=>rank[a.scope]-rank[b.scope]:(a,b)=>(a.cierra?days(a.cierra):9999)-(b.cierra?days(b.cierra):9999));
   $("#res-count").textContent=`${r.length} ${r.length===1?"ayuda":"ayudas"} en ${locLong()}`;

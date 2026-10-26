@@ -1,7 +1,7 @@
 {
   "name": "Reformayuda",
   "short_name": "Reformayuda",
-  "description": "Ayudas y subvenciones para reformar o construir tu casa. Gratis y sin registro.",
+  "description": "Buscador de ayudas y subvenciones para reformar o construir tu casa. Gratis y sin registro.",
   "lang": "es",
   "start_url": "./?origen=app",
   "scope": "./",

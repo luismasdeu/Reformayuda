@@ -1,8 +1,8 @@
 # Ficha de Google Play: textos listos para copiar
 
-## Nombre de la app (28/30)
+## Nombre de la app (30/30)
 ```
-Reformayuda: ayudas vivienda
+Reformayuda: subvenciones casa
 ```
 
 ## Descripción breve (79/80)
@@ -14,7 +14,7 @@ Ayudas y subvenciones para reformar o construir tu casa. Gratis y sin registro.
 ```
 Reformayuda no es una app oficial ni está vinculada a ninguna administración pública. La información procede de fuentes oficiales (BOE, Base de Datos Nacional de Subvenciones, boletines autonómicos y provinciales y Agencia Tributaria), con enlace a la convocatoria original en cada ayuda.
 
-¿Vas a reformar o construir tu casa? Reformayuda te dice qué ayudas hay para tu obra, si cumples los requisitos y cómo pedirlas, sin perderte en el BOE.
+¿Vas a reformar o construir tu casa? Reformayuda es un buscador de ayudas y subvenciones para vivienda: te dice qué ayudas hay para tu obra, si cumples los requisitos y cómo pedirlas, sin perderte en el BOE.
 
 QUÉ PUEDES HACER
 • Buscar ayudas por tipo de obra: aislamiento, ventanas, placas solares, aerotermia, ascensor y accesibilidad, rehabilitación o construcción.
