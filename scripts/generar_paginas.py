@@ -115,7 +115,9 @@ def pagina(ruta, titulo, descripcion, cuerpo, migas, jsonld=None, indexar=True):
 <meta property="og:image" content="{DOMINIO}/og.png">
 <meta property="og:locale" content="es_ES">
 <meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
 <link rel="icon" href="/icons/icon.svg" type="image/svg+xml">
+<link rel="icon" href="/icons/icon-96.png" type="image/png" sizes="96x96">
 <link rel="manifest" href="/manifest.webmanifest">
 <link rel="stylesheet" href="/estatico.css">
 <script type="application/ld+json">{json.dumps(datos, ensure_ascii=False)}</script>
