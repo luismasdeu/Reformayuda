@@ -134,7 +134,7 @@ def pagina(ruta, titulo, descripcion, cuerpo, migas, jsonld=None, indexar=True):
 </main>
 <footer class="pie"><div class="wrap">
   <p><b>Reformayuda</b> · Buscador gratuito de ayudas y subvenciones para reformar o construir tu casa. Sin registro y sin anuncios. Contacto: <a href="mailto:contacto@reformayuda.es">contacto@reformayuda.es</a></p>
-  <p><a href="/subvenciones/">Todas las ayudas</a> · <a href="/preguntas/">Preguntas frecuentes</a> · <a href="/#aviso">Aviso legal</a> · <a href="/#privacidad">Privacidad</a> · <a href="/#cookies">Cookies</a></p>
+  <p><a href="/subvenciones/">Todas las ayudas</a> · <a href="/preguntas/">Preguntas frecuentes</a> · <a href="/que-es-reformayuda/">Qué es Reformayuda</a> · <a href="/#aviso">Aviso legal</a> · <a href="/#privacidad">Privacidad</a> · <a href="/#cookies">Cookies</a></p>
 </div></footer>
 </body>
 </html>
@@ -250,6 +250,41 @@ def pagina_preguntas(faq):
                   cuerpo, [("Inicio", "/"), ("Preguntas frecuentes", "/preguntas/")], ld)
 
 
+def pagina_que_es(ayudas, faq):
+    cuerpo = f"""<h1>¿Qué es Reformayuda?</h1>
+<p class="lead"><b>Reformayuda</b> es un buscador gratuito y sin registro de <b>ayudas y subvenciones públicas para reformar, rehabilitar o construir vivienda en España</b>.</p>
+<h2>Qué hace</h2>
+<ul>
+<li>Reúne las ayudas del Estado, de las comunidades autónomas, de las diputaciones y de los ayuntamientos para obras en viviendas y edificios: aislamiento, ventanas, placas solares, aerotermia, ascensores y accesibilidad, rehabilitación y construcción.</li>
+<li>Explica en lenguaje sencillo quién puede pedir cada ayuda, cuánto da, hasta cuándo y qué documentos hacen falta, con enlace a la convocatoria oficial.</li>
+<li>Filtra por comunidad, provincia, municipio y tamaño del pueblo, por tipo de obra y por edad.</li>
+<li>Calcula la deducción del IRPF por obras de mejora de la eficiencia energética (20 %, 40 % y 60 %).</li>
+<li>Indica si una obra suele necesitar licencia o basta con declaración responsable.</li>
+<li>Avisa de los plazos y permite añadirlos al calendario.</li>
+<li>Responde {len(faq['preguntas'])} preguntas frecuentes sobre subvenciones, impuestos, licencias, comunidades de vecinos y casas de campo.</li>
+</ul>
+<h2>Qué no es</h2>
+<ul>
+<li><b>No es una empresa de reformas</b> ni un <b>directorio de profesionales</b>: no pone en contacto con empresas ni pide presupuestos.</li>
+<li><b>No es un organismo oficial</b> ni está vinculada a ninguna administración.</li>
+<li><b>No presenta solicitudes</b> en nombre de nadie: lleva a la sede oficial para que cada persona la presente.</li>
+</ul>
+<h2>De dónde salen los datos</h2>
+<p>Cada día se revisan el Boletín Oficial del Estado (BOE) y la Base de Datos Nacional de Subvenciones (BDNS), donde las administraciones publican sus convocatorias. Cada ayuda se comprueba antes de publicarla y enlaza a su fuente oficial. Ahora mismo hay {len(ayudas)} ayudas publicadas.</p>
+<h2>Cómo se usa</h2>
+<p>Es gratis, sin registro, sin anuncios y sin recoger datos personales: todo se guarda en el propio dispositivo. Funciona en el navegador y se puede instalar como app en el móvil.</p>
+<p><a class="btn grande" href="/">Abrir Reformayuda</a> <a class="btn alt" href="/subvenciones/">Ver todas las ayudas</a></p>
+<h2>Quién está detrás</h2>
+<p>Reformayuda es un proyecto personal de Luis Eduardo Masdeu Cano. Contacto: <a href="mailto:contacto@reformayuda.es">contacto@reformayuda.es</a>.</p>"""
+    ld = {"@context": "https://schema.org", "@type": "AboutPage", "name": "Qué es Reformayuda", "url": f"{DOMINIO}/que-es-reformayuda/",
+          "about": {"@type": "WebApplication", "name": "Reformayuda", "url": f"{DOMINIO}/", "applicationCategory": "FinanceApplication",
+                    "isAccessibleForFree": True, "description": "Buscador gratuito de ayudas y subvenciones públicas para reformar, rehabilitar o construir vivienda en España. No es una empresa de reformas ni un directorio de profesionales."}}
+    return pagina("/que-es-reformayuda/", "¿Qué es Reformayuda? Buscador gratuito de ayudas y subvenciones para tu casa",
+                  "Reformayuda es un buscador gratuito y sin registro de ayudas y subvenciones públicas para reformar, rehabilitar o "
+                  "construir vivienda en España. No es una empresa de reformas ni un directorio de profesionales.",
+                  cuerpo, [("Inicio", "/"), ("Qué es Reformayuda", "/que-es-reformayuda/")], ld)
+
+
 def llms_txt(ayudas, faq, rutas_tipo, rutas_ccaa):
     abiertas = [a for a in ayudas if estado(a)[0] != "cerrada"]
     lineas = ["# Reformayuda", "",
@@ -259,6 +294,7 @@ def llms_txt(ayudas, faq, rutas_tipo, rutas_ccaa):
               "Las convocatorias se revisan cada día a partir del BOE y la Base de Datos Nacional de Subvenciones.", "",
               AVISO, "",
               "## Páginas principales", "",
+              f"- [Qué es Reformayuda]({DOMINIO}/que-es-reformayuda/): qué hace y qué no hace (no es una empresa de reformas ni un directorio de profesionales)",
               f"- [App de Reformayuda]({DOMINIO}/): buscador, asistente de solicitud, calculadora del IRPF y avisos de plazos",
               f"- [Todas las ayudas]({DOMINIO}/subvenciones/): listado con importes y plazos",
               f"- [Preguntas frecuentes]({DOMINIO}/preguntas/): {len(faq['preguntas'])} respuestas sobre subvenciones, IRPF, licencias y comunidades", "",
@@ -283,7 +319,7 @@ def main():
     datos = json.loads((WEB / "data" / "ayudas.json").read_text(encoding="utf-8"))
     faq = json.loads((WEB / "data" / "preguntas.json").read_text(encoding="utf-8"))
     ayudas = datos["ayudas"]
-    for carpeta in ("ayudas", "subvenciones", "preguntas"):
+    for carpeta in ("ayudas", "subvenciones", "preguntas", "que-es-reformayuda"):
         shutil.rmtree(WEB / carpeta, ignore_errors=True)
 
     usadas = set()
@@ -343,6 +379,7 @@ def main():
                                 ayudas, [("Inicio", "/"), ("Ayudas", "/subvenciones/")],
                                 enlaces_tipos("/subvenciones/") + enlaces_ccaa))
     rutas.append(pagina_preguntas(faq))
+    rutas.append(pagina_que_es(ayudas, faq))
 
     llms_txt(ayudas, faq, rutas_tipo, rutas_ccaa)
     rutas = [r for r in rutas if r]
