@@ -1,6 +1,6 @@
 {
  "_leeme": "Ayudas detectadas automáticamente en los boletines. Revísalas: pon \"estado\": \"aprobada\" o \"descartada\". Mira README.md.",
- "ultima_busqueda": "2026-10-26T05:49",
+ "ultima_busqueda": "2026-10-27T05:46",
  "candidatas": [
   {
    "id": "bdns-934548",
@@ -982,6 +982,92 @@
    },
    "prov": "Huelva",
    "muni": "Almendro, El"
+  },
+  {
+   "id": "bdns-937771",
+   "estado": "pendiente",
+   "title": "Resolución de Alcaldía nº 387/2026 de fecha 23/10/2026 por la que se convocan Ayudas para la redacción de proyectos de autoconstrucción de primera vivienda del ",
+   "org": "BARLOVENTO · AYUNTAMIENTO DE BARLOVENTO",
+   "scope": "municipal",
+   "ccaa": "Canarias",
+   "tipo": [
+    "rehabilitacion"
+   ],
+   "dest": [
+    "vivienda"
+   ],
+   "importe": 0,
+   "imp": "Consulta la convocatoria",
+   "abre": "2026-10-26",
+   "cierra": null,
+   "plazo": "Consulta el plazo en la convocatoria",
+   "irpf": false,
+   "fuente": "BDNS nº 937771",
+   "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/937771",
+   "resumen": "Resolución de Alcaldía nº 387/2026 de fecha 23/10/2026 por la que se convocan Ayudas para la redacción de proyectos de autoconstrucción de primera vivienda del Ilustre Ayuntamiento de Barlovento. Anualidad 2026.",
+   "req": [
+    "Consulta los requisitos en la convocatoria oficial"
+   ],
+   "docs": [
+    "Consulta la documentación en la convocatoria oficial"
+   ],
+   "pasos": [
+    "Lee la convocatoria oficial",
+    "Prepara la documentación",
+    "Presenta la solicitud en la sede del organismo"
+   ],
+   "_revisar": {
+    "presupuesto_total": 8000,
+    "bases_reguladoras": "https://www.bopsantacruzdetenerife.es/bopsc2/index.php",
+    "abierta_segun_bdns": false,
+    "beneficiarios": "PERSONAS FÍSICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
+    "nota": "Revisa importe por vivienda, requisitos, documentos y pasos antes de aprobar."
+   },
+   "prov": "Santa Cruz de Tenerife",
+   "muni": "Barlovento"
+  },
+  {
+   "id": "bdns-937701",
+   "estado": "pendiente",
+   "title": "Resolución Nº1842 de 23/10/2026: Aprobar convocatoria 1_26 ayudas económicas jubilados pensionistas y asimilados para gasto vivienda",
+   "org": "ALGINET · AYUNTAMIENTO DE ALGINET",
+   "scope": "municipal",
+   "ccaa": "Comunitat Valenciana",
+   "tipo": [
+    "rehabilitacion"
+   ],
+   "dest": [
+    "vivienda"
+   ],
+   "importe": 0,
+   "imp": "Consulta la convocatoria",
+   "abre": "2026-11-09",
+   "cierra": "2026-11-16",
+   "plazo": "Consulta el plazo en la convocatoria",
+   "irpf": false,
+   "fuente": "BDNS nº 937701",
+   "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/937701",
+   "resumen": "Resolución Nº1842 de 23/10/2026: Aprobar convocatoria 1_26 ayudas económicas jubilados pensionistas y asimilados para gasto vivienda",
+   "req": [
+    "Consulta los requisitos en la convocatoria oficial"
+   ],
+   "docs": [
+    "Consulta la documentación en la convocatoria oficial"
+   ],
+   "pasos": [
+    "Lee la convocatoria oficial",
+    "Prepara la documentación",
+    "Presenta la solicitud en la sede del organismo"
+   ],
+   "_revisar": {
+    "presupuesto_total": 12000,
+    "bases_reguladoras": "https://alginet.sede.dival.es/tablondeanuncios/",
+    "abierta_segun_bdns": false,
+    "beneficiarios": "PERSONAS FÍSICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
+    "nota": "Revisa importe por vivienda, requisitos, documentos y pasos antes de aprobar."
+   },
+   "prov": "Valencia",
+   "muni": "Alginet"
   }
  ],
  "boe": [
