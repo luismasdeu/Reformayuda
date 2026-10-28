@@ -40,13 +40,13 @@ details summary{cursor:pointer;color:var(--brand);font-weight:700;margin-top:10p
   <div id="app"></div>
 </main>
 <script>
-const REPO="luismasdeu/Reformayuda", RUTA="revision/candidatas.json", ADMIN="revision/admin.json", DESC="revision/descartadas.json";
+const REPO="luismasdeu/Reformayuda", RUTA="revision/candidatas.json", ADMIN="revision/admin.json", DESC="revision/descartadas.json", AYUDAS="web/data/ayudas.json";
 const TIPOS={eficiencia:"Eficiencia",solar:"Placas solares",aerotermia:"Aerotermia",ventanas:"Ventanas",accesibilidad:"Accesibilidad",rehabilitacion:"Rehabilitación",construccion:"Construcción"};
 const GENERICO=/^Consulta /;
 const $=s=>document.querySelector(s);
 const esc=s=>String(s??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const guardado={get(k,d){try{return JSON.parse(localStorage.getItem("rfm_rev_"+k))??d}catch(e){return d}},set(k,v){try{localStorage.setItem("rfm_rev_"+k,JSON.stringify(v))}catch(e){}}};
-let token=guardado.get("token",""), datos=null, sha=null, descIA=[];
+let token=guardado.get("token",""), datos=null, sha=null, descIA=[], autoIA=[];
 const estado=t=>$("#estado").textContent=t||"";
 
 // ---- GitHub ----
@@ -97,6 +97,7 @@ async function cargar(){
   estado("Cargando…");
   try{const f=await leer(RUTA);datos=f.json;sha=f.sha;
     try{descIA=((await leer(DESC)).json?.ia||[]).slice().reverse()}catch(e){descIA=[]}
+    try{autoIA=((await leer(AYUDAS)).json?.ayudas||[]).filter(a=>a.auto).sort((a,b)=>b.auto.localeCompare(a.auto))}catch(e){autoIA=[]}
     pintar()}
   catch(e){if(e.message==="token"){guardado.set("token","");pedirToken("La llave no funciona o ha caducado. Crea otra.")}else estado("No se ha podido cargar. Revisa la conexión y recarga.")}
 }
@@ -106,6 +107,10 @@ function pintar(){
   const p=pendientes(), boe=(datos.boe||[]).filter(b=>b.estado!=="vista");
   estado(p.length?`${p.length} ayuda${p.length>1?"s":""} por revisar`:"");
   $("#app").innerHTML=`${avisosHtml()}
+   ${autoIA.length?`<details class="card"><summary>Publicadas solas por la IA (${autoIA.length})</summary>
+     <p class="meta">Tenían importe, plazo y requisitos claros en las bases oficiales. Échales un vistazo y retira la que no esté bien.</p>
+     ${autoIA.map(a=>`<div style="border-top:1px solid var(--line);padding:10px 0"><b>${esc(a.title)}</b><p class="meta" style="margin:2px 0">${esc(zona(a))} · ${esc(a.imp)}${a.cierra?` · hasta ${esc(a.cierra.split("-").reverse().join("/"))}`:""} · publicada el ${esc(a.auto.split("-").reverse().join("/"))}</p>
+       <div class="row" style="margin-top:4px"><a class="b alt" href="/?ayuda=${encodeURIComponent(a.id)}" target="_blank" rel="noopener">Ver en la app</a><a class="b alt" href="${esc(a.url)}" target="_blank" rel="noopener">Convocatoria</a><button class="b no" data-retirar="${esc(a.id)}">Retirar</button></div></div>`).join("")}</details>`:""}
    ${p.length?"":`<div class="vacio">✅ No hay nada por revisar.<br>Te avisaremos cuando la búsqueda diaria encuentre ayudas nuevas.</div>`}
    ${p.map(tarjeta).join("")}
    ${descIA.length?`<details class="card"><summary>Descartadas automáticamente por la IA (${descIA.length})</summary>
@@ -176,6 +181,19 @@ function enlazar(){
     };
     el.querySelector("[data-pub]").onclick=()=>hacer(true);
     el.querySelector("[data-desc]").onclick=()=>hacer(false);
+  });
+  document.querySelectorAll("[data-retirar]").forEach(b=>b.onclick=async()=>{
+    const id=b.dataset.retirar; if(!confirm("¿Retirar esta ayuda de la app? No se volverá a proponer."))return;
+    b.disabled=true; estado("Retirando…");
+    try{
+      for(let i=0;i<3;i++){const f=await leer(AYUDAS);if(!f.json.ayudas.some(x=>x.id===id))break;
+        f.json.ayudas=f.json.ayudas.filter(x=>x.id!==id);
+        if((await escribir(AYUDAS,f.json,f.sha,`Revisión desde el móvil: retira ${id}`)).ok)break}
+      for(let i=0;i<3;i++){const f=await leer(DESC);if((f.json.ids||[]).includes(id))break;
+        f.json.ids=[...(f.json.ids||[]),id];
+        if((await escribir(DESC,f.json,f.sha,`Revisión desde el móvil: no volver a proponer ${id}`)).ok)break}
+      autoIA=autoIA.filter(x=>x.id!==id); pintar(); estado("Retirada. La web se actualiza en un par de minutos.");
+    }catch(e){b.disabled=false;estado("No se ha podido retirar. Inténtalo otra vez.")}
   });
   document.querySelectorAll("[data-recuperar]").forEach(b=>b.onclick=async()=>{
     const id=b.dataset.recuperar; b.disabled=true; estado("Recuperando…");

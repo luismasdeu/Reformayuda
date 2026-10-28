@@ -51,7 +51,8 @@ Extrae los datos para una ficha que leerán particulares sin conocimientos legal
 - «tipo»: elige entre """ + ", ".join(TIPOS) + """. «dest»: «vivienda» (particulares), «edificio» (comunidades de propietarios) o ambos.
 - «edad_min», «edad_max», «max_habitantes»: 0 si no hay límite.
 - «url_solicitud»: dirección de la sede electrónica o del trámite, solo si aparece en los documentos.
-- «dudas»: lo que la persona que revisa debe comprobar en las bases (máximo 4 frases)."""
+- «dudas»: lo que la persona que revisa debe comprobar en las bases (máximo 4 frases).
+- «claridad»: «clara» solo si has leído las bases o la convocatoria oficial y en ellas constan el importe por vivienda (o el porcentaje con su máximo), el plazo (fecha final o «hasta agotar fondos»), los requisitos y cómo se pide, y no hay nada importante que dudar. Si te falta cualquiera de esas cosas o has tenido que suponer algo, «dudosa». Las claras se publican sin revisión humana: ante la duda, «dudosa»."""
 
 ESQUEMA = {
     "type": "object",
@@ -76,10 +77,11 @@ ESQUEMA = {
         "irpf": {"type": "boolean"},
         "url_solicitud": {"type": "string"},
         "dudas": {"type": "array", "items": {"type": "string"}},
+        "claridad": {"type": "string", "enum": ["clara", "dudosa"]},
     },
     "required": ["es_ayuda_para_obras_en_vivienda", "motivo", "title", "resumen", "imp", "importe", "abre", "cierra",
                  "plazo", "req", "docs", "pasos", "tipo", "dest", "edad_min", "edad_max", "max_habitantes", "irpf",
-                 "url_solicitud", "dudas"],
+                 "url_solicitud", "dudas", "claridad"],
     "additionalProperties": False,
 }
 
@@ -213,6 +215,15 @@ def aplicar(c, d, completa):
         c["sede"] = d["url_solicitud"]
 
 
+def muy_clara(c, d, bloques):
+    """Solo se publica sin revisión si la IA la ve clara y además están todos los datos importantes."""
+    hoy = dt.date.today().isoformat()
+    return (d.get("claridad") == "clara" and (bloques or d.get("url_solicitud")) and c.get("importe", 0) > 0
+            and not str(c.get("imp", "")).startswith(("Consulta", "No consta"))
+            and (not c.get("cierra") or c["cierra"] >= hoy) and c.get("tipo")
+            and all(len(c.get(k) or []) >= 2 for k in ("req", "docs", "pasos")))
+
+
 def procesar(cliente, c, completa, informe):
     r = c.get("_revisar") or {}
     ficha = ficha_bdns(c)
@@ -231,10 +242,13 @@ def procesar(cliente, c, completa, informe):
         c["_revisar"] = r
         if not d["es_ayuda_para_obras_en_vivienda"]:
             c["estado"] = "descartada"  # no es de obras: no llega a tu lista (se puede recuperar en /revisar/)
+        elif muy_clara(c, d, bloques):
+            c["estado"] = "aprobada"  # se publica sola; se puede retirar desde /revisar/
+            r["ia"]["recomendacion"] = "publicada sola"
     else:
         c["ia"] = dt.date.today().isoformat()
     informe["procesadas"].append({"id": c["id"], "documento": como, "coste_usd": round(coste, 4),
-                                  "recomendacion": "publicar" if d["es_ayuda_para_obras_en_vivienda"] else "descartar"})
+                                  "recomendacion": (r.get("ia") or {}).get("recomendacion") if completa else "corregida"})
     print(f"  {c['id']}: {como} · {informe['procesadas'][-1]['recomendacion']} · {coste:.3f} $")
 
 

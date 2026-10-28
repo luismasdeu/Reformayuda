@@ -46,6 +46,8 @@ def main():
         if estado.startswith("aprob") or estado == "publicar":
             limpia = {k: v for k, v in c.items() if k not in ("estado", "_revisar")}
             limpia["revisada"] = hoy.isoformat()
+            if (c.get("_revisar") or {}).get("ia", {}).get("recomendacion") == "publicada sola":
+                limpia["auto"] = hoy.isoformat()  # publicada por la IA sin revisión (se puede retirar en /revisar/)
             por_id[limpia["id"]] = limpia
             cambios += 1
             print(f"Publicada: {limpia['id']} · {limpia['title'][:70]}")

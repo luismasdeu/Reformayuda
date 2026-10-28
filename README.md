@@ -62,7 +62,12 @@ En **Actions → Buscar ayudas nuevas → Run workflow**, pon `30` en «Días ha
 
 **Lo fácil: desde el móvil en https://reformayuda.es/revisar/.** Cada ayuda sale como una tarjeta con enlaces a la convocatoria y las bases, los campos principales para corregir y dos botones: **Publicar** y **Descartar**. La primera vez pide una llave de GitHub (las instrucciones salen en la propia página) y ofrece **avisarte con una notificación** cada mañana que haya ayudas nuevas por revisar. La página no aparece en Google.
 
-**Rellenado con IA (opcional, de pago):** si existe el secreto `ANTHROPIC_API_KEY`, cada mañana `scripts/rellenar_ia.py` lee la ficha de la BDNS y las bases de cada candidata nueva con la API de Claude y rellena título, importe, plazo, requisitos, documentos y pasos. En la página de revisión verás «🤖 Rellenada con IA», su recomendación (publicar o descartar) y lo que conviene comprobar. También completa, una vez, las ayudas ya publicadas que tengan datos genéricos («Consulta…»). Se puede lanzar a mano en **Actions → Rellenar con IA**. El modelo se cambia con la variable del repositorio `CLAUDE_MODEL` (Settings → Secrets and variables → Actions → Variables); el coste de cada ejecución queda en `revision/diagnostico-ia.json`.
+**Rellenado con IA (opcional, de pago):** si existe el secreto `ANTHROPIC_API_KEY`, cada mañana `scripts/rellenar_ia.py` lee la ficha de la BDNS y las bases de cada candidata nueva con la API de Claude y rellena título, importe, plazo, requisitos, documentos y pasos. Además decide:
+- **No es de obras** (alquiler, hipoteca, recibos, compra, ayudas sociales, un edificio concreto): la descarta sola. Se ven y se pueden recuperar en «Descartadas automáticamente por la IA».
+- **Muy clara** (importe, plazo, requisitos y forma de pedirla constan en las bases oficiales): **la publica sola**. Se ven arriba en «Publicadas solas por la IA», con un botón **Retirar**.
+- **Dudosa**: te la deja en la lista con «🤖 Rellenada con IA» y lo que conviene comprobar.
+
+Entran las ayudas para obras en vivienda o comunidad de vecinos, y las rebajas de impuestos (IBI, ICIO) por hacer esas obras. Ayudas de compra, hipoteca o alquiler: pendiente de un apartado propio en el futuro. También completa, una vez, las ayudas ya publicadas que tengan datos genéricos («Consulta…»). Se puede lanzar a mano en **Actions → Rellenar con IA**. El modelo se cambia con la variable del repositorio `CLAUDE_MODEL` (Settings → Secrets and variables → Actions → Variables); el coste de cada ejecución queda en `revision/diagnostico-ia.json`.
 
 También se puede hacer a mano en GitHub:
 

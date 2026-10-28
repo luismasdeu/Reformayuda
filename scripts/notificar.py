@@ -83,8 +83,8 @@ def planificar(ayudas, subs, avisadas, hoy):
     return envios, [a["id"] for a in nuevas]
 
 
-def aviso_revision(registro):
-    """Aviso al responsable cuando la búsqueda diaria deja candidatas nuevas por revisar."""
+def aviso_revision(registro, ayudas):
+    """Aviso al responsable cuando hay candidatas nuevas por revisar o ayudas publicadas solas por la IA."""
     if not ADMIN.exists() or not CANDIDATAS.exists():
         return []
     tokens = json.loads(ADMIN.read_text(encoding="utf-8")).get("tokens", [])
@@ -93,12 +93,20 @@ def aviso_revision(registro):
     ya = set(registro.get("revision_avisadas", []))
     registro["revision_avisadas"] = sorted(c["id"] for c in pend)
     nuevas = [c for c in pend if c["id"] not in ya]
-    if not nuevas or not tokens:
+    ya_auto = set(registro.get("auto_avisadas", []))
+    auto = [a for a in ayudas if a.get("auto") and a["id"] not in ya_auto]
+    registro["auto_avisadas"] = sorted(ya_auto | {a["id"] for a in auto})
+    if not (nuevas or auto) or not tokens:
         return []
-    n = len(nuevas)
-    datos = {"title": f"{n} ayuda{'s' if n > 1 else ''} nueva{'s' if n > 1 else ''} por revisar",
-             "body": " · ".join(c.get("muni") or c.get("ccaa") or c["title"][:40] for c in nuevas[:4])[:180]
-                     + (f" y {n - 4} más" if n > 4 else "") + f". En total, {len(pend)} pendientes.",
+    partes = []
+    if auto:
+        partes.append(f"{len(auto)} publicada{'s' if len(auto) > 1 else ''} sola{'s' if len(auto) > 1 else ''}")
+    if nuevas:
+        partes.append(f"{len(nuevas)} por revisar")
+    lugares = [c.get("muni") or c.get("ccaa") or c["title"][:40] for c in auto + nuevas]
+    datos = {"title": "Ayudas nuevas: " + " y ".join(partes),
+             "body": " · ".join(lugares[:4])[:180] + (f" y {len(lugares) - 4} más" if len(lugares) > 4 else "")
+                     + f". Pendientes de revisar: {len(pend)}.",
              "url": f"{DOMINIO}/revisar/", "tag": "revisar"}
     return [(None, t, datos) for t in tokens]
 
@@ -132,7 +140,7 @@ def main():
         avisadas = []
     else:
         envios, avisadas = planificar(ayudas, subs, set(registro["ids"]), hoy)
-        envios += aviso_revision(registro)
+        envios += aviso_revision(registro, ayudas)
 
     ok = borradas = 0
     errores = []
