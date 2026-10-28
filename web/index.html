@@ -1224,7 +1224,7 @@ async function probarNotificacion(){
   try{
     const reg=await navigator.serviceWorker.ready;
     await reg.showNotification("Prueba de Reformayuda",{body:"Si ves esto, las notificaciones funcionan en tu móvil.",icon:"icons/icon-192.png",badge:"icons/icon-monochrome-512.png",tag:"prueba-local"});
-    toast("Te hemos enviado una notificación de prueba. Si no la ves, revisa los ajustes de notificaciones de Chrome.");
+    toast(/android/i.test(navigator.userAgent)?"Notificación de prueba enviada. Si no la ves: en Chrome toca el icono junto a la dirección → Permisos → Notificaciones → ↗ y activa «Mostrar notificaciones».":"Notificación de prueba enviada. Si no la ves, revisa que tu sistema permita las notificaciones del navegador.");
   }catch(e){toast("Tu móvil no ha dejado mostrar la notificación. Revisa los permisos de Chrome para reformayuda.es.")}
 }
 
