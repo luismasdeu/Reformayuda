@@ -186,31 +186,33 @@
     "edificio"
    ],
    "importe": 0,
-   "imp": "Consulta la cuantía por vivienda en la convocatoria",
+   "imp": "No consta el importe por vivienda. El máximo depende del tipo de obra y está en las bases (Orden 16/2025).",
    "abre": "2026-10-27",
    "cierra": "2026-11-30",
-   "plazo": "Hasta el 30/11/2026",
+   "plazo": "Del 27 de octubre al 30 de noviembre de 2026. El plazo empezó a las 09:00 h, cuando pasaron 10 días hábiles desde la publicación en el DOCM. La sede electrónica avisa de una ampliación de plazos por fallos técnicos, pero ese aviso parece afectar a trámites tributarios, así que conviene confirmarlo.",
    "irpf": true,
    "fuente": "BDNS nº 933977",
    "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/933977",
    "resumen": "Ayudas cofinanciadas con fondos europeos (FEDER) para mejorar el aislamiento, las ventanas, la calefacción y la eficiencia de viviendas y edificios de viviendas de Castilla-La Mancha. Presupuesto total: 50 millones de euros.",
    "req": [
-    "Vivienda o edificio de viviendas en Castilla-La Mancha",
-    "Que la obra mejore la eficiencia energética (confirma el ahorro mínimo exigido)",
-    "Pedirla antes de empezar la obra (confírmalo en la convocatoria)"
+    "Ser persona física que no desarrolla actividad económica, o formar parte de una comunidad de propietarios.",
+    "Que la vivienda o el edificio estén en Castilla-La Mancha.",
+    "Que las obras sean de rehabilitación o de mejora de la eficiencia energética.",
+    "No empezar a cobrar de otra ayuda por el mismo gasto si las bases lo prohíben (confirma las incompatibilidades en las bases)."
    ],
    "docs": [
-    "DNI/NIE (o CIF de la comunidad de propietarios)",
-    "Certificado de eficiencia energética antes de la obra",
-    "Presupuesto desglosado",
-    "Memoria técnica de la obra",
-    "Acta de la junta, si es un edificio"
+    "Solicitud por vía electrónica.",
+    "Documento de identidad y acreditación de que eres propietario o tienes derecho sobre la vivienda.",
+    "Memoria o proyecto de las obras y presupuesto.",
+    "Datos bancarios para cobrar la ayuda."
    ],
    "pasos": [
-    "Encarga el certificado energético y la memoria técnica",
-    "Si es un edificio, aprobad la obra en junta",
-    "Presenta la solicitud en la sede electrónica de la Junta (jccm.es) entre el 27/10 y el 30/11/2026",
-    "Haz la obra y justifícala con facturas y el certificado energético final"
+    "Lee las bases (Orden 16/2025) y la resolución de convocatoria en el DOCM.",
+    "Pide presupuesto y, si hace falta, un proyecto técnico de las obras.",
+    "Reúne la documentación que piden las bases.",
+    "Presenta la solicitud en la sede electrónica de la Junta (sede.jccm.es) entre el 27 de octubre y el 30 de noviembre de 2026.",
+    "Espera la resolución y haz las obras en el plazo que se indique.",
+    "Justifica la obra con facturas y comprobantes de pago para cobrar la ayuda."
    ],
    "revisada": "2026-10-28",
    "sede": "https://www.jccm.es",
@@ -230,32 +232,36 @@
     "edificio"
    ],
    "importe": 600,
-   "imp": "Ayuda municipal pequeña: 2.400 € en total para todo el municipio",
+   "imp": "20 % del presupuesto de la obra, hasta 600 € por inmueble, más un 90 % de bonificación en el ICIO",
    "abre": "2026-10-26",
    "cierra": "2026-11-26",
-   "plazo": "Hasta el 26/11/2026",
+   "plazo": "Empieza el día siguiente a la publicación en el BOP de Girona y dura un mes. Según la BDNS, va del 26 de octubre al 26 de noviembre de 2026.",
    "irpf": false,
    "fuente": "BDNS nº 937189",
    "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/937189",
    "resumen": "Subvención del Ayuntamiento de Navata para arreglar y pintar las fachadas de casas y edificios del municipio en 2026. El presupuesto total es pequeño, así que conviene pedirla pronto.",
    "req": [
-    "Ser persona física (particular) y promover la obra en la fachada.",
-    "Que el edificio o la masía esté en el municipio de Navata.",
-    "Que la obra cumpla el planeamiento urbanístico y la ordenanza municipal de fachadas.",
-    "Que el edificio tenga 20 años o más y no esté declarado fuera de ordenación.",
-    "Que la ayuda no supere el importe de las facturas presentadas."
+    "Ser persona física y encargarte de la obra de fachada.",
+    "Que el inmueble esté en el municipio de Navata (núcleo o masías).",
+    "Que el edificio tenga 20 años o más de antigüedad.",
+    "Que el edificio no esté declarado fuera de ordenación del planeamiento.",
+    "Que la obra se ajuste al planeamiento general y a la ordenanza municipal de fachadas."
    ],
    "docs": [
-    "DNI/NIE",
-    "Presupuesto de la obra",
-    "Fotos de la fachada actual",
-    "Licencia o comunicación de obra del ayuntamiento"
+    "Solicitud en el modelo normalizado de la web del Ayuntamiento.",
+    "Documentación técnica de la obra (el servicio técnico municipal te puede ayudar a prepararla).",
+    "Presupuesto de las obras.",
+    "Facturas de la obra.",
+    "Número de cuenta bancaria donde cobrar la ayuda."
    ],
    "pasos": [
-    "Lee las bases en el Boletín Oficial de la Provincia de Girona",
-    "Pide presupuesto y tramita el permiso de obra",
-    "Presenta la solicitud en el Ayuntamiento de Navata antes del 26/11/2026",
-    "Haz la obra y justifícala con la factura"
+    "Consulta con el servicio técnico municipal, que te asesora gratis.",
+    "Descarga el modelo de solicitud en https://www.navata.cat/.",
+    "Presenta la solicitud con la documentación dentro del plazo.",
+    "Si te piden corregir algo, responde en 10 días naturales.",
+    "Espera la resolución de la alcaldesa, que llega en un mes desde el cierre del plazo.",
+    "Haz la obra y justifícala con las facturas.",
+    "Cobra la ayuda en un solo pago en tu cuenta."
    ],
    "prov": "Girona",
    "muni": "Navata",
@@ -275,38 +281,44 @@
    "dest": [
     "vivienda"
    ],
-   "importe": 0,
-   "imp": "Consulta el importe por vivienda en las bases",
-   "abre": "2026-10-09",
-   "cierra": null,
-   "plazo": "Convocatoria abierta hasta agotar el presupuesto (60.000 €)",
+   "importe": 600,
+   "imp": "Hasta 600 € por vivienda (una solicitud por vivienda)",
+   "abre": "2026-10-17",
+   "cierra": "2026-12-31",
+   "plazo": "Se puede pedir desde el día siguiente a la publicación del extracto en el BOC (16 de octubre de 2026) hasta el 31 de diciembre de 2026. Se resuelve por orden de presentación y se acaba antes si se agota el dinero.",
    "irpf": false,
    "fuente": "BDNS nº 934548",
    "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/934548",
    "resumen": "Ayuda municipal para quitar la bañera y poner un plato de ducha a ras de suelo en casas de personas mayores, para evitar caídas.",
    "req": [
-    "Vivir en Camargo (Cantabria) y que sea tu vivienda habitual",
-    "Ser persona mayor o con movilidad reducida (confirma la edad en las bases)",
-    "Pedirla antes de hacer la obra"
+    "Estar empadronado en Camargo al menos un año justo antes de pedir la ayuda.",
+    "Tener 65 años o más, o una discapacidad reconocida de al menos el 33 %.",
+    "Que la vivienda sea tu residencia habitual y permanente.",
+    "Ser propietario, usufructuario, arrendatario o residente autorizado de la vivienda.",
+    "Estar al corriente de tus obligaciones tributarias."
    ],
    "docs": [
-    "DNI/NIE",
-    "Certificado de empadronamiento",
-    "Presupuesto de la obra",
-    "Fotos del baño actual"
+    "Solicitud (Anexo I).",
+    "Ficha de terceros (Anexo II) con tus datos bancarios.",
+    "Justificante bancario del pago de la obra, si ya está hecha.",
+    "Fotos del baño antes y después de la obra.",
+    "Documentos que acrediten edad o discapacidad y empadronamiento (comprueba la lista exacta en las bases)."
    ],
    "pasos": [
-    "Lee las bases en el Boletín Oficial de Cantabria",
-    "Pide presupuesto a un instalador",
-    "Presenta la solicitud en el Ayuntamiento de Camargo (Servicios Sociales)",
-    "Haz la obra cuando te la concedan y justifícala con la factura"
+    "Comprueba que cumples los requisitos de edad o discapacidad y de empadronamiento.",
+    "Rellena la solicitud (Anexo I) y la ficha de terceros (Anexo II).",
+    "Preséntalas en el Registro General del Ayuntamiento de Camargo, en la sede electrónica o por cualquier medio de la Ley 39/2015.",
+    "Espera la resolución: se concede por orden de presentación hasta agotar el crédito.",
+    "Justifica la obra con el justificante de pago y las fotos del antes y el después."
    ],
    "prov": "Cantabria",
    "muni": "Camargo",
    "edad": {
     "min": 65
    },
-   "revisada": "2026-10-28"
+   "revisada": "2026-10-28",
+   "sede": "https://sede.aytocamargo.es/opensiac/informacionpublica/tramites_enter",
+   "ia": "2026-10-28"
   }
  ]
 }

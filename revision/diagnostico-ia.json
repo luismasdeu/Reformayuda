@@ -1,110 +1,26 @@
 {
- "fecha": "2026-10-28T16:37",
+ "fecha": "2026-10-28T16:43",
  "modelo": "claude-sonnet-5-5",
  "procesadas": [
   {
    "id": "bdns-933977",
    "documento": "página web",
-   "coste_usd": 0.0226,
+   "coste_usd": 0.1763,
    "recomendacion": "publicar"
   },
   {
    "id": "bdns-937189",
    "documento": "PDF de 4 páginas",
-   "coste_usd": 0.0391,
+   "coste_usd": 0.0506,
    "recomendacion": "publicar"
   },
   {
-   "id": "bdns-937626",
-   "documento": "4 de 229 páginas",
-   "coste_usd": 0.0344,
-   "recomendacion": "publicar"
-  },
-  {
-   "id": "bdns-937551",
-   "documento": "página web",
-   "coste_usd": 0.1018,
-   "recomendacion": "publicar"
-  },
-  {
-   "id": "bdns-937506",
-   "documento": "PDF de 11 páginas",
-   "coste_usd": 0.0897,
-   "recomendacion": "descartar"
-  },
-  {
-   "id": "bdns-937140",
+   "id": "bdns-934548",
    "documento": "no se pudo descargar (<urlopen error timed out>)",
-   "coste_usd": 0.0121,
-   "recomendacion": "descartar"
-  },
-  {
-   "id": "bdns-937124",
-   "documento": "página web",
-   "coste_usd": 0.015,
-   "recomendacion": "publicar"
-  },
-  {
-   "id": "bdns-936357",
-   "documento": "página web",
-   "coste_usd": 0.0149,
-   "recomendacion": "descartar"
-  },
-  {
-   "id": "bdns-936354",
-   "documento": "página web",
-   "coste_usd": 0.0148,
-   "recomendacion": "descartar"
-  },
-  {
-   "id": "bdns-936353",
-   "documento": "página web",
-   "coste_usd": 0.0144,
-   "recomendacion": "descartar"
-  },
-  {
-   "id": "bdns-935742",
-   "documento": "página web",
-   "coste_usd": 0.0214,
-   "recomendacion": "publicar"
-  },
-  {
-   "id": "bdns-935669",
-   "documento": "PDF de 21 páginas",
-   "coste_usd": 0.1371,
-   "recomendacion": "descartar"
-  },
-  {
-   "id": "bdns-935567",
-   "documento": "página web",
-   "coste_usd": 0.0425,
-   "recomendacion": "publicar"
-  },
-  {
-   "id": "bdns-935530",
-   "documento": "página web",
-   "coste_usd": 0.0434,
-   "recomendacion": "publicar"
-  },
-  {
-   "id": "bdns-935296",
-   "documento": "no se pudo descargar (HTTP Error 403: Forbidden)",
-   "coste_usd": 0.0132,
-   "recomendacion": "publicar"
-  },
-  {
-   "id": "bdns-934927",
-   "documento": "página web",
-   "coste_usd": 0.0152,
-   "recomendacion": "publicar"
-  },
-  {
-   "id": "bdns-934466",
-   "documento": "no se pudo descargar (<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'arrecife.sedeelectronica.es'. (_ssl.c:1010)>)",
-   "coste_usd": 0.0155,
+   "coste_usd": 0.1303,
    "recomendacion": "publicar"
   }
  ],
  "errores": [],
- "coste_usd": 0.647
+ "coste_usd": 0.357
 }
