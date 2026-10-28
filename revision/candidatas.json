@@ -19,33 +19,33 @@
    "imp": "Hasta 4.000 € por vivienda (el 100 % del coste de la adaptación, según las bases de 2024)",
    "abre": "2026-10-28",
    "cierra": "2026-11-06",
-   "plazo": "Del 28 de octubre al 6 de noviembre de 2026, o hasta que se agote el presupuesto. Las solicitudes se resuelven por orden de presentación. Las obras se empiezan en los 3 meses siguientes a la concesión y se terminan en 6 meses desde que te la notifiquen.",
+   "plazo": "Del 28 de octubre al 6 de noviembre de 2026, o hasta que se agote el presupuesto (50.000 €).",
    "irpf": false,
    "fuente": "BDNS nº 937551",
    "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/937551",
-   "resumen": "El Ayuntamiento de Manresa paga la adaptación del baño de la vivienda de personas mayores o dependientes. Por ejemplo, cambiar la bañera por un plato de ducha, adaptar el váter o el lavabo, o ensanchar la puerta. Se resuelve por orden de llegada hasta agotar los 50.000 € de la convocatoria. Los datos de requisitos, importe y obras salen de las bases de 2024 y de las notas de prensa del Ayuntamiento. Compruébalos en la convocatoria de 2026.",
+   "resumen": "El Ayuntamiento de Manresa da subvenciones para adaptar el baño de tu vivienda y hacerlo más accesible. Por ejemplo, cambiar la bañera por un plato de ducha o instalar barras de apoyo. El presupuesto total es de 50.000 €. Si no tienes el importe máximo por vivienda, mira las bases en el BOP de Barcelona.",
    "req": [
-    "Tener más de 80 años y vivir solo, o con otra persona de 65 años o más.",
-    "O vivir en una vivienda donde haya una persona con grado de dependencia reconocido a la que la obra beneficie directamente.",
-    "No superar el nivel de ingresos anuales de la unidad familiar que fijen las bases (la cifra no está clara).",
-    "Que la obra sea de accesibilidad en el baño para facilitar la higiene personal.",
-    "No empezar las obras antes de que te notifiquen la concesión de la ayuda."
+    "Estar empadronado/a en Manresa en la vivienda que se va a arreglar, que debe ser tu residencia habitual.",
+    "Ser propietario/a, usufructuario/a o inquilino/a de esa vivienda.",
+    "Que tus ingresos y los de las personas empadronadas contigo no superen el tramo F de la tarifación social del Ayuntamiento (en 2025 eran 18.683,84 € para 1 persona).",
+    "Si eres inquilino/a o usufructuario/a, tener permiso del propietario para hacer las obras (salvo si pides solo ayudas técnicas).",
+    "Hacer obras de accesibilidad como: cambiar la bañera por plato de ducha, adaptar el WC o el lavabo, ensanchar la puerta del baño, poner suelo antideslizante o instalar barras y asientos."
    ],
    "docs": [
-    "Formulario de solicitud del Ayuntamiento de Manresa.",
-    "Documento de identidad de quien solicita.",
-    "Certificado de empadronamiento y convivencia.",
-    "Justificante de ingresos de la unidad familiar.",
-    "Certificado de dependencia, si se pide por esta vía.",
-    "Presupuesto de la obra."
+    "DNI o NIE de quien solicita.",
+    "Declaración responsable de cumplir los requisitos (anexo 2).",
+    "Presupuesto detallado de las obras de un profesional o empresa.",
+    "Fotos en color del estado actual del baño y de lo que se va a cambiar.",
+    "Permiso del propietario, si eres inquilino/a o usufructuario/a.",
+    "Documentos de otras ayudas recibidas para lo mismo, si las hay."
    ],
    "pasos": [
-    "Comprueba que cumples los requisitos de edad o dependencia y de ingresos.",
-    "Pide presupuesto para la obra de adaptación del baño.",
-    "Presenta la solicitud con la documentación en la sede electrónica del Ayuntamiento de Manresa dentro del plazo.",
-    "Espera la resolución. Se resuelve por orden de llegada hasta agotar fondos.",
-    "Empieza la obra solo tras la notificación de la concesión y termínala en 6 meses.",
-    "Justifica la obra con facturas y justificantes de pago en el plazo que indique la resolución."
+    "Pide un presupuesto detallado a un profesional o empresa.",
+    "Haz fotos del baño tal como está ahora.",
+    "Rellena la solicitud y la declaración responsable del Ayuntamiento de Manresa.",
+    "Presenta la solicitud con los documentos entre el 28 de octubre y el 6 de noviembre de 2026.",
+    "Espera la resolución del Ayuntamiento.",
+    "Haz las obras y justifícalas como indiquen las bases."
    ],
    "_revisar": {
     "presupuesto_total": 50000,
@@ -54,7 +54,20 @@
     "beneficiarios": "PERSONAS JURÍDICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
     "nota": "Revisa importe por vivienda, requisitos, documentos y pasos antes de aprobar.",
     "bases_no_corresponden": true,
-    "no_auto": true
+    "no_auto": true,
+    "referencia_bases": "Convocatoria 2026 publicada en el BOP de Barcelona (BDNS 937551). Ver el documento en español adjunto a la ficha de la BDNS.",
+    "ia": {
+     "fecha": "2026-10-28",
+     "documento": "el enlace de bases de la BDNS es genérico (ley, ordenanza general o portada) (extracto; bases en Convocatoria 2026 publicada en el BOP de Barcelona (BDNS 937551). Ver el documento en español adjunto a la ficha de la BDNS.)",
+     "recomendacion": "publicar",
+     "motivo": "Paga pequeñas obras de adaptación del baño y ayudas técnicas para mejorar la accesibilidad en la vivienda habitual de personas empadronadas en Manresa."
+    },
+    "confirmar": [
+     "No he podido leer las bases de 2026: faltan el importe o porcentaje máximo por vivienda y los límites de ingresos de este año.",
+     "Los requisitos y documentos vienen del formulario de 2025; comprueba que no hayan cambiado.",
+     "La BDNS dice que los beneficiarios son personas jurídicas, pero el formulario es para particulares empadronados. Comprueba quién puede pedirla.",
+     "Comprueba cómo se justifica la obra y el plazo para hacerla."
+    ]
    },
    "prov": "Barcelona",
    "muni": "Manresa",
@@ -78,27 +91,29 @@
    "imp": "Consulta la convocatoria",
    "abre": "2026-10-27",
    "cierra": "2026-11-16",
-   "plazo": "Puedes presentar la solicitud del 27 de octubre al 16 de noviembre de 2026, según la BDNS. El CIDO da el 15 de noviembre como fecha orientativa.",
+   "plazo": "Del 27 de octubre al 16 de noviembre de 2026, según la BDNS. El registro del CIDO da el 15 de noviembre como fecha orientativa.",
    "irpf": false,
    "fuente": "BDNS nº 937124",
    "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/937124",
-   "resumen": "Ayuda del Ayuntamiento de Sant Joan de Vilatorrada, dentro del programa de la Diputación de Barcelona, para arreglar viviendas de personas con dependencia o discapacidad. El presupuesto total es de 32.000 €. Las bases que he podido leer son solo un anuncio de presupuestos y no dan más detalles.",
+   "resumen": "El Ayuntamiento de Sant Joan de Vilatorrada convoca el programa de arreglo de viviendas de la Diputación de Barcelona para 2026. Va dirigido a personas con dependencia o discapacidad. Según la información general del programa, sirve para mejorar la accesibilidad, la seguridad y la habitabilidad de la vivienda con reformas básicas y ayudas técnicas. Los servicios sociales municipales suelen proponer a las personas solicitantes. El presupuesto total de la convocatoria es de 32.000 €.",
    "req": [
-    "Ser persona física sin actividad económica.",
-    "Tener reconocida una situación de dependencia o de discapacidad.",
-    "Vivir en Sant Joan de Vilatorrada (a confirmar en las bases)."
+    "Ser persona con dependencia o con discapacidad.",
+    "Vivir en Sant Joan de Vilatorrada.",
+    "Es probable que te proponga el servicio social del Ayuntamiento, pero debes confirmarlo.",
+    "Pueden pedirse requisitos de renta o de situación personal. Confírmalo en las bases."
    ],
    "docs": [
-    "Solicitud en el modelo oficial del Ayuntamiento.",
+    "Solicitud en el modelo del Ayuntamiento.",
+    "Documento que acredite tu dependencia o discapacidad.",
     "Documento de identidad (DNI o NIE).",
-    "Certificado de dependencia o discapacidad."
+    "Otros documentos que pidan las bases. Consúltalos en el Ayuntamiento."
    ],
    "pasos": [
-    "Consulta el texto de la convocatoria en la BDNS o en la sede electrónica del Ayuntamiento.",
-    "Reúne la documentación que piden las bases.",
-    "Presenta la solicitud por la sede electrónica del Ayuntamiento antes de que acabe el plazo.",
-    "Espera la resolución del Ayuntamiento.",
-    "Haz las obras y justifica el gasto como indiquen las bases."
+    "Habla con los servicios sociales del Ayuntamiento de Sant Joan de Vilatorrada.",
+    "Comprueba que cumples los requisitos de las bases.",
+    "Reúne los documentos que te pidan.",
+    "Presenta la solicitud entre el 27 de octubre y el 16 de noviembre de 2026.",
+    "Espera la resolución y que se hagan las obras."
    ],
    "_revisar": {
     "presupuesto_total": 32000,
@@ -107,7 +122,20 @@
     "beneficiarios": "PERSONAS FÍSICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
     "nota": "Revisa importe por vivienda, requisitos, documentos y pasos antes de aprobar.",
     "bases_no_corresponden": true,
-    "no_auto": true
+    "no_auto": true,
+    "referencia_bases": "Ordenanza General de Subvenciones 2026 del Ayuntamiento de Sant Joan de Vilatorrada. La convocatoria se publicó en el BOPB el 26/10/2026 (BDNS 937124).",
+    "ia": {
+     "fecha": "2026-10-28",
+     "documento": "el enlace de bases de la BDNS es genérico (ley, ordenanza general o portada) (extracto; bases en Ordenanza General de Subvenciones 2026 del Ayuntamiento de Sant Joan de Vilatorrada. La convocatoria se publicó en el BOPB el 26/10/2026 (BDNS 937124).)",
+     "recomendacion": "publicar",
+     "motivo": "Es un programa de la Diputación de Barcelona para hacer reformas básicas de accesibilidad y habitabilidad en la vivienda de personas con dependencia o discapacidad. No he podido leer las bases de esta convocatoria."
+    },
+    "confirmar": [
+     "No se han podido leer las bases ni la convocatoria. Faltan el importe por vivienda, los requisitos y los documentos.",
+     "Comprueba si la ayuda es dinero para el particular o si las obras las ejecuta directamente la Diputación o el Ayuntamiento.",
+     "Comprueba si solo pueden pedirla personas propuestas por los servicios sociales.",
+     "El plazo final es el 16/11 según la BDNS y el 15/11 según el CIDO."
+    ]
    },
    "prov": "Barcelona",
    "muni": "Sant Joan De Vilatorrada",
@@ -126,20 +154,20 @@
    "dest": [
     "vivienda"
    ],
-   "importe": 0,
-   "imp": "Consulta la convocatoria",
+   "importe": 8000,
+   "imp": "Hasta 8.000 € por vivienda. La ayuda es un porcentaje del presupuesto de la obra, sin IVA ni tasas.",
    "abre": "2026-10-17",
    "cierra": null,
-   "plazo": "Se puede solicitar desde las 9:00 h del día hábil siguiente a la publicación de la convocatoria en el BOR. La ficha indica que el plazo termina «a los tres meses», pero no aclara desde cuándo se cuentan. Comprueba la fecha exacta en el BOR.",
+   "plazo": "Empieza a las 9:00 del día hábil siguiente a la publicación de la convocatoria en el BOR. Dura tres meses. La fecha final exacta depende de ese día de publicación y no consta en los documentos.",
    "irpf": false,
    "fuente": "BDNS nº 935742",
    "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/935742",
-   "resumen": "El Ayuntamiento de Logroño paga una parte de las obras que hacen más accesible el interior de tu vivienda. Es una ayuda por concurrencia competitiva con un presupuesto total de 140.000 €. Las bases completas no se han podido leer, así que faltan detalles como el importe por vivienda y los requisitos.",
+   "resumen": "El Ayuntamiento de Logroño subvenciona obras para adaptar el interior de tu vivienda y hacerla más accesible. Pueden pedirla personas con discapacidad reconocida y mayores de 70 años empadronados en esa vivienda. Hay 140.000 € de presupuesto y se concede por concurrencia competitiva.",
    "req": [
-    "Ser persona física que no desarrolla actividad económica.",
-    "La vivienda debe estar en Logroño.",
-    "Las obras deben mejorar la accesibilidad universal dentro de la vivienda.",
-    "Otros requisitos (ingresos, edad, discapacidad o propiedad) no constan: consulta las bases."
+    "Vivir en Logroño y estar empadronado en la vivienda donde harás las obras.",
+    "Tener reconocido un grado de discapacidad, ser mayor de 70 años o convivir con una persona así.",
+    "Que las obras cumplan la normativa municipal y el Código Técnico de la Edificación.",
+    "Aceptar que los técnicos municipales visiten la vivienda antes y después de la obra."
    ],
    "docs": [
     "Solicitud en el modelo oficial del Ayuntamiento.",
@@ -148,10 +176,10 @@
     "Otros documentos: consulta las bases."
    ],
    "pasos": [
-    "Consulta las bases en la web del Ayuntamiento de Logroño y en el BOR.",
-    "Comprueba que cumples los requisitos.",
-    "Reúne los documentos y los presupuestos de las obras.",
-    "Presenta la solicitud en la Sede Electrónica del Ayuntamiento dentro del plazo.",
+    "Consulta la convocatoria publicada en el BOR para confirmar la fecha de apertura.",
+    "Reúne el presupuesto de las obras y los documentos que pidan las bases.",
+    "Presenta la solicitud dentro de los tres meses de plazo.",
+    "Espera la resolución. Se concede por orden de puntuación y según el crédito disponible.",
     "Haz las obras y justifica el gasto como indiquen las bases."
    ],
    "_revisar": {
@@ -161,7 +189,19 @@
     "beneficiarios": "PERSONAS FÍSICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
     "nota": "Revisa importe por vivienda, requisitos, documentos y pasos antes de aprobar.",
     "bases_no_corresponden": true,
-    "no_auto": true
+    "no_auto": true,
+    "ia": {
+     "fecha": "2026-10-28",
+     "documento": "el enlace de bases de la BDNS es genérico (ley, ordenanza general o portada)",
+     "recomendacion": "publicar",
+     "motivo": "Paga obras para mejorar la accesibilidad dentro de viviendas de particulares en Logroño."
+    },
+    "confirmar": [
+     "No he podido leer la convocatoria de 2026. Los datos vienen de la BDNS, de una noticia y de la web municipal de la convocatoria anterior.",
+     "Comprueba el porcentaje de ayuda (parece el 50 % del presupuesto protegible) y los documentos exigidos.",
+     "Comprueba la fecha exacta de publicación en el BOR, y por tanto el cierre, y cómo se presenta la solicitud.",
+     "Comprueba si la edad de 70 años o la discapacidad son requisitos exactos y si hay límite de ingresos."
+    ]
    },
    "muni": "Logroño",
    "sede": "https://logrono.es/becas-y-subvenciones"
@@ -314,38 +354,35 @@
    "dest": [
     "vivienda"
    ],
-   "importe": 0,
-   "imp": "Cantidad por vivienda sin confirmar en las bases. El Plan de Vivienda de Durango habla de ayudas de hasta 5.000 €. El presupuesto total es de 40.000 €.",
+   "importe": 5000,
+   "imp": "Hasta 5.000 € por vivienda (cifra del Plan de Vivienda municipal, pendiente de confirmar en las bases)",
    "abre": "2026-10-14",
    "cierra": "2026-11-16",
-   "plazo": "Del 14 de octubre al 16 de noviembre de 2026. La BDNS dice que empieza el día siguiente a publicarse el extracto en el Boletín Oficial de Bizkaia.",
+   "plazo": "Desde el día siguiente a la publicación del extracto en el Boletín Oficial de Bizkaia hasta el 16 de noviembre de 2026.",
    "irpf": false,
    "fuente": "BDNS nº 935296",
    "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/935296",
-   "resumen": "El Ayuntamiento de Durango paga obras de reforma en pisos vacíos de propietarios que los incorporen al programa de alquiler social Bizigune. También sirve para pisos que ya estuvieron en Bizigune y necesitan obras para volver a entrar. Las obras son las que indique el equipo técnico de Bizigune. Hay 40.000 € en total.",
+   "resumen": "El Ayuntamiento de Durango ayuda a propietarios de pisos vacíos a pagar las obras que pide el equipo técnico de Bizigune. Después, la vivienda entra en el programa de alquiler social. Se admiten también pisos que ya estuvieron en Bizigune y necesitan reformas para volver a entrar. El presupuesto total es de 40.000 €.",
    "req": [
-    "Ser propietario o propietaria de una vivienda vacía en Durango.",
-    "Adherir la vivienda a Bizigune. Se admiten documentos firmados con Bizigune durante 2026, hasta el fin del plazo.",
-    "Entregar las llaves y formalizar el contrato de usufructo con Bizigune.",
-    "Hacer las obras que marque el informe técnico de Bizigune o Alokabide.",
-    "Estar al corriente de pagos con Hacienda y la Seguridad Social.",
-    "No tener deudas con el Ayuntamiento."
+    "Ser persona propietaria de una vivienda vacía en Durango.",
+    "Haber firmado en 2026 el documento de adhesión a Bizigune (se admiten los firmados hasta el fin del plazo).",
+    "Hacer las obras que indique el equipo técnico de Bizigune.",
+    "Que la vivienda tenga el visto bueno de Bizigune tras las obras.",
+    "Estar al corriente con Hacienda y la Seguridad Social."
    ],
    "docs": [
-    "Solicitud oficial de la ayuda.",
-    "Documento firmado con Bizigune para incluir la vivienda.",
-    "Informe técnico de Bizigune o Alokabide con las obras necesarias.",
+    "Solicitud firmada.",
+    "Documento firmado con Bizigune.",
     "Presupuesto o facturas de las obras.",
-    "Documentos que acrediten que eres propietario o propietaria.",
-    "Certificados de estar al corriente con Hacienda y la Seguridad Social."
+    "Certificados de estar al corriente con Hacienda y la Seguridad Social.",
+    "Documento que acredite que eres propietario o propietaria."
    ],
    "pasos": [
-    "Contacta con Bizigune y firma la adhesión de tu vivienda.",
-    "Pide el informe técnico con las obras que tienes que hacer.",
-    "Presenta la solicitud antes del 16 de noviembre de 2026.",
-    "Espera la resolución del Ayuntamiento.",
-    "Haz las obras que indica el informe técnico.",
-    "Justifica las obras con facturas y consigue el visto bueno técnico de Bizigune."
+    "Contacta con Bizigune y firma la adhesión al programa.",
+    "Pide el informe técnico con las obras necesarias.",
+    "Presenta la solicitud en el Ayuntamiento de Durango antes del 16 de noviembre de 2026.",
+    "Haz las obras que pide Bizigune.",
+    "Justifica las obras con facturas y consigue el visto bueno de Bizigune."
    ],
    "_revisar": {
     "presupuesto_total": 40000,
@@ -354,7 +391,18 @@
     "beneficiarios": "PERSONAS FÍSICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
     "nota": "Revisa importe por vivienda, requisitos, documentos y pasos antes de aprobar.",
     "bases_no_corresponden": true,
-    "no_auto": true
+    "no_auto": true,
+    "ia": {
+     "fecha": "2026-10-28",
+     "documento": "el enlace de bases de la BDNS es genérico (ley, ordenanza general o portada)",
+     "recomendacion": "publicar",
+     "motivo": "Paga obras de rehabilitación en viviendas vacías de Durango cuyos propietarios las incorporan al alquiler social Bizigune."
+    },
+    "confirmar": [
+     "No se han podido leer las bases ni la resolución 2026/3017; los datos vienen de la ficha BDNS y de noticias municipales.",
+     "Comprobar el importe máximo por vivienda (se habla de 5.000 €) y el porcentaje subvencionable.",
+     "Comprobar documentación exacta, forma de solicitud (sede electrónica) y condiciones de permanencia en Bizigune (cinco años)."
+    ]
    },
    "prov": "Bizkaia",
    "muni": "Durango"
@@ -430,7 +478,6 @@
    "ccaa": "Canarias",
    "tipo": [
     "eficiencia",
-    "accesibilidad",
     "rehabilitacion"
    ],
    "dest": [
@@ -440,32 +487,27 @@
    "imp": "Hasta 2.998 € por solicitud, en un único pago",
    "abre": "2026-10-08",
    "cierra": "2026-11-01",
-   "plazo": "Desde el día siguiente a la publicación de la convocatoria (8 de octubre de 2026 en la BDNS) hasta el 1 de noviembre de 2026.",
+   "plazo": "Del 8 de octubre al 1 de noviembre de 2026 (según la BDNS). La BDNS dice que empieza al día siguiente de la publicación.",
    "irpf": false,
    "fuente": "BDNS nº 934466",
    "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/934466",
-   "resumen": "El Ayuntamiento de Arrecife da una ayuda de pago único para obras de mejora en la vivienda habitual de personas con pocos recursos. Cubre arreglar humedades y filtraciones, mejorar el aislamiento, reparar las instalaciones de agua, luz y saneamiento, y obras de seguridad, ventilación, iluminación o adaptación para movilidad reducida. La convocatoria tiene 206.767,68 € en total. Los datos del importe y de los requisitos salen de notas de prensa, porque no se han podido leer las bases oficiales.",
+   "resumen": "El Ayuntamiento de Arrecife da ayudas a particulares para reparar su vivienda habitual: humedades, aislamiento térmico, instalaciones de agua, luz y saneamiento, y seguridad. Se pagan en un único pago. Datos pendientes de comprobar en las bases oficiales.",
    "req": [
-    "Vivir en Arrecife y que la casa sea tu vivienda habitual.",
-    "Ser persona física y tener recursos económicos limitados.",
-    "Que la obra sea de las que cubre la ayuda: humedades, aislamiento, instalaciones, seguridad o accesibilidad.",
-    "Que la obra siga el informe técnico del Ayuntamiento.",
-    "Cumplir los requisitos generales de la convocatoria, que debes comprobar en las bases."
+    "Estar empadronado en la vivienda, en Arrecife, al menos 3 años seguidos (con excepciones en las bases).",
+    "Ser propietario de la vivienda, heredero legítimo o tener autorización de la administración propietaria.",
+    "Que la vivienda tenga más de 10 años y condiciones de habitabilidad insuficientes.",
+    "Cumplir los límites de ingresos de la unidad familiar que fijen las bases."
    ],
    "docs": [
-    "Solicitud en el modelo oficial del Ayuntamiento.",
-    "DNI o NIE de quien solicita.",
-    "Documento que acredite que la vivienda es tuya o que tienes derecho a usarla.",
-    "Justificantes de tus ingresos y de los de tu hogar.",
-    "Presupuesto de la obra o documentación técnica, si la piden."
+    "Solicitud con la documentación acreditativa que piden las bases.",
+    "Presupuesto de las obras previstas."
    ],
    "pasos": [
     "Lee las bases en la sede electrónica del Ayuntamiento de Arrecife.",
-    "Reúne los documentos que piden.",
-    "Presenta la solicitud antes del 1 de noviembre de 2026.",
-    "Espera el informe técnico municipal sobre tu vivienda y la obra.",
-    "Haz la obra tal como indique ese informe.",
-    "Justifica la obra con facturas y comprobantes de pago, y deja que los técnicos la inspeccionen al final."
+    "Pide un presupuesto de las obras.",
+    "Reúne la documentación que piden las bases.",
+    "Presenta la solicitud antes del 1 de noviembre, por la sede electrónica o en el registro del Ayuntamiento.",
+    "Justifica la obra cuando te lo pidan."
    ],
    "_revisar": {
     "presupuesto_total": 206767.68,
@@ -474,7 +516,19 @@
     "beneficiarios": "PERSONAS FÍSICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
     "nota": "Revisa importe por vivienda, requisitos, documentos y pasos antes de aprobar.",
     "bases_no_corresponden": true,
-    "no_auto": true
+    "no_auto": true,
+    "ia": {
+     "fecha": "2026-10-28",
+     "documento": "el enlace de bases de la BDNS es genérico (ley, ordenanza general o portada)",
+     "recomendacion": "publicar",
+     "motivo": "Subvención municipal a particulares para rehabilitar su vivienda habitual (humedades, aislamiento, instalaciones, seguridad)."
+    },
+    "confirmar": [
+     "No se han podido leer las bases ni la convocatoria oficial; los datos salen de la BDNS y de prensa local (Canarias7).",
+     "Comprobar el límite de ingresos, el plazo de justificación y la lista exacta de documentos.",
+     "Confirmar si 2.998 € es el máximo por vivienda y si hay un porcentaje de la obra subvencionado.",
+     "Confirmar si el plazo termina el 1 de noviembre y la fecha exacta de inicio."
+    ]
    },
    "prov": "Las Palmas",
    "muni": "Arrecife",
@@ -495,28 +549,28 @@
    ],
    "importe": 0,
    "imp": "No consta el importe por vivienda. El presupuesto total de la convocatoria es de 5.000 €.",
-   "abre": "2026-10-03",
-   "cierra": null,
-   "plazo": "Empieza al día siguiente de publicarse el extracto de la convocatoria en el BOP. Dura 20 días desde esa publicación. La fecha exacta de cierre no figura en la ficha.",
+   "abre": "2026-10-07",
+   "cierra": "2026-11-05",
+   "plazo": "Del 7 de octubre al 5 de noviembre de 2026, ambos incluidos. Estas fechas vienen de una noticia de prensa, no de las bases oficiales.",
    "irpf": false,
    "fuente": "BDNS nº 933040",
    "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/933040",
-   "resumen": "El Ayuntamiento de El Almendro (Huelva) convoca en 2026 subvenciones para rehabilitar inmuebles. Pueden pedirlas particulares que no tengan actividad económica. El presupuesto total de la convocatoria es de 5.000 €. Se concede por concurrencia competitiva, es decir, se comparan las solicitudes entre sí.",
+   "resumen": "El Ayuntamiento de El Almendro da subvenciones a propietarios o inquilinos de viviendas e inmuebles del casco urbano. Sirven para obras de mejora en el exterior o el interior. El presupuesto total de la convocatoria es de 5.000 €.",
    "req": [
-    "Ser persona física sin actividad económica.",
-    "Tener el inmueble a rehabilitar en El Almendro.",
-    "Cumplir las condiciones de las bases de la convocatoria 2026, que debes confirmar en el decreto de convocatoria."
+    "Ser propietario o arrendatario de una vivienda o inmueble en el casco urbano de El Almendro.",
+    "Tener proyectada una obra de reforma, exterior o interior.",
+    "Ser persona física que no desarrolla actividad económica."
    ],
    "docs": [
-    "Solicitud con el Anexo I y el Anexo II.",
-    "Documentación que piden las bases, que debes consultar en el Decreto de Convocatoria 2026."
+    "Solicitud con el modelo normalizado (Anexos I y II).",
+    "Los demás documentos no constan: mira las bases en la sede electrónica."
    ],
    "pasos": [
-    "Busca el Decreto de Convocatoria 2026 y los Anexos I y II en la sede electrónica del Ayuntamiento.",
-    "Comprueba la fecha de publicación del extracto en el BOP para saber cuándo termina el plazo.",
-    "Rellena los Anexos I y II y reúne la documentación.",
-    "Presenta la solicitud por la sede electrónica del Ayuntamiento dentro de los 20 días.",
-    "Cuando te concedan la ayuda, justifica la obra como indiquen las bases."
+    "Lee la convocatoria completa en la sede electrónica del Ayuntamiento o en su Secretaría.",
+    "Rellena los modelos de solicitud (Anexos I y II).",
+    "Presenta la solicitud en la sede electrónica o en el Ayuntamiento dentro del plazo.",
+    "Espera la resolución del Ayuntamiento.",
+    "Haz la obra y justifícala según indiquen las bases."
    ],
    "_revisar": {
     "presupuesto_total": 5000,
@@ -525,7 +579,19 @@
     "beneficiarios": "PERSONAS FÍSICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
     "nota": "Revisa importe por vivienda, requisitos, documentos y pasos antes de aprobar.",
     "bases_no_corresponden": true,
-    "no_auto": true
+    "no_auto": true,
+    "referencia_bases": "Bases reguladoras publicadas en el BOP de Huelva (el número y la fecha no constan).",
+    "ia": {
+     "fecha": "2026-10-28",
+     "documento": "el enlace de bases de la BDNS es genérico (ley, ordenanza general o portada) (extracto; bases en Bases reguladoras publicadas en el BOP de Huelva (el número y la fecha no constan).)",
+     "recomendacion": "publicar",
+     "motivo": "Subvención municipal para obras de reforma, interior y exterior, en viviendas e inmuebles del casco urbano de El Almendro."
+    },
+    "confirmar": [
+     "No se han podido leer las bases ni el decreto de convocatoria: faltan el importe por vivienda, el porcentaje y el máximo.",
+     "Comprueba los requisitos, los documentos y la forma de justificar la obra en el decreto de convocatoria.",
+     "Comprueba el plazo exacto: la BDNS dice 20 días desde el extracto en el BOP y la prensa dice del 7 de octubre al 5 de noviembre de 2026."
+    ]
    },
    "prov": "Huelva",
    "muni": "Almendro, El",
@@ -533,8 +599,8 @@
   },
   {
    "id": "bdns-937771",
-   "estado": "pendiente",
-   "title": "Proyecto de autoconstrucción de primera vivienda en Barlovento",
+   "estado": "descartada",
+   "title": "Proyectos de autoconstrucción de primera vivienda en Barlovento",
    "org": "BARLOVENTO · AYUNTAMIENTO DE BARLOVENTO",
    "scope": "municipal",
    "ccaa": "Canarias",
@@ -548,11 +614,11 @@
    "imp": "Hasta el 75 % de los honorarios del proyecto, con un límite de 3.000 €, 5.000 € o 7.000 € según lo que cueste el proyecto (según las bases de 2023)",
    "abre": "2026-10-26",
    "cierra": null,
-   "plazo": "10 días hábiles desde el día siguiente a la publicación del anuncio en el Boletín Oficial de la Provincia (BOP) de Santa Cruz de Tenerife. No tenemos la fecha exacta de publicación, así que no podemos dar fechas de inicio y fin.",
+   "plazo": "Diez días hábiles a partir del día siguiente a la publicación en el BOP. No se conoce la fecha exacta de publicación.",
    "irpf": false,
    "fuente": "BDNS nº 937771",
    "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/937771",
-   "resumen": "El Ayuntamiento de Barlovento (La Palma) paga parte de lo que cuesta que un técnico redacte el proyecto de tu primera vivienda nueva. Es para personas empadronadas en el municipio. El presupuesto total de la convocatoria es de 8.000 €.",
+   "resumen": "El Ayuntamiento de Barlovento convoca ayudas para la redacción de proyectos de autoconstrucción de primera vivienda (año 2026). El presupuesto total es de 8.000 €. No se han podido leer las bases, así que faltan importe por persona, requisitos y forma de solicitud.",
    "req": [
     "Que sea tu primera vivienda y una construcción nueva.",
     "Estar empadronado y vivir en Barlovento cuando pidas la ayuda y durante el año anterior al periodo subvencionable.",
@@ -587,7 +653,19 @@
     "beneficiarios": "PERSONAS FÍSICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
     "nota": "Revisa importe por vivienda, requisitos, documentos y pasos antes de aprobar.",
     "bases_no_corresponden": true,
-    "no_auto": true
+    "no_auto": true,
+    "referencia_bases": "Bases reguladoras del Ayuntamiento de Barlovento publicadas en el Boletín Oficial de la Provincia de Santa Cruz de Tenerife (BOP); número y fecha no indicados.",
+    "ia": {
+     "fecha": "2026-10-28",
+     "documento": "el enlace de bases de la BDNS es genérico (ley, ordenanza general o portada) (extracto; bases en Bases reguladoras del Ayuntamiento de Barlovento publicadas en el Boletín Oficial de la Provincia de Santa Cruz de Tenerife (BOP); número y fecha no indicados.)",
+     "recomendacion": "descartar",
+     "motivo": "La ayuda paga la redacción de proyectos técnicos para autoconstruir una primera vivienda, no obras de reforma, rehabilitación ni construcción en sí. No he podido leer las bases para confirmar otra cosa."
+    },
+    "confirmar": [
+     "No se han leído las bases ni el decreto: faltan importe por persona, requisitos, documentos y forma de solicitud.",
+     "Comprobar si la ayuda cubre solo la redacción del proyecto técnico o también obras.",
+     "Confirmar la fecha de publicación en el BOP para fijar el cierre del plazo."
+    ]
    },
    "prov": "Santa Cruz de Tenerife",
    "muni": "Barlovento"

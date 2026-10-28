@@ -1,50 +1,53 @@
 {
- "fecha": "2026-10-28T16:52",
+ "fecha": "2026-10-28T17:57",
  "modelo": "claude-sonnet-5-5",
  "procesadas": [
   {
    "id": "bdns-937551",
-   "documento": "página web",
-   "coste_usd": 0.8361,
+   "documento": "el enlace de bases de la BDNS es genérico (ley, ordenanza general o portada) (extracto; bases en Convocatoria 2026 publicada en el BOP de Barcelona (BDNS 937551). Ver el documento en español adjunto a la ficha de la BDNS.)",
+   "coste_usd": 0.4345,
    "recomendacion": "publicar"
   },
   {
    "id": "bdns-937124",
-   "documento": "página web",
-   "coste_usd": 0.137,
+   "documento": "el enlace de bases de la BDNS es genérico (ley, ordenanza general o portada) (extracto; bases en Ordenanza General de Subvenciones 2026 del Ayuntamiento de Sant Joan de Vilatorrada. La convocatoria se publicó en el BOPB el 26/10/2026 (BDNS 937124).)",
+   "coste_usd": 0.3423,
    "recomendacion": "publicar"
   },
   {
    "id": "bdns-935742",
-   "documento": "página web",
-   "coste_usd": 0.0335,
+   "documento": "el enlace de bases de la BDNS es genérico (ley, ordenanza general o portada)",
+   "coste_usd": 0.1413,
    "recomendacion": "publicar"
   },
   {
    "id": "bdns-935296",
-   "documento": "no se pudo descargar (HTTP Error 403: Forbidden)",
-   "coste_usd": 0.1621,
-   "recomendacion": "publicar"
-  },
-  {
-   "id": "bdns-934927",
-   "documento": "página web",
-   "coste_usd": 0.0846,
+   "documento": "el enlace de bases de la BDNS es genérico (ley, ordenanza general o portada)",
+   "coste_usd": 0.1654,
    "recomendacion": "publicar"
   },
   {
    "id": "bdns-934466",
-   "documento": "no se pudo descargar (<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'arrecife.sedeelectronica.es'. (_ssl.c:1010)>)",
-   "coste_usd": 0.2029,
+   "documento": "el enlace de bases de la BDNS es genérico (ley, ordenanza general o portada)",
+   "coste_usd": 0.1405,
    "recomendacion": "publicar"
   },
   {
    "id": "bdns-933040",
-   "documento": "página web",
-   "coste_usd": 0.0903,
+   "documento": "el enlace de bases de la BDNS es genérico (ley, ordenanza general o portada) (extracto; bases en Bases reguladoras publicadas en el BOP de Huelva (el número y la fecha no constan).)",
+   "coste_usd": 0.2833,
    "recomendacion": "publicar"
+  },
+  {
+   "id": "bdns-937771",
+   "documento": "el enlace de bases de la BDNS es genérico (ley, ordenanza general o portada) (extracto; bases en Bases reguladoras del Ayuntamiento de Barlovento publicadas en el Boletín Oficial de la Provincia de Santa Cruz de Tenerife (BOP); número y fecha no indicados.)",
+   "coste_usd": 0.0516,
+   "recomendacion": "descartar"
   }
  ],
  "errores": [],
- "coste_usd": 1.546
+ "coste_usd": 1.559,
+ "pendientes_por_tope": 0,
+ "gasto_mes_usd": 5.559,
+ "limite_mes_usd": 15.0
 }
