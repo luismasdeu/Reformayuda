@@ -5,7 +5,7 @@
   {
    "id": "bdns-933993",
    "estado": "pendiente",
-   "title": "Compra o autopromoción de primera vivienda en Almussafes",
+   "title": "Construir (autopromover) tu primera vivienda en Almussafes",
    "org": "ALMUSSAFES · AYUNTAMIENTO DE ALMUSSAFES",
    "scope": "municipal",
    "ccaa": "Comunitat Valenciana",
@@ -23,16 +23,16 @@
    "irpf": false,
    "fuente": "BDNS nº 933993",
    "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/933993",
-   "resumen": "El Ayuntamiento de Almussafes da una ayuda a quien compra o autopromueve su primera vivienda en la zona urbana del municipio. La compra o la autopromoción debe haberse hecho entre el 1 de septiembre de 2025 y el 31 de agosto de 2026.",
+   "resumen": "El Ayuntamiento de Almussafes da hasta 2.500 € a quien construye por su cuenta (autopromueve) su primera vivienda en la zona urbana, si la obra se hizo entre el 1/9/2025 y el 31/8/2026. La convocatoria también cubre la compra, pero en Reformayuda solo se muestra para construir.",
    "req": [
-    "Comprar o autopromover tu primera vivienda.",
+    "Construir (autopromover) tu primera vivienda.",
     "La vivienda debe estar en la zona urbana de Almussafes.",
-    "La compra o autopromoción debe haberse hecho entre el 1 de septiembre de 2025 y el 31 de agosto de 2026.",
+    "La autopromoción debe haberse hecho entre el 1 de septiembre de 2025 y el 31 de agosto de 2026.",
     "Cumplir los demás requisitos de la base cuarta de las bases, que no se han podido consultar."
    ],
    "docs": [
     "Solicitud en el modelo oficial del Ayuntamiento.",
-    "Documentación que acredite la compra o la autopromoción de la vivienda.",
+    "Documentación que acredite la autopromoción de la vivienda (licencia, certificado final de obra…).",
     "El resto de documentos que pidan las bases, que no se han podido consultar."
    ],
    "pasos": [
