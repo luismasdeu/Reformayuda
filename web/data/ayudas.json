@@ -1,6 +1,6 @@
 {
  "_leeme": "Ayudas publicadas en la app. Edita con cuidado: el formato se comprueba antes de publicar (scripts/validar.py).",
- "actualizado": "2026-10-25",
+ "actualizado": "2026-10-28",
  "ayudas": [
   {
    "id": "pev-rehab",
@@ -168,6 +168,94 @@
     "Pide la bonificación al solicitar la licencia"
    ],
    "revisada": "2026-10-25"
+  },
+  {
+   "id": "bdns-933977",
+   "title": "Rehabilitación y eficiencia energética de viviendas y edificios",
+   "org": "Junta de Comunidades de Castilla-La Mancha · Dirección General de Vivienda",
+   "scope": "autonomica",
+   "ccaa": "Castilla-La Mancha",
+   "tipo": [
+    "eficiencia",
+    "aerotermia",
+    "ventanas",
+    "rehabilitacion"
+   ],
+   "dest": [
+    "vivienda",
+    "edificio"
+   ],
+   "importe": 0,
+   "imp": "Consulta la cuantía por vivienda en la convocatoria",
+   "abre": "2026-10-27",
+   "cierra": "2026-11-30",
+   "plazo": "Hasta el 30/11/2026",
+   "irpf": true,
+   "fuente": "BDNS nº 933977",
+   "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/933977",
+   "resumen": "Ayudas cofinanciadas con fondos europeos (FEDER) para mejorar el aislamiento, las ventanas, la calefacción y la eficiencia de viviendas y edificios de viviendas de Castilla-La Mancha. Presupuesto total: 50 millones de euros.",
+   "req": [
+    "Vivienda o edificio de viviendas en Castilla-La Mancha",
+    "Que la obra mejore la eficiencia energética (confirma el ahorro mínimo exigido)",
+    "Pedirla antes de empezar la obra (confírmalo en la convocatoria)"
+   ],
+   "docs": [
+    "DNI/NIE (o CIF de la comunidad de propietarios)",
+    "Certificado de eficiencia energética antes de la obra",
+    "Presupuesto desglosado",
+    "Memoria técnica de la obra",
+    "Acta de la junta, si es un edificio"
+   ],
+   "pasos": [
+    "Encarga el certificado energético y la memoria técnica",
+    "Si es un edificio, aprobad la obra en junta",
+    "Presenta la solicitud en la sede electrónica de la Junta (jccm.es) entre el 27/10 y el 30/11/2026",
+    "Haz la obra y justifícala con facturas y el certificado energético final"
+   ],
+   "revisada": "2026-10-28"
+  },
+  {
+   "id": "bdns-937189",
+   "title": "Rehabilitación de fachadas en Navata",
+   "org": "Ayuntamiento de Navata (Girona)",
+   "scope": "municipal",
+   "ccaa": "Cataluña",
+   "tipo": [
+    "rehabilitacion"
+   ],
+   "dest": [
+    "vivienda",
+    "edificio"
+   ],
+   "importe": 0,
+   "imp": "Ayuda municipal pequeña: 2.400 € en total para todo el municipio",
+   "abre": "2026-10-26",
+   "cierra": "2026-11-26",
+   "plazo": "Hasta el 26/11/2026",
+   "irpf": false,
+   "fuente": "BDNS nº 937189",
+   "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/937189",
+   "resumen": "Subvención del Ayuntamiento de Navata para arreglar y pintar las fachadas de casas y edificios del municipio en 2026. El presupuesto total es pequeño, así que conviene pedirla pronto.",
+   "req": [
+    "Casa o edificio en el municipio de Navata",
+    "Que la obra sea de rehabilitación de la fachada",
+    "Pedirla antes de hacer la obra (confírmalo en las bases)"
+   ],
+   "docs": [
+    "DNI/NIE",
+    "Presupuesto de la obra",
+    "Fotos de la fachada actual",
+    "Licencia o comunicación de obra del ayuntamiento"
+   ],
+   "pasos": [
+    "Lee las bases en el Boletín Oficial de la Provincia de Girona",
+    "Pide presupuesto y tramita el permiso de obra",
+    "Presenta la solicitud en el Ayuntamiento de Navata antes del 26/11/2026",
+    "Haz la obra y justifícala con la factura"
+   ],
+   "prov": "Girona",
+   "muni": "Navata",
+   "revisada": "2026-10-28"
   }
  ]
 }
