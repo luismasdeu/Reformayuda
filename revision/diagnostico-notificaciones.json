@@ -1,14 +1,10 @@
 {
- "fecha": "2026-10-28T12:54",
- "modo": "prueba",
- "suscripciones": 1,
- "con_algo_que_enviar": 1,
+ "fecha": "2026-10-28T12:57",
+ "modo": "diario",
+ "suscripciones": 0,
+ "con_algo_que_enviar": 0,
  "enviadas": 0,
- "caducadas_borradas": 1,
- "zonas": [
-  "Andalucía/Málaga"
- ],
- "errores": [
-  "UnregisteredError: Device unregistered."
- ]
+ "caducadas_borradas": 0,
+ "zonas": [],
+ "errores": []
 }
