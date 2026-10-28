@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<title>Revisar ayudas</title>
+<link rel="icon" href="/favicon.ico">
+<link rel="stylesheet" href="/estatico.css">
+<style>
+/* Página privada para revisar candidatas desde el móvil. Guarda los cambios en GitHub con tu token. */
+main{padding-top:12px;padding-bottom:60px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:16px;margin:14px 0}
+.meta{color:var(--muted);font-size:.88rem;margin:4px 0 8px}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0}
+.chip{border:1px solid var(--line);background:transparent;color:var(--ink);border-radius:99px;padding:5px 11px;font:inherit;font-size:.85rem;cursor:pointer}
+.chip.on{background:var(--brand);border-color:var(--brand);color:var(--brand-ink)}
+label.f{display:block;font-size:.8rem;color:var(--muted);margin-top:10px}
+input,textarea,select{width:100%;font:inherit;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:8px 10px;margin-top:3px}
+textarea{min-height:84px}
+.row{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+.row>*{flex:1 1 140px}
+.b{border:0;border-radius:12px;padding:12px 14px;font:700 1rem "Nunito Sans",system-ui,sans-serif;cursor:pointer;text-align:center;text-decoration:none;display:inline-block}
+.ok{background:var(--ok);color:#fff}.no{background:var(--bad-bg);color:var(--bad)}.alt{background:var(--bg);color:var(--ink);border:1px solid var(--line)}
+.aviso{background:var(--warn-bg);border:1px solid var(--warn);border-radius:12px;padding:10px 12px;font-size:.9rem;margin:10px 0}
+.aviso ul{margin:4px 0 0;padding-left:18px}
+.hecho{opacity:.55}
+details summary{cursor:pointer;color:var(--brand);font-weight:700;margin-top:10px}
+#estado{position:sticky;top:0;z-index:2;background:var(--bg);padding:8px 0;font-weight:700}
+.vacio{text-align:center;color:var(--muted);padding:40px 0}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap" style="display:flex;justify-content:space-between;align-items:center;padding-top:10px;padding-bottom:10px">
+  <a href="/" style="font:800 1.2rem 'Bricolage Grotesque',sans-serif;text-decoration:none;color:var(--ink)">Reform<span style="color:var(--coral)">ayuda</span></a>
+  <span class="meta" style="margin:0">Revisar ayudas</span>
+</div></header>
+<main class="wrap">
+  <div id="estado"></div>
+  <div id="app"></div>
+</main>
+<script>
+const REPO="luismasdeu/Reformayuda", RUTA="revision/candidatas.json", ADMIN="revision/admin.json";
+const TIPOS={eficiencia:"Eficiencia",solar:"Placas solares",aerotermia:"Aerotermia",ventanas:"Ventanas",accesibilidad:"Accesibilidad",rehabilitacion:"Rehabilitación",construccion:"Construcción"};
+const GENERICO=/^Consulta /;
+const $=s=>document.querySelector(s);
+const esc=s=>String(s??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const guardado={get(k,d){try{return JSON.parse(localStorage.getItem("rfm_rev_"+k))??d}catch(e){return d}},set(k,v){try{localStorage.setItem("rfm_rev_"+k,JSON.stringify(v))}catch(e){}}};
+let token=guardado.get("token",""), datos=null, sha=null;
+const estado=t=>$("#estado").textContent=t||"";
+
+// ---- GitHub ----
+const b64=s=>btoa(String.fromCharCode(...new TextEncoder().encode(s)));
+const de64=s=>new TextDecoder().decode(Uint8Array.from(atob(s.replace(/\n/g,"")),c=>c.charCodeAt(0)));
+async function gh(ruta,op={}){
+  const r=await fetch(`https://api.github.com/repos/${REPO}/contents/${ruta}`,{...op,cache:"no-store",headers:{Authorization:"Bearer "+token,Accept:"application/vnd.github+json",...(op.headers||{})}});
+  if(r.status===401||r.status===403){throw new Error("token")}
+  return r;
+}
+async function leer(ruta){const r=await gh(ruta+"?ref=main");if(r.status===404)return{json:null,sha:null};const j=await r.json();return{json:JSON.parse(de64(j.content)),sha:j.sha}}
+async function escribir(ruta,json,shaActual,mensaje){
+  return gh(ruta,{method:"PUT",body:JSON.stringify({message:mensaje,branch:"main",content:b64(JSON.stringify(json,null,1)+"\n"),...(shaActual?{sha:shaActual}:{})})});
+}
+// Guarda un cambio leyendo antes la última versión, por si GitHub ha añadido candidatas mientras tanto.
+async function cambiar(id,fn,mensaje){
+  for(let i=0;i<3;i++){
+    const f=await leer(RUTA);const c=f.json.candidatas.find(x=>x.id===id);
+    if(!c)return true;
+    fn(c);
+    const r=await escribir(RUTA,f.json,f.sha,mensaje);
+    if(r.ok){datos=f.json;return true}
+    if(r.status!==409&&r.status!==422)throw new Error("GitHub "+r.status);
+  }
+  throw new Error("conflicto");
+}
+
+// ---- pantallas ----
+function pedirToken(error){
+  estado("");
+  $("#app").innerHTML=`<div class="card"><h1 style="font-size:1.5rem">Revisar ayudas</h1>
+  ${error?`<div class="aviso">${esc(error)}</div>`:""}
+  <p>Esta página es solo para ti. Para guardar lo que apruebas necesita una <b>llave de GitHub</b> que se queda guardada únicamente en este móvil.</p>
+  <ol>
+   <li>Abre <a href="https://github.com/settings/personal-access-tokens/new" target="_blank" rel="noopener">crear llave en GitHub</a>.</li>
+   <li><b>Token name:</b> Revisar Reformayuda. <b>Expiration:</b> 1 año (o el máximo).</li>
+   <li><b>Repository access:</b> «Only select repositories» → <b>Reformayuda</b>.</li>
+   <li><b>Permissions → Repository permissions → Contents:</b> «Read and write».</li>
+   <li><b>Generate token</b>, cópialo y pégalo aquí.</li>
+  </ol>
+  <label class="f">Llave de GitHub<input id="tk" type="password" autocomplete="off" placeholder="github_pat_…"></label>
+  <div class="row"><button class="b ok" id="tk-ok">Guardar y entrar</button></div>
+  <p class="meta">No la compartas con nadie. Si pierdes el móvil, bórrala en GitHub → Settings → Personal access tokens.</p></div>`;
+  $("#tk-ok").onclick=()=>{token=$("#tk").value.trim();guardado.set("token",token);cargar()};
+}
+async function cargar(){
+  if(!token)return pedirToken();
+  estado("Cargando…");
+  try{const f=await leer(RUTA);datos=f.json;sha=f.sha;pintar()}
+  catch(e){if(e.message==="token"){guardado.set("token","");pedirToken("La llave no funciona o ha caducado. Crea otra.")}else estado("No se ha podido cargar. Revisa la conexión y recarga.")}
+}
+function pendientes(){return(datos.candidatas||[]).filter(c=>(c.estado||"pendiente")==="pendiente")}
+function zona(c){return[c.muni,c.prov&&c.prov!==c.muni&&c.prov!==c.ccaa?c.prov:"",c.ccaa==="all"?"Toda España":c.ccaa].filter(Boolean).join(" · ")}
+function pintar(){
+  const p=pendientes(), boe=(datos.boe||[]).filter(b=>b.estado!=="vista");
+  estado(p.length?`${p.length} ayuda${p.length>1?"s":""} por revisar`:"");
+  $("#app").innerHTML=`${avisosHtml()}
+   ${p.length?"":`<div class="vacio">✅ No hay nada por revisar.<br>Te avisaremos cuando la búsqueda diaria encuentre ayudas nuevas.</div>`}
+   ${p.map(tarjeta).join("")}
+   ${boe.length?`<h2>Avisos del BOE</h2>${boe.map(b=>`<div class="card" data-boe="${esc(b.id)}"><p style="margin:0">${esc(b.titulo)}</p><p class="meta">${esc(b.fecha)}</p><div class="row"><a class="b alt" href="${esc(b.url)}" target="_blank" rel="noopener">Leer en el BOE</a><button class="b alt" data-vista="${esc(b.id)}">Vista</button></div></div>`).join("")}`:""}
+   <p class="meta" style="margin-top:30px">Al publicar o descartar, la web se actualiza sola en uno o dos minutos. <button class="chip" id="salir">Olvidar la llave en este móvil</button></p>`;
+  enlazar();
+}
+function tarjeta(c){
+  const r=c._revisar||{}, gen=[c.imp,...(c.req||[])].some(x=>GENERICO.test(x||""));
+  const lista=a=>esc((a||[]).join("\n"));
+  return`<div class="card" data-id="${esc(c.id)}">
+   <p class="meta" style="margin-top:0">${esc(zona(c))} · ${esc(c.org)}</p>
+   <label class="f">Título (corto y claro)<input data-k="title" value="${esc(c.title)}"></label>
+   ${c.resumen&&c.resumen!==c.title?`<p style="margin:8px 0 0">${esc(c.resumen)}</p>`:""}
+   ${r.beneficiarios?`<p class="meta">Para: ${esc(r.beneficiarios.toLowerCase())}${r.presupuesto_total?` · presupuesto total ${Number(r.presupuesto_total).toLocaleString("es-ES")} €`:""}</p>`:""}
+   <div class="row" style="margin-top:6px">
+    <a class="b alt" href="${esc(c.url)}" target="_blank" rel="noopener">Ver convocatoria</a>
+    ${r.bases_reguladoras?`<a class="b alt" href="${esc(r.bases_reguladoras)}" target="_blank" rel="noopener">Ver bases</a>`:""}
+   </div>
+   ${r.confirmar?`<div class="aviso"><b>Comprueba en las bases:</b><ul>${r.confirmar.map(x=>`<li>${esc(x)}</li>`).join("")}</ul></div>`:""}
+   ${gen?`<div class="aviso">Tiene datos genéricos («Consulta…»). Si la publicas así, la gente verá que debe mirar la convocatoria. Mejor rellena al menos el importe y el plazo.</div>`:""}
+   <label class="f">Cuánto da (en palabras)<input data-k="imp" value="${esc(c.imp)}" placeholder="Hasta 10.000 € por vivienda"></label>
+   <div class="row" style="margin-top:0">
+    <label class="f">Importe máximo (€)<input data-k="importe" type="number" inputmode="numeric" value="${c.importe||""}"></label>
+    <label class="f">Último día<input data-k="cierra" type="date" value="${esc(c.cierra||"")}"></label>
+   </div>
+   <label class="f">Tipo de obra</label>
+   <div class="chips">${Object.entries(TIPOS).map(([k,v])=>`<button class="chip ${(c.tipo||[]).includes(k)?"on":""}" data-tipo="${k}">${v}</button>`).join("")}</div>
+   <details><summary>Requisitos, documentos y pasos</summary>
+    <label class="f">Requisitos (uno por línea)<textarea data-k="req">${lista(c.req)}</textarea></label>
+    <label class="f">Documentos (uno por línea)<textarea data-k="docs">${lista(c.docs)}</textarea></label>
+    <label class="f">Cómo se pide (uno por línea)<textarea data-k="pasos">${lista(c.pasos)}</textarea></label>
+    <div class="row" style="margin-top:0">
+     <label class="f">Edad mínima<input data-k="edadmin" type="number" inputmode="numeric" value="${c.edad?.min||""}"></label>
+     <label class="f">Edad máxima<input data-k="edadmax" type="number" inputmode="numeric" value="${c.edad?.max||""}"></label>
+    </div>
+   </details>
+   <div class="row"><button class="b ok" data-pub>✓ Publicar</button><button class="b no" data-desc>✗ Descartar</button></div>
+  </div>`;
+}
+function leerTarjeta(el,c){
+  const v=k=>el.querySelector(`[data-k="${k}"]`).value.trim(), lin=k=>v(k).split("\n").map(s=>s.trim()).filter(Boolean);
+  c.title=v("title")||c.title; c.imp=v("imp")||c.imp; c.importe=Number(v("importe"))||0; c.cierra=v("cierra")||null;
+  if(c.cierra)c.plazo=`Hasta el ${c.cierra.split("-").reverse().join("/")}`;
+  const t=[...el.querySelectorAll(".chip.on[data-tipo]")].map(b=>b.dataset.tipo); if(t.length)c.tipo=t;
+  for(const k of["req","docs","pasos"]){const l=lin(k);if(l.length)c[k]=l}
+  const mn=Number(v("edadmin")),mx=Number(v("edadmax"));
+  if(mn||mx)c.edad={...(mn?{min:mn}:{}),...(mx?{max:mx}:{})};else delete c.edad;
+}
+function enlazar(){
+  document.querySelectorAll("[data-tipo]").forEach(b=>b.onclick=()=>b.classList.toggle("on"));
+  document.querySelectorAll(".card[data-id]").forEach(el=>{
+    const id=el.dataset.id, bot=el.querySelectorAll(".b.ok,.b.no");
+    const hacer=async(pub)=>{
+      const copia={};leerTarjeta(el,copia);
+      if(pub&&!el.querySelector(".chip.on[data-tipo]"))return alert("Marca al menos un tipo de obra.");
+      if(!pub&&!confirm("¿Descartar esta ayuda? No se volverá a proponer."))return;
+      bot.forEach(b=>b.disabled=true);el.classList.add("hecho");estado("Guardando…");
+      try{
+        await cambiar(id,c=>{if(pub){leerTarjeta(el,c);c.estado="aprobada"}else c.estado="descartada"},`Revisión desde el móvil: ${pub?"publica":"descarta"} ${id}`);
+        el.outerHTML=`<div class="card hecho"><b>${pub?"✓ Publicada":"✗ Descartada"}:</b> ${esc(copia.title||id)}</div>`;
+        const n=pendientes().length;estado(n?`${n} por revisar`:"Todo revisado ✅");
+      }catch(e){bot.forEach(b=>b.disabled=false);el.classList.remove("hecho");estado(e.message==="token"?"La llave no funciona: recarga y crea otra.":"No se ha guardado. Inténtalo otra vez.")}
+    };
+    el.querySelector("[data-pub]").onclick=()=>hacer(true);
+    el.querySelector("[data-desc]").onclick=()=>hacer(false);
+  });
+  document.querySelectorAll("[data-vista]").forEach(b=>b.onclick=async()=>{
+    b.disabled=true;
+    try{for(let i=0;i<3;i++){const f=await leer(RUTA);const x=(f.json.boe||[]).find(y=>y.id===b.dataset.vista);if(!x)break;x.estado="vista";const r=await escribir(RUTA,f.json,f.sha,"Revisión desde el móvil: BOE visto");if(r.ok){datos=f.json;break}}
+      b.closest(".card").remove()}catch(e){b.disabled=false}
+  });
+  $("#salir").onclick=()=>{if(confirm("¿Olvidar la llave en este móvil?")){guardado.set("token","");pedirToken()}};
+  const av=$("#av-on"); if(av)av.onclick=activarAvisos;
+}
+
+// ---- avisos en este móvil cuando haya ayudas por revisar ----
+const FB={apiKey:"AIzaSyBnvt0e9fSwsRqWCewitcA3SrL7Tcsh75Y",authDomain:"reformayuda-ef6f4.firebaseapp.com",projectId:"reformayuda-ef6f4",storageBucket:"reformayuda-ef6f4.firebasestorage.app",messagingSenderId:"249778004250",appId:"1:249778004250:web:787b56f40985bdcd6a0ca3"};
+const FB_VAPID="BDk0SzPV6it_dsEZF-GfAiZ4o55u6ahNfUGWN_Sb8NoyDN7hsNclppvcZ21vVK0uVxukWW-X7sKmoCE6x9PpkG8";
+const FB_SDK="https://www.gstatic.com/firebasejs/10.12.2/";
+function avisosHtml(){
+  if(!("serviceWorker" in navigator&&"PushManager" in window))return"";
+  if(guardado.get("avisos",false))return`<p class="meta">🔔 Te avisamos en este móvil cuando haya ayudas por revisar.</p>`;
+  return`<div class="card"><b>¿Te avisamos cuando haya ayudas nuevas por revisar?</b><p class="meta">Una notificación en este móvil después de la búsqueda de cada mañana, solo si hay algo nuevo.</p><button class="b ok" id="av-on">Avisarme en este móvil</button></div>`;
+}
+const script=src=>new Promise((ok,ko)=>{const s=document.createElement("script");s.src=src;s.onload=ok;s.onerror=ko;document.head.appendChild(s)});
+async function activarAvisos(){
+  if(await Notification.requestPermission()!=="granted")return alert("Sin permiso de notificaciones no podemos avisarte.");
+  estado("Activando avisos…");
+  try{
+    for(const f of["firebase-app-compat.js","firebase-messaging-compat.js"])await script(FB_SDK+f);
+    if(!firebase.apps.length)firebase.initializeApp(FB);
+    const reg=await navigator.serviceWorker.ready;
+    const tk=await firebase.messaging().getToken({vapidKey:FB_VAPID,serviceWorkerRegistration:reg});
+    for(let i=0;i<3;i++){
+      const f=await leer(ADMIN);const j=f.json||{_leeme:"Móviles que reciben el aviso de «ayudas por revisar». Se añaden desde reformayuda.es/revisar/.",tokens:[]};
+      if(j.tokens.includes(tk))break;
+      j.tokens=[...j.tokens,tk].slice(-3);
+      if((await escribir(ADMIN,j,f.sha,"Aviso de revisión en un móvil nuevo")).ok)break;
+    }
+    guardado.set("avisos",true);pintar();estado("Avisos activados ✅");
+  }catch(e){console.error(e);estado("No se han podido activar los avisos.")}
+}
+
+if("serviceWorker" in navigator)navigator.serviceWorker.register("/sw.js").catch(()=>{});
+cargar();
+</script>
+</body>
+</html>

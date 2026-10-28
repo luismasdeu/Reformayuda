@@ -60,6 +60,10 @@ En **Actions → Buscar ayudas nuevas → Run workflow**, pon `30` en «Días ha
 
 ## 2. El día a día: revisar ayudas (5-10 minutos)
 
+**Lo fácil: desde el móvil en https://reformayuda.es/revisar/.** Cada ayuda sale como una tarjeta con enlaces a la convocatoria y las bases, los campos principales para corregir y dos botones: **Publicar** y **Descartar**. La primera vez pide una llave de GitHub (las instrucciones salen en la propia página) y ofrece **avisarte con una notificación** cada mañana que haya ayudas nuevas por revisar. La página no aparece en Google.
+
+También se puede hacer a mano en GitHub:
+
 Cuando hay novedades, GitHub abre una incidencia **«Ayudas nuevas por revisar»** y te llega un email de GitHub con la lista y los enlaces oficiales.
 
 1. Abre `revision/candidatas.json` en GitHub y pulsa el lápiz (✏️) para editar.

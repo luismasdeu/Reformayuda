@@ -23,6 +23,8 @@ from pathlib import Path
 RAIZ = Path(__file__).resolve().parent.parent
 AYUDAS = RAIZ / "web" / "data" / "ayudas.json"
 NOTIFICADAS = RAIZ / "revision" / "notificadas.json"
+CANDIDATAS = RAIZ / "revision" / "candidatas.json"
+ADMIN = RAIZ / "revision" / "admin.json"  # móviles del responsable, añadidos desde /revisar/
 DOMINIO = "https://reformayuda.es"
 
 
@@ -81,6 +83,26 @@ def planificar(ayudas, subs, avisadas, hoy):
     return envios, [a["id"] for a in nuevas]
 
 
+def aviso_revision(registro):
+    """Aviso al responsable cuando la búsqueda diaria deja candidatas nuevas por revisar."""
+    if not ADMIN.exists() or not CANDIDATAS.exists():
+        return []
+    tokens = json.loads(ADMIN.read_text(encoding="utf-8")).get("tokens", [])
+    pend = [c for c in json.loads(CANDIDATAS.read_text(encoding="utf-8")).get("candidatas", [])
+            if c.get("estado", "pendiente") == "pendiente"]
+    ya = set(registro.get("revision_avisadas", []))
+    registro["revision_avisadas"] = sorted(c["id"] for c in pend)
+    nuevas = [c for c in pend if c["id"] not in ya]
+    if not nuevas or not tokens:
+        return []
+    n = len(nuevas)
+    datos = {"title": f"{n} ayuda{'s' if n > 1 else ''} nueva{'s' if n > 1 else ''} por revisar",
+             "body": " · ".join(c.get("muni") or c.get("ccaa") or c["title"][:40] for c in nuevas[:4])[:180]
+                     + (f" y {n - 4} más" if n > 4 else "") + f". En total, {len(pend)} pendientes.",
+             "url": f"{DOMINIO}/revisar/", "tag": "revisar"}
+    return [(None, t, datos) for t in tokens]
+
+
 def main():
     hoy = dt.date.today()
     ayudas = json.loads(AYUDAS.read_text(encoding="utf-8"))["ayudas"]
@@ -110,6 +132,7 @@ def main():
         avisadas = []
     else:
         envios, avisadas = planificar(ayudas, subs, set(registro["ids"]), hoy)
+        envios += aviso_revision(registro)
 
     ok = borradas = 0
     errores = []
@@ -120,7 +143,8 @@ def main():
             messaging.send(msg)
             ok += 1
         except (messaging.UnregisteredError, messaging.SenderIdMismatchError) as e:
-            db.collection("suscripciones").document(doc_id).delete()
+            if doc_id:
+                db.collection("suscripciones").document(doc_id).delete()
             borradas += 1
             errores.append(f"{type(e).__name__}: {str(e)[:200]}")
         except Exception as e:  # un fallo con una persona no para el resto

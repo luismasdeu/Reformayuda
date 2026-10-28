@@ -48,7 +48,9 @@ EXCLUIR = ["alquiler", "arrendatari", "desahucio", "personal funcionario", "opos
            "subvenciones ayuntamientos", "entidades locales",
            # «rehabilitación» en otros sentidos u obras públicas
            "fisioterap", "salud mental", "saude mental", "rehabilitacion fisica", "drogodependencia",
-           "cementerio", "casa consistorial", "parque infantil", "gastos basicos", "notaria"]
+           "cementerio", "casa consistorial", "parque infantil", "gastos basicos", "notaria",
+           # ayudas para pagar la vivienda (alquiler, hipoteca, recibos), no para reformarla
+           "rentas insuficientes", "monoparental", "gastos de vivienda", "gastos vivienda", "obligaciones derivadas"]
 
 # Tipo de obra a partir de palabras clave.
 TIPOS = {
@@ -381,7 +383,7 @@ def resumen(nuevas, nuevas_boe, pendientes, boe_total):
         lineas.append("### Nuevas en el BOE (solo aviso: leer y, si es una ayuda, darla de alta a mano)")
         lineas += [f"- [{b['titulo'][:140]}]({b['url']})" for b in nuevas_boe]
         lineas.append("")
-    lineas.append("Para revisar: abre `revision/candidatas.json`, cambia `\"estado\"` a `\"aprobada\"` o `\"descartada\"` y guarda. Mira el README.")
+    lineas.append("**Para revisar desde el móvil: https://reformayuda.es/revisar/** (botones Publicar y Descartar).")
     return "\n".join(lineas) + "\n"
 
 

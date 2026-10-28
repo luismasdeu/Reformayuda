@@ -46,7 +46,8 @@ jobs:
           git config user.name "reformayuda-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add web/data revision
-          git diff --cached --quiet || (git commit -m "Publica ayudas revisadas" && git push)
+          # Si mientras tanto has guardado otra revisión desde el móvil, esa nueva publicación lo recoge.
+          git diff --cached --quiet || (git commit -m "Publica ayudas revisadas" && (git push || (git pull --rebase -q && git push) || (git rebase --abort 2>/dev/null; echo "Se guardará en la siguiente publicación")))
 
       - uses: actions/configure-pages@v5
 
@@ -80,4 +81,4 @@ jobs:
       - name: Guardar el registro de notificaciones
         run: |
           git add revision/notificadas.json revision/diagnostico-notificaciones.json 2>/dev/null || git add revision/notificadas.json
-          git diff --cached --quiet || (git commit -m "Registro de notificaciones $(date +%F)" && git pull --rebase -q && git push)
+          git diff --cached --quiet || (git commit -m "Registro de notificaciones $(date +%F)" && (git pull --rebase -q && git push || (git rebase --abort 2>/dev/null; echo "Registro no guardado esta vez")))
