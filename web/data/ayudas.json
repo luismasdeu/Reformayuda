@@ -212,7 +212,9 @@
     "Presenta la solicitud en la sede electrónica de la Junta (jccm.es) entre el 27/10 y el 30/11/2026",
     "Haz la obra y justifícala con facturas y el certificado energético final"
    ],
-   "revisada": "2026-10-28"
+   "revisada": "2026-10-28",
+   "sede": "https://www.jccm.es",
+   "ia": "2026-10-28"
   },
   {
    "id": "bdns-937189",
@@ -227,7 +229,7 @@
     "vivienda",
     "edificio"
    ],
-   "importe": 0,
+   "importe": 600,
    "imp": "Ayuda municipal pequeña: 2.400 € en total para todo el municipio",
    "abre": "2026-10-26",
    "cierra": "2026-11-26",
@@ -237,9 +239,11 @@
    "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/937189",
    "resumen": "Subvención del Ayuntamiento de Navata para arreglar y pintar las fachadas de casas y edificios del municipio en 2026. El presupuesto total es pequeño, así que conviene pedirla pronto.",
    "req": [
-    "Casa o edificio en el municipio de Navata",
-    "Que la obra sea de rehabilitación de la fachada",
-    "Pedirla antes de hacer la obra (confírmalo en las bases)"
+    "Ser persona física (particular) y promover la obra en la fachada.",
+    "Que el edificio o la masía esté en el municipio de Navata.",
+    "Que la obra cumpla el planeamiento urbanístico y la ordenanza municipal de fachadas.",
+    "Que el edificio tenga 20 años o más y no esté declarado fuera de ordenación.",
+    "Que la ayuda no supere el importe de las facturas presentadas."
    ],
    "docs": [
     "DNI/NIE",
@@ -255,7 +259,9 @@
    ],
    "prov": "Girona",
    "muni": "Navata",
-   "revisada": "2026-10-28"
+   "revisada": "2026-10-28",
+   "sede": "https://www.navata.cat/",
+   "ia": "2026-10-28"
   }
  ]
 }

@@ -63,11 +63,77 @@
   {
    "id": "bdns-937626",
    "estado": "pendiente",
-   "title": "CONVOCATORIA DE CONCESIÓN DE AYUDAS AL FOMENTO DE LA REHABILITACIÓN DE VIVIENDAS DE TITULARIDAD PRIVADA DENTRO DEL PROGRAMA PARA COMBATIR LA DESPOBLACIÓN EN EL ",
+   "title": "Rehabilitación de viviendas rurales en Tazacorte",
    "org": "TAZACORTE · AYUNTAMIENTO DE TAZACORTE",
    "scope": "municipal",
    "ccaa": "Canarias",
    "tipo": [
+    "eficiencia",
+    "rehabilitacion"
+   ],
+   "dest": [
+    "vivienda"
+   ],
+   "importe": 0,
+   "imp": "La cuantía máxima por vivienda se fija en la Base Octava, que no aparece en los documentos disponibles. Presupuesto total de la convocatoria: 139.205,80 €.",
+   "abre": "2026-10-29",
+   "cierra": null,
+   "plazo": "10 días hábiles desde el día siguiente a la publicación del extracto en el BOP (publicado el 28 de octubre de 2026). Las solicitudes fuera de plazo no se admiten.",
+   "irpf": false,
+   "fuente": "BDNS nº 937626",
+   "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/937626",
+   "resumen": "El Ayuntamiento de Tazacorte da ayudas para reformar viviendas privadas del entorno rural. El objetivo es fijar población en el municipio. Se pueden pagar obras de habitabilidad, ahorro de energía, estructura y mantenimiento. El presupuesto total es de 139.205,80 €. Las ayudas se dan por puntuación hasta agotar el dinero.",
+   "req": [
+    "Cumplir los requisitos de la Base Quinta de las bases reguladoras.",
+    "Ser titular de una vivienda privada situada en el entorno rural de Tazacorte.",
+    "Que la obra sirva para mejorar la habitabilidad, el ahorro energético, la estructura o el mantenimiento de la vivienda.",
+    "Ser persona física sin actividad económica."
+   ],
+   "docs": [
+    "Modelo de solicitud, disponible en el Registro General o en la sede electrónica.",
+    "Autorizaciones del modelo oficial.",
+    "Documentación que acredite los requisitos de la Base Quinta (a confirmar en las bases)."
+   ],
+   "pasos": [
+    "Lee las bases y comprueba que cumples los requisitos de la Base Quinta.",
+    "Descarga el modelo de solicitud y las autorizaciones en la sede electrónica o recógelos en el Registro General.",
+    "Reúne la documentación que piden las bases.",
+    "Presenta la solicitud en los 10 días hábiles siguientes a la publicación del extracto.",
+    "Espera la resolución: se puntúan las solicitudes y se conceden hasta agotar el presupuesto.",
+    "Haz la obra y justifícala según indiquen las bases."
+   ],
+   "_revisar": {
+    "presupuesto_total": 139205.8,
+    "bases_reguladoras": "https://www.bopsantacruzdetenerife.es/boletines/2026/16-9-26/16-9-26.pdf",
+    "abierta_segun_bdns": false,
+    "beneficiarios": "PERSONAS FÍSICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
+    "nota": "Revisa importe por vivienda, requisitos, documentos y pasos antes de aprobar.",
+    "ia": {
+     "fecha": "2026-10-28",
+     "documento": "4 de 229 páginas",
+     "recomendacion": "publicar",
+     "motivo": "Paga obras de rehabilitación y adecuación de viviendas privadas del entorno rural de Tazacorte (habitabilidad, ahorro energético, elementos estructurales y mantenimiento)."
+    },
+    "confirmar": [
+     "Comprobar la cuantía máxima por vivienda y el porcentaje subvencionado (Base Octava).",
+     "Comprobar los requisitos exactos de la Base Quinta y los criterios de puntuación.",
+     "Comprobar la lista completa de documentos y cómo se justifica la obra.",
+     "Confirmar la fecha exacta de apertura: el plazo empieza el día siguiente a la publicación en el BOP (28-10-2026) y se ha supuesto el 29-10-2026."
+    ]
+   },
+   "prov": "Santa Cruz de Tenerife",
+   "muni": "Tazacorte",
+   "sede": "https://tazacorte.sedelectronica.es"
+  },
+  {
+   "id": "bdns-937551",
+   "estado": "pendiente",
+   "title": "Arreglo de viviendas para accesibilidad en Manresa",
+   "org": "MANRESA · AYUNTAMIENTO DE MANRESA",
+   "scope": "municipal",
+   "ccaa": "Cataluña",
+   "tipo": [
+    "accesibilidad",
     "rehabilitacion"
    ],
    "dest": [
@@ -76,55 +142,12 @@
    "importe": 0,
    "imp": "Consulta la convocatoria",
    "abre": "2026-10-23",
-   "cierra": null,
-   "plazo": "Consulta el plazo en la convocatoria",
-   "irpf": false,
-   "fuente": "BDNS nº 937626",
-   "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/937626",
-   "resumen": "Acceso a la vivienda y fomento de la edificación",
-   "req": [
-    "Consulta los requisitos en la convocatoria oficial"
-   ],
-   "docs": [
-    "Consulta la documentación en la convocatoria oficial"
-   ],
-   "pasos": [
-    "Lee la convocatoria oficial",
-    "Prepara la documentación",
-    "Presenta la solicitud en la sede del organismo"
-   ],
-   "_revisar": {
-    "presupuesto_total": 139205.8,
-    "bases_reguladoras": "https://www.bopsantacruzdetenerife.es/boletines/2026/16-9-26/16-9-26.pdf",
-    "abierta_segun_bdns": false,
-    "beneficiarios": "PERSONAS FÍSICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
-    "nota": "Revisa importe por vivienda, requisitos, documentos y pasos antes de aprobar."
-   },
-   "prov": "Santa Cruz de Tenerife",
-   "muni": "Tazacorte"
-  },
-  {
-   "id": "bdns-937551",
-   "estado": "pendiente",
-   "title": "Convocatoria de este ejercicio 2026 para el otorgamiento de subvenciones destinadas al arreglo de viviendas para favorecer la accesibilidad y mejorar la calidad",
-   "org": "MANRESA · AYUNTAMIENTO DE MANRESA",
-   "scope": "municipal",
-   "ccaa": "Cataluña",
-   "tipo": [
-    "accesibilidad"
-   ],
-   "dest": [
-    "vivienda"
-   ],
-   "importe": 0,
-   "imp": "Consulta la convocatoria",
-   "abre": "2026-10-23",
-   "cierra": null,
-   "plazo": "Consulta el plazo en la convocatoria",
+   "cierra": "2026-11-06",
+   "plazo": "El plazo empieza al publicarse la convocatoria en el BOP y termina el 06/11/2026, según la ficha de la BDNS.",
    "irpf": false,
    "fuente": "BDNS nº 937551",
    "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/937551",
-   "resumen": "Otras Prestaciones económicas",
+   "resumen": "El Ayuntamiento de Manresa ofrece ayudas para hacer obras en casa que mejoren la accesibilidad y la calidad de vida de las personas dentro de su domicilio. La convocatoria es de 2026 y tiene un presupuesto total de 50.000 €. Se concede por concurrencia competitiva, es decir, se comparan las solicitudes. Las bases publicadas son la Ley General de Subvenciones, que no detalla esta convocatoria, así que faltan los requisitos concretos.",
    "req": [
     "Consulta los requisitos en la convocatoria oficial"
    ],
@@ -141,7 +164,19 @@
     "bases_reguladoras": "https://www.boe.es/eli/es/l/2003/11/17/38",
     "abierta_segun_bdns": false,
     "beneficiarios": "PERSONAS JURÍDICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
-    "nota": "Revisa importe por vivienda, requisitos, documentos y pasos antes de aprobar."
+    "nota": "Revisa importe por vivienda, requisitos, documentos y pasos antes de aprobar.",
+    "ia": {
+     "fecha": "2026-10-28",
+     "documento": "página web",
+     "recomendacion": "publicar",
+     "motivo": "La convocatoria del Ayuntamiento de Manresa subvenciona el arreglo de viviendas para mejorar la accesibilidad y la calidad de vida dentro del domicilio."
+    },
+    "confirmar": [
+     "El texto aportado es la Ley General de Subvenciones, no las bases de Manresa: faltan requisitos, documentos, importe por vivienda y pasos.",
+     "Comprobar quién puede pedirla: la BDNS indica personas jurídicas sin actividad económica, pero podrían ser particulares o comunidades.",
+     "Confirmar las fechas: la ficha da como inicio la publicación en el BOP y fin el 06/11/2026.",
+     "Comprobar el importe máximo por vivienda, el porcentaje de la obra que se paga y si cuenta para el IRPF."
+    ]
    },
    "prov": "Barcelona",
    "muni": "Manresa"
@@ -149,7 +184,7 @@
   {
    "id": "bdns-937506",
    "estado": "pendiente",
-   "title": "2ª Convocatoria Ayudas relacionadas con la vivienda",
+   "title": "Ayudas sociales de vivienda en Leganés (alquiler, suministros)",
    "org": "LEGANÉS · AYUNTAMIENTO DE LEGANÉS",
    "scope": "municipal",
    "ccaa": "Comunidad de Madrid",
@@ -160,38 +195,64 @@
     "vivienda"
    ],
    "importe": 0,
-   "imp": "Consulta la convocatoria",
+   "imp": "Según el tipo de ayuda: hasta 700 € al mes de alquiler o hipoteca (3 meses) y hasta 1.000 € al año para reparar o comprar enseres básicos.",
    "abre": "2026-10-23",
    "cierra": null,
-   "plazo": "Consulta el plazo en la convocatoria",
+   "plazo": "Los datos de la ficha no indican fecha final. La BDNS dice que empieza al día siguiente de publicarse la convocatoria en el BOCM y es de concesión directa, con un presupuesto total de 150.000 €. Está sujeta a que haya crédito.",
    "irpf": false,
    "fuente": "BDNS nº 937506",
    "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/937506",
-   "resumen": "Servicios Sociales y Promoción Social",
+   "resumen": "Ayudas de emergencia social de los servicios sociales de Leganés para familias en situación de necesidad. Cubren el alquiler o la hipoteca, los suministros de luz, gas y agua, y la reparación o compra de enseres básicos (cocina, lavadora, frigorífico, caldera). No financian obras de reforma.",
    "req": [
-    "Consulta los requisitos en la convocatoria oficial"
+    "Estar empadronado en Leganés al menos 6 meses antes de pedir la ayuda (hay excepciones, como víctimas de violencia de género).",
+    "Ser mayor de edad o menor emancipado.",
+    "Acreditar la situación de necesidad con un informe social de los servicios sociales.",
+    "No superar el límite de ingresos de la unidad familiar, que depende del número de miembros y se mide en IPREM (100 % con 1 miembro).",
+    "No tener otros recursos disponibles para cubrir la necesidad.",
+    "No haber recibido otra ayuda para lo mismo."
    ],
    "docs": [
-    "Consulta la documentación en la convocatoria oficial"
+    "DNI, NIE o pasaporte de la persona solicitante.",
+    "Libro de familia o certificado de inscripción.",
+    "Justificante de ingresos de todos los miembros de la unidad familiar mayores de 16 años.",
+    "Contrato de alquiler y recibo, o recibos de la hipoteca.",
+    "Datos bancarios en el formulario del Ayuntamiento.",
+    "Facturas de suministros que se deben o presupuesto de la reparación, si procede."
    ],
    "pasos": [
-    "Lee la convocatoria oficial",
-    "Prepara la documentación",
-    "Presenta la solicitud en la sede del organismo"
+    "Pide cita en el Centro de Servicios Sociales de Leganés.",
+    "Rellena la solicitud en el modelo del Ayuntamiento y cuenta tu situación de necesidad.",
+    "Entrega la documentación; si falta algo, tienes 15 días hábiles para aportarla.",
+    "Una trabajadora social valora tu caso y emite un informe.",
+    "Recibe la resolución del Ayuntamiento; si pasan 6 meses sin respuesta, se entiende denegada.",
+    "Justifica el gasto con facturas en un plazo máximo de 3 meses desde el ingreso."
    ],
    "_revisar": {
     "presupuesto_total": 150000,
     "bases_reguladoras": "https://www.bocm.es/boletin/CM_Orden_BOCM/2023/03/28/BOCM-20230328-62.PDF",
     "abierta_segun_bdns": false,
     "beneficiarios": "PERSONAS FÍSICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
-    "nota": "Revisa importe por vivienda, requisitos, documentos y pasos antes de aprobar."
+    "nota": "Revisa importe por vivienda, requisitos, documentos y pasos antes de aprobar.",
+    "ia": {
+     "fecha": "2026-10-28",
+     "documento": "PDF de 11 páginas",
+     "recomendacion": "descartar",
+     "motivo": "Es una ayuda de emergencia social del Ayuntamiento de Leganés para gastos como alquiler, hipoteca, suministros o reparar electrodomésticos básicos. No paga obras en la vivienda ni en el edificio."
+    },
+    "confirmar": [
+     "Comprobar la convocatoria concreta (2ª convocatoria), ya que el texto aportado es la ordenanza de 2023 y no incluye plazos ni importes específicos de esta convocatoria.",
+     "La sede electrónica de la ficha aparece mal escrita (htpps://sede.leganes.org); verificar la dirección correcta."
+    ]
    },
-   "muni": "Leganés"
+   "muni": "Leganés",
+   "edad": {
+    "min": 18
+   }
   },
   {
    "id": "bdns-937140",
    "estado": "pendiente",
-   "title": "CONVOCATORIA PARA LA CONCESIÓN DE AYUDAS ECONÓMICAS MUNICIPALES PARA AFRONTAR OBLIGACIONES DERIVADAS DE LA TITULARIDAD DE LA VIVIENDA HABITUAL DURANTE EL EJERCI",
+   "title": "Ayudas del IBI de vivienda habitual en Lena",
    "org": "LENA · AYUNTAMIENTO DE LENA",
    "scope": "municipal",
    "ccaa": "Asturias",
@@ -205,11 +266,11 @@
    "imp": "Consulta la convocatoria",
    "abre": "2026-10-22",
    "cierra": null,
-   "plazo": "Consulta el plazo en la convocatoria",
+   "plazo": "Un mes a contar desde el día siguiente al de la publicación de la convocatoria en el BOPA. No hay fechas exactas en la ficha de la BDNS.",
    "irpf": false,
    "fuente": "BDNS nº 937140",
    "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/937140",
-   "resumen": "Servicios Sociales y Promoción Social",
+   "resumen": "El Ayuntamiento de Lena da ayudas económicas a personas que son propietarias de su vivienda habitual para afrontar obligaciones derivadas de esa titularidad, como el IBI. No paga obras.",
    "req": [
     "Consulta los requisitos en la convocatoria oficial"
    ],
@@ -226,19 +287,31 @@
     "bases_reguladoras": "https://miprincipado.asturias.es/bopa/disposiciones?p_p_id=pa_sede_bopa_web_portlet_SedeBopaDispositionWeb&p_p_lifecycle=0&_pa_sede_bopa_web_portlet_SedeBopaDispositionWeb_mvcRenderCommandName=%2Fdisposition%2Fdetail&p_r_p_dispositionText=2026-08253&p_r_p",
     "abierta_segun_bdns": false,
     "beneficiarios": "PERSONAS FÍSICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
-    "nota": "Revisa importe por vivienda, requisitos, documentos y pasos antes de aprobar."
+    "nota": "Revisa importe por vivienda, requisitos, documentos y pasos antes de aprobar.",
+    "ia": {
+     "fecha": "2026-10-28",
+     "documento": "no se pudo descargar (<urlopen error timed out>)",
+     "recomendacion": "descartar",
+     "motivo": "Son ayudas municipales para afrontar obligaciones de la titularidad de la vivienda habitual (el IBI), no pagan obras de reforma ni construcción."
+    },
+    "confirmar": [
+     "No se ha podido leer el texto de las bases, solo la ficha de la BDNS.",
+     "Comprobar el importe por persona, los requisitos y la fecha exacta de cierre.",
+     "La descripción menciona el ejercicio 2025 y la resolución el 2026; confirmar el año."
+    ]
    },
    "muni": "Lena"
   },
   {
    "id": "bdns-937124",
    "estado": "pendiente",
-   "title": "CONVOCATORIA POR EL OTORGAMIENTO DEL PROGRAMA DE ARREGLO DE VIVIENDAS DE LA DIPUTACIÓN DE BARCELONA PARA PERSONAS CON DEPENDENCIA Y/O DISCAPACIDAD 2026",
+   "title": "Arreglo de viviendas para dependencia o discapacidad en Sant Joan de Vilatorrada",
    "org": "SANT JOAN DE VILATORRADA · AYUNTAMIENTO DE SANT JOAN DE VILATORRADA",
    "scope": "municipal",
    "ccaa": "Cataluña",
    "tipo": [
-    "accesibilidad"
+    "accesibilidad",
+    "rehabilitacion"
    ],
    "dest": [
     "vivienda"
@@ -247,13 +320,15 @@
    "imp": "Consulta la convocatoria",
    "abre": "2026-10-27",
    "cierra": "2026-11-16",
-   "plazo": "Consulta el plazo en la convocatoria",
+   "plazo": "Puedes presentar la solicitud del 27 de octubre al 16 de noviembre de 2026.",
    "irpf": false,
    "fuente": "BDNS nº 937124",
    "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/937124",
-   "resumen": "Servicios Sociales y Promoción Social",
+   "resumen": "El Ayuntamiento de Sant Joan de Vilatorrada, con el programa de la Diputación de Barcelona, da subvenciones a personas con dependencia y/o discapacidad para arreglar su vivienda. El presupuesto total es de 32.000 €. Las bases detalladas no se han podido consultar: el texto descargado solo trata del presupuesto municipal 2026.",
    "req": [
-    "Consulta los requisitos en la convocatoria oficial"
+    "Ser persona física sin actividad económica.",
+    "Tener dependencia y/o discapacidad reconocida.",
+    "Vivir en Sant Joan de Vilatorrada."
    ],
    "docs": [
     "Consulta la documentación en la convocatoria oficial"
@@ -268,7 +343,19 @@
     "bases_reguladoras": "https://bop.diba.cat/anunci/3875544/aprovacio-definitiva-del-pressupost-general-de-la-corporacio-per-a-l-any-2026-ajuntament-de-sant-joan-de-vilatorrada",
     "abierta_segun_bdns": false,
     "beneficiarios": "PERSONAS FÍSICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
-    "nota": "Revisa importe por vivienda, requisitos, documentos y pasos antes de aprobar."
+    "nota": "Revisa importe por vivienda, requisitos, documentos y pasos antes de aprobar.",
+    "ia": {
+     "fecha": "2026-10-28",
+     "documento": "página web",
+     "recomendacion": "publicar",
+     "motivo": "Es un programa de arreglo de viviendas para personas con dependencia y/o discapacidad en Sant Joan de Vilatorrada, dirigido a particulares."
+    },
+    "confirmar": [
+     "Comprobar el importe máximo por vivienda y el porcentaje subvencionado.",
+     "Comprobar requisitos exactos (grado de dependencia o discapacidad, empadronamiento, ingresos) y qué obras son subvencionables.",
+     "Comprobar documentos, forma de presentación y sede electrónica en el certificado de la convocatoria.",
+     "Confirmar si la subvención tributa en el IRPF."
+    ]
    },
    "prov": "Barcelona",
    "muni": "Sant Joan De Vilatorrada"
@@ -276,7 +363,7 @@
   {
    "id": "bdns-936357",
    "estado": "pendiente",
-   "title": "SUBVENCIONES 2026 A PERSONAS DE 65 AÑOS O MÁS - FOMENTO DERECHO A VIVIENDA",
+   "title": "Ayuda a mayores de 65 años para vivienda en Martorell",
    "org": "MARTORELL · AYUNTAMIENTO DE MARTORELL",
    "scope": "municipal",
    "ccaa": "Cataluña",
@@ -290,11 +377,11 @@
    "imp": "Consulta la convocatoria",
    "abre": "2026-01-01",
    "cierra": "2026-12-31",
-   "plazo": "Consulta el plazo en la convocatoria",
+   "plazo": "Según la BDNS, la solicitud está abierta del 1 de enero al 31 de diciembre de 2026.",
    "irpf": false,
    "fuente": "BDNS nº 936357",
    "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/936357",
-   "resumen": "Acceso a la vivienda y fomento de la edificación",
+   "resumen": "Subvención del Ayuntamiento de Martorell para personas de 65 años o más, dentro de las bases para fomentar el derecho a la vivienda. El texto de las bases descargado es solo el índice del portal de transparencia y no detalla para qué gasto se concede.",
    "req": [
     "Consulta los requisitos en la convocatoria oficial"
    ],
@@ -311,15 +398,30 @@
     "bases_reguladoras": "http://martorell.eadministracio.cat/transparency/d52b5af5-5399-428e-aba3-2f375b94f275/",
     "abierta_segun_bdns": false,
     "beneficiarios": "PERSONAS FÍSICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA",
-    "nota": "Revisa importe por vivienda, requisitos, documentos y pasos antes de aprobar."
+    "nota": "Revisa importe por vivienda, requisitos, documentos y pasos antes de aprobar.",
+    "ia": {
+     "fecha": "2026-10-28",
+     "documento": "página web",
+     "recomendacion": "descartar",
+     "motivo": "Es una subvención para fomentar el derecho a la vivienda de personas de 65 años o más residentes en Martorell, y los documentos disponibles no dicen que pague obras en la vivienda."
+    },
+    "confirmar": [
+     "El texto de las bases descargado es solo un índice del portal de transparencia: hay que leer el PDF de la convocatoria en castellano.",
+     "Comprobar si la ayuda cubre obras (por ejemplo, de accesibilidad) o solo gastos de alquiler u otros.",
+     "Comprobar el importe por persona, los requisitos y los documentos necesarios; el presupuesto total es de 3.613,92 €.",
+     "Comprobar si hay enlace de solicitud en la sede electrónica y si la ayuda tiene efecto en el IRPF."
+    ]
    },
    "prov": "Barcelona",
-   "muni": "Martorell"
+   "muni": "Martorell",
+   "edad": {
+    "min": 65
+   }
   },
   {
    "id": "bdns-936354",
    "estado": "pendiente",
-   "title": "SUBVENCIONES 2026 A FAMILIAS CON RENTAS INSUFICIENTES - FOMENTO DERECHO A VIVIENDA",
+   "title": "Ayudas de vivienda para familias con pocos ingresos en Martorell",
    "org": "MARTORELL · AYUNTAMIENTO DE MARTORELL",
    "scope": "municipal",
    "ccaa": "Cataluña",
@@ -333,11 +435,11 @@
    "imp": "Consulta la convocatoria",
    "abre": "2026-01-01",
    "cierra": "2026-12-31",
-   "plazo": "Consulta el plazo en la convocatoria",
+   "plazo": "Se puede solicitar durante todo 2026, del 1 de enero al 31 de diciembre.",
    "irpf": false,
    "fuente": "BDNS nº 936354",
    "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/936354",
-   "resumen": "Acceso a la vivienda y fomento de la edificación",
+   "resumen": "El Ayuntamiento de Martorell da subvenciones en 2026 a familias con rentas insuficientes para fomentar el derecho a la vivienda. Los documentos disponibles no detallan que cubran obras de reforma.",
    "req": [
     "Consulta los requisitos en la convocatoria oficial"
    ],
@@ -354,7 +456,19 @@
     "bases_reguladoras": "http://martorell.eadministracio.cat/transparency/d52b5af5-5399-428e-aba3-2f375b94f275/",
     "abierta_segun_bdns": false,
     "beneficiarios": "PERSONAS FÍSICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA",
-    "nota": "Revisa importe por vivienda, requisitos, documentos y pasos antes de aprobar."
+    "nota": "Revisa importe por vivienda, requisitos, documentos y pasos antes de aprobar.",
+    "ia": {
+     "fecha": "2026-10-28",
+     "documento": "página web",
+     "recomendacion": "descartar",
+     "motivo": "Son ayudas para familias con rentas insuficientes que fomentan el derecho a la vivienda (acceso, alquiler o gastos de vivienda), y los documentos no indican que paguen obras en una vivienda o edificio."
+    },
+    "confirmar": [
+     "No se ha podido leer el texto de las bases: la página solo muestra el índice de documentos de la sede electrónica.",
+     "Comprobar en el PDF de la convocatoria si financia algún tipo de obra en vivienda o solo pagos de alquiler, hipoteca o similares.",
+     "Comprobar importe máximo por persona o familia y requisitos de renta y empadronamiento (el presupuesto total es de solo 2.962,43 €).",
+     "Comprobar si las ayudas se conceden por concesión directa y cuál es el trámite de solicitud."
+    ]
    },
    "prov": "Barcelona",
    "muni": "Martorell"
@@ -362,7 +476,7 @@
   {
    "id": "bdns-936353",
    "estado": "pendiente",
-   "title": "SUBVENCIONES 2026 A FAMILIAS MONOPARENTALES - FOMENTO DERECHO A VIVIENDA",
+   "title": "Ayuda a familias monoparentales para vivienda en Martorell",
    "org": "MARTORELL · AYUNTAMIENTO DE MARTORELL",
    "scope": "municipal",
    "ccaa": "Cataluña",
@@ -376,11 +490,11 @@
    "imp": "Consulta la convocatoria",
    "abre": "2026-01-01",
    "cierra": "2026-12-31",
-   "plazo": "Consulta el plazo en la convocatoria",
+   "plazo": "Del 1 de enero al 31 de diciembre de 2026.",
    "irpf": false,
    "fuente": "BDNS nº 936353",
    "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/936353",
-   "resumen": "Acceso a la vivienda y fomento de la edificación",
+   "resumen": "El Ayuntamiento de Martorell convoca en 2026 subvenciones para familias monoparentales dentro de las ayudas para fomentar el derecho a la vivienda de las personas residentes en el municipio. El texto de las bases descargado es solo un listado de documentos de la sede electrónica y no detalla para qué gasto se concede la ayuda.",
    "req": [
     "Consulta los requisitos en la convocatoria oficial"
    ],
@@ -397,7 +511,18 @@
     "bases_reguladoras": "http://martorell.eadministracio.cat/transparency/d52b5af5-5399-428e-aba3-2f375b94f275/",
     "abierta_segun_bdns": false,
     "beneficiarios": "PERSONAS FÍSICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA",
-    "nota": "Revisa importe por vivienda, requisitos, documentos y pasos antes de aprobar."
+    "nota": "Revisa importe por vivienda, requisitos, documentos y pasos antes de aprobar.",
+    "ia": {
+     "fecha": "2026-10-28",
+     "documento": "página web",
+     "recomendacion": "descartar",
+     "motivo": "Es una subvención para fomentar el derecho a la vivienda de familias monoparentales de Martorell, no para pagar obras en una vivienda o edificio. Los documentos no indican que financie reformas."
+    },
+    "confirmar": [
+     "El texto de las bases descargado es solo un índice de documentos; hay que leer el PDF de la convocatoria en castellano.",
+     "Comprobar a qué gasto se destina la ayuda (alquiler, hipoteca u otro) y si cubre obras.",
+     "Comprobar requisitos, importe por familia y documentación; el presupuesto total es de 6.176,32 €."
+    ]
    },
    "prov": "Barcelona",
    "muni": "Martorell"
@@ -405,7 +530,7 @@
   {
    "id": "bdns-935742",
    "estado": "pendiente",
-   "title": "Acuerdo Junta de Gobierno Local de 14 de octubre de 2026 que aprueba la convocatoria de subvenciones a las obras de adecuación de la accesibilidad universal en ",
+   "title": "Accesibilidad en el interior de viviendas en Logroño",
    "org": "LOGROÑO · AYUNTAMIENTO DE LOGROÑO",
    "scope": "municipal",
    "ccaa": "La Rioja",
@@ -419,35 +544,51 @@
    "imp": "Consulta la convocatoria",
    "abre": "2026-10-16",
    "cierra": null,
-   "plazo": "Consulta el plazo en la convocatoria",
+   "plazo": "Empieza a las 9:00 h del día hábil siguiente a la publicación de la convocatoria en el Boletín Oficial de La Rioja (BOR). Termina a los tres meses de esa fecha. La fecha exacta hay que confirmarla en el BOR.",
    "irpf": false,
    "fuente": "BDNS nº 935742",
    "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/935742",
-   "resumen": "Otras actuaciones de carácter económico",
+   "resumen": "El Ayuntamiento de Logroño da subvenciones a particulares para hacer obras que mejoren la accesibilidad dentro de su vivienda. Se conceden por concurrencia competitiva y el presupuesto total de la convocatoria es de 140.000 €. Las bases completas no estaban disponibles, así que faltan los detalles de importes y requisitos.",
    "req": [
-    "Consulta los requisitos en la convocatoria oficial"
+    "Ser persona física que no desarrolla actividad económica.",
+    "Que la vivienda esté en la ciudad de Logroño.",
+    "Hacer obras de adecuación de la accesibilidad universal en el interior de la vivienda."
    ],
    "docs": [
-    "Consulta la documentación en la convocatoria oficial"
+    "Consulta la lista de documentos en las bases de la convocatoria (Acuerdo JGL 14-10-2026)."
    ],
    "pasos": [
-    "Lee la convocatoria oficial",
-    "Prepara la documentación",
-    "Presenta la solicitud en la sede del organismo"
+    "Lee las bases de la convocatoria publicadas en la BDNS y en el BOR.",
+    "Comprueba que tu vivienda y tu situación cumplen los requisitos.",
+    "Reúne la documentación que piden las bases.",
+    "Presenta la solicitud en la sede electrónica del Ayuntamiento de Logroño dentro del plazo.",
+    "Haz la obra y justifica el gasto según indiquen las bases."
    ],
    "_revisar": {
     "presupuesto_total": 140000,
     "bases_reguladoras": "https://logrono.es/becas-y-subvenciones",
     "abierta_segun_bdns": false,
     "beneficiarios": "PERSONAS FÍSICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
-    "nota": "Revisa importe por vivienda, requisitos, documentos y pasos antes de aprobar."
+    "nota": "Revisa importe por vivienda, requisitos, documentos y pasos antes de aprobar.",
+    "ia": {
+     "fecha": "2026-10-28",
+     "documento": "página web",
+     "recomendacion": "publicar",
+     "motivo": "Paga obras de accesibilidad universal en el interior de viviendas de Logroño."
+    },
+    "confirmar": [
+     "Comprobar la cuantía máxima por vivienda y el porcentaje de la obra subvencionado.",
+     "Confirmar la fecha exacta de inicio y fin según la publicación en el BOR.",
+     "Revisar requisitos de los solicitantes (edad, discapacidad, ingresos) y la documentación necesaria.",
+     "Verificar la dirección de la sede electrónica para presentar la solicitud y si la ayuda tributa en el IRPF."
+    ]
    },
    "muni": "Logroño"
   },
   {
    "id": "bdns-935669",
    "estado": "pendiente",
-   "title": "Convocatoria 2026 de subvenciones para gastos vivienda habitual dirigida a personas jubiladas y familias monoparentales con rentas bajas",
+   "title": "Ayuda para gastos de vivienda habitual en Cassà de la Selva",
    "org": "CASSÀ DE LA SELVA · AYUNTAMIENTO DE CASSÀ DE LA SELVA",
    "scope": "municipal",
    "ccaa": "Cataluña",
@@ -457,32 +598,54 @@
    "dest": [
     "vivienda"
    ],
-   "importe": 0,
-   "imp": "Consulta la convocatoria",
+   "importe": 250,
+   "imp": "Hasta 250 € por vivienda (100 %, 75 % o 50 % según tus ingresos), sin superar el recibo del IBI",
    "abre": "2026-10-16",
    "cierra": null,
-   "plazo": "Consulta el plazo en la convocatoria",
+   "plazo": "15 días hábiles desde el día siguiente a la publicación del extracto en el BOP de Girona. La fecha de cierre exacta no figura en los documentos.",
    "irpf": false,
    "fuente": "BDNS nº 935669",
    "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/935669",
-   "resumen": "Otras actuaciones de carácter económico",
+   "resumen": "El Ayuntamiento de Cassà de la Selva da una ayuda social a personas jubiladas y familias monoparentales con rentas bajas que son titulares de su vivienda habitual. Sirve para aliviar el coste de tener la casa (IBI). No paga obras.",
    "req": [
-    "Consulta los requisitos en la convocatoria oficial"
+    "Estar empadronado y haber vivido en Cassà de la Selva los 12 meses del año anterior a la convocatoria, y seguir empadronado al pedir la ayuda.",
+    "Figurar como sujeto pasivo del IBI de tu vivienda habitual (propietario, usufructuario u otro derecho). Quien vive de alquiler queda excluido.",
+    "Línea A: ser pensionista de jubilación. Línea B: tener título vigente de familia monoparental de la Generalitat. Solo puedes elegir una línea.",
+    "Ingresos de la unidad de convivencia de hasta 2,5 veces el IPREM (21.000 €), con ajustes por más jubilados o más hijos.",
+    "Estar al corriente con el Ayuntamiento, otras administraciones y la Seguridad Social."
    ],
    "docs": [
-    "Consulta la documentación en la convocatoria oficial"
+    "Formulario de solicitud normalizado, bien relleno.",
+    "Declaración responsable de cumplir los requisitos.",
+    "Autorización al Ayuntamiento para consultar tus datos (padrón, ingresos, IBI, Seguridad Social).",
+    "IBAN de una cuenta de la que seas titular.",
+    "Solo si el Ayuntamiento no puede comprobar algún dato: la documentación que te pida."
    ],
    "pasos": [
-    "Lee la convocatoria oficial",
-    "Prepara la documentación",
-    "Presenta la solicitud en la sede del organismo"
+    "Descarga el modelo de solicitud en la web municipal (www.cassa.cat).",
+    "Rellénalo y elige la línea A o B.",
+    "Preséntalo dentro de los 15 días hábiles desde la publicación del extracto en el BOP.",
+    "Responde a cualquier requerimiento de documentación del Ayuntamiento.",
+    "Espera la resolución, máximo 6 meses; sin respuesta se entiende denegada.",
+    "Cobra en un único pago por transferencia. No hay que presentar facturas."
    ],
    "_revisar": {
     "presupuesto_total": 8000,
     "bases_reguladoras": "https://ssl4.ddgi.cat/bopV1/pdf/2026/193/202619308493.pdf",
     "abierta_segun_bdns": false,
     "beneficiarios": "PERSONAS FÍSICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
-    "nota": "Revisa importe por vivienda, requisitos, documentos y pasos antes de aprobar."
+    "nota": "Revisa importe por vivienda, requisitos, documentos y pasos antes de aprobar.",
+    "ia": {
+     "fecha": "2026-10-28",
+     "documento": "PDF de 21 páginas",
+     "recomendacion": "descartar",
+     "motivo": "Es una ayuda social para compensar el coste de tener la vivienda habitual (se limita al recibo del IBI), no paga obras ni reformas, y no hay que justificar ninguna obra."
+    },
+    "confirmar": [
+     "Confirmar la fecha exacta de cierre: el extracto se publicó en el BOP el 21-10-2026 y el plazo es de 15 días hábiles.",
+     "Comprobar dónde y cómo se presenta la solicitud (sede electrónica o presencial).",
+     "Presupuesto total de solo 8.000 €: puede agotarse y se prioriza a quien tenga menos ingresos."
+    ]
    },
    "prov": "Girona",
    "muni": "Cassà De La Selva"
@@ -490,89 +653,142 @@
   {
    "id": "bdns-935567",
    "estado": "pendiente",
-   "title": "RESOLUCIÓN de Vicepr. Primera y Conselleria de Vivienda, Empleo, Juventud e Igualdad que apruebam bases reguladoras de subvenciones para  limpieza y reparación ",
+   "title": "Reparación de fachadas dañadas por la DANA en la C. Valenciana",
    "org": "COMUNITAT VALENCIANA · SECRETARÍA AUTONÓMICA DE VIVIENDA",
    "scope": "autonomica",
    "ccaa": "Comunitat Valenciana",
    "tipo": [
-    "eficiencia"
+    "rehabilitacion"
    ],
    "dest": [
-    "vivienda"
+    "vivienda",
+    "edificio"
    ],
-   "importe": 0,
-   "imp": "Consulta la convocatoria",
-   "abre": "2026-10-15",
-   "cierra": null,
-   "plazo": "Consulta el plazo en la convocatoria",
+   "importe": 6000,
+   "imp": "Hasta el 100 % del coste de la obra, con un máximo de 6.000 € por actuación y un mínimo de 300 €",
+   "abre": "2026-10-23",
+   "cierra": "2026-12-22",
+   "plazo": "Del 23/10/2026 al 22/12/2026 según la web de la Generalitat. Las bases dicen que el plazo empieza el día siguiente a la publicación y dura dos meses. Se resuelve por orden de entrada hasta agotar el crédito.",
    "irpf": false,
    "fuente": "BDNS nº 935567",
    "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/935567",
-   "resumen": "Acceso a la vivienda y fomento de la edificación",
+   "resumen": "Ayuda para limpiar y reparar las fachadas de edificios de viviendas con daños visibles de la DANA de octubre de 2024. Sirve para devolverles el aspecto que tenían antes. Solo se da una ayuda por inmueble y se concede por orden de llegada de las solicitudes completas, hasta agotar el dinero (4.000.000 €).",
    "req": [
-    "Consulta los requisitos en la convocatoria oficial"
+    "Tener un edificio de viviendas con daños visibles de la DANA en la fachada.",
+    "El edificio debe estar en uno de los municipios de los anexos III y IV de las bases.",
+    "Solo se concede una ayuda por inmueble (misma referencia catastral, 14 primeros caracteres).",
+    "La obra debe ser solo de limpieza y reparación, para devolver el aspecto previo a la DANA.",
+    "El coste subvencionable debe ser de al menos 300 €.",
+    "Si es una comunidad, presenta la solicitud su presidente; si hay varios propietarios, nombrad un representante."
    ],
    "docs": [
-    "Consulta la documentación en la convocatoria oficial"
+    "Solicitud telemática en la sede electrónica de la Generalitat.",
+    "Presupuesto o factura de la obra de fachada.",
+    "Justificación de los daños causados por la DANA.",
+    "Referencia catastral del inmueble.",
+    "Si no hay comunidad, justificación de la relación jurídica de cada propiedad con el inmueble.",
+    "Documentos de representación del presidente o representante, si procede."
    ],
    "pasos": [
-    "Lee la convocatoria oficial",
-    "Prepara la documentación",
-    "Presenta la solicitud en la sede del organismo"
+    "Comprueba que tu municipio está en los anexos III o IV de las bases.",
+    "Reúne el presupuesto o la factura y la documentación de los daños.",
+    "Si hace falta, nombrad representante o que lo presente el presidente de la comunidad.",
+    "Presenta la solicitud completa en la sede electrónica antes del cierre del plazo.",
+    "Si no tienes certificado digital, pide cita en una oficina PROP o en la Xarxa Xaloc.",
+    "Espera la resolución, que se publica en el DOGV.",
+    "Justifica la obra realizada con las facturas, tal como indiquen las bases."
    ],
    "_revisar": {
     "presupuesto_total": 4000000,
     "bases_reguladoras": "https://habitatge.gva.es/es/web/arquitectura/ajudes/2026/f_dana",
     "abierta_segun_bdns": false,
     "beneficiarios": "GRAN EMPRESA PERSONAS FÍSICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA PERSONAS JURÍDICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA",
-    "nota": "Revisa importe por vivienda, requisitos, documentos y pasos antes de aprobar."
-   }
+    "nota": "Revisa importe por vivienda, requisitos, documentos y pasos antes de aprobar.",
+    "ia": {
+     "fecha": "2026-10-28",
+     "documento": "página web",
+     "recomendacion": "publicar",
+     "motivo": "Paga la limpieza y reparación de fachadas de edificios de viviendas dañadas por la DANA de octubre de 2024 en la Comunitat Valenciana."
+    },
+    "confirmar": [
+     "Comprobar la lista exacta de municipios de los anexos III y IV de las bases.",
+     "Confirmar la fecha de cierre: la web dice 22/12/2026 y las bases hablan de dos meses desde la publicación.",
+     "Revisar la documentación exacta a presentar y cómo se justifica la obra.",
+     "Confirmar si los particulares con vivienda unifamiliar pueden pedirla y qué obras entran como subvencionables."
+    ]
+   },
+   "sede": "https://sede.gva.es/es/detall-tramit?id_proc=G112523"
   },
   {
    "id": "bdns-935530",
    "estado": "pendiente",
-   "title": "RESOLUCIÓN de  Vicep. Primera y Conselleria de Vivienda, Empleo, Juventud e Igualdad de aprobación de bases reguladoras de subvenc. para la reparación o sustitu",
+   "title": "Reparación o sustitución de ascensores dañados por la DANA (C. Valenciana)",
    "org": "COMUNITAT VALENCIANA · SECRETARÍA AUTONÓMICA DE VIVIENDA",
    "scope": "autonomica",
    "ccaa": "Comunitat Valenciana",
    "tipo": [
-    "accesibilidad"
+    "accesibilidad",
+    "rehabilitacion"
    ],
    "dest": [
-    "vivienda"
+    "edificio"
    ],
-   "importe": 0,
-   "imp": "Consulta la convocatoria",
-   "abre": "2026-10-15",
-   "cierra": null,
-   "plazo": "Consulta el plazo en la convocatoria",
+   "importe": 50000,
+   "imp": "Hasta el 100 % del coste subvencionable, con un máximo de 50.000 € por ascensor (mínimo 300 € por actuación)",
+   "abre": "2026-10-23",
+   "cierra": "2026-12-22",
+   "plazo": "Del 23 de octubre al 22 de diciembre de 2026. Las solicitudes se atienden por orden de entrada hasta agotar el crédito, así que conviene presentarla cuanto antes.",
    "irpf": false,
    "fuente": "BDNS nº 935530",
    "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/935530",
-   "resumen": "Acceso a la vivienda y fomento de la edificación",
+   "resumen": "La Generalitat Valenciana paga la reparación o sustitución de ascensores de edificios de viviendas dañados por el temporal de viento y lluvias que empezó el 29 de octubre de 2024. Solo vale para municipios incluidos en los anexos III y IV de las bases. Las solicitudes se resuelven por orden de entrada hasta agotar los 4.000.000 € de presupuesto.",
    "req": [
-    "Consulta los requisitos en la convocatoria oficial"
+    "Que el ascensor esté en un edificio residencial de un municipio incluido en los anexos III y IV de las bases.",
+    "Que el ascensor se dañara por el temporal de viento y lluvias iniciado el 29 de octubre de 2024.",
+    "Que la obra sea solo para reparar el daño, sin soluciones sobredimensionadas o innecesarias.",
+    "Que la solicitud la presente quien corresponda: presidente de la comunidad, representante de los propietarios o presidente del consejo rector.",
+    "Que el importe subvencionable sea de al menos 300 € por actuación."
    ],
    "docs": [
-    "Consulta la documentación en la convocatoria oficial"
+    "Informe técnico que indique los daños y la actuación necesaria (y que justifique la equivalencia si se sustituye el ascensor).",
+    "Presupuesto de la reparación o sustitución del ascensor.",
+    "Justificación de la relación jurídica con las propiedades del edificio, si no hay comunidad constituida.",
+    "Documentos que acrediten a la persona que representa o presenta la solicitud.",
+    "Si eres sucesor de un propietario fallecido, documentos que acrediten que eres derechohabiente."
    ],
    "pasos": [
-    "Lee la convocatoria oficial",
-    "Prepara la documentación",
-    "Presenta la solicitud en la sede del organismo"
+    "Comprueba que tu municipio está en los anexos III y IV de las bases.",
+    "Pide a un técnico el informe sobre los daños y el presupuesto de la obra.",
+    "Reúne la documentación completa, porque se tramita por orden de solicitudes completas.",
+    "Presenta la solicitud en la sede electrónica de la Generalitat antes del 22 de diciembre de 2026.",
+    "Si no puedes hacerlo por internet, pide ayuda en una oficina PROP, en la Xarxa Xaloc o en un servicio territorial de vivienda.",
+    "Espera la resolución, que se publica en el DOGV, y justifica la obra y su coste final."
    ],
    "_revisar": {
     "presupuesto_total": 4000000,
     "bases_reguladoras": "https://habitatge.gva.es/es/web/arquitectura/ajudes/2026/a2dana",
     "abierta_segun_bdns": false,
     "beneficiarios": "GRAN EMPRESA PERSONAS FÍSICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA PERSONAS JURÍDICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA",
-    "nota": "Revisa importe por vivienda, requisitos, documentos y pasos antes de aprobar."
-   }
+    "nota": "Revisa importe por vivienda, requisitos, documentos y pasos antes de aprobar.",
+    "ia": {
+     "fecha": "2026-10-28",
+     "documento": "página web",
+     "recomendacion": "publicar",
+     "motivo": "Paga la reparación o sustitución de ascensores dañados por la DANA de 2024 en edificios residenciales de municipios afectados de la Comunitat Valenciana."
+    },
+    "confirmar": [
+     "Comprobar la lista de municipios de los anexos III y IV.",
+     "Comprobar la lista exacta de documentos a presentar, que no aparece en el extracto.",
+     "Confirmar si las obras ya hechas antes de la convocatoria también pueden pedir la ayuda (el texto lo permite) y qué fechas de ejecución admite.",
+     "Comprobar quién puede solicitar según la base tercera.1 (apartados A a D) y si hay límites de ingresos."
+    ]
+   },
+   "sede": "https://sede.gva.es/es/detall-tramit?id_proc=G112625"
   },
   {
    "id": "bdns-935296",
    "estado": "pendiente",
-   "title": "Resolución 2026/3017 de 9 de octubre de 2026 por la que se convocan ayudas del Ayuntamiento de Durango para la rehabilitación de viviendas vacías para su inclus",
+   "title": "Rehabilitación de viviendas vacías en Durango (Bizigune)",
    "org": "DURANGO · AYUNTAMIENTO DE DURANGO",
    "scope": "municipal",
    "ccaa": "País Vasco",
@@ -585,14 +801,16 @@
    "importe": 0,
    "imp": "Consulta la convocatoria",
    "abre": "2026-10-14",
-   "cierra": null,
-   "plazo": "Consulta el plazo en la convocatoria",
+   "cierra": "2026-11-16",
+   "plazo": "Empieza el día siguiente a la publicación del extracto en el Boletín Oficial de Bizkaia y termina el 16 de noviembre de 2026.",
    "irpf": false,
    "fuente": "BDNS nº 935296",
    "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/935296",
-   "resumen": "Acceso a la vivienda y fomento de la edificación",
+   "resumen": "El Ayuntamiento de Durango da ayudas a personas propietarias de viviendas vacías para reformarlas e incluirlas en el programa de alquiler Bizigune. No hemos podido leer el texto de las bases, así que faltan los detalles de importes y requisitos. El presupuesto total de la convocatoria es de 40.000 €.",
    "req": [
-    "Consulta los requisitos en la convocatoria oficial"
+    "Ser persona física sin actividad económica.",
+    "Ser propietario de una vivienda vacía en Durango.",
+    "Reformar la vivienda para incluirla en el programa Bizigune."
    ],
    "docs": [
     "Consulta la documentación en la convocatoria oficial"
@@ -607,7 +825,19 @@
     "bases_reguladoras": "https://www.durango.eus/documents/36953/54700/Reguladora+de+Subvenciones+y+Ayudas.pdf/d27dcff4-b992-d438-1356-7b85d6933263?t=1604496634039",
     "abierta_segun_bdns": true,
     "beneficiarios": "PERSONAS FÍSICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
-    "nota": "Revisa importe por vivienda, requisitos, documentos y pasos antes de aprobar."
+    "nota": "Revisa importe por vivienda, requisitos, documentos y pasos antes de aprobar.",
+    "ia": {
+     "fecha": "2026-10-28",
+     "documento": "no se pudo descargar (HTTP Error 403: Forbidden)",
+     "recomendacion": "publicar",
+     "motivo": "Subvenciona obras de rehabilitación en viviendas vacías de Durango para que puedan entrar en el programa de alquiler Bizigune."
+    },
+    "confirmar": [
+     "Comprobar en las bases la cuantía máxima por vivienda y el porcentaje de la obra subvencionado.",
+     "Revisar los requisitos exactos de la vivienda y de la persona propietaria, y los documentos que hay que presentar.",
+     "Confirmar la fecha de inicio real (publicación en el Boletín Oficial de Bizkaia) y el enlace de la sede electrónica para solicitar.",
+     "Comprobar si la ayuda tiene efecto en el IRPF."
+    ]
    },
    "prov": "Bizkaia",
    "muni": "Durango"
@@ -615,7 +845,7 @@
   {
    "id": "bdns-934927",
    "estado": "pendiente",
-   "title": "Bases para subvenciones para la adaptación al riesgo de inundación  de las viviendas en Esquiroz y Salinas de Pamplona",
+   "title": "Adaptación a inundaciones de viviendas en Esquiroz y Salinas",
    "org": "GALAR · AYUNTAMIENTO DE GALAR",
    "scope": "municipal",
    "ccaa": "Navarra",
@@ -629,36 +859,51 @@
    "imp": "Consulta la convocatoria",
    "abre": "2026-10-13",
    "cierra": "2026-12-31",
-   "plazo": "Consulta el plazo en la convocatoria",
+   "plazo": "Puedes solicitarla desde el 13 de octubre de 2026 hasta el 31 de diciembre de 2026.",
    "irpf": false,
    "fuente": "BDNS nº 934927",
    "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/934927",
-   "resumen": "Seguridad Ciudadana e Instituciones Penitenciarias",
+   "resumen": "El Ayuntamiento de Galar da ayudas a particulares para hacer obras que protejan su vivienda frente a inundaciones en Esquiroz y Salinas de Pamplona. El presupuesto total es de 30.000 €. Las ayudas se dan por concurrencia competitiva. El texto de las bases no se ha podido leer, así que faltan los detalles.",
    "req": [
-    "Consulta los requisitos en la convocatoria oficial"
+    "Ser persona física sin actividad económica en la vivienda.",
+    "Tener una vivienda en Esquiroz o Salinas de Pamplona.",
+    "Hacer obras de adaptación al riesgo de inundación."
    ],
    "docs": [
     "Consulta la documentación en la convocatoria oficial"
    ],
    "pasos": [
-    "Lee la convocatoria oficial",
-    "Prepara la documentación",
-    "Presenta la solicitud en la sede del organismo"
+    "Lee las bases en el tablón de anuncios de la sede electrónica de Galar.",
+    "Comprueba que tu vivienda está en Esquiroz o Salinas de Pamplona.",
+    "Presenta la solicitud en la sede electrónica del Ayuntamiento de Galar antes del 31 de diciembre de 2026.",
+    "Haz la obra y justifica el gasto como indiquen las bases."
    ],
    "_revisar": {
     "presupuesto_total": 30000,
     "bases_reguladoras": "https://sedeelectronica.cendeadegalar.es/tablondeanuncios/anuncio.aspx?id=27482",
     "abierta_segun_bdns": false,
     "beneficiarios": "PERSONAS FÍSICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
-    "nota": "Revisa importe por vivienda, requisitos, documentos y pasos antes de aprobar."
+    "nota": "Revisa importe por vivienda, requisitos, documentos y pasos antes de aprobar.",
+    "ia": {
+     "fecha": "2026-10-28",
+     "documento": "página web",
+     "recomendacion": "publicar",
+     "motivo": "Subvenciona obras de adaptación de viviendas al riesgo de inundación en Esquiroz y Salinas de Pamplona (Galar, Navarra)."
+    },
+    "confirmar": [
+     "No se ha podido leer el PDF de las bases: faltan importe por vivienda, porcentaje y obras subvencionables.",
+     "Comprobar requisitos, documentación y forma de justificar la obra.",
+     "Confirmar si es compatible con otras ayudas y si tributa en el IRPF."
+    ]
    },
    "prov": "Navarra",
-   "muni": "Galar"
+   "muni": "Galar",
+   "sede": "https://sedeelectronica.cendeadegalar.es"
   },
   {
    "id": "bdns-934466",
    "estado": "pendiente",
-   "title": "CONVOCATORIA DE CONCESIÓN DIRECTA DE LA SUBVENCIÓN PARA LA REHABILITACIÓN DE VIVIENDAS PARA EL 2026 DEL EXCMO. AYUNTAMIENTO DE ARRECIFE.",
+   "title": "Rehabilitación de viviendas en Arrecife 2026",
    "org": "ARRECIFE · AYUNTAMIENTO DE ARRECIFE",
    "scope": "municipal",
    "ccaa": "Canarias",
@@ -672,31 +917,51 @@
    "imp": "Consulta la convocatoria",
    "abre": "2026-10-08",
    "cierra": "2026-11-01",
-   "plazo": "Consulta el plazo en la convocatoria",
+   "plazo": "El plazo empieza al día siguiente de la publicación y termina el 1 de noviembre de 2026. Comprueba la fecha exacta de inicio en las bases.",
    "irpf": false,
    "fuente": "BDNS nº 934466",
    "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/934466",
-   "resumen": "Acceso a la vivienda y fomento de la edificación",
+   "resumen": "El Ayuntamiento de Arrecife da subvenciones directas a particulares para rehabilitar su vivienda en 2026. El presupuesto total es de 206.767,68 €. Las bases completas no se han podido consultar, así que faltan los detalles de requisitos, importes y trámites.",
    "req": [
-    "Consulta los requisitos en la convocatoria oficial"
+    "Ser persona física que no desarrolla actividad económica",
+    "Tener la vivienda en el municipio de Arrecife (Lanzarote)",
+    "Consulta en las bases el resto de requisitos (ingresos, antigüedad de la vivienda, etc.)"
    ],
    "docs": [
-    "Consulta la documentación en la convocatoria oficial"
+    "Solicitud oficial en la sede electrónica del Ayuntamiento",
+    "Documento de identidad (DNI o NIE)",
+    "Consulta en las bases la lista completa de documentos"
    ],
    "pasos": [
-    "Lee la convocatoria oficial",
-    "Prepara la documentación",
-    "Presenta la solicitud en la sede del organismo"
+    "Lee las bases de la convocatoria en la sede electrónica del Ayuntamiento",
+    "Comprueba que cumples los requisitos",
+    "Reúne los documentos que piden las bases",
+    "Presenta la solicitud antes del 1 de noviembre de 2026",
+    "Espera la resolución del Ayuntamiento",
+    "Haz la obra y justifica el gasto según indiquen las bases"
    ],
    "_revisar": {
     "presupuesto_total": 206767.68,
     "bases_reguladoras": "https://arrecife.sedeelectronica.es/info.0",
     "abierta_segun_bdns": false,
     "beneficiarios": "PERSONAS FÍSICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
-    "nota": "Revisa importe por vivienda, requisitos, documentos y pasos antes de aprobar."
+    "nota": "Revisa importe por vivienda, requisitos, documentos y pasos antes de aprobar.",
+    "ia": {
+     "fecha": "2026-10-28",
+     "documento": "no se pudo descargar (<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'arrecife.sedeelectronica.es'. (_ssl.c:1010)>)",
+     "recomendacion": "publicar",
+     "motivo": "Es una subvención del Ayuntamiento de Arrecife para rehabilitar viviendas, dirigida a personas físicas."
+    },
+    "confirmar": [
+     "No se ha podido leer el texto de las bases: faltan importe máximo por vivienda, obras subvencionables y requisitos.",
+     "Comprobar si la subvención es compatible con otras ayudas y si tiene límites de ingresos.",
+     "Confirmar la fecha de inicio del plazo, ya que la BDNS solo dice «al día siguiente de la publicación».",
+     "Verificar si la convocatoria también admite comunidades de propietarios."
+    ]
    },
    "prov": "Las Palmas",
-   "muni": "Arrecife"
+   "muni": "Arrecife",
+   "sede": "https://arrecife.sedeelectronica.es/info.0"
   },
   {
    "id": "bdns-934248",
