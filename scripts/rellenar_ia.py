@@ -32,6 +32,8 @@ RAIZ = Path(__file__).resolve().parent.parent
 CANDIDATAS = RAIZ / "revision" / "candidatas.json"
 AYUDAS = RAIZ / "web" / "data" / "ayudas.json"
 DIAGNOSTICO = RAIZ / "revision" / "diagnostico-ia.json"
+GASTO = RAIZ / "revision" / "gasto-ia.json"  # gasto por mes y tope mensual (limite_usd)
+MARGEN_POR_AYUDA = 0.60  # lo máximo que suele costar una ayuda: no se empieza otra si no cabe en el tope
 MODELO = os.environ.get("CLAUDE_MODEL") or "claude-sonnet-5-5"
 PRECIO = {"claude-opus-5-5": (4, 20), "claude-sonnet-5-5": (2, 10), "claude-haiku-5-5": (0.10, 0.50)}  # $ por millón (entrada, salida)
 MAX_PDF_PAGINAS = 40      # más páginas (p. ej. un boletín entero): solo se envía el texto de las páginas que hablan de la ayuda
@@ -139,23 +141,28 @@ def ficha_bdns(c):
 
 # Si las bases descargadas no bastan (enlace a una portada, web que no se deja leer…), la IA puede
 # buscar la convocatoria oficial en internet. Se limita el número de búsquedas para controlar el coste.
-HERRAMIENTAS = [{"type": "web_search_20260209", "name": "web_search", "max_uses": 3},
-                {"type": "web_fetch_20260209", "name": "web_fetch", "max_uses": 4}]
+# Solo se ofrece cuando no se han podido leer bases útiles, porque es lo que más encarece cada ayuda.
+HERRAMIENTAS = [{"type": "web_search_20260209", "name": "web_search", "max_uses": 2},
+                {"type": "web_fetch_20260209", "name": "web_fetch", "max_uses": 3}]
+
+
+def bases_utiles(bloques):
+    return any(b["type"] == "document" or len(b.get("text", "")) > 4000 for b in bloques)
 
 
 def preguntar(cliente, c, ficha, bloques):
+    buscar = not bases_utiles(bloques)
     contexto = {k: c.get(k) for k in ("title", "org", "ccaa", "prov", "muni", "abre", "cierra", "url")}
     mensajes = [{"role": "user", "content": bloques + [{"type": "text", "text": (
         "Datos que ya tenemos de la convocatoria:\n" + json.dumps(contexto, ensure_ascii=False) +
-        "\n\nFicha de la BDNS:\n" + json.dumps(ficha or {}, ensure_ascii=False)[:40_000] +
-        ("\n\nNo se han podido leer las bases." if not bloques else "") +
-        "\n\nSi con esto no queda claro el importe por vivienda, el plazo o los requisitos, busca en internet "
-        "la convocatoria o las bases oficiales (boletín oficial o sede del organismo) y léelas. Usa solo fuentes "
-        "oficiales. Después, extrae los datos de la ficha de Reformayuda.")}]}]
+        "\n\nFicha de la BDNS:\n" + json.dumps(ficha or {}, ensure_ascii=False)[:15_000] +
+        ("\n\nNo se han podido leer las bases. Busca en internet la convocatoria o las bases oficiales (boletín "
+         "oficial o sede del organismo) y léelas; usa solo fuentes oficiales y busca lo justo." if buscar else "") +
+        "\n\nExtrae los datos de la ficha de Reformayuda.")}]}]
     uso = {"entrada": 0, "salida": 0, "busquedas": 0}
     for _ in range(4):
         r = cliente.beta.messages.create(
-            model=MODELO, max_tokens=16000, system=INSTRUCCIONES, messages=mensajes, tools=HERRAMIENTAS,
+            model=MODELO, max_tokens=16000, system=INSTRUCCIONES, messages=mensajes, **({"tools": HERRAMIENTAS} if buscar else {}),
             output_config={"effort": "medium", "format": {"type": "json_schema", "schema": ESQUEMA}},
             betas=["server-side-fallback-2026-07-01"], fallbacks="default",
         )
@@ -258,14 +265,22 @@ def main():
         return
     import anthropic
     cliente = anthropic.Anthropic()
+    mes = dt.date.today().strftime("%Y-%m")
+    gasto = json.loads(GASTO.read_text(encoding="utf-8")) if GASTO.exists() else {"limite_usd": 15, "meses": {}}
+    limite = float(os.environ.get("IA_LIMITE_MES") or gasto.get("limite_usd", 15))
+    ya = gasto["meses"].get(mes, 0.0)
     informe = {"fecha": dt.datetime.now().isoformat(timespec="minutes"), "modelo": MODELO,
-               "procesadas": [], "errores": [], "coste_usd": 0.0}
+               "procesadas": [], "errores": [], "coste_usd": 0.0, "pendientes_por_tope": 0}
+
+    def cabe():
+        """Tope mensual: si no cabe una ayuda más, se deja para el mes siguiente (o para revisar a mano)."""
+        return ya + informe["coste_usd"] + MARGEN_POR_AYUDA <= limite
 
     if "--publicadas" in sys.argv:
         ids = sys.argv[sys.argv.index("--publicadas") + 1].split(",")
         datos = json.loads(AYUDAS.read_text(encoding="utf-8"))
         for a in datos["ayudas"]:
-            if a["id"] in ids:
+            if a["id"] in ids and cabe():
                 try:
                     procesar(cliente, a, False, informe)
                 except Exception as e:
@@ -277,6 +292,9 @@ def main():
         incompletas = [a for a in datos["ayudas"] if a["id"].startswith("bdns-") and not a.get("ia")
                        and any(str(v).startswith("Consulta") or "confírma" in str(v).lower() for v in [a.get("imp")] + a.get("req", []))]
         for a in incompletas[:5]:
+            if not cabe():
+                informe["pendientes_por_tope"] += 1
+                continue
             try:
                 procesar(cliente, a, False, informe)
             except Exception as e:
@@ -287,6 +305,9 @@ def main():
         cola = [c for c in rev["candidatas"] if c.get("estado", "pendiente") == "pendiente"
                 and not (c.get("_revisar") or {}).get("ia") and not (c.get("_revisar") or {}).get("confirmar")]
         for c in cola[:int(os.environ.get("IA_MAX", "15"))]:
+            if not cabe():
+                informe["pendientes_por_tope"] += 1
+                continue
             try:
                 procesar(cliente, c, True, informe)
             except Exception as e:
@@ -294,6 +315,12 @@ def main():
             CANDIDATAS.write_text(json.dumps(rev, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
 
     informe["coste_usd"] = round(informe["coste_usd"], 3)
+    gasto["meses"][mes] = round(ya + informe["coste_usd"], 3)
+    gasto["limite_usd"] = gasto.get("limite_usd", 15)
+    GASTO.write_text(json.dumps(gasto, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
+    informe["gasto_mes_usd"], informe["limite_mes_usd"] = gasto["meses"][mes], limite
+    if informe["pendientes_por_tope"]:
+        print(f"Tope mensual de {limite} $ alcanzado: {informe['pendientes_por_tope']} se quedan sin rellenar (revísalas a mano).")
     DIAGNOSTICO.write_text(json.dumps(informe, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
     print(f"Procesadas: {len(informe['procesadas'])}. Errores: {len(informe['errores'])}. Coste aproximado: {informe['coste_usd']} $")
     for e in informe["errores"]:
