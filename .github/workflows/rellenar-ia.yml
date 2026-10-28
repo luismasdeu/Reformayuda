@@ -44,7 +44,7 @@ jobs:
           git config user.name "reformayuda-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add revision web/data
-          git diff --cached --quiet || (git commit -m "Candidatas rellenadas con IA $(date +%F)" && git push)
+          git diff --cached --quiet || (git commit -m "Candidatas rellenadas con IA $(date +%F)" && for i in 1 2 3 4; do git push && break; git pull --rebase -q || { git rebase --abort; exit 1; }; sleep 3; done)
 
   publicar:
     needs: rellenar

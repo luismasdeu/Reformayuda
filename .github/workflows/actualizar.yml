@@ -52,7 +52,7 @@ jobs:
           git config user.name "reformayuda-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add revision/candidatas.json web/data/ayudas.json revision/diagnostico-ia.json 2>/dev/null || git add revision/candidatas.json web/data/ayudas.json
-          git diff --cached --quiet || (git commit -m "Ayudas candidatas $(date +%F)" && git push)
+          git diff --cached --quiet || (git commit -m "Ayudas candidatas $(date +%F)" && for i in 1 2 3 4; do git push && break; git pull --rebase -q || { git rebase --abort; exit 1; }; sleep 3; done)
 
       - name: Avisarte si hay novedades
         if: steps.buscar.outputs.nuevas != '0'
