@@ -1,9 +1,9 @@
 {
- "fecha": "2026-10-28T13:18",
- "modo": "diario",
+ "fecha": "2026-10-28T13:23",
+ "modo": "prueba",
  "suscripciones": 1,
- "con_algo_que_enviar": 0,
- "enviadas": 0,
+ "con_algo_que_enviar": 1,
+ "enviadas": 1,
  "caducadas_borradas": 0,
  "zonas": [
   "Andalucía/Granada"
