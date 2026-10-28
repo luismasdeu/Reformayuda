@@ -55,14 +55,13 @@ Contacto: contacto@reformayuda.es · reformayuda.es
 | Público objetivo | Mayores de 18 años |
 | Icono (512 × 512) | `web/icons/icon-512.png` |
 | Gráfico de funciones (1024 × 500) | `docs/google-play/grafico-1024x500.png` |
-| Capturas de teléfono | `docs/google-play/capturas/` (6 imágenes de 1082 × 1922) |
+| Capturas de teléfono | `docs/google-play/capturas/` (7 imágenes de 1082 × 1922) |
 
 ## Capturas, en este orden
-1. `1-inicio.png`: inicio con buscador y resumen de tu zona
+1. `1-inicio.png`: inicio con buscador y resumen de tu zona (Camargo, Cantabria)
 2. `2-test.png`: test inicial para personalizar
-3. `3-buscador.png`: buscador con filtros
-4. `4-ficha.png`: ficha de una ayuda
+3. `3-buscador.png`: lista de ayudas con las que encajan contigo
+4. `4-ficha.png`: ficha de una ayuda con importe, plazo y calendario
 5. `5-irpf.png`: calculadora de la deducción del IRPF
 6. `6-chat.png`: asistente de dudas
-
-Cuando haya más ayudas publicadas, conviene repetir las capturas para que el buscador se vea más lleno.
+7. `7-avisos.png`: avisos y notificaciones en el móvil
