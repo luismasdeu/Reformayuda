@@ -691,6 +691,91 @@
    "muni": "Arrecife",
    "sede": "https://arrecife.sedeelectronica.es/info.0",
    "revisada": "2026-10-28"
+  },
+  {
+   "id": "bdns-934927",
+   "title": "Adaptación a inundaciones de viviendas en Esquiroz y Salinas",
+   "org": "GALAR · AYUNTAMIENTO DE GALAR",
+   "scope": "municipal",
+   "ccaa": "Navarra",
+   "tipo": [
+    "rehabilitacion"
+   ],
+   "dest": [
+    "vivienda"
+   ],
+   "importe": 0,
+   "imp": "No consta la cuantía por vivienda. El presupuesto total de la convocatoria es de 30.000 €.",
+   "abre": "2026-10-13",
+   "cierra": "2026-12-31",
+   "plazo": "Hasta el 31/12/2026",
+   "irpf": false,
+   "fuente": "BDNS nº 934927",
+   "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/934927",
+   "resumen": "El Ayuntamiento de Galar da subvenciones a particulares para hacer obras que protejan sus viviendas del riesgo de inundación en Esquiroz y Salinas de Pamplona. Hay 30.000 € de presupuesto total y se concede por concurrencia competitiva. El texto de las bases no estaba disponible, así que faltan los detalles.",
+   "req": [
+    "Ser persona física sin actividad económica.",
+    "Tener una vivienda en Esquiroz o en Salinas de Pamplona (Galar).",
+    "Hacer obras de adaptación al riesgo de inundación.",
+    "Consulta en las bases el resto de requisitos."
+   ],
+   "docs": [
+    "Solicitud en el modelo del Ayuntamiento de Galar.",
+    "Consulta en las bases la documentación exacta."
+   ],
+   "pasos": [
+    "Lee las bases en la sede electrónica del Ayuntamiento de Galar.",
+    "Comprueba que tu vivienda y tus obras cumplen los requisitos.",
+    "Prepara la documentación que piden las bases.",
+    "Presenta la solicitud antes del 31 de diciembre de 2026.",
+    "Justifica la obra y los gastos cuando te lo pidan."
+   ],
+   "prov": "Navarra",
+   "muni": "Galar",
+   "sede": "https://sedeelectronica.cendeadegalar.es",
+   "revisada": "2026-10-28"
+  },
+  {
+   "id": "bdns-933040",
+   "title": "Rehabilitación de inmuebles en El Almendro (Huelva)",
+   "org": "ALMENDRO, EL · AYUNTAMIENTO DE ALMENDRO, EL",
+   "scope": "municipal",
+   "ccaa": "Andalucía",
+   "tipo": [
+    "rehabilitacion"
+   ],
+   "dest": [
+    "vivienda"
+   ],
+   "importe": 0,
+   "imp": "No consta el importe por vivienda. El presupuesto total de la convocatoria es de 5.000 €.",
+   "abre": "2026-10-07",
+   "cierra": "2026-11-05",
+   "plazo": "Hasta el 05/11/2026",
+   "irpf": false,
+   "fuente": "BDNS nº 933040",
+   "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/933040",
+   "resumen": "El Ayuntamiento de El Almendro da subvenciones a propietarios o inquilinos de viviendas e inmuebles del casco urbano. Sirven para obras de mejora en el exterior o el interior. El presupuesto total de la convocatoria es de 5.000 €.",
+   "req": [
+    "Ser propietario o arrendatario de una vivienda o inmueble en el casco urbano de El Almendro.",
+    "Tener proyectada una obra de reforma, exterior o interior.",
+    "Ser persona física que no desarrolla actividad económica."
+   ],
+   "docs": [
+    "Solicitud con el modelo normalizado (Anexos I y II).",
+    "Los demás documentos no constan: mira las bases en la sede electrónica."
+   ],
+   "pasos": [
+    "Lee la convocatoria completa en la sede electrónica del Ayuntamiento o en su Secretaría.",
+    "Rellena los modelos de solicitud (Anexos I y II).",
+    "Presenta la solicitud en la sede electrónica o en el Ayuntamiento dentro del plazo.",
+    "Espera la resolución del Ayuntamiento.",
+    "Haz la obra y justifícala según indiquen las bases."
+   ],
+   "prov": "Huelva",
+   "muni": "Almendro, El",
+   "sede": "https://aytoelalmendro.sedelectronica.es/info.0",
+   "revisada": "2026-10-28"
   }
  ]
 }
