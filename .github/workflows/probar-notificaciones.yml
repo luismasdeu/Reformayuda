@@ -1,0 +1,23 @@
+# Envía una notificación de prueba a todas las personas suscritas.
+# Úsalo solo para comprobar que funcionan (por ejemplo, con tu propio móvil suscrito).
+name: Probar notificaciones
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  probar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+      - run: pip install --quiet firebase-admin==6.5.0
+      - name: Enviar notificación de prueba
+        env:
+          FIREBASE_SERVICE_ACCOUNT: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
+        run: python scripts/notificar.py --prueba

@@ -104,7 +104,12 @@ def main():
     firebase_admin.initialize_app(credentials.Certificate(json.loads(credenciales)))
     db = firestore.client()
     subs = [(d.id, d.to_dict()) for d in db.collection("suscripciones").stream()]
-    envios, avisadas = planificar(ayudas, subs, set(registro["ids"]), hoy)
+    if "--prueba" in sys.argv:
+        envios = [(i, s["token"], {"title": "Prueba de Reformayuda", "body": "Las notificaciones funcionan. Te avisaremos de las ayudas nuevas en tu zona.",
+                                   "url": f"{DOMINIO}/", "tag": "prueba"}) for i, s in subs if s.get("token")]
+        avisadas = []
+    else:
+        envios, avisadas = planificar(ayudas, subs, set(registro["ids"]), hoy)
 
     ok = borradas = 0
     for doc_id, token, datos in envios:
