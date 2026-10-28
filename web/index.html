@@ -463,9 +463,14 @@ button.loc{font:inherit;font-weight:700;color:var(--ink);cursor:pointer;padding:
     <button class="btn brand" id="btn-install">Instalar la app</button>
   </div>
   <div><b style="color:var(--ink)">Reformayuda</b> · Información orientativa sobre ayudas públicas a la vivienda. No somos un organismo oficial ni presentamos solicitudes: lo que vale es lo publicado en el boletín oficial. Contacto: <a href="mailto:contacto@reformayuda.es">contacto@reformayuda.es</a></div>
-  <nav class="frow" aria-label="Legal"><button class="linkbtn" data-legal="aviso">Aviso legal</button><button class="linkbtn" data-legal="privacidad">Privacidad</button><button class="linkbtn" data-legal="cookies">Cookies</button><button class="linkbtn" data-go="avisos">Mis datos</button><a class="linkbtn" href="/subvenciones/" style="text-decoration:none">Todas las ayudas</a><a class="linkbtn" href="/preguntas/" style="text-decoration:none">Preguntas frecuentes</a></nav>
+  <nav class="frow" aria-label="Legal"><button class="linkbtn" data-legal="aviso">Aviso legal</button><button class="linkbtn" data-legal="privacidad">Privacidad</button><button class="linkbtn" data-legal="cookies">Cookies</button><button class="linkbtn" data-go="avisos">Mis datos</button><a class="linkbtn" id="foot-valorar" hidden href="https://play.google.com/store/apps/details?id=es.reformayuda.app" target="_blank" rel="noopener" style="text-decoration:none">Valora la app</a><a class="linkbtn" href="/subvenciones/" style="text-decoration:none">Todas las ayudas</a><a class="linkbtn" href="/preguntas/" style="text-decoration:none">Preguntas frecuentes</a></nav>
 </div></footer>
 
+<div class="cookie" id="valorar" hidden role="region" aria-label="Valorar Reformayuda"><div class="in">
+  <b>Reformayuda es gratis y sin anuncios</b>
+  <p style="font-size:.9rem">Si te está sirviendo, una valoración en Google Play ayuda a que la encuentren más personas que están buscando ayudas. Y si algo no funciona o echas algo en falta, cuéntanoslo.</p>
+  <div class="frow"><a class="btn sm brand" id="val-play" href="https://play.google.com/store/apps/details?id=es.reformayuda.app" target="_blank" rel="noopener">Valorar en Google Play</a><a class="btn sm alt" id="val-mail" href="mailto:contacto@reformayuda.es?subject=Sugerencia%20para%20Reformayuda">Enviar una sugerencia</a><button class="btn sm alt" id="val-no">Ahora no</button></div>
+</div></div>
 <div class="cookie" id="cookie" hidden role="region" aria-label="Aviso de cookies"><div class="in">
   <b>Tu privacidad, primero</b>
   <p style="font-size:.9rem">Guardamos en tu dispositivo lo necesario para que la app funcione: tu zona, favoritos y borradores. Si aceptas, también mediremos el uso de forma anónima para mejorarla. Sin publicidad. <button class="linkbtn" data-legal="cookies">Más información</button></p>
@@ -706,7 +711,7 @@ function openDrawer(id){
    <div class="box"><h3>Cómo se pide</h3><ol class="steps">${a.pasos.map(p=>`<li>${esc(p)}</li>`).join("")}</ol></div>
    <div class="frow">
      <button class="btn brand" data-start="${a.id}" ${st.k==="cerrada"?"disabled":""}>${icon("send","ico","width:18px;height:18px")}Empezar solicitud</button>
-     <a class="btn alt" href="${a.url}" target="_blank" rel="noopener">${icon("ext","ico","width:18px;height:18px")}Ver fuente oficial</a>
+     <a class="btn alt" data-oficial href="${a.url}" target="_blank" rel="noopener">${icon("ext","ico","width:18px;height:18px")}Ver fuente oficial</a>
      <button class="btn alt" data-fav="${a.id}" aria-pressed="${S.favs.has(a.id)}">${icon("heart","ico","width:18px;height:18px")}${S.favs.has(a.id)?"Guardada":"Guardar"}</button>
    </div>
    ${a.revisada?`<p class="muted" style="font-size:.8rem">Revisada por Reformayuda el ${fdate(a.revisada)}. Si ves algún error, escríbenos a <a href="mailto:contacto@reformayuda.es">contacto@reformayuda.es</a>.</p>`:""}`;
@@ -853,7 +858,7 @@ ${a.docs.map((d,i)=>`  ${w.docs[i]?"[x]":"[ ]"} ${d}${typeof w.docs[i]==="string
      <div class="alert ${ready?"ok":"bad"}">${icon(ready?"check":"x","ico","width:18px;height:18px")}<span>${ready?"Todo listo. Copia el resumen y entra en la sede oficial para presentarla tú.":"Aún faltan pasos marcados sin ✓. Puedes presentarla igualmente, pero revisa lo pendiente."}</span></div>
      <pre class="sum" id="w-sum">${esc(sum)}</pre>
      <div class="frow"><button class="btn alt" id="w-copy">${icon("copy","ico","width:18px;height:18px")}Copiar resumen</button>
-       <a class="btn brand" id="w-sede" href="${a.url}" target="_blank" rel="noopener">${icon("ext","ico","width:18px;height:18px")}Ir a la sede oficial</a></div>
+       <a class="btn brand" id="w-sede" data-oficial href="${a.url}" target="_blank" rel="noopener">${icon("ext","ico","width:18px;height:18px")}Ir a la sede oficial</a></div>
      <p class="muted" style="font-size:.85rem">Reformayuda no presenta la solicitud ni actúa en tu nombre. Te lo dejamos todo preparado y te llevamos a la sede del organismo; allí te identificas como te pida y la envías tú.</p>`;
     $("#w-copy").onclick=()=>{navigator.clipboard?.writeText(sum).then(()=>toast("Resumen copiado"),()=>{const r=document.createRange();r.selectNodeContents($("#w-sum"));getSelection().removeAllRanges();getSelection().addRange(r);toast("Selecciona y copia el texto")})};
   }
@@ -1007,6 +1012,7 @@ const LEGAL={
    <tr><td>rfm_obra, rfm_mod, rfm_cert</td><td>Cálculo del IRPF</td><td>Hasta que lo borres</td></tr>
    <tr><td>rfm_perfil, rfm_onbskip</td><td>Tus respuestas del test inicial (obra, uso y, si la das, tu franja de edad), para ordenar las ayudas</td><td>Hasta que lo borres</td></tr>
    <tr><td>rfm_alerts</td><td>Tus preferencias de avisos</td><td>Hasta que lo borres</td></tr>
+   <tr><td>rfm_twa, rfm_valorar</td><td>Saber si usas la app de Google Play y no pedirte la valoración más de la cuenta</td><td>Hasta que lo borres</td></tr>
    <tr><td>rfm_lastvisit</td><td>Fecha de tu última visita, para avisarte de ayudas nuevas</td><td>Hasta que lo borres</td></tr>
    <tr><td>rfm_consent</td><td>Recordar tu elección sobre cookies</td><td>12 meses</td></tr></tbody></table></div>
   <h3>Medición anónima (opcional)</h3><p>Solo si la activas, contaríamos visitas y uso de cada sección de forma agregada y sin identificarte, para mejorar la app. Está desactivada por defecto.</p>
@@ -1110,6 +1116,33 @@ if(!S.consent)$("#cookie").hidden=false;
 $("#ck-acc").onclick=()=>setConsent(true);
 $("#ck-rej").onclick=()=>setConsent(false);
 if(S.perfil){S.sort="fit";$("#f-sort").value="fit"}
+/* ---------- pedir valoración en Google Play ----------
+   Normas de Google Play: el mismo mensaje para todo el mundo (sin preguntar antes si le ha gustado),
+   sin premios a cambio y sin pedir un número de estrellas. Solo dentro de la app de Google Play,
+   después de que alguien abra una convocatoria o la sede oficial, como mucho 3 veces y con 60 días entre una y otra. */
+const PLAY_ID="es.reformayuda.app";
+if(document.referrer.startsWith("android-app://"+PLAY_ID))store.set("twa",true);
+const enPlay=()=>store.get("twa",false);
+if(enPlay())$("#foot-valorar").hidden=false;
+let valorarPendiente=false;
+function puedeValorar(){
+  if(!enPlay())return false;
+  const v=store.get("valorar",{veces:0,ultima:null,hecho:false});
+  if(v.hecho||v.veces>=3)return false;
+  return !v.ultima||(Date.now()-new Date(v.ultima))/864e5>=60;
+}
+function mostrarValorar(){
+  if(!puedeValorar()||!$("#cookie").hidden||!$("#onb").hidden)return;
+  const v=store.get("valorar",{veces:0,ultima:null,hecho:false});
+  store.set("valorar",{...v,veces:v.veces+1,ultima:new Date().toISOString()});
+  $("#valorar").hidden=false;
+}
+document.addEventListener("click",e=>{if(e.target.closest("[data-oficial]")&&puedeValorar())valorarPendiente=true});
+document.addEventListener("visibilitychange",()=>{if(document.visibilityState==="visible"&&valorarPendiente){valorarPendiente=false;setTimeout(mostrarValorar,700)}});
+$("#val-play").onclick=()=>{const v=store.get("valorar",{});store.set("valorar",{...v,hecho:true});$("#valorar").hidden=true};
+$("#val-mail").onclick=()=>{$("#valorar").hidden=true};
+$("#val-no").onclick=()=>{$("#valorar").hidden=true};
+
 /* ---------- instalar la app ---------- */
 let installEvt=null;
 window.addEventListener("beforeinstallprompt",e=>{e.preventDefault();installEvt=e});
