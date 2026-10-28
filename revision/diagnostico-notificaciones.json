@@ -1,15 +1,12 @@
 {
- "fecha": "2026-10-28T13:00",
- "modo": "prueba",
- "suscripciones": 2,
- "con_algo_que_enviar": 2,
- "enviadas": 1,
- "caducadas_borradas": 1,
+ "fecha": "2026-10-28T13:04",
+ "modo": "diario",
+ "suscripciones": 1,
+ "con_algo_que_enviar": 0,
+ "enviadas": 0,
+ "caducadas_borradas": 0,
  "zonas": [
-  "Andalucía/Granada",
-  "Andalucía/Málaga"
+  "Andalucía/Granada"
  ],
- "errores": [
-  "UnregisteredError: NotRegistered"
- ]
+ "errores": []
 }
