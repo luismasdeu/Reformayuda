@@ -1,44 +1,50 @@
 {
- "fecha": "2026-10-28T16:46",
+ "fecha": "2026-10-28T16:52",
  "modelo": "claude-sonnet-5-5",
  "procesadas": [
   {
-   "id": "bdns-934248",
-   "documento": "no se pudo descargar (<urlopen error timed out>)",
-   "coste_usd": 0.1242,
-   "recomendacion": "descartar"
+   "id": "bdns-937551",
+   "documento": "página web",
+   "coste_usd": 0.8361,
+   "recomendacion": "publicar"
   },
   {
-   "id": "bdns-933993",
+   "id": "bdns-937124",
    "documento": "página web",
-   "coste_usd": 0.0359,
-   "recomendacion": "descartar"
+   "coste_usd": 0.137,
+   "recomendacion": "publicar"
   },
   {
-   "id": "bdns-937482",
+   "id": "bdns-935742",
    "documento": "página web",
-   "coste_usd": 0.0263,
+   "coste_usd": 0.0335,
+   "recomendacion": "publicar"
+  },
+  {
+   "id": "bdns-935296",
+   "documento": "no se pudo descargar (HTTP Error 403: Forbidden)",
+   "coste_usd": 0.1621,
+   "recomendacion": "publicar"
+  },
+  {
+   "id": "bdns-934927",
+   "documento": "página web",
+   "coste_usd": 0.0846,
+   "recomendacion": "publicar"
+  },
+  {
+   "id": "bdns-934466",
+   "documento": "no se pudo descargar (<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'arrecife.sedeelectronica.es'. (_ssl.c:1010)>)",
+   "coste_usd": 0.2029,
    "recomendacion": "publicar"
   },
   {
    "id": "bdns-933040",
    "documento": "página web",
-   "coste_usd": 0.0286,
+   "coste_usd": 0.0903,
    "recomendacion": "publicar"
-  },
-  {
-   "id": "bdns-937771",
-   "documento": "página web",
-   "coste_usd": 0.5742,
-   "recomendacion": "publicar"
-  },
-  {
-   "id": "bdns-937701",
-   "documento": "página web",
-   "coste_usd": 0.0287,
-   "recomendacion": "descartar"
   }
  ],
  "errores": [],
- "coste_usd": 0.818
+ "coste_usd": 1.546
 }
