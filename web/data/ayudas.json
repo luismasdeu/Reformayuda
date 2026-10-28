@@ -262,6 +262,51 @@
    "revisada": "2026-10-28",
    "sede": "https://www.navata.cat/",
    "ia": "2026-10-28"
+  },
+  {
+   "id": "bdns-934548",
+   "title": "Cambiar la bañera por un plato de ducha en Camargo",
+   "org": "Ayuntamiento de Camargo · Servicios Sociales",
+   "scope": "municipal",
+   "ccaa": "Cantabria",
+   "tipo": [
+    "accesibilidad"
+   ],
+   "dest": [
+    "vivienda"
+   ],
+   "importe": 0,
+   "imp": "Consulta el importe por vivienda en las bases",
+   "abre": "2026-10-09",
+   "cierra": null,
+   "plazo": "Convocatoria abierta hasta agotar el presupuesto (60.000 €)",
+   "irpf": false,
+   "fuente": "BDNS nº 934548",
+   "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/934548",
+   "resumen": "Ayuda municipal para quitar la bañera y poner un plato de ducha a ras de suelo en casas de personas mayores, para evitar caídas.",
+   "req": [
+    "Vivir en Camargo (Cantabria) y que sea tu vivienda habitual",
+    "Ser persona mayor o con movilidad reducida (confirma la edad en las bases)",
+    "Pedirla antes de hacer la obra"
+   ],
+   "docs": [
+    "DNI/NIE",
+    "Certificado de empadronamiento",
+    "Presupuesto de la obra",
+    "Fotos del baño actual"
+   ],
+   "pasos": [
+    "Lee las bases en el Boletín Oficial de Cantabria",
+    "Pide presupuesto a un instalador",
+    "Presenta la solicitud en el Ayuntamiento de Camargo (Servicios Sociales)",
+    "Haz la obra cuando te la concedan y justifícala con la factura"
+   ],
+   "prov": "Cantabria",
+   "muni": "Camargo",
+   "edad": {
+    "min": 65
+   },
+   "revisada": "2026-10-28"
   }
  ]
 }

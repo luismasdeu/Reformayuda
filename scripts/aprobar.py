@@ -42,14 +42,14 @@ def main():
 
     quedan = []
     for c in rev.get("candidatas", []):
-        estado = c.get("estado", "pendiente")
-        if estado == "aprobada":
+        estado = str(c.get("estado", "pendiente")).strip().lower()  # admite «aprobadas», «Aprobada»…
+        if estado.startswith("aprob") or estado == "publicar":
             limpia = {k: v for k, v in c.items() if k not in ("estado", "_revisar")}
             limpia["revisada"] = hoy.isoformat()
             por_id[limpia["id"]] = limpia
             cambios += 1
             print(f"Publicada: {limpia['id']} · {limpia['title'][:70]}")
-        elif estado == "descartada":
+        elif estado.startswith("descart"):
             desc["ids"].append(c["id"])
             print(f"Descartada: {c['id']}")
         else:

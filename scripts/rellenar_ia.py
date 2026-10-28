@@ -135,24 +135,41 @@ def ficha_bdns(c):
     return None
 
 
+# Si las bases descargadas no bastan (enlace a una portada, web que no se deja leer…), la IA puede
+# buscar la convocatoria oficial en internet. Se limita el número de búsquedas para controlar el coste.
+HERRAMIENTAS = [{"type": "web_search_20260209", "name": "web_search", "max_uses": 3},
+                {"type": "web_fetch_20260209", "name": "web_fetch", "max_uses": 4}]
+
+
 def preguntar(cliente, c, ficha, bloques):
     contexto = {k: c.get(k) for k in ("title", "org", "ccaa", "prov", "muni", "abre", "cierra", "url")}
-    contenido = bloques + [{"type": "text", "text": (
+    mensajes = [{"role": "user", "content": bloques + [{"type": "text", "text": (
         "Datos que ya tenemos de la convocatoria:\n" + json.dumps(contexto, ensure_ascii=False) +
         "\n\nFicha de la BDNS:\n" + json.dumps(ficha or {}, ensure_ascii=False)[:40_000] +
-        "\n\nExtrae los datos de la ficha de Reformayuda.")}]
-    r = cliente.beta.messages.create(
-        model=MODELO, max_tokens=16000, system=INSTRUCCIONES,
-        messages=[{"role": "user", "content": contenido}],
-        output_config={"effort": "medium", "format": {"type": "json_schema", "schema": ESQUEMA}},
-        betas=["server-side-fallback-2026-07-01"], fallbacks="default",
-    )
+        ("\n\nNo se han podido leer las bases." if not bloques else "") +
+        "\n\nSi con esto no queda claro el importe por vivienda, el plazo o los requisitos, busca en internet "
+        "la convocatoria o las bases oficiales (boletín oficial o sede del organismo) y léelas. Usa solo fuentes "
+        "oficiales. Después, extrae los datos de la ficha de Reformayuda.")}]}]
+    uso = {"entrada": 0, "salida": 0, "busquedas": 0}
+    for _ in range(4):
+        r = cliente.beta.messages.create(
+            model=MODELO, max_tokens=16000, system=INSTRUCCIONES, messages=mensajes, tools=HERRAMIENTAS,
+            output_config={"effort": "medium", "format": {"type": "json_schema", "schema": ESQUEMA}},
+            betas=["server-side-fallback-2026-07-01"], fallbacks="default",
+        )
+        uso["entrada"] += r.usage.input_tokens
+        uso["salida"] += r.usage.output_tokens
+        stu = getattr(r.usage, "server_tool_use", None)
+        uso["busquedas"] += getattr(stu, "web_search_requests", 0) or 0
+        if r.stop_reason != "pause_turn":
+            break
+        mensajes.append({"role": "assistant", "content": r.content})  # la búsqueda sigue en el servidor
     if r.stop_reason == "refusal":
         raise RuntimeError("la API rechazó la petición")
-    if r.stop_reason == "max_tokens":
-        raise RuntimeError("respuesta cortada")
-    texto = next(b.text for b in r.content if b.type == "text")
-    return json.loads(texto), r.usage
+    if r.stop_reason in ("max_tokens", "pause_turn"):
+        raise RuntimeError(f"respuesta incompleta ({r.stop_reason})")
+    texto = [b.text for b in r.content if b.type == "text"][-1]
+    return json.loads(texto[texto.index("{"):texto.rindex("}") + 1]), uso
 
 
 def fecha_ok(v):
@@ -163,21 +180,23 @@ def fecha_ok(v):
 
 
 def aplicar(c, d, completa):
-    """Pasa los datos extraídos a la ayuda. completa=False solo sustituye lo genérico (ayudas ya publicadas)."""
-    def generico(v):
-        return not v or str(v).startswith("Consulta") or "confírma" in str(v).lower()
-    for k in ("title", "resumen", "imp", "plazo"):
-        if d.get(k) and (completa or generico(c.get(k))):
+    """Pasa los datos extraídos a la ayuda. Con completa=False (ayudas ya publicadas) se mantienen título,
+    resumen, tipo y destinatarios, y el resto se sustituye por lo que diga la convocatoria."""
+    for k in ("title", "resumen") if completa else ():
+        if d.get(k):
             c[k] = d[k].strip()
-    if d.get("importe") and (completa or not c.get("importe")):
+    for k in ("imp", "plazo"):
+        if d.get(k):
+            c[k] = d[k].strip()
+    if d.get("importe"):
         c["importe"] = int(d["importe"])
     for k in ("abre", "cierra"):
         f = fecha_ok(d.get(k))
-        if f and (completa or not c.get(k)):
+        if f:
             c[k] = f
     for k in ("req", "docs", "pasos"):
         lista = [x.strip() for x in d.get(k) or [] if x.strip()]
-        if lista and (completa or any(generico(x) for x in c.get(k) or [""])):
+        if len(lista) >= 2:
             c[k] = lista[:8]
     if completa:
         if d.get("tipo"):
@@ -200,8 +219,8 @@ def procesar(cliente, c, completa, informe):
     url_bases = r.get("bases_reguladoras") or (ficha or {}).get("urlBasesReguladoras") or ""
     bloques, como = bloques_documento(url_bases, [c.get("muni"), c.get("org", "").split("·")[0].strip(), c.get("title", "")[:40]])
     d, uso = preguntar(cliente, c, ficha, bloques)
-    entrada, salida = PRECIO.get(MODELO, (4, 20))
-    coste = (uso.input_tokens * entrada + uso.output_tokens * salida) / 1e6
+    entrada, salida = PRECIO.get(MODELO, (2, 10))
+    coste = (uso["entrada"] * entrada + uso["salida"] * salida) / 1e6 + uso["busquedas"] * 0.01  # 10 $ por 1.000 búsquedas
     informe["coste_usd"] += coste
     aplicar(c, d, completa)
     if completa:

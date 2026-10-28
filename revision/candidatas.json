@@ -3,64 +3,6 @@
  "ultima_busqueda": "2026-10-28T05:54",
  "candidatas": [
   {
-   "id": "bdns-934548",
-   "estado": "aprobadas",
-   "title": "Cambiar la bañera por un plato de ducha en Camargo",
-   "org": "Ayuntamiento de Camargo · Servicios Sociales",
-   "scope": "municipal",
-   "ccaa": "Cantabria",
-   "tipo": [
-    "accesibilidad"
-   ],
-   "dest": [
-    "vivienda"
-   ],
-   "importe": 0,
-   "imp": "Consulta el importe por vivienda en las bases",
-   "abre": "2026-10-09",
-   "cierra": null,
-   "plazo": "Convocatoria abierta hasta agotar el presupuesto (60.000 €)",
-   "irpf": false,
-   "fuente": "BDNS nº 934548",
-   "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/934548",
-   "resumen": "Ayuda municipal para quitar la bañera y poner un plato de ducha a ras de suelo en casas de personas mayores, para evitar caídas.",
-   "req": [
-    "Vivir en Camargo (Cantabria) y que sea tu vivienda habitual",
-    "Ser persona mayor o con movilidad reducida (confirma la edad en las bases)",
-    "Pedirla antes de hacer la obra"
-   ],
-   "docs": [
-    "DNI/NIE",
-    "Certificado de empadronamiento",
-    "Presupuesto de la obra",
-    "Fotos del baño actual"
-   ],
-   "pasos": [
-    "Lee las bases en el Boletín Oficial de Cantabria",
-    "Pide presupuesto a un instalador",
-    "Presenta la solicitud en el Ayuntamiento de Camargo (Servicios Sociales)",
-    "Haz la obra cuando te la concedan y justifícala con la factura"
-   ],
-   "_revisar": {
-    "presupuesto_total": 60000,
-    "bases_reguladoras": "https://boc.cantabria.es/boces/verAnuncioAction.do?idAnuBlob=234460",
-    "abierta_segun_bdns": false,
-    "beneficiarios": "PERSONAS FÍSICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
-    "nota": "EJEMPLO PREPARADO: ya está casi lista. Abre las bases (bases_reguladoras), comprueba lo de «confirmar», corrige si hace falta y cambia «estado» a «aprobada».",
-    "confirmar": [
-     "Importe máximo por vivienda → «imp» e «importe»",
-     "Edad o requisito exacto (¿mayores de 65?, ¿movilidad reducida?) → «edad» y «req»",
-     "Si hay límite de ingresos → añádelo a «req»",
-     "Si la obra puede estar empezada → «req»"
-    ]
-   },
-   "prov": "Cantabria",
-   "muni": "Camargo",
-   "edad": {
-    "min": 65
-   }
-  },
-  {
    "id": "bdns-937626",
    "estado": "pendiente",
    "title": "Rehabilitación de viviendas rurales en Tazacorte",
