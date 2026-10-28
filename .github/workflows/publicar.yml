@@ -20,8 +20,6 @@ concurrency:
 jobs:
   publicar:
     runs-on: ubuntu-latest
-    env:
-      TIENE_FIREBASE: ${{ secrets.FIREBASE_SERVICE_ACCOUNT != '' }}
     environment:
       name: github-pages
       url: ${{ steps.deploy.outputs.page_url }}
@@ -59,9 +57,20 @@ jobs:
       - id: deploy
         uses: actions/deploy-pages@v4
 
-      - name: Instalar Firebase (solo si está configurado)
-        if: env.TIENE_FIREBASE == 'true'
+      - name: Comprobar si Firebase está configurado
+        id: fb
+        env:
+          FIREBASE_SERVICE_ACCOUNT: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
+        run: |
+          if [ -n "$FIREBASE_SERVICE_ACCOUNT" ]; then echo "ok=true" >> "$GITHUB_OUTPUT"; else echo "ok=false" >> "$GITHUB_OUTPUT"; fi
+
+      - name: Firebase configurado
+        if: steps.fb.outputs.ok == 'true'
         run: pip install --quiet firebase-admin==6.5.0
+
+      - name: Firebase sin configurar (falta el secreto FIREBASE_SERVICE_ACCOUNT)
+        if: steps.fb.outputs.ok != 'true'
+        run: echo "Falta el secreto FIREBASE_SERVICE_ACCOUNT en Settings → Secrets and variables → Actions."
 
       - name: Enviar notificaciones de ayudas nuevas y plazos
         env:
