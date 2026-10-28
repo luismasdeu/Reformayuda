@@ -1155,7 +1155,7 @@ async function activarPush(){
     const reg=await navigator.serviceWorker.ready;
     const token=await fb.messaging().getToken({vapidKey:FB_VAPID,serviceWorkerRegistration:reg});
     const id=await sha256(token);
-    const st={...pushEstado(),activo:true,id,token};
+    const st={...pushEstado(),activo:true,id,token,revisado:new Date().toISOString()};
     await fb.firestore().collection("suscripciones").doc(id).set(datosPush(token,st));
     store.set("push",st);toast(`Avisos activados para ${locShort()}`);render();return true;
   }catch(e){console.error(e);toast("No hemos podido activar los avisos. Inténtalo más tarde.");return false}
@@ -1171,6 +1171,22 @@ function syncPush(){ // mantiene al día zona, tipos y ayudas guardadas
   const st=pushEstado(); if(!st.activo||!st.id||!pushListo())return;
   clearTimeout(syncT);syncT=setTimeout(async()=>{try{const fb=await cargarFirebase();await fb.firestore().collection("suscripciones").doc(st.id).set(datosPush(st.token,st))}catch(e){console.error(e)}},1500);
 }
+// Al abrir la app: si se quitó el permiso, se borra la suscripción; y una vez por semana se renueva
+// el identificador de notificaciones (si ha cambiado, se sustituye el documento).
+async function revisarPush(){
+  const st=pushEstado(); if(!st.activo||!pushListo()||!pushSoportado())return;
+  if(Notification.permission!=="granted"){await desactivarPush(true);render();return}
+  if(st.revisado&&(Date.now()-new Date(st.revisado))/864e5<7)return;
+  try{
+    const fb=await cargarFirebase(), reg=await navigator.serviceWorker.ready;
+    const token=await fb.messaging().getToken({vapidKey:FB_VAPID,serviceWorkerRegistration:reg});
+    const id=await sha256(token), col=fb.firestore().collection("suscripciones");
+    if(st.id&&st.id!==id)await col.doc(st.id).delete().catch(()=>{});
+    const nuevo={...st,id,token,revisado:new Date().toISOString()};
+    await col.doc(id).set(datosPush(token,nuevo));store.set("push",nuevo);
+  }catch(e){console.error(e)}
+}
+
 function abrirAyudaIOS(){
   const d=$("#drawer");d.dataset.id="";
   d.innerHTML=`<button class="btn alt sm close" id="d-close">${icon("x","ico","width:16px;height:16px")}Cerrar</button>
@@ -1268,6 +1284,7 @@ async function cargarDatos(){
 cargarDatos().then(()=>{
   const h=(location.hash||"#inicio").slice(1);
   go(h);
+  setTimeout(revisarPush,3000);
   const qs=new URLSearchParams(location.search);
   if(qs.get("ayuda")&&AIDS.some(a=>a.id===qs.get("ayuda"))){onbShown=true;openDrawer(qs.get("ayuda"))}
   else if(qs.has("pregunta")&&FAQ[+qs.get("pregunta")]){onbShown=true;openChat();answer(+qs.get("pregunta"))}
