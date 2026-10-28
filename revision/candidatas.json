@@ -60,11 +60,12 @@
      "motivo": "Paga obras de accesibilidad (sobre todo en el baño) dentro de viviendas de personas mayores o dependientes en Manresa."
     },
     "confirmar": [
-     "El texto descargado era la Ley General de Subvenciones, no las bases. Importe, requisitos y obras salen de la nota de prensa de 2024. Comprueba que las bases y la convocatoria de 2026 no los cambian (presupuesto de 50.000 €).",
-     "Falta el límite de ingresos, la lista exacta de documentos, el plazo de justificación y el porcentaje real de subvención.",
-     "Las fechas de inicio no coinciden. La BDNS indica el 23/10/2026 y el CIDO el 28/10/2026, tras el anuncio en el BOPB del 27/10. Confirma la fecha de apertura.",
-     "Hay que confirmar si la edad mínima es 80 años (o 65 si convives con otra persona) y si se admiten otras obras, no solo en el baño."
-    ]
+     "Bases en el BOPB (Boletín Oficial de la Provincia de Barcelona, bop.diba.cat): busca «Manresa» y «bany» o «habitatge» (anuncio de finales de octubre)",
+     "Importe: hasta 4.000 € por vivienda; comprueba el porcentaje y el presupuesto total",
+     "Edad mínima y límite de ingresos",
+     "Documentos y plazo de justificación"
+    ],
+    "bases_no_corresponden": true
    },
    "prov": "Barcelona",
    "muni": "Manresa",
@@ -126,7 +127,8 @@
      "La página de bases es solo la aprobación del presupuesto 2026 y no trae los datos. Falta leer el PDF de la convocatoria (BDNS 937124) para el importe por vivienda, los requisitos y los documentos.",
      "Comprueba el último día del plazo: la BDNS dice 16/11/2026 y el CIDO, 15/11/2026.",
      "Los requisitos, los documentos y los pasos son supuestos genéricos. Confírmalos con las bases, igual que si hace falta estar empadronado y si hay límite de renta."
-    ]
+    ],
+    "bases_no_corresponden": true
    },
    "prov": "Barcelona",
    "muni": "Sant Joan De Vilatorrada",
@@ -190,7 +192,8 @@
      "Confirma la fecha exacta de apertura (publicación en el BOR) y de cierre.",
      "Revisa los requisitos de la persona solicitante (ingresos, discapacidad, edad) y la lista de documentos.",
      "Comprueba si la ayuda tributa en el IRPF y qué plazo hay para justificar las obras."
-    ]
+    ],
+    "bases_no_corresponden": true
    },
    "muni": "Logroño",
    "sede": "https://logrono.es/becas-y-subvenciones"
@@ -393,7 +396,8 @@
      "Comprueba la lista exacta de documentos y los pasos de la solicitud, porque no se han podido leer las bases.",
      "Comprueba cómo se presenta la solicitud (sede electrónica o presencial) y si hay un enlace directo.",
      "Comprueba si la ayuda se concede por orden de llegada y cuándo hay que justificar las obras."
-    ]
+    ],
+    "bases_no_corresponden": true
    },
    "prov": "Bizkaia",
    "muni": "Durango"
@@ -523,7 +527,8 @@
      "Comprueba el límite exacto de ingresos, los demás requisitos y la lista de documentos en las bases.",
      "Comprueba si el plazo empieza el 8 de octubre o al día siguiente, y si 2.998 € es el máximo o el 100 % de la obra.",
      "Comprueba si la ayuda tributa en el IRPF."
-    ]
+    ],
+    "bases_no_corresponden": true
    },
    "prov": "Las Palmas",
    "muni": "Arrecife",
@@ -584,7 +589,8 @@
      "Comprueba el importe máximo por vivienda o por obra, el porcentaje subvencionable y qué obras se pagan.",
      "Verifica la fecha real de publicación en el BOP y la de cierre. La fecha de apertura 2026-10-03 es la que ya teníamos, sin confirmar en las bases.",
      "Comprueba los requisitos, los documentos exactos y si la ayuda tributa en el IRPF."
-    ]
+    ],
+    "bases_no_corresponden": true
    },
    "prov": "Huelva",
    "muni": "Almendro, El",
@@ -656,7 +662,8 @@
      "Falta la fecha de publicación en el BOP, de la que dependen las fechas de apertura y cierre. La sede electrónica del Ayuntamiento no consta en la ficha.",
      "Con las bases de 2023 hay tres tramos según los honorarios (límites de 3.000, 5.000 y 7.000 €). Si el crédito no llega, el reparto es proporcional. Confirma si 2026 mantiene esto con 8.000 € de presupuesto.",
      "Confirma si encaja en la web: la ayuda paga el proyecto técnico de una vivienda nueva, no la obra."
-    ]
+    ],
+    "bases_no_corresponden": true
    },
    "prov": "Santa Cruz de Tenerife",
    "muni": "Barlovento"

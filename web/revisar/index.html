@@ -134,7 +134,7 @@ function tarjeta(c){
     ${r.bases_reguladoras?`<a class="b alt" href="${esc(r.bases_reguladoras)}" target="_blank" rel="noopener">${r.bases_no_corresponden?"Bases según la BDNS (no son)":"Ver bases"}</a>`:""}
    </div>
    ${r.referencia_bases?`<p class="meta" style="margin:8px 0 0">📄 Bases completas: <b>${esc(r.referencia_bases)}</b></p>`:""}
-   ${r.bases_no_corresponden?`<div class="aviso"><b>Ojo:</b> el enlace de bases que da la BDNS lleva a un boletín que no contiene esta convocatoria. Búscala en el boletín de la fecha de publicación.</div>`:""}
+   ${r.bases_no_corresponden?`<div class="aviso"><b>Ojo:</b> el enlace de «bases» que da la BDNS no son las bases de esta ayuda (es otro boletín, una ley general, una ordenanza, el presupuesto o una portada). Búscalas en el boletín provincial o en la sede del ayuntamiento.</div>`:""}
    ${r.ia?`<div class="aviso" style="background:${r.ia.recomendacion==="descartar"?"var(--bad-bg)":"var(--ok-bg)"};border-color:${r.ia.recomendacion==="descartar"?"var(--bad)":"var(--ok)"}"><b>🤖 Rellenada con IA${r.ia.recomendacion==="descartar"?": parece que no es para obras en casa":r.ia.recomendacion==="recuperada"?" (la recuperaste de las descartadas)":""}.</b> ${esc(r.ia.motivo)}<br><span class="meta">Leído: ${esc(r.ia.documento)}</span></div>`:""}
    ${r.confirmar?`<div class="aviso"><b>Comprueba en las bases:</b><ul>${r.confirmar.map(x=>`<li>${esc(x)}</li>`).join("")}</ul></div>`:""}
    ${gen?`<div class="aviso">Tiene datos genéricos («Consulta…»). Si la publicas así, la gente verá que debe mirar la convocatoria. Mejor rellena al menos el importe y el plazo.</div>`:""}

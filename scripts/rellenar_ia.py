@@ -105,10 +105,25 @@ def texto_html(datos):
     return re.sub(r"\s+", " ", t).strip()
 
 
+# Muchas fichas de la BDNS ponen como «bases» un enlace que no lo es: una ley general, una ordenanza
+# general de subvenciones, el presupuesto municipal o la portada de una sede o boletín.
+GENERICOS = re.compile(r"boe\.es/eli/es/(l|rd|lo)/|BOE-A-2003-20977|BOE-A-2006-13371|BOE-A-2015-1056[56]|"
+                       r"pressupost|presupuesto[-+ _]general|ordenanza[-+ _]general|reguladora\+de\+subvenciones|"
+                       r"index\.php$|/info\.0$|BOP\.jsp$|becas-y-subvenciones/?$", re.I)
+
+
+def enlace_generico(url):
+    from urllib.parse import urlparse
+    u = urlparse(url or "")
+    return bool(GENERICOS.search(url or "")) or u.path.strip("/") == ""
+
+
 def bloques_documento(url, pistas):
     """Contenido de las bases para el mensaje: el PDF entero si es corto; si no, solo las páginas útiles."""
     if not url or not url.startswith("http"):
         return [], "sin enlace a las bases"
+    if enlace_generico(url):
+        return [], "el enlace de bases de la BDNS es genérico (ley, ordenanza general o portada)"
     try:
         datos = descargar(url)
     except Exception as e:
@@ -245,6 +260,8 @@ def procesar(cliente, c, completa, informe):
     ficha = ficha_bdns(c)
     url_bases = r.get("bases_reguladoras") or (ficha or {}).get("urlBasesReguladoras") or ""
     bloques, como = bloques_documento(url_bases, [c.get("muni"), c.get("org", "").split("·")[0].strip(), c.get("title", "")[:40]])
+    if enlace_generico(url_bases):
+        r["bases_no_corresponden"] = True
     d, uso = preguntar(cliente, c, ficha, bloques)
     if bloques and not d.get("documento_corresponde", True):
         # El enlace de bases de la BDNS lleva a otro documento: se busca la convocatoria buena.
