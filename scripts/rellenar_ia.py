@@ -289,7 +289,7 @@ def procesar(cliente, c, completa, informe):
         c["_revisar"] = r
         if not d["es_ayuda_para_obras_en_vivienda"]:
             c["estado"] = "descartada"  # no es de obras: no llega a tu lista (se puede recuperar en /revisar/)
-        elif muy_clara(c, d, bloques):
+        elif not r.get("no_auto") and muy_clara(c, d, bloques):
             c["estado"] = "aprobada"  # se publica sola; se puede retirar desde /revisar/
             r["ia"]["recomendacion"] = "publicada sola"
     else:
