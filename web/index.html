@@ -443,8 +443,7 @@ button.loc{font:inherit;font-weight:700;color:var(--ink);cursor:pointer;padding:
       <div class="box" id="privacy-box"></div>
     </div>
     <div style="display:flex;flex-direction:column;gap:14px">
-      <div class="box" id="push-box" hidden></div>
-      <div class="box"><h2>Avísame cuando…</h2><p class="muted" style="font-size:.85rem">Te avisamos al abrir Reformayuda, sin email ni cuenta. Para que no se te pase, añade los plazos a tu calendario desde cada ayuda. En la app instalada en el móvil también llegarán como notificación.</p><div id="alerts"></div></div>
+      <div class="box" id="avisos-box"></div>
       <div class="box"><h2>De dónde salen los datos</h2><div id="sources" style="display:flex;flex-direction:column;gap:12px"></div>
         <p class="muted" style="font-size:.82rem" id="sync"></p></div>
     </div>
@@ -536,7 +535,7 @@ const S = {
   wiz: store.get("wiz",{}), wAid:"mad-rehab", wStep:0,
   mod: store.get("mod",40),
   obra: store.get("obra",{coste:11200,subv:0,pago:"banco",cash:0,ej:true}),
-  alerts: Object.assign({nuevas:true,cierre:true,abre:true},store.get("alerts",{})),
+  alerts: (a=>({nuevas:a.nuevas!==false,plazos:a.plazos!==undefined?a.plazos:(a.cierre!==false||a.abre!==false)}))(store.get("alerts",{})),
   perfil: store.get("perfil",null)
 };
 const $=s=>document.querySelector(s);
@@ -728,9 +727,9 @@ document.addEventListener("keydown",e=>{if(e.key==="Escape")closeDrawer()});
 let alertsDismissed=false;
 function notices(){
   const out=[];
-  if(S.alerts.cierre)AIDS.filter(a=>S.favs.has(a.id)&&status(a).k==="abierta"&&a.cierra&&days(a.cierra)<=7)
+  if(S.alerts.plazos)AIDS.filter(a=>S.favs.has(a.id)&&status(a).k==="abierta"&&a.cierra&&days(a.cierra)<=7)
     .forEach(a=>out.push({a,c:"bad",t:days(a.cierra)===0?"Hoy es el último día":`Quedan ${days(a.cierra)} días`}));
-  if(S.alerts.abre)AIDS.filter(a=>S.favs.has(a.id)).forEach(a=>{const d=days(a.abre);
+  if(S.alerts.plazos)AIDS.filter(a=>S.favs.has(a.id)).forEach(a=>{const d=days(a.abre);
     if(d>0&&d<=7)out.push({a,c:"info",t:`Abre en ${d} días`});
     else if(PREV_VISIT&&d<=0&&a.abre>PREV_VISIT)out.push({a,c:"ok",t:"Ya está abierta"})});
   if(S.alerts.nuevas&&PREV_VISIT)AIDS.filter(a=>!S.favs.has(a.id)&&inZone(a)&&a.abre>PREV_VISIT&&days(a.abre)<=0&&status(a).k==="abierta"&&(!S.perfil||fit(a)>0))
@@ -935,9 +934,6 @@ function renderAvisos(){
      <span class="card-ico c-${mainTipo(a)}" style="width:38px;height:38px">${icon(mainTipo(a))}</span>
      <div class="name"><b>${esc(a.title)}</b><div class="chips" style="margin-top:4px"><span class="chip ${st.c}">${st.t}</span>${a.cierra?`<span class="chip">Hasta ${fdate(a.cierra)}</span>`:""}</div></div>
      <button class="btn sm" data-open="${a.id}">Abrir</button></div>`}).join(""):`<div class="empty">Toca el corazón de una ayuda para seguir su plazo aquí.</div>`;
-  const AL=[["cierre","Quedan 7 días para que cierre una ayuda guardada"],["abre","Abre una ayuda guardada que estaba pendiente"],["nuevas",`Hay ayudas nuevas en ${locShort()} desde mi última visita`]];
-  $("#alerts").innerHTML=AL.map(([k,l])=>`<label class="toggle"><span>${l}</span><input type="checkbox" class="sw" id="al-${k}" data-al="${k}" ${S.alerts[k]?"checked":""}></label>`).join("");
-  $("#alerts").querySelectorAll("[data-al]").forEach(c=>c.onchange=()=>{S.alerts[c.dataset.al]=c.checked;store.set("alerts",S.alerts);toast(c.checked?"Aviso activado":"Aviso desactivado")});
   const SRC=[["boe","c-rehabilitacion","BOE","Sumario diario por API de datos abiertos: reales decretos y planes estatales.","https://www.boe.es/datosabiertos/"],
     ["db","c-eficiencia","Base de Datos Nacional de Subvenciones","Todas las convocatorias registradas por las administraciones, en JSON y CSV.","https://www.infosubvenciones.es/"],
     ["doc","c-accesibilidad","Boletines autonómicos","BOJA, BOCM, DOGC, DOGV, DOG, BOPV y el resto, revisados a diario.",null],
@@ -946,7 +942,7 @@ function renderAvisos(){
   $("#sources").innerHTML=SRC.map(([i,c,t,d,u])=>`<div class="src"><span class="card-ico ${c}">${icon(i,"ico","width:18px;height:18px")}</span><div style="min-width:0"><b>${u?`<a href="${u}" target="_blank" rel="noopener">${t}</a>`:t}</b><div class="muted" style="font-size:.85rem">${d}</div></div></div>`).join("");
   $("#sync").textContent=META.actualizado?`Ayudas revisadas por última vez el ${fdate(META.actualizado)}. Buscamos novedades en los boletines cada mañana.`:"";
   renderPrivacy();
-  renderPushBox();
+  renderAvisosBox();
 }
 
 /* ---------- mis datos ---------- */
@@ -976,7 +972,7 @@ function askDelete(kind){
   $("#pd-yes").onclick=()=>{
     if(all){
       try{Object.keys(localStorage).filter(k=>k.startsWith(PFX)).forEach(k=>localStorage.removeItem(k))}catch(e){}
-      S.favs=new Set();S.wiz={};S.obra={coste:0,subv:0,pago:"banco",cash:0};S.alerts={nuevas:false,cierre:false,abre:false};if(pushEstado().activo)desactivarPush(true);S.consent=null;S.perfil=null;S.prov="";S.muni="";S.hab=0;updLocBtn();S.sort="plazo";$("#f-sort").value="plazo";
+      S.favs=new Set();S.wiz={};S.obra={coste:0,subv:0,pago:"banco",cash:0};S.alerts={nuevas:true,plazos:true};if(pushEstado().activo)desactivarPush(true);S.consent=null;S.perfil=null;S.prov="";S.muni="";S.hab=0;updLocBtn();S.sort="plazo";$("#f-sort").value="plazo";
       store.set("favs",[]);store.set("obra",S.obra);store.set("alerts",S.alerts);
       $("#cookie").hidden=false;toast("Todo borrado");
     } else {
@@ -1144,7 +1140,7 @@ function cargarFirebase(){
 }
 async function sha256(t){const b=await crypto.subtle.digest("SHA-256",new TextEncoder().encode(t));return[...new Uint8Array(b)].map(x=>x.toString(16).padStart(2,"0")).join("")}
 const pushEstado=()=>store.get("push",{activo:false,id:null,nuevas:true,plazos:true});
-function datosPush(token,st){return{token,ccaa:S.ccaa,prov:S.prov||"",tipos:(S.perfil&&S.perfil.tipos)||[],guardadas:[...S.favs].slice(0,100),nuevas:!!st.nuevas,plazos:!!st.plazos,actualizado:firebase.firestore.FieldValue.serverTimestamp()}}
+function datosPush(token,st){return{token,ccaa:S.ccaa,prov:S.prov||"",tipos:(S.perfil&&S.perfil.tipos)||[],guardadas:[...S.favs].slice(0,100),nuevas:!!S.alerts.nuevas,plazos:!!S.alerts.plazos,actualizado:firebase.firestore.FieldValue.serverTimestamp()}}
 async function activarPush(){
   if(!pushSoportado()){toast(esIOS()?"En iPhone, primero instala la app en tu pantalla de inicio":"Tu navegador no permite notificaciones");return false}
   if(esIOS()&&!enApp()){abrirAyudaIOS();return false}
@@ -1208,21 +1204,28 @@ function renderPushCta(){
   $("#cta-push").onclick=async()=>{if(await activarPush())store.set("pushcta",{...c,cerrado:true})};
   $("#cta-no").onclick=()=>{store.set("pushcta",{veces:c.veces+1,ultima:new Date().toISOString()});renderPushCta()};
 }
-function renderPushBox(){
-  const el=$("#push-box"); if(!el)return;
-  if(!pushListo()){el.hidden=true;return}
-  el.hidden=false;const st=pushEstado();
-  el.innerHTML=`<h2>Notificaciones en el móvil</h2>
-   <p class="muted" style="font-size:.85rem">Te llegan aunque no tengas la app abierta. Sin email ni cuenta: solo guardamos lo necesario para enviártelas (tu zona, tipos de obra y ayudas guardadas) y lo borramos al desactivarlas.</p>
-   <label class="toggle"><span><b>Recibir notificaciones</b><br><span class="muted" style="font-size:.85rem">${st.activo?`Activadas para ${esc(locLong())}`:"Desactivadas"}</span></span><input type="checkbox" class="sw" id="push-on" ${st.activo?"checked":""}></label>
-   ${st.activo?`<label class="toggle"><span>Ayudas nuevas en mi zona</span><input type="checkbox" class="sw" id="push-nuevas" ${st.nuevas?"checked":""}></label>
-   <label class="toggle"><span>Quedan 7 días y 1 día para el cierre de una ayuda guardada</span><input type="checkbox" class="sw" id="push-plazos" ${st.plazos?"checked":""}></label>`:""}
-   <p class="muted" style="font-size:.78rem">Como mucho una notificación al día.</p>`;
-  $("#push-on").onchange=async e=>{if(e.target.checked){if(!await activarPush())e.target.checked=false}else desactivarPush()};
-  if(st.activo){
-    $("#push-nuevas").onchange=e=>{store.set("push",{...pushEstado(),nuevas:e.target.checked});syncPush()};
-    $("#push-plazos").onchange=e=>{store.set("push",{...pushEstado(),plazos:e.target.checked});syncPush()};
-  }
+function renderAvisosBox(){
+  const el=$("#avisos-box"); if(!el)return;
+  const st=pushEstado(), push=pushListo()&&(pushSoportado()||esIOS());
+  el.innerHTML=`<h2>Avisos</h2>
+   <p class="muted" style="font-size:.85rem">Te avisamos al abrir Reformayuda${push?" y, si activas las notificaciones, también con el móvil bloqueado":""}. Sin email ni cuenta.</p>
+   <label class="toggle"><span>Ayudas nuevas en ${esc(locShort())}</span><input type="checkbox" class="sw" id="al-nuevas" ${S.alerts.nuevas?"checked":""}></label>
+   <label class="toggle"><span>Mis ayudas guardadas: cuando abran y cuando queden 7 días o 1 día para el cierre</span><input type="checkbox" class="sw" id="al-plazos" ${S.alerts.plazos?"checked":""}></label>
+   ${push?`<label class="toggle"><span><b>Notificaciones en el móvil</b><br><span class="muted" style="font-size:.85rem">${st.activo?`Activadas para ${esc(locLong())}`:"Desactivadas"}</span></span><input type="checkbox" class="sw" id="push-on" ${st.activo?"checked":""}></label>
+   ${st.activo?`<div class="frow"><button class="btn alt sm" id="push-probar">${icon("bell","ico","width:16px;height:16px")}Probar en este móvil</button></div>`:""}
+   <p class="muted" style="font-size:.78rem">Como mucho una notificación al día. Para enviártelas solo guardamos tu zona, tus tipos de obra y tus ayudas guardadas, y lo borramos al desactivarlas.</p>`:""}
+   <p class="muted" style="font-size:.78rem">Consejo: añade los plazos a tu calendario desde cada ayuda.</p>`;
+  $("#al-nuevas").onchange=e=>{S.alerts.nuevas=e.target.checked;store.set("alerts",S.alerts);syncPush()};
+  $("#al-plazos").onchange=e=>{S.alerts.plazos=e.target.checked;store.set("alerts",S.alerts);syncPush()};
+  if(push)$("#push-on").onchange=async e=>{if(e.target.checked){if(!await activarPush())e.target.checked=false}else desactivarPush()};
+  if($("#push-probar"))$("#push-probar").onclick=probarNotificacion;
+}
+async function probarNotificacion(){
+  try{
+    const reg=await navigator.serviceWorker.ready;
+    await reg.showNotification("Prueba de Reformayuda",{body:"Si ves esto, las notificaciones funcionan en tu móvil.",icon:"icons/icon-192.png",badge:"icons/icon-monochrome-512.png",tag:"prueba-local"});
+    toast("Te hemos enviado una notificación de prueba. Si no la ves, revisa los ajustes de notificaciones de Chrome.");
+  }catch(e){toast("Tu móvil no ha dejado mostrar la notificación. Revisa los permisos de Chrome para reformayuda.es.")}
 }
 
 /* ---------- pedir valoración en Google Play ----------
