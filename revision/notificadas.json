@@ -1,6 +1,8 @@
 {
  "_leeme": "Ayudas de las que ya se ha avisado por notificación.",
  "ids": [
+  "bdns-933977",
+  "bdns-937189",
   "irpf-ee",
   "mun-ibi",
   "mun-icio",
@@ -8,7 +10,6 @@
  ],
  "revision_avisadas": [
   "bdns-933040",
-  "bdns-933977",
   "bdns-933993",
   "bdns-934248",
   "bdns-934466",
@@ -23,7 +24,6 @@
   "bdns-936357",
   "bdns-937124",
   "bdns-937140",
-  "bdns-937189",
   "bdns-937482",
   "bdns-937506",
   "bdns-937551",
