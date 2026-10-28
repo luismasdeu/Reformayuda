@@ -112,21 +112,30 @@ def main():
         envios, avisadas = planificar(ayudas, subs, set(registro["ids"]), hoy)
 
     ok = borradas = 0
+    errores = []
     for doc_id, token, datos in envios:
         msg = messaging.Message(token=token, data=datos,
                                 webpush=messaging.WebpushConfig(headers={"TTL": "86400", "Urgency": "normal"}))
         try:
             messaging.send(msg)
             ok += 1
-        except (messaging.UnregisteredError, messaging.SenderIdMismatchError):
+        except (messaging.UnregisteredError, messaging.SenderIdMismatchError) as e:
             db.collection("suscripciones").document(doc_id).delete()
             borradas += 1
+            errores.append(f"{type(e).__name__}: {str(e)[:200]}")
         except Exception as e:  # un fallo con una persona no para el resto
             print(f"  error con {doc_id[:8]}…: {e}", file=sys.stderr)
+            errores.append(f"{type(e).__name__}: {str(e)[:300]}")
 
     registro["ids"] = sorted(set(registro["ids"]) | set(avisadas))
     NOTIFICADAS.write_text(json.dumps(registro, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
     print(f"Suscripciones: {len(subs)}. Notificaciones enviadas: {ok}. Suscripciones caducadas borradas: {borradas}.")
+    # Informe sin datos personales, para revisar desde el repositorio si algo falla.
+    (RAIZ / "revision" / "diagnostico-notificaciones.json").write_text(json.dumps({
+        "fecha": dt.datetime.now().isoformat(timespec="minutes"), "modo": "prueba" if "--prueba" in sys.argv else "diario",
+        "suscripciones": len(subs), "con_algo_que_enviar": len(envios), "enviadas": ok, "caducadas_borradas": borradas,
+        "zonas": sorted({f"{s.get('ccaa')}/{s.get('prov')}" for _, s in subs}), "errores": errores[:10]},
+        ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
 
 
 if __name__ == "__main__":

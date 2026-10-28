@@ -79,5 +79,5 @@ jobs:
 
       - name: Guardar el registro de notificaciones
         run: |
-          git add revision/notificadas.json
+          git add revision/notificadas.json revision/diagnostico-notificaciones.json 2>/dev/null || git add revision/notificadas.json
           git diff --cached --quiet || (git commit -m "Registro de notificaciones $(date +%F)" && git pull --rebase -q && git push)
