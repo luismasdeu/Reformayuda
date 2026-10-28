@@ -19,8 +19,8 @@
    "importe": 0,
    "imp": "La cuantía máxima por vivienda se fija en la Base Octava, que no aparece en los documentos disponibles. Presupuesto total de la convocatoria: 139.205,80 €.",
    "abre": "2026-10-29",
-   "cierra": null,
-   "plazo": "10 días hábiles desde el día siguiente a la publicación del extracto en el BOP (publicado el 28 de octubre de 2026). Las solicitudes fuera de plazo no se admiten.",
+   "cierra": "2026-11-11",
+   "plazo": "10 días hábiles desde el 29/10/2026: hasta el 11/11/2026 (el 12/11 si el 2 de noviembre es festivo). No se admiten solicitudes fuera de plazo.",
    "irpf": false,
    "fuente": "BDNS nº 937626",
    "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/937626",
@@ -37,12 +37,11 @@
     "Documentación que acredite los requisitos de la Base Quinta (a confirmar en las bases)."
    ],
    "pasos": [
-    "Lee las bases y comprueba que cumples los requisitos de la Base Quinta.",
-    "Descarga el modelo de solicitud y las autorizaciones en la sede electrónica o recógelos en el Registro General.",
-    "Reúne la documentación que piden las bases.",
-    "Presenta la solicitud en los 10 días hábiles siguientes a la publicación del extracto.",
-    "Espera la resolución: se puntúan las solicitudes y se conceden hasta agotar el presupuesto.",
-    "Haz la obra y justifícala según indiquen las bases."
+    "Descarga el modelo de solicitud y las bases en la sede electrónica de Tazacorte (tazacorte.sedelectronica.es)",
+    "Reúne la documentación que piden las bases",
+    "Preséntala en el Registro General del Ayuntamiento o en la sede electrónica dentro del plazo",
+    "Se conceden por puntuación hasta agotar los 139.205,80 €",
+    "Haz la obra y justifícala como indican las bases"
    ],
    "_revisar": {
     "presupuesto_total": 139205.8,
@@ -57,12 +56,13 @@
      "motivo": "Paga obras de rehabilitación y adecuación de viviendas privadas del entorno rural de Tazacorte (habitabilidad, ahorro energético, elementos estructurales y mantenimiento)."
     },
     "confirmar": [
-     "Convocatoria publicada en el BOP de Santa Cruz de Tenerife nº 129 del 28/10/2026 («Descargar Boletín» en la web del BOP); el del 16/09 que enlaza la BDNS no la contiene",
+     "Bases completas: BOP de Santa Cruz de Tenerife nº 126 del 16/10/2026 (también en la sede electrónica de Tazacorte)",
      "Base Octava: cuantía máxima y porcentaje por vivienda",
      "Base Quinta: requisitos y criterios de puntuación",
-     "Plazo exacto de solicitud"
+     "Si el 2 de noviembre es festivo en Tazacorte, el último día es el 12/11"
     ],
-    "bases_no_corresponden": true
+    "bases_no_corresponden": true,
+    "referencia_bases": "BOP de Santa Cruz de Tenerife nº 126, 16/10/2026"
    },
    "prov": "Santa Cruz de Tenerife",
    "muni": "Tazacorte",

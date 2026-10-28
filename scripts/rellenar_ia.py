@@ -54,6 +54,7 @@ Extrae los datos para una ficha que leerán particulares sin conocimientos legal
 - «edad_min», «edad_max», «max_habitantes»: 0 si no hay límite.
 - «url_solicitud»: dirección de la sede electrónica o del trámite, solo si aparece en los documentos.
 - «dudas»: lo que la persona que revisa debe comprobar en las bases (máximo 4 frases).
+- «referencia_bases»: si el documento es solo un extracto que remite a las bases publicadas en otro sitio (p. ej. «texto íntegro en el BOP nº 126 de 16/10/2026»), escribe dónde están (boletín, número y fecha). Si no, vacío.
 - «documento_corresponde»: false si el documento adjunto no contiene las bases ni la convocatoria de ESTA ayuda (por ejemplo, un boletín que solo nombra al municipio por otro asunto). En ese caso no saques datos de él.
 - «claridad»: «clara» solo si has leído las bases o la convocatoria oficial y en ellas constan el importe por vivienda (o el porcentaje con su máximo), el plazo (fecha final o «hasta agotar fondos»), los requisitos y cómo se pide, y no hay nada importante que dudar. Si te falta cualquiera de esas cosas o has tenido que suponer algo, «dudosa». Las claras se publican sin revisión humana: ante la duda, «dudosa»."""
 
@@ -82,10 +83,11 @@ ESQUEMA = {
         "dudas": {"type": "array", "items": {"type": "string"}},
         "claridad": {"type": "string", "enum": ["clara", "dudosa"]},
         "documento_corresponde": {"type": "boolean"},
+        "referencia_bases": {"type": "string"},
     },
     "required": ["es_ayuda_para_obras_en_vivienda", "motivo", "title", "resumen", "imp", "importe", "abre", "cierra",
                  "plazo", "req", "docs", "pasos", "tipo", "dest", "edad_min", "edad_max", "max_habitantes", "irpf",
-                 "url_solicitud", "dudas", "claridad", "documento_corresponde"],
+                 "url_solicitud", "dudas", "claridad", "documento_corresponde", "referencia_bases"],
     "additionalProperties": False,
 }
 
@@ -154,7 +156,7 @@ def bases_utiles(bloques):
     return any(b["type"] == "document" or len(b.get("text", "")) > 4000 for b in bloques)
 
 
-def preguntar(cliente, c, ficha, bloques, buscar=None):
+def preguntar(cliente, c, ficha, bloques, buscar=None, pista=""):
     if buscar is None:
         buscar = not bases_utiles(bloques)
     contexto = {k: c.get(k) for k in ("title", "org", "ccaa", "prov", "muni", "abre", "cierra", "url")}
@@ -163,6 +165,8 @@ def preguntar(cliente, c, ficha, bloques, buscar=None):
         "\n\nFicha de la BDNS:\n" + json.dumps(ficha or {}, ensure_ascii=False)[:15_000] +
         ("\n\nNo se han podido leer las bases. Busca en internet la convocatoria o las bases oficiales (boletín "
          "oficial o sede del organismo) y léelas; usa solo fuentes oficiales y busca lo justo." if buscar else "") +
+        (f"\n\nSegún el extracto, las bases completas están en: {pista}. Búscalas y léelas; complementa con ellas "
+         "lo que ya sabes del extracto." if pista else "") +
         "\n\nExtrae los datos de la ficha de Reformayuda.")}]}]
     uso = {"entrada": 0, "salida": 0, "busquedas": 0}
     for _ in range(4):
@@ -248,6 +252,14 @@ def procesar(cliente, c, completa, informe):
         r["bases_no_corresponden"] = True
         d, uso2 = preguntar(cliente, c, ficha, [], buscar=True)
         uso = {k: uso[k] + uso2[k] for k in uso}
+    elif d.get("referencia_bases") and not d.get("importe"):
+        # Era solo el extracto: las bases están en otro boletín. Se buscan una vez para sacar importe y requisitos.
+        r["referencia_bases"] = d["referencia_bases"]
+        como += f" (extracto; bases en {d['referencia_bases']})"
+        d2, uso2 = preguntar(cliente, c, ficha, bloques, buscar=True, pista=d["referencia_bases"])
+        uso = {k: uso[k] + uso2[k] for k in uso}
+        if d2.get("importe") or len(d2.get("req") or []) >= len(d.get("req") or []):
+            d = d2
     entrada, salida = PRECIO.get(MODELO, (2, 10))
     coste = (uso["entrada"] * entrada + uso["salida"] * salida) / 1e6 + uso["busquedas"] * 0.01  # 10 $ por 1.000 búsquedas
     informe["coste_usd"] += coste
