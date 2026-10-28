@@ -17,6 +17,7 @@ La app de Android es la misma web, empaquetada como **Trusted Web Activity (TWA)
 3. **Package for stores → Android → Generate package** con estos datos:
    - Package ID: `es.reformayuda.app`
    - App name: `Reformayuda`
+   - Notification delegation: **activada** (para las notificaciones, ver `docs/notificaciones.md`)
    - Signing key: **Create new**. Guarda en un lugar seguro el archivo de firma y las contraseñas que te da. Sin ellos no podrás actualizar la app nunca más.
 4. Descarga el ZIP. Dentro hay un archivo `.aab` (lo que se sube a Google Play) y un `assetlinks.json`.
 

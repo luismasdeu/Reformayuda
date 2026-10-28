@@ -20,6 +20,8 @@ concurrency:
 jobs:
   publicar:
     runs-on: ubuntu-latest
+    env:
+      TIENE_FIREBASE: ${{ secrets.FIREBASE_SERVICE_ACCOUNT != '' }}
     environment:
       name: github-pages
       url: ${{ steps.deploy.outputs.page_url }}
@@ -56,3 +58,17 @@ jobs:
 
       - id: deploy
         uses: actions/deploy-pages@v4
+
+      - name: Instalar Firebase (solo si está configurado)
+        if: env.TIENE_FIREBASE == 'true'
+        run: pip install --quiet firebase-admin==6.5.0
+
+      - name: Enviar notificaciones de ayudas nuevas y plazos
+        env:
+          FIREBASE_SERVICE_ACCOUNT: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
+        run: python scripts/notificar.py
+
+      - name: Guardar el registro de notificaciones
+        run: |
+          git add revision/notificadas.json
+          git diff --cached --quiet || (git commit -m "Registro de notificaciones $(date +%F)" && git pull --rebase -q && git push)

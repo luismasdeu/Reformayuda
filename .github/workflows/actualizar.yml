@@ -58,3 +58,4 @@ jobs:
   publicar:
     needs: buscar
     uses: ./.github/workflows/publicar.yml
+    secrets: inherit

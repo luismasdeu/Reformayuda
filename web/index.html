@@ -361,6 +361,7 @@ button.loc{font:inherit;font-weight:700;color:var(--ink);cursor:pointer;padding:
   </div>
 
   <div id="perfil-bar"></div>
+  <div id="push-cta"></div>
   <div id="fit-wrap" hidden><div class="row-head" style="margin-bottom:12px"><h2>Recomendadas para tu obra</h2><button class="linkbtn" id="fit-all">Ver todas →</button></div><div class="grid" id="home-fit"></div></div>
 
   <div class="row-head"><h2>¿Qué vas a hacer?</h2><span class="muted">Toca un icono y te mostramos las ayudas</span></div>
@@ -442,6 +443,7 @@ button.loc{font:inherit;font-weight:700;color:var(--ink);cursor:pointer;padding:
       <div class="box" id="privacy-box"></div>
     </div>
     <div style="display:flex;flex-direction:column;gap:14px">
+      <div class="box" id="push-box" hidden></div>
       <div class="box"><h2>Avísame cuando…</h2><p class="muted" style="font-size:.85rem">Te avisamos al abrir Reformayuda, sin email ni cuenta. Para que no se te pase, añade los plazos a tu calendario desde cada ayuda. En la app instalada en el móvil también llegarán como notificación.</p><div id="alerts"></div></div>
       <div class="box"><h2>De dónde salen los datos</h2><div id="sources" style="display:flex;flex-direction:column;gap:12px"></div>
         <p class="muted" style="font-size:.82rem" id="sync"></p></div>
@@ -625,7 +627,7 @@ const locShort=()=>S.muni||(S.prov&&multiProv()?S.prov:"")||S.ccaa;
 const locLong=()=>[S.muni,S.prov,S.ccaa].filter(Boolean).filter((x,i,a)=>a.indexOf(x)===i).join(", ");
 function updLocBtn(){$("#loc-label").textContent=locShort()}
 function setLoc(v){S.ccaa=v.ccaa;S.prov=v.prov||"";S.muni=(v.muni||"").trim();S.hab=+v.hab||0;
-  store.set("ccaa",S.ccaa);store.set("loc",{prov:S.prov,muni:S.muni,hab:S.hab});updLocBtn()}
+  store.set("ccaa",S.ccaa);store.set("loc",{prov:S.prov,muni:S.muni,hab:S.hab});updLocBtn();if(typeof syncPush==="function")syncPush()}
 function locForm(el,v,onCh){
   const provs=PROV[v.ccaa]||[]; if(provs.length===1)v.prov=provs[0];
   const id=el.id, ch=()=>onCh&&onCh();
@@ -684,7 +686,7 @@ function card(a){
 }
 document.addEventListener("click",e=>{
   const f=e.target.closest("[data-fav]");
-  if(f){const id=f.dataset.fav;S.favs.has(id)?S.favs.delete(id):S.favs.add(id);store.set("favs",[...S.favs]);
+  if(f){const id=f.dataset.fav;S.favs.has(id)?S.favs.delete(id):S.favs.add(id);store.set("favs",[...S.favs]);syncPush();
     toast(S.favs.has(id)?"Guardada. Te avisaremos al abrir Reformayuda":"Quitada de tus ayudas");render();
     if(!$("#drawer").hidden&&$("#drawer").dataset.id===id)openDrawer(id);return}
   const o=e.target.closest("[data-open]"); if(o) openDrawer(o.dataset.open);
@@ -743,6 +745,7 @@ function renderNotices(){
   if(n.length)$("#al-dismiss").onclick=()=>{alertsDismissed=true;renderNotices()};
 }
 function renderHome(){
+  renderPushCta();
   renderNotices();
   const zone=AIDS.filter(inZone), open=zone.filter(a=>status(a).k==="abierta");
   const soon=open.filter(a=>status(a).soon), next=zone.filter(a=>status(a).k==="proxima");
@@ -943,13 +946,14 @@ function renderAvisos(){
   $("#sources").innerHTML=SRC.map(([i,c,t,d,u])=>`<div class="src"><span class="card-ico ${c}">${icon(i,"ico","width:18px;height:18px")}</span><div style="min-width:0"><b>${u?`<a href="${u}" target="_blank" rel="noopener">${t}</a>`:t}</b><div class="muted" style="font-size:.85rem">${d}</div></div></div>`).join("");
   $("#sync").textContent=META.actualizado?`Ayudas revisadas por última vez el ${fdate(META.actualizado)}. Buscamos novedades en los boletines cada mañana.`:"";
   renderPrivacy();
+  renderPushBox();
 }
 
 /* ---------- mis datos ---------- */
 function renderPrivacy(){
   const nW=Object.values(S.wiz).filter(w=>Object.keys(w.req||{}).length||Object.keys(w.docs||{}).length||false).length;
   $("#privacy-box").innerHTML=`<h2 id="mis-datos">Mis datos</h2>
-   <p class="muted" style="font-size:.88rem">Reformayuda no tiene cuentas ni pide tu email. Todo se guarda solo en este dispositivo y a nosotros no nos llega nada.</p>
+   <p class="muted" style="font-size:.88rem">Reformayuda no tiene cuentas ni pide tu email. Todo se guarda solo en este dispositivo. Si activas las notificaciones, guardamos solo tu zona, tipos de obra y ayudas guardadas para enviártelas, y lo borramos al desactivarlas.</p>
    <div class="kv"><span class="muted">Ayudas guardadas</span><b>${S.favs.size}</b></div>
    <div class="kv"><span class="muted">Solicitudes en preparación</span><b>${nW}</b></div>
    <div class="kv"><span class="muted">Cálculo del IRPF</span><b>${S.obra.coste?eur(S.obra.coste):"Vacío"}</b></div>
@@ -972,7 +976,7 @@ function askDelete(kind){
   $("#pd-yes").onclick=()=>{
     if(all){
       try{Object.keys(localStorage).filter(k=>k.startsWith(PFX)).forEach(k=>localStorage.removeItem(k))}catch(e){}
-      S.favs=new Set();S.wiz={};S.obra={coste:0,subv:0,pago:"banco",cash:0};S.alerts={nuevas:false,cierre:false,abre:false};S.consent=null;S.perfil=null;S.prov="";S.muni="";S.hab=0;updLocBtn();S.sort="plazo";$("#f-sort").value="plazo";
+      S.favs=new Set();S.wiz={};S.obra={coste:0,subv:0,pago:"banco",cash:0};S.alerts={nuevas:false,cierre:false,abre:false};if(pushEstado().activo)desactivarPush(true);S.consent=null;S.perfil=null;S.prov="";S.muni="";S.hab=0;updLocBtn();S.sort="plazo";$("#f-sort").value="plazo";
       store.set("favs",[]);store.set("obra",S.obra);store.set("alerts",S.alerts);
       $("#cookie").hidden=false;toast("Todo borrado");
     } else {
@@ -992,14 +996,15 @@ const LEGAL={
   <h3>Enlaces</h3><p>Enlazamos a sedes y boletines oficiales. No respondemos de su contenido ni de su disponibilidad.</p>
   <h3>Propiedad intelectual</h3><p>La marca, el diseño y el código de Reformayuda son de su titular. Las normas y actos oficiales que citamos no están protegidos por derechos de autor (art. 13 de la Ley de Propiedad Intelectual).</p>
   <h3>Ley aplicable</h3><p>Ley española. Si eres consumidor, son competentes los juzgados de tu domicilio.</p>`,
- privacidad:`<span class="eyebrow">Última actualización: 25 de octubre de 2026</span><h2>Política de privacidad</h2>
-  <p><b>Resumen: Reformayuda no te pide ningún dato personal.</b> No hay registro, ni cuentas, ni email. Lo que haces en la app se queda en tu dispositivo y a nosotros no nos llega.</p>
+ privacidad:`<span class="eyebrow">Última actualización: 28 de octubre de 2026</span><h2>Política de privacidad</h2>
+  <p><b>Resumen: Reformayuda no te pide ningún dato personal.</b> No hay registro, ni cuentas, ni email. Lo que haces en la app se queda en tu dispositivo y a nosotros no nos llega, salvo lo mínimo para enviarte notificaciones si decides activarlas.</p>
   <h3>1. Responsable</h3><p>Luis Eduardo Masdeu Cano, persona física. Contacto: <a href="mailto:contacto@reformayuda.es">contacto@reformayuda.es</a>.</p>
   <h3>2. Qué datos se guardan y dónde</h3><ul>
    <li><b>En tu dispositivo, nunca en nuestros servidores:</b> la ubicación de la obra, las respuestas del test (incluida tu franja de edad si la das), las ayudas guardadas, los requisitos y documentos que marcas y el cálculo del IRPF.</li>
+   <li><b>Solo si activas las notificaciones:</b> guardamos en Google Firebase, con servidores en la Unión Europea, el identificador de notificaciones que tu móvil genera para Reformayuda, tu comunidad y provincia, los tipos de obra que elegiste y los códigos de las ayudas que guardas. Sirve únicamente para enviarte avisos de ayudas nuevas en tu zona y de plazos. No incluye tu nombre, email ni teléfono. Base legal: tu consentimiento (art. 6.1.a RGPD). Se borra en el momento en que desactivas las notificaciones o pulsas «Borrar todo», y si el identificador deja de ser válido. Google Ireland actúa como encargado del tratamiento.</li>
    <li><b>Nada más.</b> No pedimos nombre, NIF, dirección, teléfono ni email, y no recibimos ni almacenamos archivos.</li></ul>
   <h3>3. Datos técnicos</h3><p>Como cualquier web, el servidor que aloja Reformayuda recibe tu dirección IP para poder enviarte la página. No la usamos para identificarte ni para crear perfiles. Si tu proveedor de alojamiento guarda registros, se borran en un plazo máximo de 30 días.</p>
-  <h3>4. Recursos de terceros</h3><p>Ninguno. Las tipografías, los iconos y los datos se sirven desde nuestra propia web: al usar Reformayuda no se envía nada a Google ni a otras empresas.</p>
+  <h3>4. Recursos de terceros</h3><p>Las tipografías, los iconos y los datos se sirven desde nuestra propia web. Solo si activas las notificaciones se carga el servicio Google Firebase, necesario para enviarlas.</p>
   <h3>5. Enlaces a sedes oficiales</h3><p>Cuando vas a la sede de un organismo para presentar la solicitud, sales de Reformayuda. Allí se aplica la política de privacidad de ese organismo.</p>
   <h3>6. Tus derechos</h3><p>Como todo está en tu dispositivo, tú controlas tus datos: puedes verlos, copiarlos o borrarlos desde «Mis datos». Para cualquier duda, escríbenos a <a href="mailto:contacto@reformayuda.es">contacto@reformayuda.es</a>. También puedes reclamar ante la Agencia Española de Protección de Datos (<a href="https://www.aepd.es" target="_blank" rel="noopener">aepd.es</a>).</p>
   <h3>7. Cambios</h3><p>Si en el futuro añadimos algo que necesite datos personales (por ejemplo, avisos por email), será opcional, te lo pediremos de forma expresa y actualizaremos esta política antes.</p>`,
@@ -1012,6 +1017,7 @@ const LEGAL={
    <tr><td>rfm_obra, rfm_mod, rfm_cert</td><td>Cálculo del IRPF</td><td>Hasta que lo borres</td></tr>
    <tr><td>rfm_perfil, rfm_onbskip</td><td>Tus respuestas del test inicial (obra, uso y, si la das, tu franja de edad), para ordenar las ayudas</td><td>Hasta que lo borres</td></tr>
    <tr><td>rfm_alerts</td><td>Tus preferencias de avisos</td><td>Hasta que lo borres</td></tr>
+   <tr><td>rfm_push, rfm_pushcta</td><td>Si tienes activadas las notificaciones y no repetir la invitación a activarlas</td><td>Hasta que lo borres</td></tr>
    <tr><td>rfm_twa, rfm_valorar</td><td>Saber si usas la app de Google Play y no pedirte la valoración más de la cuenta</td><td>Hasta que lo borres</td></tr>
    <tr><td>rfm_lastvisit</td><td>Fecha de tu última visita, para avisarte de ayudas nuevas</td><td>Hasta que lo borres</td></tr>
    <tr><td>rfm_consent</td><td>Recordar tu elección sobre cookies</td><td>12 meses</td></tr></tbody></table></div>
@@ -1065,7 +1071,7 @@ function openOnb(){
     if($("#onb-back"))$("#onb-back").onclick=()=>{step--;draw()};
     $("#onb-next").onclick=()=>{if(step<2){step++;draw();return}
       S.perfil=d;store.set("perfil",d);setLoc(d);
-      S.sort="fit";$("#f-sort").value="fit";S.dest=d.uso==="edificio"?"edificio":"todas";closeOnb();go("inicio");toast("Listo: primero verás las que encajan contigo")};
+      S.sort="fit";$("#f-sort").value="fit";S.dest=d.uso==="edificio"?"edificio":"todas";closeOnb();go("inicio");toast("Listo: primero verás las que encajan contigo");syncPush()};
     const f=$("#onb-card").querySelector("select,button.opt,#onb-next");if(f)f.focus();
   };
   $("#cookie").hidden=true;$("#onb").hidden=false;draw();
@@ -1116,6 +1122,93 @@ if(!S.consent)$("#cookie").hidden=false;
 $("#ck-acc").onclick=()=>setConsent(true);
 $("#ck-rej").onclick=()=>setConsent(false);
 if(S.perfil){S.sort="fit";$("#f-sort").value="fit"}
+/* ---------- notificaciones en el móvil (Firebase Cloud Messaging) ----------
+   Solo si la persona las activa. Se guarda en Firestore (servidores en la UE) el identificador de notificaciones
+   del dispositivo, la comunidad y la provincia, los tipos de obra y los ids de ayudas guardadas, para enviarle
+   solo lo de su zona. Al desactivarlas se borra. Los datos de Firebase son públicos por diseño (no son secretos). */
+const FB={apiKey:"",authDomain:"",projectId:"",storageBucket:"",messagingSenderId:"",appId:""};
+const FB_VAPID="";
+const FB_SDK="https://www.gstatic.com/firebasejs/10.12.2/";
+const pushListo=()=>!!(FB.apiKey&&FB_VAPID);
+const esIOS=()=>/iphone|ipad|ipod/i.test(navigator.userAgent)||(/macintosh/i.test(navigator.userAgent)&&navigator.maxTouchPoints>1);
+const pushSoportado=()=>"serviceWorker" in navigator&&"PushManager" in window&&"Notification" in window;
+let fbCargado=null;
+function cargarScript(src){return new Promise((ok,ko)=>{const s=document.createElement("script");s.src=src;s.onload=ok;s.onerror=ko;document.head.appendChild(s)})}
+function cargarFirebase(){
+  if(!fbCargado)fbCargado=(async()=>{
+    for(const f of["firebase-app-compat.js","firebase-messaging-compat.js","firebase-firestore-compat.js"])await cargarScript(FB_SDK+f);
+    if(!firebase.apps.length)firebase.initializeApp(FB);
+    return firebase;
+  })();
+  return fbCargado;
+}
+async function sha256(t){const b=await crypto.subtle.digest("SHA-256",new TextEncoder().encode(t));return[...new Uint8Array(b)].map(x=>x.toString(16).padStart(2,"0")).join("")}
+const pushEstado=()=>store.get("push",{activo:false,id:null,nuevas:true,plazos:true});
+function datosPush(token,st){return{token,ccaa:S.ccaa,prov:S.prov||"",tipos:(S.perfil&&S.perfil.tipos)||[],guardadas:[...S.favs].slice(0,100),nuevas:!!st.nuevas,plazos:!!st.plazos,actualizado:firebase.firestore.FieldValue.serverTimestamp()}}
+async function activarPush(){
+  if(!pushSoportado()){toast(esIOS()?"En iPhone, primero instala la app en tu pantalla de inicio":"Tu navegador no permite notificaciones");return false}
+  if(esIOS()&&!enApp()){abrirAyudaIOS();return false}
+  const perm=await Notification.requestPermission();
+  if(perm!=="granted"){toast("Sin permiso no podemos avisarte. Puedes activarlo en los ajustes del móvil.");return false}
+  try{
+    const fb=await cargarFirebase();
+    const reg=await navigator.serviceWorker.ready;
+    const token=await fb.messaging().getToken({vapidKey:FB_VAPID,serviceWorkerRegistration:reg});
+    const id=await sha256(token);
+    const st={...pushEstado(),activo:true,id,token};
+    await fb.firestore().collection("suscripciones").doc(id).set(datosPush(token,st));
+    store.set("push",st);toast(`Avisos activados para ${locShort()}`);render();return true;
+  }catch(e){console.error(e);toast("No hemos podido activar los avisos. Inténtalo más tarde.");return false}
+}
+async function desactivarPush(silencioso){
+  const st=pushEstado();
+  try{if(st.id){const fb=await cargarFirebase();await fb.firestore().collection("suscripciones").doc(st.id).delete();await fb.messaging().deleteToken().catch(()=>{})}}catch(e){console.error(e)}
+  store.set("push",{activo:false,id:null,nuevas:st.nuevas,plazos:st.plazos});
+  if(!silencioso){toast("Avisos desactivados y datos borrados");render()}
+}
+let syncT=null;
+function syncPush(){ // mantiene al día zona, tipos y ayudas guardadas
+  const st=pushEstado(); if(!st.activo||!st.id||!pushListo())return;
+  clearTimeout(syncT);syncT=setTimeout(async()=>{try{const fb=await cargarFirebase();await fb.firestore().collection("suscripciones").doc(st.id).set(datosPush(st.token,st))}catch(e){console.error(e)}},1500);
+}
+function abrirAyudaIOS(){
+  const d=$("#drawer");d.dataset.id="";
+  d.innerHTML=`<button class="btn alt sm close" id="d-close">${icon("x","ico","width:16px;height:16px")}Cerrar</button>
+   <h2>Avisos en iPhone</h2><p>En iPhone, las notificaciones solo funcionan si Reformayuda está instalada en la pantalla de inicio:</p>
+   <ol class="steps"><li><span>Abre reformayuda.es en <b>Safari</b>.</span></li><li><span>Toca <b>Compartir</b> y elige <b>«Añadir a pantalla de inicio»</b>.</span></li><li><span>Abre Reformayuda desde el icono y activa los avisos.</span></li></ol>`;
+  d.hidden=false;$("#scrim").hidden=false;$("#d-close").onclick=closeDrawer;
+}
+function renderPushCta(){
+  const el=$("#push-cta"); if(!el)return;
+  const st=pushEstado(), c=store.get("pushcta",{veces:0,ultima:null});
+  if(!pushListo()||!pushSoportado()&&!esIOS()){el.innerHTML="";return}
+  if(st.activo){el.innerHTML=`<p class="muted" style="font-size:.85rem;display:flex;gap:6px;align-items:center;margin:0">${icon("bell","ico","width:16px;height:16px;color:var(--brand)")}Avisos activados para <b>${esc(locShort())}</b> · <button class="linkbtn" data-go="avisos">Ajustar</button></p>`;return}
+  const reciente=c.ultima&&(Date.now()-new Date(c.ultima))/864e5<30;
+  if(!S.perfil||c.veces>=3||reciente||c.cerrado){el.innerHTML="";return}
+  el.innerHTML=`<div class="box" style="flex-direction:row;align-items:center;gap:12px;flex-wrap:wrap;border:2px solid var(--brand)">
+    <span class="card-ico c-eficiencia">${icon("bell")}</span>
+    <div style="flex:1;min-width:200px"><b>Entérate el primero de las ayudas nuevas en ${esc(locShort())}</b><br><span class="muted" style="font-size:.88rem">Muchas se reparten por orden de llegada hasta que se acaba el dinero. Te avisamos solo de lo que encaja con tu obra, y como mucho una vez al día.</span></div>
+    <div class="frow"><button class="btn brand sm" id="cta-push">Activar avisos</button><button class="btn alt sm" id="cta-no">Ahora no</button></div></div>`;
+  $("#cta-push").onclick=async()=>{if(await activarPush())store.set("pushcta",{...c,cerrado:true})};
+  $("#cta-no").onclick=()=>{store.set("pushcta",{veces:c.veces+1,ultima:new Date().toISOString()});renderPushCta()};
+}
+function renderPushBox(){
+  const el=$("#push-box"); if(!el)return;
+  if(!pushListo()){el.hidden=true;return}
+  el.hidden=false;const st=pushEstado();
+  el.innerHTML=`<h2>Notificaciones en el móvil</h2>
+   <p class="muted" style="font-size:.85rem">Te llegan aunque no tengas la app abierta. Sin email ni cuenta: solo guardamos lo necesario para enviártelas (tu zona, tipos de obra y ayudas guardadas) y lo borramos al desactivarlas.</p>
+   <label class="toggle"><span><b>Recibir notificaciones</b><br><span class="muted" style="font-size:.85rem">${st.activo?`Activadas para ${esc(locLong())}`:"Desactivadas"}</span></span><input type="checkbox" class="sw" id="push-on" ${st.activo?"checked":""}></label>
+   ${st.activo?`<label class="toggle"><span>Ayudas nuevas en mi zona</span><input type="checkbox" class="sw" id="push-nuevas" ${st.nuevas?"checked":""}></label>
+   <label class="toggle"><span>Quedan 7 días y 1 día para el cierre de una ayuda guardada</span><input type="checkbox" class="sw" id="push-plazos" ${st.plazos?"checked":""}></label>`:""}
+   <p class="muted" style="font-size:.78rem">Como mucho una notificación al día.</p>`;
+  $("#push-on").onchange=async e=>{if(e.target.checked){if(!await activarPush())e.target.checked=false}else desactivarPush()};
+  if(st.activo){
+    $("#push-nuevas").onchange=e=>{store.set("push",{...pushEstado(),nuevas:e.target.checked});syncPush()};
+    $("#push-plazos").onchange=e=>{store.set("push",{...pushEstado(),plazos:e.target.checked});syncPush()};
+  }
+}
+
 /* ---------- pedir valoración en Google Play ----------
    Normas de Google Play: el mismo mensaje para todo el mundo (sin preguntar antes si le ha gustado),
    sin premios a cambio y sin pedir un número de estrellas. Solo dentro de la app de Google Play,

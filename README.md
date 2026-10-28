@@ -109,7 +109,11 @@ Cada página tiene un botón que abre la app directamente en esa ayuda (`/?ayuda
 
 Para cambiar o añadir preguntas del asistente, edita `web/data/preguntas.json`.
 
-## 4. Probarla en tu ordenador
+## 4. Notificaciones en el móvil
+
+Avisos de ayudas nuevas en la zona de cada persona y de plazos de sus ayudas guardadas, con Firebase (gratis). Puesta en marcha y funcionamiento: `docs/notificaciones.md`. Hasta que se configure, la app no muestra nada de notificaciones.
+
+## 5. Probarla en tu ordenador
 
 ```bash
 cd web
@@ -128,7 +132,7 @@ python3 scripts/validar.py
 
 ---
 
-## 5. Pendiente antes del lanzamiento
+## 6. Pendiente antes del lanzamiento
 
 - [x] Registrar `reformayuda.es` y conectarlo (apartado 1.3).
 - [x] Datos del titular y email de contacto en los textos legales.
@@ -137,7 +141,7 @@ python3 scripts/validar.py
 - [ ] Que un abogado o gestor revise los textos legales y las respuestas del chat sobre leyes (propiedad horizontal, licencias).
 - [ ] Publicar en Google Play: ver `docs/google-play.md`.
 
-## 6. Para cuando esté publicada en Google Play: darla a conocer
+## 7. Para cuando esté publicada en Google Play: darla a conocer
 
 Plan acordado (todo gratis):
 
@@ -146,9 +150,8 @@ Plan acordado (todo gratis):
 - [ ] **Manual:** compartir ayudas concretas en grupos de Facebook (reformas, comunidades de vecinos, pueblos), escribir a administradores de fincas, nota de prensa a medios locales y vídeos cortos (TikTok, Reels, Shorts).
 - [ ] Antes de anunciarla: tener publicadas al menos 20-30 ayudas de varias comunidades.
 
-## 7. Qué no hace todavía
+## 8. Qué no hace todavía
 
 - **Boletines autonómicos y provinciales:** se cubren a través de la BDNS, donde las administraciones registran sus convocatorias. Leer cada boletín directamente es una mejora futura.
-- **Notificaciones con la app cerrada:** los avisos salen al abrir la app y en el calendario del usuario. Las notificaciones push necesitan un pequeño servidor.
 - **Lista de municipios del INE:** el municipio se escribe a mano. Cargar el nomenclátor del INE permitiría autocompletar y saber los habitantes automáticamente.
 - **Ayuda de IA para rellenar las candidatas:** se puede añadir leyendo el PDF de la convocatoria con una API de IA, siempre con revisión humana.
