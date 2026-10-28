@@ -52,16 +52,17 @@
     "nota": "Revisa importe por vivienda, requisitos, documentos y pasos antes de aprobar.",
     "ia": {
      "fecha": "2026-10-28",
-     "documento": "4 de 229 páginas",
+     "documento": "BOP del 16/09/2026: no contiene esta convocatoria",
      "recomendacion": "publicar",
      "motivo": "Paga obras de rehabilitación y adecuación de viviendas privadas del entorno rural de Tazacorte (habitabilidad, ahorro energético, elementos estructurales y mantenimiento)."
     },
     "confirmar": [
-     "Comprobar la cuantía máxima por vivienda y el porcentaje subvencionado (Base Octava).",
-     "Comprobar los requisitos exactos de la Base Quinta y los criterios de puntuación.",
-     "Comprobar la lista completa de documentos y cómo se justifica la obra.",
-     "Confirmar la fecha exacta de apertura: el plazo empieza el día siguiente a la publicación en el BOP (28-10-2026) y se ha supuesto el 29-10-2026."
-    ]
+     "La convocatoria parece publicada en el BOP de Santa Cruz de Tenerife del 28/10/2026; el del 16/09 que enlaza la BDNS no la contiene",
+     "Base Octava: cuantía máxima y porcentaje por vivienda",
+     "Base Quinta: requisitos y criterios de puntuación",
+     "Plazo exacto de solicitud"
+    ],
+    "bases_no_corresponden": true
    },
    "prov": "Santa Cruz de Tenerife",
    "muni": "Tazacorte",

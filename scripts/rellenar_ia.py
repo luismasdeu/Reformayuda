@@ -54,6 +54,7 @@ Extrae los datos para una ficha que leerán particulares sin conocimientos legal
 - «edad_min», «edad_max», «max_habitantes»: 0 si no hay límite.
 - «url_solicitud»: dirección de la sede electrónica o del trámite, solo si aparece en los documentos.
 - «dudas»: lo que la persona que revisa debe comprobar en las bases (máximo 4 frases).
+- «documento_corresponde»: false si el documento adjunto no contiene las bases ni la convocatoria de ESTA ayuda (por ejemplo, un boletín que solo nombra al municipio por otro asunto). En ese caso no saques datos de él.
 - «claridad»: «clara» solo si has leído las bases o la convocatoria oficial y en ellas constan el importe por vivienda (o el porcentaje con su máximo), el plazo (fecha final o «hasta agotar fondos»), los requisitos y cómo se pide, y no hay nada importante que dudar. Si te falta cualquiera de esas cosas o has tenido que suponer algo, «dudosa». Las claras se publican sin revisión humana: ante la duda, «dudosa»."""
 
 ESQUEMA = {
@@ -80,10 +81,11 @@ ESQUEMA = {
         "url_solicitud": {"type": "string"},
         "dudas": {"type": "array", "items": {"type": "string"}},
         "claridad": {"type": "string", "enum": ["clara", "dudosa"]},
+        "documento_corresponde": {"type": "boolean"},
     },
     "required": ["es_ayuda_para_obras_en_vivienda", "motivo", "title", "resumen", "imp", "importe", "abre", "cierra",
                  "plazo", "req", "docs", "pasos", "tipo", "dest", "edad_min", "edad_max", "max_habitantes", "irpf",
-                 "url_solicitud", "dudas", "claridad"],
+                 "url_solicitud", "dudas", "claridad", "documento_corresponde"],
     "additionalProperties": False,
 }
 
@@ -120,7 +122,9 @@ def bloques_documento(url, pistas):
     # Boletín entero: se buscan las páginas que nombran al organismo o al municipio (y la siguiente).
     paginas = [(p.extract_text() or "") for p in pdf.pages]
     claves = [k.lower() for k in pistas if k and len(k) > 3]
-    elegidas = sorted({j for i, t in enumerate(paginas) if any(k in t.lower() for k in claves) for j in (i, i + 1) if j < len(paginas)})
+    tema = re.compile(r"subvenci|ayuda|rehabilit|vivienda|bases reguladoras|convocatoria", re.I)
+    elegidas = sorted({j for i, t in enumerate(paginas) if any(k in t.lower() for k in claves) and tema.search(t)
+                       for j in (i, i + 1) if j < len(paginas)})
     texto = "\n\n".join(f"[Página {i + 1}]\n{paginas[i]}" for i in elegidas)[:MAX_TEXTO]
     if not texto:
         return [], f"PDF de {len(pdf.pages)} páginas sin texto útil"
@@ -150,8 +154,9 @@ def bases_utiles(bloques):
     return any(b["type"] == "document" or len(b.get("text", "")) > 4000 for b in bloques)
 
 
-def preguntar(cliente, c, ficha, bloques):
-    buscar = not bases_utiles(bloques)
+def preguntar(cliente, c, ficha, bloques, buscar=None):
+    if buscar is None:
+        buscar = not bases_utiles(bloques)
     contexto = {k: c.get(k) for k in ("title", "org", "ccaa", "prov", "muni", "abre", "cierra", "url")}
     mensajes = [{"role": "user", "content": bloques + [{"type": "text", "text": (
         "Datos que ya tenemos de la convocatoria:\n" + json.dumps(contexto, ensure_ascii=False) +
@@ -237,6 +242,12 @@ def procesar(cliente, c, completa, informe):
     url_bases = r.get("bases_reguladoras") or (ficha or {}).get("urlBasesReguladoras") or ""
     bloques, como = bloques_documento(url_bases, [c.get("muni"), c.get("org", "").split("·")[0].strip(), c.get("title", "")[:40]])
     d, uso = preguntar(cliente, c, ficha, bloques)
+    if bloques and not d.get("documento_corresponde", True):
+        # El enlace de bases de la BDNS lleva a otro documento: se busca la convocatoria buena.
+        como += " (no eran las bases de esta ayuda: buscada en internet)"
+        r["bases_no_corresponden"] = True
+        d, uso2 = preguntar(cliente, c, ficha, [], buscar=True)
+        uso = {k: uso[k] + uso2[k] for k in uso}
     entrada, salida = PRECIO.get(MODELO, (2, 10))
     coste = (uso["entrada"] * entrada + uso["salida"] * salida) / 1e6 + uso["busquedas"] * 0.01  # 10 $ por 1.000 búsquedas
     informe["coste_usd"] += coste
