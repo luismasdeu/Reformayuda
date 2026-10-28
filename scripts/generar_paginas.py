@@ -134,7 +134,7 @@ def pagina(ruta, titulo, descripcion, cuerpo, migas, jsonld=None, indexar=True):
 </main>
 <footer class="pie"><div class="wrap">
   <p><b>Reformayuda</b> · Buscador gratuito de ayudas y subvenciones para reformar o construir tu casa. Sin registro y sin anuncios. Contacto: <a href="mailto:contacto@reformayuda.es">contacto@reformayuda.es</a></p>
-  <p><a href="/subvenciones/">Todas las ayudas</a> · <a href="/preguntas/">Preguntas frecuentes</a> · <a href="/que-es-reformayuda/">Qué es Reformayuda</a> · <a href="/#aviso">Aviso legal</a> · <a href="/#privacidad">Privacidad</a> · <a href="/#cookies">Cookies</a></p>
+  <p><a href="/subvenciones/">Todas las ayudas</a> · <a href="/preguntas/">Preguntas frecuentes</a> · <a href="/que-es-reformayuda/">Qué es Reformayuda</a> · <a href="/aviso-legal/">Aviso legal</a> · <a href="/privacidad/">Privacidad</a> · <a href="/cookies/">Cookies</a></p>
 </div></footer>
 </body>
 </html>
@@ -285,6 +285,22 @@ def pagina_que_es(ayudas, faq):
                   cuerpo, [("Inicio", "/"), ("Qué es Reformayuda", "/que-es-reformayuda/")], ld)
 
 
+def paginas_legales():
+    """Copia fija de los textos legales de la app (los de LEGAL en index.html), legible sin JavaScript.
+    Google Play pide una URL de política de privacidad que se pueda leer directamente."""
+    html = (WEB / "index.html").read_text(encoding="utf-8")
+    rutas = []
+    for clave, ruta, nombre in (("privacidad", "/privacidad/", "Política de privacidad"),
+                                ("aviso", "/aviso-legal/", "Aviso legal"), ("cookies", "/cookies/", "Política de cookies")):
+        m = re.search(r"\n " + clave + r":`(.*?)`", html, re.S)
+        if not m:
+            continue
+        cuerpo = m.group(1).replace("<h2>", "<h1>", 1).replace("</h2>", "</h1>", 1)
+        rutas.append(pagina(ruta, f"{nombre} · Reformayuda", f"{nombre} de Reformayuda.",
+                            f"<article>{cuerpo}</article>", [("Inicio", "/"), (nombre, ruta)]))
+    return rutas
+
+
 def llms_txt(ayudas, faq, rutas_tipo, rutas_ccaa):
     abiertas = [a for a in ayudas if estado(a)[0] != "cerrada"]
     lineas = ["# Reformayuda", "",
@@ -319,7 +335,7 @@ def main():
     datos = json.loads((WEB / "data" / "ayudas.json").read_text(encoding="utf-8"))
     faq = json.loads((WEB / "data" / "preguntas.json").read_text(encoding="utf-8"))
     ayudas = datos["ayudas"]
-    for carpeta in ("ayudas", "subvenciones", "preguntas", "que-es-reformayuda"):
+    for carpeta in ("ayudas", "subvenciones", "preguntas", "que-es-reformayuda", "privacidad", "aviso-legal", "cookies"):
         shutil.rmtree(WEB / carpeta, ignore_errors=True)
 
     usadas = set()
@@ -380,6 +396,7 @@ def main():
                                 enlaces_tipos("/subvenciones/") + enlaces_ccaa))
     rutas.append(pagina_preguntas(faq))
     rutas.append(pagina_que_es(ayudas, faq))
+    rutas += paginas_legales()
 
     llms_txt(ayudas, faq, rutas_tipo, rutas_ccaa)
     rutas = [r for r in rutas if r]
