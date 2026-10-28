@@ -6,7 +6,8 @@
   "campo": "Casa de campo",
   "comunidad": "Comunidad de vecinos",
   "permisos": "Licencias y permisos",
-  "tramites": "Trámites y dinero"
+  "tramites": "Trámites y dinero",
+  "app": "Avisos y la app"
  },
  "preguntas": [
   {
@@ -1257,6 +1258,97 @@
    ],
    "a": "<p>Puedes <b>perder la ayuda</b> o tener que devolverla con intereses. Apunta la fecha límite en cuanto te la concedan y guarda facturas, justificantes de pago, fotos de antes y después y el certificado final.</p>",
    "act": "<button class=\"btn sm\" data-go=\"avisos\">Ver mis plazos</button>"
+  },
+  {
+   "cat": "app",
+   "q": "¿Cómo activo las notificaciones en el móvil?",
+   "k": [
+    "activar notificaciones",
+    "activar avisos",
+    "notificaciones",
+    "avisos en el movil",
+    "alertas"
+   ],
+   "a": "<p>Ve a <b>Avisos</b> y activa <b>«Notificaciones en el móvil»</b>. Cuando el móvil pregunte, pulsa <b>Permitir</b>. Después pulsa <b>«Probar en este móvil»</b>: si te llega la notificación de prueba, ya está.</p><p>Te avisamos de ayudas nuevas en tu zona y de los plazos de tus ayudas guardadas, como mucho una vez al día. No pedimos email ni cuenta.</p>",
+   "act": "<button class=\"btn sm\" data-go=\"avisos\">Ir a Avisos</button>"
+  },
+  {
+   "cat": "app",
+   "q": "No me llegan las notificaciones, ¿qué hago?",
+   "k": [
+    "no me llegan",
+    "no llegan notificaciones",
+    "no funcionan notificaciones",
+    "no recibo avisos",
+    "no salen notificaciones"
+   ],
+   "a": "<p>Casi siempre es un ajuste del móvil. Revisa por orden:</p><ol><li><b>Ábrela en Chrome.</b> Si arriba ves una barra con una <b>X</b> y una flecha <b>∨</b>, estás dentro de otra app (Google, Facebook, Instagram…), que no muestra notificaciones. Toca <b>⋮ → «Abrir en Chrome»</b> o escribe reformayuda.es en Chrome.</li><li><b>Permiso de la web:</b> en Chrome, toca el icono junto a la dirección → <b>Permisos → Notificaciones</b> → Permitir.</li><li><b>Notificaciones de Chrome en Android:</b> Ajustes → Aplicaciones → <b>Chrome</b> (no la app «Google») → Notificaciones → activa <b>«Todas las notificaciones de Chrome»</b> y, más abajo en «Sitios», <b>reformayuda.es</b>.</li><li>En <b>Avisos</b>, desactiva y vuelve a activar las notificaciones y pulsa <b>«Probar en este móvil»</b>.</li></ol>",
+   "act": "<button class=\"btn sm\" data-go=\"avisos\">Ir a Avisos</button>"
+  },
+  {
+   "cat": "app",
+   "q": "El interruptor de notificaciones sale gris y no me deja activarlo",
+   "k": [
+    "gris",
+    "no me deja activar",
+    "android esta bloqueando",
+    "bloqueando esta categoria",
+    "mostrar notificaciones"
+   ],
+   "a": "<p>Si Android dice <b>«está bloqueando esta categoría»</b>, es que las notificaciones de <b>Chrome</b> están apagadas en general. Ve a <b>Ajustes → Aplicaciones → Chrome → Notificaciones</b> y activa primero el interruptor de arriba, <b>«Todas las notificaciones de Chrome»</b>. Después ya podrás activar reformayuda.es.</p><p>Ojo: la app <b>Google</b> (la del buscador) y <b>Chrome</b> son distintas, cada una con sus ajustes.</p>",
+   "act": "<button class=\"btn sm\" data-go=\"avisos\">Ir a Avisos</button>"
+  },
+  {
+   "cat": "app",
+   "q": "Me llegan las notificaciones pero no suenan",
+   "k": [
+    "no suenan",
+    "silenciadas",
+    "sin sonido",
+    "no vibra",
+    "notificacion silenciosa"
+   ],
+   "a": "<p>Android las ha puesto en <b>«Silenciadas»</b>. Cuando te llegue una, <b>mantenla pulsada</b> y elige <b>«Predeterminado»</b> o <b>«Alertar»</b>. Revisa también que no tengas activado <b>No molestar</b> o el ahorro de batería extremo.</p>",
+   "act": ""
+  },
+  {
+   "cat": "app",
+   "q": "¿Funcionan las notificaciones en iPhone?",
+   "k": [
+    "iphone",
+    "ios",
+    "safari",
+    "apple",
+    "ipad"
+   ],
+   "a": "<p>Sí, desde <b>iOS 16.4</b>, pero solo si instalas Reformayuda en la pantalla de inicio: abre reformayuda.es en <b>Safari</b> → <b>Compartir</b> → <b>«Añadir a pantalla de inicio»</b>. Ábrela desde ese icono y activa los avisos.</p>",
+   "act": "<button class=\"btn sm\" data-go=\"avisos\">Ir a Avisos</button>"
+  },
+  {
+   "cat": "app",
+   "q": "¿Qué datos guardáis para enviarme notificaciones? ¿Cómo los borro?",
+   "k": [
+    "datos notificaciones",
+    "privacidad avisos",
+    "borrar datos",
+    "desactivar notificaciones",
+    "dar de baja"
+   ],
+   "a": "<p>Solo un identificador anónimo del móvil, tu comunidad y provincia, tus tipos de obra y tus ayudas guardadas. <b>Nada de nombre, email ni teléfono.</b> Al desactivar las notificaciones en <b>Avisos</b> (o pulsar «Borrar todo»), lo borramos al momento.</p>",
+   "act": "<button class=\"btn sm\" data-go=\"avisos\">Ir a Avisos</button>"
+  },
+  {
+   "cat": "app",
+   "q": "¿Cómo instalo Reformayuda como app?",
+   "k": [
+    "instalar",
+    "descargar app",
+    "pantalla de inicio",
+    "icono",
+    "aplicacion"
+   ],
+   "a": "<p>En Android, abre reformayuda.es en <b>Chrome</b> → <b>⋮ → «Instalar app»</b> (o «Añadir a pantalla de inicio»). En iPhone, en <b>Safari</b> → <b>Compartir → «Añadir a pantalla de inicio»</b>. Es gratis, ocupa muy poco y se actualiza sola.</p>",
+   "act": ""
   }
  ]
 }
