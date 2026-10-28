@@ -38,7 +38,14 @@ La app de Android es la misma web, empaquetada como **Trusted Web Activity (TWA)
 - **Capturas:** `docs/google-play/capturas/` (6 imágenes)
 - **Categoría:** Finanzas o Casa y hogar.
 - **Política de privacidad:** `https://reformayuda.es/#privacidad`
-- **Seguridad de los datos:** «Esta app no recoge ni comparte datos de usuario».
+- **Seguridad de los datos:** ver el apartado siguiente.
+
+### Seguridad de los datos
+Sin notificaciones no se recoge nada, pero si alguien las activa se guarda en Firebase un identificador del móvil y su zona. Hay que declararlo así:
+- ¿Recoge o comparte datos? **Sí, recoge** (no comparte).
+- Tipo: **Identificadores del dispositivo u otros** → *Recogido*, **opcional** (el usuario lo elige), finalidad **Funcionalidad de la app** (notificaciones). No se comparte con terceros.
+- Tipo: **Ubicación aproximada**: no (la zona la elige el usuario a mano, no se lee del GPS). Si Play lo pregunta, la comunidad y la provincia elegidas se pueden declarar como *Otra información de la app*, opcional, para funcionalidad.
+- Datos cifrados en tránsito: **Sí**. El usuario puede pedir que se borren: **Sí** (desactivando las notificaciones o con «Borrar todo»).
 - **Anuncios:** No.
 - **Clasificación de contenido:** rellena el cuestionario (todo «No»).
 
