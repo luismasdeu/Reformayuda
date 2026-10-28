@@ -1,5 +1,5 @@
 // Service worker de Reformayuda: la app funciona sin conexión y las ayudas se actualizan al volver la red.
-const VERSION = "reformayuda-v13";
+const VERSION = "reformayuda-v14";
 const SHELL = ["./", "index.html", "data/ayudas.json", "data/preguntas.json", "manifest.webmanifest", "icons/icon.svg", "icons/icon-192.png", "icons/icon-512.png", "fonts/bricolage-grotesque.woff2", "fonts/nunito-sans.woff2"];
 
 self.addEventListener("install", e => {
