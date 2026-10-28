@@ -1,26 +1,44 @@
 {
- "fecha": "2026-10-28T16:43",
+ "fecha": "2026-10-28T16:46",
  "modelo": "claude-sonnet-5-5",
  "procesadas": [
   {
-   "id": "bdns-933977",
-   "documento": "página web",
-   "coste_usd": 0.1763,
-   "recomendacion": "publicar"
-  },
-  {
-   "id": "bdns-937189",
-   "documento": "PDF de 4 páginas",
-   "coste_usd": 0.0506,
-   "recomendacion": "publicar"
-  },
-  {
-   "id": "bdns-934548",
+   "id": "bdns-934248",
    "documento": "no se pudo descargar (<urlopen error timed out>)",
-   "coste_usd": 0.1303,
+   "coste_usd": 0.1242,
+   "recomendacion": "descartar"
+  },
+  {
+   "id": "bdns-933993",
+   "documento": "página web",
+   "coste_usd": 0.0359,
+   "recomendacion": "descartar"
+  },
+  {
+   "id": "bdns-937482",
+   "documento": "página web",
+   "coste_usd": 0.0263,
    "recomendacion": "publicar"
+  },
+  {
+   "id": "bdns-933040",
+   "documento": "página web",
+   "coste_usd": 0.0286,
+   "recomendacion": "publicar"
+  },
+  {
+   "id": "bdns-937771",
+   "documento": "página web",
+   "coste_usd": 0.5742,
+   "recomendacion": "publicar"
+  },
+  {
+   "id": "bdns-937701",
+   "documento": "página web",
+   "coste_usd": 0.0287,
+   "recomendacion": "descartar"
   }
  ],
  "errores": [],
- "coste_usd": 0.357
+ "coste_usd": 0.818
 }

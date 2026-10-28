@@ -908,7 +908,7 @@
   {
    "id": "bdns-934248",
    "estado": "pendiente",
-   "title": "CONVOCATORIA DE AYUDAS ECONÓMICAS MUNICIPALES PARA AFRONTAR OBLIGACIONES DERIVADAS DE LA TITULARIDAD DE LA VIVIENDA HABITUAL. AÑO 2026",
+   "title": "Gastos de la vivienda habitual en Mieres (no es para obras)",
    "org": "MIERES · AYUNTAMIENTO DE MIERES (ASTURIAS)",
    "scope": "municipal",
    "ccaa": "Asturias",
@@ -922,11 +922,11 @@
    "imp": "Consulta la convocatoria",
    "abre": "2026-10-08",
    "cierra": null,
-   "plazo": "Consulta el plazo en la convocatoria",
+   "plazo": "Según la ficha de la BDNS, el plazo es de 10 días hábiles desde el día siguiente a la publicación de la convocatoria. La ficha no da fechas exactas de inicio y fin.",
    "irpf": false,
    "fuente": "BDNS nº 934248",
    "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/934248",
-   "resumen": "Acceso a la vivienda y fomento de la edificación",
+   "resumen": "Ayuda municipal del Ayuntamiento de Mieres para personas con pocos ingresos. Sirve para pagar gastos de mantenimiento de la vivienda habitual. No paga obras ni reformas.",
    "req": [
     "Consulta los requisitos en la convocatoria oficial"
    ],
@@ -943,78 +943,109 @@
     "bases_reguladoras": "https://miprincipado.asturias.es/bopa/2026/09/02/2026-07104.pdf",
     "abierta_segun_bdns": false,
     "beneficiarios": "PERSONAS FÍSICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
-    "nota": "Revisa importe por vivienda, requisitos, documentos y pasos antes de aprobar."
+    "nota": "Revisa importe por vivienda, requisitos, documentos y pasos antes de aprobar.",
+    "ia": {
+     "fecha": "2026-10-28",
+     "documento": "no se pudo descargar (<urlopen error timed out>)",
+     "recomendacion": "descartar",
+     "motivo": "Es una ayuda social del Ayuntamiento de Mieres para pagar gastos de mantenimiento de la vivienda habitual (obligaciones de la titularidad, como el IBI), no para pagar obras. Las bases oficiales no se han podido abrir y este dato sale de una nota del Ayuntamiento sobre una convocatoria anterior."
+    },
+    "confirmar": [
+     "No se han podido leer las bases (BOPA 2026-07104) ni la convocatoria, así que no hay importes ni requisitos confirmados.",
+     "Comprueba que la ayuda no cubre ningún tipo de obra en la vivienda.",
+     "La fecha de apertura de la BDNS (2026-10-08) es la de recepción de la ficha. El plazo real cuenta desde la publicación en el BOPA."
+    ]
    },
    "muni": "Mieres (Asturias)"
   },
   {
    "id": "bdns-933993",
    "estado": "pendiente",
-   "title": "BASES SUBVENCIÓN PARA LA COMPRA O AUTOPROMOCIÓN DE PRIMERA VIVIENDA, EJERCICIO 2026",
+   "title": "Compra o autopromoción de primera vivienda en Almussafes",
    "org": "ALMUSSAFES · AYUNTAMIENTO DE ALMUSSAFES",
    "scope": "municipal",
    "ccaa": "Comunitat Valenciana",
    "tipo": [
-    "rehabilitacion"
+    "construccion"
    ],
    "dest": [
     "vivienda"
    ],
-   "importe": 0,
-   "imp": "Consulta la convocatoria",
-   "abre": "2026-10-07",
-   "cierra": null,
-   "plazo": "Consulta el plazo en la convocatoria",
+   "importe": 2500,
+   "imp": "Hasta 2.500 € por vivienda",
+   "abre": "2026-10-21",
+   "cierra": "2026-11-03",
+   "plazo": "La web municipal indica que el plazo va del 21 de octubre al 3 de noviembre de 2026, ambos incluidos. El anuncio oficial habla de diez días desde el día siguiente a su publicación en el BOP, que fue el 20 de octubre de 2026.",
    "irpf": false,
    "fuente": "BDNS nº 933993",
    "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/933993",
-   "resumen": "Acceso a la vivienda y fomento de la edificación",
+   "resumen": "El Ayuntamiento de Almussafes da una ayuda a quien compra o autopromueve su primera vivienda en la zona urbana del municipio. La compra o la autopromoción debe haberse hecho entre el 1 de septiembre de 2025 y el 31 de agosto de 2026.",
    "req": [
-    "Consulta los requisitos en la convocatoria oficial"
+    "Comprar o autopromover tu primera vivienda.",
+    "La vivienda debe estar en la zona urbana de Almussafes.",
+    "La compra o autopromoción debe haberse hecho entre el 1 de septiembre de 2025 y el 31 de agosto de 2026.",
+    "Cumplir los demás requisitos de la base cuarta de las bases, que no se han podido consultar."
    ],
    "docs": [
-    "Consulta la documentación en la convocatoria oficial"
+    "Solicitud en el modelo oficial del Ayuntamiento.",
+    "Documentación que acredite la compra o la autopromoción de la vivienda.",
+    "El resto de documentos que pidan las bases, que no se han podido consultar."
    ],
    "pasos": [
-    "Lee la convocatoria oficial",
-    "Prepara la documentación",
-    "Presenta la solicitud en la sede del organismo"
+    "Lee las bases en la web del Ayuntamiento de Almussafes.",
+    "Prepara la solicitud y la documentación.",
+    "Presenta la solicitud por la sede electrónica entre el 21 de octubre y el 3 de noviembre de 2026.",
+    "Espera la resolución. Si el dinero no alcanza para todas las solicitudes, se reparte según la puntuación obtenida."
    ],
    "_revisar": {
     "presupuesto_total": 35000,
     "bases_reguladoras": "https://wp.me/PanQjS-1mD",
     "abierta_segun_bdns": false,
     "beneficiarios": "PERSONAS FÍSICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
-    "nota": "Revisa importe por vivienda, requisitos, documentos y pasos antes de aprobar."
+    "nota": "Revisa importe por vivienda, requisitos, documentos y pasos antes de aprobar.",
+    "ia": {
+     "fecha": "2026-10-28",
+     "documento": "página web",
+     "recomendacion": "descartar",
+     "motivo": "Es una ayuda para comprar o autopromover (construir) la primera vivienda, pero no paga obras de reforma. Está pensada para quien compra o se construye su primera casa en Almussafes."
+    },
+    "confirmar": [
+     "No se ha podido leer el PDF de las bases, así que faltan los requisitos concretos de la base cuarta (edad, ingresos, empadronamiento).",
+     "Hay que comprobar el plazo exacto: la web del Ayuntamiento dice del 21 de octubre al 3 de noviembre, y el anuncio dice diez días desde el siguiente a su publicación en el BOP.",
+     "Hay que comprobar la lista de documentos que piden las bases.",
+     "El presupuesto total es de 35.000 €. Las bases no parecen cubrir obras de reforma, por lo que se descarta como ayuda para obras."
+    ]
    },
    "prov": "Valencia",
-   "muni": "Almussafes"
+   "muni": "Almussafes",
+   "sede": "https://almussafes.sede.dival.es/carpetaciudadana/tramite.aspx?idtramite=20047"
   },
   {
    "id": "bdns-937482",
    "estado": "pendiente",
-   "title": "AYUDAS A LA REHABILITACIÓN Y RESTAURACIÓN DE LAS FACHADAS DEL CASCO ANTIGUO. CALLE DEL ARENY N.º 20",
+   "title": "Rehabilitación de fachada en calle del Areny 20, Lloret de Mar",
    "org": "LLORET DE MAR · AYUNTAMIENTO DE LLORET DE MAR",
    "scope": "municipal",
    "ccaa": "Cataluña",
    "tipo": [
-    "eficiencia",
     "rehabilitacion"
    ],
    "dest": [
-    "vivienda"
+    "edificio"
    ],
    "importe": 0,
-   "imp": "Consulta la convocatoria",
+   "imp": "Presupuesto total de 2.256,79 € para este edificio. No consta la cantidad por vivienda.",
    "abre": "2026-10-23",
    "cierra": null,
-   "plazo": "Consulta el plazo en la convocatoria",
+   "plazo": "Sin plazo de solicitud. Es una concesión directa a un edificio concreto.",
    "irpf": false,
    "fuente": "BDNS nº 937482",
    "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/937482",
-   "resumen": "Otras Prestaciones económicas",
+   "resumen": "El Ayuntamiento de Lloret de Mar concede una ayuda directa para rehabilitar y restaurar la fachada del edificio de la calle del Areny n.º 20, en el casco antiguo. El presupuesto total es de 2.256,79 €. Es una ayuda para un edificio concreto, no una convocatoria abierta a cualquiera.",
    "req": [
-    "Consulta los requisitos en la convocatoria oficial"
+    "Ser persona física sin actividad económica.",
+    "Ser propietario del edificio de la calle del Areny n.º 20 (Lloret de Mar).",
+    "Hacer obras de rehabilitación o restauración de la fachada."
    ],
    "docs": [
     "Consulta la documentación en la convocatoria oficial"
@@ -1029,7 +1060,18 @@
     "bases_reguladoras": "https://www.lloret.cat/ajuntament/subvencions-i-ajuts-1",
     "abierta_segun_bdns": false,
     "beneficiarios": "PERSONAS FÍSICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
-    "nota": "Revisa importe por vivienda, requisitos, documentos y pasos antes de aprobar."
+    "nota": "Revisa importe por vivienda, requisitos, documentos y pasos antes de aprobar.",
+    "ia": {
+     "fecha": "2026-10-28",
+     "documento": "página web",
+     "recomendacion": "publicar",
+     "motivo": "Es una subvención directa para rehabilitar y restaurar la fachada de un edificio concreto (calle del Areny n.º 20) en el casco antiguo de Lloret de Mar."
+    },
+    "confirmar": [
+     "No se han podido leer las bases (PDF y DOCX de la BDNS): confirma el importe, los requisitos y los documentos.",
+     "Comprueba si es una concesión directa a un beneficiario concreto, porque entonces no admite solicitudes de terceros.",
+     "Confirma si la ayuda tiene algún efecto en el IRPF y cómo se justifica la obra."
+    ]
    },
    "prov": "Girona",
    "muni": "Lloret De Mar"
@@ -1037,7 +1079,7 @@
   {
    "id": "bdns-933040",
    "estado": "pendiente",
-   "title": "CONVOCATORIA PARA LA CONCESIÓN DE SUBVENCIONES EN MATERIA DE SUBVENCIONES PARA LA REHABILITACIÓN DE INMUEBLES - CONVOCATORIA 2026",
+   "title": "Rehabilitación de inmuebles en El Almendro (Huelva)",
    "org": "ALMENDRO, EL · AYUNTAMIENTO DE ALMENDRO, EL",
    "scope": "municipal",
    "ccaa": "Andalucía",
@@ -1049,73 +1091,115 @@
    ],
    "importe": 0,
    "imp": "Consulta la convocatoria",
-   "abre": "2026-10-02",
+   "abre": "2026-10-03",
    "cierra": null,
-   "plazo": "Consulta el plazo en la convocatoria",
+   "plazo": "Empieza el día siguiente a publicarse el extracto de la convocatoria en el BOP. Dura veinte días desde esa publicación. La fecha exacta del BOP no consta en los datos disponibles.",
    "irpf": false,
    "fuente": "BDNS nº 933040",
    "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/933040",
-   "resumen": "Acceso a la vivienda y fomento de la edificación",
+   "resumen": "El Ayuntamiento de El Almendro concede subvenciones a particulares para rehabilitar inmuebles. El presupuesto total de la convocatoria 2026 es de 5.000 €. Las ayudas se dan por concurrencia competitiva. Las bases detalladas no se han podido leer, así que conviene revisar el decreto de convocatoria.",
    "req": [
-    "Consulta los requisitos en la convocatoria oficial"
+    "Ser persona física sin actividad económica.",
+    "Rehabilitar un inmueble situado en El Almendro (Huelva)."
    ],
    "docs": [
     "Consulta la documentación en la convocatoria oficial"
    ],
    "pasos": [
-    "Lee la convocatoria oficial",
-    "Prepara la documentación",
-    "Presenta la solicitud en la sede del organismo"
+    "Lee el decreto de convocatoria 2026 en la sede electrónica del Ayuntamiento.",
+    "Rellena los anexos I y II.",
+    "Presenta la solicitud en la sede electrónica antes de que acabe el plazo.",
+    "Justifica la obra cuando el Ayuntamiento te lo pida."
    ],
    "_revisar": {
     "presupuesto_total": 5000,
     "bases_reguladoras": "https://sede.diphuelva.es/opencms/system/modules/gsede/elements/contenido/BOP.jsp",
     "abierta_segun_bdns": false,
     "beneficiarios": "PERSONAS FÍSICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
-    "nota": "Revisa importe por vivienda, requisitos, documentos y pasos antes de aprobar."
+    "nota": "Revisa importe por vivienda, requisitos, documentos y pasos antes de aprobar.",
+    "ia": {
+     "fecha": "2026-10-28",
+     "documento": "página web",
+     "recomendacion": "publicar",
+     "motivo": "Es una convocatoria del Ayuntamiento de El Almendro para subvencionar la rehabilitación de inmuebles, dirigida a personas físicas sin actividad económica."
+    },
+    "confirmar": [
+     "No se ha podido leer el decreto de convocatoria: faltan importe máximo por vivienda, requisitos y documentación.",
+     "Comprueba la fecha de publicación del extracto en el BOP para fijar apertura y cierre. La fecha de apertura indicada es una estimación a partir de la fecha de recepción en la BDNS.",
+     "Comprueba qué obras se subvencionan y si se admiten comunidades de propietarios."
+    ]
    },
    "prov": "Huelva",
-   "muni": "Almendro, El"
+   "muni": "Almendro, El",
+   "sede": "https://aytoelalmendro.sedelectronica.es/info.0"
   },
   {
    "id": "bdns-937771",
    "estado": "pendiente",
-   "title": "Resolución de Alcaldía nº 387/2026 de fecha 23/10/2026 por la que se convocan Ayudas para la redacción de proyectos de autoconstrucción de primera vivienda del ",
+   "title": "Proyecto de autoconstrucción de primera vivienda en Barlovento",
    "org": "BARLOVENTO · AYUNTAMIENTO DE BARLOVENTO",
    "scope": "municipal",
    "ccaa": "Canarias",
    "tipo": [
-    "rehabilitacion"
+    "construccion"
    ],
    "dest": [
     "vivienda"
    ],
-   "importe": 0,
-   "imp": "Consulta la convocatoria",
+   "importe": 7000,
+   "imp": "Hasta el 75 % de los honorarios del proyecto, con un límite de 3.000 €, 5.000 € o 7.000 € según lo que cueste el proyecto (según las bases de 2023)",
    "abre": "2026-10-26",
    "cierra": null,
-   "plazo": "Consulta el plazo en la convocatoria",
+   "plazo": "10 días hábiles desde el día siguiente a la publicación del anuncio en el Boletín Oficial de la Provincia (BOP) de Santa Cruz de Tenerife. No tenemos la fecha exacta de publicación, así que no podemos dar fechas de inicio y fin.",
    "irpf": false,
    "fuente": "BDNS nº 937771",
    "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/937771",
-   "resumen": "Resolución de Alcaldía nº 387/2026 de fecha 23/10/2026 por la que se convocan Ayudas para la redacción de proyectos de autoconstrucción de primera vivienda del Ilustre Ayuntamiento de Barlovento. Anualidad 2026.",
+   "resumen": "El Ayuntamiento de Barlovento (La Palma) paga parte de lo que cuesta que un técnico redacte el proyecto de tu primera vivienda nueva. Es para personas empadronadas en el municipio. El presupuesto total de la convocatoria es de 8.000 €.",
    "req": [
-    "Consulta los requisitos en la convocatoria oficial"
+    "Que sea tu primera vivienda y una construcción nueva.",
+    "Estar empadronado y vivir en Barlovento cuando pidas la ayuda y durante el año anterior al periodo subvencionable.",
+    "Que el proyecto esté visado dentro del periodo que marcan las bases.",
+    "Haber pagado los honorarios del técnico antes de que acabe el plazo.",
+    "Si ya has empezado la obra, tener licencia municipal y haber pagado el impuesto de construcciones (ICIO).",
+    "Si no has empezado la obra, comprometerte a empezarla en el plazo de un año desde la concesión.",
+    "Estar al corriente con Hacienda, la Seguridad Social y el Ayuntamiento, y solo se puede recibir esta ayuda en una convocatoria."
    ],
    "docs": [
-    "Consulta la documentación en la convocatoria oficial"
+    "Solicitud en el modelo oficial, firmada.",
+    "DNI o NIE en vigor.",
+    "Factura de los honorarios de redacción del proyecto.",
+    "Justificante de que has pagado esa factura.",
+    "Certificado de empadronamiento y certificado de no tener otra propiedad (Registro de la Propiedad).",
+    "Declaraciones responsables: no tener prohibiciones para recibir subvenciones, no tener deudas con el Ayuntamiento y otras ayudas solicitadas.",
+    "Acreditar que estás al corriente con Hacienda y la Seguridad Social, o autorizar al Ayuntamiento a comprobarlo."
    ],
    "pasos": [
-    "Lee la convocatoria oficial",
-    "Prepara la documentación",
-    "Presenta la solicitud en la sede del organismo"
+    "Contrata a un técnico competente para redactar el proyecto y haz que se visé.",
+    "Paga la factura de honorarios antes de que acabe el plazo.",
+    "Mira cuándo se publica el anuncio en el BOP y cuenta 10 días hábiles.",
+    "Rellena el modelo de solicitud y reúne los documentos.",
+    "Presenta la solicitud en el Registro del Ayuntamiento o en su sede electrónica, dirigida a Alcaldía.",
+    "Espera la resolución, que puede tardar hasta 6 meses. Se atiende por orden de entrada de la solicitud.",
+    "Si aún no has empezado la obra, empiézala en el plazo de un año desde la concesión."
    ],
    "_revisar": {
     "presupuesto_total": 8000,
     "bases_reguladoras": "https://www.bopsantacruzdetenerife.es/bopsc2/index.php",
     "abierta_segun_bdns": false,
     "beneficiarios": "PERSONAS FÍSICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
-    "nota": "Revisa importe por vivienda, requisitos, documentos y pasos antes de aprobar."
+    "nota": "Revisa importe por vivienda, requisitos, documentos y pasos antes de aprobar.",
+    "ia": {
+     "fecha": "2026-10-28",
+     "documento": "página web",
+     "recomendacion": "publicar",
+     "motivo": "Paga los honorarios del técnico que redacta el proyecto de autoconstrucción de una primera vivienda nueva en Barlovento. No paga la obra en sí, pero va ligada a construir una vivienda."
+    },
+    "confirmar": [
+     "Los importes, requisitos y documentos vienen de las bases de 2023 (BOP nº 140, 20/11/2023). Comprueba que el decreto de convocatoria 387/2026 no los cambie, porque no se ha podido leer.",
+     "Falta la fecha de publicación en el BOP, de la que dependen las fechas de apertura y cierre. La sede electrónica del Ayuntamiento no consta en la ficha.",
+     "Con las bases de 2023 hay tres tramos según los honorarios (límites de 3.000, 5.000 y 7.000 €). Si el crédito no llega, el reparto es proporcional. Confirma si 2026 mantiene esto con 8.000 € de presupuesto.",
+     "Confirma si encaja en la web: la ayuda paga el proyecto técnico de una vivienda nueva, no la obra."
+    ]
    },
    "prov": "Santa Cruz de Tenerife",
    "muni": "Barlovento"
@@ -1123,7 +1207,7 @@
   {
    "id": "bdns-937701",
    "estado": "pendiente",
-   "title": "Resolución Nº1842 de 23/10/2026: Aprobar convocatoria 1_26 ayudas económicas jubilados pensionistas y asimilados para gasto vivienda",
+   "title": "Ayudas a jubilados y pensionistas para gasto de vivienda en Alginet",
    "org": "ALGINET · AYUNTAMIENTO DE ALGINET",
    "scope": "municipal",
    "ccaa": "Comunitat Valenciana",
@@ -1137,11 +1221,11 @@
    "imp": "Consulta la convocatoria",
    "abre": "2026-11-09",
    "cierra": "2026-11-16",
-   "plazo": "Consulta el plazo en la convocatoria",
+   "plazo": "Del 9 al 16 de noviembre de 2026, según la ficha de la BDNS.",
    "irpf": false,
    "fuente": "BDNS nº 937701",
    "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/937701",
-   "resumen": "Resolución Nº1842 de 23/10/2026: Aprobar convocatoria 1_26 ayudas económicas jubilados pensionistas y asimilados para gasto vivienda",
+   "resumen": "El Ayuntamiento de Alginet convoca ayudas económicas para jubilados, pensionistas y asimilados para gastos de vivienda. El texto de las bases no estaba disponible, así que no se sabe si cubre obras.",
    "req": [
     "Consulta los requisitos en la convocatoria oficial"
    ],
@@ -1158,7 +1242,18 @@
     "bases_reguladoras": "https://alginet.sede.dival.es/tablondeanuncios/",
     "abierta_segun_bdns": false,
     "beneficiarios": "PERSONAS FÍSICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
-    "nota": "Revisa importe por vivienda, requisitos, documentos y pasos antes de aprobar."
+    "nota": "Revisa importe por vivienda, requisitos, documentos y pasos antes de aprobar.",
+    "ia": {
+     "fecha": "2026-10-28",
+     "documento": "página web",
+     "recomendacion": "descartar",
+     "motivo": "Son ayudas económicas para jubilados y pensionistas para gastos de vivienda (gastos corrientes), no para pagar obras en una vivienda o edificio. Las bases no se han podido leer."
+    },
+    "confirmar": [
+     "No se han podido leer las bases (PDF de la resolución 1842 y anuncio BDNS), solo la ficha y el tablón de anuncios.",
+     "Comprobar qué gastos de vivienda cubre y si incluye obras o reformas. Por el título parece que no.",
+     "Comprobar el importe por persona, los requisitos y los documentos. El presupuesto total es de 12.000 €."
+    ]
    },
    "prov": "Valencia",
    "muni": "Alginet"
