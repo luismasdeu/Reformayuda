@@ -860,7 +860,7 @@ ${a.docs.map((d,i)=>`  ${w.docs[i]?"[x]":"[ ]"} ${d}${typeof w.docs[i]==="string
      <div class="alert ${ready?"ok":"bad"}">${icon(ready?"check":"x","ico","width:18px;height:18px")}<span>${ready?"Todo listo. Copia el resumen y entra en la sede oficial para presentarla tú.":"Aún faltan pasos marcados sin ✓. Puedes presentarla igualmente, pero revisa lo pendiente."}</span></div>
      <pre class="sum" id="w-sum">${esc(sum)}</pre>
      <div class="frow"><button class="btn alt" id="w-copy">${icon("copy","ico","width:18px;height:18px")}Copiar resumen</button>
-       <a class="btn brand" id="w-sede" data-oficial href="${a.url}" target="_blank" rel="noopener">${icon("ext","ico","width:18px;height:18px")}Ir a la sede oficial</a></div>
+       <a class="btn brand" id="w-sede" data-oficial href="${a.sede||a.url}" target="_blank" rel="noopener">${icon("ext","ico","width:18px;height:18px")}Ir a la sede oficial</a></div>
      <p class="muted" style="font-size:.85rem">Reformayuda no presenta la solicitud ni actúa en tu nombre. Te lo dejamos todo preparado y te llevamos a la sede del organismo; allí te identificas como te pida y la envías tú.</p>`;
     $("#w-copy").onclick=()=>{navigator.clipboard?.writeText(sum).then(()=>toast("Resumen copiado"),()=>{const r=document.createRange();r.selectNodeContents($("#w-sum"));getSelection().removeAllRanges();getSelection().addRange(r);toast("Selecciona y copia el texto")})};
   }

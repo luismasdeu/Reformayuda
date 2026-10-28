@@ -111,7 +111,7 @@ function pintar(){
   enlazar();
 }
 function tarjeta(c){
-  const r=c._revisar||{}, gen=[c.imp,...(c.req||[])].some(x=>GENERICO.test(x||""));
+  const r=c._revisar||{}, gen=!r.ia&&[c.imp,...(c.req||[])].some(x=>GENERICO.test(x||""));
   const lista=a=>esc((a||[]).join("\n"));
   return`<div class="card" data-id="${esc(c.id)}">
    <p class="meta" style="margin-top:0">${esc(zona(c))} · ${esc(c.org)}</p>
@@ -122,6 +122,7 @@ function tarjeta(c){
     <a class="b alt" href="${esc(c.url)}" target="_blank" rel="noopener">Ver convocatoria</a>
     ${r.bases_reguladoras?`<a class="b alt" href="${esc(r.bases_reguladoras)}" target="_blank" rel="noopener">Ver bases</a>`:""}
    </div>
+   ${r.ia?`<div class="aviso" style="background:${r.ia.recomendacion==="descartar"?"var(--bad-bg)":"var(--ok-bg)"};border-color:${r.ia.recomendacion==="descartar"?"var(--bad)":"var(--ok)"}"><b>🤖 Rellenada con IA${r.ia.recomendacion==="descartar"?": parece que no es para obras en casa":""}.</b> ${esc(r.ia.motivo)}<br><span class="meta">Leído: ${esc(r.ia.documento)}</span></div>`:""}
    ${r.confirmar?`<div class="aviso"><b>Comprueba en las bases:</b><ul>${r.confirmar.map(x=>`<li>${esc(x)}</li>`).join("")}</ul></div>`:""}
    ${gen?`<div class="aviso">Tiene datos genéricos («Consulta…»). Si la publicas así, la gente verá que debe mirar la convocatoria. Mejor rellena al menos el importe y el plazo.</div>`:""}
    <label class="f">Cuánto da (en palabras)<input data-k="imp" value="${esc(c.imp)}" placeholder="Hasta 10.000 € por vivienda"></label>

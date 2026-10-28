@@ -35,11 +35,23 @@ jobs:
         id: buscar
         run: python scripts/actualizar.py --dias "${{ github.event.inputs.dias || '3' }}"
 
+      - name: Rellenar las candidatas con IA (si está el secreto ANTHROPIC_API_KEY)
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          CLAUDE_MODEL: ${{ vars.CLAUDE_MODEL }}
+        run: |
+          if [ -n "$ANTHROPIC_API_KEY" ]; then
+            pip install --quiet anthropic==2.3.0 pypdf==6.17.0
+            python scripts/rellenar_ia.py || echo "La IA ha fallado: las candidatas quedan sin rellenar"
+          else
+            echo "Sin ANTHROPIC_API_KEY: las candidatas quedan sin rellenar."
+          fi
+
       - name: Guardar las candidatas
         run: |
           git config user.name "reformayuda-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add revision/candidatas.json
+          git add revision/candidatas.json web/data/ayudas.json revision/diagnostico-ia.json 2>/dev/null || git add revision/candidatas.json web/data/ayudas.json
           git diff --cached --quiet || (git commit -m "Ayudas candidatas $(date +%F)" && git push)
 
       - name: Avisarte si hay novedades

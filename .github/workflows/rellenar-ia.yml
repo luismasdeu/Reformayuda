@@ -1,0 +1,50 @@
+# Rellena con IA, a mano, las candidatas pendientes o las ayudas ya publicadas que se indiquen.
+name: Rellenar con IA
+
+on:
+  workflow_dispatch:
+    inputs:
+      publicadas:
+        description: "Ids de ayudas ya publicadas a corregir, separados por comas (vacío = candidatas pendientes)"
+        default: ""
+
+permissions:
+  contents: write
+
+concurrency:
+  group: buscar
+  cancel-in-progress: false
+
+jobs:
+  rellenar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - run: pip install --quiet anthropic==2.3.0 pypdf==6.17.0
+
+      - name: Rellenar con IA
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          CLAUDE_MODEL: ${{ vars.CLAUDE_MODEL }}
+          PUBLICADAS: ${{ github.event.inputs.publicadas }}
+        run: |
+          if [ -n "$PUBLICADAS" ]; then python scripts/rellenar_ia.py --publicadas "$PUBLICADAS"; else python scripts/rellenar_ia.py; fi
+          python scripts/validar.py
+
+      # Se guarda con la llave del propio GitHub, que no lanza la publicación: se lanza a continuación.
+      - name: Guardar
+        run: |
+          git config user.name "reformayuda-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add revision web/data
+          git diff --cached --quiet || (git commit -m "Candidatas rellenadas con IA $(date +%F)" && git push)
+
+  publicar:
+    needs: rellenar
+    uses: ./.github/workflows/publicar.yml
+    secrets: inherit
