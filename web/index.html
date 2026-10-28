@@ -1175,7 +1175,7 @@ function syncPush(){ // mantiene al día zona, tipos y ayudas guardadas
 // el identificador de notificaciones (si ha cambiado, se sustituye el documento).
 async function revisarPush(){
   const st=pushEstado(); if(!st.activo||!pushListo()||!pushSoportado())return;
-  if(Notification.permission!=="granted"){await desactivarPush(true);render();return}
+  if(Notification.permission==="denied"){await desactivarPush(true);render();return}
   if(st.revisado&&(Date.now()-new Date(st.revisado))/864e5<7)return;
   try{
     const fb=await cargarFirebase(), reg=await navigator.serviceWorker.ready;
