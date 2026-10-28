@@ -62,16 +62,16 @@
   },
   {
    "id": "bdns-933977",
-   "estado": "pendiente",
+   "estado": "aprobada",
    "title": "Rehabilitación y eficiencia energética de viviendas y edificios",
    "org": "Junta de Comunidades de Castilla-La Mancha · Dirección General de Vivienda",
    "scope": "autonomica",
    "ccaa": "Castilla-La Mancha",
    "tipo": [
     "eficiencia",
-    "rehabilitacion",
+    "aerotermia",
     "ventanas",
-    "aerotermia"
+    "rehabilitacion"
    ],
    "dest": [
     "vivienda",
@@ -81,7 +81,7 @@
    "imp": "Consulta la cuantía por vivienda en la convocatoria",
    "abre": "2026-10-27",
    "cierra": "2026-11-30",
-   "plazo": "Consulta el plazo en la convocatoria",
+   "plazo": "Hasta el 30/11/2026",
    "irpf": true,
    "fuente": "BDNS nº 933977",
    "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/933977",
