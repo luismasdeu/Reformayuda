@@ -5,9 +5,9 @@
 Reformayuda: subvenciones casa
 ```
 
-## Descripción breve (79/80)
+## Descripción breve (80/80)
 ```
-Ayudas y subvenciones para reformar o construir tu casa. Gratis y sin registro.
+Subvenciones para tu casa: ayudas para reformar, rehabilitar o construir. Gratis
 ```
 
 ## Descripción completa (2116/4000)
