@@ -8,7 +8,6 @@
   "bdns-933754",
   "bdns-933808",
   "bdns-933869",
-  "bdns-933993",
   "bdns-933998",
   "bdns-934112",
   "bdns-934203",
@@ -40,8 +39,7 @@
   "bdns-937578",
   "bdns-937585",
   "bdns-937626",
-  "bdns-937701",
-  "bdns-937771"
+  "bdns-937701"
  ],
  "ia": [
   {
@@ -451,68 +449,6 @@
    "muni": "Mieres (Asturias)"
   },
   {
-   "id": "bdns-933993",
-   "estado": "descartada",
-   "title": "Compra o autopromoción de primera vivienda en Almussafes",
-   "org": "ALMUSSAFES · AYUNTAMIENTO DE ALMUSSAFES",
-   "scope": "municipal",
-   "ccaa": "Comunitat Valenciana",
-   "tipo": [
-    "construccion"
-   ],
-   "dest": [
-    "vivienda"
-   ],
-   "importe": 2500,
-   "imp": "Hasta 2.500 € por vivienda",
-   "abre": "2026-10-21",
-   "cierra": "2026-11-03",
-   "plazo": "La web municipal indica que el plazo va del 21 de octubre al 3 de noviembre de 2026, ambos incluidos. El anuncio oficial habla de diez días desde el día siguiente a su publicación en el BOP, que fue el 20 de octubre de 2026.",
-   "irpf": false,
-   "fuente": "BDNS nº 933993",
-   "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/933993",
-   "resumen": "El Ayuntamiento de Almussafes da una ayuda a quien compra o autopromueve su primera vivienda en la zona urbana del municipio. La compra o la autopromoción debe haberse hecho entre el 1 de septiembre de 2025 y el 31 de agosto de 2026.",
-   "req": [
-    "Comprar o autopromover tu primera vivienda.",
-    "La vivienda debe estar en la zona urbana de Almussafes.",
-    "La compra o autopromoción debe haberse hecho entre el 1 de septiembre de 2025 y el 31 de agosto de 2026.",
-    "Cumplir los demás requisitos de la base cuarta de las bases, que no se han podido consultar."
-   ],
-   "docs": [
-    "Solicitud en el modelo oficial del Ayuntamiento.",
-    "Documentación que acredite la compra o la autopromoción de la vivienda.",
-    "El resto de documentos que pidan las bases, que no se han podido consultar."
-   ],
-   "pasos": [
-    "Lee las bases en la web del Ayuntamiento de Almussafes.",
-    "Prepara la solicitud y la documentación.",
-    "Presenta la solicitud por la sede electrónica entre el 21 de octubre y el 3 de noviembre de 2026.",
-    "Espera la resolución. Si el dinero no alcanza para todas las solicitudes, se reparte según la puntuación obtenida."
-   ],
-   "_revisar": {
-    "presupuesto_total": 35000,
-    "bases_reguladoras": "https://wp.me/PanQjS-1mD",
-    "abierta_segun_bdns": false,
-    "beneficiarios": "PERSONAS FÍSICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
-    "nota": "Revisa importe por vivienda, requisitos, documentos y pasos antes de aprobar.",
-    "ia": {
-     "fecha": "2026-10-28",
-     "documento": "página web",
-     "recomendacion": "descartar",
-     "motivo": "Es una ayuda para comprar o autopromover (construir) la primera vivienda, pero no paga obras de reforma. Está pensada para quien compra o se construye su primera casa en Almussafes."
-    },
-    "confirmar": [
-     "No se ha podido leer el PDF de las bases, así que faltan los requisitos concretos de la base cuarta (edad, ingresos, empadronamiento).",
-     "Hay que comprobar el plazo exacto: la web del Ayuntamiento dice del 21 de octubre al 3 de noviembre, y el anuncio dice diez días desde el siguiente a su publicación en el BOP.",
-     "Hay que comprobar la lista de documentos que piden las bases.",
-     "El presupuesto total es de 35.000 €. Las bases no parecen cubrir obras de reforma, por lo que se descarta como ayuda para obras."
-    ]
-   },
-   "prov": "Valencia",
-   "muni": "Almussafes",
-   "sede": "https://almussafes.sede.dival.es/carpetaciudadana/tramite.aspx?idtramite=20047"
-  },
-  {
    "id": "bdns-937482",
    "estado": "descartada",
    "title": "Rehabilitación de fachada en calle del Areny 20, Lloret de Mar",
@@ -621,79 +557,6 @@
    },
    "prov": "Valencia",
    "muni": "Alginet"
-  },
-  {
-   "id": "bdns-937771",
-   "estado": "descartada",
-   "title": "Proyectos de autoconstrucción de primera vivienda en Barlovento",
-   "org": "BARLOVENTO · AYUNTAMIENTO DE BARLOVENTO",
-   "scope": "municipal",
-   "ccaa": "Canarias",
-   "tipo": [
-    "construccion"
-   ],
-   "dest": [
-    "vivienda"
-   ],
-   "importe": 7000,
-   "imp": "Hasta el 75 % de los honorarios del proyecto, con un límite de 3.000 €, 5.000 € o 7.000 € según lo que cueste el proyecto (según las bases de 2023)",
-   "abre": "2026-10-26",
-   "cierra": null,
-   "plazo": "Diez días hábiles a partir del día siguiente a la publicación en el BOP. No se conoce la fecha exacta de publicación.",
-   "irpf": false,
-   "fuente": "BDNS nº 937771",
-   "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/937771",
-   "resumen": "El Ayuntamiento de Barlovento convoca ayudas para la redacción de proyectos de autoconstrucción de primera vivienda (año 2026). El presupuesto total es de 8.000 €. No se han podido leer las bases, así que faltan importe por persona, requisitos y forma de solicitud.",
-   "req": [
-    "Que sea tu primera vivienda y una construcción nueva.",
-    "Estar empadronado y vivir en Barlovento cuando pidas la ayuda y durante el año anterior al periodo subvencionable.",
-    "Que el proyecto esté visado dentro del periodo que marcan las bases.",
-    "Haber pagado los honorarios del técnico antes de que acabe el plazo.",
-    "Si ya has empezado la obra, tener licencia municipal y haber pagado el impuesto de construcciones (ICIO).",
-    "Si no has empezado la obra, comprometerte a empezarla en el plazo de un año desde la concesión.",
-    "Estar al corriente con Hacienda, la Seguridad Social y el Ayuntamiento, y solo se puede recibir esta ayuda en una convocatoria."
-   ],
-   "docs": [
-    "Solicitud en el modelo oficial, firmada.",
-    "DNI o NIE en vigor.",
-    "Factura de los honorarios de redacción del proyecto.",
-    "Justificante de que has pagado esa factura.",
-    "Certificado de empadronamiento y certificado de no tener otra propiedad (Registro de la Propiedad).",
-    "Declaraciones responsables: no tener prohibiciones para recibir subvenciones, no tener deudas con el Ayuntamiento y otras ayudas solicitadas.",
-    "Acreditar que estás al corriente con Hacienda y la Seguridad Social, o autorizar al Ayuntamiento a comprobarlo."
-   ],
-   "pasos": [
-    "Contrata a un técnico competente para redactar el proyecto y haz que se visé.",
-    "Paga la factura de honorarios antes de que acabe el plazo.",
-    "Mira cuándo se publica el anuncio en el BOP y cuenta 10 días hábiles.",
-    "Rellena el modelo de solicitud y reúne los documentos.",
-    "Presenta la solicitud en el Registro del Ayuntamiento o en su sede electrónica, dirigida a Alcaldía.",
-    "Espera la resolución, que puede tardar hasta 6 meses. Se atiende por orden de entrada de la solicitud.",
-    "Si aún no has empezado la obra, empiézala en el plazo de un año desde la concesión."
-   ],
-   "_revisar": {
-    "presupuesto_total": 8000,
-    "bases_reguladoras": "https://www.bopsantacruzdetenerife.es/bopsc2/index.php",
-    "abierta_segun_bdns": false,
-    "beneficiarios": "PERSONAS FÍSICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
-    "nota": "Revisa importe por vivienda, requisitos, documentos y pasos antes de aprobar.",
-    "bases_no_corresponden": true,
-    "no_auto": true,
-    "referencia_bases": "Bases reguladoras del Ayuntamiento de Barlovento publicadas en el Boletín Oficial de la Provincia de Santa Cruz de Tenerife (BOP); número y fecha no indicados.",
-    "ia": {
-     "fecha": "2026-10-28",
-     "documento": "el enlace de bases de la BDNS es genérico (ley, ordenanza general o portada) (extracto; bases en Bases reguladoras del Ayuntamiento de Barlovento publicadas en el Boletín Oficial de la Provincia de Santa Cruz de Tenerife (BOP); número y fecha no indicados.)",
-     "recomendacion": "descartar",
-     "motivo": "La ayuda paga la redacción de proyectos técnicos para autoconstruir una primera vivienda, no obras de reforma, rehabilitación ni construcción en sí. No he podido leer las bases para confirmar otra cosa."
-    },
-    "confirmar": [
-     "No se han leído las bases ni el decreto: faltan importe por persona, requisitos, documentos y forma de solicitud.",
-     "Comprobar si la ayuda cubre solo la redacción del proyecto técnico o también obras.",
-     "Confirmar la fecha de publicación en el BOP para fijar el cierre del plazo."
-    ]
-   },
-   "prov": "Santa Cruz de Tenerife",
-   "muni": "Barlovento"
   }
  ]
 }

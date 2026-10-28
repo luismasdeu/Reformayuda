@@ -3,6 +3,67 @@
  "ultima_busqueda": "2026-10-28T05:54",
  "candidatas": [
   {
+   "id": "bdns-933993",
+   "estado": "pendiente",
+   "title": "Compra o autopromoción de primera vivienda en Almussafes",
+   "org": "ALMUSSAFES · AYUNTAMIENTO DE ALMUSSAFES",
+   "scope": "municipal",
+   "ccaa": "Comunitat Valenciana",
+   "tipo": [
+    "construccion"
+   ],
+   "dest": [
+    "vivienda"
+   ],
+   "importe": 2500,
+   "imp": "Hasta 2.500 € por vivienda",
+   "abre": "2026-10-21",
+   "cierra": "2026-11-03",
+   "plazo": "La web municipal indica que el plazo va del 21 de octubre al 3 de noviembre de 2026, ambos incluidos. El anuncio oficial habla de diez días desde el día siguiente a su publicación en el BOP, que fue el 20 de octubre de 2026.",
+   "irpf": false,
+   "fuente": "BDNS nº 933993",
+   "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/933993",
+   "resumen": "El Ayuntamiento de Almussafes da una ayuda a quien compra o autopromueve su primera vivienda en la zona urbana del municipio. La compra o la autopromoción debe haberse hecho entre el 1 de septiembre de 2025 y el 31 de agosto de 2026.",
+   "req": [
+    "Comprar o autopromover tu primera vivienda.",
+    "La vivienda debe estar en la zona urbana de Almussafes.",
+    "La compra o autopromoción debe haberse hecho entre el 1 de septiembre de 2025 y el 31 de agosto de 2026.",
+    "Cumplir los demás requisitos de la base cuarta de las bases, que no se han podido consultar."
+   ],
+   "docs": [
+    "Solicitud en el modelo oficial del Ayuntamiento.",
+    "Documentación que acredite la compra o la autopromoción de la vivienda.",
+    "El resto de documentos que pidan las bases, que no se han podido consultar."
+   ],
+   "pasos": [
+    "Lee las bases en la web del Ayuntamiento de Almussafes.",
+    "Prepara la solicitud y la documentación.",
+    "Presenta la solicitud por la sede electrónica entre el 21 de octubre y el 3 de noviembre de 2026.",
+    "Espera la resolución. Si el dinero no alcanza para todas las solicitudes, se reparte según la puntuación obtenida."
+   ],
+   "_revisar": {
+    "presupuesto_total": 35000,
+    "bases_reguladoras": "https://wp.me/PanQjS-1mD",
+    "abierta_segun_bdns": false,
+    "beneficiarios": "PERSONAS FÍSICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
+    "nota": "Revisa importe por vivienda, requisitos, documentos y pasos antes de aprobar.",
+    "ia": {
+     "fecha": "2026-10-28",
+     "documento": "página web",
+     "recomendacion": "recuperada",
+     "motivo": "Es una ayuda para comprar o autopromover (construir) la primera vivienda, pero no paga obras de reforma. Está pensada para quien compra o se construye su primera casa en Almussafes."
+    },
+    "confirmar": [
+     "Solo cuenta la parte de autopromoción (construir tu primera vivienda); la de compra es de otro tipo",
+     "Plazo muy corto: hasta el 03/11/2026",
+     "Requisitos de la base cuarta (no se pudieron leer)"
+    ]
+   },
+   "prov": "Valencia",
+   "muni": "Almussafes",
+   "sede": "https://almussafes.sede.dival.es/carpetaciudadana/tramite.aspx?idtramite=20047"
+  },
+  {
    "id": "bdns-937551",
    "estado": "pendiente",
    "title": "Adaptación de baños en viviendas en Manresa",

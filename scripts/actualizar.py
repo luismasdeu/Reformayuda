@@ -39,7 +39,8 @@ MAX_FICHAS_BDNS = 80  # fichas de detalle por ejecución, para no cargar el serv
 # Palabras que indican que una convocatoria nos interesa (se comparan sin tildes y en minúsculas).
 TEMA = ["vivienda", "eficiencia energetica", "accesibilidad", "ascensor", "fachada", "cubierta",
         "aislamiento", "autoconsumo", "fotovoltaic", "aerotermia", "bomba de calor", "biomasa", "amianto",
-        "edificio residencial", "comunidad de propietarios", "renovacion urbana", "regeneracion urbana"]
+        "edificio residencial", "comunidad de propietarios", "renovacion urbana", "regeneracion urbana",
+        "autoconstruc", "autopromoc", "construccion de vivienda", "nueva vivienda"]
 AYUDA = ["ayuda", "subvencion", "convocatoria", "bases reguladoras", "programa de", "plan de"]
 EXCLUIR = ["alquiler", "arrendatari", "desahucio", "personal funcionario", "oposicion", "contratacion", "licitacion",
            "nombramiento", "empresa", "pyme", "industria", "agrari", "ganader", "universidad", "plan de estudios",
@@ -51,8 +52,8 @@ EXCLUIR = ["alquiler", "arrendatari", "desahucio", "personal funcionario", "opos
            "cementerio", "casa consistorial", "parque infantil", "gastos basicos", "notaria",
            # ayudas para pagar la vivienda (alquiler, hipoteca, recibos), no para reformarla
            "rentas insuficientes", "monoparental", "gastos de vivienda", "gastos vivienda", "obligaciones derivadas",
-           "gastos de la vivienda", "hipoteca", "suministro", "recibos", "compra de vivienda", "adquisicion de vivienda",
-           "compra o autopromocion", "emergencia social", "pobreza", "jubilados y pensionistas", "pensionistas"]
+           "gastos de la vivienda", "suministro", "recibos", "compra de vivienda", "adquisicion de vivienda",
+           "emergencia social", "pobreza", "jubilados y pensionistas", "pensionistas"]
 
 # Tipo de obra a partir de palabras clave.
 TIPOS = {

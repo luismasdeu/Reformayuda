@@ -316,6 +316,58 @@
    "revisada": "2026-10-28",
    "sede": "https://sede.aytocamargo.es/opensiac/informacionpublica/tramites_enter",
    "ia": "2026-10-28"
+  },
+  {
+   "id": "bdns-937771",
+   "title": "Proyectos de autoconstrucción de primera vivienda en Barlovento",
+   "org": "BARLOVENTO · AYUNTAMIENTO DE BARLOVENTO",
+   "scope": "municipal",
+   "ccaa": "Canarias",
+   "tipo": [
+    "construccion"
+   ],
+   "dest": [
+    "vivienda"
+   ],
+   "importe": 7000,
+   "imp": "Hasta el 75 % de los honorarios del proyecto, con un límite de 3.000 €, 5.000 € o 7.000 € según lo que cueste el proyecto (según las bases de 2023)",
+   "abre": "2026-10-26",
+   "cierra": null,
+   "plazo": "Diez días hábiles a partir del día siguiente a la publicación en el BOP. No se conoce la fecha exacta de publicación.",
+   "irpf": false,
+   "fuente": "BDNS nº 937771",
+   "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/937771",
+   "resumen": "El Ayuntamiento de Barlovento (La Palma) paga hasta el 75 % de los honorarios del proyecto técnico para autoconstruir tu primera vivienda. Presupuesto total de la convocatoria: 8.000 €.",
+   "req": [
+    "Que sea tu primera vivienda y una construcción nueva.",
+    "Estar empadronado y vivir en Barlovento cuando pidas la ayuda y durante el año anterior al periodo subvencionable.",
+    "Que el proyecto esté visado dentro del periodo que marcan las bases.",
+    "Haber pagado los honorarios del técnico antes de que acabe el plazo.",
+    "Si ya has empezado la obra, tener licencia municipal y haber pagado el impuesto de construcciones (ICIO).",
+    "Si no has empezado la obra, comprometerte a empezarla en el plazo de un año desde la concesión.",
+    "Estar al corriente con Hacienda, la Seguridad Social y el Ayuntamiento, y solo se puede recibir esta ayuda en una convocatoria."
+   ],
+   "docs": [
+    "Solicitud en el modelo oficial, firmada.",
+    "DNI o NIE en vigor.",
+    "Factura de los honorarios de redacción del proyecto.",
+    "Justificante de que has pagado esa factura.",
+    "Certificado de empadronamiento y certificado de no tener otra propiedad (Registro de la Propiedad).",
+    "Declaraciones responsables: no tener prohibiciones para recibir subvenciones, no tener deudas con el Ayuntamiento y otras ayudas solicitadas.",
+    "Acreditar que estás al corriente con Hacienda y la Seguridad Social, o autorizar al Ayuntamiento a comprobarlo."
+   ],
+   "pasos": [
+    "Contrata a un técnico competente para redactar el proyecto y haz que se visé.",
+    "Paga la factura de honorarios antes de que acabe el plazo.",
+    "Mira cuándo se publica el anuncio en el BOP y cuenta 10 días hábiles.",
+    "Rellena el modelo de solicitud y reúne los documentos.",
+    "Presenta la solicitud en el Registro del Ayuntamiento o en su sede electrónica, dirigida a Alcaldía.",
+    "Espera la resolución, que puede tardar hasta 6 meses. Se atiende por orden de entrada de la solicitud.",
+    "Si aún no has empezado la obra, empiézala en el plazo de un año desde la concesión."
+   ],
+   "prov": "Santa Cruz de Tenerife",
+   "muni": "Barlovento",
+   "revisada": "2026-10-28"
   }
  ]
 }
