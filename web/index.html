@@ -769,7 +769,7 @@ function renderHome(){
    <button class="stat s4" data-go="irpf"><b>60 %</b><span>máximo que desgrava tu reforma</span></button>`;
   $("#loc-name-1").textContent=locShort();
   const P=S.perfil;
-  $("#perfil-bar").innerHTML=P?`<div class="perfil">${icon("pin","ico","color:var(--coral)")}<span style="flex:1;min-width:200px"><b>Tu obra:</b> ${P.tipos.map(t=>TIPOS[t].n).join(", ")||"sin elegir"} · ${{vivienda:"Mi casa o piso",edificio:"Mi comunidad de vecinos",campo:"Casa de campo o segunda vivienda"}[P.uso]}${P.edad?" · "+EDADES.find(e=>e[0]===P.edad)[1].toLowerCase()+" años":""} · ${esc(locLong())}</span><button class="btn alt sm" id="perfil-edit">Cambiar</button></div>`
+  $("#perfil-bar").innerHTML=P?`<div class="perfil">${icon("pin","ico","color:var(--coral)")}<span style="flex:1;min-width:200px"><b>Tu obra:</b> ${P.tipos.map(t=>TIPOS[t].n).join(", ")||"sin elegir"} · ${{vivienda:"Mi vivienda habitual",edificio:"Mi comunidad de vecinos",campo:"Segunda vivienda"}[P.uso]}${P.edad?" · "+EDADES.find(e=>e[0]===P.edad)[1].toLowerCase()+" años":""} · ${esc(locLong())}</span><button class="btn alt sm" id="perfil-edit">Cambiar</button></div>`
     :`<div class="perfil"><span style="flex:1;min-width:200px"><b>¿Te enseñamos primero las que encajan contigo?</b> Son 3 preguntas y puedes cambiarlas cuando quieras.</span><button class="btn brand sm" id="perfil-edit">Personalizar</button></div>`;
   $("#perfil-edit").onclick=()=>openOnb();
   const rec=P?zone.filter(a=>status(a).k!=="cerrada"&&fit(a)>0).sort((a,b)=>fit(b)-fit(a)).slice(0,3):[];
@@ -1058,7 +1058,10 @@ function setConsent(stats){S.consent={stats,fecha:new Date().toISOString()};stor
 /* ---------- test inicial ---------- */
 let onbShown=false;
 const EDADES=[["joven","Menos de 35"],["adulto","De 35 a 64"],["mayor","65 o más"],["","Prefiero no decirlo"]];
-const USOS=[["vivienda","Mi casa o piso","home"],["edificio","Mi comunidad de vecinos","rehabilitacion"],["campo","Casa de campo o segunda vivienda","construccion"]];
+// «campo» se mantiene como clave por compatibilidad, pero significa segunda vivienda (no la casa de campo en la que vives).
+const USOS=[["vivienda","Mi vivienda habitual","home","Casa, piso o casa de campo donde vives o vas a vivir, aunque haya que rehabilitarla entera"],
+  ["edificio","Mi comunidad de vecinos","rehabilitacion","Obras del edificio: fachada, tejado, ascensor…"],
+  ["campo","Una segunda vivienda","construccion","Casa de vacaciones, de fin de semana o que no es donde vives"]];
 function openOnb(){
   onbShown=true;
   const d=S.perfil?JSON.parse(JSON.stringify(S.perfil)):{tipos:[],uso:"vivienda"};
@@ -1072,7 +1075,7 @@ function openOnb(){
     if(step===1) body=`<span class="eyebrow">Pregunta 2 de 3</span><h2>¿Qué vas a hacer?</h2><p class="muted">Elige todas las que quieras.</p>
       <div class="opts">${Object.entries(TIPOS).map(([k,v])=>`<button class="opt" data-ot="${k}" aria-pressed="${d.tipos.includes(k)}"><span class="card-ico c-${k}">${icon(k)}</span>${v.n}</button>`).join("")}</div>`;
     if(step===2) body=`<span class="eyebrow">Pregunta 3 de 3</span><h2>¿Para qué es la obra?</h2>
-      <div class="opts col">${USOS.map(([k,l,ic])=>`<button class="opt" data-ou="${k}" aria-pressed="${d.uso===k}"><span class="card-ico c-${ic==="home"?"eficiencia":ic}">${icon(ic)}</span>${l}</button>`).join("")}</div>
+      <div class="opts col">${USOS.map(([k,l,ic,sub])=>`<button class="opt" data-ou="${k}" aria-pressed="${d.uso===k}"><span class="card-ico c-${ic==="home"?"eficiencia":ic}">${icon(ic)}</span><span style="display:flex;flex-direction:column;text-align:left"><span>${l}</span><small class="muted" style="font-weight:600;font-size:.8rem;line-height:1.3">${sub}</small></span></button>`).join("")}</div>
       <span class="eyebrow" style="margin-top:4px">Tu edad (opcional)</span>
       <div class="frow">${EDADES.map(([k,l])=>`<button class="pill" data-oe="${k}" aria-pressed="${(d.edad||"")===k}">${l}</button>`).join("")}</div>
       <p class="muted" style="font-size:.8rem;margin-top:-6px">Así no te enseñamos ayudas solo para jóvenes o solo para mayores si no te tocan.</p>

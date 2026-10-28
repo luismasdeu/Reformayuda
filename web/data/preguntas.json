@@ -1349,6 +1349,19 @@
    ],
    "a": "<p>En Android, abre reformayuda.es en <b>Chrome</b> → <b>⋮ → «Instalar app»</b> (o «Añadir a pantalla de inicio»). En iPhone, en <b>Safari</b> → <b>Compartir → «Añadir a pantalla de inicio»</b>. Es gratis, ocupa muy poco y se actualiza sola.</p>",
    "act": ""
+  },
+  {
+   "cat": "campo",
+   "q": "Mi casa de campo es (o será) mi vivienda habitual, ¿cuenta como mi vivienda?",
+   "k": [
+    "casa de campo vivienda habitual",
+    "primera vivienda en el campo",
+    "rehabilitar para vivir",
+    "casa de campo habitual",
+    "cortijo"
+   ],
+   "a": "<p><b>Sí.</b> Lo que importa es si es tu <b>vivienda habitual</b>, no si está en el campo o en el pueblo. Si vives en ella, o vas a vivir cuando acabe la rehabilitación, elige <b>«Mi vivienda habitual»</b>.</p><p>Muchas ayudas de rehabilitación aceptan una casa que <b>vaya a ser</b> tu residencia habitual después de la obra, aunque ahora no se pueda habitar. Suelen pedir empadronarte allí al terminar y vivir en ella unos años. Confírmalo en las bases de cada ayuda.</p><p>«Segunda vivienda» es para casas de vacaciones o de fin de semana: ahí entran menos ayudas y las deducciones del IRPF del 20 % y 40 % solo si la alquilas.</p>",
+   "act": ""
   }
  ]
 }
