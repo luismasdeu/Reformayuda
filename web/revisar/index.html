@@ -40,13 +40,13 @@ details summary{cursor:pointer;color:var(--brand);font-weight:700;margin-top:10p
   <div id="app"></div>
 </main>
 <script>
-const REPO="luismasdeu/Reformayuda", RUTA="revision/candidatas.json", ADMIN="revision/admin.json";
+const REPO="luismasdeu/Reformayuda", RUTA="revision/candidatas.json", ADMIN="revision/admin.json", DESC="revision/descartadas.json";
 const TIPOS={eficiencia:"Eficiencia",solar:"Placas solares",aerotermia:"Aerotermia",ventanas:"Ventanas",accesibilidad:"Accesibilidad",rehabilitacion:"Rehabilitación",construccion:"Construcción"};
 const GENERICO=/^Consulta /;
 const $=s=>document.querySelector(s);
 const esc=s=>String(s??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const guardado={get(k,d){try{return JSON.parse(localStorage.getItem("rfm_rev_"+k))??d}catch(e){return d}},set(k,v){try{localStorage.setItem("rfm_rev_"+k,JSON.stringify(v))}catch(e){}}};
-let token=guardado.get("token",""), datos=null, sha=null;
+let token=guardado.get("token",""), datos=null, sha=null, descIA=[];
 const estado=t=>$("#estado").textContent=t||"";
 
 // ---- GitHub ----
@@ -95,7 +95,9 @@ function pedirToken(error){
 async function cargar(){
   if(!token)return pedirToken();
   estado("Cargando…");
-  try{const f=await leer(RUTA);datos=f.json;sha=f.sha;pintar()}
+  try{const f=await leer(RUTA);datos=f.json;sha=f.sha;
+    try{descIA=((await leer(DESC)).json?.ia||[]).slice().reverse()}catch(e){descIA=[]}
+    pintar()}
   catch(e){if(e.message==="token"){guardado.set("token","");pedirToken("La llave no funciona o ha caducado. Crea otra.")}else estado("No se ha podido cargar. Revisa la conexión y recarga.")}
 }
 function pendientes(){return(datos.candidatas||[]).filter(c=>(c.estado||"pendiente")==="pendiente")}
@@ -106,6 +108,10 @@ function pintar(){
   $("#app").innerHTML=`${avisosHtml()}
    ${p.length?"":`<div class="vacio">✅ No hay nada por revisar.<br>Te avisaremos cuando la búsqueda diaria encuentre ayudas nuevas.</div>`}
    ${p.map(tarjeta).join("")}
+   ${descIA.length?`<details class="card"><summary>Descartadas automáticamente por la IA (${descIA.length})</summary>
+     <p class="meta">No son de obras en casa o comunidad (alquiler, recibos, compra…). Si alguna sí lo es, recupérala y volverá a tu lista.</p>
+     ${descIA.map(c=>`<div style="border-top:1px solid var(--line);padding:10px 0"><b>${esc(c.title)}</b><p class="meta" style="margin:2px 0">${esc(zona(c))} · ${esc(c._revisar?.ia?.motivo||"")}</p>
+       <div class="row" style="margin-top:4px"><a class="b alt" href="${esc(c.url)}" target="_blank" rel="noopener">Ver convocatoria</a><button class="b alt" data-recuperar="${esc(c.id)}">Recuperar</button></div></div>`).join("")}</details>`:""}
    ${boe.length?`<h2>Avisos del BOE</h2>${boe.map(b=>`<div class="card" data-boe="${esc(b.id)}"><p style="margin:0">${esc(b.titulo)}</p><p class="meta">${esc(b.fecha)}</p><div class="row"><a class="b alt" href="${esc(b.url)}" target="_blank" rel="noopener">Leer en el BOE</a><button class="b alt" data-vista="${esc(b.id)}">Vista</button></div></div>`).join("")}`:""}
    <p class="meta" style="margin-top:30px">Al publicar o descartar, la web se actualiza sola en uno o dos minutos. <button class="chip" id="salir">Olvidar la llave en este móvil</button></p>`;
   enlazar();
@@ -122,7 +128,7 @@ function tarjeta(c){
     <a class="b alt" href="${esc(c.url)}" target="_blank" rel="noopener">Ver convocatoria</a>
     ${r.bases_reguladoras?`<a class="b alt" href="${esc(r.bases_reguladoras)}" target="_blank" rel="noopener">Ver bases</a>`:""}
    </div>
-   ${r.ia?`<div class="aviso" style="background:${r.ia.recomendacion==="descartar"?"var(--bad-bg)":"var(--ok-bg)"};border-color:${r.ia.recomendacion==="descartar"?"var(--bad)":"var(--ok)"}"><b>🤖 Rellenada con IA${r.ia.recomendacion==="descartar"?": parece que no es para obras en casa":""}.</b> ${esc(r.ia.motivo)}<br><span class="meta">Leído: ${esc(r.ia.documento)}</span></div>`:""}
+   ${r.ia?`<div class="aviso" style="background:${r.ia.recomendacion==="descartar"?"var(--bad-bg)":"var(--ok-bg)"};border-color:${r.ia.recomendacion==="descartar"?"var(--bad)":"var(--ok)"}"><b>🤖 Rellenada con IA${r.ia.recomendacion==="descartar"?": parece que no es para obras en casa":r.ia.recomendacion==="recuperada"?" (la recuperaste de las descartadas)":""}.</b> ${esc(r.ia.motivo)}<br><span class="meta">Leído: ${esc(r.ia.documento)}</span></div>`:""}
    ${r.confirmar?`<div class="aviso"><b>Comprueba en las bases:</b><ul>${r.confirmar.map(x=>`<li>${esc(x)}</li>`).join("")}</ul></div>`:""}
    ${gen?`<div class="aviso">Tiene datos genéricos («Consulta…»). Si la publicas así, la gente verá que debe mirar la convocatoria. Mejor rellena al menos el importe y el plazo.</div>`:""}
    <label class="f">Cuánto da (en palabras)<input data-k="imp" value="${esc(c.imp)}" placeholder="Hasta 10.000 € por vivienda"></label>
@@ -170,6 +176,24 @@ function enlazar(){
     };
     el.querySelector("[data-pub]").onclick=()=>hacer(true);
     el.querySelector("[data-desc]").onclick=()=>hacer(false);
+  });
+  document.querySelectorAll("[data-recuperar]").forEach(b=>b.onclick=async()=>{
+    const id=b.dataset.recuperar; b.disabled=true; estado("Recuperando…");
+    try{
+      for(let i=0;i<3;i++){ // 1) se quita de las descartadas
+        const f=await leer(DESC), c=(f.json.ia||[]).find(x=>x.id===id); if(!c)break;
+        f.json.ia=f.json.ia.filter(x=>x.id!==id); f.json.ids=(f.json.ids||[]).filter(x=>x!==id);
+        if(!(await escribir(DESC,f.json,f.sha,`Revisión desde el móvil: recupera ${id}`)).ok)continue;
+        c.estado="pendiente"; c._revisar.ia.recomendacion="recuperada";
+        for(let j=0;j<3;j++){ // 2) vuelve a las candidatas
+          const g=await leer(RUTA); if(g.json.candidatas.some(x=>x.id===id))break;
+          g.json.candidatas.unshift(c);
+          if((await escribir(RUTA,g.json,g.sha,`Revisión desde el móvil: recupera ${id}`)).ok){datos=g.json;break}
+        }
+        break;
+      }
+      descIA=descIA.filter(x=>x.id!==id); pintar(); estado("Recuperada: está arriba en tu lista");
+    }catch(e){b.disabled=false;estado("No se ha podido recuperar. Inténtalo otra vez.")}
   });
   document.querySelectorAll("[data-vista]").forEach(b=>b.onclick=async()=>{
     b.disabled=true;

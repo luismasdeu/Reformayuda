@@ -50,7 +50,9 @@ EXCLUIR = ["alquiler", "arrendatari", "desahucio", "personal funcionario", "opos
            "fisioterap", "salud mental", "saude mental", "rehabilitacion fisica", "drogodependencia",
            "cementerio", "casa consistorial", "parque infantil", "gastos basicos", "notaria",
            # ayudas para pagar la vivienda (alquiler, hipoteca, recibos), no para reformarla
-           "rentas insuficientes", "monoparental", "gastos de vivienda", "gastos vivienda", "obligaciones derivadas"]
+           "rentas insuficientes", "monoparental", "gastos de vivienda", "gastos vivienda", "obligaciones derivadas",
+           "gastos de la vivienda", "hipoteca", "suministro", "recibos", "compra de vivienda", "adquisicion de vivienda",
+           "compra o autopromocion", "emergencia social", "pobreza", "jubilados y pensionistas", "pensionistas"]
 
 # Tipo de obra a partir de palabras clave.
 TIPOS = {

@@ -51,6 +51,9 @@ def main():
             print(f"Publicada: {limpia['id']} · {limpia['title'][:70]}")
         elif estado.startswith("descart"):
             desc["ids"].append(c["id"])
+            if (c.get("_revisar") or {}).get("ia", {}).get("recomendacion") == "descartar":
+                # Descartada por la IA: se guarda entera para poder recuperarla desde /revisar/.
+                desc["ia"] = (desc.get("ia") or [])[-59:] + [c]
             print(f"Descartada: {c['id']}")
         else:
             quedan.append(c)

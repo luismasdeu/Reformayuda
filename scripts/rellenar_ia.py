@@ -43,7 +43,7 @@ INSTRUCCIONES = """Ayudas a Reformayuda, una web gratuita que explica en lenguaj
 Extrae los datos para una ficha que leerán particulares sin conocimientos legales:
 - Usa solo lo que dicen los documentos. Si un dato no aparece, deja el texto vacío (o 0 en los números) y apúntalo en «dudas». Nunca inventes importes, fechas ni requisitos.
 - Escribe en español claro, frases cortas, tuteando («Vivir en…», «Presenta…»). Nada de jerga administrativa.
-- «es_ayuda_para_obras_en_vivienda» es false si la ayuda no paga obras en una vivienda o edificio de viviendas: por ejemplo, si es para pagar el alquiler, la hipoteca, recibos, el IBI, comprar una casa, o si es solo para empresas, entidades o ayuntamientos. Explica el motivo en una frase.
+- «es_ayuda_para_obras_en_vivienda»: true SOLO si la ayuda paga obras de reforma, rehabilitación, mejora, eficiencia energética, energía renovable, accesibilidad o construcción en una vivienda o en un edificio de viviendas (comunidad de propietarios), o si es una rebaja de impuestos (IBI, ICIO) por hacer esas obras. Es false en todo lo demás: pagar el alquiler, la hipoteca, recibos, suministros, el IBI u otros gastos de la vivienda; comprar una casa; ayudas sociales para vivir; ayudas solo para empresas, entidades o ayuntamientos; y ayudas para un edificio o beneficiario concreto ya decidido (no abiertas al público). Ante la duda, false. Explica el motivo en una frase.
 - «title»: máximo 70 caracteres, que diga qué se paga y dónde (p. ej. «Rehabilitación de viviendas en Tazacorte»).
 - «imp»: cuánto da a cada persona o vivienda, en palabras (p. ej. «Hasta 6.000 € por vivienda (el 50 % de la obra)»). «importe»: ese máximo en euros, o 0 si no hay cifra por vivienda.
 - Fechas en formato AAAA-MM-DD. «cierra» vacío si no hay fecha final (por ejemplo, hasta agotar fondos) y explícalo en «plazo».
@@ -229,6 +229,8 @@ def procesar(cliente, c, completa, informe):
                    "motivo": d.get("motivo", "")}
         r["confirmar"] = [x for x in d.get("dudas") or [] if x.strip()][:4]
         c["_revisar"] = r
+        if not d["es_ayuda_para_obras_en_vivienda"]:
+            c["estado"] = "descartada"  # no es de obras: no llega a tu lista (se puede recuperar en /revisar/)
     else:
         c["ia"] = dt.date.today().isoformat()
     informe["procesadas"].append({"id": c["id"], "documento": como, "coste_usd": round(coste, 4),
