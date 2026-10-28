@@ -1,9 +1,9 @@
 {
- "fecha": "2026-10-28T15:50",
+ "fecha": "2026-10-28T15:58",
  "modo": "diario",
  "suscripciones": 1,
- "con_algo_que_enviar": 0,
- "enviadas": 0,
+ "con_algo_que_enviar": 1,
+ "enviadas": 1,
  "caducadas_borradas": 0,
  "zonas": [
   "Cantabria/Cantabria"
