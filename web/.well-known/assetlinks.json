@@ -4,7 +4,9 @@
     "target": {
       "namespace": "android_app",
       "package_name": "es.reformayuda.app",
-      "sha256_cert_fingerprints": ["PEGA_AQUI_LA_HUELLA_SHA256_QUE_TE_DA_GOOGLE_PLAY"]
+      "sha256_cert_fingerprints": [
+        "0A:17:FF:A5:4F:AD:58:8F:8B:7E:30:68:90:31:05:9C:A5:F7:4C:5F:94:09:33:80:4B:EE:B8:C5:99:46:6B:04"
+      ]
     }
   }
 ]
