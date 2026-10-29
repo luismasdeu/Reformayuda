@@ -4,7 +4,7 @@
  "candidatas": [
   {
    "id": "bdns-938584",
-   "estado": "pendiente",
+   "estado": "espera",
    "title": "Recuperación de viviendas antiguas en Villanueva de Algaidas",
    "org": "VILLANUEVA DE ALGAIDAS · AYUNTAMIENTO DE VILLANUEVA DE ALGAIDAS",
    "scope": "municipal",
@@ -54,7 +54,12 @@
      "Hay que confirmar la fecha real de apertura: la BDNS dice 20 días desde la publicación en el BOP, pero la fecha de inicio es dudosa.",
      "Hay que comprobar si la vivienda debe ser habitual, qué antigüedad mínima debe tener y si hay límite de ingresos o de edad.",
      "Hay que comprobar el número y la fecha del BOP donde están publicadas las bases."
-    ]
+    ],
+    "espera": {
+     "desde": "2026-10-29",
+     "intentos": 1,
+     "proxima": "2026-11-01"
+    }
    },
    "prov": "Málaga",
    "muni": "Villanueva De Algaidas",

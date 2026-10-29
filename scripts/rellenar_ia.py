@@ -56,6 +56,7 @@ Extrae los datos para una ficha que leerán particulares sin conocimientos legal
 - «dudas»: lo que la persona que revisa debe comprobar en las bases (máximo 4 frases).
 - «referencia_bases»: si el documento es solo un extracto que remite a las bases publicadas en otro sitio (p. ej. «texto íntegro en el BOP nº 126 de 16/10/2026»), escribe dónde están (boletín, número y fecha). Si no, vacío.
 - «documento_corresponde»: false si el documento adjunto no contiene las bases ni la convocatoria de ESTA ayuda (por ejemplo, un boletín que solo nombra al municipio por otro asunto). En ese caso no saques datos de él.
+- «pendiente_publicacion»: true si todavía no se puede pedir porque el plazo empieza cuando se publique el extracto o la convocatoria en un boletín y eso aún no ha pasado (o no consta la fecha de esa publicación), de modo que no se sabe el día de apertura. false si el plazo ya está abierto o tiene fecha de apertura conocida.
 - «claridad»: «clara» solo si has leído las bases o la convocatoria oficial y en ellas constan el importe por vivienda (o el porcentaje con su máximo), el plazo (fecha final o «hasta agotar fondos»), los requisitos y cómo se pide, y no hay nada importante que dudar. Si te falta cualquiera de esas cosas o has tenido que suponer algo, «dudosa». Las claras se publican sin revisión humana: ante la duda, «dudosa»."""
 
 ESQUEMA = {
@@ -82,12 +83,13 @@ ESQUEMA = {
         "url_solicitud": {"type": "string"},
         "dudas": {"type": "array", "items": {"type": "string"}},
         "claridad": {"type": "string", "enum": ["clara", "dudosa"]},
+        "pendiente_publicacion": {"type": "boolean"},
         "documento_corresponde": {"type": "boolean"},
         "referencia_bases": {"type": "string"},
     },
     "required": ["es_ayuda_para_obras_en_vivienda", "motivo", "title", "resumen", "imp", "importe", "abre", "cierra",
                  "plazo", "req", "docs", "pasos", "tipo", "dest", "edad_min", "edad_max", "max_habitantes", "irpf",
-                 "url_solicitud", "dudas", "claridad", "documento_corresponde", "referencia_bases"],
+                 "url_solicitud", "dudas", "claridad", "documento_corresponde", "referencia_bases", "pendiente_publicacion"],
     "additionalProperties": False,
 }
 
@@ -246,6 +248,24 @@ def aplicar(c, d, completa):
         c["sede"] = d["url_solicitud"]
 
 
+# «Esperando al boletín»: convocatorias registradas en la BDNS cuyo plazo empieza cuando se publique el
+# extracto, que aún no ha salido. Se vuelven a mirar pasados estos días; tras el último intento, se descartan.
+ESPERAS_DIAS = [3, 5, 7, 10, 14, 21]
+
+
+def esperar(c, r):
+    e = r.get("espera") or {"desde": dt.date.today().isoformat(), "intentos": 0}
+    e["intentos"] += 1
+    if e["intentos"] > len(ESPERAS_DIAS):
+        c["estado"] = "descartada"
+        r["ia"]["recomendacion"] = "descartar"
+        r["ia"]["motivo"] = f"Esperaba al boletín desde el {e['desde']} y no se ha publicado la fecha de apertura."
+        return
+    e["proxima"] = (dt.date.today() + dt.timedelta(days=ESPERAS_DIAS[e["intentos"] - 1])).isoformat()
+    r["espera"] = e
+    c["estado"] = "espera"
+
+
 def muy_clara(c, d, bloques):
     """Solo se publica sin revisión si la IA la ve clara y además están todos los datos importantes."""
     hoy = dt.date.today().isoformat()
@@ -289,9 +309,15 @@ def procesar(cliente, c, completa, informe):
         c["_revisar"] = r
         if not d["es_ayuda_para_obras_en_vivienda"]:
             c["estado"] = "descartada"  # no es de obras: no llega a tu lista (se puede recuperar en /revisar/)
+        elif d.get("pendiente_publicacion"):
+            esperar(c, r)
         elif not r.get("no_auto") and muy_clara(c, d, bloques):
             c["estado"] = "aprobada"  # se publica sola; se puede retirar desde /revisar/
             r["ia"]["recomendacion"] = "publicada sola"
+        else:
+            c["estado"] = "pendiente"  # también cuando sale de «espera»: ya tiene fecha
+        if c["estado"] != "espera":
+            r.pop("espera", None)
     else:
         c["ia"] = dt.date.today().isoformat()
     informe["procesadas"].append({"id": c["id"], "documento": como, "coste_usd": round(coste, 4),
@@ -342,8 +368,11 @@ def main():
         if incompletas:
             AYUDAS.write_text(json.dumps(datos, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
         rev = json.loads(CANDIDATAS.read_text(encoding="utf-8"))
+        hoy = dt.date.today().isoformat()
         cola = [c for c in rev["candidatas"] if c.get("estado", "pendiente") == "pendiente"
                 and not (c.get("_revisar") or {}).get("ia") and not (c.get("_revisar") or {}).get("confirmar")]
+        cola += [c for c in rev["candidatas"] if c.get("estado") == "espera"
+                 and (c.get("_revisar") or {}).get("espera", {}).get("proxima", hoy) <= hoy]
         for c in cola[:int(os.environ.get("IA_MAX", "15"))]:
             if not cabe():
                 informe["pendientes_por_tope"] += 1

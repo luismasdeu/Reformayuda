@@ -101,6 +101,7 @@ async function cargar(){
     pintar()}
   catch(e){if(e.message==="token"){guardado.set("token","");pedirToken("La llave no funciona o ha caducado. Crea otra.")}else estado("No se ha podido cargar. Revisa la conexión y recarga.")}
 }
+function esperan(){return(datos.candidatas||[]).filter(c=>c.estado==="espera")}
 function pendientes(){return(datos.candidatas||[]).filter(c=>(c.estado||"pendiente")==="pendiente")}
 function zona(c){return[c.muni,c.prov&&c.prov!==c.muni&&c.prov!==c.ccaa?c.prov:"",c.ccaa==="all"?"Toda España":c.ccaa].filter(Boolean).join(" · ")}
 function pintar(){
@@ -113,6 +114,10 @@ function pintar(){
        <div class="row" style="margin-top:4px"><a class="b alt" href="/?ayuda=${encodeURIComponent(a.id)}" target="_blank" rel="noopener">Ver en la app</a><a class="b alt" href="${esc(a.url)}" target="_blank" rel="noopener">Convocatoria</a><button class="b no" data-retirar="${esc(a.id)}">Retirar</button></div></div>`).join("")}</details>`:""}
    ${p.length?"":`<div class="vacio">✅ No hay nada por revisar.<br>Te avisaremos cuando la búsqueda diaria encuentre ayudas nuevas.</div>`}
    ${p.map(tarjeta).join("")}
+   ${esperan().length?`<details class="card"><summary>Esperando al boletín (${esperan().length})</summary>
+     <p class="meta">Registradas en la BDNS, pero el plazo empieza cuando se publique el extracto en el boletín, y aún no ha salido. Se vuelven a mirar solas cada pocos días: cuando tengan fecha, pasarán a tu lista o se publicarán.</p>
+     ${esperan().map(c=>`<div style="border-top:1px solid var(--line);padding:10px 0"><b>${esc(c.title)}</b><p class="meta" style="margin:2px 0">${esc(zona(c))} · próxima comprobación: ${esc((c._revisar.espera?.proxima||"").split("-").reverse().join("/"))}</p>
+       <div class="row" style="margin-top:4px"><a class="b alt" href="${esc(c.url)}" target="_blank" rel="noopener">Ver convocatoria</a><button class="b alt" data-alista="${esc(c.id)}">Pasar a mi lista</button></div></div>`).join("")}</details>`:""}
    ${descIA.length?`<details class="card"><summary>Descartadas automáticamente por la IA (${descIA.length})</summary>
      <p class="meta">No son de obras en casa o comunidad (alquiler, recibos, compra…). Si alguna sí lo es, recupérala y volverá a tu lista.</p>
      ${descIA.map(c=>`<div style="border-top:1px solid var(--line);padding:10px 0"><b>${esc(c.title)}</b><p class="meta" style="margin:2px 0">${esc(zona(c))} · ${esc(c._revisar?.ia?.motivo||"")}</p>
@@ -183,6 +188,11 @@ function enlazar(){
     };
     el.querySelector("[data-pub]").onclick=()=>hacer(true);
     el.querySelector("[data-desc]").onclick=()=>hacer(false);
+  });
+  document.querySelectorAll("[data-alista]").forEach(b=>b.onclick=async()=>{
+    b.disabled=true; estado("Guardando…");
+    try{await cambiar(b.dataset.alista,c=>{c.estado="pendiente"},`Revisión desde el móvil: ${b.dataset.alista} pasa a la lista`);pintar();estado("Está en tu lista")}
+    catch(e){b.disabled=false;estado("No se ha podido guardar. Inténtalo otra vez.")}
   });
   document.querySelectorAll("[data-retirar]").forEach(b=>b.onclick=async()=>{
     const id=b.dataset.retirar; if(!confirm("¿Retirar esta ayuda de la app? No se volverá a proponer."))return;
