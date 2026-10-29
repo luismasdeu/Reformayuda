@@ -636,7 +636,7 @@ function locForm(el,v,onCh){
   const id=el.id, ch=()=>onCh&&onCh();
   el.innerHTML=`<div class="form">
    <label>Comunidad autónoma<select class="sel" id="${id}-c">${CCAA.map(c=>`<option ${c===v.ccaa?"selected":""}>${c}</option>`).join("")}</select></label>
-   <label>Provincia<select class="sel" id="${id}-p">${provs.length>1?`<option value="">No lo sé</option>`:""}${provs.map(p=>`<option ${p===v.prov?"selected":""}>${p}</option>`).join("")}</select></label>
+   <label>Provincia<select class="sel" id="${id}-p">${provs.length>1?`<option value="" ${v.prov?"":"selected"} disabled>Elige tu provincia</option>`:""}${provs.map(p=>`<option ${p===v.prov?"selected":""}>${p}</option>`).join("")}</select></label>
    <label>Municipio <span class="muted" style="font-weight:600">(opcional)</span><input class="inp" id="${id}-m" value="${esc(v.muni||"")}" placeholder="Ej.: Úbeda" autocomplete="address-level2"></label>
    <label>Habitantes del municipio<select class="sel" id="${id}-h"><option value="">No lo sé</option>${HABS.map(([n,l])=>`<option value="${n}" ${+v.hab===n?"selected":""}>${l}</option>`).join("")}</select></label></div>`;
   $(`#${id}-c`).onchange=e=>{v.ccaa=e.target.value;v.prov="";v.muni="";locForm(el,v,onCh);ch()};
