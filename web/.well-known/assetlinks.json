@@ -1,10 +1,13 @@
 [
   {
-    "relation": ["delegate_permission/common.handle_all_urls"],
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
     "target": {
       "namespace": "android_app",
       "package_name": "es.reformayuda.app",
       "sha256_cert_fingerprints": [
+        "B2:8C:64:A7:BC:E9:B0:03:C6:06:FF:70:61:17:5C:1C:53:98:88:2B:F7:4A:12:9D:EF:70:15:E4:C8:EC:28:79",
         "0A:17:FF:A5:4F:AD:58:8F:8B:7E:30:68:90:31:05:9C:A5:F7:4C:5F:94:09:33:80:4B:EE:B8:C5:99:46:6B:04"
       ]
     }
