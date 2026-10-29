@@ -2,6 +2,6 @@
  "_leeme": "Gasto aproximado de la IA por mes, en dólares. «limite_usd» es el tope mensual: al llegar, las ayudas nuevas se quedan para revisar a mano.",
  "limite_usd": 15,
  "meses": {
-  "2026-10": 5.559
+  "2026-10": 6.706
  }
 }

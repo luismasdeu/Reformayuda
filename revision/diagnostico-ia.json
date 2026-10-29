@@ -1,53 +1,41 @@
 {
- "fecha": "2026-10-28T17:57",
+ "fecha": "2026-10-29T05:55",
  "modelo": "claude-sonnet-5-5",
  "procesadas": [
   {
-   "id": "bdns-937551",
-   "documento": "el enlace de bases de la BDNS es genérico (ley, ordenanza general o portada) (extracto; bases en Convocatoria 2026 publicada en el BOP de Barcelona (BDNS 937551). Ver el documento en español adjunto a la ficha de la BDNS.)",
-   "coste_usd": 0.4345,
-   "recomendacion": "publicar"
+   "id": "bdns-934927",
+   "documento": "página web",
+   "coste_usd": 0.0303,
+   "recomendacion": "corregida"
   },
   {
-   "id": "bdns-937124",
-   "documento": "el enlace de bases de la BDNS es genérico (ley, ordenanza general o portada) (extracto; bases en Ordenanza General de Subvenciones 2026 del Ayuntamiento de Sant Joan de Vilatorrada. La convocatoria se publicó en el BOPB el 26/10/2026 (BDNS 937124).)",
-   "coste_usd": 0.3423,
-   "recomendacion": "publicar"
-  },
-  {
-   "id": "bdns-935742",
+   "id": "bdns-938622",
    "documento": "el enlace de bases de la BDNS es genérico (ley, ordenanza general o portada)",
-   "coste_usd": 0.1413,
+   "coste_usd": 0.0254,
+   "recomendacion": "descartar"
+  },
+  {
+   "id": "bdns-938584",
+   "documento": "el enlace de bases de la BDNS es genérico (ley, ordenanza general o portada) (extracto; bases en Bases reguladoras «Ayudas para la Recuperación y Adecuación de Viviendas Antiguas»; la BDNS remite a la sede electrónica del Ayuntamiento y a su publicación en el BOP de Málaga (número y fecha sin confirmar).)",
+   "coste_usd": 0.3864,
    "recomendacion": "publicar"
   },
   {
-   "id": "bdns-935296",
-   "documento": "el enlace de bases de la BDNS es genérico (ley, ordenanza general o portada)",
-   "coste_usd": 0.1654,
-   "recomendacion": "publicar"
+   "id": "bdns-938521",
+   "documento": "sin enlace a las bases (extracto; bases en Bases en www.ayto-langreo.es y publicación en el BOPA (número y fecha sin confirmar))",
+   "coste_usd": 0.1706,
+   "recomendacion": "descartar"
   },
   {
-   "id": "bdns-934466",
-   "documento": "el enlace de bases de la BDNS es genérico (ley, ordenanza general o portada)",
-   "coste_usd": 0.1405,
-   "recomendacion": "publicar"
-  },
-  {
-   "id": "bdns-933040",
-   "documento": "el enlace de bases de la BDNS es genérico (ley, ordenanza general o portada) (extracto; bases en Bases reguladoras publicadas en el BOP de Huelva (el número y la fecha no constan).)",
-   "coste_usd": 0.2833,
-   "recomendacion": "publicar"
-  },
-  {
-   "id": "bdns-937771",
-   "documento": "el enlace de bases de la BDNS es genérico (ley, ordenanza general o portada) (extracto; bases en Bases reguladoras del Ayuntamiento de Barlovento publicadas en el Boletín Oficial de la Provincia de Santa Cruz de Tenerife (BOP); número y fecha no indicados.)",
-   "coste_usd": 0.0516,
+   "id": "bdns-938515",
+   "documento": "no se pudo descargar (URL can't contain control characters. '/scripts/ftpisa.aspx?fnew?bop2016&04/0 22016005878.pdf&1' (found at least ' ')) (extracto; bases en Bases reguladoras de las subvenciones municipales, BOP de Barcelona 2016 (https://bop.diba.cat/scripts/ftpisa.aspx?fnew?bop2016&04/0 22016005878.pdf&1))",
+   "coste_usd": 0.5345,
    "recomendacion": "descartar"
   }
  ],
  "errores": [],
- "coste_usd": 1.559,
+ "coste_usd": 1.147,
  "pendientes_por_tope": 0,
- "gasto_mes_usd": 5.559,
+ "gasto_mes_usd": 6.706,
  "limite_mes_usd": 15.0
 }
