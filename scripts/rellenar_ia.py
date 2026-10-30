@@ -173,6 +173,27 @@ def bases_utiles(bloques):
     return any(b["type"] == "document" or len(b.get("text", "")) > 4000 for b in bloques)
 
 
+CLASIFICAR = {"type": "object", "properties": {"es_ayuda_para_obras_en_vivienda": {"type": "boolean"}, "motivo": {"type": "string"}},
+              "required": ["es_ayuda_para_obras_en_vivienda", "motivo"], "additionalProperties": False}
+
+
+def clasificar(cliente, c, ficha):
+    """Pregunta rápida y barata (solo la ficha de la BDNS, sin buscar en internet): ¿es de obras?
+    Se hace antes de buscar en internet, que es lo que encarece cada ayuda."""
+    criterio = [l for l in INSTRUCCIONES.split("\n") if l.startswith("- «es_ayuda_para_obras_en_vivienda»")][0]
+    datos = {k: c.get(k) for k in ("title", "org", "resumen", "ccaa", "muni")}
+    r = cliente.beta.messages.create(
+        model=MODELO, max_tokens=2000,
+        messages=[{"role": "user", "content": "Decide si esta convocatoria entra en Reformayuda, con este criterio:\n" + criterio +
+                   "\n\nSi con estos datos no está claro, responde true (se estudiará con más detalle).\n\nDatos:\n" +
+                   json.dumps(datos, ensure_ascii=False) + "\n\nFicha de la BDNS:\n" + json.dumps(ficha or {}, ensure_ascii=False)[:8000]}],
+        output_config={"effort": "low", "format": {"type": "json_schema", "schema": CLASIFICAR}},
+        betas=["server-side-fallback-2026-07-01"], fallbacks="default",
+    )
+    texto = [b.text for b in r.content if b.type == "text"][-1]
+    return json.loads(texto[texto.index("{"):texto.rindex("}") + 1]), {"entrada": r.usage.input_tokens, "salida": r.usage.output_tokens, "busquedas": 0}
+
+
 def preguntar(cliente, c, ficha, bloques, buscar=None, pista=""):
     if buscar is None:
         buscar = not bases_utiles(bloques)
@@ -297,8 +318,19 @@ def procesar(cliente, c, completa, informe):
     bloques, como = bloques_documento(url_bases, [c.get("muni"), c.get("org", "").split("·")[0].strip(), c.get("title", "")[:40]])
     if enlace_generico(url_bases):
         r["bases_no_corresponden"] = True
-    d, uso = preguntar(cliente, c, ficha, bloques)
-    if bloques and not d.get("documento_corresponde", True):
+    ya_clasificada = (r.get("ia") or {}).get("recomendacion") in ("publicar", "recuperada", "publicada sola")
+    if completa and not bases_utiles(bloques) and not ya_clasificada:
+        k, uso = clasificar(cliente, c, ficha)
+        if not k["es_ayuda_para_obras_en_vivienda"]:
+            d = {"es_ayuda_para_obras_en_vivienda": False, "motivo": k.get("motivo", ""), "dudas": []}
+            return cerrar(c, r, d, uso, como + " (descartada con la pregunta rápida)", completa, informe, bloques)
+    else:
+        uso = {"entrada": 0, "salida": 0, "busquedas": 0}
+    d, uso1 = preguntar(cliente, c, ficha, bloques)
+    uso = {k: uso[k] + uso1[k] for k in uso}
+    if not d["es_ayuda_para_obras_en_vivienda"]:
+        pass  # no es de obras: no merece la pena buscar más
+    elif bloques and not d.get("documento_corresponde", True):
         # El enlace de bases de la BDNS lleva a otro documento: se busca la convocatoria buena.
         como += " (no eran las bases de esta ayuda: buscada en internet)"
         r["bases_no_corresponden"] = True
@@ -312,10 +344,15 @@ def procesar(cliente, c, completa, informe):
         uso = {k: uso[k] + uso2[k] for k in uso}
         if d2.get("importe") or len(d2.get("req") or []) >= len(d.get("req") or []):
             d = d2
+    return cerrar(c, r, d, uso, como, completa, informe, bloques)
+
+
+def cerrar(c, r, d, uso, como, completa, informe, bloques):
     entrada, salida = PRECIO.get(MODELO, (2, 10))
     coste = (uso["entrada"] * entrada + uso["salida"] * salida) / 1e6 + uso["busquedas"] * 0.01  # 10 $ por 1.000 búsquedas
     informe["coste_usd"] += coste
-    aplicar(c, d, completa)
+    if d["es_ayuda_para_obras_en_vivienda"]:
+        aplicar(c, d, completa)
     if completa:
         r["ia"] = {"fecha": dt.date.today().isoformat(), "documento": como,
                    "recomendacion": "publicar" if d["es_ayuda_para_obras_en_vivienda"] else "descartar",
