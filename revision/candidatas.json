@@ -1,6 +1,6 @@
 {
  "_leeme": "Ayudas detectadas automáticamente en los boletines. Revísalas: pon \"estado\": \"aprobada\" o \"descartada\". Mira README.md.",
- "ultima_busqueda": "2026-10-29T05:55",
+ "ultima_busqueda": "2026-10-30T05:56",
  "candidatas": [
   {
    "id": "bdns-938584",
@@ -64,6 +64,172 @@
    "prov": "Málaga",
    "muni": "Villanueva De Algaidas",
    "sede": "https://villanuevadealgaidas.sedelectronica.es/"
+  },
+  {
+   "id": "bdns-938834",
+   "estado": "descartada",
+   "title": "Ayudas sociales para gastos de vivienda habitual en Arganda del Rey",
+   "org": "ARGANDA DEL REY · AYUNTAMIENTO DE ARGANDA DEL REY",
+   "scope": "municipal",
+   "ccaa": "Comunidad de Madrid",
+   "tipo": [
+    "rehabilitacion"
+   ],
+   "dest": [
+    "vivienda"
+   ],
+   "importe": 0,
+   "imp": "Consulta la convocatoria",
+   "abre": "2026-10-29",
+   "cierra": null,
+   "plazo": "Empieza el día posterior a la publicación del extracto en el BOCM y dura 15 días desde esa publicación (según la ficha de la BDNS).",
+   "irpf": false,
+   "fuente": "BDNS nº 938834",
+   "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/938834",
+   "resumen": "CONVOCATORIA PÚBLICA PARA LA CONCESIÓN DE AYUDAS SOCIALES EXTRAORDINARIAS DIRIGIDAS A VECINOS DE ARGANDA DEL REY PARA COLABORAR EN SUS GASTOS POR VIVIENDA HABITUAL AÑO 2026.",
+   "req": [
+    "Consulta los requisitos en la convocatoria oficial"
+   ],
+   "docs": [
+    "Consulta la documentación en la convocatoria oficial"
+   ],
+   "pasos": [
+    "Lee la convocatoria oficial",
+    "Prepara la documentación",
+    "Presenta la solicitud en la sede del organismo"
+   ],
+   "_revisar": {
+    "presupuesto_total": 42000,
+    "bases_reguladoras": "https://sedeelectronica.argandadelrey.es/sta/CarpetaPublic/doEvent?APP_CODE=STA&PAGE_CODE=PTS2_TABLON#",
+    "abierta_segun_bdns": false,
+    "beneficiarios": "PERSONAS FÍSICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
+    "nota": "Revisa importe por vivienda, requisitos, documentos y pasos antes de aprobar.",
+    "referencia_bases": "Texto completo en la Base de Datos Nacional de Subvenciones (convocatoria 938834) y extracto en el BOCM.",
+    "ia": {
+     "fecha": "2026-10-30",
+     "documento": "no se pudo descargar (<urlopen error timed out>) (extracto; bases en Texto completo en la Base de Datos Nacional de Subvenciones (convocatoria 938834) y extracto en el BOCM.)",
+     "recomendacion": "descartar",
+     "motivo": "Son ayudas sociales extraordinarias para colaborar en los gastos de la vivienda habitual de vecinos, no para pagar obras. No he podido leer las bases."
+    },
+    "confirmar": [
+     "No se han podido leer las bases y no consta el tipo de gastos que cubre la ayuda.",
+     "No consta la fecha de publicación del extracto en el BOCM."
+    ]
+   },
+   "muni": "Arganda Del Rey"
+  },
+  {
+   "id": "bdns-938805",
+   "estado": "pendiente",
+   "title": "Accesibilidad y conservación de edificios en Vilafranca del Penedès",
+   "org": "VILAFRANCA DEL PENEDÈS · AYUNTAMIENTO DE VILAFRANCA DEL PENEDÈS",
+   "scope": "municipal",
+   "ccaa": "Cataluña",
+   "tipo": [
+    "accesibilidad",
+    "rehabilitacion"
+   ],
+   "dest": [
+    "edificio",
+    "vivienda"
+   ],
+   "importe": 0,
+   "imp": "Consulta la convocatoria",
+   "abre": "2026-10-29",
+   "cierra": "2026-11-20",
+   "plazo": "Según la BDNS, el plazo empieza el día siguiente a publicar la convocatoria en el BOPB y termina el 20 de noviembre de 2026. La fecha de apertura sale de la fecha de recepción en la BDNS y hay que confirmarla.",
+   "irpf": false,
+   "fuente": "BDNS nº 938805",
+   "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/938805",
+   "resumen": "El Ayuntamiento de Vilafranca del Penedès convoca ayudas para mejorar la accesibilidad y el estado de conservación de edificios de viviendas y locales comerciales. Se conceden sin competir entre solicitudes y el presupuesto total es de 120.000 €. No hemos podido leer las bases, así que faltan importes y requisitos.",
+   "req": [
+    "Consulta los requisitos en la convocatoria oficial"
+   ],
+   "docs": [
+    "Consulta la documentación en la convocatoria oficial"
+   ],
+   "pasos": [
+    "Lee la convocatoria oficial",
+    "Prepara la documentación",
+    "Presenta la solicitud en la sede del organismo"
+   ],
+   "_revisar": {
+    "presupuesto_total": 120000,
+    "bases_reguladoras": "https://seu.vilafranca.cat/",
+    "abierta_segun_bdns": false,
+    "beneficiarios": "GRAN EMPRESA PERSONAS FÍSICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA PERSONAS JURÍDICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA",
+    "nota": "Revisa importe por vivienda, requisitos, documentos y pasos antes de aprobar.",
+    "bases_no_corresponden": true,
+    "ia": {
+     "fecha": "2026-10-30",
+     "documento": "el enlace de bases de la BDNS es genérico (ley, ordenanza general o portada)",
+     "recomendacion": "publicar",
+     "motivo": "Según la ficha de la BDNS, la convocatoria paga mejoras de accesibilidad y de conservación en edificios de viviendas y locales comerciales de Vilafranca del Penedès."
+    },
+    "confirmar": [
+     "No se han podido leer las bases ni la convocatoria. Faltan el importe por vivienda o edificio, el porcentaje y el máximo.",
+     "Comprueba los requisitos, los documentos y las obras que se pueden pagar.",
+     "Comprueba la fecha real de apertura: la BDNS indica que empieza al día siguiente de publicarse en el BOPB.",
+     "Comprueba si pueden pedirla particulares y comunidades, y si los locales comerciales cuentan solo cuando están en edificios de viviendas."
+    ]
+   },
+   "prov": "Barcelona",
+   "muni": "Vilafranca Del Penedès",
+   "sede": "https://seu.vilafranca.cat/"
+  },
+  {
+   "id": "bdns-938749",
+   "estado": "descartada",
+   "title": "Edificio de 33 viviendas protegidas para afectados del volcán (La Palma)",
+   "org": "CABILDO INSULAR DE TENERIFE · CABILDO INSULAR DE TENERIFE",
+   "scope": "provincial",
+   "ccaa": "Canarias",
+   "tipo": [
+    "rehabilitacion"
+   ],
+   "dest": [
+    "vivienda",
+    "edificio"
+   ],
+   "importe": 0,
+   "imp": "Consulta la convocatoria",
+   "abre": "2026-10-29",
+   "cierra": null,
+   "plazo": "Consulta el plazo en la convocatoria",
+   "irpf": false,
+   "fuente": "BDNS nº 938749",
+   "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/938749",
+   "resumen": "Concesión de una subvención directa para la ejecución del Proyecto social denominado “EDIFICIO RESIDENCIAL DE 33 VIVIENDAS Y GARAJES DESTINADO A VIVIENDA PROTEGIDA\" para asignar a personas afectadas por la erupción volcánica en la zona de Cumbre Vieja",
+   "req": [
+    "Consulta los requisitos en la convocatoria oficial"
+   ],
+   "docs": [
+    "Consulta la documentación en la convocatoria oficial"
+   ],
+   "pasos": [
+    "Lee la convocatoria oficial",
+    "Prepara la documentación",
+    "Presenta la solicitud en la sede del organismo"
+   ],
+   "_revisar": {
+    "presupuesto_total": 4125118.66,
+    "bases_reguladoras": "https://www.bopsantacruzdetenerife.es/bopsc2/index.php",
+    "abierta_segun_bdns": false,
+    "beneficiarios": "PERSONAS JURÍDICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
+    "nota": "Revisa importe por vivienda, requisitos, documentos y pasos antes de aprobar.",
+    "bases_no_corresponden": true,
+    "ia": {
+     "fecha": "2026-10-30",
+     "documento": "el enlace de bases de la BDNS es genérico (ley, ordenanza general o portada)",
+     "recomendacion": "descartar",
+     "motivo": "Es una subvención directa a una entidad para construir un edificio de 33 viviendas protegidas que se asignarán a personas afectadas por el volcán. No está abierta a particulares para hacer obras en su vivienda."
+    },
+    "confirmar": [
+     "No se han leído las bases ni el acuerdo de concesión.",
+     "La subvención es directa e instrumental, con un beneficiario ya decidido, y no se abre a particulares."
+    ]
+   },
+   "prov": "Santa Cruz de Tenerife"
   }
  ],
  "boe": []
