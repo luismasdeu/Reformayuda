@@ -56,7 +56,7 @@ Extrae los datos para una ficha que leerán particulares sin conocimientos legal
 - «dudas»: lo que la persona que revisa debe comprobar en las bases (máximo 4 frases).
 - «referencia_bases»: si el documento es solo un extracto que remite a las bases publicadas en otro sitio (p. ej. «texto íntegro en el BOP nº 126 de 16/10/2026»), escribe dónde están (boletín, número y fecha). Si no, vacío.
 - «documento_corresponde»: false si el documento adjunto no contiene las bases ni la convocatoria de ESTA ayuda (por ejemplo, un boletín que solo nombra al municipio por otro asunto). En ese caso no saques datos de él.
-- «pendiente_publicacion»: true si todavía no se puede pedir porque el plazo empieza cuando se publique el extracto o la convocatoria en un boletín y eso aún no ha pasado (o no consta la fecha de esa publicación), de modo que no se sabe el día de apertura. false si el plazo ya está abierto o tiene fecha de apertura conocida.
+- «pendiente_publicacion»: true si el plazo empieza cuando se publique el extracto o la convocatoria en un boletín y no has visto esa publicación con su fecha (aunque se conozca la fecha de cierre), de modo que no se sabe con certeza el día de apertura. false si el plazo ya está abierto o tiene fecha de apertura conocida.
 - «claridad»: «clara» solo si has leído las bases o la convocatoria oficial y en ellas constan el importe por vivienda (o el porcentaje con su máximo), el plazo (fecha final o «hasta agotar fondos»), los requisitos y cómo se pide, y no hay nada importante que dudar. Si te falta cualquiera de esas cosas o has tenido que suponer algo, «dudosa». Las claras se publican sin revisión humana: ante la duda, «dudosa»."""
 
 ESQUEMA = {
@@ -253,9 +253,24 @@ def aplicar(c, d, completa):
 ESPERAS_DIAS = [3, 5, 7, 10, 14, 21]
 
 
+DEPENDE = re.compile(r"(desde|tras|después de|siguiente a|a partir de)[^.]{0,60}(publicaci|publicar|publique)", re.I)
+
+
+def depende_de_publicacion(c, d):
+    """Comprobación propia, por si la IA no lo marca: el plazo cuenta desde una publicación en el boletín
+    y no hemos podido confirmar nada de las bases (sin importe por vivienda)."""
+    texto = " ".join([d.get("plazo", "")] + list(d.get("dudas") or []))
+    return bool(DEPENDE.search(texto)) and not c.get("importe")
+
+
 def esperar(c, r):
     e = r.get("espera") or {"desde": dt.date.today().isoformat(), "intentos": 0}
     e["intentos"] += 1
+    if c.get("cierra") and c["cierra"] < dt.date.today().isoformat():
+        c["estado"] = "descartada"
+        r["ia"]["recomendacion"] = "descartar"
+        r["ia"]["motivo"] = f"Cerró el {c['cierra']} sin que llegara a confirmarse la apertura."
+        return
     if e["intentos"] > len(ESPERAS_DIAS):
         c["estado"] = "descartada"
         r["ia"]["recomendacion"] = "descartar"
@@ -309,7 +324,7 @@ def procesar(cliente, c, completa, informe):
         c["_revisar"] = r
         if not d["es_ayuda_para_obras_en_vivienda"]:
             c["estado"] = "descartada"  # no es de obras: no llega a tu lista (se puede recuperar en /revisar/)
-        elif d.get("pendiente_publicacion"):
+        elif d.get("pendiente_publicacion") or depende_de_publicacion(c, d):
             esperar(c, r)
         elif not r.get("no_auto") and muy_clara(c, d, bloques):
             c["estado"] = "aprobada"  # se publica sola; se puede retirar desde /revisar/

@@ -67,7 +67,7 @@
   },
   {
    "id": "bdns-938805",
-   "estado": "pendiente",
+   "estado": "espera",
    "title": "Accesibilidad y conservación de edificios en Vilafranca del Penedès",
    "org": "VILAFRANCA DEL PENEDÈS · AYUNTAMIENTO DE VILAFRANCA DEL PENEDÈS",
    "scope": "municipal",
@@ -118,7 +118,12 @@
      "Comprueba los requisitos, los documentos y las obras que se pueden pagar.",
      "Comprueba la fecha real de apertura: la BDNS indica que empieza al día siguiente de publicarse en el BOPB.",
      "Comprueba si pueden pedirla particulares y comunidades, y si los locales comerciales cuentan solo cuando están en edificios de viviendas."
-    ]
+    ],
+    "espera": {
+     "desde": "2026-10-30",
+     "intentos": 1,
+     "proxima": "2026-11-02"
+    }
    },
    "prov": "Barcelona",
    "muni": "Vilafranca Del Penedès",
