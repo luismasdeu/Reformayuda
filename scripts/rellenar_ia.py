@@ -284,6 +284,12 @@ def depende_de_publicacion(c, d):
     return bool(DEPENDE.search(texto)) and not c.get("importe")
 
 
+def aun_no_abre_sin_datos(c):
+    """Todavía no se puede pedir (abre más adelante) y no se han podido leer las bases (sin importe):
+    se espera a que se publiquen. Cuando llega la fecha de apertura deja de cumplirse y pasa a tu lista."""
+    return bool(c.get("abre")) and c["abre"] > dt.date.today().isoformat() and not c.get("importe")
+
+
 def esperar(c, r):
     e = r.get("espera") or {"desde": dt.date.today().isoformat(), "intentos": 0}
     e["intentos"] += 1
@@ -361,7 +367,7 @@ def cerrar(c, r, d, uso, como, completa, informe, bloques):
         c["_revisar"] = r
         if not d["es_ayuda_para_obras_en_vivienda"]:
             c["estado"] = "descartada"  # no es de obras: no llega a tu lista (se puede recuperar en /revisar/)
-        elif d.get("pendiente_publicacion") or depende_de_publicacion(c, d):
+        elif d.get("pendiente_publicacion") or depende_de_publicacion(c, d) or aun_no_abre_sin_datos(c):
             esperar(c, r)
         elif not r.get("no_auto") and muy_clara(c, d, bloques):
             c["estado"] = "aprobada"  # se publica sola; se puede retirar desde /revisar/

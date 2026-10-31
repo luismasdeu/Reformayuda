@@ -131,7 +131,7 @@
   },
   {
    "id": "bdns-938969",
-   "estado": "pendiente",
+   "estado": "espera",
    "title": "Ascensores, accesibilidad a portales y fachadas en Eibar",
    "org": "EIBAR · AYUNTAMIENTO DE EIBAR",
    "scope": "municipal",
@@ -184,7 +184,12 @@
      "No se han podido leer las bases ni la convocatoria: faltan importe por vivienda o porcentaje, requisitos y cómo se presenta la solicitud.",
      "Comprueba si exige la ITE (inspección técnica del edificio) y la antigüedad del edificio.",
      "Confirma las fechas del plazo y si las ayudas se conceden por orden de solicitud o por evaluación individual."
-    ]
+    ],
+    "espera": {
+     "desde": "2026-10-31",
+     "intentos": 1,
+     "proxima": "2026-11-03"
+    }
    },
    "prov": "Gipuzkoa",
    "muni": "Eibar"
