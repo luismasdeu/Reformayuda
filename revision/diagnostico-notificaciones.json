@@ -1,9 +1,9 @@
 {
- "fecha": "2026-10-30T08:02",
+ "fecha": "2026-10-31T05:54",
  "modo": "diario",
  "suscripciones": 1,
- "con_algo_que_enviar": 0,
- "enviadas": 0,
+ "con_algo_que_enviar": 1,
+ "enviadas": 1,
  "caducadas_borradas": 0,
  "zonas": [
   "Castilla y León/Burgos"
