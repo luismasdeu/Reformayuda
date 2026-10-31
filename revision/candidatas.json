@@ -130,63 +130,6 @@
    "sede": "https://seu.vilafranca.cat/"
   },
   {
-   "id": "bdns-938979",
-   "estado": "descartada",
-   "title": "Convocatoria de subvenciones de Ayuda a la Vivienda Joven Plan Soria 2026",
-   "org": "DIPUTACIÓN PROV. DE SORIA · DIPUTACIÓN PROVINCIAL DE SORIA",
-   "scope": "provincial",
-   "ccaa": "Castilla y León",
-   "tipo": [
-    "rehabilitacion"
-   ],
-   "dest": [
-    "vivienda"
-   ],
-   "importe": 0,
-   "imp": "Consulta la convocatoria",
-   "abre": "2026-10-31",
-   "cierra": "2027-02-28",
-   "plazo": "Consulta el plazo en la convocatoria",
-   "irpf": false,
-   "fuente": "BDNS nº 938979",
-   "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/938979",
-   "resumen": "Convocatoria de subvenciones de Ayuda a la Vivienda Joven Plan Soria 2026",
-   "req": [
-    "Consulta los requisitos en la convocatoria oficial"
-   ],
-   "docs": [
-    "Consulta la documentación en la convocatoria oficial"
-   ],
-   "pasos": [
-    "Lee la convocatoria oficial",
-    "Prepara la documentación",
-    "Presenta la solicitud en la sede del organismo"
-   ],
-   "_revisar": {
-    "presupuesto_total": 280000,
-    "bases_reguladoras": "http://www.dipsoria.es/sites/dipsoria/files/public/paginas/archivos/ordenanza_general_reguladora_de_la_concesion_de_subvenciones.pdf",
-    "abierta_segun_bdns": false,
-    "beneficiarios": "PERSONAS FÍSICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
-    "nota": "Revisa importe por vivienda, requisitos, documentos y pasos antes de aprobar.",
-    "bases_no_corresponden": true,
-    "ia": {
-     "fecha": "2026-10-31",
-     "documento": "el enlace de bases de la BDNS es genérico (ley, ordenanza general o portada)",
-     "recomendacion": "descartar",
-     "motivo": "No he encontrado las bases de 2026. Las ediciones anteriores subvencionan sobre todo la compra de vivienda o de suelo por jóvenes, y no pagan obras. Ante la duda, no es ayuda para obras."
-    },
-    "confirmar": [
-     "No se han podido leer las bases ni el extracto de 2026.",
-     "Comprueba si la ayuda paga construcción o rehabilitación, o solo la compra de vivienda o suelo.",
-     "Faltan el importe por vivienda, la edad máxima, los requisitos y los documentos."
-    ]
-   },
-   "prov": "Soria",
-   "edad": {
-    "max": 35
-   }
-  },
-  {
    "id": "bdns-938969",
    "estado": "pendiente",
    "title": "Ascensores, accesibilidad a portales y fachadas en Eibar",
@@ -241,60 +184,6 @@
      "No se han podido leer las bases ni la convocatoria: faltan importe por vivienda o porcentaje, requisitos y cómo se presenta la solicitud.",
      "Comprueba si exige la ITE (inspección técnica del edificio) y la antigüedad del edificio.",
      "Confirma las fechas del plazo y si las ayudas se conceden por orden de solicitud o por evaluación individual."
-    ]
-   },
-   "prov": "Gipuzkoa",
-   "muni": "Eibar"
-  },
-  {
-   "id": "bdns-938955",
-   "estado": "descartada",
-   "title": "CONVOCATORIA DE SUBVENCIONES DEL AYUNTAMIENTO DE EIBAR PARA LA CONCESIÓN DE SUBVENCIONES DESTINADAS A LOS GASTOS DE MANTENIMIENTO DE ASCENSORES COMUNITARIOS O Z",
-   "org": "EIBAR · AYUNTAMIENTO DE EIBAR",
-   "scope": "municipal",
-   "ccaa": "País Vasco",
-   "tipo": [
-    "accesibilidad"
-   ],
-   "dest": [
-    "vivienda"
-   ],
-   "importe": 0,
-   "imp": "Consulta la convocatoria",
-   "abre": "2026-11-11",
-   "cierra": "2026-11-25",
-   "plazo": "Consulta el plazo en la convocatoria",
-   "irpf": false,
-   "fuente": "BDNS nº 938955",
-   "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/938955",
-   "resumen": "CONVOCATORIA DE SUBVENCIONES DEL AYUNTAMIENTO DE EIBAR PARA LA CONCESIÓN DE SUBVENCIONES DESTINADAS A LOS GASTOS DE MANTENIMIENTO DE ASCENSORES COMUNITARIOS O ZONALES DEL AÑO 2025 EN REGIMEN DE EVALUACIÓN INDIVIDUALIZADA",
-   "req": [
-    "Consulta los requisitos en la convocatoria oficial"
-   ],
-   "docs": [
-    "Consulta la documentación en la convocatoria oficial"
-   ],
-   "pasos": [
-    "Lee la convocatoria oficial",
-    "Prepara la documentación",
-    "Presenta la solicitud en la sede del organismo"
-   ],
-   "_revisar": {
-    "presupuesto_total": 6000,
-    "bases_reguladoras": "https://www.eibar.eus/es/ayuntamiento/areas/area-economica/unidad-de-contratacion-y-subvenciones/plan-estrategico-de-subvenciones",
-    "abierta_segun_bdns": false,
-    "beneficiarios": "PERSONAS JURÍDICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
-    "nota": "Revisa importe por vivienda, requisitos, documentos y pasos antes de aprobar.",
-    "ia": {
-     "fecha": "2026-10-31",
-     "documento": "página web",
-     "recomendacion": "descartar",
-     "motivo": "Paga los gastos de mantenimiento de ascensores comunitarios del año 2025, que son gastos corrientes de la vivienda y no obras de reforma, mejora o accesibilidad."
-    },
-    "confirmar": [
-     "La página de bases aportada es solo el Plan Estratégico de Subvenciones, no la convocatoria.",
-     "No se ha leído el documento de la convocatoria, así que faltan importes y requisitos.",
-     "La ayuda cubre gastos de mantenimiento de ascensores, no obras."
     ]
    },
    "prov": "Gipuzkoa",
