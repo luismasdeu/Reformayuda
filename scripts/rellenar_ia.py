@@ -290,6 +290,24 @@ def aun_no_abre_sin_datos(c):
     return bool(c.get("abre")) and c["abre"] > dt.date.today().isoformat() and not c.get("importe")
 
 
+BASES_DIAS = [4, 7, 10, 14]  # cuándo volver a mirar una ayuda publicada sin bases
+
+
+def abierta_sin_bases(c):
+    hoy = dt.date.today().isoformat()
+    return (bool(c.get("abre")) and c["abre"] <= hoy and (not c.get("cierra") or c["cierra"] >= hoy)
+            and not c.get("importe") and bool(c.get("tipo")))
+
+
+def programar_bases(c):
+    e = c["pendiente_bases"]
+    e["intentos"] += 1
+    if e["intentos"] > len(BASES_DIAS):
+        c.pop("pendiente_bases")  # se deja como está; la ficha ya dice que se consulte la convocatoria
+        return
+    e["proxima"] = (dt.date.today() + dt.timedelta(days=BASES_DIAS[e["intentos"] - 1])).isoformat()
+
+
 def esperar(c, r):
     e = r.get("espera") or {"desde": dt.date.today().isoformat(), "intentos": 0}
     e["intentos"] += 1
@@ -372,12 +390,25 @@ def cerrar(c, r, d, uso, como, completa, informe, bloques):
         elif not r.get("no_auto") and muy_clara(c, d, bloques):
             c["estado"] = "aprobada"  # se publica sola; se puede retirar desde /revisar/
             r["ia"]["recomendacion"] = "publicada sola"
+        elif not r.get("no_auto") and abierta_sin_bases(c):
+            # Ya se puede pedir, pero las bases aún no están: se publica con lo que se sabe
+            # y se vuelve a mirar cada pocos días para completarla cuando salgan.
+            c["imp"] = "Importe pendiente de publicar en las bases"
+            c["pendiente_bases"] = {"intentos": 0, "proxima": dt.date.today().isoformat()}
+            programar_bases(c)
+            c["estado"] = "aprobada"
+            r["ia"]["recomendacion"] = "publicada sola (sin bases)"
         else:
             c["estado"] = "pendiente"  # también cuando sale de «espera»: ya tiene fecha
         if c["estado"] != "espera":
             r.pop("espera", None)
     else:
         c["ia"] = dt.date.today().isoformat()
+        if c.get("pendiente_bases"):
+            if c.get("importe"):
+                c.pop("pendiente_bases")  # ya han salido las bases: completada
+            else:
+                programar_bases(c)
     informe["procesadas"].append({"id": c["id"], "documento": como, "coste_usd": round(coste, 4),
                                   "recomendacion": (r.get("ia") or {}).get("recomendacion") if completa else "corregida"})
     print(f"  {c['id']}: {como} · {informe['procesadas'][-1]['recomendacion']} · {coste:.3f} $")
@@ -415,7 +446,10 @@ def main():
         datos = json.loads(AYUDAS.read_text(encoding="utf-8"))
         incompletas = [a for a in datos["ayudas"] if a["id"].startswith("bdns-") and not a.get("ia")
                        and any(str(v).startswith("Consulta") or "confírma" in str(v).lower() for v in [a.get("imp")] + a.get("req", []))]
-        for a in incompletas[:5]:
+        hoy = dt.date.today().isoformat()
+        incompletas += [a for a in datos["ayudas"] if a.get("pendiente_bases") and a["pendiente_bases"].get("proxima", hoy) <= hoy
+                        and (not a.get("cierra") or a["cierra"] >= hoy) and a not in incompletas]
+        for a in incompletas[:8]:
             if not cabe():
                 informe["pendientes_por_tope"] += 1
                 continue
