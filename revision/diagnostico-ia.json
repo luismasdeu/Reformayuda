@@ -1,29 +1,29 @@
 {
- "fecha": "2026-10-30T05:57",
+ "fecha": "2026-10-31T05:53",
  "modelo": "claude-sonnet-5-5",
  "procesadas": [
   {
-   "id": "bdns-938834",
-   "documento": "no se pudo descargar (<urlopen error timed out>) (extracto; bases en Texto completo en la Base de Datos Nacional de Subvenciones (convocatoria 938834) y extracto en el BOCM.)",
-   "coste_usd": 0.051,
+   "id": "bdns-938979",
+   "documento": "el enlace de bases de la BDNS es genérico (ley, ordenanza general o portada)",
+   "coste_usd": 0.213,
    "recomendacion": "descartar"
   },
   {
-   "id": "bdns-938805",
-   "documento": "el enlace de bases de la BDNS es genérico (ley, ordenanza general o portada)",
-   "coste_usd": 0.1544,
+   "id": "bdns-938969",
+   "documento": "página web (no eran las bases de esta ayuda: buscada en internet)",
+   "coste_usd": 0.1828,
    "recomendacion": "publicar"
   },
   {
-   "id": "bdns-938749",
-   "documento": "el enlace de bases de la BDNS es genérico (ley, ordenanza general o portada)",
-   "coste_usd": 0.024,
+   "id": "bdns-938955",
+   "documento": "página web",
+   "coste_usd": 0.0186,
    "recomendacion": "descartar"
   }
  ],
  "errores": [],
- "coste_usd": 0.229,
+ "coste_usd": 0.414,
  "pendientes_por_tope": 0,
- "gasto_mes_usd": 6.935,
+ "gasto_mes_usd": 7.349,
  "limite_mes_usd": 15.0
 }
