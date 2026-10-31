@@ -10,9 +10,17 @@ Reformayuda: subvenciones casa
 Subvenciones para tu casa: ayudas para reformar, rehabilitar o construir. Gratis
 ```
 
-## Descripción completa (2520/4000)
+## Descripción completa (3070/4000)
 ```
-Reformayuda no es una app oficial ni está vinculada a ninguna administración pública. La información procede de fuentes oficiales (BOE, boletines autonómicos y provinciales, Base de Datos Nacional de Subvenciones y Agencia Tributaria), con enlace a la convocatoria original en cada ayuda.
+AVISO: Reformayuda no es una app oficial. No representa ni está vinculada a ninguna administración pública (Gobierno de España, comunidades autónomas, diputaciones ni ayuntamientos). Es un proyecto privado e independiente que resume información pública.
+
+FUENTES OFICIALES DE LA INFORMACIÓN
+Toda la información procede de estas fuentes oficiales, y cada ayuda de la app enlaza a su convocatoria original:
+• Boletín Oficial del Estado (BOE): https://www.boe.es
+• Base de Datos Nacional de Subvenciones (Ministerio de Hacienda): https://www.infosubvenciones.es
+• Agencia Tributaria (deducciones del IRPF): https://sede.agenciatributaria.gob.es
+• Ministerio de Vivienda y Agenda Urbana: https://www.mivau.gob.es
+• Boletines oficiales de cada comunidad autónoma y provincia, y sedes electrónicas de los ayuntamientos, enlazados en cada ayuda.
 
 ¿Vas a reformar, rehabilitar o construir tu casa? Reformayuda reúne las subvenciones para tu vivienda en un solo sitio: qué ayudas hay para tu obra, cuánto dan, si cumples los requisitos y cómo pedirlas, sin perderte en los boletines oficiales.
 
