@@ -1,6 +1,6 @@
 {
  "_leeme": "Ayudas detectadas automáticamente en los boletines. Revísalas: pon \"estado\": \"aprobada\" o \"descartada\". Mira README.md.",
- "ultima_busqueda": "2026-10-31T05:53",
+ "ultima_busqueda": "2026-11-01T05:55",
  "candidatas": [
   {
    "id": "bdns-938584",
@@ -19,11 +19,11 @@
    "imp": "Consulta la convocatoria",
    "abre": "2026-10-28",
    "cierra": "2026-12-31",
-   "plazo": "Según la BDNS, el plazo empieza 20 días después de publicarse en el BOP de Málaga y acaba al agotarse el presupuesto. La fecha final que consta es el 31/12/2026.",
+   "plazo": "El plazo empieza 20 días después de publicarse el extracto en el BOP de Málaga. Termina el 31/12/2026 o antes, si se agota el presupuesto.",
    "irpf": false,
    "fuente": "BDNS nº 938584",
    "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/938584",
-   "resumen": "El Ayuntamiento de Villanueva de Algaidas da ayudas económicas a particulares para recuperar y adecuar viviendas antiguas. El presupuesto total es de 14.000 €. Las ayudas se conceden hasta que se agote el dinero o hasta el 31 de diciembre de 2026.",
+   "resumen": "El Ayuntamiento de Villanueva de Algaidas da ayudas económicas a particulares para recuperar y adecuar viviendas antiguas. El presupuesto total es de 14.000 €. La ayuda se concede hasta agotar el presupuesto. No he podido leer las bases, así que faltan importe por vivienda y requisitos.",
    "req": [
     "Consulta los requisitos en la convocatoria oficial"
    ],
@@ -42,23 +42,23 @@
     "beneficiarios": "PERSONAS FÍSICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
     "nota": "Revisa importe por vivienda, requisitos, documentos y pasos antes de aprobar.",
     "bases_no_corresponden": true,
-    "referencia_bases": "Bases reguladoras «Ayudas para la Recuperación y Adecuación de Viviendas Antiguas»; la BDNS remite a la sede electrónica del Ayuntamiento y a su publicación en el BOP de Málaga (número y fecha sin confirmar).",
+    "referencia_bases": "Ayudas para la Recuperación y Adecuación de Viviendas Antiguas; extracto de la convocatoria en la BDNS 938584, con publicación pendiente en el BOP de Málaga. Bases en la sede electrónica del Ayuntamiento.",
     "ia": {
-     "fecha": "2026-10-29",
-     "documento": "el enlace de bases de la BDNS es genérico (ley, ordenanza general o portada) (extracto; bases en Bases reguladoras «Ayudas para la Recuperación y Adecuación de Viviendas Antiguas»; la BDNS remite a la sede electrónica del Ayuntamiento y a su publicación en el BOP de Málaga (número y fecha sin confirmar).)",
+     "fecha": "2026-11-01",
+     "documento": "el enlace de bases de la BDNS es genérico (ley, ordenanza general o portada) (extracto; bases en Ayudas para la Recuperación y Adecuación de Viviendas Antiguas; extracto de la convocatoria en la BDNS 938584, con publicación pendiente en el BOP de Málaga. Bases en la sede electrónica del Ayuntamiento.)",
      "recomendacion": "publicar",
-     "motivo": "Según el título y la finalidad de la BDNS, la ayuda paga obras de recuperación y adecuación de viviendas antiguas a particulares. No he podido leer las bases ni el extracto, así que no he confirmado nada más."
+     "motivo": "Son ayudas del Ayuntamiento para recuperar y adecuar viviendas antiguas, es decir, para obras de rehabilitación en viviendas de particulares."
     },
     "confirmar": [
-     "No he podido leer las bases ni el extracto. Faltan el importe por vivienda, el porcentaje, los requisitos, los documentos y las obras que se pueden pagar.",
-     "Hay que confirmar la fecha real de apertura: la BDNS dice 20 días desde la publicación en el BOP, pero la fecha de inicio es dudosa.",
-     "Hay que comprobar si la vivienda debe ser habitual, qué antigüedad mínima debe tener y si hay límite de ingresos o de edad.",
-     "Hay que comprobar el número y la fecha del BOP donde están publicadas las bases."
+     "No se han podido leer las bases de esta convocatoria. Las búsquedas solo dieron convocatorias de años anteriores.",
+     "Comprueba el importe máximo por vivienda, el porcentaje de la obra que se subvenciona y qué obras se admiten.",
+     "Comprueba los requisitos (antigüedad de la vivienda, residencia, ingresos), los documentos y cómo se pide.",
+     "Comprueba la fecha de publicación del extracto en el BOP de Málaga. De ella depende la fecha de apertura."
     ],
     "espera": {
      "desde": "2026-10-29",
-     "intentos": 1,
-     "proxima": "2026-11-01"
+     "intentos": 2,
+     "proxima": "2026-11-06"
     }
    },
    "prov": "Málaga",
