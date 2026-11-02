@@ -1,6 +1,6 @@
 {
  "_leeme": "Ayudas detectadas automáticamente en los boletines. Revísalas: pon \"estado\": \"aprobada\" o \"descartada\". Mira README.md.",
- "ultima_busqueda": "2026-11-01T05:55",
+ "ultima_busqueda": "2026-11-02T06:15",
  "candidatas": [
   {
    "id": "bdns-938584",
@@ -77,28 +77,30 @@
     "rehabilitacion"
    ],
    "dest": [
-    "edificio",
-    "vivienda"
+    "edificio"
    ],
    "importe": 0,
    "imp": "Consulta la convocatoria",
    "abre": "2026-10-29",
    "cierra": "2026-11-20",
-   "plazo": "Según la BDNS, el plazo empieza el día siguiente a publicar la convocatoria en el BOPB y termina el 20 de noviembre de 2026. La fecha de apertura sale de la fecha de recepción en la BDNS y hay que confirmarla.",
+   "plazo": "El plazo empieza el día siguiente a publicar la convocatoria en el BOPB (no consta la fecha). Termina el 20 de noviembre de 2026.",
    "irpf": false,
    "fuente": "BDNS nº 938805",
    "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/938805",
-   "resumen": "El Ayuntamiento de Vilafranca del Penedès convoca ayudas para mejorar la accesibilidad y el estado de conservación de edificios de viviendas y locales comerciales. Se conceden sin competir entre solicitudes y el presupuesto total es de 120.000 €. No hemos podido leer las bases, así que faltan importes y requisitos.",
+   "resumen": "El Ayuntamiento de Vilafranca del Penedès da ayudas para mejorar la accesibilidad y el estado de conservación de edificios de viviendas y locales comerciales del municipio. El presupuesto total es de 120.000 € en 2026. No he podido leer las bases, así que faltan los detalles.",
    "req": [
-    "Consulta los requisitos en la convocatoria oficial"
+    "Ser propietario o comunidad de propietarios de un edificio de viviendas o locales del municipio.",
+    "Hacer obras de accesibilidad o de conservación del edificio.",
+    "Los requisitos exactos constan en las bases, que no se han podido leer."
    ],
    "docs": [
     "Consulta la documentación en la convocatoria oficial"
    ],
    "pasos": [
-    "Lee la convocatoria oficial",
-    "Prepara la documentación",
-    "Presenta la solicitud en la sede del organismo"
+    "Consulta las bases en la sede electrónica del Ayuntamiento (seu.vilafranca.cat).",
+    "Comprueba la fecha de publicación en el BOPB para saber cuándo abre el plazo.",
+    "Presenta la solicitud por la sede electrónica antes del 20 de noviembre de 2026.",
+    "Justifica la obra cuando las bases lo pidan."
    ],
    "_revisar": {
     "presupuesto_total": 120000,
@@ -108,22 +110,23 @@
     "nota": "Revisa importe por vivienda, requisitos, documentos y pasos antes de aprobar.",
     "bases_no_corresponden": true,
     "ia": {
-     "fecha": "2026-10-30",
-     "documento": "el enlace de bases de la BDNS es genérico (ley, ordenanza general o portada)",
+     "fecha": "2026-11-02",
+     "documento": "el enlace de bases de la BDNS es genérico (ley, ordenanza general o portada) (extracto; bases en Convocatoria publicada en el BOPB; no se ha podido localizar el número ni la fecha. Las bases y la convocatoria están en la sede electrónica del Ayuntamiento (https://seu.vilafranca.cat/) y en la BDNS (convocatoria 938805).)",
      "recomendacion": "publicar",
-     "motivo": "Según la ficha de la BDNS, la convocatoria paga mejoras de accesibilidad y de conservación en edificios de viviendas y locales comerciales de Vilafranca del Penedès."
+     "motivo": "La convocatoria subvenciona mejoras de accesibilidad y del estado de conservación de edificios de viviendas (y locales) en Vilafranca del Penedès, pero no he podido leer las bases."
     },
     "confirmar": [
-     "No se han podido leer las bases ni la convocatoria. Faltan el importe por vivienda o edificio, el porcentaje y el máximo.",
-     "Comprueba los requisitos, los documentos y las obras que se pueden pagar.",
-     "Comprueba la fecha real de apertura: la BDNS indica que empieza al día siguiente de publicarse en el BOPB.",
-     "Comprueba si pueden pedirla particulares y comunidades, y si los locales comerciales cuentan solo cuando están en edificios de viviendas."
+     "No se han podido leer las bases: faltan el importe por vivienda, el porcentaje y el máximo.",
+     "Comprobar la fecha de publicación en el BOPB, que marca la apertura del plazo.",
+     "Comprobar si las ayudas son solo para comunidades o también para propietarios particulares, y qué obras se pagan.",
+     "Comprobar requisitos, documentos y forma de justificar la obra."
     ],
     "espera": {
      "desde": "2026-10-30",
-     "intentos": 1,
-     "proxima": "2026-11-02"
-    }
+     "intentos": 2,
+     "proxima": "2026-11-07"
+    },
+    "referencia_bases": "Convocatoria publicada en el BOPB; no se ha podido localizar el número ni la fecha. Las bases y la convocatoria están en la sede electrónica del Ayuntamiento (https://seu.vilafranca.cat/) y en la BDNS (convocatoria 938805)."
    },
    "prov": "Barcelona",
    "muni": "Vilafranca Del Penedès",

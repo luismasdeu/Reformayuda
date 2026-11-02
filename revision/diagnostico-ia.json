@@ -1,17 +1,17 @@
 {
- "fecha": "2026-11-01T05:55",
+ "fecha": "2026-11-02T06:15",
  "modelo": "claude-sonnet-5-5",
  "procesadas": [
   {
-   "id": "bdns-938584",
-   "documento": "el enlace de bases de la BDNS es genérico (ley, ordenanza general o portada) (extracto; bases en Ayudas para la Recuperación y Adecuación de Viviendas Antiguas; extracto de la convocatoria en la BDNS 938584, con publicación pendiente en el BOP de Málaga. Bases en la sede electrónica del Ayuntamiento.)",
-   "coste_usd": 0.3506,
+   "id": "bdns-938805",
+   "documento": "el enlace de bases de la BDNS es genérico (ley, ordenanza general o portada) (extracto; bases en Convocatoria publicada en el BOPB; no se ha podido localizar el número ni la fecha. Las bases y la convocatoria están en la sede electrónica del Ayuntamiento (https://seu.vilafranca.cat/) y en la BDNS (convocatoria 938805).)",
+   "coste_usd": 0.4808,
    "recomendacion": "publicar"
   }
  ],
  "errores": [],
- "coste_usd": 0.351,
+ "coste_usd": 0.481,
  "pendientes_por_tope": 0,
- "gasto_mes_usd": 0.351,
+ "gasto_mes_usd": 0.832,
  "limite_mes_usd": 15.0
 }
