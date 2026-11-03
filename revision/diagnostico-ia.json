@@ -1,17 +1,23 @@
 {
- "fecha": "2026-11-02T06:15",
+ "fecha": "2026-11-03T06:04",
  "modelo": "claude-sonnet-5-5",
  "procesadas": [
   {
-   "id": "bdns-938805",
-   "documento": "el enlace de bases de la BDNS es genérico (ley, ordenanza general o portada) (extracto; bases en Convocatoria publicada en el BOPB; no se ha podido localizar el número ni la fecha. Las bases y la convocatoria están en la sede electrónica del Ayuntamiento (https://seu.vilafranca.cat/) y en la BDNS (convocatoria 938805).)",
-   "coste_usd": 0.4808,
+   "id": "bdns-939227",
+   "documento": "página web (extracto; bases en Bases reguladoras aprobadas definitivamente, publicadas en el BOPT el 26/01/2026 (registro 2026-00544). Convocatoria en la BDNS 939227.)",
+   "coste_usd": 0.4568,
+   "recomendacion": "publicar"
+  },
+  {
+   "id": "bdns-938969",
+   "documento": "página web (no eran las bases de esta ayuda: buscada en internet)",
+   "coste_usd": 0.3409,
    "recomendacion": "publicar"
   }
  ],
  "errores": [],
- "coste_usd": 0.481,
+ "coste_usd": 0.798,
  "pendientes_por_tope": 0,
- "gasto_mes_usd": 0.832,
+ "gasto_mes_usd": 1.63,
  "limite_mes_usd": 15.0
 }

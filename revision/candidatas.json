@@ -1,6 +1,6 @@
 {
  "_leeme": "Ayudas detectadas automáticamente en los boletines. Revísalas: pon \"estado\": \"aprobada\" o \"descartada\". Mira README.md.",
- "ultima_busqueda": "2026-11-02T06:15",
+ "ultima_busqueda": "2026-11-03T06:04",
  "candidatas": [
   {
    "id": "bdns-938584",
@@ -154,7 +154,7 @@
    "irpf": false,
    "fuente": "BDNS nº 938969",
    "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/938969",
-   "resumen": "El Ayuntamiento de Eibar da subvenciones a comunidades de propietarios para instalar o sustituir ascensores, mejorar el acceso a los portales y restaurar fachadas. Las ayudas se valoran una por una. El presupuesto total de la convocatoria es de 150.000 €.",
+   "resumen": "El Ayuntamiento de Eibar da ayudas para instalar o cambiar ascensores, mejorar el acceso a los portales y restaurar fachadas de edificios. La convocatoria de 2026 tiene un presupuesto total de 150.000 €. El plazo de solicitud va del 11 al 25 de noviembre de 2026.",
    "req": [
     "Consulta los requisitos en la convocatoria oficial"
    ],
@@ -178,24 +178,102 @@
     "nota": "Revisa importe por vivienda, requisitos, documentos y pasos antes de aprobar.",
     "bases_no_corresponden": true,
     "ia": {
-     "fecha": "2026-10-31",
+     "fecha": "2026-11-03",
      "documento": "página web (no eran las bases de esta ayuda: buscada en internet)",
      "recomendacion": "publicar",
-     "motivo": "Paga obras de ascensores, accesibilidad a portales y restauración de fachadas en edificios de viviendas, con comunidades de propietarios como beneficiarias."
+     "motivo": "Subvenciona obras de ascensores, accesibilidad a portales y restauración de fachadas en edificios de viviendas de Eibar, sobre todo para comunidades de propietarios."
     },
     "confirmar": [
-     "No se han podido leer las bases ni la convocatoria: faltan importe por vivienda o porcentaje, requisitos y cómo se presenta la solicitud.",
-     "Comprueba si exige la ITE (inspección técnica del edificio) y la antigüedad del edificio.",
-     "Confirma las fechas del plazo y si las ayudas se conceden por orden de solicitud o por evaluación individual."
+     "No se han podido leer las bases de 2026. Solo he encontrado la página municipal de la convocatoria de 2024, que no sirve para esta.",
+     "Faltan el importe o porcentaje por edificio y su máximo, los requisitos y los documentos de 2026.",
+     "Comprueba quién puede pedirla (comunidades de propietarios y propietarios de edificios, según la convocatoria de 2024) y cómo se solicita (sede electrónica o PEGORA).",
+     "Comprueba que las fechas de la BDNS son correctas y que no hay otro boletín de publicación (BOG)."
     ],
     "espera": {
      "desde": "2026-10-31",
-     "intentos": 1,
-     "proxima": "2026-11-03"
+     "intentos": 2,
+     "proxima": "2026-11-08"
     }
    },
    "prov": "Gipuzkoa",
    "muni": "Eibar"
+  },
+  {
+   "id": "bdns-939227",
+   "estado": "espera",
+   "title": "Fachadas de piedra natural en el casco urbano de Vilalba dels Arcs",
+   "org": "VILALBA DELS ARCS · AYUNTAMIENTO DE VILALBA DELS ARCS",
+   "scope": "municipal",
+   "ccaa": "Cataluña",
+   "tipo": [
+    "rehabilitacion"
+   ],
+   "dest": [
+    "vivienda",
+    "edificio"
+   ],
+   "importe": 5000,
+   "imp": "El 40 % del presupuesto de ejecución material de la obra, con un máximo de 5.000 € por inmueble y convocatoria",
+   "abre": "2026-11-02",
+   "cierra": "2026-12-30",
+   "plazo": "El plazo empieza el día siguiente a la publicación de la convocatoria en el BOPT. Termina el 30 de diciembre de 2026. Se atienden las solicitudes por orden de entrada hasta agotar el crédito (10.000 € en total).",
+   "irpf": false,
+   "fuente": "BDNS nº 939227",
+   "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/939227",
+   "resumen": "El Ayuntamiento de Vilalba dels Arcs paga parte de las obras para recuperar, rehabilitar o revestir fachadas con piedra natural. También paga la recuperación de elementos tradicionales como dinteles, cornisas o rejas. El inmueble debe estar en el casco urbano y la fachada debe verse desde la calle. Las ayudas se dan por orden de solicitud hasta agotar el crédito de la convocatoria (10.000 € en total).",
+   "req": [
+    "Ser propietario del inmueble, ya sea persona física o jurídica, o presidente de una comunidad de propietarios.",
+    "El inmueble debe estar en el casco urbano de Vilalba dels Arcs y la fachada debe verse desde la vía pública.",
+    "La obra debe recuperar fachadas de piedra natural o elementos tradicionales. No valen revestimientos que solo imiten la piedra.",
+    "La obra debe cumplir el POUM y el informe técnico municipal.",
+    "Tener licencia de obras o haber hecho la comunicación previa antes de empezar.",
+    "No estar en las prohibiciones del artículo 13 de la Ley General de Subvenciones."
+   ],
+   "docs": [
+    "Documento que acredite que eres propietario de la finca.",
+    "NIF de quien solicita.",
+    "Descripción de la obra y presupuesto detallado.",
+    "Fotografías del estado actual de la fachada.",
+    "Plano o croquis de la zona donde harás la obra.",
+    "Prueba de que has pedido la licencia de obras o hecho la comunicación previa.",
+    "Proyecto o memoria técnica de la obra, si hace falta, y declaración de otras ayudas pedidas o recibidas."
+   ],
+   "pasos": [
+    "Pide la licencia de obras o haz la comunicación previa al Ayuntamiento.",
+    "Rellena el modelo oficial de solicitud de la sede electrónica municipal y fírmalo.",
+    "Presenta la solicitud con los documentos dentro del plazo.",
+    "Corrige en 10 días hábiles lo que te pidan si falta algo.",
+    "Espera la resolución, que tarda como máximo 3 meses. Si no hay respuesta, se entiende denegada.",
+    "Haz la obra siguiendo los criterios técnicos del Ayuntamiento.",
+    "Justifica la obra en un máximo de 3 meses desde que acabe, con facturas, certificado final de obra, fotos y certificado de titularidad bancaria."
+   ],
+   "_revisar": {
+    "presupuesto_total": 10000,
+    "bases_reguladoras": "https://www.dipta.cat/bopt/web/anunci/355603/bases-reguladores-per-a-la-concessio-de-subvencions-per-a-la-recuperacio-rehabilitacio-o-revestiment-de-facanes-amb-pedra-natural-aprovacio-definitiva-ajuntament-vilalba-dels-arcs",
+    "abierta_segun_bdns": false,
+    "beneficiarios": "PERSONAS FÍSICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
+    "nota": "Revisa importe por vivienda, requisitos, documentos y pasos antes de aprobar.",
+    "referencia_bases": "Bases reguladoras aprobadas definitivamente, publicadas en el BOPT el 26/01/2026 (registro 2026-00544). Convocatoria en la BDNS 939227.",
+    "ia": {
+     "fecha": "2026-11-03",
+     "documento": "página web (extracto; bases en Bases reguladoras aprobadas definitivamente, publicadas en el BOPT el 26/01/2026 (registro 2026-00544). Convocatoria en la BDNS 939227.)",
+     "recomendacion": "publicar",
+     "motivo": "Paga obras de rehabilitación y revestimiento de fachadas de piedra natural en inmuebles del casco urbano, de propietarios y comunidades de propietarios."
+    },
+    "confirmar": [
+     "No he podido leer el texto de la convocatoria. Hay que comprobar la fecha de publicación en el BOPT y, por tanto, el día de apertura.",
+     "La fecha de apertura 2026-11-02 de la BDNS es la de recepción de la ficha, no la de inicio del plazo.",
+     "Las bases también admiten personas jurídicas y no exigen que sea vivienda habitual. Comprueba si se aplica alguna limitación en la convocatoria.",
+     "La primera convocatoria admite obras terminadas el año natural anterior. Revisa si el Ayuntamiento lo aplica."
+    ],
+    "espera": {
+     "desde": "2026-11-03",
+     "intentos": 1,
+     "proxima": "2026-11-06"
+    }
+   },
+   "prov": "Tarragona",
+   "muni": "Vilalba Dels Arcs"
   }
  ],
  "boe": []
