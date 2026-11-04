@@ -1,6 +1,6 @@
 {
  "_leeme": "Ayudas detectadas automáticamente en los boletines. Revísalas: pon \"estado\": \"aprobada\" o \"descartada\". Mira README.md.",
- "ultima_busqueda": "2026-11-03T06:04",
+ "ultima_busqueda": "2026-11-04T06:11",
  "candidatas": [
   {
    "id": "bdns-938584",
@@ -274,6 +274,55 @@
    },
    "prov": "Tarragona",
    "muni": "Vilalba Dels Arcs"
+  },
+  {
+   "id": "bdns-939620",
+   "estado": "descartada",
+   "title": "Real Decreto 726/2026, de 9 de septiembre, por el que se regula la concesión directa de subvenciones en materia de vivienda durante el ejercicio presupuestario ",
+   "org": "MINISTERIO DE VIVIENDA Y AGENDA URBANA · DIRECCIÓN GENERAL DE VIVIENDA Y SUELO",
+   "scope": "estatal",
+   "ccaa": "all",
+   "tipo": [
+    "rehabilitacion"
+   ],
+   "dest": [
+    "vivienda"
+   ],
+   "importe": 0,
+   "imp": "Consulta la convocatoria",
+   "abre": "2026-11-03",
+   "cierra": null,
+   "plazo": "Consulta el plazo en la convocatoria",
+   "irpf": false,
+   "fuente": "BDNS nº 939620",
+   "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/939620",
+   "resumen": "Real Decreto 726/2026, de 9 de septiembre, por el que se regula la concesión directa de subvenciones en materia de vivienda durante el ejercicio presupuestario 2026",
+   "req": [
+    "Consulta los requisitos en la convocatoria oficial"
+   ],
+   "docs": [
+    "Consulta la documentación en la convocatoria oficial"
+   ],
+   "pasos": [
+    "Lee la convocatoria oficial",
+    "Prepara la documentación",
+    "Presenta la solicitud en la sede del organismo"
+   ],
+   "_revisar": {
+    "presupuesto_total": 40362110,
+    "bases_reguladoras": "https://www.boe.es/eli/es/rd/2026/09/09/726",
+    "abierta_segun_bdns": false,
+    "beneficiarios": "PERSONAS JURÍDICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
+    "nota": "Revisa importe por vivienda, requisitos, documentos y pasos antes de aprobar.",
+    "bases_no_corresponden": true,
+    "ia": {
+     "fecha": "2026-11-04",
+     "documento": "el enlace de bases de la BDNS es genérico (ley, ordenanza general o portada) (descartada con la pregunta rápida)",
+     "recomendacion": "descartar",
+     "motivo": "Es un Real Decreto de concesión directa de subvenciones a entidades (personas jurídicas sin actividad económica, administraciones), sin plazo de solicitud y no abierto al público, por lo que no financia obras en vivienda para particulares o comunidades."
+    },
+    "confirmar": []
+   }
   }
  ],
  "boe": []
