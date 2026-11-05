@@ -276,59 +276,6 @@
    "muni": "Vilalba Dels Arcs"
   },
   {
-   "id": "bdns-939866",
-   "estado": "descartada",
-   "title": "Acuerdo de Junta de Gobierno Local de 19 de octubre de 2026, por el que se aprueba la convocatoria 2026 y sus bases específicas para la concesión de subvencione",
-   "org": "MAIRENA DEL ALJARAFE · AYUNTAMIENTO DE MAIRENA DEL ALJARAFE",
-   "scope": "municipal",
-   "ccaa": "Andalucía",
-   "tipo": [
-    "rehabilitacion"
-   ],
-   "dest": [
-    "vivienda"
-   ],
-   "importe": 0,
-   "imp": "Consulta la convocatoria",
-   "abre": "2026-11-09",
-   "cierra": "2026-11-20",
-   "plazo": "Consulta el plazo en la convocatoria",
-   "irpf": false,
-   "fuente": "BDNS nº 939866",
-   "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/939866",
-   "resumen": "Acuerdo de Junta de Gobierno Local de 19 de octubre de 2026, por el que se aprueba la convocatoria 2026 y sus bases específicas para la concesión de subvenciones destinadas a facilitar el acceso y mantenimiento de la vivienda en Mairena del Aljarafe.",
-   "req": [
-    "Consulta los requisitos en la convocatoria oficial"
-   ],
-   "docs": [
-    "Consulta la documentación en la convocatoria oficial"
-   ],
-   "pasos": [
-    "Lee la convocatoria oficial",
-    "Prepara la documentación",
-    "Presenta la solicitud en la sede del organismo"
-   ],
-   "_revisar": {
-    "presupuesto_total": 94369.1,
-    "bases_reguladoras": "http://transparencia.mairenadelaljarafe.es/export/sites/mairenadelaljarafe/es/transparencia/.galleries/IND-83-/AYUNTAMIENTO/BOP-ORDENANZA-GENERAL-DE-SUBVENCIONES.pdf",
-    "abierta_segun_bdns": false,
-    "beneficiarios": "PERSONAS FÍSICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
-    "nota": "Revisa importe por vivienda, requisitos, documentos y pasos antes de aprobar.",
-    "bases_no_corresponden": true,
-    "ia": {
-     "fecha": "2026-11-05",
-     "documento": "el enlace de bases de la BDNS es genérico (ley, ordenanza general o portada)",
-     "recomendacion": "descartar",
-     "motivo": "Son ayudas para pagar el alquiler, la fianza, gastos de notaría y registro, y gastos de mantenimiento de la vivienda habitual. No pagan obras de reforma ni construcción."
-    },
-    "confirmar": [
-     "No se han leído las bases oficiales de la convocatoria 2026; la conclusión se basa en una noticia de la convocatoria anterior y en la ficha de la BDNS."
-    ]
-   },
-   "prov": "Sevilla",
-   "muni": "Mairena Del Aljarafe"
-  },
-  {
    "id": "bdns-939709",
    "estado": "espera",
    "title": "Rehabilitación de viviendas privadas en San Bartolomé (Lanzarote)",
