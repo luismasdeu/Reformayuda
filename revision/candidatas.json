@@ -1,6 +1,6 @@
 {
  "_leeme": "Ayudas detectadas automáticamente en los boletines. Revísalas: pon \"estado\": \"aprobada\" o \"descartada\". Mira README.md.",
- "ultima_busqueda": "2026-11-04T06:11",
+ "ultima_busqueda": "2026-11-05T06:13",
  "candidatas": [
   {
    "id": "bdns-938584",
@@ -274,7 +274,200 @@
    },
    "prov": "Tarragona",
    "muni": "Vilalba Dels Arcs"
+  },
+  {
+   "id": "bdns-939866",
+   "estado": "descartada",
+   "title": "Acuerdo de Junta de Gobierno Local de 19 de octubre de 2026, por el que se aprueba la convocatoria 2026 y sus bases específicas para la concesión de subvencione",
+   "org": "MAIRENA DEL ALJARAFE · AYUNTAMIENTO DE MAIRENA DEL ALJARAFE",
+   "scope": "municipal",
+   "ccaa": "Andalucía",
+   "tipo": [
+    "rehabilitacion"
+   ],
+   "dest": [
+    "vivienda"
+   ],
+   "importe": 0,
+   "imp": "Consulta la convocatoria",
+   "abre": "2026-11-09",
+   "cierra": "2026-11-20",
+   "plazo": "Consulta el plazo en la convocatoria",
+   "irpf": false,
+   "fuente": "BDNS nº 939866",
+   "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/939866",
+   "resumen": "Acuerdo de Junta de Gobierno Local de 19 de octubre de 2026, por el que se aprueba la convocatoria 2026 y sus bases específicas para la concesión de subvenciones destinadas a facilitar el acceso y mantenimiento de la vivienda en Mairena del Aljarafe.",
+   "req": [
+    "Consulta los requisitos en la convocatoria oficial"
+   ],
+   "docs": [
+    "Consulta la documentación en la convocatoria oficial"
+   ],
+   "pasos": [
+    "Lee la convocatoria oficial",
+    "Prepara la documentación",
+    "Presenta la solicitud en la sede del organismo"
+   ],
+   "_revisar": {
+    "presupuesto_total": 94369.1,
+    "bases_reguladoras": "http://transparencia.mairenadelaljarafe.es/export/sites/mairenadelaljarafe/es/transparencia/.galleries/IND-83-/AYUNTAMIENTO/BOP-ORDENANZA-GENERAL-DE-SUBVENCIONES.pdf",
+    "abierta_segun_bdns": false,
+    "beneficiarios": "PERSONAS FÍSICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
+    "nota": "Revisa importe por vivienda, requisitos, documentos y pasos antes de aprobar.",
+    "bases_no_corresponden": true,
+    "ia": {
+     "fecha": "2026-11-05",
+     "documento": "el enlace de bases de la BDNS es genérico (ley, ordenanza general o portada)",
+     "recomendacion": "descartar",
+     "motivo": "Son ayudas para pagar el alquiler, la fianza, gastos de notaría y registro, y gastos de mantenimiento de la vivienda habitual. No pagan obras de reforma ni construcción."
+    },
+    "confirmar": [
+     "No se han leído las bases oficiales de la convocatoria 2026; la conclusión se basa en una noticia de la convocatoria anterior y en la ficha de la BDNS."
+    ]
+   },
+   "prov": "Sevilla",
+   "muni": "Mairena Del Aljarafe"
+  },
+  {
+   "id": "bdns-939709",
+   "estado": "espera",
+   "title": "Rehabilitación de viviendas privadas en San Bartolomé (Lanzarote)",
+   "org": "SAN BARTOLOMÉ · AYUNTAMIENTO DE SAN BARTOLOMÉ",
+   "scope": "municipal",
+   "ccaa": "Canarias",
+   "tipo": [
+    "rehabilitacion"
+   ],
+   "dest": [
+    "vivienda"
+   ],
+   "importe": 0,
+   "imp": "Consulta la convocatoria",
+   "abre": "2026-11-04",
+   "cierra": null,
+   "plazo": "El plazo empieza el día siguiente a la publicación de la convocatoria en el BOP de Las Palmas y dura 2 meses desde esa publicación. No se ha visto el boletín con su fecha.",
+   "irpf": false,
+   "fuente": "BDNS nº 939709",
+   "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/939709",
+   "resumen": "El Ayuntamiento de San Bartolomé convoca para 2026 subvenciones para rehabilitar viviendas privadas. Pueden pedirlas personas físicas que no desarrollan actividad económica. El presupuesto total es de 323.793,18 €. Las bases completas no se han podido leer, así que faltan los importes y los requisitos concretos.",
+   "req": [
+    "Ser persona física sin actividad económica.",
+    "La vivienda debe estar en el municipio de San Bartolomé.",
+    "Los demás requisitos (ingresos, titularidad, tipo de obra) no se han podido comprobar en las bases."
+   ],
+   "docs": [
+    "Solicitud (Anexo I).",
+    "Declaración responsable (Anexo 2).",
+    "Memoria explicativa de la intervención en la vivienda (Anexo 3).",
+    "Alta o modificación de datos de terceros (Anexo 4).",
+    "Autorización para consultar ingresos (Anexo 5)."
+   ],
+   "pasos": [
+    "Espera a que se publique la convocatoria en el BOP de Las Palmas y mira la fecha.",
+    "Rellena la solicitud y los anexos del Ayuntamiento.",
+    "Presenta todo en la sede electrónica del Ayuntamiento dentro de los 2 meses de plazo.",
+    "Si te la conceden, firma la aceptación de la subvención (Anexo 6).",
+    "Justifica la obra con la cuenta justificativa (Anexo 7)."
+   ],
+   "_revisar": {
+    "presupuesto_total": 323793.18,
+    "bases_reguladoras": "http://www.boplaspalmas.net/nbop2/index.php",
+    "abierta_segun_bdns": false,
+    "beneficiarios": "PERSONAS FÍSICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
+    "nota": "Revisa importe por vivienda, requisitos, documentos y pasos antes de aprobar.",
+    "bases_no_corresponden": true,
+    "referencia_bases": "Bases reguladoras de las subvenciones de rehabilitación de viviendas privadas en San Bartolomé, ejercicios 2024-25, publicadas en el BOP de Las Palmas (www.boplaspalmas.net). No he podido ver el número ni la fecha del boletín.",
+    "ia": {
+     "fecha": "2026-11-05",
+     "documento": "el enlace de bases de la BDNS es genérico (ley, ordenanza general o portada) (extracto; bases en Bases reguladoras de las subvenciones de rehabilitación de viviendas privadas en San Bartolomé, ejercicios 2024-25, publicadas en el BOP de Las Palmas (www.boplaspalmas.net). No he podido ver el número ni la fecha del boletín.)",
+     "recomendacion": "publicar",
+     "motivo": "Subvenciona la rehabilitación de viviendas privadas de particulares en San Bartolomé (Lanzarote), con fondos del Gobierno de Canarias a través del Instituto Canario de la Vivienda."
+    },
+    "confirmar": [
+     "No se han leído las bases 2024-25 ni el anuncio de la convocatoria. Faltan el importe por vivienda, el porcentaje, las obras subvencionables y los requisitos.",
+     "Hay que comprobar la fecha del BOP en que se publica la convocatoria, porque de ella dependen la apertura y el cierre.",
+     "Comprobar si hay límite de ingresos o de edad, y si la ayuda cubre solo rehabilitación o también eficiencia o accesibilidad."
+    ],
+    "espera": {
+     "desde": "2026-11-05",
+     "intentos": 1,
+     "proxima": "2026-11-08"
+    }
+   },
+   "prov": "Las Palmas",
+   "muni": "San Bartolomé",
+   "sede": "https://eadmin.sanbartolome.es/home"
+  },
+  {
+   "id": "bdns-939915",
+   "estado": "espera",
+   "title": "Rehabilitación de edificios de viviendas en Barakaldo",
+   "org": "BARAKALDO · AYUNTAMIENTO DE BARAKALDO",
+   "scope": "municipal",
+   "ccaa": "País Vasco",
+   "tipo": [
+    "eficiencia",
+    "accesibilidad",
+    "rehabilitacion"
+   ],
+   "dest": [
+    "edificio"
+   ],
+   "importe": 0,
+   "imp": "Consulta la convocatoria",
+   "abre": "2026-11-04",
+   "cierra": null,
+   "plazo": "Tres meses desde la publicación de la convocatoria en el Boletín Oficial de Bizkaia (BOB). No hemos visto esa publicación, así que no se sabe la fecha exacta.",
+   "irpf": false,
+   "fuente": "BDNS nº 939915",
+   "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/939915",
+   "resumen": "El Ayuntamiento de Barakaldo convoca para 2026 subvenciones para rehabilitar edificios. Se conceden por concurrencia competitiva y el presupuesto total es de 227.652 €. No hemos podido leer las bases ni la convocatoria. Las ayudas de la convocatoria de 2025 cubrían fachadas, estructura, accesibilidad, seguridad, habitabilidad y eficiencia energética, pero esos datos no están confirmados para 2026.",
+   "req": [
+    "Consulta los requisitos en la convocatoria oficial"
+   ],
+   "docs": [
+    "Consulta la documentación en la convocatoria oficial"
+   ],
+   "pasos": [
+    "Lee la convocatoria oficial",
+    "Prepara la documentación",
+    "Presenta la solicitud en la sede del organismo"
+   ],
+   "_revisar": {
+    "presupuesto_total": 227652,
+    "bases_reguladoras": "http://www.bizkaia.eus/lehendakaritza/Bao_bob/2018/03/21/II-1292_cas.pdf?hash=4d3f8f66366645f4a335a758ce20ae08",
+    "abierta_segun_bdns": false,
+    "beneficiarios": "PERSONAS FÍSICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
+    "nota": "Revisa importe por vivienda, requisitos, documentos y pasos antes de aprobar.",
+    "bases_no_corresponden": true,
+    "ia": {
+     "fecha": "2026-11-05",
+     "documento": "PDF de 10 páginas (no eran las bases de esta ayuda: buscada en internet)",
+     "recomendacion": "publicar",
+     "motivo": "Subvenciona obras de rehabilitación de edificios de viviendas en Barakaldo y va dirigida a personas físicas sin actividad económica."
+    },
+    "confirmar": [
+     "No se ha podido leer el texto de la convocatoria 2026 (CERT_JGL_33_2026_6.pdf), así que faltan el importe por vivienda o el porcentaje, los requisitos, los documentos y cómo se pide.",
+     "Hay que comprobar la fecha de publicación en el BOB y, con ella, las fechas de apertura y cierre del plazo.",
+     "Hay que comprobar si pueden pedirla particulares de viviendas o solo quien ya haya terminado la obra (como en la convocatoria de 2025)."
+    ],
+    "espera": {
+     "desde": "2026-11-05",
+     "intentos": 1,
+     "proxima": "2026-11-08"
+    }
+   },
+   "prov": "Bizkaia",
+   "muni": "Barakaldo"
   }
  ],
- "boe": []
+ "boe": [
+  {
+   "id": "BOE-A-2026-23104",
+   "fecha": "2026-11-04",
+   "titulo": "Real Decreto-ley 32/2026, de 3 de noviembre, de ayudas a las víctimas del accidente ferroviario de Urda (Toledo) y por el que se garantiza la accesibilidad equitativa a bienes y servicios en situaciones de emergencia.",
+   "url": "https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-23104",
+   "pdf": "https://www.boe.es/boe/dias/2026/11/04/pdfs/BOE-A-2026-23104.pdf"
+  }
+ ]
 }
