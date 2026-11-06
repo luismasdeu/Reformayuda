@@ -33,14 +33,17 @@ BDNS_BASES = ["https://www.infosubvenciones.es/bdnstrans/api", "https://www.pap.
 BDNS_FICHA = "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/{codigo}"
 
 # Búsquedas en la BDNS. Cada una es una consulta; se juntan y se quitan duplicados.
-BDNS_BUSQUEDAS = ["vivienda", "rehabilitación", "eficiencia energética", "accesibilidad", "autoconsumo", "fachada", "ascensor"]
+BDNS_BUSQUEDAS = ["vivienda", "rehabilitación", "reforma", "eficiencia energética", "accesibilidad", "autoconsumo", "fachada",
+                  "ascensor", "autoconstrucción",
+                  # programas autonómicos que se convocan cada año con nombre propio
+                  "Renhata"]
 MAX_FICHAS_BDNS = 80  # fichas de detalle por ejecución, para no cargar el servicio
 
 # Palabras que indican que una convocatoria nos interesa (se comparan sin tildes y en minúsculas).
 TEMA = ["vivienda", "eficiencia energetica", "accesibilidad", "ascensor", "fachada", "cubierta",
         "aislamiento", "autoconsumo", "fotovoltaic", "aerotermia", "bomba de calor", "biomasa", "amianto",
         "edificio residencial", "comunidad de propietarios", "renovacion urbana", "regeneracion urbana",
-        "autoconstruc", "autopromoc", "construccion de vivienda", "nueva vivienda"]
+        "autoconstruc", "autopromoc", "construccion de vivienda", "nueva vivienda", "reforma interior", "renhata"]
 AYUDA = ["ayuda", "subvencion", "convocatoria", "bases reguladoras", "programa de", "plan de"]
 EXCLUIR = ["alquiler", "arrendatari", "desahucio", "personal funcionario", "oposicion", "contratacion", "licitacion",
            "nombramiento", "empresa", "pyme", "industria", "agrari", "ganader", "universidad", "plan de estudios",
