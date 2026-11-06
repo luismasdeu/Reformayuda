@@ -111,6 +111,22 @@ def aviso_revision(registro, ayudas):
     return [(None, t, datos) for t in tokens]
 
 
+def estadisticas(db, hoy):
+    """Copia los contadores anónimos de los últimos 60 días (colección «visitas») a revision/estadisticas.json,
+    para verlos en /revisar/. Son solo totales por día: no hay datos de nadie."""
+    desde = (hoy - dt.timedelta(days=60)).isoformat()
+    try:
+        dias = {d.id: {k: int(v) for k, v in (d.to_dict() or {}).items()}
+                for d in db.collection("visitas").stream() if d.id >= desde}
+    except Exception as e:  # sin permisos o sin colección: no para las notificaciones
+        print(f"Estadísticas no disponibles: {e}", file=sys.stderr)
+        return
+    (RAIZ / "revision" / "estadisticas.json").write_text(json.dumps(
+        {"_leeme": "Contadores anónimos por día (solo de quien acepta la medición anónima).",
+         "actualizado": dt.datetime.now().isoformat(timespec="minutes"), "dias": dict(sorted(dias.items()))},
+        ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
+
+
 def main():
     hoy = dt.date.today()
     ayudas = json.loads(AYUDAS.read_text(encoding="utf-8"))["ayudas"]
@@ -134,6 +150,7 @@ def main():
     firebase_admin.initialize_app(credentials.Certificate(json.loads(credenciales)))
     db = firestore.client()
     subs = [(d.id, d.to_dict()) for d in db.collection("suscripciones").stream()]
+    estadisticas(db, hoy)
     if "--prueba" in sys.argv:
         envios = [(i, s["token"], {"title": "Prueba de Reformayuda", "body": "Las notificaciones funcionan. Te avisaremos de las ayudas nuevas en tu zona.",
                                    "url": f"{DOMINIO}/", "tag": "prueba"}) for i, s in subs if s.get("token")]

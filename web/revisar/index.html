@@ -40,13 +40,15 @@ details summary{cursor:pointer;color:var(--brand);font-weight:700;margin-top:10p
   <div id="app"></div>
 </main>
 <script>
-const REPO="luismasdeu/Reformayuda", RUTA="revision/candidatas.json", ADMIN="revision/admin.json", DESC="revision/descartadas.json", AYUDAS="web/data/ayudas.json";
+const REPO="luismasdeu/Reformayuda", RUTA="revision/candidatas.json", ADMIN="revision/admin.json", DESC="revision/descartadas.json", AYUDAS="web/data/ayudas.json", ESTAD="revision/estadisticas.json";
 const TIPOS={eficiencia:"Eficiencia",solar:"Placas solares",aerotermia:"Aerotermia",ventanas:"Ventanas",accesibilidad:"Accesibilidad",rehabilitacion:"Rehabilitación",construccion:"Construcción"};
 const GENERICO=/^Consulta /;
 const $=s=>document.querySelector(s);
 const esc=s=>String(s??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const guardado={get(k,d){try{return JSON.parse(localStorage.getItem("rfm_rev_"+k))??d}catch(e){return d}},set(k,v){try{localStorage.setItem("rfm_rev_"+k,JSON.stringify(v))}catch(e){}}};
-let token=guardado.get("token",""), datos=null, sha=null, descIA=[], autoIA=[];
+let token=guardado.get("token",""), datos=null, sha=null, descIA=[], autoIA=[], estad=null;
+// Las visitas de quien revisa no cuentan en la medición anónima (mismo navegador que reformayuda.es).
+try{localStorage.setItem("rfm_yo","1")}catch(e){}
 const estado=t=>$("#estado").textContent=t||"";
 
 // ---- GitHub ----
@@ -97,9 +99,22 @@ async function cargar(){
   estado("Cargando…");
   try{const f=await leer(RUTA);datos=f.json;sha=f.sha;
     try{descIA=((await leer(DESC)).json?.ia||[]).slice().reverse()}catch(e){descIA=[]}
+    try{estad=(await leer(ESTAD)).json}catch(e){estad=null}
     try{autoIA=((await leer(AYUDAS)).json?.ayudas||[]).filter(a=>a.auto).sort((a,b)=>b.auto.localeCompare(a.auto))}catch(e){autoIA=[]}
     pintar()}
   catch(e){if(e.message==="token"){guardado.set("token","");pedirToken("La llave no funciona o ha caducado. Crea otra.")}else estado("No se ha podido cargar. Revisa la conexión y recarga.")}
+}
+function visitasHtml(){
+  const dias=Object.entries(estad?.dias||{}).sort((a,b)=>b[0].localeCompare(a[0]));
+  if(!dias.length)return`<details class="card"><summary>Visitas</summary><p class="meta">Aún no hay datos. Solo cuentan las personas que aceptan la «medición anónima» en el aviso de cookies; tus visitas desde este móvil no cuentan. Se actualiza cada mañana.</p></details>`;
+  const K=[["visitas","Visitas"],["nuevos","Nuevos"],["app","Desde la app"],["busquedas","Búsquedas"],["fichas","Ayudas abiertas"],["sede","A la sede"],["chat","Asistente"]];
+  const suma=(n,k)=>dias.slice(0,n).reduce((t,[,v])=>t+(v[k]||0),0);
+  const f=d=>d.split("-").reverse().slice(0,2).join("/");
+  return`<details class="card" open><summary>Visitas (últimos 7 días: ${suma(7,"visitas")})</summary>
+   <p class="meta">Solo de quien acepta la medición anónima, sin datos de nadie. Tus visitas desde este móvil no cuentan. Actualizado: ${esc((estad.actualizado||"").replace("T"," "))}.</p>
+   <div style="overflow-x:auto"><table style="border-collapse:collapse;font-size:.85rem;width:100%"><tr><th style="text-align:left;padding:4px">Día</th>${K.map(([,n])=>`<th style="padding:4px;text-align:right">${n}</th>`).join("")}</tr>
+   ${dias.slice(0,7).map(([d,v])=>`<tr style="border-top:1px solid var(--line)"><td style="padding:4px">${f(d)}</td>${K.map(([k])=>`<td style="padding:4px;text-align:right">${v[k]||0}</td>`).join("")}</tr>`).join("")}
+   <tr style="border-top:2px solid var(--line);font-weight:700"><td style="padding:4px">30 días</td>${K.map(([k])=>`<td style="padding:4px;text-align:right">${suma(30,k)}</td>`).join("")}</tr></table></div></details>`;
 }
 function esperan(){return(datos.candidatas||[]).filter(c=>c.estado==="espera")}
 function pendientes(){return(datos.candidatas||[]).filter(c=>(c.estado||"pendiente")==="pendiente")}
@@ -108,6 +123,7 @@ function pintar(){
   const p=pendientes(), boe=(datos.boe||[]).filter(b=>b.estado!=="vista");
   estado(p.length?`${p.length} ayuda${p.length>1?"s":""} por revisar`:"");
   $("#app").innerHTML=`${avisosHtml()}
+   ${visitasHtml()}
    ${autoIA.length?`<details class="card"><summary>Publicadas solas por la IA (${autoIA.length})</summary>
      <p class="meta">Tenían importe, plazo y requisitos claros en las bases oficiales. Échales un vistazo y retira la que no esté bien.</p>
      ${autoIA.map(a=>`<div style="border-top:1px solid var(--line);padding:10px 0"><b>${esc(a.title)}</b><p class="meta" style="margin:2px 0">${esc(zona(a))} · ${esc(a.imp)}${a.cierra?` · hasta ${esc(a.cierra.split("-").reverse().join("/"))}`:""} · publicada el ${esc(a.auto.split("-").reverse().join("/"))}</p>

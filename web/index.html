@@ -698,7 +698,7 @@ document.addEventListener("click",e=>{
 });
 
 /* ---------- drawer ---------- */
-function openDrawer(id){
+function openDrawer(id){if(id)contar("fichas");
   const a=AIDS.find(x=>x.id===id), st=status(a), t=mainTipo(a);
   const d=$("#drawer");d.dataset.id=id;
   d.innerHTML=`<button class="btn alt sm close" id="d-close">${icon("x","ico","width:16px;height:16px")}Cerrar</button>
@@ -781,7 +781,7 @@ document.addEventListener("click",e=>{
   if(p){S.tipos.clear();S.q="";$("#q").value="";S.estado=p.dataset.preset==="soon"?"activas":p.dataset.preset;S.sort="plazo";$("#f-sort").value="plazo";go("ayudas")}
 });
 $("#fit-all").onclick=()=>{S.tipos.clear();S.q="";$("#q").value="";S.estado="todas";S.sort="fit";$("#f-sort").value="fit";go("ayudas")};
-$("#hero-search").onsubmit=e=>{e.preventDefault();S.q=$("#hero-q").value.trim();$("#q").value=S.q;S.tipos.clear();S.estado="todas";go("ayudas")};
+$("#hero-search").onsubmit=e=>{e.preventDefault();contar("busquedas");S.q=$("#hero-q").value.trim();$("#q").value=S.q;S.tipos.clear();S.estado="todas";go("ayudas")};
 
 /* ---------- ayudas ---------- */
 function pills(el,opts,isOn,onClick){
@@ -999,19 +999,20 @@ const LEGAL={
   <h3>Enlaces</h3><p>Enlazamos a sedes y boletines oficiales. No respondemos de su contenido ni de su disponibilidad.</p>
   <h3>Propiedad intelectual</h3><p>La marca, el diseño y el código de Reformayuda son de su titular. Las normas y actos oficiales que citamos no están protegidos por derechos de autor (art. 13 de la Ley de Propiedad Intelectual).</p>
   <h3>Ley aplicable</h3><p>Ley española. Si eres consumidor, son competentes los juzgados de tu domicilio.</p>`,
- privacidad:`<span class="eyebrow">Última actualización: 28 de octubre de 2026</span><h2>Política de privacidad</h2>
+ privacidad:`<span class="eyebrow">Última actualización: 6 de noviembre de 2026</span><h2>Política de privacidad</h2>
   <p><b>Resumen: Reformayuda no te pide ningún dato personal.</b> No hay registro, ni cuentas, ni email. Lo que haces en la app se queda en tu dispositivo y a nosotros no nos llega, salvo lo mínimo para enviarte notificaciones si decides activarlas.</p>
   <h3>1. Responsable</h3><p>Luis Eduardo Masdeu Cano, persona física. Contacto: <a href="mailto:contacto@reformayuda.es">contacto@reformayuda.es</a>.</p>
   <h3>2. Qué datos se guardan y dónde</h3><ul>
    <li><b>En tu dispositivo, nunca en nuestros servidores:</b> la ubicación de la obra, las respuestas del test (incluida tu franja de edad si la das), las ayudas guardadas, los requisitos y documentos que marcas y el cálculo del IRPF.</li>
    <li><b>Solo si activas las notificaciones:</b> guardamos en Google Firebase, con servidores en la Unión Europea, el identificador de notificaciones que tu móvil genera para Reformayuda, tu comunidad y provincia, los tipos de obra que elegiste y los códigos de las ayudas que guardas. Sirve únicamente para enviarte avisos de ayudas nuevas en tu zona y de plazos. No incluye tu nombre, email ni teléfono. Base legal: tu consentimiento (art. 6.1.a RGPD). Se borra en el momento en que desactivas las notificaciones o pulsas «Borrar todo», y si el identificador deja de ser válido. Google Ireland actúa como encargado del tratamiento.</li>
+   <li><b>Solo si aceptas la medición anónima:</b> cuando entras, buscas, abres una ayuda, vas a una sede oficial o usas el asistente, sumamos 1 a un contador del día en Google Firebase (servidores en la Unión Europea). No enviamos ningún identificador tuyo ni guardamos nada que permita saber quién eres: solo totales por día. Base legal: tu consentimiento; puedes retirarlo en «Cookies».</li>
    <li><b>Nada más.</b> No pedimos nombre, NIF, dirección, teléfono ni email, y no recibimos ni almacenamos archivos.</li></ul>
   <h3>3. Datos técnicos</h3><p>Como cualquier web, el servidor que aloja Reformayuda recibe tu dirección IP para poder enviarte la página. No la usamos para identificarte ni para crear perfiles. Si tu proveedor de alojamiento guarda registros, se borran en un plazo máximo de 30 días.</p>
-  <h3>4. Recursos de terceros</h3><p>Las tipografías, los iconos y los datos se sirven desde nuestra propia web. Solo si activas las notificaciones se carga el servicio Google Firebase, necesario para enviarlas.</p>
+  <h3>4. Recursos de terceros</h3><p>Las tipografías, los iconos y los datos se sirven desde nuestra propia web. Solo si activas las notificaciones o aceptas la medición anónima se conecta con el servicio Google Firebase, necesario para enviarlas o para sumar los contadores.</p>
   <h3>5. Enlaces a sedes oficiales</h3><p>Cuando vas a la sede de un organismo para presentar la solicitud, sales de Reformayuda. Allí se aplica la política de privacidad de ese organismo.</p>
   <h3>6. Tus derechos</h3><p>Como todo está en tu dispositivo, tú controlas tus datos: puedes verlos, copiarlos o borrarlos desde «Mis datos». Para cualquier duda, escríbenos a <a href="mailto:contacto@reformayuda.es">contacto@reformayuda.es</a>. También puedes reclamar ante la Agencia Española de Protección de Datos (<a href="https://www.aepd.es" target="_blank" rel="noopener">aepd.es</a>).</p>
   <h3>7. Cambios</h3><p>Si en el futuro añadimos algo que necesite datos personales (por ejemplo, avisos por email), será opcional, te lo pediremos de forma expresa y actualizaremos esta política antes.</p>`,
- cookies:`<span class="eyebrow">Última actualización: 25 de octubre de 2026</span><h2>Política de cookies</h2>
+ cookies:`<span class="eyebrow">Última actualización: 6 de noviembre de 2026</span><h2>Política de cookies</h2>
   <p>Reformayuda no usa cookies de publicidad ni de seguimiento. Usamos almacenamiento local de tu navegador, de primera parte y técnico, para que la app funcione. Según el art. 22.2 de la LSSI no necesita consentimiento, pero te lo explicamos:</p>
   <div class="tbl-wrap"><table><thead><tr><th>Nombre</th><th>Para qué</th><th>Duración</th></tr></thead><tbody>
    <tr><td>rfm_ccaa, rfm_loc</td><td>Recordar dónde está tu obra (comunidad, provincia, municipio y tamaño)</td><td>Hasta que lo borres</td></tr>
@@ -1024,7 +1025,7 @@ const LEGAL={
    <tr><td>rfm_twa, rfm_valorar</td><td>Saber si usas la app de Google Play y no pedirte la valoración más de la cuenta</td><td>Hasta que lo borres</td></tr>
    <tr><td>rfm_lastvisit</td><td>Fecha de tu última visita, para avisarte de ayudas nuevas</td><td>Hasta que lo borres</td></tr>
    <tr><td>rfm_consent</td><td>Recordar tu elección sobre cookies</td><td>12 meses</td></tr></tbody></table></div>
-  <h3>Medición anónima (opcional)</h3><p>Solo si la activas, contaríamos visitas y uso de cada sección de forma agregada y sin identificarte, para mejorar la app. Está desactivada por defecto.</p>
+  <h3>Medición anónima (opcional)</h3><p>Solo si la activas, sumamos 1 a contadores diarios de visitas y de uso (búsquedas, ayudas abiertas, visitas a sedes oficiales, asistente) en Google Firebase, sin cookies de terceros y sin ningún identificador tuyo. Para no contar dos veces la misma visita guardamos en tu navegador <i>rfm_contada</i> (hasta que cierras la pestaña) y <i>rfm_conocido</i> (para saber si es tu primera visita). Está desactivada por defecto.</p>
   <h3>Cómo borrarlo</h3><p>Desde «Mis datos» → «Borrar todo», o desde los ajustes de tu navegador.</p>`
 };
 function openLegal(k){
@@ -1037,7 +1038,7 @@ function openLegal(k){
   if(k==="cookies")$("#ck-save").onclick=()=>{setConsent($("#ck-stats").checked);closeDrawer()};
 }
 document.addEventListener("click",e=>{const l=e.target.closest("[data-legal]");if(l){e.preventDefault();openLegal(l.dataset.legal)}});
-function setConsent(stats){S.consent={stats,fecha:new Date().toISOString()};store.set("consent",S.consent);$("#cookie").hidden=true;toast(stats?"Preferencias guardadas":"Solo usamos las necesarias")}
+function setConsent(stats){S.consent={stats,fecha:new Date().toISOString()};store.set("consent",S.consent);if(stats)contarVisita();$("#cookie").hidden=true;toast(stats?"Preferencias guardadas":"Solo usamos las necesarias")}
 
 /* ---------- test inicial ---------- */
 let onbShown=false;
@@ -1095,7 +1096,7 @@ function addMsg(who,html){const d=document.createElement("div");d.className="msg
 function suggest(n=3,cat){let rest=FAQ.map((f,i)=>i).filter(i=>!asked.has(i));if(!rest.length)rest=FAQ.map((f,i)=>i);
   const same=cat?rest.filter(i=>FAQ[i].cat===cat):[];const pick=[...same,...rest.filter(i=>!same.includes(i))].slice(0,n);
   return `<div class="sugg">${pick.map(i=>`<button data-ask="${i}">${FAQ[i].q}</button>`).join("")}<button data-topics="1" style="border-color:var(--ink);color:var(--ink)">Ver todos los temas</button></div>`}
-function answer(i){const f=FAQ[i];asked.add(i);addMsg("bot",f.a.replace("${S.ccaa}",esc(locLong()))+(f.act?`<div class="frow" style="margin-top:8px">${f.act}</div>`:"")+`<p class="muted" style="font-size:.78rem;margin-top:8px">Otras dudas:</p>${suggest(3,f.cat)}`)}
+function answer(i){contar("chat");const f=FAQ[i];asked.add(i);addMsg("bot",f.a.replace("${S.ccaa}",esc(locLong()))+(f.act?`<div class="frow" style="margin-top:8px">${f.act}</div>`:"")+`<p class="muted" style="font-size:.78rem;margin-top:8px">Otras dudas:</p>${suggest(3,f.cat)}`)}
 function match(t){const n=norm(t);let best=-1,score=0;FAQ.forEach((f,i)=>{const sc=f.k.filter(k=>n.includes(k)).reduce((a,k)=>a+k.length,0);if(sc>score){score=sc;best=i}});return best}
 function ask(t){addMsg("me",esc(t));const n=norm(t);
   setTimeout(()=>{
@@ -1136,6 +1137,27 @@ const FB={apiKey:"AIzaSyBnvt0e9fSwsRqWCewitcA3SrL7Tcsh75Y",authDomain:"reformayu
 const FB_VAPID="BDk0SzPV6it_dsEZF-GfAiZ4o55u6ahNfUGWN_Sb8NoyDN7hsNclppvcZ21vVK0uVxukWW-X7sKmoCE6x9PpkG8";
 const FB_SDK="https://www.gstatic.com/firebasejs/10.12.2/";
 const pushListo=()=>!!(FB.apiKey&&FB_VAPID);
+/* ---------- medición anónima (solo si se acepta) ----------
+   Suma 1 a un contador del día en Firestore («visitas/AAAA-MM-DD»). No se envía ningún identificador,
+   ni se guarda nada de quien visita. Las visitas del responsable (quien usa /revisar/) no cuentan. */
+function contar(k){
+  try{
+    if(!(S.consent&&S.consent.stats)||localStorage.getItem("rfm_yo")||!FB.apiKey)return;
+    const dia=new Date().toLocaleDateString("sv-SE",{timeZone:"Europe/Madrid"});
+    const doc=`projects/${FB.projectId}/databases/(default)/documents`;
+    fetch(`https://firestore.googleapis.com/v1/${doc}:commit?key=${FB.apiKey}`,{method:"POST",keepalive:true,headers:{"Content-Type":"application/json"},
+      body:JSON.stringify({writes:[{transform:{document:`${doc}/visitas/${dia}`,fieldTransforms:[{fieldPath:k,increment:{integerValue:"1"}}]}}]})}).catch(()=>{});
+  }catch(e){}
+}
+function contarVisita(){
+  try{
+    if(!(S.consent&&S.consent.stats)||sessionStorage.getItem("rfm_contada"))return;
+    sessionStorage.setItem("rfm_contada","1");
+    contar("visitas");
+    if(!localStorage.getItem("rfm_conocido")){localStorage.setItem("rfm_conocido","1");contar("nuevos")}
+    if(enPlay())contar("app");
+  }catch(e){}
+}
 const esIOS=()=>/iphone|ipad|ipod/i.test(navigator.userAgent)||(/macintosh/i.test(navigator.userAgent)&&navigator.maxTouchPoints>1);
 const pushSoportado=()=>"serviceWorker" in navigator&&"PushManager" in window&&"Notification" in window;
 // Navegador integrado de la app de Google u otras apps (WebView): las notificaciones no se muestran bien.
@@ -1264,7 +1286,7 @@ function mostrarValorar(){
   store.set("valorar",{...v,veces:v.veces+1,ultima:new Date().toISOString()});
   $("#valorar").hidden=false;
 }
-document.addEventListener("click",e=>{if(e.target.closest("[data-oficial]")&&puedeValorar())valorarPendiente=true});
+document.addEventListener("click",e=>{if(e.target.closest("[data-oficial]")){contar("sede");if(puedeValorar())valorarPendiente=true}});
 document.addEventListener("visibilitychange",()=>{if(document.visibilityState==="visible"&&valorarPendiente){valorarPendiente=false;setTimeout(mostrarValorar,700)}});
 $("#val-play").onclick=()=>{const v=store.get("valorar",{});store.set("valorar",{...v,hecho:true});$("#valorar").hidden=true};
 $("#val-mail").onclick=()=>{$("#valorar").hidden=true};
@@ -1303,6 +1325,7 @@ cargarDatos().then(()=>{
   const h=(location.hash||"#inicio").slice(1);
   go(h);
   setTimeout(revisarPush,3000);
+  contarVisita();
   const qs=new URLSearchParams(location.search);
   if(qs.get("ayuda")&&AIDS.some(a=>a.id===qs.get("ayuda"))){onbShown=true;openDrawer(qs.get("ayuda"))}
   else if(qs.has("pregunta")&&FAQ[+qs.get("pregunta")]){onbShown=true;openChat();answer(+qs.get("pregunta"))}
