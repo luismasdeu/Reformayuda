@@ -134,7 +134,7 @@ def pagina(ruta, titulo, descripcion, cuerpo, migas, jsonld=None, indexar=True):
 </main>
 <footer class="pie"><div class="wrap">
   <p><b>Reformayuda</b> · Buscador gratuito de ayudas y subvenciones para reformar o construir tu casa. Sin registro y sin anuncios. Contacto: <a href="mailto:contacto@reformayuda.es">contacto@reformayuda.es</a></p>
-  <p><a href="/subvenciones/">Todas las ayudas</a> · <a href="/preguntas/">Preguntas frecuentes</a> · <a href="/que-es-reformayuda/">Qué es Reformayuda</a> · <a href="/aviso-legal/">Aviso legal</a> · <a href="/privacidad/">Privacidad</a> · <a href="/cookies/">Cookies</a></p>
+  <p><a href="/subvenciones/">Todas las ayudas</a> · <a href="/preguntas/">Preguntas frecuentes</a> · <a href="/que-es-reformayuda/">Qué es Reformayuda</a> · <a href="/programas/">Programas de ayudas</a> · <a href="/aviso-legal/">Aviso legal</a> · <a href="/privacidad/">Privacidad</a> · <a href="/cookies/">Cookies</a></p>
 </div></footer>
 </body>
 </html>
@@ -285,6 +285,63 @@ def pagina_que_es(ayudas, faq):
                   cuerpo, [("Inicio", "/"), ("Qué es Reformayuda", "/que-es-reformayuda/")], ld)
 
 
+ESTADO_PROG = {"vigente": ("abierta", "Vigente"), "cerrado": ("cerrada", "Convocatoria cerrada"), "finalizado": ("cerrada", "Programa finalizado")}
+
+
+def fecha_larga(iso):
+    d = dt.date.fromisoformat(iso)
+    return f"{d.day} de {MESES[d.month - 1]} de {d.year}"
+
+
+def pagina_programa(p, por_id):
+    clase, etiqueta = ESTADO_PROG[p["estado"]]
+    tipos = [TIPOS[t] for t in p["tipo"] if t in TIPOS]
+    rel = [por_id[i] for i in p.get("relacionadas", []) if i in por_id]
+    quien = "".join(f"<li>{e(x)}</li>" for x in p["quien"])
+    fuentes = "".join(f'<li><a href="{e(u)}" rel="noopener">{e(n)}</a></li>' for n, u in p["fuentes"])
+    otras = "".join(f'<li><a href="{a["_ruta"]}">{e(a["title"])}</a>: {e(a["imp"])}</li>' for a in rel)
+    por_tipo = " · ".join(f'<a href="/subvenciones/{s}/">{e(n)}</a>' for n, s, _ in tipos)
+    cuerpo = f"""<h1>{e(p["titulo"])}</h1>
+<p><span class="estado {clase}">{etiqueta}</span> <span class="muted">Revisado el {fecha_larga(p["revisado"])}</span></p>
+<p class="lead">{e(p["que"])}</p>
+<h2>¿Se puede pedir ahora?</h2>
+<p>{e(p["estado_texto"])}</p>
+<p><a class="btn grande" href="/">Avísame cuando salga una ayuda en mi zona</a></p>
+<h2>Quién puede pedirla</h2><ul>{quien}</ul>
+<h2>Quién la da y cómo funciona</h2>
+<p><b>{e(p["organismo"])}</b>. Ámbito: {e(p["ambito"])}.</p>
+<p>{e(p["como"])}</p>
+{f'<h2>Ayudas parecidas que puedes pedir</h2><ul>{otras}</ul>' if otras else ''}
+<p>Más ayudas para: {por_tipo}.</p>
+<h2>Fuentes oficiales</h2><ul>{fuentes}</ul>
+<p class="muted">Reformayuda no es una web oficial: resume la información de estas fuentes. Lo que vale es lo que publica el boletín oficial.</p>"""
+    ruta = f"/programas/{p['slug']}/"
+    ld = {"@context": "https://schema.org", "@type": "Article", "headline": p["titulo"], "url": f"{DOMINIO}{ruta}",
+          "dateModified": p["revisado"], "about": p["nombre"], "inLanguage": "es",
+          "publisher": {"@type": "Organization", "name": "Reformayuda", "url": f"{DOMINIO}/"}}
+    return pagina(ruta, f"{p['titulo']} · Reformayuda", f"{p['nombre']}: {p['estado_texto'][:120]}",
+                  cuerpo, [("Inicio", "/"), ("Programas", "/programas/"), (p["nombre"], ruta)], ld)
+
+
+def paginas_programas(ayudas):
+    ruta_datos = WEB / "data" / "programas.json"
+    if not ruta_datos.exists():
+        return []
+    progs = json.loads(ruta_datos.read_text(encoding="utf-8"))["programas"]
+    por_id = {a["id"]: a for a in ayudas}
+    rutas = [pagina_programa(p, por_id) for p in progs]
+    filas = "".join(f'<li><a href="/programas/{p["slug"]}/"><b>{e(p["nombre"])}</b></a> · {e(p["ambito"])} · '
+                    f'<span class="estado {ESTADO_PROG[p["estado"]][0]}">{ESTADO_PROG[p["estado"]][1]}</span></li>' for p in progs)
+    cuerpo = f"""<h1>Programas de ayudas para la vivienda</h1>
+<p class="lead">Los programas de ayudas más conocidos para reformar, rehabilitar o mejorar la eficiencia de tu casa: qué son, a quién van dirigidos y si se pueden pedir ahora.</p>
+<ul>{filas}</ul>
+<p><a class="btn grande" href="/">Ver las ayudas abiertas en mi zona</a></p>"""
+    rutas.append(pagina("/programas/", "Programas de ayudas para la vivienda: Renhata, PREE, Next Generation… · Reformayuda",
+                        "Qué son los programas de ayudas para reformar la vivienda más conocidos y si se pueden pedir ahora.",
+                        cuerpo, [("Inicio", "/"), ("Programas", "/programas/")]))
+    return rutas
+
+
 def paginas_legales():
     """Copia fija de los textos legales de la app (los de LEGAL en index.html), legible sin JavaScript.
     Google Play pide una URL de política de privacidad que se pueda leer directamente."""
@@ -313,7 +370,8 @@ def llms_txt(ayudas, faq, rutas_tipo, rutas_ccaa):
               f"- [Qué es Reformayuda]({DOMINIO}/que-es-reformayuda/): qué hace y qué no hace (no es una empresa de reformas ni un directorio de profesionales)",
               f"- [App de Reformayuda]({DOMINIO}/): buscador, asistente de solicitud, calculadora del IRPF y avisos de plazos",
               f"- [Todas las ayudas]({DOMINIO}/subvenciones/): listado con importes y plazos",
-              f"- [Preguntas frecuentes]({DOMINIO}/preguntas/): {len(faq['preguntas'])} respuestas sobre subvenciones, IRPF, licencias y comunidades", "",
+              f"- [Preguntas frecuentes]({DOMINIO}/preguntas/): {len(faq['preguntas'])} respuestas sobre subvenciones, IRPF, licencias y comunidades",
+              f"- [Programas de ayudas]({DOMINIO}/programas/): Plan Renhata, PREE 5000, Next Generation, Plan Estatal de Vivienda y deducción del IRPF, con su estado actual", "",
               "## Ayudas por tipo de obra", ""]
     lineas += [f"- [{n}]({DOMINIO}{r})" for n, r in rutas_tipo]
     if rutas_ccaa:
@@ -335,7 +393,7 @@ def main():
     datos = json.loads((WEB / "data" / "ayudas.json").read_text(encoding="utf-8"))
     faq = json.loads((WEB / "data" / "preguntas.json").read_text(encoding="utf-8"))
     ayudas = datos["ayudas"]
-    for carpeta in ("ayudas", "subvenciones", "preguntas", "que-es-reformayuda", "privacidad", "aviso-legal", "cookies"):
+    for carpeta in ("ayudas", "subvenciones", "preguntas", "que-es-reformayuda", "privacidad", "aviso-legal", "cookies", "programas"):
         shutil.rmtree(WEB / carpeta, ignore_errors=True)
 
     usadas = set()
@@ -396,6 +454,7 @@ def main():
                                 enlaces_tipos("/subvenciones/") + enlaces_ccaa))
     rutas.append(pagina_preguntas(faq))
     rutas.append(pagina_que_es(ayudas, faq))
+    rutas += paginas_programas(ayudas)
     rutas += paginas_legales()
 
     llms_txt(ayudas, faq, rutas_tipo, rutas_ccaa)
