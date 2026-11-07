@@ -1,23 +1,23 @@
 {
- "fecha": "2026-11-06T06:12",
+ "fecha": "2026-11-07T05:58",
  "modelo": "claude-sonnet-5-5",
  "procesadas": [
   {
-   "id": "bdns-938584",
-   "documento": "el enlace de bases de la BDNS es genérico (ley, ordenanza general o portada) (extracto; bases en BOPMA, Edicto 4244/2026, hacia el 5 de noviembre de 2026 (fecha por confirmar))",
-   "coste_usd": 0.3818,
+   "id": "bdns-940275",
+   "documento": "sin enlace a las bases",
+   "coste_usd": 0.1964,
    "recomendacion": "publicar"
   },
   {
-   "id": "bdns-939227",
-   "documento": "página web (no eran las bases de esta ayuda: buscada en internet)",
-   "coste_usd": 0.3375,
+   "id": "bdns-938805",
+   "documento": "el enlace de bases de la BDNS es genérico (ley, ordenanza general o portada) (extracto; bases en Bases reguladoras publicadas en el BOP de Barcelona, CVE 202510039595, de 4 de marzo de 2025; Ordenanza General de Subvenciones en BOP CVE 202510145073, de 12 de septiembre de 2025.)",
+   "coste_usd": 0.3866,
    "recomendacion": "publicar"
   }
  ],
  "errores": [],
- "coste_usd": 0.719,
+ "coste_usd": 0.583,
  "pendientes_por_tope": 0,
- "gasto_mes_usd": 3.119,
+ "gasto_mes_usd": 3.702,
  "limite_mes_usd": 15.0
 }

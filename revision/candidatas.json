@@ -1,6 +1,6 @@
 {
  "_leeme": "Ayudas detectadas automáticamente en los boletines. Revísalas: pon \"estado\": \"aprobada\" o \"descartada\". Mira README.md.",
- "ultima_busqueda": "2026-11-06T06:12",
+ "ultima_busqueda": "2026-11-07T05:58",
  "candidatas": [
   {
    "id": "bdns-938584",
@@ -66,7 +66,7 @@
   },
   {
    "id": "bdns-938805",
-   "estado": "espera",
+   "estado": "pendiente",
    "title": "Accesibilidad y conservación de edificios en Vilafranca del Penedès",
    "org": "VILAFRANCA DEL PENEDÈS · AYUNTAMIENTO DE VILAFRANCA DEL PENEDÈS",
    "scope": "municipal",
@@ -76,30 +76,39 @@
     "rehabilitacion"
    ],
    "dest": [
+    "vivienda",
     "edificio"
    ],
-   "importe": 0,
-   "imp": "Consulta la convocatoria",
-   "abre": "2026-10-29",
+   "importe": 5000,
+   "imp": "Según la prensa local, hasta el 30 % del coste de la obra, con un máximo de 5.000 € por solicitud individual y 10.000 € por comunidad de propietarios. Hay que confirmarlo en las bases.",
+   "abre": "2026-11-04",
    "cierra": "2026-11-20",
-   "plazo": "El plazo empieza el día siguiente a publicar la convocatoria en el BOPB (no consta la fecha). Termina el 20 de noviembre de 2026.",
+   "plazo": "Del 4 al 20 de noviembre de 2026, o antes si se agota el dinero (120.000 €). Las ayudas se dan por orden de solicitud.",
    "irpf": false,
    "fuente": "BDNS nº 938805",
    "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/938805",
-   "resumen": "El Ayuntamiento de Vilafranca del Penedès da ayudas para mejorar la accesibilidad y el estado de conservación de edificios de viviendas y locales comerciales del municipio. El presupuesto total es de 120.000 € en 2026. No he podido leer las bases, así que faltan los detalles.",
+   "resumen": "El Ayuntamiento de Vilafranca del Penedès da ayudas para obras que mejoren la accesibilidad (ascensores, rampas, salvaescaleras) y el estado de conservación (fachadas, cubiertas) de edificios de viviendas. La convocatoria tiene 120.000 € en total. Las ayudas se dan por orden de solicitud hasta agotar el dinero. También pueden pedirla propietarios de locales comerciales, pero esta ficha habla solo de las obras en viviendas.",
    "req": [
-    "Ser propietario o comunidad de propietarios de un edificio de viviendas o locales del municipio.",
-    "Hacer obras de accesibilidad o de conservación del edificio.",
-    "Los requisitos exactos constan en las bases, que no se han podido leer."
+    "Promover las obras como propietario/a, arrendatario/a, usufructuario/a o con otro título legal equivalente.",
+    "El edificio o la vivienda debe estar en Vilafranca del Penedès y ya existir.",
+    "Las obras deben servir para mejorar la accesibilidad o el estado de conservación.",
+    "No estar en ninguna de las situaciones que impiden recibir subvenciones (art. 13.2 de la Ley 38/2003).",
+    "Pueden pedirla personas físicas y comunidades de propietarios; los requisitos concretos están en las bases."
    ],
    "docs": [
-    "Consulta la documentación en la convocatoria oficial"
+    "Solicitud presentada en el trámite de la sede electrónica del Ayuntamiento.",
+    "Documentación que acredite que eres propietario/a o titular de la vivienda o el edificio.",
+    "Presupuesto o proyecto de las obras.",
+    "Para comunidades, el acuerdo de la comunidad para hacer las obras.",
+    "El resto de documentos exigidos está en las bases y no se ha podido comprobar."
    ],
    "pasos": [
-    "Consulta las bases en la sede electrónica del Ayuntamiento (seu.vilafranca.cat).",
-    "Comprueba la fecha de publicación en el BOPB para saber cuándo abre el plazo.",
-    "Presenta la solicitud por la sede electrónica antes del 20 de noviembre de 2026.",
-    "Justifica la obra cuando las bases lo pidan."
+    "Comprueba en las bases que tu obra y tu edificio cumplen los requisitos.",
+    "Pide presupuesto de las obras.",
+    "Presenta la solicitud en la sede electrónica (seu.vilafranca.cat) antes del 20 de noviembre de 2026.",
+    "Si tienes dificultades, pide cita en la Oficina Local de Vivienda (93 818 06 54).",
+    "Haz las obras cuando te concedan la ayuda.",
+    "Justifica la obra en la sede electrónica antes del 31 de julio de 2027, según la prensa local."
    ],
    "_revisar": {
     "presupuesto_total": 120000,
@@ -109,27 +118,21 @@
     "nota": "Revisa importe por vivienda, requisitos, documentos y pasos antes de aprobar.",
     "bases_no_corresponden": true,
     "ia": {
-     "fecha": "2026-11-02",
-     "documento": "el enlace de bases de la BDNS es genérico (ley, ordenanza general o portada) (extracto; bases en Convocatoria publicada en el BOPB; no se ha podido localizar el número ni la fecha. Las bases y la convocatoria están en la sede electrónica del Ayuntamiento (https://seu.vilafranca.cat/) y en la BDNS (convocatoria 938805).)",
+     "fecha": "2026-11-07",
+     "documento": "el enlace de bases de la BDNS es genérico (ley, ordenanza general o portada) (extracto; bases en Bases reguladoras publicadas en el BOP de Barcelona, CVE 202510039595, de 4 de marzo de 2025; Ordenanza General de Subvenciones en BOP CVE 202510145073, de 12 de septiembre de 2025.)",
      "recomendacion": "publicar",
-     "motivo": "La convocatoria subvenciona mejoras de accesibilidad y del estado de conservación de edificios de viviendas (y locales) en Vilafranca del Penedès, pero no he podido leer las bases."
+     "motivo": "Paga obras de accesibilidad y conservación en edificios de viviendas y viviendas de Vilafranca del Penedès, como ascensores, rampas, fachadas y cubiertas."
     },
     "confirmar": [
-     "No se han podido leer las bases: faltan el importe por vivienda, el porcentaje y el máximo.",
-     "Comprobar la fecha de publicación en el BOPB, que marca la apertura del plazo.",
-     "Comprobar si las ayudas son solo para comunidades o también para propietarios particulares, y qué obras se pagan.",
-     "Comprobar requisitos, documentos y forma de justificar la obra."
+     "No se han podido leer las bases oficiales (BOP CVE 202510039595). Los importes (30 %, máximo 5.000 € por solicitante y 10.000 € por comunidad) y la fecha de justificación (31/07/2027) vienen de prensa local y hay que confirmarlos.",
+     "Comprueba qué obras exactas se subvencionan, los documentos que piden y si hay límites de renta o de antigüedad del edificio.",
+     "Comprueba si las personas arrendatarias y los locales comerciales tienen condiciones distintas."
     ],
-    "espera": {
-     "desde": "2026-10-30",
-     "intentos": 2,
-     "proxima": "2026-11-07"
-    },
-    "referencia_bases": "Convocatoria publicada en el BOPB; no se ha podido localizar el número ni la fecha. Las bases y la convocatoria están en la sede electrónica del Ayuntamiento (https://seu.vilafranca.cat/) y en la BDNS (convocatoria 938805)."
+    "referencia_bases": "Bases reguladoras publicadas en el BOP de Barcelona, CVE 202510039595, de 4 de marzo de 2025; Ordenanza General de Subvenciones en BOP CVE 202510145073, de 12 de septiembre de 2025."
    },
    "prov": "Barcelona",
    "muni": "Vilafranca Del Penedès",
-   "sede": "https://seu.vilafranca.cat/"
+   "sede": "http://seu.vilafranca.cat/"
   },
   {
    "id": "bdns-938969",
@@ -405,6 +408,66 @@
    },
    "prov": "Bizkaia",
    "muni": "Barakaldo"
+  },
+  {
+   "id": "bdns-940275",
+   "estado": "espera",
+   "title": "Rehabilitación de viviendas dañadas por incendios en Sierra Oeste",
+   "org": "COMUNIDAD DE MADRID · CONSEJERÍA DE VIVIENDA, TRANSPORTES E INFRAESTRUCTURAS",
+   "scope": "autonomica",
+   "ccaa": "all",
+   "tipo": [
+    "rehabilitacion"
+   ],
+   "dest": [
+    "vivienda"
+   ],
+   "importe": 100000,
+   "imp": "Según la prensa, hasta el 80 % del coste, con un máximo de 100.000 € por vivienda. Falta confirmarlo en las bases oficiales.",
+   "abre": "2026-11-06",
+   "cierra": null,
+   "plazo": "Empieza el día siguiente a la publicación del extracto en el BOCM y dura dos meses desde ese día. Aún no se conocen las fechas exactas.",
+   "irpf": false,
+   "fuente": "BDNS nº 940275",
+   "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/940275",
+   "resumen": "La Comunidad de Madrid prepara ayudas urgentes para reparar y rehabilitar viviendas dañadas por los incendios de la Sierra Oeste. Se conceden de forma directa. El presupuesto es de 8.000.000 €. Las bases aún no están publicadas en el BOCM, así que los detalles pueden cambiar.",
+   "req": [
+    "Tener una vivienda dañada por los incendios de la Sierra Oeste.",
+    "Ser persona física sin actividad económica (según la BDNS).",
+    "Que la vivienda sea tu vivienda habitual (según la prensa; falta confirmarlo en las bases)."
+   ],
+   "docs": [
+    "Consulta la documentación en la convocatoria oficial"
+   ],
+   "pasos": [
+    "Espera a que se publique el extracto en el BOCM.",
+    "Lee las bases oficiales cuando se publiquen.",
+    "Presenta la solicitud en el plazo de dos meses.",
+    "Justifica las obras realizadas."
+   ],
+   "_revisar": {
+    "presupuesto_total": 8000000,
+    "bases_reguladoras": "Pendiente de publicación",
+    "abierta_segun_bdns": false,
+    "beneficiarios": "PERSONAS FÍSICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
+    "nota": "Revisa importe por vivienda, requisitos, documentos y pasos antes de aprobar.",
+    "ia": {
+     "fecha": "2026-11-07",
+     "documento": "sin enlace a las bases",
+     "recomendacion": "publicar",
+     "motivo": "Subvención directa para rehabilitar y reparar viviendas dañadas por los incendios de la Sierra Oeste (Madrid), dirigida a personas físicas."
+    },
+    "confirmar": [
+     "No se han encontrado las bases oficiales, que están pendientes de publicación; el porcentaje (80 %) y el máximo (100.000 €) proceden solo de la prensa.",
+     "Comprueba los requisitos, la documentación, cómo se pide y la fecha exacta de apertura en el extracto del BOCM.",
+     "Comprueba si la ayuda incluye comunidades de propietarios y si exige que sea vivienda habitual."
+    ],
+    "espera": {
+     "desde": "2026-11-07",
+     "intentos": 1,
+     "proxima": "2026-11-10"
+    }
+   }
   }
  ],
  "boe": [
