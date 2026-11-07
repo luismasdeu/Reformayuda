@@ -1,9 +1,9 @@
 {
- "fecha": "2026-11-06T21:07",
+ "fecha": "2026-11-07T06:00",
  "modo": "diario",
  "suscripciones": 1,
- "con_algo_que_enviar": 0,
- "enviadas": 0,
+ "con_algo_que_enviar": 1,
+ "enviadas": 1,
  "caducadas_borradas": 0,
  "zonas": [
   "Andalucía/Málaga"
