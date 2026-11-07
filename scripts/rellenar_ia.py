@@ -43,6 +43,7 @@ TIPOS = ["eficiencia", "solar", "aerotermia", "ventanas", "accesibilidad", "reha
 INSTRUCCIONES = """Ayudas a Reformayuda, una web gratuita que explica en lenguaje sencillo las ayudas públicas españolas para reformar o construir una vivienda. Recibes la ficha de la Base de Datos Nacional de Subvenciones (BDNS) de una convocatoria y, si se ha podido descargar, el texto de sus bases o del anuncio oficial.
 
 Extrae los datos para una ficha que leerán particulares sin conocimientos legales:
+- Usa solo fuentes oficiales: boletines oficiales (BOE, boletines autonómicos y provinciales), la BDNS y webs o sedes electrónicas de las administraciones. Nunca uses prensa, blogs, webs de empresas ni redes sociales, aunque den cifras: si un dato solo aparece ahí, déjalo vacío, apúntalo en «dudas» y marca «datos_no_oficiales».
 - Usa solo lo que dicen los documentos. Si un dato no aparece, deja el texto vacío (o 0 en los números) y apúntalo en «dudas». Nunca inventes importes, fechas ni requisitos.
 - Escribe en español claro, frases cortas, tuteando («Vivir en…», «Presenta…»). Nada de jerga administrativa.
 - «es_ayuda_para_obras_en_vivienda»: true SOLO si la ayuda paga obras de reforma, rehabilitación, mejora, eficiencia energética, energía renovable, accesibilidad o construcción en una vivienda o en un edificio de viviendas (comunidad de propietarios), o si es una rebaja de impuestos (IBI, ICIO) por hacer esas obras. También es true si ayuda a construir o autoconstruir la propia vivienda: honorarios del proyecto técnico, licencias, o préstamos, hipotecas, avales o ayudas a los intereses para construir, autoconstruir o rehabilitar (si mezcla compra y construcción o autopromoción, es true, pero escribe la ficha solo para la parte de construir: título, resumen y requisitos sin hablar de comprar). Es false en todo lo demás: pagar el alquiler, recibos, suministros, el IBI u otros gastos de la vivienda; la hipoteca o la compra de una casa ya construida; ayudas sociales para vivir; ayudas solo para empresas, entidades o ayuntamientos; y ayudas para un edificio o beneficiario concreto ya decidido (no abiertas al público). Ante la duda, false. Explica el motivo en una frase.
@@ -55,6 +56,7 @@ Extrae los datos para una ficha que leerán particulares sin conocimientos legal
 - «url_solicitud»: dirección de la sede electrónica o del trámite, solo si aparece en los documentos.
 - «dudas»: lo que la persona que revisa debe comprobar en las bases (máximo 4 frases).
 - «referencia_bases»: si el documento es solo un extracto que remite a las bases publicadas en otro sitio (p. ej. «texto íntegro en el BOP nº 126 de 16/10/2026»), escribe dónde están (boletín, número y fecha). Si no, vacío.
+- «datos_no_oficiales»: true si algún dato de la ficha (importe, plazo, requisitos…) lo has sacado de prensa, blogs o webs no oficiales, o si solo lo has encontrado ahí.
 - «documento_corresponde»: false si el documento adjunto no contiene las bases ni la convocatoria de ESTA ayuda (por ejemplo, un boletín que solo nombra al municipio por otro asunto). En ese caso no saques datos de él.
 - «pendiente_publicacion»: true si el plazo empieza cuando se publique el extracto o la convocatoria en un boletín y no has visto esa publicación con su fecha (aunque se conozca la fecha de cierre), de modo que no se sabe con certeza el día de apertura. false si el plazo ya está abierto o tiene fecha de apertura conocida.
 - «claridad»: «clara» solo si has leído las bases o la convocatoria oficial y en ellas constan el importe por vivienda (o el porcentaje con su máximo), el plazo (fecha final o «hasta agotar fondos»), los requisitos y cómo se pide, y no hay nada importante que dudar. Si te falta cualquiera de esas cosas o has tenido que suponer algo, «dudosa». Las claras se publican sin revisión humana: ante la duda, «dudosa»."""
@@ -84,12 +86,13 @@ ESQUEMA = {
         "dudas": {"type": "array", "items": {"type": "string"}},
         "claridad": {"type": "string", "enum": ["clara", "dudosa"]},
         "pendiente_publicacion": {"type": "boolean"},
+        "datos_no_oficiales": {"type": "boolean"},
         "documento_corresponde": {"type": "boolean"},
         "referencia_bases": {"type": "string"},
     },
     "required": ["es_ayuda_para_obras_en_vivienda", "motivo", "title", "resumen", "imp", "importe", "abre", "cierra",
                  "plazo", "req", "docs", "pasos", "tipo", "dest", "edad_min", "edad_max", "max_habitantes", "irpf",
-                 "url_solicitud", "dudas", "claridad", "documento_corresponde", "referencia_bases", "pendiente_publicacion"],
+                 "url_solicitud", "dudas", "claridad", "documento_corresponde", "referencia_bases", "pendiente_publicacion", "datos_no_oficiales"],
     "additionalProperties": False,
 }
 
@@ -284,6 +287,27 @@ def depende_de_publicacion(c, d):
     return bool(DEPENDE.search(texto)) and not c.get("importe")
 
 
+NO_OFICIAL = re.compile(r"prensa|noticia|periódic|según (los )?medios|nota de prensa|blog|redes sociales", re.I)
+
+
+def de_fuente_no_oficial(c, d):
+    """La IA lo marca, o algún texto de la ficha dice que el dato viene de la prensa u otra fuente no oficial."""
+    texto = " ".join(str(v) for v in [c.get("imp"), c.get("plazo"), c.get("resumen")] + list(c.get("req") or [])
+                     + list(c.get("pasos") or []))
+    return bool(d.get("datos_no_oficiales")) or bool(NO_OFICIAL.search(texto))
+
+
+def quitar_no_oficial(c):
+    """Lo que viene de la prensa no se publica: se deja el importe sin confirmar hasta que salgan las bases."""
+    c["imp"] = "Importe pendiente de publicar en las bases oficiales"
+    c["importe"] = 0
+    for k in ("req", "docs", "pasos"):
+        lista = [x for x in c.get(k) or [] if not NO_OFICIAL.search(x)]
+        c[k] = lista or ["Consulta la convocatoria oficial"]
+    if NO_OFICIAL.search(c.get("plazo", "")):
+        c["plazo"] = "Pendiente de publicar en el boletín oficial"
+
+
 def aun_no_abre_sin_datos(c):
     """Todavía no se puede pedir (abre más adelante) y no se han podido leer las bases (sin importe):
     se espera a que se publiquen. Cuando llega la fecha de apertura deja de cumplirse y pasa a tu lista."""
@@ -385,6 +409,11 @@ def cerrar(c, r, d, uso, como, completa, informe, bloques):
         c["_revisar"] = r
         if not d["es_ayuda_para_obras_en_vivienda"]:
             c["estado"] = "descartada"  # no es de obras: no llega a tu lista (se puede recuperar en /revisar/)
+        elif de_fuente_no_oficial(c, d):
+            # Datos de la prensa: se espera a que salga en el boletín oficial.
+            quitar_no_oficial(c)
+            r["datos_no_oficiales"] = True
+            esperar(c, r)
         elif d.get("pendiente_publicacion") or depende_de_publicacion(c, d) or aun_no_abre_sin_datos(c):
             esperar(c, r)
         elif not r.get("no_auto") and muy_clara(c, d, bloques):
@@ -402,8 +431,12 @@ def cerrar(c, r, d, uso, como, completa, informe, bloques):
             c["estado"] = "pendiente"  # también cuando sale de «espera»: ya tiene fecha
         if c["estado"] != "espera":
             r.pop("espera", None)
+        if not r.get("datos_no_oficiales") or c["estado"] != "espera":
+            r.pop("datos_no_oficiales", None)
     else:
         c["ia"] = dt.date.today().isoformat()
+        if d["es_ayuda_para_obras_en_vivienda"] and de_fuente_no_oficial(c, d):
+            quitar_no_oficial(c)  # ya publicada: se queda, pero sin los datos de la prensa
         if c.get("pendiente_bases"):
             if c.get("importe"):
                 c.pop("pendiente_bases")  # ya han salido las bases: completada

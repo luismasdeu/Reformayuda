@@ -132,7 +132,7 @@ function pintar(){
    ${p.map(tarjeta).join("")}
    ${esperan().length?`<details class="card"><summary>Esperando al boletín (${esperan().length})</summary>
      <p class="meta">Registradas en la BDNS, pero el plazo empieza cuando se publique el extracto en el boletín, y aún no ha salido. Se vuelven a mirar solas cada pocos días: cuando tengan fecha, pasarán a tu lista o se publicarán.</p>
-     ${esperan().map(c=>`<div style="border-top:1px solid var(--line);padding:10px 0"><b>${esc(c.title)}</b><p class="meta" style="margin:2px 0">${esc(zona(c))} · próxima comprobación: ${esc((c._revisar.espera?.proxima||"").split("-").reverse().join("/"))}</p>
+     ${esperan().map(c=>`<div style="border-top:1px solid var(--line);padding:10px 0"><b>${esc(c.title)}</b><p class="meta" style="margin:2px 0">${esc(zona(c))} · próxima comprobación: ${esc((c._revisar.espera?.proxima||"").split("-").reverse().join("/"))}${c._revisar.datos_no_oficiales?" · solo hay datos en la prensa, aún no en el boletín":""}</p>
        <div class="row" style="margin-top:4px"><a class="b alt" href="${esc(c.url)}" target="_blank" rel="noopener">Ver convocatoria</a><button class="b alt" data-alista="${esc(c.id)}">Pasar a mi lista</button></div></div>`).join("")}</details>`:""}
    ${descIA.length?`<details class="card"><summary>Descartadas automáticamente por la IA (${descIA.length})</summary>
      <p class="meta">No son de obras en casa o comunidad (alquiler, recibos, compra…). Si alguna sí lo es, recupérala y volverá a tu lista.</p>

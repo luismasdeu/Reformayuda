@@ -66,7 +66,7 @@
   },
   {
    "id": "bdns-938805",
-   "estado": "pendiente",
+   "estado": "espera",
    "title": "Accesibilidad y conservación de edificios en Vilafranca del Penedès",
    "org": "VILAFRANCA DEL PENEDÈS · AYUNTAMIENTO DE VILAFRANCA DEL PENEDÈS",
    "scope": "municipal",
@@ -79,8 +79,8 @@
     "vivienda",
     "edificio"
    ],
-   "importe": 5000,
-   "imp": "Según la prensa local, hasta el 30 % del coste de la obra, con un máximo de 5.000 € por solicitud individual y 10.000 € por comunidad de propietarios. Hay que confirmarlo en las bases.",
+   "importe": 0,
+   "imp": "Importe pendiente de publicar en las bases oficiales",
    "abre": "2026-11-04",
    "cierra": "2026-11-20",
    "plazo": "Del 4 al 20 de noviembre de 2026, o antes si se agota el dinero (120.000 €). Las ayudas se dan por orden de solicitud.",
@@ -107,8 +107,7 @@
     "Pide presupuesto de las obras.",
     "Presenta la solicitud en la sede electrónica (seu.vilafranca.cat) antes del 20 de noviembre de 2026.",
     "Si tienes dificultades, pide cita en la Oficina Local de Vivienda (93 818 06 54).",
-    "Haz las obras cuando te concedan la ayuda.",
-    "Justifica la obra en la sede electrónica antes del 31 de julio de 2027, según la prensa local."
+    "Haz las obras cuando te concedan la ayuda."
    ],
    "_revisar": {
     "presupuesto_total": 120000,
@@ -128,7 +127,13 @@
      "Comprueba qué obras exactas se subvencionan, los documentos que piden y si hay límites de renta o de antigüedad del edificio.",
      "Comprueba si las personas arrendatarias y los locales comerciales tienen condiciones distintas."
     ],
-    "referencia_bases": "Bases reguladoras publicadas en el BOP de Barcelona, CVE 202510039595, de 4 de marzo de 2025; Ordenanza General de Subvenciones en BOP CVE 202510145073, de 12 de septiembre de 2025."
+    "referencia_bases": "Bases reguladoras publicadas en el BOP de Barcelona, CVE 202510039595, de 4 de marzo de 2025; Ordenanza General de Subvenciones en BOP CVE 202510145073, de 12 de septiembre de 2025.",
+    "datos_no_oficiales": true,
+    "espera": {
+     "desde": "2026-11-07",
+     "intentos": 1,
+     "proxima": "2026-11-10"
+    }
    },
    "prov": "Barcelona",
    "muni": "Vilafranca Del Penedès",
@@ -422,8 +427,8 @@
    "dest": [
     "vivienda"
    ],
-   "importe": 100000,
-   "imp": "Según la prensa, hasta el 80 % del coste, con un máximo de 100.000 € por vivienda. Falta confirmarlo en las bases oficiales.",
+   "importe": 0,
+   "imp": "Importe pendiente de publicar en las bases oficiales",
    "abre": "2026-11-06",
    "cierra": null,
    "plazo": "Empieza el día siguiente a la publicación del extracto en el BOCM y dura dos meses desde ese día. Aún no se conocen las fechas exactas.",
@@ -433,8 +438,7 @@
    "resumen": "La Comunidad de Madrid prepara ayudas urgentes para reparar y rehabilitar viviendas dañadas por los incendios de la Sierra Oeste. Se conceden de forma directa. El presupuesto es de 8.000.000 €. Las bases aún no están publicadas en el BOCM, así que los detalles pueden cambiar.",
    "req": [
     "Tener una vivienda dañada por los incendios de la Sierra Oeste.",
-    "Ser persona física sin actividad económica (según la BDNS).",
-    "Que la vivienda sea tu vivienda habitual (según la prensa; falta confirmarlo en las bases)."
+    "Ser persona física sin actividad económica (según la BDNS)."
    ],
    "docs": [
     "Consulta la documentación en la convocatoria oficial"
@@ -466,7 +470,8 @@
      "desde": "2026-11-07",
      "intentos": 1,
      "proxima": "2026-11-10"
-    }
+    },
+    "datos_no_oficiales": true
    }
   }
  ],
