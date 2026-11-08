@@ -1,6 +1,6 @@
 {
  "_leeme": "Ayudas detectadas automáticamente en los boletines. Revísalas: pon \"estado\": \"aprobada\" o \"descartada\". Mira README.md.",
- "ultima_busqueda": "2026-11-07T05:58",
+ "ultima_busqueda": "2026-11-08T05:58",
  "candidatas": [
   {
    "id": "bdns-938584",
@@ -142,7 +142,7 @@
   {
    "id": "bdns-938969",
    "estado": "espera",
-   "title": "Ascensores, accesibilidad a portales y fachadas en Eibar",
+   "title": "Ascensores, portales y fachadas en edificios de Eibar",
    "org": "EIBAR · AYUNTAMIENTO DE EIBAR",
    "scope": "municipal",
    "ccaa": "País Vasco",
@@ -154,28 +154,33 @@
     "edificio"
    ],
    "importe": 0,
-   "imp": "Consulta la convocatoria",
+   "imp": "No consta en el extracto la cantidad por edificio. El presupuesto total de la convocatoria es de 150.000 €.",
    "abre": "2026-11-11",
    "cierra": "2026-11-25",
-   "plazo": "Del 11 al 25 de noviembre de 2026, según la ficha de la BDNS.",
+   "plazo": "Empieza el día siguiente a la publicación del extracto en el Boletín Oficial de Gipuzkoa y dura 10 días hábiles. La BDNS indica del 9 al 20 de noviembre de 2026, pero esas fechas no coinciden con el anuncio y deben comprobarse.",
    "irpf": false,
    "fuente": "BDNS nº 938969",
    "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/938969",
-   "resumen": "El Ayuntamiento de Eibar da ayudas para instalar o cambiar ascensores, mejorar el acceso a los portales y restaurar fachadas de edificios. La convocatoria de 2026 tiene un presupuesto total de 150.000 €. El plazo de solicitud va del 11 al 25 de noviembre de 2026.",
+   "resumen": "El Ayuntamiento de Eibar da subvenciones para instalar o sustituir ascensores, mejorar la accesibilidad exterior de los portales y restaurar fachadas. Pueden pedirlas propietarios de edificios y comunidades de propietarios. Se conceden por evaluación individualizada de cada solicitud. El presupuesto total de la convocatoria es de 150.000 €.",
    "req": [
-    "Consulta los requisitos en la convocatoria oficial"
+    "Ser propietario de un edificio (persona física o jurídica) o comunidad de propietarios que vaya a hacer la obra.",
+    "Que el edificio esté en Eibar.",
+    "No estar en ninguna de las prohibiciones del artículo 13 de la Ley General de Subvenciones.",
+    "Hacer una de estas obras: instalar ascensor, mejorar la accesibilidad exterior del portal o restaurar la fachada."
    ],
    "docs": [
-    "Solicitud (modelo del Ayuntamiento)",
-    "Documento de titular de la cuenta bancaria",
-    "Nombramiento del presidente o presidenta de la comunidad",
-    "Aprobación de las obras por la comunidad de propietarios",
-    "Lista de gastos e ingresos de la obra"
+    "Formulario de solicitud del Ayuntamiento.",
+    "Documento de titular de la cuenta bancaria.",
+    "Nombramiento del presidente o presidenta de la comunidad.",
+    "Acuerdo de la comunidad que aprueba las obras.",
+    "Lista de gastos e ingresos de la obra."
    ],
    "pasos": [
-    "Lee la convocatoria oficial",
-    "Prepara la documentación",
-    "Presenta la solicitud en la sede del organismo"
+    "Comprueba las bases y la fecha exacta de apertura en el Boletín Oficial de Gipuzkoa.",
+    "Reúne los documentos y haz que la comunidad apruebe la obra.",
+    "Presenta la solicitud en la web www.eibar.eus con certificado digital.",
+    "Si eres persona física, también puedes presentarla en PEGORA (plaza Untzaga 1) o en otros registros públicos.",
+    "Espera la resolución del Ayuntamiento y justifica la obra realizada."
    ],
    "_revisar": {
     "presupuesto_total": 150000,
@@ -185,25 +190,25 @@
     "nota": "Revisa importe por vivienda, requisitos, documentos y pasos antes de aprobar.",
     "bases_no_corresponden": true,
     "ia": {
-     "fecha": "2026-11-03",
+     "fecha": "2026-11-08",
      "documento": "página web (no eran las bases de esta ayuda: buscada en internet)",
      "recomendacion": "publicar",
-     "motivo": "Subvenciona obras de ascensores, accesibilidad a portales y restauración de fachadas en edificios de viviendas de Eibar, sobre todo para comunidades de propietarios."
+     "motivo": "Paga obras de ascensores, accesibilidad de portales y restauración de fachadas en edificios de viviendas de Eibar."
     },
     "confirmar": [
-     "No se han podido leer las bases de 2026. Solo he encontrado la página municipal de la convocatoria de 2024, que no sirve para esta.",
-     "Faltan el importe o porcentaje por edificio y su máximo, los requisitos y los documentos de 2026.",
-     "Comprueba quién puede pedirla (comunidades de propietarios y propietarios de edificios, según la convocatoria de 2024) y cómo se solicita (sede electrónica o PEGORA).",
-     "Comprueba que las fechas de la BDNS son correctas y que no hay otro boletín de publicación (BOG)."
+     "El anuncio dice 15.000 € en castellano y 150.000 € en euskera; la BDNS indica 150.000 € de presupuesto. Hay que comprobar el importe y el máximo por edificio o porcentaje en las bases.",
+     "Las fechas de la BDNS (9-20 de noviembre) no coinciden con el plazo del anuncio, que son 10 días hábiles desde el extracto del BOG. Hay que confirmar la fecha de publicación del extracto.",
+     "No se han leído las bases, solo el extracto: faltan gastos subvencionables, criterios y documentación exacta."
     ],
     "espera": {
      "desde": "2026-10-31",
-     "intentos": 2,
-     "proxima": "2026-11-08"
+     "intentos": 3,
+     "proxima": "2026-11-15"
     }
    },
    "prov": "Gipuzkoa",
-   "muni": "Eibar"
+   "muni": "Eibar",
+   "sede": "https://www.eibar.eus"
   },
   {
    "id": "bdns-939227",
@@ -296,18 +301,18 @@
     "vivienda"
    ],
    "importe": 0,
-   "imp": "Consulta la convocatoria",
+   "imp": "Importe pendiente de publicar en las bases oficiales",
    "abre": "2026-11-04",
    "cierra": null,
-   "plazo": "El plazo empieza el día siguiente a la publicación de la convocatoria en el BOP de Las Palmas y dura 2 meses desde esa publicación. No se ha visto el boletín con su fecha.",
+   "plazo": "Según la BDNS, el plazo empieza el día siguiente a publicar la convocatoria en el BOP de Las Palmas y dura 2 meses. No he visto esa publicación ni su fecha.",
    "irpf": false,
    "fuente": "BDNS nº 939709",
    "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/939709",
-   "resumen": "El Ayuntamiento de San Bartolomé convoca para 2026 subvenciones para rehabilitar viviendas privadas. Pueden pedirlas personas físicas que no desarrollan actividad económica. El presupuesto total es de 323.793,18 €. Las bases completas no se han podido leer, así que faltan los importes y los requisitos concretos.",
+   "resumen": "El Ayuntamiento de San Bartolomé da subvenciones a particulares para rehabilitar su vivienda. El presupuesto total es de 323.793,18 €. No he podido leer las bases oficiales, así que faltan el importe por vivienda, los requisitos y los documentos.",
    "req": [
-    "Ser persona física sin actividad económica.",
-    "La vivienda debe estar en el municipio de San Bartolomé.",
-    "Los demás requisitos (ingresos, titularidad, tipo de obra) no se han podido comprobar en las bases."
+    "Ser persona física y no desarrollar actividad económica con la vivienda (dato de la BDNS).",
+    "Hacer las obras en una vivienda privada de San Bartolomé (Lanzarote).",
+    "El resto de requisitos (empadronamiento, titularidad de la vivienda, ingresos) hay que confirmarlos en las bases oficiales."
    ],
    "docs": [
     "Solicitud (Anexo I).",
@@ -317,11 +322,11 @@
     "Autorización para consultar ingresos (Anexo 5)."
    ],
    "pasos": [
-    "Espera a que se publique la convocatoria en el BOP de Las Palmas y mira la fecha.",
-    "Rellena la solicitud y los anexos del Ayuntamiento.",
-    "Presenta todo en la sede electrónica del Ayuntamiento dentro de los 2 meses de plazo.",
-    "Si te la conceden, firma la aceptación de la subvención (Anexo 6).",
-    "Justifica la obra con la cuenta justificativa (Anexo 7)."
+    "Espera a que el BOP de Las Palmas publique el extracto de la convocatoria.",
+    "Reúne los documentos y rellena los anexos que publica el Ayuntamiento.",
+    "Presenta la solicitud en la sede electrónica del Ayuntamiento de San Bartolomé dentro de los 2 meses.",
+    "Si te conceden la ayuda, firma la aceptación (Anexo 6).",
+    "Haz las obras y justifica el gasto con la cuenta justificativa (Anexo 7)."
    ],
    "_revisar": {
     "presupuesto_total": 323793.18,
@@ -330,23 +335,25 @@
     "beneficiarios": "PERSONAS FÍSICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
     "nota": "Revisa importe por vivienda, requisitos, documentos y pasos antes de aprobar.",
     "bases_no_corresponden": true,
-    "referencia_bases": "Bases reguladoras de las subvenciones de rehabilitación de viviendas privadas en San Bartolomé, ejercicios 2024-25, publicadas en el BOP de Las Palmas (www.boplaspalmas.net). No he podido ver el número ni la fecha del boletín.",
+    "referencia_bases": "Bases reguladoras de las subvenciones para rehabilitar viviendas privadas en San Bartolomé, ejercicios 2024-25, publicadas en el BOP de Las Palmas (número y fecha sin confirmar).",
     "ia": {
-     "fecha": "2026-11-05",
-     "documento": "el enlace de bases de la BDNS es genérico (ley, ordenanza general o portada) (extracto; bases en Bases reguladoras de las subvenciones de rehabilitación de viviendas privadas en San Bartolomé, ejercicios 2024-25, publicadas en el BOP de Las Palmas (www.boplaspalmas.net). No he podido ver el número ni la fecha del boletín.)",
+     "fecha": "2026-11-08",
+     "documento": "el enlace de bases de la BDNS es genérico (ley, ordenanza general o portada) (extracto; bases en Bases reguladoras de las subvenciones para rehabilitar viviendas privadas en San Bartolomé, ejercicios 2024-25, publicadas en el BOP de Las Palmas (número y fecha sin confirmar).)",
      "recomendacion": "publicar",
-     "motivo": "Subvenciona la rehabilitación de viviendas privadas de particulares en San Bartolomé (Lanzarote), con fondos del Gobierno de Canarias a través del Instituto Canario de la Vivienda."
+     "motivo": "Subvenciona obras de rehabilitación de viviendas privadas a personas físicas del municipio, según la ficha de la BDNS."
     },
     "confirmar": [
-     "No se han leído las bases 2024-25 ni el anuncio de la convocatoria. Faltan el importe por vivienda, el porcentaje, las obras subvencionables y los requisitos.",
-     "Hay que comprobar la fecha del BOP en que se publica la convocatoria, porque de ella dependen la apertura y el cierre.",
-     "Comprobar si hay límite de ingresos o de edad, y si la ayuda cubre solo rehabilitación o también eficiencia o accesibilidad."
+     "No se han podido leer las bases ni el anuncio de la convocatoria. Hay que comprobar importe máximo por vivienda, obras subvencionables, requisitos y documentos.",
+     "La BDNS cita las bases de 2024-25 en el BOP de Las Palmas, pero la sede del Ayuntamiento anuncia unas bases 2026-27 (3 jun 2026). Hay que comprobar cuáles se aplican.",
+     "Una noticia de prensa habla de hasta 5.000 € por vivienda y de requisitos de empadronamiento. No es fuente oficial y no la he usado.",
+     "Falta la fecha de publicación de la convocatoria en el BOP, que fija el día de apertura."
     ],
     "espera": {
      "desde": "2026-11-05",
-     "intentos": 1,
-     "proxima": "2026-11-08"
-    }
+     "intentos": 2,
+     "proxima": "2026-11-13"
+    },
+    "datos_no_oficiales": true
    },
    "prov": "Las Palmas",
    "muni": "San Bartolomé",
@@ -365,27 +372,36 @@
     "rehabilitacion"
    ],
    "dest": [
-    "edificio"
+    "edificio",
+    "vivienda"
    ],
    "importe": 0,
-   "imp": "Consulta la convocatoria",
+   "imp": "Un porcentaje del presupuesto protegible según tus ingresos (en 2023, el 50 % si ingresas menos de 21.000 € al año). Máximo por vivienda sin confirmar.",
    "abre": "2026-11-04",
    "cierra": null,
-   "plazo": "Tres meses desde la publicación de la convocatoria en el Boletín Oficial de Bizkaia (BOB). No hemos visto esa publicación, así que no se sabe la fecha exacta.",
+   "plazo": "Tres meses desde la publicación de la convocatoria en el Boletín Oficial de Bizkaia (BOB). No he visto esa publicación, así que la fecha exacta de apertura y de cierre no está confirmada.",
    "irpf": false,
    "fuente": "BDNS nº 939915",
    "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/939915",
-   "resumen": "El Ayuntamiento de Barakaldo convoca para 2026 subvenciones para rehabilitar edificios. Se conceden por concurrencia competitiva y el presupuesto total es de 227.652 €. No hemos podido leer las bases ni la convocatoria. Las ayudas de la convocatoria de 2025 cubrían fachadas, estructura, accesibilidad, seguridad, habitabilidad y eficiencia energética, pero esos datos no están confirmados para 2026.",
+   "resumen": "El Ayuntamiento de Barakaldo da subvenciones a particulares que hacen obras de rehabilitación en edificios residenciales del municipio. La ayuda es un porcentaje del presupuesto protegible y depende de los ingresos. El presupuesto total de la convocatoria 2026 es de 227.652 €. No he podido leer el texto de la convocatoria 2026, así que los datos de cuantía vienen de la web municipal de la edición 2023 y hay que confirmarlos.",
    "req": [
-    "Consulta los requisitos en la convocatoria oficial"
+    "Ser persona física y haber promovido obras de rehabilitación en un edificio residencial de Barakaldo.",
+    "Tus ingresos anuales determinan el porcentaje de ayuda (tramos según el salario mínimo).",
+    "Las obras deben ser subvencionables: fachadas, estructura, seguridad, accesibilidad, habitabilidad o eficiencia energética.",
+    "Comunicar al Ayuntamiento cualquier otra ayuda recibida por la misma obra (Gobierno Vasco, IDAE, etc.)."
    ],
    "docs": [
-    "Consulta la documentación en la convocatoria oficial"
+    "Solicitud en el modelo del Ayuntamiento.",
+    "Documentación que acredite tus ingresos.",
+    "Presupuesto o facturas de las obras.",
+    "Documentación de la propiedad y de la comunidad. Lista exacta por confirmar en la convocatoria."
    ],
    "pasos": [
-    "Lee la convocatoria oficial",
-    "Prepara la documentación",
-    "Presenta la solicitud en la sede del organismo"
+    "Espera a que se publique la convocatoria en el BOB y mira la fecha de apertura.",
+    "Comprueba en las bases si tus obras y tus ingresos encajan.",
+    "Reúne la documentación que pide la convocatoria.",
+    "Presenta la solicitud en la sede electrónica o en la oficina del Ayuntamiento de Barakaldo.",
+    "Justifica las obras realizadas con facturas y comprobantes de pago."
    ],
    "_revisar": {
     "presupuesto_total": 227652,
@@ -395,24 +411,26 @@
     "nota": "Revisa importe por vivienda, requisitos, documentos y pasos antes de aprobar.",
     "bases_no_corresponden": true,
     "ia": {
-     "fecha": "2026-11-05",
+     "fecha": "2026-11-08",
      "documento": "PDF de 10 páginas (no eran las bases de esta ayuda: buscada en internet)",
      "recomendacion": "publicar",
-     "motivo": "Subvenciona obras de rehabilitación de edificios de viviendas en Barakaldo y va dirigida a personas físicas sin actividad económica."
+     "motivo": "Subvenciona obras de rehabilitación de edificios residenciales (fachadas, estructura, accesibilidad, eficiencia) en Barakaldo."
     },
     "confirmar": [
-     "No se ha podido leer el texto de la convocatoria 2026 (CERT_JGL_33_2026_6.pdf), así que faltan el importe por vivienda o el porcentaje, los requisitos, los documentos y cómo se pide.",
-     "Hay que comprobar la fecha de publicación en el BOB y, con ella, las fechas de apertura y cierre del plazo.",
-     "Hay que comprobar si pueden pedirla particulares de viviendas o solo quien ya haya terminado la obra (como en la convocatoria de 2025)."
+     "No se ha leído el texto de la convocatoria 2026 (CERT_JGL_33_2026_6.pdf): faltan importe máximo, fechas exactas, requisitos y documentos.",
+     "Comprobar los tramos de ingresos y porcentajes de 2026. Los datos vistos son de la web de 2023 y de las bases de 2018 (BOB nº 57, 21/03/2018).",
+     "Comprobar la fecha de publicación en el BOB, que marca el inicio y el final de los tres meses de plazo.",
+     "Confirmar si la ayuda es para particulares que promueven obras en comunidades y si hay límite por vivienda."
     ],
     "espera": {
      "desde": "2026-11-05",
-     "intentos": 1,
-     "proxima": "2026-11-08"
+     "intentos": 2,
+     "proxima": "2026-11-13"
     }
    },
    "prov": "Bizkaia",
-   "muni": "Barakaldo"
+   "muni": "Barakaldo",
+   "sede": "https://www.barakaldo.eus/OficinaVirtualBarakaldo/tramites/acceso.do?id=919"
   },
   {
    "id": "bdns-940275",
