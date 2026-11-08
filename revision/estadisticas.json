@@ -1,5 +1,10 @@
 {
  "_leeme": "Contadores anónimos por día (solo de quien acepta la medición anónima).",
- "actualizado": "2026-11-07T08:32",
- "dias": {}
+ "actualizado": "2026-11-08T06:01",
+ "dias": {
+  "2026-11-07": {
+   "visitas": 2,
+   "nuevos": 1
+  }
+ }
 }
