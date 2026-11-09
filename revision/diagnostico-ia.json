@@ -1,28 +1,9 @@
 {
- "fecha": "2026-11-08T05:58",
+ "fecha": "2026-11-09T06:20",
  "modelo": "claude-sonnet-5-5",
- "procesadas": [
-  {
-   "id": "bdns-938969",
-   "documento": "página web (no eran las bases de esta ayuda: buscada en internet)",
-   "coste_usd": 0.0744,
-   "recomendacion": "publicar"
-  },
-  {
-   "id": "bdns-939709",
-   "documento": "el enlace de bases de la BDNS es genérico (ley, ordenanza general o portada) (extracto; bases en Bases reguladoras de las subvenciones para rehabilitar viviendas privadas en San Bartolomé, ejercicios 2024-25, publicadas en el BOP de Las Palmas (número y fecha sin confirmar).)",
-   "coste_usd": 0.5462,
-   "recomendacion": "publicar"
-  },
-  {
-   "id": "bdns-939915",
-   "documento": "PDF de 10 páginas (no eran las bases de esta ayuda: buscada en internet)",
-   "coste_usd": 0.3612,
-   "recomendacion": "publicar"
-  }
- ],
+ "procesadas": [],
  "errores": [],
- "coste_usd": 0.982,
+ "coste_usd": 0.0,
  "pendientes_por_tope": 0,
  "gasto_mes_usd": 4.684,
  "limite_mes_usd": 15.0
