@@ -1,5 +1,5 @@
 rules_version = '2';
-// Reglas de Firestore de Reformayuda: notificaciones y medición anónima.
+// Reglas de Firestore de Obrayuda: notificaciones y medición anónima.
 // Cada móvil solo puede crear, cambiar o borrar su propia suscripción (el id es un resumen de su token).
 // Nadie puede leerlas desde fuera: solo el proceso de envío de GitHub, con la cuenta de servicio.
 service cloud.firestore {

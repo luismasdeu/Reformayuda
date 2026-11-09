@@ -27,7 +27,7 @@ AYUDAS = RAIZ / "web" / "data" / "ayudas.json"
 CANDIDATAS = RAIZ / "revision" / "candidatas.json"
 DESCARTADAS = RAIZ / "revision" / "descartadas.json"
 
-USER_AGENT = "Reformayuda/1.0 (+https://reformayuda.es; busqueda diaria de ayudas de vivienda)"
+USER_AGENT = "Obrayuda/1.0 (+https://reformayuda.es; busqueda diaria de ayudas de vivienda)"
 BOE_SUMARIO = "https://www.boe.es/datosabiertos/api/boe/sumario/{fecha}"
 BDNS_BASES = ["https://www.infosubvenciones.es/bdnstrans/api", "https://www.pap.hacienda.gob.es/bdnstrans/api"]
 BDNS_FICHA = "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/{codigo}"

@@ -15,7 +15,7 @@ Todo es gratis con el plan Spark de Firebase (sin tarjeta).
 
 ## Puesta en marcha (una sola vez, unos 15 minutos)
 
-Hazlo con la cuenta **Reformayuda (contacto@reformayuda.es)**, desde el ordenador.
+Hazlo con la cuenta **Obrayuda (contacto@reformayuda.es)**, desde el ordenador.
 
 ### 1. Crear el proyecto
 1. Entra en **https://console.firebase.google.com** → **Crear un proyecto**.
@@ -32,7 +32,7 @@ Hazlo con la cuenta **Reformayuda (contacto@reformayuda.es)**, desde el ordenado
 ### 3. Registrar la web
 1. Arriba a la izquierda, ⚙️ **Configuración del proyecto → General**.
 2. Abajo, en «Tus apps», pulsa el icono **`</>`** (Web).
-3. Nombre: `Reformayuda`. **No** marques Firebase Hosting. Pulsa **Registrar app**.
+3. Nombre: `Obrayuda`. **No** marques Firebase Hosting. Pulsa **Registrar app**.
 4. Te enseñará un bloque `firebaseConfig` con `apiKey`, `authDomain`, `projectId`, `storageBucket`, `messagingSenderId` y `appId`. **Cópialo**: hay que ponerlo en la app.
 
 Estos datos son públicos por diseño: van dentro de la web y no dan acceso a nada que las reglas no permitan.

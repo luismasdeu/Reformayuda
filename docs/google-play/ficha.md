@@ -1,8 +1,8 @@
 # Ficha de Google Play: textos listos para copiar
 
-## Nombre de la app (30/30)
+## Nombre de la app (27/30)
 ```
-Reformayuda: subvenciones casa
+Obrayuda: subvenciones casa
 ```
 
 ## Descripción breve (80/80)
@@ -12,7 +12,7 @@ Subvenciones para tu casa: ayudas para reformar, rehabilitar o construir. Gratis
 
 ## Descripción completa (3070/4000)
 ```
-AVISO: Reformayuda no es una app oficial. No representa ni está vinculada a ninguna administración pública (Gobierno de España, comunidades autónomas, diputaciones ni ayuntamientos). Es un proyecto privado e independiente que resume información pública.
+AVISO: Obrayuda no es una app oficial. No representa ni está vinculada a ninguna administración pública (Gobierno de España, comunidades autónomas, diputaciones ni ayuntamientos). Es un proyecto privado e independiente que resume información pública.
 
 FUENTES OFICIALES DE LA INFORMACIÓN
 Toda la información procede de estas fuentes oficiales, y cada ayuda de la app enlaza a su convocatoria original:
@@ -22,7 +22,7 @@ Toda la información procede de estas fuentes oficiales, y cada ayuda de la app 
 • Ministerio de Vivienda y Agenda Urbana: https://www.mivau.gob.es
 • Boletines oficiales de cada comunidad autónoma y provincia, y sedes electrónicas de los ayuntamientos, enlazados en cada ayuda.
 
-¿Vas a reformar, rehabilitar o construir tu casa? Reformayuda reúne las subvenciones para tu vivienda en un solo sitio: qué ayudas hay para tu obra, cuánto dan, si cumples los requisitos y cómo pedirlas, sin perderte en los boletines oficiales.
+¿Vas a reformar, rehabilitar o construir tu casa? Obrayuda reúne las subvenciones para tu vivienda en un solo sitio: qué ayudas hay para tu obra, cuánto dan, si cumples los requisitos y cómo pedirlas, sin perderte en los boletines oficiales.
 
 QUÉ PUEDES HACER
 • Buscar ayudas por tipo de obra: aislamiento, ventanas, placas solares, aerotermia, ascensor y accesibilidad, rehabilitar o reformar, y construir o autoconstruir.
@@ -45,7 +45,7 @@ ACTUALIZADA CADA DÍA
 Cada mañana revisamos el BOE, los boletines autonómicos y provinciales y la Base de Datos Nacional de Subvenciones para encontrar ayudas nuevas, y las explicamos en lenguaje claro.
 
 IMPORTANTE
-Reformayuda no presenta solicitudes en tu nombre: te lo deja preparado y te lleva a la sede oficial del organismo, donde la envías tú. La información es orientativa; consulta siempre la convocatoria oficial antes de solicitar una ayuda.
+Obrayuda no presenta solicitudes en tu nombre: te lo deja preparado y te lleva a la sede oficial del organismo, donde la envías tú. La información es orientativa; consulta siempre la convocatoria oficial antes de solicitar una ayuda.
 
 Contacto: contacto@reformayuda.es · reformayuda.es
 ```

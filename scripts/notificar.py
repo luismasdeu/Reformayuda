@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Envía las notificaciones push de Reformayuda.
+"""Envía las notificaciones push de Obrayuda.
 
 Se ejecuta en GitHub después de cada publicación (y por tanto cada mañana). Para cada
 persona suscrita (colección «suscripciones» de Firestore) decide si tiene algo que contarle:
@@ -152,7 +152,7 @@ def main():
     subs = [(d.id, d.to_dict()) for d in db.collection("suscripciones").stream()]
     estadisticas(db, hoy)
     if "--prueba" in sys.argv:
-        envios = [(i, s["token"], {"title": "Prueba de Reformayuda", "body": "Las notificaciones funcionan. Te avisaremos de las ayudas nuevas en tu zona.",
+        envios = [(i, s["token"], {"title": "Prueba de Obrayuda", "body": "Las notificaciones funcionan. Te avisaremos de las ayudas nuevas en tu zona.",
                                    "url": f"{DOMINIO}/", "tag": "prueba"}) for i, s in subs if s.get("token")]
         avisadas = []
     else:

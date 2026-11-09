@@ -64,7 +64,7 @@
    "quien": ["Propietarios de viviendas y comunidades de propietarios", "Las condiciones concretas las fija cada comunidad en su convocatoria"],
    "como": "El Estado reparte el dinero y cada comunidad autónoma publica sus convocatorias, con sus plazos e importes.",
    "estado": "vigente",
-   "estado_texto": "Vigente: cada comunidad autónoma va publicando sus convocatorias. En Reformayuda te avisamos cuando sale la de tu comunidad.",
+   "estado_texto": "Vigente: cada comunidad autónoma va publicando sus convocatorias. En Obrayuda te avisamos cuando sale la de tu comunidad.",
    "revisado": "2026-11-06",
    "fuentes": [["Ministerio de Vivienda y Agenda Urbana", "https://www.mivau.gob.es"], ["Boletín Oficial del Estado", "https://www.boe.es"]],
    "relacionadas": ["pev-rehab"]
@@ -79,7 +79,7 @@
    "tipo": ["eficiencia", "ventanas", "aerotermia"],
    "que": "No es una subvención sino una rebaja en la declaración de la renta por obras que reducen el consumo de energía de la vivienda o del edificio.",
    "quien": ["Propietarios que hacen la obra en su vivienda habitual o en una que alquilan (20 % y 40 %)", "Obras en el edificio de viviendas (60 %)", "Hace falta el certificado energético antes y después de la obra"],
-   "como": "Se aplica al hacer la declaración de la renta del año en que se paga la obra. En Reformayuda puedes calcular cuánto te devuelven.",
+   "como": "Se aplica al hacer la declaración de la renta del año en que se paga la obra. En Obrayuda puedes calcular cuánto te devuelven.",
    "estado": "vigente",
    "estado_texto": "Vigente para obras hechas hasta el 31 de diciembre de 2026 (las de edificios pueden tener ampliación; compruébalo en la Agencia Tributaria).",
    "revisado": "2026-11-06",

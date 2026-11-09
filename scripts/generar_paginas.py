@@ -50,7 +50,7 @@ PERMISO = {
     "construccion": ("Licencia de obra", "Siempre licencia de obra mayor, con proyecto de arquitecto."),
 }
 MESES = ["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre"]
-AVISO = ("Reformayuda no es una web oficial ni está vinculada a ninguna administración. La información es orientativa "
+AVISO = ("Obrayuda no es una web oficial ni está vinculada a ninguna administración. La información es orientativa "
          "y procede de fuentes oficiales; antes de solicitar una ayuda, consulta siempre la convocatoria original.")
 
 e = lambda t: html.escape(str(t or ""), quote=True)
@@ -124,7 +124,7 @@ def pagina(ruta, titulo, descripcion, cuerpo, migas, jsonld=None, indexar=True):
 </head>
 <body>
 <header class="top"><div class="wrap">
-  <a class="logo" href="/"><img src="/icons/icon.svg" width="32" height="32" alt=""><span>Reform<b>ayuda</b></span></a>
+  <a class="logo" href="/"><img src="/icons/icon.svg" width="32" height="32" alt=""><span>Obr<b>ayuda</b></span></a>
   <a class="btn" href="/">Abrir la app</a>
 </div></header>
 <main class="wrap">
@@ -133,8 +133,8 @@ def pagina(ruta, titulo, descripcion, cuerpo, migas, jsonld=None, indexar=True):
 <p class="aviso">{e(AVISO)}</p>
 </main>
 <footer class="pie"><div class="wrap">
-  <p><b>Reformayuda</b> · Buscador gratuito de ayudas y subvenciones para reformar o construir tu casa. Sin registro y sin anuncios. Contacto: <a href="mailto:contacto@reformayuda.es">contacto@reformayuda.es</a></p>
-  <p><a href="/subvenciones/">Todas las ayudas</a> · <a href="/preguntas/">Preguntas frecuentes</a> · <a href="/que-es-reformayuda/">Qué es Reformayuda</a> · <a href="/programas/">Programas de ayudas</a> · <a href="/aviso-legal/">Aviso legal</a> · <a href="/privacidad/">Privacidad</a> · <a href="/cookies/">Cookies</a></p>
+  <p><b>Obrayuda</b> · Buscador gratuito de ayudas y subvenciones para reformar o construir tu casa. Sin registro y sin anuncios. Contacto: <a href="mailto:contacto@reformayuda.es">contacto@reformayuda.es</a></p>
+  <p><a href="/subvenciones/">Todas las ayudas</a> · <a href="/preguntas/">Preguntas frecuentes</a> · <a href="/que-es-reformayuda/">Qué es Obrayuda</a> · <a href="/programas/">Programas de ayudas</a> · <a href="/aviso-legal/">Aviso legal</a> · <a href="/privacidad/">Privacidad</a> · <a href="/cookies/">Cookies</a></p>
 </div></footer>
 </body>
 </html>
@@ -205,7 +205,7 @@ def pagina_ayuda(a, todas):
     if a["ccaa"] != "all":
         migas.append((a["ccaa"], f"/subvenciones/{slug(a['ccaa'])}/"))
     migas.append((a["title"], a["_ruta"]))
-    return pagina(a["_ruta"], f"{a['title']} | Reformayuda", desc[:300], cuerpo, migas, grant)
+    return pagina(a["_ruta"], f"{a['title']} | Obrayuda", desc[:300], cuerpo, migas, grant)
 
 
 def pagina_listado(ruta, h1, intro, ayudas, migas, enlaces="", indexar=True):
@@ -215,7 +215,7 @@ def pagina_listado(ruta, h1, intro, ayudas, migas, enlaces="", indexar=True):
 <p class="lead">{e(intro)}</p>
 {lista(ayudas, 'Ahora mismo no hay ayudas publicadas aquí. Las revisamos cada día: vuelve pronto o activa los avisos en la app.')}
 {enlaces}"""
-    return pagina(ruta, f"{h1} | Reformayuda", desc, cuerpo, migas, indexar=indexar)
+    return pagina(ruta, f"{h1} | Obrayuda", desc, cuerpo, migas, indexar=indexar)
 
 
 def enlaces_tipos(base):
@@ -244,15 +244,15 @@ def pagina_preguntas(faq):
 {indice}
 {''.join(secciones)}"""
     ld = {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": entidades}
-    return pagina("/preguntas/", "Preguntas frecuentes sobre ayudas y subvenciones para tu casa | Reformayuda",
+    return pagina("/preguntas/", "Preguntas frecuentes sobre ayudas y subvenciones para tu casa | Obrayuda",
                   "Respuestas sencillas sobre subvenciones para reformar la casa, deducciones del IRPF, licencias de obra, "
                   "declaración responsable, comunidades de vecinos y casas de campo.",
                   cuerpo, [("Inicio", "/"), ("Preguntas frecuentes", "/preguntas/")], ld)
 
 
 def pagina_que_es(ayudas, faq):
-    cuerpo = f"""<h1>¿Qué es Reformayuda?</h1>
-<p class="lead"><b>Reformayuda</b> es un buscador gratuito y sin registro de <b>ayudas y subvenciones públicas para reformar, rehabilitar o construir vivienda en España</b>.</p>
+    cuerpo = f"""<h1>¿Qué es Obrayuda?</h1>
+<p class="lead"><b>Obrayuda</b> es un buscador gratuito y sin registro de <b>ayudas y subvenciones públicas para reformar, rehabilitar o construir vivienda en España</b>.</p>
 <h2>Qué hace</h2>
 <ul>
 <li>Reúne las ayudas del Estado, de las comunidades autónomas, de las diputaciones y de los ayuntamientos para obras en viviendas y edificios: aislamiento, ventanas, placas solares, aerotermia, ascensores y accesibilidad, rehabilitación y construcción.</li>
@@ -269,23 +269,23 @@ def pagina_que_es(ayudas, faq):
 <li><b>No es un organismo oficial</b> ni está vinculada a ninguna administración.</li>
 <li><b>No presenta solicitudes</b> en nombre de nadie: lleva a la sede oficial para que cada persona la presente.</li>
 </ul>
-<h2>No confundir con reformayuda.com</h2>
-<p><b>Reformayuda.es</b> (esta web) <b>no tiene ninguna relación con reformayuda.com</b>, que es otra web distinta, de otro titular. Reformayuda.es solo informa de ayudas y subvenciones públicas: no pide presupuestos, no compara empresas y no verifica profesionales.</p>
+<h2>Antes se llamaba Reformayuda.es</h2>
+<p><b>Obrayuda</b> se llamaba antes <b>Reformayuda.es</b>. Cambió de nombre para no confundirse con <b>reformayuda.com</b>, que es otra web distinta, de otro titular y sin ninguna relación con esta. Obrayuda solo informa de ayudas y subvenciones públicas: no pide presupuestos, no compara empresas y no verifica profesionales.</p>
 <h2>De dónde salen los datos</h2>
 <p>Cada día se revisan el Boletín Oficial del Estado (BOE) y la Base de Datos Nacional de Subvenciones (BDNS), donde las administraciones publican sus convocatorias. Cada ayuda se comprueba antes de publicarla y enlaza a su fuente oficial. Ahora mismo hay {len(ayudas)} ayudas publicadas.</p>
 <h2>Cómo se usa</h2>
 <p>Es gratis, sin registro, sin anuncios y sin recoger datos personales: todo se guarda en el propio dispositivo. Funciona en el navegador y se puede instalar como app en el móvil.</p>
-<p><a class="btn grande" href="/">Abrir Reformayuda</a> <a class="btn alt" href="/subvenciones/">Ver todas las ayudas</a></p>
+<p><a class="btn grande" href="/">Abrir Obrayuda</a> <a class="btn alt" href="/subvenciones/">Ver todas las ayudas</a></p>
 <h2>Quién está detrás</h2>
-<p>Reformayuda es un proyecto personal de Luis Eduardo Masdeu Cano. Contacto: <a href="mailto:contacto@reformayuda.es">contacto@reformayuda.es</a>.</p>"""
-    ld = {"@context": "https://schema.org", "@type": "AboutPage", "name": "Qué es Reformayuda", "url": f"{DOMINIO}/que-es-reformayuda/",
-          "about": {"@type": "WebApplication", "name": "Reformayuda", "url": f"{DOMINIO}/", "applicationCategory": "FinanceApplication",
+<p>Obrayuda es un proyecto personal de Luis Eduardo Masdeu Cano. Contacto: <a href="mailto:contacto@reformayuda.es">contacto@reformayuda.es</a>.</p>"""
+    ld = {"@context": "https://schema.org", "@type": "AboutPage", "name": "Qué es Obrayuda", "url": f"{DOMINIO}/que-es-reformayuda/",
+          "about": {"@type": "WebApplication", "name": "Obrayuda", "url": f"{DOMINIO}/", "applicationCategory": "FinanceApplication",
                     "isAccessibleForFree": True, "description": "Buscador gratuito de ayudas y subvenciones públicas para reformar, rehabilitar o construir vivienda en España. No es una empresa de reformas ni un directorio de profesionales.",
-                    "disambiguatingDescription": "No tiene ninguna relación con reformayuda.com, que es otra web distinta, de otro titular."}}
-    return pagina("/que-es-reformayuda/", "¿Qué es Reformayuda? Buscador gratuito de ayudas y subvenciones para tu casa",
-                  "Reformayuda es un buscador gratuito y sin registro de ayudas y subvenciones públicas para reformar, rehabilitar o "
+                    "alternateName": "Reformayuda.es (nombre anterior)", "disambiguatingDescription": "Antes se llamaba Reformayuda.es. No tiene ninguna relación con reformayuda.com, que es otra web distinta, de otro titular."}}
+    return pagina("/que-es-reformayuda/", "¿Qué es Obrayuda? Buscador gratuito de ayudas y subvenciones para tu casa",
+                  "Obrayuda es un buscador gratuito y sin registro de ayudas y subvenciones públicas para reformar, rehabilitar o "
                   "construir vivienda en España. No es una empresa de reformas ni un directorio de profesionales.",
-                  cuerpo, [("Inicio", "/"), ("Qué es Reformayuda", "/que-es-reformayuda/")], ld)
+                  cuerpo, [("Inicio", "/"), ("Qué es Obrayuda", "/que-es-reformayuda/")], ld)
 
 
 ESTADO_PROG = {"vigente": ("abierta", "Vigente"), "cerrado": ("cerrada", "Convocatoria cerrada"), "finalizado": ("cerrada", "Programa finalizado")}
@@ -317,12 +317,12 @@ def pagina_programa(p, por_id):
 {f'<h2>Ayudas parecidas que puedes pedir</h2><ul>{otras}</ul>' if otras else ''}
 <p>Más ayudas para: {por_tipo}.</p>
 <h2>Fuentes oficiales</h2><ul>{fuentes}</ul>
-<p class="muted">Reformayuda no es una web oficial: resume la información de estas fuentes. Lo que vale es lo que publica el boletín oficial.</p>"""
+<p class="muted">Obrayuda no es una web oficial: resume la información de estas fuentes. Lo que vale es lo que publica el boletín oficial.</p>"""
     ruta = f"/programas/{p['slug']}/"
     ld = {"@context": "https://schema.org", "@type": "Article", "headline": p["titulo"], "url": f"{DOMINIO}{ruta}",
           "dateModified": p["revisado"], "about": p["nombre"], "inLanguage": "es",
-          "publisher": {"@type": "Organization", "name": "Reformayuda", "url": f"{DOMINIO}/"}}
-    return pagina(ruta, f"{p['titulo']} · Reformayuda", f"{p['nombre']}: {p['estado_texto'][:120]}",
+          "publisher": {"@type": "Organization", "name": "Obrayuda", "url": f"{DOMINIO}/"}}
+    return pagina(ruta, f"{p['titulo']} · Obrayuda", f"{p['nombre']}: {p['estado_texto'][:120]}",
                   cuerpo, [("Inicio", "/"), ("Programas", "/programas/"), (p["nombre"], ruta)], ld)
 
 
@@ -339,7 +339,7 @@ def paginas_programas(ayudas):
 <p class="lead">Los programas de ayudas más conocidos para reformar, rehabilitar o mejorar la eficiencia de tu casa: qué son, a quién van dirigidos y si se pueden pedir ahora.</p>
 <ul>{filas}</ul>
 <p><a class="btn grande" href="/">Ver las ayudas abiertas en mi zona</a></p>"""
-    rutas.append(pagina("/programas/", "Programas de ayudas para la vivienda: Renhata, PREE, Next Generation… · Reformayuda",
+    rutas.append(pagina("/programas/", "Programas de ayudas para la vivienda: Renhata, PREE, Next Generation… · Obrayuda",
                         "Qué son los programas de ayudas para reformar la vivienda más conocidos y si se pueden pedir ahora.",
                         cuerpo, [("Inicio", "/"), ("Programas", "/programas/")]))
     return rutas
@@ -356,24 +356,24 @@ def paginas_legales():
         if not m:
             continue
         cuerpo = m.group(1).replace("<h2>", "<h1>", 1).replace("</h2>", "</h1>", 1)
-        rutas.append(pagina(ruta, f"{nombre} · Reformayuda", f"{nombre} de Reformayuda.",
+        rutas.append(pagina(ruta, f"{nombre} · Obrayuda", f"{nombre} de Obrayuda.",
                             f"<article>{cuerpo}</article>", [("Inicio", "/"), (nombre, ruta)]))
     return rutas
 
 
 def llms_txt(ayudas, faq, rutas_tipo, rutas_ccaa):
     abiertas = [a for a in ayudas if estado(a)[0] != "cerrada"]
-    lineas = ["# Reformayuda", "",
+    lineas = ["# Obrayuda", "",
               "> Buscador gratuito y sin registro de ayudas y subvenciones para reformar, rehabilitar o construir vivienda en España "
               "(estatales, autonómicas, provinciales y municipales), con calculadora de la deducción del IRPF por obras de eficiencia "
               "energética y respuestas sobre licencias de obra, comunidades de vecinos y casas de campo. "
               "Las convocatorias se revisan cada día a partir del BOE y la Base de Datos Nacional de Subvenciones.", "",
               AVISO, "",
-              "Importante: Reformayuda.es no tiene ninguna relación con reformayuda.com, que es otra web distinta, de otro titular. "
-              "Reformayuda.es no pide presupuestos, no compara empresas ni pone en contacto con profesionales: solo informa de subvenciones públicas.", "",
+              "Importante: Obrayuda se llamaba antes Reformayuda.es. No tiene ninguna relación con reformayuda.com, que es otra web distinta, de otro titular. "
+              "Obrayuda no pide presupuestos, no compara empresas ni pone en contacto con profesionales: solo informa de subvenciones públicas.", "",
               "## Páginas principales", "",
-              f"- [Qué es Reformayuda]({DOMINIO}/que-es-reformayuda/): qué hace y qué no hace (no es una empresa de reformas ni un directorio de profesionales)",
-              f"- [App de Reformayuda]({DOMINIO}/): buscador, asistente de solicitud, calculadora del IRPF y avisos de plazos",
+              f"- [Qué es Obrayuda]({DOMINIO}/que-es-reformayuda/): qué hace y qué no hace (no es una empresa de reformas ni un directorio de profesionales)",
+              f"- [App de Obrayuda]({DOMINIO}/): buscador, asistente de solicitud, calculadora del IRPF y avisos de plazos",
               f"- [Todas las ayudas]({DOMINIO}/subvenciones/): listado con importes y plazos",
               f"- [Preguntas frecuentes]({DOMINIO}/preguntas/): {len(faq['preguntas'])} respuestas sobre subvenciones, IRPF, licencias y comunidades",
               f"- [Programas de ayudas]({DOMINIO}/programas/): Plan Renhata, PREE 5000, Next Generation, Plan Estatal de Vivienda y deducción del IRPF, con su estado actual", "",
@@ -453,7 +453,7 @@ def main():
     enlaces_ccaa = "<h2>Por comunidad autónoma</h2><ul class=\"enlaces\">" + "".join(
         f'<li><a href="/subvenciones/{slug(c)}/">{e(c)}</a></li>' for c in CCAA) + "</ul>"
     rutas.append(pagina_listado("/subvenciones/", f"Ayudas y subvenciones para reformar o construir tu casa ({HOY.year})",
-                                "Todas las ayudas publicadas en Reformayuda: estatales, autonómicas, provinciales y municipales, "
+                                "Todas las ayudas publicadas en Obrayuda: estatales, autonómicas, provinciales y municipales, "
                                 "para particulares y comunidades de vecinos. Revisamos los boletines oficiales cada día.",
                                 ayudas, [("Inicio", "/"), ("Ayudas", "/subvenciones/")],
                                 enlaces_tipos("/subvenciones/") + enlaces_ccaa))

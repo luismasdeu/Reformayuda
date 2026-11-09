@@ -1,5 +1,5 @@
-// Service worker de Reformayuda: la app funciona sin conexión y las ayudas se actualizan al volver la red.
-const VERSION = "reformayuda-v19";
+// Service worker de Obrayuda: la app funciona sin conexión y las ayudas se actualizan al volver la red.
+const VERSION = "reformayuda-v20";
 const SHELL = ["./", "index.html", "data/ayudas.json", "data/preguntas.json", "manifest.webmanifest", "icons/icon.svg", "icons/icon-192.png", "icons/icon-512.png", "fonts/bricolage-grotesque.woff2", "fonts/nunito-sans.woff2"];
 
 self.addEventListener("install", e => {
@@ -37,7 +37,7 @@ self.addEventListener("push", e => {
   let p = {};
   try { p = e.data ? e.data.json() : {}; } catch (err) { p = { data: { body: e.data && e.data.text() } }; }
   const d = p.data || {}, n = p.notification || {};
-  const title = d.title || n.title || "Reformayuda";
+  const title = d.title || n.title || "Obrayuda";
   e.waitUntil(self.registration.showNotification(title, {
     body: d.body || n.body || "Hay novedades en tus ayudas.",
     icon: "icons/icon-192.png",

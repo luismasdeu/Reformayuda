@@ -1,4 +1,4 @@
-# Publicar Reformayuda en Google Play
+# Publicar Obrayuda en Google Play
 
 La app de Android es la misma web, empaquetada como **Trusted Web Activity (TWA)**. Cuando actualizas la web, la app se actualiza sola; solo hay que subir una versión nueva a Google Play si cambias el icono, el nombre o los permisos.
 
@@ -16,7 +16,7 @@ La app de Android es la misma web, empaquetada como **Trusted Web Activity (TWA)
 2. Comprueba que reconoce el manifiesto, el service worker y los iconos.
 3. **Package for stores → Android → Generate package** con estos datos:
    - Package ID: `es.reformayuda.app`
-   - App name: `Reformayuda`
+   - App name: `Obrayuda`
    - Notification delegation: **activada** (para las notificaciones, ver `docs/notificaciones.md`)
    - Signing key: **Create new**. Guarda en un lugar seguro el archivo de firma y las contraseñas que te da. Sin ellos no podrás actualizar la app nunca más.
 4. Descarga el ZIP. Dentro hay un archivo `.aab` (lo que se sube a Google Play) y un `assetlinks.json`.
@@ -31,7 +31,7 @@ La app de Android es la misma web, empaquetada como **Trusted Web Activity (TWA)
 
 > Textos listos para copiar, gráfico y capturas: `docs/google-play/ficha.md`.
 
-- **Nombre:** Reformayuda: subvenciones casa
+- **Nombre:** Obrayuda: subvenciones casa
 - **Descripción corta y completa:** en `docs/google-play/ficha.md`
 - **Icono:** `web/icons/icon-512.png`
 - **Gráfico de cabecera:** `docs/google-play/grafico-1024x500.png`
@@ -52,7 +52,7 @@ Sin notificaciones no se recoge nada, pero si alguien las activa se guarda en Fi
 ## 5. Norma importante: información de la Administración
 Google exige que las apps con información de trámites públicos digan que **no son oficiales** y enlacen a las fuentes. Pon esto al principio de la descripción larga:
 
-> Reformayuda no es una app oficial ni está vinculada a ninguna administración pública. La información procede de fuentes oficiales (BOE, Base de Datos Nacional de Subvenciones, boletines autonómicos y provinciales y Agencia Tributaria), con enlace a la convocatoria original en cada ayuda.
+> Obrayuda no es una app oficial ni está vinculada a ninguna administración pública. La información procede de fuentes oficiales (BOE, Base de Datos Nacional de Subvenciones, boletines autonómicos y provinciales y Agencia Tributaria), con enlace a la convocatoria original en cada ayuda.
 
 La app ya lo dice en el pie de página, en el aviso legal y en cada ficha.
 

@@ -40,7 +40,7 @@ MAX_PDF_PAGINAS = 40      # más páginas (p. ej. un boletín entero): solo se e
 MAX_TEXTO = 120_000       # caracteres
 TIPOS = ["eficiencia", "solar", "aerotermia", "ventanas", "accesibilidad", "rehabilitacion", "construccion"]
 
-INSTRUCCIONES = """Ayudas a Reformayuda, una web gratuita que explica en lenguaje sencillo las ayudas públicas españolas para reformar o construir una vivienda. Recibes la ficha de la Base de Datos Nacional de Subvenciones (BDNS) de una convocatoria y, si se ha podido descargar, el texto de sus bases o del anuncio oficial.
+INSTRUCCIONES = """Ayudas a Obrayuda, una web gratuita que explica en lenguaje sencillo las ayudas públicas españolas para reformar o construir una vivienda. Recibes la ficha de la Base de Datos Nacional de Subvenciones (BDNS) de una convocatoria y, si se ha podido descargar, el texto de sus bases o del anuncio oficial.
 
 Extrae los datos para una ficha que leerán particulares sin conocimientos legales:
 - Usa solo fuentes oficiales: boletines oficiales (BOE, boletines autonómicos y provinciales), la BDNS y webs o sedes electrónicas de las administraciones. Nunca uses prensa, blogs, webs de empresas ni redes sociales, aunque den cifras: si un dato solo aparece ahí, déjalo vacío, apúntalo en «dudas» y marca «datos_no_oficiales».
@@ -187,7 +187,7 @@ def clasificar(cliente, c, ficha):
     datos = {k: c.get(k) for k in ("title", "org", "resumen", "ccaa", "muni")}
     r = cliente.beta.messages.create(
         model=MODELO, max_tokens=2000,
-        messages=[{"role": "user", "content": "Decide si esta convocatoria entra en Reformayuda, con este criterio:\n" + criterio +
+        messages=[{"role": "user", "content": "Decide si esta convocatoria entra en Obrayuda, con este criterio:\n" + criterio +
                    "\n\nSi con estos datos no está claro, responde true (se estudiará con más detalle).\n\nDatos:\n" +
                    json.dumps(datos, ensure_ascii=False) + "\n\nFicha de la BDNS:\n" + json.dumps(ficha or {}, ensure_ascii=False)[:8000]}],
         output_config={"effort": "low", "format": {"type": "json_schema", "schema": CLASIFICAR}},
@@ -208,7 +208,7 @@ def preguntar(cliente, c, ficha, bloques, buscar=None, pista=""):
          "oficial o sede del organismo) y léelas; usa solo fuentes oficiales y busca lo justo." if buscar else "") +
         (f"\n\nSegún el extracto, las bases completas están en: {pista}. Búscalas y léelas; complementa con ellas "
          "lo que ya sabes del extracto." if pista else "") +
-        "\n\nExtrae los datos de la ficha de Reformayuda.")}]}]
+        "\n\nExtrae los datos de la ficha de Obrayuda.")}]}]
     uso = {"entrada": 0, "salida": 0, "busquedas": 0}
     for _ in range(4):
         r = cliente.beta.messages.create(

@@ -158,7 +158,7 @@
     "dni electronico",
     "identificar"
    ],
-   "a": "<p>Reformayuda no te pide ninguna clave. Para <b>presentar</b> la solicitud en la sede oficial sí suele hacer falta Cl@ve, certificado digital o DNI electrónico.</p><p>En una comunidad de vecinos la presenta el presidente o el administrador.</p>",
+   "a": "<p>Obrayuda no te pide ninguna clave. Para <b>presentar</b> la solicitud en la sede oficial sí suele hacer falta Cl@ve, certificado digital o DNI electrónico.</p><p>En una comunidad de vecinos la presenta el presidente o el administrador.</p>",
    "act": ""
   },
   {
@@ -230,7 +230,7 @@
   },
   {
    "cat": "tramites",
-   "q": "¿Reformayuda presenta la solicitud por mí?",
+   "q": "¿Obrayuda presenta la solicitud por mí?",
    "k": [
     "presenta",
     "presentais",
@@ -241,7 +241,7 @@
     "oficial",
     "organismo"
    ],
-   "a": "<p>No. Reformayuda no es un organismo oficial ni te representa. Te ayuda a encontrar la ayuda, comprobar requisitos y reunir los papeles, y te lleva a la sede oficial para que la presentes tú.</p>",
+   "a": "<p>No. Obrayuda no es un organismo oficial ni te representa. Te ayuda a encontrar la ayuda, comprobar requisitos y reunir los papeles, y te lleva a la sede oficial para que la presentes tú.</p>",
    "act": ""
   },
   {
@@ -256,7 +256,7 @@
     "baja",
     "eliminar"
    ],
-   "a": "<p>Reformayuda no te pide email ni ningún dato personal, y no hay cuentas. Todo se queda en tu móvil y puedes borrarlo con un botón en «Mis datos».</p>",
+   "a": "<p>Obrayuda no te pide email ni ningún dato personal, y no hay cuentas. Todo se queda en tu móvil y puedes borrarlo con un botón en «Mis datos».</p>",
    "act": "<button class=\"btn sm\" data-go=\"avisos\">Mis datos</button> <button class=\"btn sm\" data-legal=\"privacidad\">Privacidad</button>"
   },
   {
@@ -761,7 +761,7 @@
     "se me pase",
     "olvide"
    ],
-   "a": "<p>De dos formas, sin email ni cuenta:</p><p>1) Toca <b>«Avisarme»</b> en una ayuda: al abrir Reformayuda te diremos si quedan 7 días, si acaba de abrir o si hay ayudas nuevas en tu zona.<br>2) Toca <b>Google</b> u <b>Outlook</b> en «Añadir a tu calendario» y el plazo queda en tu agenda del móvil, con sus avisos.</p>",
+   "a": "<p>De dos formas, sin email ni cuenta:</p><p>1) Toca <b>«Avisarme»</b> en una ayuda: al abrir Obrayuda te diremos si quedan 7 días, si acaba de abrir o si hay ayudas nuevas en tu zona.<br>2) Toca <b>Google</b> u <b>Outlook</b> en «Añadir a tu calendario» y el plazo queda en tu agenda del móvil, con sus avisos.</p>",
    "act": "<button class=\"btn sm\" data-go=\"avisos\">Mis avisos</button>"
   },
   {
@@ -1321,7 +1321,7 @@
     "apple",
     "ipad"
    ],
-   "a": "<p>Sí, desde <b>iOS 16.4</b>, pero solo si instalas Reformayuda en la pantalla de inicio: abre reformayuda.es en <b>Safari</b> → <b>Compartir</b> → <b>«Añadir a pantalla de inicio»</b>. Ábrela desde ese icono y activa los avisos.</p>",
+   "a": "<p>Sí, desde <b>iOS 16.4</b>, pero solo si instalas Obrayuda en la pantalla de inicio: abre reformayuda.es en <b>Safari</b> → <b>Compartir</b> → <b>«Añadir a pantalla de inicio»</b>. Ábrela desde ese icono y activa los avisos.</p>",
    "act": "<button class=\"btn sm\" data-go=\"avisos\">Ir a Avisos</button>"
   },
   {
@@ -1339,7 +1339,7 @@
   },
   {
    "cat": "app",
-   "q": "¿Cómo instalo Reformayuda como app?",
+   "q": "¿Cómo instalo Obrayuda como app?",
    "k": [
     "instalar",
     "descargar app",
