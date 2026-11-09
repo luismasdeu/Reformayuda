@@ -269,8 +269,6 @@ def pagina_que_es(ayudas, faq):
 <li><b>No es un organismo oficial</b> ni está vinculada a ninguna administración.</li>
 <li><b>No presenta solicitudes</b> en nombre de nadie: lleva a la sede oficial para que cada persona la presente.</li>
 </ul>
-<h2>Antes se llamaba Reformayuda.es</h2>
-<p><b>Obrayuda</b> se llamaba antes <b>Reformayuda.es</b>. Cambió de nombre para no confundirse con <b>reformayuda.com</b>, que es otra web distinta, de otro titular y sin ninguna relación con esta. Obrayuda solo informa de ayudas y subvenciones públicas: no pide presupuestos, no compara empresas y no verifica profesionales.</p>
 <h2>De dónde salen los datos</h2>
 <p>Cada día se revisan el Boletín Oficial del Estado (BOE) y la Base de Datos Nacional de Subvenciones (BDNS), donde las administraciones publican sus convocatorias. Cada ayuda se comprueba antes de publicarla y enlaza a su fuente oficial. Ahora mismo hay {len(ayudas)} ayudas publicadas.</p>
 <h2>Cómo se usa</h2>
@@ -280,8 +278,7 @@ def pagina_que_es(ayudas, faq):
 <p>Obrayuda es un proyecto personal de Luis Eduardo Masdeu Cano. Contacto: <a href="mailto:contacto@reformayuda.es">contacto@reformayuda.es</a>.</p>"""
     ld = {"@context": "https://schema.org", "@type": "AboutPage", "name": "Qué es Obrayuda", "url": f"{DOMINIO}/que-es-reformayuda/",
           "about": {"@type": "WebApplication", "name": "Obrayuda", "url": f"{DOMINIO}/", "applicationCategory": "FinanceApplication",
-                    "isAccessibleForFree": True, "description": "Buscador gratuito de ayudas y subvenciones públicas para reformar, rehabilitar o construir vivienda en España. No es una empresa de reformas ni un directorio de profesionales.",
-                    "alternateName": "Reformayuda.es (nombre anterior)", "disambiguatingDescription": "Antes se llamaba Reformayuda.es. No tiene ninguna relación con reformayuda.com, que es otra web distinta, de otro titular."}}
+                    "isAccessibleForFree": True, "description": "Buscador gratuito de ayudas y subvenciones públicas para reformar, rehabilitar o construir vivienda en España. No es una empresa de reformas ni un directorio de profesionales."}}
     return pagina("/que-es-reformayuda/", "¿Qué es Obrayuda? Buscador gratuito de ayudas y subvenciones para tu casa",
                   "Obrayuda es un buscador gratuito y sin registro de ayudas y subvenciones públicas para reformar, rehabilitar o "
                   "construir vivienda en España. No es una empresa de reformas ni un directorio de profesionales.",
@@ -369,8 +366,6 @@ def llms_txt(ayudas, faq, rutas_tipo, rutas_ccaa):
               "energética y respuestas sobre licencias de obra, comunidades de vecinos y casas de campo. "
               "Las convocatorias se revisan cada día a partir del BOE y la Base de Datos Nacional de Subvenciones.", "",
               AVISO, "",
-              "Importante: Obrayuda se llamaba antes Reformayuda.es. No tiene ninguna relación con reformayuda.com, que es otra web distinta, de otro titular. "
-              "Obrayuda no pide presupuestos, no compara empresas ni pone en contacto con profesionales: solo informa de subvenciones públicas.", "",
               "## Páginas principales", "",
               f"- [Qué es Obrayuda]({DOMINIO}/que-es-reformayuda/): qué hace y qué no hace (no es una empresa de reformas ni un directorio de profesionales)",
               f"- [App de Obrayuda]({DOMINIO}/): buscador, asistente de solicitud, calculadora del IRPF y avisos de plazos",
