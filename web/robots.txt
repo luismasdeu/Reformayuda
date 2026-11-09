@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 Disallow: /revisar/
-Sitemap: https://reformayuda.es/sitemap.xml
+Sitemap: https://obrayuda.es/sitemap.xml

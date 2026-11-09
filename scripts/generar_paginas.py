@@ -25,7 +25,7 @@ from pathlib import Path
 
 RAIZ = Path(__file__).resolve().parent.parent
 WEB = RAIZ / "web"
-DOMINIO = "https://reformayuda.es"
+DOMINIO = "https://obrayuda.es"
 HOY = dt.date.today()
 
 TIPOS = {

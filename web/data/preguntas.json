@@ -1282,7 +1282,7 @@
     "no recibo avisos",
     "no salen notificaciones"
    ],
-   "a": "<p>Casi siempre es un ajuste del móvil. Revisa por orden:</p><ol><li><b>Ábrela en Chrome.</b> Si arriba ves una barra con una <b>X</b> y una flecha <b>∨</b>, estás dentro de otra app (Google, Facebook, Instagram…), que no muestra notificaciones. Toca <b>⋮ → «Abrir en Chrome»</b> o escribe reformayuda.es en Chrome.</li><li><b>Permiso de la web:</b> en Chrome, toca el icono junto a la dirección → <b>Permisos → Notificaciones</b> → Permitir.</li><li><b>Notificaciones de Chrome en Android:</b> Ajustes → Aplicaciones → <b>Chrome</b> (no la app «Google») → Notificaciones → activa <b>«Todas las notificaciones de Chrome»</b> y, más abajo en «Sitios», <b>reformayuda.es</b>.</li><li>En <b>Avisos</b>, desactiva y vuelve a activar las notificaciones y pulsa <b>«Probar en este móvil»</b>.</li></ol>",
+   "a": "<p>Casi siempre es un ajuste del móvil. Revisa por orden:</p><ol><li><b>Ábrela en Chrome.</b> Si arriba ves una barra con una <b>X</b> y una flecha <b>∨</b>, estás dentro de otra app (Google, Facebook, Instagram…), que no muestra notificaciones. Toca <b>⋮ → «Abrir en Chrome»</b> o escribe obrayuda.es en Chrome.</li><li><b>Permiso de la web:</b> en Chrome, toca el icono junto a la dirección → <b>Permisos → Notificaciones</b> → Permitir.</li><li><b>Notificaciones de Chrome en Android:</b> Ajustes → Aplicaciones → <b>Chrome</b> (no la app «Google») → Notificaciones → activa <b>«Todas las notificaciones de Chrome»</b> y, más abajo en «Sitios», <b>obrayuda.es</b>.</li><li>En <b>Avisos</b>, desactiva y vuelve a activar las notificaciones y pulsa <b>«Probar en este móvil»</b>.</li></ol>",
    "act": "<button class=\"btn sm\" data-go=\"avisos\">Ir a Avisos</button>"
   },
   {
@@ -1295,7 +1295,7 @@
     "bloqueando esta categoria",
     "mostrar notificaciones"
    ],
-   "a": "<p>Si Android dice <b>«está bloqueando esta categoría»</b>, es que las notificaciones de <b>Chrome</b> están apagadas en general. Ve a <b>Ajustes → Aplicaciones → Chrome → Notificaciones</b> y activa primero el interruptor de arriba, <b>«Todas las notificaciones de Chrome»</b>. Después ya podrás activar reformayuda.es.</p><p>Ojo: la app <b>Google</b> (la del buscador) y <b>Chrome</b> son distintas, cada una con sus ajustes.</p>",
+   "a": "<p>Si Android dice <b>«está bloqueando esta categoría»</b>, es que las notificaciones de <b>Chrome</b> están apagadas en general. Ve a <b>Ajustes → Aplicaciones → Chrome → Notificaciones</b> y activa primero el interruptor de arriba, <b>«Todas las notificaciones de Chrome»</b>. Después ya podrás activar obrayuda.es.</p><p>Ojo: la app <b>Google</b> (la del buscador) y <b>Chrome</b> son distintas, cada una con sus ajustes.</p>",
    "act": "<button class=\"btn sm\" data-go=\"avisos\">Ir a Avisos</button>"
   },
   {
@@ -1321,7 +1321,7 @@
     "apple",
     "ipad"
    ],
-   "a": "<p>Sí, desde <b>iOS 16.4</b>, pero solo si instalas Obrayuda en la pantalla de inicio: abre reformayuda.es en <b>Safari</b> → <b>Compartir</b> → <b>«Añadir a pantalla de inicio»</b>. Ábrela desde ese icono y activa los avisos.</p>",
+   "a": "<p>Sí, desde <b>iOS 16.4</b>, pero solo si instalas Obrayuda en la pantalla de inicio: abre obrayuda.es en <b>Safari</b> → <b>Compartir</b> → <b>«Añadir a pantalla de inicio»</b>. Ábrela desde ese icono y activa los avisos.</p>",
    "act": "<button class=\"btn sm\" data-go=\"avisos\">Ir a Avisos</button>"
   },
   {
@@ -1347,7 +1347,7 @@
     "icono",
     "aplicacion"
    ],
-   "a": "<p>En Android, abre reformayuda.es en <b>Chrome</b> → <b>⋮ → «Instalar app»</b> (o «Añadir a pantalla de inicio»). En iPhone, en <b>Safari</b> → <b>Compartir → «Añadir a pantalla de inicio»</b>. Es gratis, ocupa muy poco y se actualiza sola.</p>",
+   "a": "<p>En Android, abre obrayuda.es en <b>Chrome</b> → <b>⋮ → «Instalar app»</b> (o «Añadir a pantalla de inicio»). En iPhone, en <b>Safari</b> → <b>Compartir → «Añadir a pantalla de inicio»</b>. Es gratis, ocupa muy poco y se actualiza sola.</p>",
    "act": ""
   },
   {

@@ -4,16 +4,16 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="description" content="Buscador de ayudas y subvenciones para reformar, rehabilitar o construir tu casa en España: estatales, de tu comunidad, tu diputación y tu ayuntamiento. Calcula la deducción del IRPF. Gratis y sin registro.">
-<link rel="canonical" href="https://reformayuda.es/">
+<link rel="canonical" href="https://obrayuda.es/">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://reformayuda.es/">
+<meta property="og:url" content="https://obrayuda.es/">
 <meta property="og:title" content="Obrayuda · Ayudas y subvenciones para reformar tu casa">
 <meta property="og:description" content="Encuentra las subvenciones para tu obra, comprueba si cumples los requisitos y calcula cuánto te desgrava en el IRPF. Gratis y sin registro.">
-<meta property="og:image" content="https://reformayuda.es/og.png">
+<meta property="og:image" content="https://obrayuda.es/og.png">
 <meta property="og:locale" content="es_ES">
 <meta name="twitter:card" content="summary_large_image">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebApplication","name":"Obrayuda","url":"https://reformayuda.es/","applicationCategory":"FinanceApplication","operatingSystem":"Android, iOS, Web","inLanguage":"es","isAccessibleForFree":true,"offers":{"@type":"Offer","price":"0","priceCurrency":"EUR"},"description":"Buscador de ayudas y subvenciones para reformar, rehabilitar o construir vivienda en España, con calculadora de la deducción del IRPF por eficiencia energética."}
+{"@context":"https://schema.org","@type":"WebApplication","name":"Obrayuda","url":"https://obrayuda.es/","applicationCategory":"FinanceApplication","operatingSystem":"Android, iOS, Web","inLanguage":"es","isAccessibleForFree":true,"offers":{"@type":"Offer","price":"0","priceCurrency":"EUR"},"description":"Buscador de ayudas y subvenciones para reformar, rehabilitar o construir vivienda en España, con calculadora de la deducción del IRPF por eficiencia energética."}
 </script>
 <meta name="theme-color" content="#0D7A63">
 <link rel="manifest" href="manifest.webmanifest">
@@ -21,8 +21,8 @@
 <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
 <link rel="icon" href="icons/icon-96.png" type="image/png" sizes="96x96">
 <script type="application/ld+json">
-[{"@context":"https://schema.org","@type":"WebSite","name":"Obrayuda","alternateName":"Obrayuda.es","url":"https://reformayuda.es/"},
- {"@context":"https://schema.org","@type":"Organization","name":"Obrayuda","url":"https://reformayuda.es/","description":"Obrayuda es un buscador gratuito y sin registro de ayudas y subvenciones públicas para reformar, rehabilitar o construir vivienda en España. No es una empresa de reformas ni un directorio de profesionales.","logo":"https://reformayuda.es/icons/icon-512.png","email":"contacto@reformayuda.es"}]
+[{"@context":"https://schema.org","@type":"WebSite","name":"Obrayuda","alternateName":"Obrayuda.es","url":"https://obrayuda.es/"},
+ {"@context":"https://schema.org","@type":"Organization","name":"Obrayuda","url":"https://obrayuda.es/","description":"Obrayuda es un buscador gratuito y sin registro de ayudas y subvenciones públicas para reformar, rehabilitar o construir vivienda en España. No es una empresa de reformas ni un directorio de profesionales.","logo":"https://obrayuda.es/icons/icon-512.png","email":"contacto@reformayuda.es"}]
 </script>
 <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
 <style>
@@ -1162,7 +1162,7 @@ const esIOS=()=>/iphone|ipad|ipod/i.test(navigator.userAgent)||(/macintosh/i.tes
 const pushSoportado=()=>"serviceWorker" in navigator&&"PushManager" in window&&"Notification" in window;
 // Navegador integrado de la app de Google u otras apps (WebView): las notificaciones no se muestran bien.
 const enNavegadorIntegrado=()=>/android/i.test(navigator.userAgent)&&/GSA\/|; wv\)|FBAN|FBAV|Instagram/.test(navigator.userAgent);
-const AVISO_INTEGRADO=`Estás viendo Obrayuda dentro de otra app. Para recibir notificaciones, ábrela en <b>Chrome</b>: toca <b>⋮</b> arriba y elige <b>«Abrir en Chrome»</b>, o escribe reformayuda.es en Chrome.`;
+const AVISO_INTEGRADO=`Estás viendo Obrayuda dentro de otra app. Para recibir notificaciones, ábrela en <b>Chrome</b>: toca <b>⋮</b> arriba y elige <b>«Abrir en Chrome»</b>, o escribe obrayuda.es en Chrome.`;
 let fbCargado=null;
 function cargarScript(src){return new Promise((ok,ko)=>{const s=document.createElement("script");s.src=src;s.onload=ok;s.onerror=ko;document.head.appendChild(s)})}
 function cargarFirebase(){
@@ -1223,7 +1223,7 @@ function abrirAyudaIOS(){
   const d=$("#drawer");d.dataset.id="";
   d.innerHTML=`<button class="btn alt sm close" id="d-close">${icon("x","ico","width:16px;height:16px")}Cerrar</button>
    <h2>Avisos en iPhone</h2><p>En iPhone, las notificaciones solo funcionan si Obrayuda está instalada en la pantalla de inicio:</p>
-   <ol class="steps"><li><span>Abre reformayuda.es en <b>Safari</b>.</span></li><li><span>Toca <b>Compartir</b> y elige <b>«Añadir a pantalla de inicio»</b>.</span></li><li><span>Abre Obrayuda desde el icono y activa los avisos.</span></li></ol>`;
+   <ol class="steps"><li><span>Abre obrayuda.es en <b>Safari</b>.</span></li><li><span>Toca <b>Compartir</b> y elige <b>«Añadir a pantalla de inicio»</b>.</span></li><li><span>Abre Obrayuda desde el icono y activa los avisos.</span></li></ol>`;
   d.hidden=false;$("#scrim").hidden=false;$("#d-close").onclick=closeDrawer;
 }
 function renderPushCta(){
@@ -1261,8 +1261,8 @@ async function probarNotificacion(){
   try{
     const reg=await navigator.serviceWorker.ready;
     await reg.showNotification("Prueba de Obrayuda",{body:"Si ves esto, las notificaciones funcionan en tu móvil.",icon:"icons/icon-192.png",badge:"icons/icon-monochrome-512.png",tag:"prueba-local"});
-    toast(/android/i.test(navigator.userAgent)?enNavegadorIntegrado()?"Estás dentro de otra app: abre reformayuda.es en Chrome (⋮ → «Abrir en Chrome») y vuelve a probar.":"Notificación de prueba enviada. Si no la ves: en Chrome toca el icono junto a la dirección → Permisos → Notificaciones → ↗ y activa «Mostrar notificaciones».":"Notificación de prueba enviada. Si no la ves, revisa que tu sistema permita las notificaciones del navegador.");
-  }catch(e){toast("Tu móvil no ha dejado mostrar la notificación. Revisa los permisos de Chrome para reformayuda.es.")}
+    toast(/android/i.test(navigator.userAgent)?enNavegadorIntegrado()?"Estás dentro de otra app: abre obrayuda.es en Chrome (⋮ → «Abrir en Chrome») y vuelve a probar.":"Notificación de prueba enviada. Si no la ves: en Chrome toca el icono junto a la dirección → Permisos → Notificaciones → ↗ y activa «Mostrar notificaciones».":"Notificación de prueba enviada. Si no la ves, revisa que tu sistema permita las notificaciones del navegador.");
+  }catch(e){toast("Tu móvil no ha dejado mostrar la notificación. Revisa los permisos de Chrome para obrayuda.es.")}
 }
 
 /* ---------- pedir valoración en Google Play ----------
@@ -1302,9 +1302,9 @@ $("#btn-install").onclick=async()=>{
   if(installEvt){installEvt.prompt();await installEvt.userChoice;installEvt=null;return}
   const ua=navigator.userAgent, ios=/iphone|ipad|ipod/i.test(ua)||(/macintosh/i.test(ua)&&navigator.maxTouchPoints>1), android=/android/i.test(ua);
   const pasos={
-    ios:["Abre reformayuda.es en <b>Safari</b>.","Toca el botón <b>Compartir</b> (el cuadrado con una flecha hacia arriba).","Elige <b>«Añadir a pantalla de inicio»</b> y pulsa <b>Añadir</b>."],
-    android:["Abre reformayuda.es en <b>Chrome</b>.","Toca el menú <b>⋮</b> de arriba a la derecha.","Elige <b>«Instalar aplicación»</b> o <b>«Añadir a pantalla de inicio»</b>."],
-    pc:["Abre reformayuda.es en <b>Chrome</b> o <b>Edge</b>.","Pulsa el icono de <b>instalar</b> que aparece a la derecha de la barra de direcciones.","Confirma con <b>Instalar</b>."]};
+    ios:["Abre obrayuda.es en <b>Safari</b>.","Toca el botón <b>Compartir</b> (el cuadrado con una flecha hacia arriba).","Elige <b>«Añadir a pantalla de inicio»</b> y pulsa <b>Añadir</b>."],
+    android:["Abre obrayuda.es en <b>Chrome</b>.","Toca el menú <b>⋮</b> de arriba a la derecha.","Elige <b>«Instalar aplicación»</b> o <b>«Añadir a pantalla de inicio»</b>."],
+    pc:["Abre obrayuda.es en <b>Chrome</b> o <b>Edge</b>.","Pulsa el icono de <b>instalar</b> que aparece a la derecha de la barra de direcciones.","Confirma con <b>Instalar</b>."]};
   const orden=ios?["ios","android","pc"]:android?["android","ios","pc"]:["pc","android","ios"];
   const tit={ios:"iPhone o iPad",android:"Android",pc:"Ordenador"};
   const d=$("#drawer");d.dataset.id="";

@@ -62,12 +62,12 @@ const FB_VAPID="";
 (O pásaselos a Claude, que los pone por ti.) Al guardar, la web se publica y aparecen el botón **Activar avisos** y el apartado **Notificaciones en el móvil**.
 
 ### 7. (Recomendado) Limitar la clave a tu web
-En **https://console.cloud.google.com/apis/credentials** (proyecto `reformayuda`), abre la clave «Browser key», en **Restricciones de aplicaciones** elige **Sitios web** y añade `https://reformayuda.es/*`. Así nadie puede usarla desde otra web.
+En **https://console.cloud.google.com/apis/credentials** (proyecto `reformayuda`), abre la clave «Browser key», en **Restricciones de aplicaciones** elige **Sitios web** y añade `https://obrayuda.es/*`. Así nadie puede usarla desde otra web.
 
 ---
 
 ## Comprobar que funciona
-1. Abre https://reformayuda.es en Chrome del móvil (o la app), haz el test inicial y pulsa **Activar avisos**.
+1. Abre https://obrayuda.es en Chrome del móvil (o la app), haz el test inicial y pulsa **Activar avisos**.
 2. En Firebase → Firestore → colección `suscripciones` debe aparecer un documento.
 3. Aprueba una ayuda de tu zona: tras la publicación debería llegarte la notificación.
 4. En GitHub → Actions → «Publicar la web» → paso «Enviar notificaciones» verás cuántas se han enviado.

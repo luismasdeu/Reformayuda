@@ -25,7 +25,7 @@ AYUDAS = RAIZ / "web" / "data" / "ayudas.json"
 NOTIFICADAS = RAIZ / "revision" / "notificadas.json"
 CANDIDATAS = RAIZ / "revision" / "candidatas.json"
 ADMIN = RAIZ / "revision" / "admin.json"  # móviles del responsable, añadidos desde /revisar/
-DOMINIO = "https://reformayuda.es"
+DOMINIO = "https://obrayuda.es"
 
 
 def estado_abierto(a, hoy):

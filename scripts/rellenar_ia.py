@@ -6,7 +6,7 @@ Para cada candidata pendiente que aún no se ha procesado:
   2. Pide a Claude que extraiga título claro, importe, plazo, requisitos, documentos, pasos,
      tipo de obra, edad, etc., y que diga si de verdad es una ayuda para obras en una vivienda.
   3. Lo guarda en la candidata, con lo que no ha podido confirmar en «_revisar.confirmar».
-Tú sigues decidiendo: en reformayuda.es/revisar/ ves su recomendación y pulsas Publicar o Descartar.
+Tú sigues decidiendo: en obrayuda.es/revisar/ ves su recomendación y pulsas Publicar o Descartar.
 
 Uso:
   python scripts/rellenar_ia.py                       candidatas pendientes (máx. IA_MAX, 15 por defecto)

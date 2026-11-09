@@ -3,7 +3,7 @@
 La app de Android es la misma web, empaquetada como **Trusted Web Activity (TWA)**. Cuando actualizas la web, la app se actualiza sola; solo hay que subir una versión nueva a Google Play si cambias el icono, el nombre o los permisos.
 
 ## Antes de empezar
-- La web tiene que estar funcionando en `https://reformayuda.es` (ver README, apartado 1.3).
+- La web tiene que estar funcionando en `https://obrayuda.es` (ver README, apartado 1.3).
 - Un móvil Android para probar.
 
 ## 1. Cuenta de desarrollador
@@ -12,7 +12,7 @@ La app de Android es la misma web, empaquetada como **Trusted Web Activity (TWA)
 3. Las cuentas personales nuevas tienen que hacer una **prueba cerrada con al menos 12 personas durante 14 días seguidos** antes de publicar. Ve buscando 12 amigos o familiares con Android y una cuenta de Gmail.
 
 ## 2. Crear el paquete de la app
-1. Abre [PWABuilder](https://www.pwabuilder.com), escribe `https://reformayuda.es` y pulsa **Start**.
+1. Abre [PWABuilder](https://www.pwabuilder.com), escribe `https://obrayuda.es` y pulsa **Start**.
 2. Comprueba que reconoce el manifiesto, el service worker y los iconos.
 3. **Package for stores → Android → Generate package** con estos datos:
    - Package ID: `es.reformayuda.app`
@@ -25,7 +25,7 @@ La app de Android es la misma web, empaquetada como **Trusted Web Activity (TWA)
 1. Abre el `assetlinks.json` del ZIP y copia la huella (`sha256_cert_fingerprints`).
 2. En Play Console, en **Configuración → Integridad de la app**, copia también la huella de la «clave de firma de apps» de Google.
 3. Pega las dos en `web/.well-known/assetlinks.json` (sustituyendo `PEGA_AQUI...`), separadas por comas, y guarda. Se publica solo.
-4. Comprueba que `https://reformayuda.es/.well-known/assetlinks.json` muestra el archivo. Si no, la app enseñará una barra de navegador arriba.
+4. Comprueba que `https://obrayuda.es/.well-known/assetlinks.json` muestra el archivo. Si no, la app enseñará una barra de navegador arriba.
 
 ## 4. Ficha de Google Play
 
@@ -37,7 +37,7 @@ La app de Android es la misma web, empaquetada como **Trusted Web Activity (TWA)
 - **Gráfico de cabecera:** `docs/google-play/grafico-1024x500.png`
 - **Capturas:** `docs/google-play/capturas/` (6 imágenes)
 - **Categoría:** Finanzas o Casa y hogar.
-- **Política de privacidad:** `https://reformayuda.es/#privacidad`
+- **Política de privacidad:** `https://obrayuda.es/#privacidad`
 - **Seguridad de los datos:** ver el apartado siguiente.
 
 ### Seguridad de los datos

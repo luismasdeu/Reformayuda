@@ -27,7 +27,7 @@ AYUDAS = RAIZ / "web" / "data" / "ayudas.json"
 CANDIDATAS = RAIZ / "revision" / "candidatas.json"
 DESCARTADAS = RAIZ / "revision" / "descartadas.json"
 
-USER_AGENT = "Obrayuda/1.0 (+https://reformayuda.es; busqueda diaria de ayudas de vivienda)"
+USER_AGENT = "Obrayuda/1.0 (+https://obrayuda.es; busqueda diaria de ayudas de vivienda)"
 BOE_SUMARIO = "https://www.boe.es/datosabiertos/api/boe/sumario/{fecha}"
 BDNS_BASES = ["https://www.infosubvenciones.es/bdnstrans/api", "https://www.pap.hacienda.gob.es/bdnstrans/api"]
 BDNS_FICHA = "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/{codigo}"
@@ -389,7 +389,7 @@ def resumen(nuevas, nuevas_boe, pendientes, boe_total):
         lineas.append("### Nuevas en el BOE (solo aviso: leer y, si es una ayuda, darla de alta a mano)")
         lineas += [f"- [{b['titulo'][:140]}]({b['url']})" for b in nuevas_boe]
         lineas.append("")
-    lineas.append("**Para revisar desde el móvil: https://reformayuda.es/revisar/** (botones Publicar y Descartar).")
+    lineas.append("**Para revisar desde el móvil: https://obrayuda.es/revisar/** (botones Publicar y Descartar).")
     return "\n".join(lineas) + "\n"
 
 

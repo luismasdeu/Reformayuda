@@ -2,7 +2,7 @@
 
 App gratuita y sin registro para encontrar ayudas y subvenciones para reformar o construir una casa, prepararse para pedirlas y calcular la deducción del IRPF.
 
-- **Web y app instalable:** `web/` (se publica en GitHub Pages y en `reformayuda.es`).
+- **Web y app instalable:** `web/` (se publica en GitHub Pages y en `obrayuda.es`).
 - **Búsqueda diaria:** cada mañana GitHub revisa el BOE y la Base de Datos Nacional de Subvenciones (BDNS) y te propone las ayudas nuevas.
 - **Tú decides qué se publica:** nada sale en la app sin que lo apruebes.
 
@@ -39,8 +39,8 @@ docs/                 Guía de Google Play y capturas
 3. En la pestaña **Actions**, abre **Publicar la web** y pulsa **Run workflow**.
 4. En un par de minutos la web estará en `https://TU_USUARIO.github.io/reformayuda/`.
 
-### 1.3 Conectar tu dominio reformayuda.es
-1. En **Settings → Pages → Custom domain**, escribe `reformayuda.es` y guarda.
+### 1.3 Conectar tu dominio obrayuda.es
+1. En **Settings → Pages → Custom domain**, escribe `obrayuda.es` y guarda.
 2. En el panel de tu registrador de dominios, crea estos registros DNS:
 
    | Tipo | Nombre | Valor |
@@ -60,7 +60,7 @@ En **Actions → Buscar ayudas nuevas → Run workflow**, pon `30` en «Días ha
 
 ## 2. El día a día: revisar ayudas (5-10 minutos)
 
-**Lo fácil: desde el móvil en https://reformayuda.es/revisar/.** Cada ayuda sale como una tarjeta con enlaces a la convocatoria y las bases, los campos principales para corregir y dos botones: **Publicar** y **Descartar**. La primera vez pide una llave de GitHub (las instrucciones salen en la propia página) y ofrece **avisarte con una notificación** cada mañana que haya ayudas nuevas por revisar. La página no aparece en Google.
+**Lo fácil: desde el móvil en https://obrayuda.es/revisar/.** Cada ayuda sale como una tarjeta con enlaces a la convocatoria y las bases, los campos principales para corregir y dos botones: **Publicar** y **Descartar**. La primera vez pide una llave de GitHub (las instrucciones salen en la propia página) y ofrece **avisarte con una notificación** cada mañana que haya ayudas nuevas por revisar. La página no aparece en Google.
 
 **Rellenado con IA (opcional, de pago):** si existe el secreto `ANTHROPIC_API_KEY`, cada mañana `scripts/rellenar_ia.py` lee la ficha de la BDNS y las bases de cada candidata nueva con la API de Claude y rellena título, importe, plazo, requisitos, documentos y pasos. Además decide:
 - **No es de obras** (alquiler, hipoteca, recibos, compra, ayudas sociales, un edificio concreto): la descarta sola. Se ven y se pueden recuperar en «Descartadas automáticamente por la IA».
@@ -147,7 +147,7 @@ python3 scripts/validar.py
 
 ## 6. Pendiente antes del lanzamiento
 
-- [x] Registrar `reformayuda.es` y conectarlo (apartado 1.3).
+- [x] Registrar `obrayuda.es` y conectarlo (apartado 1.3).
 - [x] Datos del titular y email de contacto en los textos legales.
 - [ ] Cargar las ayudas autonómicas y provinciales (primera búsqueda de 30 días + revisión).
 - [x] Tipografías alojadas en la propia web (sin Google Fonts).

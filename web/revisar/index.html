@@ -47,7 +47,7 @@ const $=s=>document.querySelector(s);
 const esc=s=>String(s??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const guardado={get(k,d){try{return JSON.parse(localStorage.getItem("rfm_rev_"+k))??d}catch(e){return d}},set(k,v){try{localStorage.setItem("rfm_rev_"+k,JSON.stringify(v))}catch(e){}}};
 let token=guardado.get("token",""), datos=null, sha=null, descIA=[], autoIA=[], estad=null;
-// Las visitas de quien revisa no cuentan en la medición anónima (mismo navegador que reformayuda.es).
+// Las visitas de quien revisa no cuentan en la medición anónima (mismo navegador que obrayuda.es).
 try{localStorage.setItem("rfm_yo","1")}catch(e){}
 const estado=t=>$("#estado").textContent=t||"";
 
@@ -269,7 +269,7 @@ async function activarAvisos(){
     const reg=await navigator.serviceWorker.ready;
     const tk=await firebase.messaging().getToken({vapidKey:FB_VAPID,serviceWorkerRegistration:reg});
     for(let i=0;i<3;i++){
-      const f=await leer(ADMIN);const j=f.json||{_leeme:"Móviles que reciben el aviso de «ayudas por revisar». Se añaden desde reformayuda.es/revisar/.",tokens:[]};
+      const f=await leer(ADMIN);const j=f.json||{_leeme:"Móviles que reciben el aviso de «ayudas por revisar». Se añaden desde obrayuda.es/revisar/.",tokens:[]};
       if(j.tokens.includes(tk))break;
       j.tokens=[...j.tokens,tk].slice(-3);
       if((await escribir(ADMIN,j,f.sha,"Aviso de revisión en un móvil nuevo")).ok)break;
