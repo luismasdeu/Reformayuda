@@ -134,7 +134,7 @@ def pagina(ruta, titulo, descripcion, cuerpo, migas, jsonld=None, indexar=True):
 </main>
 <footer class="pie"><div class="wrap">
   <p><b>Obrayuda</b> · Buscador gratuito de ayudas y subvenciones para reformar o construir tu casa. Sin registro y sin anuncios. Contacto: <a href="mailto:contacto@reformayuda.es">contacto@reformayuda.es</a></p>
-  <p><a href="/subvenciones/">Todas las ayudas</a> · <a href="/preguntas/">Preguntas frecuentes</a> · <a href="/que-es-reformayuda/">Qué es Obrayuda</a> · <a href="/programas/">Programas de ayudas</a> · <a href="/aviso-legal/">Aviso legal</a> · <a href="/privacidad/">Privacidad</a> · <a href="/cookies/">Cookies</a></p>
+  <p><a href="/subvenciones/">Todas las ayudas</a> · <a href="/preguntas/">Preguntas frecuentes</a> · <a href="/que-es-obrayuda/">Qué es Obrayuda</a> · <a href="/programas/">Programas de ayudas</a> · <a href="/aviso-legal/">Aviso legal</a> · <a href="/privacidad/">Privacidad</a> · <a href="/cookies/">Cookies</a></p>
 </div></footer>
 </body>
 </html>
@@ -276,13 +276,13 @@ def pagina_que_es(ayudas, faq):
 <p><a class="btn grande" href="/">Abrir Obrayuda</a> <a class="btn alt" href="/subvenciones/">Ver todas las ayudas</a></p>
 <h2>Quién está detrás</h2>
 <p>Obrayuda es un proyecto personal de Luis Eduardo Masdeu Cano. Contacto: <a href="mailto:contacto@reformayuda.es">contacto@reformayuda.es</a>.</p>"""
-    ld = {"@context": "https://schema.org", "@type": "AboutPage", "name": "Qué es Obrayuda", "url": f"{DOMINIO}/que-es-reformayuda/",
+    ld = {"@context": "https://schema.org", "@type": "AboutPage", "name": "Qué es Obrayuda", "url": f"{DOMINIO}/que-es-obrayuda/",
           "about": {"@type": "WebApplication", "name": "Obrayuda", "url": f"{DOMINIO}/", "applicationCategory": "FinanceApplication",
                     "isAccessibleForFree": True, "description": "Buscador gratuito de ayudas y subvenciones públicas para reformar, rehabilitar o construir vivienda en España. No es una empresa de reformas ni un directorio de profesionales."}}
-    return pagina("/que-es-reformayuda/", "¿Qué es Obrayuda? Buscador gratuito de ayudas y subvenciones para tu casa",
+    return pagina("/que-es-obrayuda/", "¿Qué es Obrayuda? Buscador gratuito de ayudas y subvenciones para tu casa",
                   "Obrayuda es un buscador gratuito y sin registro de ayudas y subvenciones públicas para reformar, rehabilitar o "
                   "construir vivienda en España. No es una empresa de reformas ni un directorio de profesionales.",
-                  cuerpo, [("Inicio", "/"), ("Qué es Obrayuda", "/que-es-reformayuda/")], ld)
+                  cuerpo, [("Inicio", "/"), ("Qué es Obrayuda", "/que-es-obrayuda/")], ld)
 
 
 ESTADO_PROG = {"vigente": ("abierta", "Vigente"), "cerrado": ("cerrada", "Convocatoria cerrada"), "finalizado": ("cerrada", "Programa finalizado")}
@@ -367,7 +367,7 @@ def llms_txt(ayudas, faq, rutas_tipo, rutas_ccaa):
               "Las convocatorias se revisan cada día a partir del BOE y la Base de Datos Nacional de Subvenciones.", "",
               AVISO, "",
               "## Páginas principales", "",
-              f"- [Qué es Obrayuda]({DOMINIO}/que-es-reformayuda/): qué hace y qué no hace (no es una empresa de reformas ni un directorio de profesionales)",
+              f"- [Qué es Obrayuda]({DOMINIO}/que-es-obrayuda/): qué hace y qué no hace (no es una empresa de reformas ni un directorio de profesionales)",
               f"- [App de Obrayuda]({DOMINIO}/): buscador, asistente de solicitud, calculadora del IRPF y avisos de plazos",
               f"- [Todas las ayudas]({DOMINIO}/subvenciones/): listado con importes y plazos",
               f"- [Preguntas frecuentes]({DOMINIO}/preguntas/): {len(faq['preguntas'])} respuestas sobre subvenciones, IRPF, licencias y comunidades",
@@ -393,7 +393,7 @@ def main():
     datos = json.loads((WEB / "data" / "ayudas.json").read_text(encoding="utf-8"))
     faq = json.loads((WEB / "data" / "preguntas.json").read_text(encoding="utf-8"))
     ayudas = datos["ayudas"]
-    for carpeta in ("ayudas", "subvenciones", "preguntas", "que-es-reformayuda", "privacidad", "aviso-legal", "cookies", "programas"):
+    for carpeta in ("ayudas", "subvenciones", "preguntas", "que-es-obrayuda", "que-es-reformayuda", "privacidad", "aviso-legal", "cookies", "programas"):
         shutil.rmtree(WEB / carpeta, ignore_errors=True)
 
     usadas = set()
@@ -455,6 +455,12 @@ def main():
     rutas.append(pagina_preguntas(faq))
     rutas.append(pagina_que_es(ayudas, faq))
     rutas += paginas_programas(ayudas)
+    # Dirección antigua de «Qué es»: lleva a la nueva (no va al sitemap).
+    viejo = WEB / "que-es-reformayuda"
+    viejo.mkdir(exist_ok=True)
+    (viejo / "index.html").write_text('<!doctype html><meta charset="utf-8"><meta name="robots" content="noindex">'
+        f'<link rel="canonical" href="{DOMINIO}/que-es-obrayuda/"><meta http-equiv="refresh" content="0; url=/que-es-obrayuda/">'
+        '<a href="/que-es-obrayuda/">Qué es Obrayuda</a>', encoding="utf-8")
     rutas += paginas_legales()
 
     llms_txt(ayudas, faq, rutas_tipo, rutas_ccaa)
