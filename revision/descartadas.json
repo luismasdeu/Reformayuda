@@ -50,7 +50,8 @@
   "bdns-938955",
   "bdns-938979",
   "bdns-939620",
-  "bdns-939866"
+  "bdns-939866",
+  "bdns-940911"
  ],
  "ia": [
   {
@@ -1054,6 +1055,56 @@
    },
    "prov": "Sevilla",
    "muni": "Mairena Del Aljarafe"
+  },
+  {
+   "id": "bdns-940911",
+   "estado": "descartada",
+   "title": "BASES Y CONVOCATORIA DE CONCESIÓN DE SUBVENCIONES EN RÉGIMEN DE CONCURRENCIA NO COMPETITIVA, LE15 (VIVIENDA)-LS3, DEL EJERCICIO 2026",
+   "org": "UTRERA · AYUNTAMIENTO DE UTRERA",
+   "scope": "municipal",
+   "ccaa": "Andalucía",
+   "tipo": [
+    "rehabilitacion"
+   ],
+   "dest": [
+    "vivienda"
+   ],
+   "importe": 0,
+   "imp": "Consulta la convocatoria",
+   "abre": "2026-11-09",
+   "cierra": null,
+   "plazo": "Consulta el plazo en la convocatoria",
+   "irpf": false,
+   "fuente": "BDNS nº 940911",
+   "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/940911",
+   "resumen": "BASES Y CONVOCATORIA DE CONCESIÓN DE SUBVENCIONES EN RÉGIMEN DE CONCURRENCIA NO COMPETITIVA, LE15 (VIVIENDA)-LS3, DEL EJERCICIO 2026",
+   "req": [
+    "Consulta los requisitos en la convocatoria oficial"
+   ],
+   "docs": [
+    "Consulta la documentación en la convocatoria oficial"
+   ],
+   "pasos": [
+    "Lee la convocatoria oficial",
+    "Prepara la documentación",
+    "Presenta la solicitud en la sede del organismo"
+   ],
+   "_revisar": {
+    "presupuesto_total": 50000,
+    "bases_reguladoras": "www.utrera.org",
+    "abierta_segun_bdns": false,
+    "beneficiarios": "PERSONAS JURÍDICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
+    "nota": "Revisa importe por vivienda, requisitos, documentos y pasos antes de aprobar.",
+    "ia": {
+     "fecha": "2026-11-10",
+     "documento": "sin enlace a las bases (descartada con la pregunta rápida)",
+     "recomendacion": "descartar",
+     "motivo": "La convocatoria del Ayuntamiento de Utrera (LE15 Vivienda) va dirigida a personas jurídicas sin actividad económica (entidades) y no indica que financie obras en viviendas, por lo que ante la duda se descarta."
+    },
+    "confirmar": []
+   },
+   "prov": "Sevilla",
+   "muni": "Utrera"
   }
  ]
 }

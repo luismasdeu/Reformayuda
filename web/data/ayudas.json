@@ -1,6 +1,6 @@
 {
  "_leeme": "Ayudas publicadas en la app. Edita con cuidado: el formato se comprueba antes de publicar (scripts/validar.py).",
- "actualizado": "2026-10-28",
+ "actualizado": "2026-11-10",
  "ayudas": [
   {
    "id": "pev-rehab",
@@ -776,6 +776,48 @@
    "muni": "Almendro, El",
    "sede": "https://aytoelalmendro.sedelectronica.es/info.0",
    "revisada": "2026-10-28"
+  },
+  {
+   "id": "bdns-940941",
+   "title": "Accesibilidad y fachadas de edificios residenciales en Torrent",
+   "org": "TORRENT · AYUNTAMIENTO DE TORRENT",
+   "scope": "municipal",
+   "ccaa": "Comunitat Valenciana",
+   "tipo": [
+    "accesibilidad",
+    "rehabilitacion"
+   ],
+   "dest": [
+    "edificio"
+   ],
+   "importe": 0,
+   "imp": "Importe pendiente de publicar en las bases",
+   "abre": "2026-10-20",
+   "cierra": "2027-10-21",
+   "plazo": "Según la BDNS, las solicitudes se pueden presentar del 20/10/2026 al 21/10/2027. Hay que confirmarlo en las bases.",
+   "irpf": false,
+   "fuente": "BDNS nº 940941",
+   "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/940941",
+   "resumen": "El Ayuntamiento de Torrent da subvenciones para mejorar la accesibilidad y restaurar fachadas en edificios residenciales. Presupuesto total de la convocatoria: 200.000 €. No he podido leer las bases oficiales, así que faltan los detalles: importe por vivienda, requisitos y trámite.",
+   "req": [
+    "Consulta los requisitos en la convocatoria oficial"
+   ],
+   "docs": [
+    "Consulta la documentación en la convocatoria oficial"
+   ],
+   "pasos": [
+    "Lee la convocatoria oficial",
+    "Prepara la documentación",
+    "Presenta la solicitud en la sede del organismo"
+   ],
+   "prov": "Valencia",
+   "muni": "Torrent",
+   "pendiente_bases": {
+    "intentos": 1,
+    "proxima": "2026-11-14"
+   },
+   "revisada": "2026-11-10",
+   "auto": "2026-11-10"
   }
  ]
 }
