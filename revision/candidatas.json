@@ -1,6 +1,6 @@
 {
  "_leeme": "Ayudas detectadas automáticamente en los boletines. Revísalas: pon \"estado\": \"aprobada\" o \"descartada\". Mira README.md.",
- "ultima_busqueda": "2026-11-10T06:04",
+ "ultima_busqueda": "2026-11-11T06:12",
  "candidatas": [
   {
    "id": "bdns-938584",
@@ -220,42 +220,41 @@
     "rehabilitacion"
    ],
    "dest": [
-    "vivienda"
+    "vivienda",
+    "edificio"
    ],
    "importe": 5000,
-   "imp": "El 40 % del presupuesto de ejecución material de la obra, con un máximo de 5.000 € por inmueble y convocatoria",
+   "imp": "El 40 % del presupuesto de ejecución material de la obra, hasta 5.000 € por inmueble y convocatoria",
    "abre": "2026-11-06",
    "cierra": "2026-12-30",
-   "plazo": "Empieza el día siguiente a la publicación del anuncio de la convocatoria en el BOPT. Según el índice CIDO, se publicó el 05/11/2026, por lo que el plazo empezaría el 06/11/2026. Termina el 30 de diciembre de 2026.",
+   "plazo": "El plazo empieza al día siguiente de publicarse la convocatoria en el BOPT y termina el 30 de diciembre de 2026. Las ayudas se conceden por orden de solicitud hasta agotar el crédito.",
    "irpf": false,
    "fuente": "BDNS nº 939227",
    "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/939227",
-   "resumen": "El Ayuntamiento de Vilalba dels Arcs da subvenciones a particulares para recuperar, rehabilitar o revestir fachadas con piedra natural. El presupuesto total de la convocatoria es de 10.000 €. No he podido leer el texto de las bases, así que faltan el importe por vivienda y los requisitos.",
+   "resumen": "El Ayuntamiento paga parte de las obras para recuperar, rehabilitar o revestir con piedra natural la fachada de tu inmueble en el casco urbano. También cubre recuperar elementos tradicionales como dinteles, molduras, cornisas, rejas y portadas. Las ayudas se dan por orden de entrada hasta agotar el crédito. La convocatoria tiene 10.000 € en total.",
    "req": [
-    "Ser propietario del inmueble, ya sea persona física o jurídica, o presidente de una comunidad de propietarios.",
+    "Ser propietario del inmueble (persona física o jurídica) o presidente de la comunidad de propietarios.",
     "El inmueble debe estar en el casco urbano de Vilalba dels Arcs y la fachada debe verse desde la vía pública.",
-    "La obra debe recuperar fachadas de piedra natural o elementos tradicionales. No valen revestimientos que solo imiten la piedra.",
-    "La obra debe cumplir el POUM y el informe técnico municipal.",
-    "Tener licencia de obras o haber hecho la comunicación previa antes de empezar.",
-    "No estar en las prohibiciones del artículo 13 de la Ley General de Subvenciones."
+    "La obra debe recuperar fachadas de piedra natural o elementos tradicionales. No valen revestimientos que imiten la piedra.",
+    "Cumplir el POUM y el informe técnico municipal previo, con materiales y colores acordes a la arquitectura tradicional.",
+    "Tener licencia de obras o hacer la comunicación previa de obras antes de empezar.",
+    "No tener prohibiciones para recibir subvenciones según el artículo 13 de la Ley General de Subvenciones."
    ],
    "docs": [
-    "Documento que acredite que eres propietario de la finca.",
-    "NIF de quien solicita.",
+    "Solicitud en el modelo oficial de la sede electrónica municipal.",
+    "Documento que acredite que eres titular de la finca y copia del NIF.",
     "Descripción de la obra y presupuesto detallado.",
-    "Fotografías del estado actual de la fachada.",
-    "Plano o croquis de la zona donde harás la obra.",
-    "Prueba de que has pedido la licencia de obras o hecho la comunicación previa.",
-    "Proyecto o memoria técnica de la obra, si hace falta, y declaración de otras ayudas pedidas o recibidas."
+    "Fotos del estado actual de la fachada y plano o croquis de la zona que vas a reformar.",
+    "Comunicación o licencia de obras y, si hace falta, proyecto o memoria técnica.",
+    "Declaración de otras ayudas pedidas o recibidas para la misma obra."
    ],
    "pasos": [
-    "Pide la licencia de obras o haz la comunicación previa al Ayuntamiento.",
-    "Rellena el modelo oficial de solicitud de la sede electrónica municipal y fírmalo.",
-    "Presenta la solicitud con los documentos dentro del plazo.",
-    "Corrige en 10 días hábiles lo que te pidan si falta algo.",
-    "Espera la resolución, que tarda como máximo 3 meses. Si no hay respuesta, se entiende denegada.",
-    "Haz la obra siguiendo los criterios técnicos del Ayuntamiento.",
-    "Justifica la obra en un máximo de 3 meses desde que acabe, con facturas, certificado final de obra, fotos y certificado de titularidad bancaria."
+    "Comprueba que tu inmueble está en el casco urbano y que la obra encaja con el POUM.",
+    "Pide la licencia de obras o haz la comunicación previa de obras.",
+    "Rellena el modelo oficial de solicitud en la sede electrónica del Ayuntamiento y adjunta los documentos, dentro del plazo.",
+    "Si falta algo, tienes 10 días hábiles para corregirlo. Después se revisa tu solicitud y se te comunica la resolución, en un máximo de 3 meses.",
+    "Haz la obra siguiendo los criterios técnicos municipales.",
+    "Justifica la obra en los 3 meses siguientes a terminarla, con facturas, certificado final de obra, fotos y certificado de titularidad bancaria. El pago se hace después, sin anticipos."
    ],
    "_revisar": {
     "presupuesto_total": 10000,
@@ -263,23 +262,23 @@
     "abierta_segun_bdns": false,
     "beneficiarios": "PERSONAS FÍSICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
     "nota": "Revisa importe por vivienda, requisitos, documentos y pasos antes de aprobar.",
-    "referencia_bases": "Bases reguladoras aprobadas definitivamente, publicadas en el BOPT el 26/01/2026 (registro 2026-00544). Convocatoria en la BDNS 939227.",
+    "referencia_bases": "BOPT de Tarragona, registro 2026-00544, de 26/01/2026 (aprobación definitiva de las bases).",
     "ia": {
-     "fecha": "2026-11-06",
-     "documento": "página web (no eran las bases de esta ayuda: buscada en internet)",
+     "fecha": "2026-11-11",
+     "documento": "página web (extracto; bases en BOPT de Tarragona, registro 2026-00544, de 26/01/2026 (aprobación definitiva de las bases).)",
      "recomendacion": "publicar",
-     "motivo": "Subvención para recuperar, rehabilitar o revestir fachadas con piedra natural en el casco urbano de Vilalba dels Arcs. Son obras de rehabilitación en viviendas y edificios, y los beneficiarios son particulares."
+     "motivo": "Paga obras de rehabilitación y revestimiento de fachadas de piedra natural en inmuebles y comunidades de propietarios del casco urbano."
     },
     "confirmar": [
-     "No he podido leer las bases. Comprueba el importe por vivienda o el porcentaje, el máximo, los requisitos, la documentación y cómo se solicita.",
-     "Confirma la fecha de publicación de la convocatoria en el BOPT. Solo la he visto en el índice CIDO, que da el 05/11/2026.",
-     "Comprueba qué zona del casco urbano entra y si pueden pedirla comunidades de propietarios.",
-     "Presupuesto total de 10.000 €. Comprueba si hay un máximo por solicitante."
+     "No he visto el anuncio de la convocatoria en el BOPT con su fecha. El plazo empieza el día siguiente a su publicación, así que hay que confirmar la fecha de apertura.",
+     "Las bases no mencionan que haya que ser vivienda: valen «inmuebles» del casco urbano. Comprueba si se admiten locales o edificios que no son viviendas.",
+     "No he leído el texto de la convocatoria (solo las bases). Comprueba que mantiene el 40 % y el máximo de 5.000 €, el presupuesto de 10.000 € y la sede electrónica para pedirla.",
+     "La disposición transitoria permite pedir ayuda por obras terminadas en el año natural anterior a la publicación, solo en la primera convocatoria."
     ],
     "espera": {
      "desde": "2026-11-03",
-     "intentos": 2,
-     "proxima": "2026-11-11"
+     "intentos": 3,
+     "proxima": "2026-11-18"
     },
     "bases_no_corresponden": true
    },
@@ -493,6 +492,57 @@
     },
     "datos_no_oficiales": true,
     "referencia_bases": "Acuerdo del Consejo de Gobierno de 4 de noviembre de 2026; extracto pendiente de publicación en el BOCM"
+   }
+  },
+  {
+   "id": "bdns-941052",
+   "estado": "descartada",
+   "title": "Subvención 2026 de concesión directa sin convocatoria APAMEX mantenimiento de Oficina Técnica de Accesibilidad de Extremadura",
+   "org": "EXTREMADURA · SECRETARÍA GENERAL DE VIVIENDA, ARQUITECTURA, ACCESIBILIDAD Y REGENERACIÓN URBANA",
+   "scope": "autonomica",
+   "ccaa": "Extremadura",
+   "tipo": [
+    "accesibilidad"
+   ],
+   "dest": [
+    "vivienda"
+   ],
+   "importe": 0,
+   "imp": "Consulta la convocatoria",
+   "abre": "2026-11-10",
+   "cierra": null,
+   "plazo": "Consulta el plazo en la convocatoria",
+   "irpf": false,
+   "fuente": "BDNS nº 941052",
+   "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/941052",
+   "resumen": "Subvención 2026 de concesión directa sin convocatoria APAMEX mantenimiento de Oficina Técnica de Accesibilidad de Extremadura",
+   "req": [
+    "Consulta los requisitos en la convocatoria oficial"
+   ],
+   "docs": [
+    "Consulta la documentación en la convocatoria oficial"
+   ],
+   "pasos": [
+    "Lee la convocatoria oficial",
+    "Prepara la documentación",
+    "Presenta la solicitud en la sede del organismo"
+   ],
+   "_revisar": {
+    "presupuesto_total": 223300,
+    "bases_reguladoras": "https://www.boe.es/buscar/pdf/2011/BOE-A-2011-6649-consolidado.pdf",
+    "abierta_segun_bdns": false,
+    "beneficiarios": "PERSONAS JURÍDICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
+    "nota": "Revisa importe por vivienda, requisitos, documentos y pasos antes de aprobar.",
+    "ia": {
+     "fecha": "2026-11-11",
+     "documento": "44 de 50 páginas",
+     "recomendacion": "descartar",
+     "motivo": "Es una subvención de concesión directa a una asociación (APAMEX) para mantener su oficina técnica de accesibilidad; no paga obras en viviendas ni está abierta a particulares."
+    },
+    "confirmar": [
+     "El documento adjunto es la Ley 6/2011 de subvenciones de Extremadura, no la resolución de concesión de esta ayuda.",
+     "El beneficiario es una entidad concreta ya decidida, no abierta al público."
+    ]
    }
   }
  ],

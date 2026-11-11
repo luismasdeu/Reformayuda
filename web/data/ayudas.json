@@ -791,10 +791,10 @@
     "edificio"
    ],
    "importe": 0,
-   "imp": "Importe pendiente de publicar en las bases",
+   "imp": "Importe pendiente de publicar en las bases oficiales",
    "abre": "2026-10-20",
    "cierra": "2027-10-21",
-   "plazo": "Según la BDNS, las solicitudes se pueden presentar del 20/10/2026 al 21/10/2027. Hay que confirmarlo en las bases.",
+   "plazo": "Según la BDNS, el plazo de solicitud va del 20/10/2026 al 21/10/2027. Hay que confirmarlo en las bases.",
    "irpf": false,
    "fuente": "BDNS nº 940941",
    "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/940941",
@@ -813,11 +813,12 @@
    "prov": "Valencia",
    "muni": "Torrent",
    "pendiente_bases": {
-    "intentos": 1,
-    "proxima": "2026-11-14"
+    "intentos": 2,
+    "proxima": "2026-11-18"
    },
    "revisada": "2026-11-10",
-   "auto": "2026-11-10"
+   "auto": "2026-11-10",
+   "ia": "2026-11-11"
   }
  ]
 }
