@@ -15,7 +15,7 @@ Todo es gratis con el plan Spark de Firebase (sin tarjeta).
 
 ## Puesta en marcha (una sola vez, unos 15 minutos)
 
-Hazlo con la cuenta **Obrayuda (contacto@reformayuda.es)**, desde el ordenador.
+Hazlo con la cuenta **Obrayuda (contacto@obrayuda.es)**, desde el ordenador.
 
 ### 1. Crear el proyecto
 1. Entra en **https://console.firebase.google.com** → **Crear un proyecto**.

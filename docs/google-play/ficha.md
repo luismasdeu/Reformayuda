@@ -47,7 +47,7 @@ Cada mañana revisamos el BOE, los boletines autonómicos y provinciales y la Ba
 IMPORTANTE
 Obrayuda no presenta solicitudes en tu nombre: te lo deja preparado y te lleva a la sede oficial del organismo, donde la envías tú. La información es orientativa; consulta siempre la convocatoria oficial antes de solicitar una ayuda.
 
-Contacto: contacto@reformayuda.es · obrayuda.es
+Contacto: contacto@obrayuda.es · obrayuda.es
 ```
 
 ## Otros datos
@@ -55,7 +55,7 @@ Contacto: contacto@reformayuda.es · obrayuda.es
 |---|---|
 | Categoría | Finanzas (alternativa: Casa y hogar) |
 | Etiquetas | Vivienda, Finanzas personales |
-| Email de contacto | contacto@reformayuda.es |
+| Email de contacto | contacto@obrayuda.es |
 | Sitio web | https://obrayuda.es |
 | Política de privacidad | https://obrayuda.es/#privacidad |
 | Anuncios | No |

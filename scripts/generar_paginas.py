@@ -133,7 +133,7 @@ def pagina(ruta, titulo, descripcion, cuerpo, migas, jsonld=None, indexar=True):
 <p class="aviso">{e(AVISO)}</p>
 </main>
 <footer class="pie"><div class="wrap">
-  <p><b>Obrayuda</b> · Buscador gratuito de ayudas y subvenciones para reformar o construir tu casa. Sin registro y sin anuncios. Contacto: <a href="mailto:contacto@reformayuda.es">contacto@reformayuda.es</a></p>
+  <p><b>Obrayuda</b> · Buscador gratuito de ayudas y subvenciones para reformar o construir tu casa. Sin registro y sin anuncios. Contacto: <a href="mailto:contacto@obrayuda.es">contacto@obrayuda.es</a></p>
   <p><a href="/subvenciones/">Todas las ayudas</a> · <a href="/preguntas/">Preguntas frecuentes</a> · <a href="/que-es-obrayuda/">Qué es Obrayuda</a> · <a href="/programas/">Programas de ayudas</a> · <a href="/aviso-legal/">Aviso legal</a> · <a href="/privacidad/">Privacidad</a> · <a href="/cookies/">Cookies</a></p>
 </div></footer>
 </body>
@@ -275,7 +275,7 @@ def pagina_que_es(ayudas, faq):
 <p>Es gratis, sin registro, sin anuncios y sin recoger datos personales: todo se guarda en el propio dispositivo. Funciona en el navegador y se puede instalar como app en el móvil.</p>
 <p><a class="btn grande" href="/">Abrir Obrayuda</a> <a class="btn alt" href="/subvenciones/">Ver todas las ayudas</a></p>
 <h2>Quién está detrás</h2>
-<p>Obrayuda es un proyecto personal de Luis Eduardo Masdeu Cano. Contacto: <a href="mailto:contacto@reformayuda.es">contacto@reformayuda.es</a>.</p>"""
+<p>Obrayuda es un proyecto personal de Luis Eduardo Masdeu Cano. Contacto: <a href="mailto:contacto@obrayuda.es">contacto@obrayuda.es</a>.</p>"""
     ld = {"@context": "https://schema.org", "@type": "AboutPage", "name": "Qué es Obrayuda", "url": f"{DOMINIO}/que-es-obrayuda/",
           "about": {"@type": "WebApplication", "name": "Obrayuda", "url": f"{DOMINIO}/", "applicationCategory": "FinanceApplication",
                     "isAccessibleForFree": True, "description": "Buscador gratuito de ayudas y subvenciones públicas para reformar, rehabilitar o construir vivienda en España. No es una empresa de reformas ni un directorio de profesionales."}}

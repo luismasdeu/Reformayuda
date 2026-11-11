@@ -22,7 +22,7 @@
 <link rel="icon" href="icons/icon-96.png" type="image/png" sizes="96x96">
 <script type="application/ld+json">
 [{"@context":"https://schema.org","@type":"WebSite","name":"Obrayuda","alternateName":"Obrayuda.es","url":"https://obrayuda.es/"},
- {"@context":"https://schema.org","@type":"Organization","name":"Obrayuda","url":"https://obrayuda.es/","description":"Obrayuda es un buscador gratuito y sin registro de ayudas y subvenciones públicas para reformar, rehabilitar o construir vivienda en España. No es una empresa de reformas ni un directorio de profesionales.","logo":"https://obrayuda.es/icons/icon-512.png","email":"contacto@reformayuda.es"}]
+ {"@context":"https://schema.org","@type":"Organization","name":"Obrayuda","url":"https://obrayuda.es/","description":"Obrayuda es un buscador gratuito y sin registro de ayudas y subvenciones públicas para reformar, rehabilitar o construir vivienda en España. No es una empresa de reformas ni un directorio de profesionales.","logo":"https://obrayuda.es/icons/icon-512.png","email":"contacto@obrayuda.es"}]
 </script>
 <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
 <style>
@@ -464,7 +464,7 @@ button.loc{font:inherit;font-weight:700;color:var(--ink);cursor:pointer;padding:
     <div style="flex:1;min-width:200px"><b style="color:var(--ink)">Lleva Obrayuda en tu móvil</b><br>Gratis, sin anuncios y funciona sin conexión. <span class="chip" style="margin-left:2px">Próximamente en Google Play</span></div>
     <button class="btn brand" id="btn-install">Instalar la app</button>
   </div>
-  <div><b style="color:var(--ink)">Obrayuda no es una app oficial</b> y no representa a ninguna administración pública. Es información orientativa sobre ayudas públicas a la vivienda; no presentamos solicitudes y lo que vale es lo publicado en el boletín oficial. Contacto: <a href="mailto:contacto@reformayuda.es">contacto@reformayuda.es</a></div>
+  <div><b style="color:var(--ink)">Obrayuda no es una app oficial</b> y no representa a ninguna administración pública. Es información orientativa sobre ayudas públicas a la vivienda; no presentamos solicitudes y lo que vale es lo publicado en el boletín oficial. Contacto: <a href="mailto:contacto@obrayuda.es">contacto@obrayuda.es</a></div>
   <div><b style="color:var(--ink)">Fuentes oficiales:</b> <a href="https://www.boe.es" target="_blank" rel="noopener">Boletín Oficial del Estado (boe.es)</a> · <a href="https://www.infosubvenciones.es" target="_blank" rel="noopener">Base de Datos Nacional de Subvenciones (infosubvenciones.es)</a> · <a href="https://sede.agenciatributaria.gob.es" target="_blank" rel="noopener">Agencia Tributaria</a> · <a href="https://www.mivau.gob.es" target="_blank" rel="noopener">Ministerio de Vivienda</a> · boletines autonómicos y provinciales, enlazados en cada ayuda.</div>
   <nav class="frow" aria-label="Legal"><button class="linkbtn" data-legal="aviso">Aviso legal</button><button class="linkbtn" data-legal="privacidad">Privacidad</button><button class="linkbtn" data-legal="cookies">Cookies</button><button class="linkbtn" data-go="avisos">Mis datos</button><a class="linkbtn" id="foot-valorar" hidden href="https://play.google.com/store/apps/details?id=es.reformayuda.app" target="_blank" rel="noopener" style="text-decoration:none">Valora la app</a><a class="linkbtn" href="/subvenciones/" style="text-decoration:none">Todas las ayudas</a><a class="linkbtn" href="/preguntas/" style="text-decoration:none">Preguntas frecuentes</a><a class="linkbtn" href="/programas/" style="text-decoration:none">Programas de ayudas</a></nav>
 </div></footer>
@@ -472,7 +472,7 @@ button.loc{font:inherit;font-weight:700;color:var(--ink);cursor:pointer;padding:
 <div class="cookie" id="valorar" hidden role="region" aria-label="Valorar Obrayuda"><div class="in">
   <b>Obrayuda es gratis y sin anuncios</b>
   <p style="font-size:.9rem">Si te está sirviendo, una valoración en Google Play ayuda a que la encuentren más personas que están buscando ayudas. Y si algo no funciona o echas algo en falta, cuéntanoslo.</p>
-  <div class="frow"><a class="btn sm brand" id="val-play" href="https://play.google.com/store/apps/details?id=es.reformayuda.app" target="_blank" rel="noopener">Valorar en Google Play</a><a class="btn sm alt" id="val-mail" href="mailto:contacto@reformayuda.es?subject=Sugerencia%20para%20Obrayuda">Enviar una sugerencia</a><button class="btn sm alt" id="val-no">Ahora no</button></div>
+  <div class="frow"><a class="btn sm brand" id="val-play" href="https://play.google.com/store/apps/details?id=es.reformayuda.app" target="_blank" rel="noopener">Valorar en Google Play</a><a class="btn sm alt" id="val-mail" href="mailto:contacto@obrayuda.es?subject=Sugerencia%20para%20Obrayuda">Enviar una sugerencia</a><button class="btn sm alt" id="val-no">Ahora no</button></div>
 </div></div>
 <div class="cookie" id="cookie" hidden role="region" aria-label="Aviso de cookies"><div class="in">
   <b>Tu privacidad, primero</b>
@@ -720,7 +720,7 @@ function openDrawer(id){if(id)contar("fichas");
      <a class="btn alt" data-oficial href="${a.url}" target="_blank" rel="noopener">${icon("ext","ico","width:18px;height:18px")}Ver fuente oficial</a>
      <button class="btn alt" data-fav="${a.id}" aria-pressed="${S.favs.has(a.id)}">${icon("heart","ico","width:18px;height:18px")}${S.favs.has(a.id)?"Guardada":"Guardar"}</button>
    </div>
-   ${a.revisada?`<p class="muted" style="font-size:.8rem">Revisada por Obrayuda el ${fdate(a.revisada)}. Si ves algún error, escríbenos a <a href="mailto:contacto@reformayuda.es">contacto@reformayuda.es</a>.</p>`:""}`;
+   ${a.revisada?`<p class="muted" style="font-size:.8rem">Revisada por Obrayuda el ${fdate(a.revisada)}. Si ves algún error, escríbenos a <a href="mailto:contacto@obrayuda.es">contacto@obrayuda.es</a>.</p>`:""}`;
   d.hidden=false;$("#scrim").hidden=false;$("#d-close").focus();
   $("#d-close").onclick=closeDrawer;
 }
@@ -993,7 +993,7 @@ function askDelete(kind){
 const PH=t=>`<span class="ph">[${t}]</span>`;
 const LEGAL={
  aviso:`<span class="eyebrow">Última actualización: 25 de octubre de 2026</span><h2>Aviso legal</h2>
-  <h3>Quién está detrás</h3><p>Titular: Luis Eduardo Masdeu Cano, persona física. Contacto: <a href="mailto:contacto@reformayuda.es">contacto@reformayuda.es</a>. Obrayuda es un proyecto personal, gratuito y sin actividad comercial ni publicidad.</p>
+  <h3>Quién está detrás</h3><p>Titular: Luis Eduardo Masdeu Cano, persona física. Contacto: <a href="mailto:contacto@obrayuda.es">contacto@obrayuda.es</a>. Obrayuda es un proyecto personal, gratuito y sin actividad comercial ni publicidad.</p>
   <h3>Qué es Obrayuda</h3><p>Una herramienta gratuita con información orientativa sobre ayudas públicas para reformar o construir vivienda, y utilidades para preparar la solicitud y calcular deducciones. Obrayuda no es una administración pública ni está vinculada a ninguna, no presenta solicitudes y no actúa como representante del usuario.</p>
   <h3>Exactitud de la información</h3><p>Recogemos los datos de fuentes oficiales (BOE, Base de Datos Nacional de Subvenciones, boletines autonómicos y provinciales, Agencia Tributaria) y los revisamos a menudo, pero pueden tener errores o cambiar. Lo que vale siempre es el texto publicado en el boletín oficial. Los cálculos del IRPF son estimaciones y no son asesoramiento fiscal ni jurídico.</p>
   <h3>Enlaces</h3><p>Enlazamos a sedes y boletines oficiales. No respondemos de su contenido ni de su disponibilidad.</p>
@@ -1001,7 +1001,7 @@ const LEGAL={
   <h3>Ley aplicable</h3><p>Ley española. Si eres consumidor, son competentes los juzgados de tu domicilio.</p>`,
  privacidad:`<span class="eyebrow">Última actualización: 6 de noviembre de 2026</span><h2>Política de privacidad</h2>
   <p><b>Resumen: Obrayuda no te pide ningún dato personal.</b> No hay registro, ni cuentas, ni email. Lo que haces en la app se queda en tu dispositivo y a nosotros no nos llega, salvo lo mínimo para enviarte notificaciones si decides activarlas.</p>
-  <h3>1. Responsable</h3><p>Luis Eduardo Masdeu Cano, persona física. Contacto: <a href="mailto:contacto@reformayuda.es">contacto@reformayuda.es</a>.</p>
+  <h3>1. Responsable</h3><p>Luis Eduardo Masdeu Cano, persona física. Contacto: <a href="mailto:contacto@obrayuda.es">contacto@obrayuda.es</a>.</p>
   <h3>2. Qué datos se guardan y dónde</h3><ul>
    <li><b>En tu dispositivo, nunca en nuestros servidores:</b> la ubicación de la obra, las respuestas del test (incluida tu franja de edad si la das), las ayudas guardadas, los requisitos y documentos que marcas y el cálculo del IRPF.</li>
    <li><b>Solo si activas las notificaciones:</b> guardamos en Google Firebase, con servidores en la Unión Europea, el identificador de notificaciones que tu móvil genera para Obrayuda, tu comunidad y provincia, los tipos de obra que elegiste y los códigos de las ayudas que guardas. Sirve únicamente para enviarte avisos de ayudas nuevas en tu zona y de plazos. No incluye tu nombre, email ni teléfono. Base legal: tu consentimiento (art. 6.1.a RGPD). Se borra en el momento en que desactivas las notificaciones o pulsas «Borrar todo», y si el identificador deja de ser válido. Google Ireland actúa como encargado del tratamiento.</li>
@@ -1010,7 +1010,7 @@ const LEGAL={
   <h3>3. Datos técnicos</h3><p>Como cualquier web, el servidor que aloja Obrayuda recibe tu dirección IP para poder enviarte la página. No la usamos para identificarte ni para crear perfiles. Si tu proveedor de alojamiento guarda registros, se borran en un plazo máximo de 30 días.</p>
   <h3>4. Recursos de terceros</h3><p>Las tipografías, los iconos y los datos se sirven desde nuestra propia web. Solo si activas las notificaciones o aceptas la medición anónima se conecta con el servicio Google Firebase, necesario para enviarlas o para sumar los contadores.</p>
   <h3>5. Enlaces a sedes oficiales</h3><p>Cuando vas a la sede de un organismo para presentar la solicitud, sales de Obrayuda. Allí se aplica la política de privacidad de ese organismo.</p>
-  <h3>6. Tus derechos</h3><p>Como todo está en tu dispositivo, tú controlas tus datos: puedes verlos, copiarlos o borrarlos desde «Mis datos». Para cualquier duda, escríbenos a <a href="mailto:contacto@reformayuda.es">contacto@reformayuda.es</a>. También puedes reclamar ante la Agencia Española de Protección de Datos (<a href="https://www.aepd.es" target="_blank" rel="noopener">aepd.es</a>).</p>
+  <h3>6. Tus derechos</h3><p>Como todo está en tu dispositivo, tú controlas tus datos: puedes verlos, copiarlos o borrarlos desde «Mis datos». Para cualquier duda, escríbenos a <a href="mailto:contacto@obrayuda.es">contacto@obrayuda.es</a>. También puedes reclamar ante la Agencia Española de Protección de Datos (<a href="https://www.aepd.es" target="_blank" rel="noopener">aepd.es</a>).</p>
   <h3>7. Cambios</h3><p>Si en el futuro añadimos algo que necesite datos personales (por ejemplo, avisos por email), será opcional, te lo pediremos de forma expresa y actualizaremos esta política antes.</p>`,
  cookies:`<span class="eyebrow">Última actualización: 6 de noviembre de 2026</span><h2>Política de cookies</h2>
   <p>Obrayuda no usa cookies de publicidad ni de seguimiento. Usamos almacenamiento local de tu navegador, de primera parte y técnico, para que la app funcione. Según el art. 22.2 de la LSSI no necesita consentimiento, pero te lo explicamos:</p>
