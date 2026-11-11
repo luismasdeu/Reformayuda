@@ -51,7 +51,8 @@
   "bdns-938979",
   "bdns-939620",
   "bdns-939866",
-  "bdns-940911"
+  "bdns-940911",
+  "bdns-941052"
  ],
  "ia": [
   {
@@ -1105,6 +1106,57 @@
    },
    "prov": "Sevilla",
    "muni": "Utrera"
+  },
+  {
+   "id": "bdns-941052",
+   "estado": "descartada",
+   "title": "Subvención 2026 de concesión directa sin convocatoria APAMEX mantenimiento de Oficina Técnica de Accesibilidad de Extremadura",
+   "org": "EXTREMADURA · SECRETARÍA GENERAL DE VIVIENDA, ARQUITECTURA, ACCESIBILIDAD Y REGENERACIÓN URBANA",
+   "scope": "autonomica",
+   "ccaa": "Extremadura",
+   "tipo": [
+    "accesibilidad"
+   ],
+   "dest": [
+    "vivienda"
+   ],
+   "importe": 0,
+   "imp": "Consulta la convocatoria",
+   "abre": "2026-11-10",
+   "cierra": null,
+   "plazo": "Consulta el plazo en la convocatoria",
+   "irpf": false,
+   "fuente": "BDNS nº 941052",
+   "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/941052",
+   "resumen": "Subvención 2026 de concesión directa sin convocatoria APAMEX mantenimiento de Oficina Técnica de Accesibilidad de Extremadura",
+   "req": [
+    "Consulta los requisitos en la convocatoria oficial"
+   ],
+   "docs": [
+    "Consulta la documentación en la convocatoria oficial"
+   ],
+   "pasos": [
+    "Lee la convocatoria oficial",
+    "Prepara la documentación",
+    "Presenta la solicitud en la sede del organismo"
+   ],
+   "_revisar": {
+    "presupuesto_total": 223300,
+    "bases_reguladoras": "https://www.boe.es/buscar/pdf/2011/BOE-A-2011-6649-consolidado.pdf",
+    "abierta_segun_bdns": false,
+    "beneficiarios": "PERSONAS JURÍDICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
+    "nota": "Revisa importe por vivienda, requisitos, documentos y pasos antes de aprobar.",
+    "ia": {
+     "fecha": "2026-11-11",
+     "documento": "44 de 50 páginas",
+     "recomendacion": "descartar",
+     "motivo": "Es una subvención de concesión directa a una asociación (APAMEX) para mantener su oficina técnica de accesibilidad; no paga obras en viviendas ni está abierta a particulares."
+    },
+    "confirmar": [
+     "El documento adjunto es la Ley 6/2011 de subvenciones de Extremadura, no la resolución de concesión de esta ayuda.",
+     "El beneficiario es una entidad concreta ya decidida, no abierta al público."
+    ]
+   }
   }
  ]
 }
