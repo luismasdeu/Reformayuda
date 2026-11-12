@@ -1,6 +1,6 @@
 {
  "_leeme": "Ayudas detectadas automáticamente en los boletines. Revísalas: pon \"estado\": \"aprobada\" o \"descartada\". Mira README.md.",
- "ultima_busqueda": "2026-11-11T06:12",
+ "ultima_busqueda": "2026-11-12T06:15",
  "candidatas": [
   {
    "id": "bdns-938584",
@@ -493,6 +493,120 @@
     "datos_no_oficiales": true,
     "referencia_bases": "Acuerdo del Consejo de Gobierno de 4 de noviembre de 2026; extracto pendiente de publicación en el BOCM"
    }
+  },
+  {
+   "id": "bdns-941556",
+   "estado": "descartada",
+   "title": "Subvención al Ayuntamiento de Cáseda para crear un proyecto de rehabilitación de edificio municipal",
+   "org": "COMUNIDAD FORAL DE NAVARRA · DEPARTAMENTO DE COHESIÓN TERRITORIAL",
+   "scope": "autonomica",
+   "ccaa": "Navarra",
+   "tipo": [
+    "rehabilitacion"
+   ],
+   "dest": [
+    "edificio"
+   ],
+   "importe": 0,
+   "imp": "Consulta la convocatoria",
+   "abre": "2026-11-11",
+   "cierra": null,
+   "plazo": "Consulta el plazo en la convocatoria",
+   "irpf": false,
+   "fuente": "BDNS nº 941556",
+   "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/941556",
+   "resumen": "Subvención al Ayuntamiento de Cáseda para crear un proyecto de rehabilitación de edificio municipal",
+   "req": [
+    "Consulta los requisitos en la convocatoria oficial"
+   ],
+   "docs": [
+    "Consulta la documentación en la convocatoria oficial"
+   ],
+   "pasos": [
+    "Lee la convocatoria oficial",
+    "Prepara la documentación",
+    "Presenta la solicitud en la sede del organismo"
+   ],
+   "_revisar": {
+    "presupuesto_total": 8000,
+    "bases_reguladoras": "https://bon.navarra.es/es/anuncio/-/texto/2025/260/0",
+    "abierta_segun_bdns": false,
+    "beneficiarios": "PERSONAS JURÍDICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
+    "nota": "Revisa importe por vivienda, requisitos, documentos y pasos antes de aprobar.",
+    "ia": {
+     "fecha": "2026-11-12",
+     "documento": "página web",
+     "recomendacion": "descartar",
+     "motivo": "Es una subvención directa a un ayuntamiento (Cáseda) para un proyecto sobre un edificio municipal, no una ayuda abierta a particulares ni a comunidades de propietarios."
+    },
+    "confirmar": [
+     "El texto adjunto es la Ley Foral de Presupuestos 2026 y no recoge el convenio con Cáseda.",
+     "Beneficiario único ya decidido (Ayuntamiento de Cáseda), no abierta al público."
+    ]
+   }
+  },
+  {
+   "id": "bdns-941340",
+   "estado": "espera",
+   "title": "Rehabilitación de inmuebles en el casco urbano de Agullent",
+   "org": "AGULLENT · AYUNTAMIENTO DE AGULLENT",
+   "scope": "municipal",
+   "ccaa": "Comunitat Valenciana",
+   "tipo": [
+    "rehabilitacion"
+   ],
+   "dest": [
+    "vivienda"
+   ],
+   "importe": 0,
+   "imp": "Consulta la convocatoria",
+   "abre": "2026-11-11",
+   "cierra": null,
+   "plazo": "Según la BDNS, 20 días naturales desde el día siguiente a la publicación de la convocatoria en el BOP de Valencia. No consta la fecha de esa publicación.",
+   "irpf": false,
+   "fuente": "BDNS nº 941340",
+   "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/941340",
+   "resumen": "El Ayuntamiento de Agullent da ayudas económicas a particulares para hacer obras de rehabilitación en inmuebles del casco urbano. La convocatoria 2026 tiene un presupuesto total de 90.000 €. Se concede por concurrencia competitiva. No he podido leer las bases, así que faltan importes y requisitos.",
+   "req": [
+    "Consulta los requisitos en la convocatoria oficial"
+   ],
+   "docs": [
+    "Consulta la documentación en la convocatoria oficial"
+   ],
+   "pasos": [
+    "Lee la convocatoria oficial",
+    "Prepara la documentación",
+    "Presenta la solicitud en la sede del organismo"
+   ],
+   "_revisar": {
+    "presupuesto_total": 90000,
+    "bases_reguladoras": "https://agullent.sedelectronica.es",
+    "abierta_segun_bdns": false,
+    "beneficiarios": "PERSONAS FÍSICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
+    "nota": "Revisa importe por vivienda, requisitos, documentos y pasos antes de aprobar.",
+    "bases_no_corresponden": true,
+    "referencia_bases": "Bases y convocatoria 2026 (expte. 120/2026) en la sede electrónica del Ayuntamiento de Agullent (agullent.sedelectronica.es) y anuncio en el BOP de Valencia, cuya fecha no consta.",
+    "ia": {
+     "fecha": "2026-11-12",
+     "documento": "el enlace de bases de la BDNS es genérico (ley, ordenanza general o portada) (extracto; bases en Bases y convocatoria 2026 (expte. 120/2026) en la sede electrónica del Ayuntamiento de Agullent (agullent.sedelectronica.es) y anuncio en el BOP de Valencia, cuya fecha no consta.)",
+     "recomendacion": "publicar",
+     "motivo": "Son ayudas del Ayuntamiento de Agullent para pagar obras de rehabilitación de inmuebles del casco urbano, dirigidas a personas físicas."
+    },
+    "confirmar": [
+     "No he podido leer las bases. Comprueba el importe por vivienda o el porcentaje y su máximo, los requisitos y la documentación.",
+     "Comprueba la fecha de publicación en el BOP de Valencia, porque de ella depende cuándo abre y cierra el plazo de 20 días naturales.",
+     "Comprueba si las ayudas incluyen locales además de viviendas y qué obras se pueden pagar.",
+     "La sede electrónica no se pudo abrir. Comprueba que la dirección sirve para presentar la solicitud."
+    ],
+    "espera": {
+     "desde": "2026-11-12",
+     "intentos": 1,
+     "proxima": "2026-11-15"
+    }
+   },
+   "prov": "Valencia",
+   "muni": "Agullent",
+   "sede": "https://agullent.sedelectronica.es"
   }
  ],
  "boe": [

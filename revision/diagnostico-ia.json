@@ -1,29 +1,23 @@
 {
- "fecha": "2026-11-11T06:12",
+ "fecha": "2026-11-12T06:16",
  "modelo": "claude-sonnet-5-5",
  "procesadas": [
   {
-   "id": "bdns-940941",
-   "documento": "página web (no eran las bases de esta ayuda: buscada en internet)",
-   "coste_usd": 0.1483,
-   "recomendacion": "corregida"
-  },
-  {
-   "id": "bdns-941052",
-   "documento": "44 de 50 páginas",
-   "coste_usd": 0.1075,
+   "id": "bdns-941556",
+   "documento": "página web",
+   "coste_usd": 0.1079,
    "recomendacion": "descartar"
   },
   {
-   "id": "bdns-939227",
-   "documento": "página web (extracto; bases en BOPT de Tarragona, registro 2026-00544, de 26/01/2026 (aprobación definitiva de las bases).)",
-   "coste_usd": 0.4734,
+   "id": "bdns-941340",
+   "documento": "el enlace de bases de la BDNS es genérico (ley, ordenanza general o portada) (extracto; bases en Bases y convocatoria 2026 (expte. 120/2026) en la sede electrónica del Ayuntamiento de Agullent (agullent.sedelectronica.es) y anuncio en el BOP de Valencia, cuya fecha no consta.)",
+   "coste_usd": 0.3255,
    "recomendacion": "publicar"
   }
  ],
  "errores": [],
- "coste_usd": 0.729,
+ "coste_usd": 0.433,
  "pendientes_por_tope": 0,
- "gasto_mes_usd": 6.471,
+ "gasto_mes_usd": 6.904,
  "limite_mes_usd": 15.0
 }
