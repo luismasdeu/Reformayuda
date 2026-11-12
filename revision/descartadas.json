@@ -52,7 +52,8 @@
   "bdns-939620",
   "bdns-939866",
   "bdns-940911",
-  "bdns-941052"
+  "bdns-941052",
+  "bdns-941556"
  ],
  "ia": [
   {
@@ -1155,6 +1156,57 @@
     "confirmar": [
      "El documento adjunto es la Ley 6/2011 de subvenciones de Extremadura, no la resolución de concesión de esta ayuda.",
      "El beneficiario es una entidad concreta ya decidida, no abierta al público."
+    ]
+   }
+  },
+  {
+   "id": "bdns-941556",
+   "estado": "descartada",
+   "title": "Subvención al Ayuntamiento de Cáseda para crear un proyecto de rehabilitación de edificio municipal",
+   "org": "COMUNIDAD FORAL DE NAVARRA · DEPARTAMENTO DE COHESIÓN TERRITORIAL",
+   "scope": "autonomica",
+   "ccaa": "Navarra",
+   "tipo": [
+    "rehabilitacion"
+   ],
+   "dest": [
+    "edificio"
+   ],
+   "importe": 0,
+   "imp": "Consulta la convocatoria",
+   "abre": "2026-11-11",
+   "cierra": null,
+   "plazo": "Consulta el plazo en la convocatoria",
+   "irpf": false,
+   "fuente": "BDNS nº 941556",
+   "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/941556",
+   "resumen": "Subvención al Ayuntamiento de Cáseda para crear un proyecto de rehabilitación de edificio municipal",
+   "req": [
+    "Consulta los requisitos en la convocatoria oficial"
+   ],
+   "docs": [
+    "Consulta la documentación en la convocatoria oficial"
+   ],
+   "pasos": [
+    "Lee la convocatoria oficial",
+    "Prepara la documentación",
+    "Presenta la solicitud en la sede del organismo"
+   ],
+   "_revisar": {
+    "presupuesto_total": 8000,
+    "bases_reguladoras": "https://bon.navarra.es/es/anuncio/-/texto/2025/260/0",
+    "abierta_segun_bdns": false,
+    "beneficiarios": "PERSONAS JURÍDICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
+    "nota": "Revisa importe por vivienda, requisitos, documentos y pasos antes de aprobar.",
+    "ia": {
+     "fecha": "2026-11-12",
+     "documento": "página web",
+     "recomendacion": "descartar",
+     "motivo": "Es una subvención directa a un ayuntamiento (Cáseda) para un proyecto sobre un edificio municipal, no una ayuda abierta a particulares ni a comunidades de propietarios."
+    },
+    "confirmar": [
+     "El texto adjunto es la Ley Foral de Presupuestos 2026 y no recoge el convenio con Cáseda.",
+     "Beneficiario único ya decidido (Ayuntamiento de Cáseda), no abierta al público."
     ]
    }
   }
