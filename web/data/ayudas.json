@@ -1,6 +1,6 @@
 {
  "_leeme": "Ayudas publicadas en la app. Edita con cuidado: el formato se comprueba antes de publicar (scripts/validar.py).",
- "actualizado": "2026-11-10",
+ "actualizado": "2026-11-13",
  "ayudas": [
   {
    "id": "pev-rehab",
@@ -819,6 +819,48 @@
    "revisada": "2026-11-10",
    "auto": "2026-11-10",
    "ia": "2026-11-11"
+  },
+  {
+   "id": "bdns-941790",
+   "title": "Obras de accesibilidad y conservación en comunidades de Villa del Prado",
+   "org": "VILLA DEL PRADO · AYUNTAMIENTO DE VILLA DEL PRADO",
+   "scope": "municipal",
+   "ccaa": "all",
+   "tipo": [
+    "accesibilidad",
+    "rehabilitacion"
+   ],
+   "dest": [
+    "edificio"
+   ],
+   "importe": 0,
+   "imp": "Importe pendiente de publicar en las bases",
+   "abre": "2026-11-13",
+   "cierra": "2026-12-14",
+   "plazo": "Del 13 de noviembre al 14 de diciembre de 2026, según la ficha de la BDNS.",
+   "irpf": false,
+   "fuente": "BDNS nº 941790",
+   "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/941790",
+   "resumen": "El Ayuntamiento de Villa del Prado da ayudas a comunidades de propietarios. Sirven para obras de accesibilidad, conservación, salubridad y seguridad en infraestructuras y servicios existentes de uso residencial. El presupuesto total es de 150.000 €. No he podido leer las bases, así que faltan los detalles.",
+   "req": [
+    "Consulta los requisitos en la convocatoria oficial"
+   ],
+   "docs": [
+    "Consulta la documentación en la convocatoria oficial"
+   ],
+   "pasos": [
+    "Lee la convocatoria oficial",
+    "Prepara la documentación",
+    "Presenta la solicitud en la sede del organismo"
+   ],
+   "muni": "Villa Del Prado",
+   "sede": "https://sede.villadelprado.es/eAdmin/Sede",
+   "pendiente_bases": {
+    "intentos": 1,
+    "proxima": "2026-11-17"
+   },
+   "revisada": "2026-11-13",
+   "auto": "2026-11-13"
   }
  ]
 }

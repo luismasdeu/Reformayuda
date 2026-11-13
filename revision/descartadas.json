@@ -53,7 +53,8 @@
   "bdns-939866",
   "bdns-940911",
   "bdns-941052",
-  "bdns-941556"
+  "bdns-941556",
+  "bdns-941609"
  ],
  "ia": [
   {
@@ -1209,6 +1210,61 @@
      "Beneficiario único ya decidido (Ayuntamiento de Cáseda), no abierta al público."
     ]
    }
+  },
+  {
+   "id": "bdns-941609",
+   "estado": "descartada",
+   "title": "SUBVENCIONES A PERSONAS EN SITUACION DE DEPENDENCIA PARA LA MEJORA DE MOVILIDAD EN LA VIVIENDA 2026",
+   "org": "LAGUNA DE DUERO · AYUNTAMIENTO DE LAGUNA DE DUERO",
+   "scope": "municipal",
+   "ccaa": "Castilla y León",
+   "tipo": [
+    "rehabilitacion"
+   ],
+   "dest": [
+    "vivienda"
+   ],
+   "importe": 0,
+   "imp": "Consulta la convocatoria",
+   "abre": "2026-11-12",
+   "cierra": null,
+   "plazo": "Consulta el plazo en la convocatoria",
+   "irpf": false,
+   "fuente": "BDNS nº 941609",
+   "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/941609",
+   "resumen": "SUBVENCIONES A PERSONAS EN SITUACION DE DEPENDENCIA PARA LA MEJORA DE MOVILIDAD EN LA VIVIENDA 2026",
+   "req": [
+    "Consulta los requisitos en la convocatoria oficial"
+   ],
+   "docs": [
+    "Consulta la documentación en la convocatoria oficial"
+   ],
+   "pasos": [
+    "Lee la convocatoria oficial",
+    "Prepara la documentación",
+    "Presenta la solicitud en la sede del organismo"
+   ],
+   "_revisar": {
+    "presupuesto_total": 20000,
+    "bases_reguladoras": "https://lagunadeduero.sedelectronica.es/board",
+    "abierta_segun_bdns": false,
+    "beneficiarios": "PERSONAS FÍSICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
+    "nota": "Revisa importe por vivienda, requisitos, documentos y pasos antes de aprobar.",
+    "bases_no_corresponden": true,
+    "ia": {
+     "fecha": "2026-11-13",
+     "documento": "página web (no eran las bases de esta ayuda: buscada en internet)",
+     "recomendacion": "descartar",
+     "motivo": "No he podido leer las bases. Según la memoria municipal, la ayuda mezcla ayudas técnicas y mejoras de movilidad en la vivienda. Sin las bases no se sabe si paga obras, así que ante la duda la dejo en false."
+    },
+    "confirmar": [
+     "Comprobar en el decreto de convocatoria si paga obras de accesibilidad en la vivienda o solo ayudas técnicas (productos de apoyo).",
+     "Faltan el importe por persona, los requisitos y los documentos que hay que presentar.",
+     "Falta la fecha de publicación en el BOPVA, de la que depende el inicio del plazo de 15 días naturales."
+    ]
+   },
+   "prov": "Valladolid",
+   "muni": "Laguna De Duero"
   }
  ]
 }
