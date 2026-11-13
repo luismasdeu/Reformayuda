@@ -1,23 +1,41 @@
 {
- "fecha": "2026-11-12T06:16",
+ "fecha": "2026-11-13T06:13",
  "modelo": "claude-sonnet-5-5",
  "procesadas": [
   {
-   "id": "bdns-941556",
-   "documento": "página web",
-   "coste_usd": 0.1079,
+   "id": "bdns-941609",
+   "documento": "página web (no eran las bases de esta ayuda: buscada en internet)",
+   "coste_usd": 0.3114,
    "recomendacion": "descartar"
   },
   {
-   "id": "bdns-941340",
-   "documento": "el enlace de bases de la BDNS es genérico (ley, ordenanza general o portada) (extracto; bases en Bases y convocatoria 2026 (expte. 120/2026) en la sede electrónica del Ayuntamiento de Agullent (agullent.sedelectronica.es) y anuncio en el BOP de Valencia, cuya fecha no consta.)",
-   "coste_usd": 0.3255,
+   "id": "bdns-941790",
+   "documento": "página web (no eran las bases de esta ayuda: buscada en internet)",
+   "coste_usd": 0.3524,
+   "recomendacion": "publicada sola (sin bases)"
+  },
+  {
+   "id": "bdns-938584",
+   "documento": "el enlace de bases de la BDNS es genérico (ley, ordenanza general o portada)",
+   "coste_usd": 0.1503,
+   "recomendacion": "publicar"
+  },
+  {
+   "id": "bdns-939709",
+   "documento": "el enlace de bases de la BDNS es genérico (ley, ordenanza general o portada) (extracto; bases en Bases reguladoras 2024-25 publicadas en el BOP de Las Palmas (número y fecha sin confirmar); la convocatoria 2026 debe publicarse en el BOP de Las Palmas.)",
+   "coste_usd": 0.5278,
+   "recomendacion": "publicar"
+  },
+  {
+   "id": "bdns-939915",
+   "documento": "PDF de 10 páginas (no eran las bases de esta ayuda: buscada en internet)",
+   "coste_usd": 0.2602,
    "recomendacion": "publicar"
   }
  ],
  "errores": [],
- "coste_usd": 0.433,
+ "coste_usd": 1.602,
  "pendientes_por_tope": 0,
- "gasto_mes_usd": 6.904,
+ "gasto_mes_usd": 8.506,
  "limite_mes_usd": 15.0
 }

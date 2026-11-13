@@ -1,6 +1,6 @@
 {
  "_leeme": "Ayudas detectadas automáticamente en los boletines. Revísalas: pon \"estado\": \"aprobada\" o \"descartada\". Mira README.md.",
- "ultima_busqueda": "2026-11-12T06:15",
+ "ultima_busqueda": "2026-11-13T06:13",
  "candidatas": [
   {
    "id": "bdns-938584",
@@ -19,11 +19,11 @@
    "imp": "Consulta la convocatoria",
    "abre": "2026-11-05",
    "cierra": "2026-12-31",
-   "plazo": "20 días desde la publicación en el BOPMA (Edicto 4244/2026, 5 de noviembre de 2026). Según la BDNS, las ayudas se conceden hasta agotar el dinero, con fecha límite el 31 de diciembre de 2026.",
+   "plazo": "La BDNS dice que el plazo es de 20 días desde la publicación en el BOP de Málaga y que acaba al agotarse el dinero. La fecha final que consta es el 31-12-2026. El presupuesto total es de 14.000 €.",
    "irpf": false,
    "fuente": "BDNS nº 938584",
    "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/938584",
-   "resumen": "El Ayuntamiento de Villanueva de Algaidas da ayudas económicas a particulares para recuperar y adecuar viviendas antiguas. El presupuesto total es de 14.000 €. Se conceden hasta agotar ese dinero.",
+   "resumen": "El Ayuntamiento de Villanueva de Algaidas (Málaga) concede ayudas a particulares para recuperar y adecuar viviendas antiguas. No he podido leer las bases, así que faltan los detalles.",
    "req": [
     "Consulta los requisitos en la convocatoria oficial"
    ],
@@ -44,20 +44,21 @@
     "bases_no_corresponden": true,
     "referencia_bases": "BOPMA, Edicto 4244/2026, hacia el 5 de noviembre de 2026 (fecha por confirmar)",
     "ia": {
-     "fecha": "2026-11-06",
-     "documento": "el enlace de bases de la BDNS es genérico (ley, ordenanza general o portada) (extracto; bases en BOPMA, Edicto 4244/2026, hacia el 5 de noviembre de 2026 (fecha por confirmar))",
+     "fecha": "2026-11-13",
+     "documento": "el enlace de bases de la BDNS es genérico (ley, ordenanza general o portada)",
      "recomendacion": "publicar",
-     "motivo": "Son ayudas del Ayuntamiento para recuperar y adecuar viviendas antiguas, dirigidas a particulares. No he podido leer el texto de las bases."
+     "motivo": "La BDNS la describe como ayuda para recuperar y adecuar viviendas antiguas, algo que apunta a obras de rehabilitación, pero no he podido leer las bases."
     },
     "confirmar": [
-     "No he podido leer las bases. Comprueba el importe por vivienda, el porcentaje y el máximo, los requisitos y los documentos.",
-     "Comprueba la fecha exacta de apertura del plazo y si los 20 días son hábiles o naturales, y si el plazo acaba antes del 31/12/2026.",
-     "Comprueba qué obras se pagan y qué se entiende por vivienda antigua."
+     "No se han podido leer las bases ni el extracto: faltan el importe por vivienda, los requisitos, los documentos y los pasos.",
+     "Hay que comprobar la fecha de publicación en el BOP de Málaga, que marca la apertura del plazo, y si el plazo acaba el 31-12-2026 o al agotarse el dinero.",
+     "Hay que comprobar qué obras se pagan exactamente y si la ayuda es para obras o para otra cosa.",
+     "Los 14.000 € son el presupuesto total, no la cantidad por vivienda."
     ],
     "espera": {
      "desde": "2026-10-29",
-     "intentos": 3,
-     "proxima": "2026-11-13"
+     "intentos": 4,
+     "proxima": "2026-11-23"
     }
    },
    "prov": "Málaga",
@@ -293,6 +294,7 @@
    "scope": "municipal",
    "ccaa": "Canarias",
    "tipo": [
+    "eficiencia",
     "rehabilitacion"
    ],
    "dest": [
@@ -302,15 +304,16 @@
    "imp": "Importe pendiente de publicar en las bases oficiales",
    "abre": "2026-11-04",
    "cierra": null,
-   "plazo": "Según la BDNS, el plazo empieza el día siguiente a publicar la convocatoria en el BOP de Las Palmas y dura 2 meses. No he visto esa publicación ni su fecha.",
+   "plazo": "Empieza el día siguiente a publicarse la convocatoria en el BOP de Las Palmas y dura 2 meses desde esa publicación. No he visto esa publicación, así que no consta la fecha exacta.",
    "irpf": false,
    "fuente": "BDNS nº 939709",
    "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/939709",
-   "resumen": "El Ayuntamiento de San Bartolomé da subvenciones a particulares para rehabilitar su vivienda. El presupuesto total es de 323.793,18 €. No he podido leer las bases oficiales, así que faltan el importe por vivienda, los requisitos y los documentos.",
+   "resumen": "El Ayuntamiento de San Bartolomé da subvenciones a personas que no tienen actividad económica para reformar o rehabilitar su vivienda. Las obras sirven para mantener la habitabilidad, ahorrar energía y arreglar elementos estructurales. El presupuesto total es de 323.793,18 €. Las bases de 2024-25 están financiadas por el Gobierno de Canarias a través del Instituto Canario de la Vivienda. No he podido leer las bases ni la convocatoria completas, así que faltan datos.",
    "req": [
-    "Ser persona física y no desarrollar actividad económica con la vivienda (dato de la BDNS).",
-    "Hacer las obras en una vivienda privada de San Bartolomé (Lanzarote).",
-    "El resto de requisitos (empadronamiento, titularidad de la vivienda, ingresos) hay que confirmarlos en las bases oficiales."
+    "Ser persona física sin actividad económica.",
+    "Que la vivienda esté en el municipio de San Bartolomé.",
+    "Cumplir los requisitos de las bases reguladoras (pendientes de comprobar).",
+    "Presentar declaración responsable y autorizar la consulta de tus ingresos."
    ],
    "docs": [
     "Solicitud (Anexo I).",
@@ -320,11 +323,11 @@
     "Autorización para consultar ingresos (Anexo 5)."
    ],
    "pasos": [
-    "Espera a que el BOP de Las Palmas publique el extracto de la convocatoria.",
-    "Reúne los documentos y rellena los anexos que publica el Ayuntamiento.",
-    "Presenta la solicitud en la sede electrónica del Ayuntamiento de San Bartolomé dentro de los 2 meses.",
-    "Si te conceden la ayuda, firma la aceptación (Anexo 6).",
-    "Haz las obras y justifica el gasto con la cuenta justificativa (Anexo 7)."
+    "Espera a que se publique la convocatoria en el BOP de Las Palmas.",
+    "Rellena la solicitud (Anexo I) y los demás anexos.",
+    "Preséntala en la sede electrónica del Ayuntamiento dentro del plazo.",
+    "Si te la conceden, firma la aceptación de la subvención (Anexo 6).",
+    "Haz la obra y justifícala con la cuenta justificativa (Anexo 7)."
    ],
    "_revisar": {
     "presupuesto_total": 323793.18,
@@ -333,23 +336,23 @@
     "beneficiarios": "PERSONAS FÍSICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
     "nota": "Revisa importe por vivienda, requisitos, documentos y pasos antes de aprobar.",
     "bases_no_corresponden": true,
-    "referencia_bases": "Bases reguladoras de las subvenciones para rehabilitar viviendas privadas en San Bartolomé, ejercicios 2024-25, publicadas en el BOP de Las Palmas (número y fecha sin confirmar).",
+    "referencia_bases": "Bases reguladoras 2024-25 publicadas en el BOP de Las Palmas (número y fecha sin confirmar); la convocatoria 2026 debe publicarse en el BOP de Las Palmas.",
     "ia": {
-     "fecha": "2026-11-08",
-     "documento": "el enlace de bases de la BDNS es genérico (ley, ordenanza general o portada) (extracto; bases en Bases reguladoras de las subvenciones para rehabilitar viviendas privadas en San Bartolomé, ejercicios 2024-25, publicadas en el BOP de Las Palmas (número y fecha sin confirmar).)",
+     "fecha": "2026-11-13",
+     "documento": "el enlace de bases de la BDNS es genérico (ley, ordenanza general o portada) (extracto; bases en Bases reguladoras 2024-25 publicadas en el BOP de Las Palmas (número y fecha sin confirmar); la convocatoria 2026 debe publicarse en el BOP de Las Palmas.)",
      "recomendacion": "publicar",
-     "motivo": "Subvenciona obras de rehabilitación de viviendas privadas a personas físicas del municipio, según la ficha de la BDNS."
+     "motivo": "Subvenciona obras de rehabilitación y adecuación de viviendas privadas de particulares en San Bartolomé (Lanzarote)."
     },
     "confirmar": [
-     "No se han podido leer las bases ni el anuncio de la convocatoria. Hay que comprobar importe máximo por vivienda, obras subvencionables, requisitos y documentos.",
-     "La BDNS cita las bases de 2024-25 en el BOP de Las Palmas, pero la sede del Ayuntamiento anuncia unas bases 2026-27 (3 jun 2026). Hay que comprobar cuáles se aplican.",
-     "Una noticia de prensa habla de hasta 5.000 € por vivienda y de requisitos de empadronamiento. No es fuente oficial y no la he usado.",
-     "Falta la fecha de publicación de la convocatoria en el BOP, que fija el día de apertura."
+     "Comprueba el importe máximo por vivienda, el porcentaje subvencionable y los límites de ingresos en las bases.",
+     "Comprueba la fecha de publicación de la convocatoria en el BOP y, con ella, las fechas de apertura y cierre del plazo.",
+     "Comprueba las obras subvencionables, las líneas de ayuda y si hay requisitos de edad o de personas en la vivienda.",
+     "Comprueba el número y la fecha del BOP donde están las bases 2024-25."
     ],
     "espera": {
      "desde": "2026-11-05",
-     "intentos": 2,
-     "proxima": "2026-11-13"
+     "intentos": 3,
+     "proxima": "2026-11-20"
     },
     "datos_no_oficiales": true
    },
@@ -365,23 +368,20 @@
    "scope": "municipal",
    "ccaa": "País Vasco",
    "tipo": [
-    "eficiencia",
-    "accesibilidad",
     "rehabilitacion"
    ],
    "dest": [
-    "edificio",
-    "vivienda"
+    "edificio"
    ],
    "importe": 0,
    "imp": "Un porcentaje del presupuesto protegible según tus ingresos (en 2023, el 50 % si ingresas menos de 21.000 € al año). Máximo por vivienda sin confirmar.",
    "abre": "2026-11-04",
    "cierra": null,
-   "plazo": "Tres meses desde la publicación de la convocatoria en el Boletín Oficial de Bizkaia (BOB). No he visto esa publicación, así que la fecha exacta de apertura y de cierre no está confirmada.",
+   "plazo": "Según la BDNS, el plazo es de tres meses desde la publicación de la convocatoria en el BOB. Todavía no se ha visto esa publicación, así que no se conoce la fecha exacta.",
    "irpf": false,
    "fuente": "BDNS nº 939915",
    "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/939915",
-   "resumen": "El Ayuntamiento de Barakaldo da subvenciones a particulares que hacen obras de rehabilitación en edificios residenciales del municipio. La ayuda es un porcentaje del presupuesto protegible y depende de los ingresos. El presupuesto total de la convocatoria 2026 es de 227.652 €. No he podido leer el texto de la convocatoria 2026, así que los datos de cuantía vienen de la web municipal de la edición 2023 y hay que confirmarlos.",
+   "resumen": "El Ayuntamiento de Barakaldo convoca para 2026 ayudas a la rehabilitación de edificios de viviendas. Presupuesto total: 227.652 €. No se han podido leer las bases ni la convocatoria oficial, así que faltan los detalles.",
    "req": [
     "Ser persona física y haber promovido obras de rehabilitación en un edificio residencial de Barakaldo.",
     "Tus ingresos anuales determinan el porcentaje de ayuda (tramos según el salario mínimo).",
@@ -409,21 +409,20 @@
     "nota": "Revisa importe por vivienda, requisitos, documentos y pasos antes de aprobar.",
     "bases_no_corresponden": true,
     "ia": {
-     "fecha": "2026-11-08",
+     "fecha": "2026-11-13",
      "documento": "PDF de 10 páginas (no eran las bases de esta ayuda: buscada en internet)",
      "recomendacion": "publicar",
-     "motivo": "Subvenciona obras de rehabilitación de edificios residenciales (fachadas, estructura, accesibilidad, eficiencia) en Barakaldo."
+     "motivo": "Subvenciona obras de rehabilitación en edificios de viviendas de Barakaldo, pedidas por particulares que han promovido la obra."
     },
     "confirmar": [
-     "No se ha leído el texto de la convocatoria 2026 (CERT_JGL_33_2026_6.pdf): faltan importe máximo, fechas exactas, requisitos y documentos.",
-     "Comprobar los tramos de ingresos y porcentajes de 2026. Los datos vistos son de la web de 2023 y de las bases de 2018 (BOB nº 57, 21/03/2018).",
-     "Comprobar la fecha de publicación en el BOB, que marca el inicio y el final de los tres meses de plazo.",
-     "Confirmar si la ayuda es para particulares que promueven obras en comunidades y si hay límite por vivienda."
+     "No se han podido leer las bases ni la convocatoria: faltan el importe, los requisitos, los documentos y cómo se pide.",
+     "Falta la fecha de publicación en el BOB, que marca el inicio del plazo de tres meses.",
+     "Comprueba qué obras se pagan y si la obra debe estar ya terminada. Solo hay referencias en prensa a la edición de 2025, y la prensa no es fuente oficial."
     ],
     "espera": {
      "desde": "2026-11-05",
-     "intentos": 2,
-     "proxima": "2026-11-13"
+     "intentos": 3,
+     "proxima": "2026-11-20"
     }
    },
    "prov": "Bizkaia",
@@ -556,6 +555,121 @@
    "prov": "Valencia",
    "muni": "Agullent",
    "sede": "https://agullent.sedelectronica.es"
+  },
+  {
+   "id": "bdns-941609",
+   "estado": "descartada",
+   "title": "SUBVENCIONES A PERSONAS EN SITUACION DE DEPENDENCIA PARA LA MEJORA DE MOVILIDAD EN LA VIVIENDA 2026",
+   "org": "LAGUNA DE DUERO · AYUNTAMIENTO DE LAGUNA DE DUERO",
+   "scope": "municipal",
+   "ccaa": "Castilla y León",
+   "tipo": [
+    "rehabilitacion"
+   ],
+   "dest": [
+    "vivienda"
+   ],
+   "importe": 0,
+   "imp": "Consulta la convocatoria",
+   "abre": "2026-11-12",
+   "cierra": null,
+   "plazo": "Consulta el plazo en la convocatoria",
+   "irpf": false,
+   "fuente": "BDNS nº 941609",
+   "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/941609",
+   "resumen": "SUBVENCIONES A PERSONAS EN SITUACION DE DEPENDENCIA PARA LA MEJORA DE MOVILIDAD EN LA VIVIENDA 2026",
+   "req": [
+    "Consulta los requisitos en la convocatoria oficial"
+   ],
+   "docs": [
+    "Consulta la documentación en la convocatoria oficial"
+   ],
+   "pasos": [
+    "Lee la convocatoria oficial",
+    "Prepara la documentación",
+    "Presenta la solicitud en la sede del organismo"
+   ],
+   "_revisar": {
+    "presupuesto_total": 20000,
+    "bases_reguladoras": "https://lagunadeduero.sedelectronica.es/board",
+    "abierta_segun_bdns": false,
+    "beneficiarios": "PERSONAS FÍSICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
+    "nota": "Revisa importe por vivienda, requisitos, documentos y pasos antes de aprobar.",
+    "bases_no_corresponden": true,
+    "ia": {
+     "fecha": "2026-11-13",
+     "documento": "página web (no eran las bases de esta ayuda: buscada en internet)",
+     "recomendacion": "descartar",
+     "motivo": "No he podido leer las bases. Según la memoria municipal, la ayuda mezcla ayudas técnicas y mejoras de movilidad en la vivienda. Sin las bases no se sabe si paga obras, así que ante la duda la dejo en false."
+    },
+    "confirmar": [
+     "Comprobar en el decreto de convocatoria si paga obras de accesibilidad en la vivienda o solo ayudas técnicas (productos de apoyo).",
+     "Faltan el importe por persona, los requisitos y los documentos que hay que presentar.",
+     "Falta la fecha de publicación en el BOPVA, de la que depende el inicio del plazo de 15 días naturales."
+    ]
+   },
+   "prov": "Valladolid",
+   "muni": "Laguna De Duero"
+  },
+  {
+   "id": "bdns-941790",
+   "estado": "aprobada",
+   "title": "Obras de accesibilidad y conservación en comunidades de Villa del Prado",
+   "org": "VILLA DEL PRADO · AYUNTAMIENTO DE VILLA DEL PRADO",
+   "scope": "municipal",
+   "ccaa": "all",
+   "tipo": [
+    "accesibilidad",
+    "rehabilitacion"
+   ],
+   "dest": [
+    "edificio"
+   ],
+   "importe": 0,
+   "imp": "Importe pendiente de publicar en las bases",
+   "abre": "2026-11-13",
+   "cierra": "2026-12-14",
+   "plazo": "Del 13 de noviembre al 14 de diciembre de 2026, según la ficha de la BDNS.",
+   "irpf": false,
+   "fuente": "BDNS nº 941790",
+   "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/941790",
+   "resumen": "El Ayuntamiento de Villa del Prado da ayudas a comunidades de propietarios. Sirven para obras de accesibilidad, conservación, salubridad y seguridad en infraestructuras y servicios existentes de uso residencial. El presupuesto total es de 150.000 €. No he podido leer las bases, así que faltan los detalles.",
+   "req": [
+    "Consulta los requisitos en la convocatoria oficial"
+   ],
+   "docs": [
+    "Consulta la documentación en la convocatoria oficial"
+   ],
+   "pasos": [
+    "Lee la convocatoria oficial",
+    "Prepara la documentación",
+    "Presenta la solicitud en la sede del organismo"
+   ],
+   "_revisar": {
+    "presupuesto_total": 150000,
+    "bases_reguladoras": "https://transparencia.villadelprado.org/index.php/ayudas-ciudadania",
+    "abierta_segun_bdns": false,
+    "beneficiarios": "PERSONAS JURÍDICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
+    "nota": "Revisa importe por vivienda, requisitos, documentos y pasos antes de aprobar.",
+    "bases_no_corresponden": true,
+    "ia": {
+     "fecha": "2026-11-13",
+     "documento": "página web (no eran las bases de esta ayuda: buscada en internet)",
+     "recomendacion": "publicada sola (sin bases)",
+     "motivo": "Paga obras de accesibilidad, conservación, salubridad y seguridad en comunidades de propietarios de uso residencial de Villa del Prado, pero no he podido leer las bases."
+    },
+    "confirmar": [
+     "No he podido leer las bases (PDF «BASES CONVOCATORIA DE SUBVENCION» en la BDNS y en transparencia.villadelprado.org). Faltan importe por comunidad o porcentaje, requisitos, documentos y pasos.",
+     "Comprobar qué obras se pagan exactamente y si hay un máximo por comunidad o por vivienda.",
+     "Confirmar las fechas de plazo y si la convocatoria se publicó en el boletín oficial (BOCM)."
+    ]
+   },
+   "muni": "Villa Del Prado",
+   "sede": "https://sede.villadelprado.es/eAdmin/Sede",
+   "pendiente_bases": {
+    "intentos": 1,
+    "proxima": "2026-11-17"
+   }
   }
  ],
  "boe": [
@@ -565,6 +679,13 @@
    "titulo": "Real Decreto-ley 32/2026, de 3 de noviembre, de ayudas a las víctimas del accidente ferroviario de Urda (Toledo) y por el que se garantiza la accesibilidad equitativa a bienes y servicios en situaciones de emergencia.",
    "url": "https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-23104",
    "pdf": "https://www.boe.es/boe/dias/2026/11/04/pdfs/BOE-A-2026-23104.pdf"
+  },
+  {
+   "id": "BOE-B-2026-36983",
+   "fecha": "2026-11-12",
+   "titulo": "Anuncio de la Delegación del Gobierno en Madrid, por el que se establece la modificación de la convocatoria del levantamiento de actas previas a la ocupación y, si procediera, formalización de las actas de ocupación en el Ayuntamiento de Nuevo Baztán, correspondiente al procedimiento de expropiación forzosa para la ejecución del proyecto \"instalación fotovoltaica Quilla Solar, de 51,04 MW de potencia instalada, y su infraestructura de evacuación, en los términos municipales de Nuevo Baztán, Valverde de Alcalá, Arganda del Rey, Campo Real, Loeches y Pozuelo del Rey (Madrid)\". Exp.: Pfot-172.",
+   "url": "https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-36983",
+   "pdf": "https://www.boe.es/boe/dias/2026/11/12/pdfs/BOE-B-2026-36983.pdf"
   }
  ]
 }
