@@ -1,41 +1,17 @@
 {
- "fecha": "2026-11-13T06:13",
+ "fecha": "2026-11-14T06:00",
  "modelo": "claude-sonnet-5-5",
  "procesadas": [
   {
-   "id": "bdns-941609",
-   "documento": "página web (no eran las bases de esta ayuda: buscada en internet)",
-   "coste_usd": 0.3114,
-   "recomendacion": "descartar"
-  },
-  {
    "id": "bdns-941790",
    "documento": "página web (no eran las bases de esta ayuda: buscada en internet)",
-   "coste_usd": 0.3524,
-   "recomendacion": "publicada sola (sin bases)"
-  },
-  {
-   "id": "bdns-938584",
-   "documento": "el enlace de bases de la BDNS es genérico (ley, ordenanza general o portada)",
-   "coste_usd": 0.1503,
-   "recomendacion": "publicar"
-  },
-  {
-   "id": "bdns-939709",
-   "documento": "el enlace de bases de la BDNS es genérico (ley, ordenanza general o portada) (extracto; bases en Bases reguladoras 2024-25 publicadas en el BOP de Las Palmas (número y fecha sin confirmar); la convocatoria 2026 debe publicarse en el BOP de Las Palmas.)",
-   "coste_usd": 0.5278,
-   "recomendacion": "publicar"
-  },
-  {
-   "id": "bdns-939915",
-   "documento": "PDF de 10 páginas (no eran las bases de esta ayuda: buscada en internet)",
-   "coste_usd": 0.2602,
-   "recomendacion": "publicar"
+   "coste_usd": 0.3628,
+   "recomendacion": "corregida"
   }
  ],
  "errores": [],
- "coste_usd": 1.602,
+ "coste_usd": 0.363,
  "pendientes_por_tope": 0,
- "gasto_mes_usd": 8.506,
+ "gasto_mes_usd": 8.869,
  "limite_mes_usd": 15.0
 }

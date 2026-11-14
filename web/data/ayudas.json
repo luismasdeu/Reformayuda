@@ -856,11 +856,12 @@
    "muni": "Villa Del Prado",
    "sede": "https://sede.villadelprado.es/eAdmin/Sede",
    "pendiente_bases": {
-    "intentos": 1,
-    "proxima": "2026-11-17"
+    "intentos": 2,
+    "proxima": "2026-11-21"
    },
    "revisada": "2026-11-13",
-   "auto": "2026-11-13"
+   "auto": "2026-11-13",
+   "ia": "2026-11-14"
   }
  ]
 }
