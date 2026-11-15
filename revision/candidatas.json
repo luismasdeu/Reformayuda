@@ -438,7 +438,7 @@
    "title": "Reparar viviendas dañadas por incendios en la Sierra Oeste de Madrid",
    "org": "COMUNIDAD DE MADRID · CONSEJERÍA DE VIVIENDA, TRANSPORTES E INFRAESTRUCTURAS",
    "scope": "autonomica",
-   "ccaa": "all",
+   "ccaa": "Comunidad de Madrid",
    "tipo": [
     "rehabilitacion"
    ],
@@ -448,8 +448,8 @@
    "importe": 100000,
    "imp": "El 80 % del coste de la obra, hasta 100.000 € por vivienda. Anticipo fijo de 6.000 € al conceder la ayuda.",
    "abre": "2026-11-11",
-   "cierra": null,
-   "plazo": "Dos meses desde el día siguiente a la publicación del extracto en el BOCM. El extracto se publicó el 10/11/2026, pero la fecha exacta de cierre hay que confirmarla.",
+   "cierra": "2027-01-11",
+   "plazo": "Del 11/11/2026 al 11/01/2027: dos meses desde el día siguiente a la publicación del extracto en el BOCM (10/11/2026). El 10/01/2027 es domingo, así que pasa al lunes 11.",
    "irpf": false,
    "fuente": "BDNS nº 940275",
    "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/940275",
@@ -492,16 +492,16 @@
     },
     "confirmar": [
      "No he podido leer el texto completo de las bases, solo el extracto del BOCM de 10/11/2026.",
-     "Hay que confirmar la fecha exacta de cierre y el procedimiento de solicitud.",
      "El extracto cita por error ayudas al alquiler en las bases; hay que verificar la referencia correcta.",
      "Comprobar la lista exacta de documentos y si los inquilinos pueden pedirla, porque exige ser propietario."
     ],
-    "referencia_bases": "Acuerdo del Consejo de Gobierno de 4 de noviembre de 2026; extracto pendiente de publicación en el BOCM"
+    "referencia_bases": "Acuerdo del Consejo de Gobierno de 4/11/2026; extracto en el BOCM del 10/11/2026"
    },
    "edad": {
     "min": 18
    },
-   "sede": "https://sede.comunidad.madrid/"
+   "sede": "https://sede.comunidad.madrid/",
+   "prov": "Madrid"
   },
   {
    "id": "bdns-941340",
