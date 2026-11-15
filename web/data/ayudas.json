@@ -1,6 +1,6 @@
 {
  "_leeme": "Ayudas publicadas en la app. Edita con cuidado: el formato se comprueba antes de publicar (scripts/validar.py).",
- "actualizado": "2026-11-13",
+ "actualizado": "2026-11-15",
  "ayudas": [
   {
    "id": "pev-rehab",
@@ -862,6 +862,58 @@
    "revisada": "2026-11-13",
    "auto": "2026-11-13",
    "ia": "2026-11-14"
+  },
+  {
+   "id": "bdns-940275",
+   "title": "Reparar viviendas dañadas por incendios en la Sierra Oeste de Madrid",
+   "org": "COMUNIDAD DE MADRID · CONSEJERÍA DE VIVIENDA, TRANSPORTES E INFRAESTRUCTURAS",
+   "scope": "autonomica",
+   "ccaa": "Comunidad de Madrid",
+   "tipo": [
+    "rehabilitacion"
+   ],
+   "dest": [
+    "vivienda"
+   ],
+   "importe": 100000,
+   "imp": "El 80 % del coste de la obra, hasta 100.000 € por vivienda. Anticipo fijo de 6.000 € al conceder la ayuda.",
+   "abre": "2026-11-11",
+   "cierra": "2027-01-11",
+   "plazo": "Hasta el 11/01/2027",
+   "irpf": false,
+   "fuente": "BDNS nº 940275",
+   "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/940275",
+   "resumen": "Ayuda urgente de la Comunidad de Madrid para reparar tu vivienda habitual si los incendios forestales de julio de 2026 la dañaron. Cubre el 80 % de la obra. Al conceder la ayuda se paga un anticipo de 6.000 € y el resto al justificar las obras.",
+   "req": [
+    "Ser mayor de edad y tener nacionalidad española, de la UE, del EEE o suiza, o residencia regular en España.",
+    "La vivienda era tu residencia habitual y permanente cuando ocurrieron los incendios de julio de 2026.",
+    "La vivienda está en uno de los 17 municipios afectados de la Sierra Oeste, como Aldea del Fresno, Navas del Rey o Robledo de Chavela.",
+    "Ser propietario. Si hay más propietarios, necesitas su autorización expresa.",
+    "Tener un informe técnico de daños firmado por un funcionario público.",
+    "Tener licencia, declaración responsable u orden de ejecución del ayuntamiento para las obras.",
+    "La vivienda debe ser legal y no estar declarada en ruina."
+   ],
+   "docs": [
+    "Acta o informe técnico de valoración de daños tras el incendio.",
+    "Título habilitante municipal u orden de ejecución para las obras.",
+    "Documento que acredite que eres propietario.",
+    "Autorización de los demás copropietarios, si los hay.",
+    "Certificado municipal de antigüedad, de compatibilidad urbanística o de que no hay expediente de legalidad."
+   ],
+   "pasos": [
+    "Pide al ayuntamiento el informe técnico de daños tras el incendio.",
+    "Consigue la licencia o la orden de ejecución para las obras.",
+    "Reúne la documentación y las autorizaciones de los copropietarios.",
+    "Presenta la solicitud en la sede electrónica de la Comunidad de Madrid dentro del plazo.",
+    "Recibe el anticipo de 6.000 € cuando se conceda la ayuda.",
+    "Haz las obras y justifica los gastos para cobrar el resto."
+   ],
+   "edad": {
+    "min": 18
+   },
+   "sede": "https://sede.comunidad.madrid/",
+   "prov": "Madrid",
+   "revisada": "2026-11-15"
   }
  ]
 }
