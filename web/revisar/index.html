@@ -54,9 +54,13 @@ const estado=t=>$("#estado").textContent=t||"";
 // ---- GitHub ----
 const b64=s=>btoa(String.fromCharCode(...new TextEncoder().encode(s)));
 const de64=s=>new TextDecoder().decode(Uint8Array.from(atob(s.replace(/\n/g,"")),c=>c.charCodeAt(0)));
+let ultimoError="";
 async function gh(ruta,op={}){
   const r=await fetch(`https://api.github.com/repos/${REPO}/contents/${ruta}`,{...op,cache:"no-store",headers:{Authorization:"Bearer "+token,Accept:"application/vnd.github+json",...(op.headers||{})}});
-  if(r.status===401||r.status===403){throw new Error("token")}
+  if(r.status===401||r.status===403){
+    // Se guarda lo que dice GitHub para enseñarlo: suele explicar qué permiso falta.
+    let m="";try{m=(await r.clone().json()).message||""}catch(e){}
+    ultimoError=`${op.method||"GET"} ${r.status}: ${m}`;throw new Error("token")}
   return r;
 }
 async function leer(ruta){const r=await gh(ruta+"?ref=main");if(r.status===404)return{json:null,sha:null};const j=await r.json();return{json:JSON.parse(de64(j.content)),sha:j.sha}}
@@ -89,10 +93,10 @@ function pedirToken(error){
    <li><b>Permissions → Repository permissions → Contents:</b> «Read and write».</li>
    <li><b>Generate token</b>, cópialo y pégalo aquí.</li>
   </ol>
-  <label class="f">Llave de GitHub<input id="tk" type="password" autocomplete="off" placeholder="github_pat_…"></label>
+  <label class="f">Llave de GitHub<input id="tk" type="text" autocomplete="off" autocapitalize="off" spellcheck="false" style="-webkit-text-security:disc" placeholder="github_pat_…"></label>
   <div class="row"><button class="b ok" id="tk-ok">Guardar y entrar</button></div>
   <p class="meta">No la compartas con nadie. Si pierdes el móvil, bórrala en GitHub → Settings → Personal access tokens.</p></div>`;
-  $("#tk-ok").onclick=()=>{token=$("#tk").value.trim();guardado.set("token",token);cargar()};
+  $("#tk-ok").onclick=()=>{token=$("#tk").value.replace(/\s+/g,"");guardado.set("token",token);cargar()};
 }
 async function cargar(){
   if(!token)return pedirToken();
@@ -102,7 +106,7 @@ async function cargar(){
     try{estad=(await leer(ESTAD)).json}catch(e){estad=null}
     try{autoIA=((await leer(AYUDAS)).json?.ayudas||[]).filter(a=>a.auto).sort((a,b)=>b.auto.localeCompare(a.auto))}catch(e){autoIA=[]}
     pintar()}
-  catch(e){if(e.message==="token"){guardado.set("token","");pedirToken("La llave no funciona o ha caducado. Crea otra.")}else estado("No se ha podido cargar. Revisa la conexión y recarga.")}
+  catch(e){if(e.message==="token"){guardado.set("token","");pedirToken("La llave no funciona o ha caducado ("+ultimoError+"). Crea otra.")}else estado("No se ha podido cargar. Revisa la conexión y recarga.")}
 }
 function visitasHtml(){
   const dias=Object.entries(estad?.dias||{}).sort((a,b)=>b[0].localeCompare(a[0]));
@@ -200,7 +204,7 @@ function enlazar(){
         await cambiar(id,c=>{if(pub){leerTarjeta(el,c);c.estado="aprobada"}else c.estado="descartada"},`Revisión desde el móvil: ${pub?"publica":"descarta"} ${id}`);
         el.outerHTML=`<div class="card hecho"><b>${pub?"✓ Publicada":"✗ Descartada"}:</b> ${esc(copia.title||id)}</div>`;
         const n=pendientes().length;estado(n?`${n} por revisar`:"Todo revisado ✅");
-      }catch(e){bot.forEach(b=>b.disabled=false);el.classList.remove("hecho");estado(e.message==="token"?"La llave no funciona: recarga y crea otra.":"No se ha guardado. Inténtalo otra vez.")}
+      }catch(e){bot.forEach(b=>b.disabled=false);el.classList.remove("hecho");if(e.message==="token"){guardado.set("token","");pedirToken("GitHub no deja guardar con esta llave. Lo que dice GitHub: «"+ultimoError+"». Comprueba que la llave tiene «Contents: Read and write» en el repositorio Reformayuda y pégala de nuevo.")}else estado("No se ha guardado. Inténtalo otra vez.")}
     };
     el.querySelector("[data-pub]").onclick=()=>hacer(true);
     el.querySelector("[data-desc]").onclick=()=>hacer(false);
