@@ -1,6 +1,6 @@
 {
  "_leeme": "Ayudas detectadas automáticamente en los boletines. Revísalas: pon \"estado\": \"aprobada\" o \"descartada\". Mira README.md.",
- "ultima_busqueda": "2026-11-14T06:00",
+ "ultima_busqueda": "2026-11-15T06:02",
  "candidatas": [
   {
    "id": "bdns-938584",
@@ -81,20 +81,20 @@
     "edificio"
    ],
    "importe": 0,
-   "imp": "No consta la cuantía por vivienda ni el porcentaje. La convocatoria tiene 120.000 € en total.",
+   "imp": "No consta en el extracto el importe por vivienda ni el porcentaje. El presupuesto total de la convocatoria es de 120.000 €.",
    "abre": "2026-11-04",
    "cierra": "2026-11-20",
-   "plazo": "Desde el día siguiente a la publicación en el BOP de Barcelona hasta el 20 de noviembre de 2026, o antes si se agota el presupuesto. El anuncio salió en el BOP el 3 de noviembre de 2026.",
+   "plazo": "Del 4 al 20 de noviembre de 2026, o antes si se agota el presupuesto. El plazo empezó el día siguiente a la publicación del anuncio en el BOP de Barcelona (3 de noviembre de 2026).",
    "irpf": false,
    "fuente": "BDNS nº 938805",
    "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/938805",
-   "resumen": "El Ayuntamiento de Vilafranca del Penedès da ayudas para obras que mejoran la accesibilidad y el estado de conservación de edificios de viviendas y locales comerciales del municipio. Pueden pedirla propietarios, arrendatarios, usufructuarios u otros titulares. Hay 120.000 € para toda la convocatoria. Se resuelve por orden de solicitud, hasta que se acabe el dinero. Las bases con el importe por obra y los requisitos están en el BOP y no he podido leerlas.",
+   "resumen": "El Ayuntamiento de Vilafranca del Penedès da ayudas para obras que mejoren la accesibilidad y el estado de conservación de edificios de viviendas y locales comerciales del municipio. Hay 120.000 € en total. Las ayudas se dan por orden de solicitud, sin comparar unas con otras, hasta agotar el presupuesto. Se piden por internet en la sede electrónica del Ayuntamiento.",
    "req": [
-    "Promover las obras como propietario, arrendatario, usufructuario u otro titular legal.",
-    "Que el edificio o local esté en Vilafranca del Penedès y ya exista.",
-    "Que las obras mejoren la accesibilidad o el estado de conservación.",
-    "No estar en ninguna de las situaciones que impiden cobrar subvenciones (art. 13.2 de la Ley 38/2003).",
-    "Otros requisitos (obras subvencionables, límites de ingresos o de antigüedad) constan en las bases del BOP y no los he podido comprobar."
+    "Promover las obras como propietario/a, inquilino/a, usufructuario/a o con otro título legal similar.",
+    "Las obras deben ser en un edificio de viviendas o local comercial que ya exista en Vilafranca del Penedès.",
+    "Las obras deben mejorar la accesibilidad o el estado de conservación del edificio.",
+    "No estar en ninguna de las situaciones que impiden recibir subvenciones (art. 13.2 de la Ley 38/2003).",
+    "Pueden pedirla personas físicas o jurídicas, también quienes tengan actividad económica."
    ],
    "docs": [
     "Solicitud rellenada en el trámite online de la sede electrónica del Ayuntamiento.",
@@ -103,11 +103,12 @@
     "La lista exacta de documentos consta en las bases y no la he podido comprobar."
    ],
    "pasos": [
-    "Lee las bases publicadas en el BOP de Barcelona (CVE 202510039595, 4 de marzo de 2025).",
-    "Entra en la sede electrónica del Ayuntamiento (seu.vilafranca.cat) y busca el trámite de estas ayudas.",
-    "Rellena la solicitud y adjunta los documentos antes del 20 de noviembre de 2026.",
-    "Si eres persona física y tienes dificultades con el trámite online, pide cita en la Oficina Local de Vivienda: 93 818 06 54.",
-    "Cuando te concedan la ayuda, justifica las obras realizadas como indiquen las bases."
+    "Lee las bases publicadas en el BOP de Barcelona (4 de marzo de 2025) para ver qué obras valen.",
+    "Entra en la sede electrónica del Ayuntamiento (seu.vilafranca.cat) y busca el trámite de esta ayuda.",
+    "Rellena la solicitud y adjunta la documentación que piden las bases.",
+    "Si tienes dificultades con el trámite online, pide cita en la Oficina Local de Vivienda (tel. 93 818 06 54).",
+    "Presenta la solicitud antes del 20 de noviembre de 2026, o antes si se agota el dinero.",
+    "Justifica la obra cuando te lo pidan, según las bases."
    ],
    "_revisar": {
     "presupuesto_total": 120000,
@@ -117,27 +118,27 @@
     "nota": "Revisa importe por vivienda, requisitos, documentos y pasos antes de aprobar.",
     "bases_no_corresponden": true,
     "ia": {
-     "fecha": "2026-11-10",
-     "documento": "el enlace de bases de la BDNS es genérico (ley, ordenanza general o portada) (extracto; bases en Bases reguladoras publicadas en el BOP de Barcelona, CVE 202510039595, de 4 de marzo de 2025. Ordenanza General de Subvenciones: BOP CVE 202510145073, de 12 de septiembre de 2025.)",
+     "fecha": "2026-11-15",
+     "documento": "el enlace de bases de la BDNS es genérico (ley, ordenanza general o portada) (extracto; bases en BOP de Barcelona, CVE 202510039595, de 4 de marzo de 2025 (bases específicas) y CVE 202510145073, de 12 de septiembre de 2025 (Ordenanza General de Subvenciones))",
      "recomendacion": "publicar",
-     "motivo": "Paga obras de accesibilidad y conservación en edificios de viviendas existentes de Vilafranca del Penedès. Los locales comerciales también entran en la convocatoria."
+     "motivo": "Paga obras de accesibilidad y de conservación en edificios de viviendas (y locales comerciales) existentes en Vilafranca del Penedès."
     },
     "confirmar": [
-     "No se han podido leer las bases (BOP CVE 202510039595 de 4/3/2025): faltan importe por obra, porcentaje, máximo, requisitos y documentación.",
-     "Comprueba si los locales comerciales y las empresas pueden pedirla, y si hay requisitos de ingresos o de antigüedad del edificio.",
-     "Confirma el día exacto de apertura: el plazo empieza al día siguiente de publicarse en el BOP (publicado el 3/11/2026, según la BDNS)."
+     "No he podido leer las bases (BOP CVE 202510039595 de 4/03/2025): faltan importe o porcentaje por actuación, requisitos concretos, obras subvencionables y documentos.",
+     "Comprueba si las bases limitan los beneficiarios (por ejemplo, si el edificio debe tener una antigüedad mínima) y si el solicitante con actividad económica tiene condiciones especiales.",
+     "Comprueba cómo afecta el título de inquilino o usufructuario (por ejemplo, si necesita permiso de la propiedad)."
     ],
-    "referencia_bases": "Bases reguladoras publicadas en el BOP de Barcelona, CVE 202510039595, de 4 de marzo de 2025. Ordenanza General de Subvenciones: BOP CVE 202510145073, de 12 de septiembre de 2025.",
+    "referencia_bases": "BOP de Barcelona, CVE 202510039595, de 4 de marzo de 2025 (bases específicas) y CVE 202510145073, de 12 de septiembre de 2025 (Ordenanza General de Subvenciones)",
     "datos_no_oficiales": true,
     "espera": {
      "desde": "2026-11-07",
-     "intentos": 2,
-     "proxima": "2026-11-15"
+     "intentos": 3,
+     "proxima": "2026-11-22"
     }
    },
    "prov": "Barcelona",
    "muni": "Vilafranca Del Penedès",
-   "sede": "http://seu.vilafranca.cat/"
+   "sede": "https://seu.vilafranca.cat/"
   },
   {
    "id": "bdns-938969",
@@ -151,36 +152,37 @@
     "rehabilitacion"
    ],
    "dest": [
+    "vivienda",
     "edificio"
    ],
    "importe": 0,
-   "imp": "No consta en el extracto la cantidad por edificio. El presupuesto total de la convocatoria es de 150.000 €.",
-   "abre": "2026-11-11",
-   "cierra": "2026-11-25",
-   "plazo": "Empieza el día siguiente a la publicación del extracto en el Boletín Oficial de Gipuzkoa y dura 10 días hábiles. La BDNS indica del 9 al 20 de noviembre de 2026, pero esas fechas no coinciden con el anuncio y deben comprobarse.",
+   "imp": "No consta la cantidad por edificio ni el porcentaje en el anuncio. El presupuesto total de la convocatoria es de 150.000 €.",
+   "abre": "2026-11-09",
+   "cierra": "2026-11-20",
+   "plazo": "10 días hábiles desde el día siguiente a la publicación del extracto en el Boletín Oficial de Gipuzkoa (publicado el 06/11/2026). Según la BDNS, del 09/11/2026 al 20/11/2026.",
    "irpf": false,
    "fuente": "BDNS nº 938969",
    "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/938969",
-   "resumen": "El Ayuntamiento de Eibar da subvenciones para instalar o sustituir ascensores, mejorar la accesibilidad exterior de los portales y restaurar fachadas. Pueden pedirlas propietarios de edificios y comunidades de propietarios. Se conceden por evaluación individualizada de cada solicitud. El presupuesto total de la convocatoria es de 150.000 €.",
+   "resumen": "El Ayuntamiento de Eibar da subvenciones para instalar o cambiar ascensores, mejorar el acceso a los portales y restaurar fachadas. Pueden pedirlas propietarios de edificios y comunidades de propietarios. Se conceden por orden de evaluación de cada solicitud, con un presupuesto total de 150.000 €.",
    "req": [
-    "Ser propietario de un edificio (persona física o jurídica) o comunidad de propietarios que vaya a hacer la obra.",
-    "Que el edificio esté en Eibar.",
+    "Ser persona física o jurídica propietaria de un edificio, o una comunidad de propietarios que vaya a hacer la obra.",
+    "Que la obra sea instalar un ascensor, mejorar el acceso exterior a los portales o restaurar la fachada.",
     "No estar en ninguna de las prohibiciones del artículo 13 de la Ley General de Subvenciones.",
-    "Hacer una de estas obras: instalar ascensor, mejorar la accesibilidad exterior del portal o restaurar la fachada."
+    "El edificio debe estar en Eibar."
    ],
    "docs": [
-    "Formulario de solicitud del Ayuntamiento.",
+    "Solicitud oficial del Ayuntamiento (modelo de la convocatoria).",
     "Documento de titular de la cuenta bancaria.",
-    "Nombramiento del presidente o presidenta de la comunidad.",
     "Acuerdo de la comunidad que aprueba las obras.",
+    "Nombramiento del presidente o presidenta de la comunidad.",
     "Lista de gastos e ingresos de la obra."
    ],
    "pasos": [
-    "Comprueba las bases y la fecha exacta de apertura en el Boletín Oficial de Gipuzkoa.",
-    "Reúne los documentos y haz que la comunidad apruebe la obra.",
-    "Presenta la solicitud en la web www.eibar.eus con certificado digital.",
-    "Si eres persona física, también puedes presentarla en PEGORA (plaza Untzaga 1) o en otros registros públicos.",
-    "Espera la resolución del Ayuntamiento y justifica la obra realizada."
+    "Reúne a la comunidad y aprueba las obras.",
+    "Rellena la solicitud y los demás documentos de la web municipal.",
+    "Presenta la solicitud en el plazo: por internet en www.eibar.eus con certificado digital.",
+    "Si eres persona física, también puedes ir a PEGORA (Untzaga plaza 1) o a otros registros públicos.",
+    "Haz la obra y guarda las facturas para justificarla."
    ],
    "_revisar": {
     "presupuesto_total": 150000,
@@ -190,20 +192,21 @@
     "nota": "Revisa importe por vivienda, requisitos, documentos y pasos antes de aprobar.",
     "bases_no_corresponden": true,
     "ia": {
-     "fecha": "2026-11-08",
+     "fecha": "2026-11-15",
      "documento": "página web (no eran las bases de esta ayuda: buscada en internet)",
      "recomendacion": "publicar",
-     "motivo": "Paga obras de ascensores, accesibilidad de portales y restauración de fachadas en edificios de viviendas de Eibar."
+     "motivo": "Subvenciona obras de ascensores, accesibilidad de portales y restauración de fachadas en edificios de viviendas de Eibar."
     },
     "confirmar": [
-     "El anuncio dice 15.000 € en castellano y 150.000 € en euskera; la BDNS indica 150.000 € de presupuesto. Hay que comprobar el importe y el máximo por edificio o porcentaje en las bases.",
-     "Las fechas de la BDNS (9-20 de noviembre) no coinciden con el plazo del anuncio, que son 10 días hábiles desde el extracto del BOG. Hay que confirmar la fecha de publicación del extracto.",
-     "No se han leído las bases, solo el extracto: faltan gastos subvencionables, criterios y documentación exacta."
+     "No se han leído las bases: comprueba el importe máximo o porcentaje por edificio y los gastos subvencionables.",
+     "El anuncio en español dice 15.000 € y en euskera 150.000 €; la BDNS indica presupuesto de 150.000 €.",
+     "Las fechas dadas (11-11 a 11-25) no coinciden con las de la BDNS (09-11 a 20-11); verifica la fecha de publicación del extracto.",
+     "Comprueba la fecha límite de las obras y si hay criterios de reparto."
     ],
     "espera": {
      "desde": "2026-10-31",
-     "intentos": 3,
-     "proxima": "2026-11-15"
+     "intentos": 4,
+     "proxima": "2026-11-25"
     }
    },
    "prov": "Gipuzkoa",
@@ -431,8 +434,8 @@
   },
   {
    "id": "bdns-940275",
-   "estado": "espera",
-   "title": "Reparación de viviendas dañadas por incendios en Sierra Oeste (Madrid)",
+   "estado": "pendiente",
+   "title": "Reparar viviendas dañadas por incendios en la Sierra Oeste de Madrid",
    "org": "COMUNIDAD DE MADRID · CONSEJERÍA DE VIVIENDA, TRANSPORTES E INFRAESTRUCTURAS",
    "scope": "autonomica",
    "ccaa": "all",
@@ -443,29 +446,37 @@
     "vivienda"
    ],
    "importe": 100000,
-   "imp": "Hasta el 80 % del gasto, con un máximo de 100.000 € por vivienda",
-   "abre": "2026-11-06",
+   "imp": "El 80 % del coste de la obra, hasta 100.000 € por vivienda. Anticipo fijo de 6.000 € al conceder la ayuda.",
+   "abre": "2026-11-11",
    "cierra": null,
-   "plazo": "Empieza el día siguiente a la publicación del extracto en el BOCM y dura dos meses desde ese día. Esa publicación aún no consta, así que la fecha exacta no se conoce.",
+   "plazo": "Dos meses desde el día siguiente a la publicación del extracto en el BOCM. El extracto se publicó el 10/11/2026, pero la fecha exacta de cierre hay que confirmarla.",
    "irpf": false,
    "fuente": "BDNS nº 940275",
    "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/940275",
-   "resumen": "La Comunidad de Madrid paga la reparación y rehabilitación de viviendas habituales dañadas por los incendios forestales de la Sierra Oeste. La ayuda es directa, por razones de emergencia. Cubre hasta el 80 % del gasto. El presupuesto total es de 8 millones de euros. Las bases completas aún no están publicadas en el BOCM.",
+   "resumen": "Ayuda urgente de la Comunidad de Madrid para reparar tu vivienda habitual si los incendios forestales de julio de 2026 la dañaron. Cubre el 80 % de la obra. Al conceder la ayuda se paga un anticipo de 6.000 € y el resto al justificar las obras.",
    "req": [
-    "Que la vivienda sea tu residencia habitual.",
-    "Que la vivienda haya sufrido daños por los incendios forestales de la Sierra Oeste.",
-    "Ser persona física que no desarrolla actividad económica.",
-    "Que las obras cuenten con la autorización administrativa que corresponda."
+    "Ser mayor de edad y tener nacionalidad española, de la UE, del EEE o suiza, o residencia regular en España.",
+    "La vivienda era tu residencia habitual y permanente cuando ocurrieron los incendios de julio de 2026.",
+    "La vivienda está en uno de los 17 municipios afectados de la Sierra Oeste, como Aldea del Fresno, Navas del Rey o Robledo de Chavela.",
+    "Ser propietario. Si hay más propietarios, necesitas su autorización expresa.",
+    "Tener un informe técnico de daños firmado por un funcionario público.",
+    "Tener licencia, declaración responsable u orden de ejecución del ayuntamiento para las obras.",
+    "La vivienda debe ser legal y no estar declarada en ruina."
    ],
    "docs": [
-    "Consulta la documentación en la convocatoria oficial"
+    "Acta o informe técnico de valoración de daños tras el incendio.",
+    "Título habilitante municipal u orden de ejecución para las obras.",
+    "Documento que acredite que eres propietario.",
+    "Autorización de los demás copropietarios, si los hay.",
+    "Certificado municipal de antigüedad, de compatibilidad urbanística o de que no hay expediente de legalidad."
    ],
    "pasos": [
-    "Espera a que se publique el extracto en el BOCM.",
-    "Consulta las bases completas y el plazo exacto.",
-    "Prepara el presupuesto de la obra y la autorización administrativa.",
-    "Presenta la solicitud en la sede electrónica de la Comunidad de Madrid.",
-    "Haz la obra y justifica el gasto cuando te lo pidan."
+    "Pide al ayuntamiento el informe técnico de daños tras el incendio.",
+    "Consigue la licencia o la orden de ejecución para las obras.",
+    "Reúne la documentación y las autorizaciones de los copropietarios.",
+    "Presenta la solicitud en la sede electrónica de la Comunidad de Madrid dentro del plazo.",
+    "Recibe el anticipo de 6.000 € cuando se conceda la ayuda.",
+    "Haz las obras y justifica los gastos para cobrar el resto."
    ],
    "_revisar": {
     "presupuesto_total": 8000000,
@@ -474,24 +485,23 @@
     "beneficiarios": "PERSONAS FÍSICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
     "nota": "Revisa importe por vivienda, requisitos, documentos y pasos antes de aprobar.",
     "ia": {
-     "fecha": "2026-11-10",
-     "documento": "sin enlace a las bases (extracto; bases en Acuerdo del Consejo de Gobierno de 4 de noviembre de 2026; extracto pendiente de publicación en el BOCM)",
+     "fecha": "2026-11-15",
+     "documento": "sin enlace a las bases",
      "recomendacion": "publicar",
-     "motivo": "Paga obras de reparación y rehabilitación (estructura, fachadas, cerramientos, acabados e instalaciones) de viviendas habituales dañadas por los incendios de la Sierra Oeste."
+     "motivo": "Paga obras de rehabilitación para recuperar la habitabilidad de viviendas habituales dañadas por los incendios de la Sierra Oeste."
     },
     "confirmar": [
-     "No he podido leer las bases completas: solo la nota oficial del Consejo de Gobierno. Falta comprobar requisitos, municipios afectados, documentos y cómo se solicita.",
-     "Hay que confirmar la fecha de publicación del extracto en el BOCM, que marca el inicio del plazo de dos meses.",
-     "Comprobar si el 80 % y los 100.000 € son por vivienda y qué gastos admite la ayuda."
+     "No he podido leer el texto completo de las bases, solo el extracto del BOCM de 10/11/2026.",
+     "Hay que confirmar la fecha exacta de cierre y el procedimiento de solicitud.",
+     "El extracto cita por error ayudas al alquiler en las bases; hay que verificar la referencia correcta.",
+     "Comprobar la lista exacta de documentos y si los inquilinos pueden pedirla, porque exige ser propietario."
     ],
-    "espera": {
-     "desde": "2026-11-07",
-     "intentos": 2,
-     "proxima": "2026-11-15"
-    },
-    "datos_no_oficiales": true,
     "referencia_bases": "Acuerdo del Consejo de Gobierno de 4 de noviembre de 2026; extracto pendiente de publicación en el BOCM"
-   }
+   },
+   "edad": {
+    "min": 18
+   },
+   "sede": "https://sede.comunidad.madrid/"
   },
   {
    "id": "bdns-941340",
@@ -510,21 +520,26 @@
    "imp": "Consulta la convocatoria",
    "abre": "2026-11-11",
    "cierra": null,
-   "plazo": "Según la BDNS, 20 días naturales desde el día siguiente a la publicación de la convocatoria en el BOP de Valencia. No consta la fecha de esa publicación.",
+   "plazo": "20 días naturales desde el día siguiente a la publicación de la convocatoria en el BOP de Valencia. Aún no consta la fecha de esa publicación.",
    "irpf": false,
    "fuente": "BDNS nº 941340",
    "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/941340",
-   "resumen": "El Ayuntamiento de Agullent da ayudas económicas a particulares para hacer obras de rehabilitación en inmuebles del casco urbano. La convocatoria 2026 tiene un presupuesto total de 90.000 €. Se concede por concurrencia competitiva. No he podido leer las bases, así que faltan importes y requisitos.",
+   "resumen": "El Ayuntamiento de Agullent da ayudas económicas para hacer obras de rehabilitación en inmuebles del casco urbano. Son para personas físicas que no tienen actividad económica. La convocatoria es de 2026 y tiene un presupuesto total de 90.000 €. Se concede por concurrencia competitiva, es decir, se comparan las solicitudes entre sí.",
    "req": [
-    "Consulta los requisitos en la convocatoria oficial"
+    "Ser persona física sin actividad económica.",
+    "El inmueble debe estar en el casco urbano de Agullent.",
+    "Hacer obras de rehabilitación del inmueble.",
+    "El resto de requisitos están en las bases y no se han podido leer."
    ],
    "docs": [
-    "Consulta la documentación en la convocatoria oficial"
+    "Formulario de solicitud de ayudas del Ayuntamiento.",
+    "El resto de documentos están en las bases y no se han podido leer."
    ],
    "pasos": [
-    "Lee la convocatoria oficial",
-    "Prepara la documentación",
-    "Presenta la solicitud en la sede del organismo"
+    "Espera a que se publique la convocatoria en el BOP de Valencia.",
+    "Descarga las bases y el formulario de solicitud en la sede electrónica del Ayuntamiento.",
+    "Presenta la solicitud en el plazo de 20 días naturales.",
+    "Justifica la obra cuando las bases lo pidan."
    ],
    "_revisar": {
     "presupuesto_total": 90000,
@@ -533,23 +548,22 @@
     "beneficiarios": "PERSONAS FÍSICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
     "nota": "Revisa importe por vivienda, requisitos, documentos y pasos antes de aprobar.",
     "bases_no_corresponden": true,
-    "referencia_bases": "Bases y convocatoria 2026 (expte. 120/2026) en la sede electrónica del Ayuntamiento de Agullent (agullent.sedelectronica.es) y anuncio en el BOP de Valencia, cuya fecha no consta.",
+    "referencia_bases": "Bases y convocatoria en la sede electrónica del Ayuntamiento de Agullent (agullent.sedelectronica.es) y anuncio en el BOP de Valencia, sin número ni fecha confirmados",
     "ia": {
-     "fecha": "2026-11-12",
-     "documento": "el enlace de bases de la BDNS es genérico (ley, ordenanza general o portada) (extracto; bases en Bases y convocatoria 2026 (expte. 120/2026) en la sede electrónica del Ayuntamiento de Agullent (agullent.sedelectronica.es) y anuncio en el BOP de Valencia, cuya fecha no consta.)",
+     "fecha": "2026-11-15",
+     "documento": "el enlace de bases de la BDNS es genérico (ley, ordenanza general o portada) (extracto; bases en Bases y convocatoria en la sede electrónica del Ayuntamiento de Agullent (agullent.sedelectronica.es) y anuncio en el BOP de Valencia, sin número ni fecha confirmados)",
      "recomendacion": "publicar",
-     "motivo": "Son ayudas del Ayuntamiento de Agullent para pagar obras de rehabilitación de inmuebles del casco urbano, dirigidas a personas físicas."
+     "motivo": "Son ayudas del Ayuntamiento de Agullent para obras de rehabilitación de inmuebles del casco urbano, dirigidas a personas físicas sin actividad económica."
     },
     "confirmar": [
-     "No he podido leer las bases. Comprueba el importe por vivienda o el porcentaje y su máximo, los requisitos y la documentación.",
-     "Comprueba la fecha de publicación en el BOP de Valencia, porque de ella depende cuándo abre y cierra el plazo de 20 días naturales.",
-     "Comprueba si las ayudas incluyen locales además de viviendas y qué obras se pueden pagar.",
-     "La sede electrónica no se pudo abrir. Comprueba que la dirección sirve para presentar la solicitud."
+     "No se han podido leer las bases ni el decreto. Faltan el importe por inmueble, el porcentaje, los requisitos, los documentos y las obras que se pueden pagar.",
+     "Comprueba la fecha de publicación en el BOP de Valencia. De ella depende cuándo abre y cuándo cierra el plazo. La fecha 2026-11-11 es solo la de registro en la BDNS.",
+     "Comprueba si también pueden pedirla comunidades de propietarios y si solo vale para vivienda o también para otros inmuebles."
     ],
     "espera": {
      "desde": "2026-11-12",
-     "intentos": 1,
-     "proxima": "2026-11-15"
+     "intentos": 2,
+     "proxima": "2026-11-20"
     }
    },
    "prov": "Valencia",
