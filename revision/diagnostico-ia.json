@@ -1,34 +1,9 @@
 {
- "fecha": "2026-11-15T06:02",
+ "fecha": "2026-11-16T06:38",
  "modelo": "claude-sonnet-5-5",
- "procesadas": [
-  {
-   "id": "bdns-938805",
-   "documento": "el enlace de bases de la BDNS es genérico (ley, ordenanza general o portada) (extracto; bases en BOP de Barcelona, CVE 202510039595, de 4 de marzo de 2025 (bases específicas) y CVE 202510145073, de 12 de septiembre de 2025 (Ordenanza General de Subvenciones))",
-   "coste_usd": 0.3078,
-   "recomendacion": "publicar"
-  },
-  {
-   "id": "bdns-938969",
-   "documento": "página web (no eran las bases de esta ayuda: buscada en internet)",
-   "coste_usd": 0.0787,
-   "recomendacion": "publicar"
-  },
-  {
-   "id": "bdns-940275",
-   "documento": "sin enlace a las bases",
-   "coste_usd": 0.0413,
-   "recomendacion": "publicar"
-  },
-  {
-   "id": "bdns-941340",
-   "documento": "el enlace de bases de la BDNS es genérico (ley, ordenanza general o portada) (extracto; bases en Bases y convocatoria en la sede electrónica del Ayuntamiento de Agullent (agullent.sedelectronica.es) y anuncio en el BOP de Valencia, sin número ni fecha confirmados)",
-   "coste_usd": 0.3491,
-   "recomendacion": "publicar"
-  }
- ],
+ "procesadas": [],
  "errores": [],
- "coste_usd": 0.777,
+ "coste_usd": 0.0,
  "pendientes_por_tope": 0,
  "gasto_mes_usd": 9.646,
  "limite_mes_usd": 15.0
