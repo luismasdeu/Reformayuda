@@ -56,7 +56,8 @@
   "bdns-940911",
   "bdns-941052",
   "bdns-941556",
-  "bdns-941609"
+  "bdns-941609",
+  "bdns-942236"
  ],
  "ia": [
   {
@@ -1267,6 +1268,60 @@
    },
    "prov": "Valladolid",
    "muni": "Laguna De Duero"
+  },
+  {
+   "id": "bdns-942236",
+   "estado": "descartada",
+   "title": "Convocatòria y bases del Concurso de decoración navideña de fachadas, balcones y ventanas 2026",
+   "org": "MERCADAL, ES · AYUNTAMIENTO DE ES MERCADAL",
+   "scope": "municipal",
+   "ccaa": "Illes Balears",
+   "tipo": [
+    "ventanas",
+    "eficiencia"
+   ],
+   "dest": [
+    "vivienda"
+   ],
+   "importe": 0,
+   "imp": "Consulta la convocatoria",
+   "abre": "2026-11-16",
+   "cierra": "2026-12-10",
+   "plazo": "Consulta el plazo en la convocatoria",
+   "irpf": false,
+   "fuente": "BDNS nº 942236",
+   "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/942236",
+   "resumen": "Convocatòria y bases del Concurso de decoración navideña de fachadas, balcones y ventanas 2026",
+   "req": [
+    "Consulta los requisitos en la convocatoria oficial"
+   ],
+   "docs": [
+    "Consulta la documentación en la convocatoria oficial"
+   ],
+   "pasos": [
+    "Lee la convocatoria oficial",
+    "Prepara la documentación",
+    "Presenta la solicitud en la sede del organismo"
+   ],
+   "_revisar": {
+    "presupuesto_total": 1000,
+    "bases_reguladoras": "http://boib.caib.es/pdf/2005189/mp113.pdf",
+    "abierta_segun_bdns": false,
+    "beneficiarios": "PERSONAS FÍSICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
+    "nota": "Revisa importe por vivienda, requisitos, documentos y pasos antes de aprobar.",
+    "ia": {
+     "fecha": "2026-11-17",
+     "documento": "PDF de 12 páginas",
+     "recomendacion": "descartar",
+     "motivo": "Es un concurso de decoración navideña de fachadas, balcones y ventanas, no paga obras de reforma, eficiencia ni construcción; además el documento adjunto es un BOIB de 2005 que no contiene esta convocatoria."
+    },
+    "confirmar": [
+     "El documento adjunto es el BOIB nº 189 de 17-12-2005 (ordenanzas municipales) y no contiene las bases de este concurso.",
+     "No es una ayuda para obras en vivienda: es un concurso de decoración navideña."
+    ]
+   },
+   "prov": "Illes Balears",
+   "muni": "Es Mercadal"
   }
  ]
 }
