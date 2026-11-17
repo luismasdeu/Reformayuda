@@ -1,6 +1,6 @@
 {
  "_leeme": "Ayudas detectadas automáticamente en los boletines. Revísalas: pon \"estado\": \"aprobada\" o \"descartada\". Mira README.md.",
- "ultima_busqueda": "2026-11-16T06:38",
+ "ultima_busqueda": "2026-11-17T06:13",
  "candidatas": [
   {
    "id": "bdns-938584",
@@ -498,6 +498,240 @@
    "prov": "Valencia",
    "muni": "Agullent",
    "sede": "https://agullent.sedelectronica.es"
+  },
+  {
+   "id": "bdns-942439",
+   "estado": "espera",
+   "title": "Rehabilitación de viviendas en Tacoronte 2026",
+   "org": "TACORONTE · AYUNTAMIENTO DE TACORONTE",
+   "scope": "municipal",
+   "ccaa": "Canarias",
+   "tipo": [
+    "rehabilitacion"
+   ],
+   "dest": [
+    "vivienda"
+   ],
+   "importe": 0,
+   "imp": "Consulta la convocatoria",
+   "abre": "2026-11-20",
+   "cierra": "2026-12-14",
+   "plazo": "Del 20 de noviembre al 14 de diciembre de 2026, según la ficha de la BDNS.",
+   "irpf": false,
+   "fuente": "BDNS nº 942439",
+   "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/942439",
+   "resumen": "El Ayuntamiento de Tacoronte convoca ayudas para obras de rehabilitación de la vivienda de personas particulares. El presupuesto total es de 125.000 €. No he podido leer las bases oficiales de 2026, así que faltan los detalles. Se pide en el plazo del 20 de noviembre al 14 de diciembre de 2026.",
+   "req": [
+    "Consulta los requisitos en la convocatoria oficial"
+   ],
+   "docs": [
+    "Consulta la documentación en la convocatoria oficial"
+   ],
+   "pasos": [
+    "Lee la convocatoria oficial",
+    "Prepara la documentación",
+    "Presenta la solicitud en la sede del organismo"
+   ],
+   "_revisar": {
+    "presupuesto_total": 125000,
+    "bases_reguladoras": "www.tacoronte.es",
+    "abierta_segun_bdns": false,
+    "beneficiarios": "PERSONAS FÍSICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
+    "nota": "Revisa importe por vivienda, requisitos, documentos y pasos antes de aprobar.",
+    "ia": {
+     "fecha": "2026-11-17",
+     "documento": "sin enlace a las bases",
+     "recomendacion": "publicar",
+     "motivo": "Son ayudas del Ayuntamiento de Tacoronte para obras de rehabilitación en viviendas de particulares, con un presupuesto de 125.000 €."
+    },
+    "confirmar": [
+     "No se han podido leer las bases de 2026 (Decreto 2026-4092). Hay que comprobar el importe máximo por vivienda, el porcentaje de ayuda, los requisitos, los documentos y cómo se solicita.",
+     "Una publicación municipal sin fecha, que no es oficial, habla de ayudas de hasta 15.000 € y de requisitos como estar empadronado y ser propietario. No he usado esos datos porque no he podido confirmar que sean de esta edición.",
+     "Hay que comprobar si el plazo se publica en el BOP y desde qué fecha cuenta exactamente."
+    ],
+    "espera": {
+     "desde": "2026-11-17",
+     "intentos": 1,
+     "proxima": "2026-11-20"
+    }
+   },
+   "prov": "Santa Cruz de Tenerife",
+   "muni": "Tacoronte"
+  },
+  {
+   "id": "bdns-942250",
+   "estado": "espera",
+   "title": "Rehabilitación de edificios de viviendas en Elche (2026)",
+   "org": "ELCHE/ELX · AYUNTAMIENTO DE ELCHE/ELX",
+   "scope": "municipal",
+   "ccaa": "Comunitat Valenciana",
+   "tipo": [
+    "rehabilitacion"
+   ],
+   "dest": [
+    "edificio"
+   ],
+   "importe": 0,
+   "imp": "Importe pendiente de publicar en las bases oficiales",
+   "abre": "2026-11-16",
+   "cierra": null,
+   "plazo": "Empieza el día siguiente a publicar el extracto en el BOP de Alicante y dura 3 meses desde ese día. No se ha visto esa publicación ni su fecha.",
+   "irpf": false,
+   "fuente": "BDNS nº 942250",
+   "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/942250",
+   "resumen": "El Ayuntamiento de Elche convoca ayudas para obras de rehabilitación en edificios de viviendas. El presupuesto total es de 700.000 €. Las bases no se han podido leer en una fuente oficial, así que faltan los detalles.",
+   "req": [
+    "Consulta los requisitos en la convocatoria oficial"
+   ],
+   "docs": [
+    "Consulta la documentación en la convocatoria oficial"
+   ],
+   "pasos": [
+    "Lee la convocatoria oficial",
+    "Prepara la documentación",
+    "Presenta la solicitud en la sede del organismo"
+   ],
+   "_revisar": {
+    "presupuesto_total": 700000,
+    "bases_reguladoras": "https://www.dip-alicante.es/bop2/pdftotal/2026/01/27_17/2026_000514.pdf",
+    "abierta_segun_bdns": false,
+    "beneficiarios": "PERSONAS JURÍDICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
+    "nota": "Revisa importe por vivienda, requisitos, documentos y pasos antes de aprobar.",
+    "bases_no_corresponden": true,
+    "ia": {
+     "fecha": "2026-11-17",
+     "documento": "PDF de 33 páginas (no eran las bases de esta ayuda: buscada en internet)",
+     "recomendacion": "publicar",
+     "motivo": "Son ayudas del Ayuntamiento de Elche para rehabilitar edificios de viviendas, es decir, para comunidades de propietarios."
+    },
+    "confirmar": [
+     "No se han podido leer las bases ni la convocatoria oficial. Solo se ha encontrado una noticia de prensa, que no se usa. Hay que comprobar importe por edificio o vivienda, requisitos, documentos y obras subvencionables.",
+     "Hay que confirmar la fecha de publicación del extracto en el BOP de Alicante, porque de ella dependen la apertura y el cierre del plazo.",
+     "Las bases reguladoras son la Base 28 de Ejecución del Presupuesto Municipal (BOP de Alicante, 27/01/2026). No se ha podido abrir ese documento."
+    ],
+    "datos_no_oficiales": true,
+    "espera": {
+     "desde": "2026-11-17",
+     "intentos": 1,
+     "proxima": "2026-11-20"
+    }
+   },
+   "prov": "Alicante",
+   "muni": "Elche/Elx"
+  },
+  {
+   "id": "bdns-942425",
+   "estado": "espera",
+   "title": "Ascensores y eliminación de barreras en viviendas de Xirivella",
+   "org": "XIRIVELLA · AYUNTAMIENTO DE XIRIVELLA",
+   "scope": "municipal",
+   "ccaa": "Comunitat Valenciana",
+   "tipo": [
+    "accesibilidad"
+   ],
+   "dest": [
+    "vivienda",
+    "edificio"
+   ],
+   "importe": 0,
+   "imp": "Consulta la convocatoria",
+   "abre": "2026-11-16",
+   "cierra": "2026-12-03",
+   "plazo": "Empieza el día siguiente a la publicación de la convocatoria en el BOP y termina el 3 de diciembre de 2026. No he visto la publicación en el BOP con su fecha.",
+   "irpf": false,
+   "fuente": "BDNS nº 942425",
+   "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/942425",
+   "resumen": "El Ayuntamiento de Xirivella convoca ayudas para instalar ascensores y suprimir barreras arquitectónicas y mejorar la accesibilidad. Pueden pedirlas personas y comunidades que no tengan actividad económica. El presupuesto total es de 30.000 €. No he podido leer las bases, así que faltan los detalles.",
+   "req": [
+    "Ser persona física o jurídica sin actividad económica (comunidades de propietarios incluidas, según la BDNS).",
+    "Las bases concretas no se han podido leer: comprueba los requisitos en el texto oficial."
+   ],
+   "docs": [
+    "Consulta la documentación en la convocatoria oficial"
+   ],
+   "pasos": [
+    "Mira las bases en la web del Ayuntamiento (www.xirivella.es).",
+    "Presenta la solicitud por la sede electrónica del Ayuntamiento antes del 3 de diciembre de 2026."
+   ],
+   "_revisar": {
+    "presupuesto_total": 30000,
+    "bases_reguladoras": "www.xirivella.es",
+    "abierta_segun_bdns": false,
+    "beneficiarios": "PERSONAS FÍSICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA PERSONAS JURÍDICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
+    "nota": "Revisa importe por vivienda, requisitos, documentos y pasos antes de aprobar.",
+    "ia": {
+     "fecha": "2026-11-17",
+     "documento": "sin enlace a las bases",
+     "recomendacion": "publicar",
+     "motivo": "Subvenciona instalar ascensores y quitar barreras arquitectónicas en viviendas y edificios de viviendas de Xirivella."
+    },
+    "confirmar": [
+     "No se han podido leer las bases ni el edicto: faltan importe por vivienda, porcentaje, requisitos y documentos.",
+     "Comprobar la fecha de publicación en el BOP, que marca el inicio del plazo.",
+     "Comprobar la antigüedad del edificio, qué gastos se subvencionan y el periodo de las obras."
+    ],
+    "espera": {
+     "desde": "2026-11-17",
+     "intentos": 1,
+     "proxima": "2026-11-20"
+    }
+   },
+   "prov": "Valencia",
+   "muni": "Xirivella"
+  },
+  {
+   "id": "bdns-942236",
+   "estado": "descartada",
+   "title": "Convocatòria y bases del Concurso de decoración navideña de fachadas, balcones y ventanas 2026",
+   "org": "MERCADAL, ES · AYUNTAMIENTO DE ES MERCADAL",
+   "scope": "municipal",
+   "ccaa": "Illes Balears",
+   "tipo": [
+    "ventanas",
+    "eficiencia"
+   ],
+   "dest": [
+    "vivienda"
+   ],
+   "importe": 0,
+   "imp": "Consulta la convocatoria",
+   "abre": "2026-11-16",
+   "cierra": "2026-12-10",
+   "plazo": "Consulta el plazo en la convocatoria",
+   "irpf": false,
+   "fuente": "BDNS nº 942236",
+   "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/942236",
+   "resumen": "Convocatòria y bases del Concurso de decoración navideña de fachadas, balcones y ventanas 2026",
+   "req": [
+    "Consulta los requisitos en la convocatoria oficial"
+   ],
+   "docs": [
+    "Consulta la documentación en la convocatoria oficial"
+   ],
+   "pasos": [
+    "Lee la convocatoria oficial",
+    "Prepara la documentación",
+    "Presenta la solicitud en la sede del organismo"
+   ],
+   "_revisar": {
+    "presupuesto_total": 1000,
+    "bases_reguladoras": "http://boib.caib.es/pdf/2005189/mp113.pdf",
+    "abierta_segun_bdns": false,
+    "beneficiarios": "PERSONAS FÍSICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
+    "nota": "Revisa importe por vivienda, requisitos, documentos y pasos antes de aprobar.",
+    "ia": {
+     "fecha": "2026-11-17",
+     "documento": "PDF de 12 páginas",
+     "recomendacion": "descartar",
+     "motivo": "Es un concurso de decoración navideña de fachadas, balcones y ventanas, no paga obras de reforma, eficiencia ni construcción; además el documento adjunto es un BOIB de 2005 que no contiene esta convocatoria."
+    },
+    "confirmar": [
+     "El documento adjunto es el BOIB nº 189 de 17-12-2005 (ordenanzas municipales) y no contiene las bases de este concurso.",
+     "No es una ayuda para obras en vivienda: es un concurso de decoración navideña."
+    ]
+   },
+   "prov": "Illes Balears",
+   "muni": "Es Mercadal"
   }
  ],
  "boe": []

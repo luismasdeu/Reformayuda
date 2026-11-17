@@ -1,10 +1,35 @@
 {
- "fecha": "2026-11-16T06:38",
+ "fecha": "2026-11-17T06:13",
  "modelo": "claude-sonnet-5-5",
- "procesadas": [],
+ "procesadas": [
+  {
+   "id": "bdns-942439",
+   "documento": "sin enlace a las bases",
+   "coste_usd": 0.2197,
+   "recomendacion": "publicar"
+  },
+  {
+   "id": "bdns-942250",
+   "documento": "PDF de 33 páginas (no eran las bases de esta ayuda: buscada en internet)",
+   "coste_usd": 0.3454,
+   "recomendacion": "publicar"
+  },
+  {
+   "id": "bdns-942425",
+   "documento": "sin enlace a las bases",
+   "coste_usd": 0.1268,
+   "recomendacion": "publicar"
+  },
+  {
+   "id": "bdns-942236",
+   "documento": "PDF de 12 páginas",
+   "coste_usd": 0.119,
+   "recomendacion": "descartar"
+  }
+ ],
  "errores": [],
- "coste_usd": 0.0,
+ "coste_usd": 0.811,
  "pendientes_por_tope": 0,
- "gasto_mes_usd": 9.646,
+ "gasto_mes_usd": 10.457,
  "limite_mes_usd": 15.0
 }
