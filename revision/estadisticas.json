@@ -1,23 +1,27 @@
 {
  "_leeme": "Contadores anónimos por día (solo de quien acepta la medición anónima).",
- "actualizado": "2026-11-17T06:16",
+ "actualizado": "2026-11-18T06:22",
  "dias": {
   "2026-11-07": {
-   "visitas": 2,
-   "nuevos": 1
+   "nuevos": 1,
+   "visitas": 2
   },
   "2026-11-10": {
-   "visitas": 1,
-   "nuevos": 1
+   "nuevos": 1,
+   "visitas": 1
   },
   "2026-11-11": {
-   "visitas": 7,
+   "nuevos": 5,
    "fichas": 1,
-   "nuevos": 5
+   "visitas": 7
   },
   "2026-11-12": {
-   "visitas": 2,
-   "nuevos": 3
+   "nuevos": 3,
+   "visitas": 2
+  },
+  "2026-11-17": {
+   "nuevos": 1,
+   "visitas": 1
   }
  }
 }
