@@ -794,31 +794,36 @@
    "imp": "Importe pendiente de publicar en las bases oficiales",
    "abre": "2026-10-20",
    "cierra": "2027-10-21",
-   "plazo": "Según la BDNS, el plazo de solicitud va del 20/10/2026 al 21/10/2027. Hay que confirmarlo en las bases.",
+   "plazo": "La BDNS indica del 20/10/2026 al 21/10/2027. La web municipal indica del 19/11/2026 al 10/12/2026 y dice que el anuncio en el BOP llega «próximamente». Hay que confirmar las fechas.",
    "irpf": false,
    "fuente": "BDNS nº 940941",
    "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/940941",
    "resumen": "El Ayuntamiento de Torrent da subvenciones para mejorar la accesibilidad y restaurar fachadas en edificios residenciales. Presupuesto total de la convocatoria: 200.000 €. No he podido leer las bases oficiales, así que faltan los detalles: importe por vivienda, requisitos y trámite.",
    "req": [
-    "Consulta los requisitos en la convocatoria oficial"
+    "Ser persona propietaria o comunidad de propietarios del edificio.",
+    "Las obras de accesibilidad solo valen en edificios de varias viviendas y en sus elementos comunes.",
+    "Las obras de fachada valen en edificios de una o de varias viviendas.",
+    "El edificio debe ser residencial."
    ],
    "docs": [
     "Consulta la documentación en la convocatoria oficial"
    ],
    "pasos": [
-    "Lee la convocatoria oficial",
-    "Prepara la documentación",
-    "Presenta la solicitud en la sede del organismo"
+    "Espera a que se publique la convocatoria en el BOP.",
+    "Lee las bases en la web del Ayuntamiento de Torrent.",
+    "Presenta la solicitud en la sede electrónica con el trámite SUBV-004.",
+    "Justifica la obra realizada cuando te lo pidan."
    ],
    "prov": "Valencia",
    "muni": "Torrent",
    "pendiente_bases": {
-    "intentos": 2,
-    "proxima": "2026-11-18"
+    "intentos": 3,
+    "proxima": "2026-11-28"
    },
    "revisada": "2026-11-10",
    "auto": "2026-11-10",
-   "ia": "2026-11-11"
+   "ia": "2026-11-18",
+   "sede": "https://www.torrent.es/PortalCiudadano/tramites/tramite.do?formAction=btShow&lang=es&t=20006"
   },
   {
    "id": "bdns-941790",

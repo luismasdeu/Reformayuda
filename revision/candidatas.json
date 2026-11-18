@@ -1,6 +1,6 @@
 {
  "_leeme": "Ayudas detectadas automáticamente en los boletines. Revísalas: pon \"estado\": \"aprobada\" o \"descartada\". Mira README.md.",
- "ultima_busqueda": "2026-11-17T06:13",
+ "ultima_busqueda": "2026-11-18T06:19",
  "candidatas": [
   {
    "id": "bdns-938584",
@@ -228,37 +228,39 @@
     "edificio"
    ],
    "importe": 5000,
-   "imp": "El 40 % del presupuesto de ejecución material de la obra, hasta 5.000 € por inmueble y convocatoria",
+   "imp": "El 40 % del presupuesto de ejecución material, con un máximo de 5.000 € por inmueble y convocatoria",
    "abre": "2026-11-06",
    "cierra": "2026-12-30",
-   "plazo": "El plazo empieza al día siguiente de publicarse la convocatoria en el BOPT y termina el 30 de diciembre de 2026. Las ayudas se conceden por orden de solicitud hasta agotar el crédito.",
+   "plazo": "Empieza el día siguiente a la publicación de la convocatoria en el BOPT y termina el 30 de diciembre de 2026. Las ayudas se dan por orden de solicitud hasta agotar el crédito.",
    "irpf": false,
    "fuente": "BDNS nº 939227",
    "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/939227",
-   "resumen": "El Ayuntamiento paga parte de las obras para recuperar, rehabilitar o revestir con piedra natural la fachada de tu inmueble en el casco urbano. También cubre recuperar elementos tradicionales como dinteles, molduras, cornisas, rejas y portadas. Las ayudas se dan por orden de entrada hasta agotar el crédito. La convocatoria tiene 10.000 € en total.",
+   "resumen": "El Ayuntamiento de Vilalba dels Arcs paga parte de las obras para recuperar, rehabilitar o revestir con piedra natural las fachadas visibles desde la calle en el casco urbano. También paga la recuperación de elementos tradicionales, como dinteles, molduras, cornisas, rejas y portadas. Se concede por orden de presentación hasta agotar el crédito de la convocatoria, que es de 10.000 €.",
    "req": [
-    "Ser propietario del inmueble (persona física o jurídica) o presidente de la comunidad de propietarios.",
-    "El inmueble debe estar en el casco urbano de Vilalba dels Arcs y la fachada debe verse desde la vía pública.",
-    "La obra debe recuperar fachadas de piedra natural o elementos tradicionales. No valen revestimientos que imiten la piedra.",
-    "Cumplir el POUM y el informe técnico municipal previo, con materiales y colores acordes a la arquitectura tradicional.",
-    "Tener licencia de obras o hacer la comunicación previa de obras antes de empezar.",
-    "No tener prohibiciones para recibir subvenciones según el artículo 13 de la Ley General de Subvenciones."
+    "Ser propietario de un inmueble en el casco urbano de Vilalba dels Arcs, o presidente de una comunidad de propietarios. Pueden ser personas físicas o jurídicas.",
+    "La fachada debe verse desde la vía pública.",
+    "La obra debe recuperar fachadas o elementos tradicionales de piedra natural, según el POUM y el informe técnico municipal.",
+    "No se pagan revestimientos que imiten la piedra sin serlo.",
+    "Tener la licencia de obras antes de empezar, o hacer la comunicación previa de obras.",
+    "No tener ninguna de las prohibiciones del artículo 13 de la Ley General de Subvenciones."
    ],
    "docs": [
     "Solicitud en el modelo oficial de la sede electrónica municipal.",
-    "Documento que acredite que eres titular de la finca y copia del NIF.",
+    "Documento que acredite que eres propietario de la finca y copia del NIF.",
     "Descripción de la obra y presupuesto detallado.",
-    "Fotos del estado actual de la fachada y plano o croquis de la zona que vas a reformar.",
-    "Comunicación o licencia de obras y, si hace falta, proyecto o memoria técnica.",
-    "Declaración de otras ayudas pedidas o recibidas para la misma obra."
+    "Fotos del estado actual de la fachada y plano o croquis de la zona de obra.",
+    "Justificante de haber pedido la licencia o hecho la comunicación de obras.",
+    "Proyecto o memoria técnica, si hace falta.",
+    "Declaración de otras ayudas pedidas o recibidas para lo mismo."
    ],
    "pasos": [
-    "Comprueba que tu inmueble está en el casco urbano y que la obra encaja con el POUM.",
     "Pide la licencia de obras o haz la comunicación previa de obras.",
-    "Rellena el modelo oficial de solicitud en la sede electrónica del Ayuntamiento y adjunta los documentos, dentro del plazo.",
-    "Si falta algo, tienes 10 días hábiles para corregirlo. Después se revisa tu solicitud y se te comunica la resolución, en un máximo de 3 meses.",
-    "Haz la obra siguiendo los criterios técnicos municipales.",
-    "Justifica la obra en los 3 meses siguientes a terminarla, con facturas, certificado final de obra, fotos y certificado de titularidad bancaria. El pago se hace después, sin anticipos."
+    "Presenta la solicitud con la documentación en la sede electrónica del Ayuntamiento durante el plazo abierto.",
+    "Corrige lo que te pidan si falta algo. Tienes 10 días hábiles.",
+    "El Ayuntamiento resuelve en un máximo de 3 meses. Si no contesta, se entiende denegada.",
+    "Haz la obra siguiendo los criterios técnicos sobre materiales y colores.",
+    "Justifica la obra en 3 meses desde que termine: facturas, certificado final de obra, fotos y certificado de titularidad bancaria.",
+    "Cobras por transferencia cuando el técnico municipal lo apruebe. No hay anticipos."
    ],
    "_revisar": {
     "presupuesto_total": 10000,
@@ -266,23 +268,23 @@
     "abierta_segun_bdns": false,
     "beneficiarios": "PERSONAS FÍSICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
     "nota": "Revisa importe por vivienda, requisitos, documentos y pasos antes de aprobar.",
-    "referencia_bases": "BOPT de Tarragona, registro 2026-00544, de 26/01/2026 (aprobación definitiva de las bases).",
+    "referencia_bases": "Bases: aprobación definitiva en el BOPT de 26/01/2026 (registro 2026-00544); convocatoria en el BOPT de 05/11/2026.",
     "ia": {
-     "fecha": "2026-11-11",
-     "documento": "página web (extracto; bases en BOPT de Tarragona, registro 2026-00544, de 26/01/2026 (aprobación definitiva de las bases).)",
+     "fecha": "2026-11-18",
+     "documento": "página web (extracto; bases en Bases: aprobación definitiva en el BOPT de 26/01/2026 (registro 2026-00544); convocatoria en el BOPT de 05/11/2026.)",
      "recomendacion": "publicar",
-     "motivo": "Paga obras de rehabilitación y revestimiento de fachadas de piedra natural en inmuebles y comunidades de propietarios del casco urbano."
+     "motivo": "Paga obras de rehabilitación y recuperación de fachadas de piedra natural en inmuebles y comunidades de propietarios del casco urbano."
     },
     "confirmar": [
-     "No he visto el anuncio de la convocatoria en el BOPT con su fecha. El plazo empieza el día siguiente a su publicación, así que hay que confirmar la fecha de apertura.",
-     "Las bases no mencionan que haya que ser vivienda: valen «inmuebles» del casco urbano. Comprueba si se admiten locales o edificios que no son viviendas.",
-     "No he leído el texto de la convocatoria (solo las bases). Comprueba que mantiene el 40 % y el máximo de 5.000 €, el presupuesto de 10.000 € y la sede electrónica para pedirla.",
-     "La disposición transitoria permite pedir ayuda por obras terminadas en el año natural anterior a la publicación, solo en la primera convocatoria."
+     "No he visto el texto de la convocatoria en el BOPT del 05/11/2026. Hay que confirmar la fecha exacta de apertura del plazo.",
+     "Las bases no fijan el plazo máximo para ejecutar la obra. Puede estar en la convocatoria.",
+     "Falta la dirección de la sede electrónica para pedirla. Las bases solo dicen que está en la sede municipal.",
+     "No está claro si el casco urbano exige que el edificio sea de uso residencial."
     ],
     "espera": {
      "desde": "2026-11-03",
-     "intentos": 3,
-     "proxima": "2026-11-18"
+     "intentos": 4,
+     "proxima": "2026-11-28"
     },
     "bases_no_corresponden": true
    },
@@ -678,6 +680,159 @@
    },
    "prov": "Valencia",
    "muni": "Xirivella"
+  },
+  {
+   "id": "bdns-942542",
+   "estado": "descartada",
+   "title": "Subvención a favor de Taula d’Entitats del Tercer Sector Social de Catalunya para la promoción de las entidades sociales metropolitanas así como incidir de mane",
+   "org": "AREA METROPOLITANA DE BARCELONA · ÀREA METROPOLITANA DE BARCELONA",
+   "scope": "municipal",
+   "ccaa": "Cataluña",
+   "tipo": [
+    "rehabilitacion"
+   ],
+   "dest": [
+    "vivienda"
+   ],
+   "importe": 0,
+   "imp": "Consulta la convocatoria",
+   "abre": "2026-11-17",
+   "cierra": null,
+   "plazo": "Consulta el plazo en la convocatoria",
+   "irpf": false,
+   "fuente": "BDNS nº 942542",
+   "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/942542",
+   "resumen": "Subvención a favor de Taula d’Entitats del Tercer Sector Social de Catalunya para la promoción de las entidades sociales metropolitanas así como incidir de manera estructural en ámbitos estratégicos como el derecho a la vivienda y el envejecimiento (Exp.",
+   "req": [
+    "Consulta los requisitos en la convocatoria oficial"
+   ],
+   "docs": [
+    "Consulta la documentación en la convocatoria oficial"
+   ],
+   "pasos": [
+    "Lee la convocatoria oficial",
+    "Prepara la documentación",
+    "Presenta la solicitud en la sede del organismo"
+   ],
+   "_revisar": {
+    "presupuesto_total": 30000,
+    "bases_reguladoras": "https://www.amb.cat/es/web/amb/govern-metropolita/economia-i-inversions/subvencions",
+    "abierta_segun_bdns": false,
+    "beneficiarios": "PERSONAS JURÍDICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
+    "nota": "Revisa importe por vivienda, requisitos, documentos y pasos antes de aprobar.",
+    "ia": {
+     "fecha": "2026-11-18",
+     "documento": "no se pudo descargar (HTTP Error 403: Forbidden) (descartada con la pregunta rápida)",
+     "recomendacion": "descartar",
+     "motivo": "Es una subvención directa a una entidad concreta (Taula del Tercer Sector Social) para promoción de entidades sociales y labor de incidencia, no financia obras en viviendas ni está abierta al público."
+    },
+    "confirmar": []
+   },
+   "prov": "Barcelona"
+  },
+  {
+   "id": "bdns-942787",
+   "estado": "descartada",
+   "title": "Convocatoria pública año 2026: LÍNEA DE SUBVENCIÓN 11.1) Conservación y rehabilitación de edificios: Subvenciones para la realización de ITEs, obras de rehabili",
+   "org": "ERRENTERIA · AYUNTAMIENTO DE ERRENTERIA",
+   "scope": "municipal",
+   "ccaa": "País Vasco",
+   "tipo": [
+    "rehabilitacion"
+   ],
+   "dest": [
+    "edificio"
+   ],
+   "importe": 0,
+   "imp": "Consulta la convocatoria",
+   "abre": "2026-11-17",
+   "cierra": null,
+   "plazo": "Consulta el plazo en la convocatoria",
+   "irpf": false,
+   "fuente": "BDNS nº 942787",
+   "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/942787",
+   "resumen": "Convocatoria pública año 2026: LÍNEA DE SUBVENCIÓN 11.1) Conservación y rehabilitación de edificios: Subvenciones para la realización de ITEs, obras de rehabilitación y obras de adecuación del programa Bizigune.",
+   "req": [
+    "Consulta los requisitos en la convocatoria oficial"
+   ],
+   "docs": [
+    "Consulta la documentación en la convocatoria oficial"
+   ],
+   "pasos": [
+    "Lee la convocatoria oficial",
+    "Prepara la documentación",
+    "Presenta la solicitud en la sede del organismo"
+   ],
+   "_revisar": {
+    "presupuesto_total": 147552.51,
+    "bases_reguladoras": "https://uzt.gipuzkoa.eus/home.do?De=CA067122563",
+    "abierta_segun_bdns": false,
+    "beneficiarios": "PERSONAS JURÍDICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
+    "nota": "Revisa importe por vivienda, requisitos, documentos y pasos antes de aprobar.",
+    "ia": {
+     "fecha": "2026-11-18",
+     "documento": "página web",
+     "recomendacion": "descartar",
+     "motivo": "Los beneficiarios son personas jurídicas sin actividad económica (comunidades, entidades) y no hay datos verificables de que se abra al público; además, el documento descargado no contiene las bases, así que ante la duda se descarta."
+    },
+    "confirmar": [
+     "El texto descargado es solo la página de la sede electrónica, sin bases ni convocatoria: hay que leer las bases generales y específicas.",
+     "Comprobar importe máximo, porcentaje y requisitos, que no constan.",
+     "Comprobar quién puede pedirla (la BDNS indica personas jurídicas sin actividad económica) y si está abierta a comunidades de propietarios.",
+     "Confirmar la fecha de publicación en el BOG, de la que depende la apertura del plazo."
+    ]
+   },
+   "prov": "Gipuzkoa",
+   "muni": "Errenteria"
+  },
+  {
+   "id": "bdns-942515",
+   "estado": "descartada",
+   "title": "Subvención a favor de COCEMFE-Barcelona para apoyar a Municipios metropolitanos en el Impulso de políticas de igualdad de oportunidades en el acceso al mercado ",
+   "org": "AREA METROPOLITANA DE BARCELONA · ÀREA METROPOLITANA DE BARCELONA",
+   "scope": "municipal",
+   "ccaa": "Cataluña",
+   "tipo": [
+    "accesibilidad"
+   ],
+   "dest": [
+    "vivienda"
+   ],
+   "importe": 0,
+   "imp": "Consulta la convocatoria",
+   "abre": "2026-11-17",
+   "cierra": null,
+   "plazo": "Consulta el plazo en la convocatoria",
+   "irpf": false,
+   "fuente": "BDNS nº 942515",
+   "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/942515",
+   "resumen": "Subvención a favor de COCEMFE-Barcelona para apoyar a Municipios metropolitanos en el Impulso de políticas de igualdad de oportunidades en el acceso al mercado de trabajo y de accesibilidad de las personas con discapacidad (Exp. 2026/903225)",
+   "req": [
+    "Consulta los requisitos en la convocatoria oficial"
+   ],
+   "docs": [
+    "Consulta la documentación en la convocatoria oficial"
+   ],
+   "pasos": [
+    "Lee la convocatoria oficial",
+    "Prepara la documentación",
+    "Presenta la solicitud en la sede del organismo"
+   ],
+   "_revisar": {
+    "presupuesto_total": 45000,
+    "bases_reguladoras": "https://www.amb.cat/es/web/amb/govern-metropolita/economia-i-inversions/subvencions",
+    "abierta_segun_bdns": false,
+    "beneficiarios": "PERSONAS JURÍDICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
+    "nota": "Revisa importe por vivienda, requisitos, documentos y pasos antes de aprobar.",
+    "ia": {
+     "fecha": "2026-11-18",
+     "documento": "no se pudo descargar (HTTP Error 403: Forbidden) (descartada con la pregunta rápida)",
+     "recomendacion": "descartar",
+     "motivo": "Es una subvención directa a una entidad concreta (COCEMFE-Barcelona) para políticas de empleo y accesibilidad de personas con discapacidad, no para pagar obras en viviendas ni abierta al público."
+    },
+    "confirmar": []
+   },
+   "prov": "Barcelona"
   }
  ],
  "boe": []

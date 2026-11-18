@@ -1,35 +1,41 @@
 {
- "fecha": "2026-11-17T06:13",
+ "fecha": "2026-11-18T06:19",
  "modelo": "claude-sonnet-5-5",
  "procesadas": [
   {
-   "id": "bdns-942439",
-   "documento": "sin enlace a las bases",
-   "coste_usd": 0.2197,
-   "recomendacion": "publicar"
+   "id": "bdns-940941",
+   "documento": "página web (extracto; bases en Bases reguladoras de ayudas para la mejora de la accesibilidad y para la restauración de fachadas en edificios residenciales; el BOP aún figura como «próximamente».)",
+   "coste_usd": 0.3359,
+   "recomendacion": "corregida"
   },
   {
-   "id": "bdns-942250",
-   "documento": "PDF de 33 páginas (no eran las bases de esta ayuda: buscada en internet)",
-   "coste_usd": 0.3454,
-   "recomendacion": "publicar"
-  },
-  {
-   "id": "bdns-942425",
-   "documento": "sin enlace a las bases",
-   "coste_usd": 0.1268,
-   "recomendacion": "publicar"
-  },
-  {
-   "id": "bdns-942236",
-   "documento": "PDF de 12 páginas",
-   "coste_usd": 0.119,
+   "id": "bdns-942542",
+   "documento": "no se pudo descargar (HTTP Error 403: Forbidden) (descartada con la pregunta rápida)",
+   "coste_usd": 0.006,
    "recomendacion": "descartar"
+  },
+  {
+   "id": "bdns-942787",
+   "documento": "página web",
+   "coste_usd": 0.0215,
+   "recomendacion": "descartar"
+  },
+  {
+   "id": "bdns-942515",
+   "documento": "no se pudo descargar (HTTP Error 403: Forbidden) (descartada con la pregunta rápida)",
+   "coste_usd": 0.0061,
+   "recomendacion": "descartar"
+  },
+  {
+   "id": "bdns-939227",
+   "documento": "página web (extracto; bases en Bases: aprobación definitiva en el BOPT de 26/01/2026 (registro 2026-00544); convocatoria en el BOPT de 05/11/2026.)",
+   "coste_usd": 0.4314,
+   "recomendacion": "publicar"
   }
  ],
  "errores": [],
- "coste_usd": 0.811,
+ "coste_usd": 0.801,
  "pendientes_por_tope": 0,
- "gasto_mes_usd": 10.457,
+ "gasto_mes_usd": 11.258,
  "limite_mes_usd": 15.0
 }
