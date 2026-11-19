@@ -1,41 +1,17 @@
 {
- "fecha": "2026-11-18T06:19",
+ "fecha": "2026-11-19T06:15",
  "modelo": "claude-sonnet-5-5",
  "procesadas": [
   {
-   "id": "bdns-940941",
-   "documento": "página web (extracto; bases en Bases reguladoras de ayudas para la mejora de la accesibilidad y para la restauración de fachadas en edificios residenciales; el BOP aún figura como «próximamente».)",
-   "coste_usd": 0.3359,
-   "recomendacion": "corregida"
-  },
-  {
-   "id": "bdns-942542",
-   "documento": "no se pudo descargar (HTTP Error 403: Forbidden) (descartada con la pregunta rápida)",
-   "coste_usd": 0.006,
+   "id": "bdns-942849",
+   "documento": "el enlace de bases de la BDNS es genérico (ley, ordenanza general o portada) (descartada con la pregunta rápida)",
+   "coste_usd": 0.0056,
    "recomendacion": "descartar"
-  },
-  {
-   "id": "bdns-942787",
-   "documento": "página web",
-   "coste_usd": 0.0215,
-   "recomendacion": "descartar"
-  },
-  {
-   "id": "bdns-942515",
-   "documento": "no se pudo descargar (HTTP Error 403: Forbidden) (descartada con la pregunta rápida)",
-   "coste_usd": 0.0061,
-   "recomendacion": "descartar"
-  },
-  {
-   "id": "bdns-939227",
-   "documento": "página web (extracto; bases en Bases: aprobación definitiva en el BOPT de 26/01/2026 (registro 2026-00544); convocatoria en el BOPT de 05/11/2026.)",
-   "coste_usd": 0.4314,
-   "recomendacion": "publicar"
   }
  ],
  "errores": [],
- "coste_usd": 0.801,
+ "coste_usd": 0.006,
  "pendientes_por_tope": 0,
- "gasto_mes_usd": 11.258,
+ "gasto_mes_usd": 11.264,
  "limite_mes_usd": 15.0
 }
