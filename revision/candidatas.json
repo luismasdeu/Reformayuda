@@ -680,56 +680,6 @@
    },
    "prov": "Valencia",
    "muni": "Xirivella"
-  },
-  {
-   "id": "bdns-942849",
-   "estado": "descartada",
-   "title": "SUBVENCIÓN PARA OBRAS DE MEJORA DE ACCESIBILIDAD EN PLAZA MAYOR",
-   "org": "DIPUTACIÓN PROV. DE PALENCIA · DIPUTACIÓN PROVINCIAL DE PALENCIA",
-   "scope": "provincial",
-   "ccaa": "Castilla y León",
-   "tipo": [
-    "accesibilidad"
-   ],
-   "dest": [
-    "vivienda"
-   ],
-   "importe": 0,
-   "imp": "Consulta la convocatoria",
-   "abre": "2026-11-18",
-   "cierra": null,
-   "plazo": "Consulta el plazo en la convocatoria",
-   "irpf": false,
-   "fuente": "BDNS nº 942849",
-   "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/942849",
-   "resumen": "SUBVENCIÓN PARA OBRAS DE MEJORA DE ACCESIBILIDAD EN PLAZA MAYOR",
-   "req": [
-    "Consulta los requisitos en la convocatoria oficial"
-   ],
-   "docs": [
-    "Consulta la documentación en la convocatoria oficial"
-   ],
-   "pasos": [
-    "Lee la convocatoria oficial",
-    "Prepara la documentación",
-    "Presenta la solicitud en la sede del organismo"
-   ],
-   "_revisar": {
-    "presupuesto_total": 24187.9,
-    "bases_reguladoras": "https://www.diputaciondepalencia.es/system/files/publicacion-pdf/20160530/ordenanza_general_subvenciones_mayo_2014.pdf",
-    "abierta_segun_bdns": true,
-    "beneficiarios": "PERSONAS JURÍDICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
-    "nota": "Revisa importe por vivienda, requisitos, documentos y pasos antes de aprobar.",
-    "bases_no_corresponden": true,
-    "ia": {
-     "fecha": "2026-11-19",
-     "documento": "el enlace de bases de la BDNS es genérico (ley, ordenanza general o portada) (descartada con la pregunta rápida)",
-     "recomendacion": "descartar",
-     "motivo": "Es una concesión directa instrumental a un beneficiario concreto (persona jurídica) para obras de accesibilidad en una plaza pública, no en viviendas ni abierta a particulares."
-    },
-    "confirmar": []
-   },
-   "prov": "Palencia"
   }
  ],
  "boe": []
