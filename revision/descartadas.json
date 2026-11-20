@@ -61,7 +61,12 @@
   "bdns-942515",
   "bdns-942542",
   "bdns-942787",
-  "bdns-942849"
+  "bdns-942849",
+  "bdns-943152",
+  "bdns-943165",
+  "bdns-943193",
+  "bdns-943335",
+  "bdns-943459"
  ],
  "ia": [
   {
@@ -1529,6 +1534,254 @@
     "confirmar": []
    },
    "prov": "Palencia"
+  },
+  {
+   "id": "bdns-943193",
+   "estado": "descartada",
+   "title": "Resolución de 18/11/2026 por la que se convocan para 2026, ayudas al arrendamiento de viviendas dirigidas a mujeres víctimas de violencia de género en CLM",
+   "org": "CASTILLA-LA MANCHA · DIRECCIÓN GENERAL DE VIVIENDA",
+   "scope": "autonomica",
+   "ccaa": "Castilla-La Mancha",
+   "tipo": [
+    "rehabilitacion"
+   ],
+   "dest": [
+    "vivienda"
+   ],
+   "importe": 0,
+   "imp": "Consulta la convocatoria",
+   "abre": "2026-11-19",
+   "cierra": "2026-12-15",
+   "plazo": "Consulta el plazo en la convocatoria",
+   "irpf": false,
+   "fuente": "BDNS nº 943193",
+   "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/943193",
+   "resumen": "Resolución de 18/11/2026 por la que se convocan para 2026, ayudas al arrendamiento de viviendas dirigidas a mujeres víctimas de violencia de género en CLM",
+   "req": [
+    "Consulta los requisitos en la convocatoria oficial"
+   ],
+   "docs": [
+    "Consulta la documentación en la convocatoria oficial"
+   ],
+   "pasos": [
+    "Lee la convocatoria oficial",
+    "Prepara la documentación",
+    "Presenta la solicitud en la sede del organismo"
+   ],
+   "_revisar": {
+    "presupuesto_total": 1150000,
+    "bases_reguladoras": "https//www.jccm.es",
+    "abierta_segun_bdns": false,
+    "beneficiarios": "PERSONAS FÍSICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
+    "nota": "Revisa importe por vivienda, requisitos, documentos y pasos antes de aprobar.",
+    "ia": {
+     "fecha": "2026-11-20",
+     "documento": "no se pudo descargar (unknown url type: 'https//www.jccm.es') (descartada con la pregunta rápida)",
+     "recomendacion": "descartar",
+     "motivo": "Es una ayuda al pago del alquiler de vivienda para mujeres víctimas de violencia de género, no financia obras ni construcción."
+    },
+    "confirmar": []
+   }
+  },
+  {
+   "id": "bdns-943459",
+   "estado": "descartada",
+   "title": "Aprobación bases reguladoras y convocatoria concursos navideños 2026 (Belenes, fachadas y balcones)",
+   "org": "ALCALÁ LA REAL · AYUNTAMIENTO DE ALCALÁ LA REAL",
+   "scope": "municipal",
+   "ccaa": "Andalucía",
+   "tipo": [
+    "eficiencia"
+   ],
+   "dest": [
+    "vivienda"
+   ],
+   "importe": 0,
+   "imp": "Consulta la convocatoria",
+   "abre": "2026-11-19",
+   "cierra": "2026-11-30",
+   "plazo": "Consulta el plazo en la convocatoria",
+   "irpf": false,
+   "fuente": "BDNS nº 943459",
+   "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/943459",
+   "resumen": "Aprobación bases reguladoras y convocatoria concursos navideños 2026 (Belenes, fachadas y balcones)",
+   "req": [
+    "Consulta los requisitos en la convocatoria oficial"
+   ],
+   "docs": [
+    "Consulta la documentación en la convocatoria oficial"
+   ],
+   "pasos": [
+    "Lee la convocatoria oficial",
+    "Prepara la documentación",
+    "Presenta la solicitud en la sede del organismo"
+   ],
+   "_revisar": {
+    "presupuesto_total": 5900,
+    "bases_reguladoras": "https://alcalalareal.sedelectronica.es/doc/5THNAWDEN5JCKJDKW3DFLEP6K/.2",
+    "abierta_segun_bdns": false,
+    "beneficiarios": "PERSONAS FÍSICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA PERSONAS JURÍDICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
+    "nota": "Revisa importe por vivienda, requisitos, documentos y pasos antes de aprobar.",
+    "ia": {
+     "fecha": "2026-11-20",
+     "documento": "no se pudo descargar (HTTP Error 302: The HTTP server returned a redirect error that would lead to an infinite loop.\nThe last 30x error message was:\nFound) (descartada con la pregunta rápida)",
+     "recomendacion": "descartar",
+     "motivo": "Se trata de premios de concursos navideños de belenes y decoración de fachadas y balcones, con finalidad cultural, que no financian obras de reforma, rehabilitación ni construcción en viviendas."
+    },
+    "confirmar": []
+   },
+   "prov": "Jaén",
+   "muni": "Alcalá La Real"
+  },
+  {
+   "id": "bdns-943335",
+   "estado": "descartada",
+   "title": "BASES Y CONVOCATORIA DEL CONCURSO DE FACHADAS Y JARDINES DE NAVIDAD 2026",
+   "org": "LARACHA, A · AYUNTAMIENTO DE A LARACHA",
+   "scope": "municipal",
+   "ccaa": "Galicia",
+   "tipo": [
+    "eficiencia"
+   ],
+   "dest": [
+    "vivienda"
+   ],
+   "importe": 0,
+   "imp": "Consulta la convocatoria",
+   "abre": "2026-11-19",
+   "cierra": "2026-12-20",
+   "plazo": "Consulta el plazo en la convocatoria",
+   "irpf": false,
+   "fuente": "BDNS nº 943335",
+   "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/943335",
+   "resumen": "BASES Y CONVOCATORIA DEL CONCURSO DE FACHADAS Y JARDINES DE NAVIDAD 2026",
+   "req": [
+    "Consulta los requisitos en la convocatoria oficial"
+   ],
+   "docs": [
+    "Consulta la documentación en la convocatoria oficial"
+   ],
+   "pasos": [
+    "Lee la convocatoria oficial",
+    "Prepara la documentación",
+    "Presenta la solicitud en la sede del organismo"
+   ],
+   "_revisar": {
+    "presupuesto_total": 0,
+    "bases_reguladoras": "https://sede.alaracha.gal/sxc/es/index.html",
+    "abierta_segun_bdns": false,
+    "beneficiarios": "PERSONAS FÍSICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA PERSONAS JURÍDICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
+    "nota": "Revisa importe por vivienda, requisitos, documentos y pasos antes de aprobar.",
+    "ia": {
+     "fecha": "2026-11-20",
+     "documento": "página web (descartada con la pregunta rápida)",
+     "recomendacion": "descartar",
+     "motivo": "Es un concurso de decoración navideña de fachadas y jardines (finalidad cultural) que premia la decoración, no financia obras de reforma, rehabilitación ni construcción en viviendas."
+    },
+    "confirmar": []
+   },
+   "prov": "A Coruña",
+   "muni": "A Laracha"
+  },
+  {
+   "id": "bdns-943165",
+   "estado": "descartada",
+   "title": "Convocatoria del VII Concurso de Decoración de Fachadas Navideñas",
+   "org": "SEGORBE · AYUNTAMIENTO DE SEGORBE",
+   "scope": "municipal",
+   "ccaa": "Comunitat Valenciana",
+   "tipo": [
+    "eficiencia"
+   ],
+   "dest": [
+    "vivienda"
+   ],
+   "importe": 0,
+   "imp": "Consulta la convocatoria",
+   "abre": "2026-11-20",
+   "cierra": "2026-12-04",
+   "plazo": "Consulta el plazo en la convocatoria",
+   "irpf": false,
+   "fuente": "BDNS nº 943165",
+   "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/943165",
+   "resumen": "Convocatoria del VII Concurso de Decoración de Fachadas Navideñas",
+   "req": [
+    "Consulta los requisitos en la convocatoria oficial"
+   ],
+   "docs": [
+    "Consulta la documentación en la convocatoria oficial"
+   ],
+   "pasos": [
+    "Lee la convocatoria oficial",
+    "Prepara la documentación",
+    "Presenta la solicitud en la sede del organismo"
+   ],
+   "_revisar": {
+    "presupuesto_total": 300,
+    "bases_reguladoras": "https://bop.dipcas.es/PortalBOP/boletin.do?fechaPublicacion=21/01/2016",
+    "abierta_segun_bdns": false,
+    "beneficiarios": "PERSONAS FÍSICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
+    "nota": "Revisa importe por vivienda, requisitos, documentos y pasos antes de aprobar.",
+    "ia": {
+     "fecha": "2026-11-20",
+     "documento": "página web (descartada con la pregunta rápida)",
+     "recomendacion": "descartar",
+     "motivo": "Es un concurso de decoración navideña de fachadas con premios (finalidad cultural), no una ayuda para pagar obras de reforma, rehabilitación o mejora de la vivienda."
+    },
+    "confirmar": []
+   },
+   "prov": "Castellón",
+   "muni": "Segorbe"
+  },
+  {
+   "id": "bdns-943152",
+   "estado": "descartada",
+   "title": "ACUERDO DE JUNTA DE GOBIERNO LOCAL DE 18 DE NOVIEMBRE DE 2026 DEL AYUNTAMIENTO DE ALMENDRALEJO, POR EL QUE SE APRUEBAN LAS BASES DE CONVOCATORIA DEL CONCURSO DE",
+   "org": "ALMENDRALEJO · AYUNTAMIENTO DE ALMENDRALEJO",
+   "scope": "municipal",
+   "ccaa": "Extremadura",
+   "tipo": [
+    "eficiencia"
+   ],
+   "dest": [
+    "vivienda"
+   ],
+   "importe": 0,
+   "imp": "Consulta la convocatoria",
+   "abre": "2026-11-19",
+   "cierra": null,
+   "plazo": "Consulta el plazo en la convocatoria",
+   "irpf": false,
+   "fuente": "BDNS nº 943152",
+   "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/943152",
+   "resumen": "ACUERDO DE JUNTA DE GOBIERNO LOCAL DE 18 DE NOVIEMBRE DE 2026 DEL AYUNTAMIENTO DE ALMENDRALEJO, POR EL QUE SE APRUEBAN LAS BASES DE CONVOCATORIA DEL CONCURSO DE DECORACIÓN DE CALLES, FACHADAS Y BALCONES – NAVIDAD 2026",
+   "req": [
+    "Consulta los requisitos en la convocatoria oficial"
+   ],
+   "docs": [
+    "Consulta la documentación en la convocatoria oficial"
+   ],
+   "pasos": [
+    "Lee la convocatoria oficial",
+    "Prepara la documentación",
+    "Presenta la solicitud en la sede del organismo"
+   ],
+   "_revisar": {
+    "presupuesto_total": 800,
+    "bases_reguladoras": "https://almendralejo.sedelectronica.es/transparency/da841f6e-cd11-475f-b242-68d709c284d3/",
+    "abierta_segun_bdns": false,
+    "beneficiarios": "PERSONAS FÍSICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA PERSONAS JURÍDICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
+    "nota": "Revisa importe por vivienda, requisitos, documentos y pasos antes de aprobar.",
+    "ia": {
+     "fecha": "2026-11-20",
+     "documento": "página web (descartada con la pregunta rápida)",
+     "recomendacion": "descartar",
+     "motivo": "Es un concurso de decoración navideña de calles, fachadas y balcones con premios (800 € en total), que no financia obras de reforma, rehabilitación ni construcción de viviendas."
+    },
+    "confirmar": []
+   },
+   "prov": "Badajoz",
+   "muni": "Almendralejo"
   }
  ]
 }

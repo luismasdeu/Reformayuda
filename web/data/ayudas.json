@@ -1,6 +1,6 @@
 {
  "_leeme": "Ayudas publicadas en la app. Edita con cuidado: el formato se comprueba antes de publicar (scripts/validar.py).",
- "actualizado": "2026-11-15",
+ "actualizado": "2026-11-20",
  "ayudas": [
   {
    "id": "pev-rehab",
@@ -919,6 +919,47 @@
    "sede": "https://sede.comunidad.madrid/",
    "prov": "Madrid",
    "revisada": "2026-11-15"
+  },
+  {
+   "id": "bdns-942439",
+   "title": "Rehabilitación de viviendas en Tacoronte",
+   "org": "TACORONTE · AYUNTAMIENTO DE TACORONTE",
+   "scope": "municipal",
+   "ccaa": "Canarias",
+   "tipo": [
+    "rehabilitacion"
+   ],
+   "dest": [
+    "vivienda"
+   ],
+   "importe": 0,
+   "imp": "Importe pendiente de publicar en las bases",
+   "abre": "2026-11-20",
+   "cierra": "2026-12-14",
+   "plazo": "Del 20 de noviembre al 14 de diciembre de 2026, según la BDNS.",
+   "irpf": false,
+   "fuente": "BDNS nº 942439",
+   "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/942439",
+   "resumen": "El Ayuntamiento de Tacoronte convoca ayudas para rehabilitar viviendas. Van dirigidas a personas físicas sin actividad económica. El presupuesto total es de 125.000 €. No he podido leer las bases, así que faltan el importe por vivienda, los requisitos y los trámites.",
+   "req": [
+    "Consulta los requisitos en la convocatoria oficial"
+   ],
+   "docs": [
+    "Consulta la documentación en la convocatoria oficial"
+   ],
+   "pasos": [
+    "Lee la convocatoria oficial",
+    "Prepara la documentación",
+    "Presenta la solicitud en la sede del organismo"
+   ],
+   "prov": "Santa Cruz de Tenerife",
+   "muni": "Tacoronte",
+   "pendiente_bases": {
+    "intentos": 1,
+    "proxima": "2026-11-24"
+   },
+   "revisada": "2026-11-20",
+   "auto": "2026-11-20"
   }
  ]
 }
