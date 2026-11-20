@@ -1,6 +1,6 @@
 {
  "_leeme": "Ayudas detectadas automáticamente en los boletines. Revísalas: pon \"estado\": \"aprobada\" o \"descartada\". Mira README.md.",
- "ultima_busqueda": "2026-11-19T06:15",
+ "ultima_busqueda": "2026-11-20T06:19",
  "candidatas": [
   {
    "id": "bdns-938584",
@@ -299,7 +299,6 @@
    "scope": "municipal",
    "ccaa": "Canarias",
    "tipo": [
-    "eficiencia",
     "rehabilitacion"
    ],
    "dest": [
@@ -309,29 +308,28 @@
    "imp": "Importe pendiente de publicar en las bases oficiales",
    "abre": "2026-11-04",
    "cierra": null,
-   "plazo": "Empieza el día siguiente a publicarse la convocatoria en el BOP de Las Palmas y dura 2 meses desde esa publicación. No he visto esa publicación, así que no consta la fecha exacta.",
+   "plazo": "Según la BDNS, empieza el día siguiente a publicarse la convocatoria en el BOP de Las Palmas y dura 2 meses desde esa publicación. No he visto la publicación ni su fecha.",
    "irpf": false,
    "fuente": "BDNS nº 939709",
    "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/939709",
-   "resumen": "El Ayuntamiento de San Bartolomé da subvenciones a personas que no tienen actividad económica para reformar o rehabilitar su vivienda. Las obras sirven para mantener la habitabilidad, ahorrar energía y arreglar elementos estructurales. El presupuesto total es de 323.793,18 €. Las bases de 2024-25 están financiadas por el Gobierno de Canarias a través del Instituto Canario de la Vivienda. No he podido leer las bases ni la convocatoria completas, así que faltan datos.",
+   "resumen": "El Ayuntamiento de San Bartolomé da subvenciones a particulares para rehabilitar su vivienda. La financia el Gobierno de Canarias a través del Instituto Canario de la Vivienda. El presupuesto total es de 323.793,18 €. No he podido leer las bases ni la convocatoria, así que faltan los detalles.",
    "req": [
     "Ser persona física sin actividad económica.",
-    "Que la vivienda esté en el municipio de San Bartolomé.",
-    "Cumplir los requisitos de las bases reguladoras (pendientes de comprobar).",
-    "Presentar declaración responsable y autorizar la consulta de tus ingresos."
+    "Tener una vivienda en el municipio de San Bartolomé (Lanzarote).",
+    "Los demás requisitos, como ingresos o antigüedad de la vivienda, constan en las bases, que no he podido leer."
    ],
    "docs": [
     "Solicitud (Anexo I).",
     "Declaración responsable (Anexo 2).",
-    "Memoria explicativa de la intervención en la vivienda (Anexo 3).",
+    "Memoria explicativa de la intervención (Anexo 3).",
     "Alta o modificación de datos de terceros (Anexo 4).",
     "Autorización para consultar ingresos (Anexo 5)."
    ],
    "pasos": [
-    "Espera a que se publique la convocatoria en el BOP de Las Palmas.",
-    "Rellena la solicitud (Anexo I) y los demás anexos.",
-    "Preséntala en la sede electrónica del Ayuntamiento dentro del plazo.",
-    "Si te la conceden, firma la aceptación de la subvención (Anexo 6).",
+    "Espera a que se publique la convocatoria en el BOP de Las Palmas y comprueba la fecha.",
+    "Rellena la solicitud y los anexos.",
+    "Preséntalos en la sede electrónica del Ayuntamiento dentro del plazo.",
+    "Si te la conceden, acepta la subvención (Anexo 6).",
     "Haz la obra y justifícala con la cuenta justificativa (Anexo 7)."
    ],
    "_revisar": {
@@ -341,23 +339,23 @@
     "beneficiarios": "PERSONAS FÍSICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
     "nota": "Revisa importe por vivienda, requisitos, documentos y pasos antes de aprobar.",
     "bases_no_corresponden": true,
-    "referencia_bases": "Bases reguladoras 2024-25 publicadas en el BOP de Las Palmas (número y fecha sin confirmar); la convocatoria 2026 debe publicarse en el BOP de Las Palmas.",
+    "referencia_bases": "Bases reguladoras de las subvenciones para rehabilitación de viviendas privadas en San Bartolomé 2024-25, publicadas en el BOP de Las Palmas (número y fecha sin confirmar).",
     "ia": {
-     "fecha": "2026-11-13",
-     "documento": "el enlace de bases de la BDNS es genérico (ley, ordenanza general o portada) (extracto; bases en Bases reguladoras 2024-25 publicadas en el BOP de Las Palmas (número y fecha sin confirmar); la convocatoria 2026 debe publicarse en el BOP de Las Palmas.)",
+     "fecha": "2026-11-20",
+     "documento": "el enlace de bases de la BDNS es genérico (ley, ordenanza general o portada) (extracto; bases en Bases reguladoras de las subvenciones para rehabilitación de viviendas privadas en San Bartolomé 2024-25, publicadas en el BOP de Las Palmas (número y fecha sin confirmar).)",
      "recomendacion": "publicar",
-     "motivo": "Subvenciona obras de rehabilitación y adecuación de viviendas privadas de particulares en San Bartolomé (Lanzarote)."
+     "motivo": "Son subvenciones del Ayuntamiento de San Bartolomé para rehabilitar viviendas privadas, dirigidas a personas físicas."
     },
     "confirmar": [
-     "Comprueba el importe máximo por vivienda, el porcentaje subvencionable y los límites de ingresos en las bases.",
-     "Comprueba la fecha de publicación de la convocatoria en el BOP y, con ella, las fechas de apertura y cierre del plazo.",
-     "Comprueba las obras subvencionables, las líneas de ayuda y si hay requisitos de edad o de personas en la vivienda.",
-     "Comprueba el número y la fecha del BOP donde están las bases 2024-25."
+     "No he podido leer las bases ni la convocatoria oficial. Faltan el importe por vivienda, el porcentaje, los requisitos y las obras subvencionables.",
+     "Hay que confirmar en el BOP de Las Palmas la fecha de publicación de la convocatoria, que marca la apertura y el cierre (2 meses).",
+     "Una noticia de prensa (no oficial) da cifras de importe y fechas. No las he usado y hay que contrastarlas con las bases.",
+     "Faltan el número y la fecha del BOP de las bases 2024-25."
     ],
     "espera": {
      "desde": "2026-11-05",
-     "intentos": 3,
-     "proxima": "2026-11-20"
+     "intentos": 4,
+     "proxima": "2026-11-30"
     },
     "datos_no_oficiales": true
    },
@@ -382,11 +380,11 @@
    "imp": "Un porcentaje del presupuesto protegible según tus ingresos (en 2023, el 50 % si ingresas menos de 21.000 € al año). Máximo por vivienda sin confirmar.",
    "abre": "2026-11-04",
    "cierra": null,
-   "plazo": "Según la BDNS, el plazo es de tres meses desde la publicación de la convocatoria en el BOB. Todavía no se ha visto esa publicación, así que no se conoce la fecha exacta.",
+   "plazo": "Tres meses desde la publicación de la convocatoria en el BOB. No he visto esa publicación, así que no se sabe la fecha exacta de apertura ni de cierre.",
    "irpf": false,
    "fuente": "BDNS nº 939915",
    "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/939915",
-   "resumen": "El Ayuntamiento de Barakaldo convoca para 2026 ayudas a la rehabilitación de edificios de viviendas. Presupuesto total: 227.652 €. No se han podido leer las bases ni la convocatoria oficial, así que faltan los detalles.",
+   "resumen": "El Ayuntamiento de Barakaldo da subvenciones a comunidades de propietarios para rehabilitar edificios de viviendas. La convocatoria 2026 tiene un presupuesto total de 227.652 €. El plazo es de tres meses desde que se publique la convocatoria en el Boletín Oficial de Bizkaia (BOB). No he podido leer las bases, así que faltan el importe por vivienda, los requisitos y los documentos.",
    "req": [
     "Ser persona física y haber promovido obras de rehabilitación en un edificio residencial de Barakaldo.",
     "Tus ingresos anuales determinan el porcentaje de ayuda (tramos según el salario mínimo).",
@@ -414,20 +412,21 @@
     "nota": "Revisa importe por vivienda, requisitos, documentos y pasos antes de aprobar.",
     "bases_no_corresponden": true,
     "ia": {
-     "fecha": "2026-11-13",
-     "documento": "PDF de 10 páginas (no eran las bases de esta ayuda: buscada en internet)",
+     "fecha": "2026-11-20",
+     "documento": "página web (no eran las bases de esta ayuda: buscada en internet)",
      "recomendacion": "publicar",
-     "motivo": "Subvenciona obras de rehabilitación en edificios de viviendas de Barakaldo, pedidas por particulares que han promovido la obra."
+     "motivo": "Subvenciona obras de rehabilitación en edificios de viviendas (comunidades de propietarios) de Barakaldo, pero no he podido leer las bases ni la convocatoria oficial."
     },
     "confirmar": [
-     "No se han podido leer las bases ni la convocatoria: faltan el importe, los requisitos, los documentos y cómo se pide.",
-     "Falta la fecha de publicación en el BOB, que marca el inicio del plazo de tres meses.",
-     "Comprueba qué obras se pagan y si la obra debe estar ya terminada. Solo hay referencias en prensa a la edición de 2025, y la prensa no es fuente oficial."
+     "No se han podido leer las bases (el PDF del BOB de 2018 pide un captcha) ni el texto de la convocatoria 2026. Faltan importe o porcentaje máximo, requisitos, documentos y cómo se pide.",
+     "Hay que comprobar la fecha de publicación en el BOB para saber cuándo abre y cierra el plazo.",
+     "La BDNS dice que los beneficiarios son personas físicas sin actividad económica, pero el título habla de edificios. Hay que confirmar si pueden pedirla las comunidades de propietarios.",
+     "Solo he encontrado datos de la convocatoria 2025 en un blog, que no es fuente oficial, y no los he usado."
     ],
     "espera": {
      "desde": "2026-11-05",
-     "intentos": 3,
-     "proxima": "2026-11-20"
+     "intentos": 4,
+     "proxima": "2026-11-30"
     }
    },
    "prov": "Bizkaia",
@@ -451,11 +450,11 @@
    "imp": "Consulta la convocatoria",
    "abre": "2026-11-11",
    "cierra": null,
-   "plazo": "20 días naturales desde el día siguiente a la publicación de la convocatoria en el BOP de Valencia. Aún no consta la fecha de esa publicación.",
+   "plazo": "Según la ficha de la BDNS, el plazo es de 20 días naturales. Empieza el día siguiente a la publicación de la convocatoria en el BOP de Valencia. Todavía no he visto esa publicación ni su fecha.",
    "irpf": false,
    "fuente": "BDNS nº 941340",
    "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/941340",
-   "resumen": "El Ayuntamiento de Agullent da ayudas económicas para hacer obras de rehabilitación en inmuebles del casco urbano. Son para personas físicas que no tienen actividad económica. La convocatoria es de 2026 y tiene un presupuesto total de 90.000 €. Se concede por concurrencia competitiva, es decir, se comparan las solicitudes entre sí.",
+   "resumen": "El Ayuntamiento de Agullent da ayudas económicas para hacer obras de rehabilitación en inmuebles del casco urbano. La convocatoria de 2026 tiene un presupuesto total de 90.000 €. Se concede por concurrencia competitiva. No he podido leer las bases, así que faltan los detalles.",
    "req": [
     "Ser persona física sin actividad económica.",
     "El inmueble debe estar en el casco urbano de Agullent.",
@@ -479,22 +478,23 @@
     "beneficiarios": "PERSONAS FÍSICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
     "nota": "Revisa importe por vivienda, requisitos, documentos y pasos antes de aprobar.",
     "bases_no_corresponden": true,
-    "referencia_bases": "Bases y convocatoria en la sede electrónica del Ayuntamiento de Agullent (agullent.sedelectronica.es) y anuncio en el BOP de Valencia, sin número ni fecha confirmados",
+    "referencia_bases": "Bases y convocatoria 2026 (Expte. 120/2026, Decreto 2026-0873) en la sede electrónica https://agullent.sedelectronica.es y en la BDNS (código 941340). Falta el anuncio en el BOP de Valencia.",
     "ia": {
-     "fecha": "2026-11-15",
-     "documento": "el enlace de bases de la BDNS es genérico (ley, ordenanza general o portada) (extracto; bases en Bases y convocatoria en la sede electrónica del Ayuntamiento de Agullent (agullent.sedelectronica.es) y anuncio en el BOP de Valencia, sin número ni fecha confirmados)",
+     "fecha": "2026-11-20",
+     "documento": "el enlace de bases de la BDNS es genérico (ley, ordenanza general o portada) (extracto; bases en Bases y convocatoria 2026 (Expte. 120/2026, Decreto 2026-0873) en la sede electrónica https://agullent.sedelectronica.es y en la BDNS (código 941340). Falta el anuncio en el BOP de Valencia.)",
      "recomendacion": "publicar",
-     "motivo": "Son ayudas del Ayuntamiento de Agullent para obras de rehabilitación de inmuebles del casco urbano, dirigidas a personas físicas sin actividad económica."
+     "motivo": "Son ayudas del Ayuntamiento de Agullent para obras de rehabilitación de inmuebles del casco urbano, y los beneficiarios son personas físicas."
     },
     "confirmar": [
-     "No se han podido leer las bases ni el decreto. Faltan el importe por inmueble, el porcentaje, los requisitos, los documentos y las obras que se pueden pagar.",
-     "Comprueba la fecha de publicación en el BOP de Valencia. De ella depende cuándo abre y cuándo cierra el plazo. La fecha 2026-11-11 es solo la de registro en la BDNS.",
-     "Comprueba si también pueden pedirla comunidades de propietarios y si solo vale para vivienda o también para otros inmuebles."
+     "No se han podido leer las bases ni el decreto 2026-0873. Faltan el importe por vivienda, el porcentaje, los requisitos, los documentos y cómo se solicita.",
+     "Comprueba la fecha de publicación en el BOP de Valencia para saber cuándo abre y cierra el plazo.",
+     "Comprueba qué inmuebles y qué obras entran (por ejemplo, si solo viviendas o también locales) y si hay requisitos de antigüedad o zona.",
+     "Las únicas fuentes que he podido leer son prensa y webs no oficiales, y no las he usado para ningún dato."
     ],
     "espera": {
      "desde": "2026-11-12",
-     "intentos": 2,
-     "proxima": "2026-11-20"
+     "intentos": 3,
+     "proxima": "2026-11-27"
     }
    },
    "prov": "Valencia",
@@ -503,8 +503,8 @@
   },
   {
    "id": "bdns-942439",
-   "estado": "espera",
-   "title": "Rehabilitación de viviendas en Tacoronte 2026",
+   "estado": "aprobada",
+   "title": "Rehabilitación de viviendas en Tacoronte",
    "org": "TACORONTE · AYUNTAMIENTO DE TACORONTE",
    "scope": "municipal",
    "ccaa": "Canarias",
@@ -515,14 +515,14 @@
     "vivienda"
    ],
    "importe": 0,
-   "imp": "Consulta la convocatoria",
+   "imp": "Importe pendiente de publicar en las bases",
    "abre": "2026-11-20",
    "cierra": "2026-12-14",
-   "plazo": "Del 20 de noviembre al 14 de diciembre de 2026, según la ficha de la BDNS.",
+   "plazo": "Del 20 de noviembre al 14 de diciembre de 2026, según la BDNS.",
    "irpf": false,
    "fuente": "BDNS nº 942439",
    "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/942439",
-   "resumen": "El Ayuntamiento de Tacoronte convoca ayudas para obras de rehabilitación de la vivienda de personas particulares. El presupuesto total es de 125.000 €. No he podido leer las bases oficiales de 2026, así que faltan los detalles. Se pide en el plazo del 20 de noviembre al 14 de diciembre de 2026.",
+   "resumen": "El Ayuntamiento de Tacoronte convoca ayudas para rehabilitar viviendas. Van dirigidas a personas físicas sin actividad económica. El presupuesto total es de 125.000 €. No he podido leer las bases, así que faltan el importe por vivienda, los requisitos y los trámites.",
    "req": [
     "Consulta los requisitos en la convocatoria oficial"
    ],
@@ -541,57 +541,66 @@
     "beneficiarios": "PERSONAS FÍSICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
     "nota": "Revisa importe por vivienda, requisitos, documentos y pasos antes de aprobar.",
     "ia": {
-     "fecha": "2026-11-17",
-     "documento": "sin enlace a las bases",
-     "recomendacion": "publicar",
-     "motivo": "Son ayudas del Ayuntamiento de Tacoronte para obras de rehabilitación en viviendas de particulares, con un presupuesto de 125.000 €."
+     "fecha": "2026-11-20",
+     "documento": "sin enlace a las bases (extracto; bases en Decreto 2026-4092 del Ayuntamiento de Tacoronte (aprobación de bases e inicio de la convocatoria), adjunto en la BDNS 942439; bases también en www.tacoronte.es)",
+     "recomendacion": "publicada sola (sin bases)",
+     "motivo": "La BDNS la describe como convocatoria pública de ayudas de rehabilitación de la vivienda para personas físicas, pero no he podido leer las bases."
     },
     "confirmar": [
-     "No se han podido leer las bases de 2026 (Decreto 2026-4092). Hay que comprobar el importe máximo por vivienda, el porcentaje de ayuda, los requisitos, los documentos y cómo se solicita.",
-     "Una publicación municipal sin fecha, que no es oficial, habla de ayudas de hasta 15.000 € y de requisitos como estar empadronado y ser propietario. No he usado esos datos porque no he podido confirmar que sean de esta edición.",
-     "Hay que comprobar si el plazo se publica en el BOP y desde qué fecha cuenta exactamente."
+     "No se han podido leer las bases (Decreto 2026-4092, adjunto en la BDNS 942439). Faltan importe por vivienda, requisitos, documentación y cómo se solicita.",
+     "Comprueba el tipo de obras subvencionables y si la vivienda debe ser residencia habitual.",
+     "Comprueba la sede electrónica de solicitud y si el plazo empieza en la fecha indicada por la BDNS."
     ],
-    "espera": {
-     "desde": "2026-11-17",
-     "intentos": 1,
-     "proxima": "2026-11-20"
-    }
+    "referencia_bases": "Decreto 2026-4092 del Ayuntamiento de Tacoronte (aprobación de bases e inicio de la convocatoria), adjunto en la BDNS 942439; bases también en www.tacoronte.es"
    },
    "prov": "Santa Cruz de Tenerife",
-   "muni": "Tacoronte"
+   "muni": "Tacoronte",
+   "pendiente_bases": {
+    "intentos": 1,
+    "proxima": "2026-11-24"
+   }
   },
   {
    "id": "bdns-942250",
    "estado": "espera",
-   "title": "Rehabilitación de edificios de viviendas en Elche (2026)",
+   "title": "Rehabilitación de edificios de viviendas en Elche",
    "org": "ELCHE/ELX · AYUNTAMIENTO DE ELCHE/ELX",
    "scope": "municipal",
    "ccaa": "Comunitat Valenciana",
    "tipo": [
+    "accesibilidad",
     "rehabilitacion"
    ],
    "dest": [
     "edificio"
    ],
    "importe": 0,
-   "imp": "Importe pendiente de publicar en las bases oficiales",
-   "abre": "2026-11-16",
-   "cierra": null,
-   "plazo": "Empieza el día siguiente a publicar el extracto en el BOP de Alicante y dura 3 meses desde ese día. No se ha visto esa publicación ni su fecha.",
+   "imp": "El 15 % del coste subvencionable total de la obra (no consta el máximo por edificio)",
+   "abre": "2026-11-19",
+   "cierra": "2027-02-19",
+   "plazo": "3 meses desde el día siguiente a la publicación del extracto en el BOP de Alicante. El anuncio salió en el BOP el 18/11/2026, así que el plazo iría del 19/11/2026 al 19/02/2027.",
    "irpf": false,
    "fuente": "BDNS nº 942250",
    "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/942250",
-   "resumen": "El Ayuntamiento de Elche convoca ayudas para obras de rehabilitación en edificios de viviendas. El presupuesto total es de 700.000 €. Las bases no se han podido leer en una fuente oficial, así que faltan los detalles.",
+   "resumen": "El Ayuntamiento de Elche da ayudas a comunidades de propietarios para obras de conservación, seguridad y accesibilidad en edificios de viviendas. También paga obras puntuales de ornato. La ayuda es el 15 % del coste subvencionable. El presupuesto total es de 700.000 €.",
    "req": [
-    "Consulta los requisitos en la convocatoria oficial"
+    "Ser comunidad de propietarios, agrupación de comunidades, cooperativa de edificio residencial colectivo o propietario único de un edificio de viviendas.",
+    "El edificio debe estar en el término municipal de Elche.",
+    "Las obras deben ser de conservación señaladas en el Informe de Evaluación del Edificio (IEE), o de seguridad de utilización, accesibilidad u ornato puntual.",
+    "No valen viviendas unifamiliares, residencias de estudiantes ni edificios de alquiler turístico.",
+    "Cumplir el resto de requisitos de la convocatoria."
    ],
    "docs": [
-    "Consulta la documentación en la convocatoria oficial"
+    "No he podido leer las bases: la lista de documentos no consta en el anuncio.",
+    "Normalmente hará falta el Informe de Evaluación del Edificio (IEE).",
+    "Consulta en la convocatoria la lista completa de documentos."
    ],
    "pasos": [
-    "Lee la convocatoria oficial",
-    "Prepara la documentación",
-    "Presenta la solicitud en la sede del organismo"
+    "Consulta la convocatoria y la Base 28 de ejecución del Presupuesto municipal.",
+    "Reúne la comunidad de propietarios y acuerda pedir la ayuda.",
+    "Prepara el Informe de Evaluación del Edificio y la documentación que pidan las bases.",
+    "Presenta la solicitud en la sede electrónica del Ayuntamiento de Elche (sede.elche.es) dentro del plazo.",
+    "Haz las obras y justifica el gasto como indiquen las bases."
    ],
    "_revisar": {
     "presupuesto_total": 700000,
@@ -601,25 +610,26 @@
     "nota": "Revisa importe por vivienda, requisitos, documentos y pasos antes de aprobar.",
     "bases_no_corresponden": true,
     "ia": {
-     "fecha": "2026-11-17",
+     "fecha": "2026-11-20",
      "documento": "PDF de 33 páginas (no eran las bases de esta ayuda: buscada en internet)",
      "recomendacion": "publicar",
-     "motivo": "Son ayudas del Ayuntamiento de Elche para rehabilitar edificios de viviendas, es decir, para comunidades de propietarios."
+     "motivo": "Paga obras de conservación, seguridad de utilización, accesibilidad y ornato en edificios de viviendas de Elche, para comunidades de propietarios."
     },
     "confirmar": [
-     "No se han podido leer las bases ni la convocatoria oficial. Solo se ha encontrado una noticia de prensa, que no se usa. Hay que comprobar importe por edificio o vivienda, requisitos, documentos y obras subvencionables.",
-     "Hay que confirmar la fecha de publicación del extracto en el BOP de Alicante, porque de ella dependen la apertura y el cierre del plazo.",
-     "Las bases reguladoras son la Base 28 de Ejecución del Presupuesto Municipal (BOP de Alicante, 27/01/2026). No se ha podido abrir ese documento."
+     "No he podido leer el texto completo de la convocatoria ni de las bases: faltan documentos, requisitos detallados y cómo se justifica la obra.",
+     "Comprueba si hay un máximo de ayuda por edificio o vivienda, y el plazo de ejecución de las obras.",
+     "Confirma que la fecha de apertura es el 19/11/2026 según el extracto publicado en el BOP del 18/11/2026."
     ],
     "datos_no_oficiales": true,
     "espera": {
      "desde": "2026-11-17",
-     "intentos": 1,
-     "proxima": "2026-11-20"
+     "intentos": 2,
+     "proxima": "2026-11-25"
     }
    },
    "prov": "Alicante",
-   "muni": "Elche/Elx"
+   "muni": "Elche/Elx",
+   "sede": "https://sede.elche.es"
   },
   {
    "id": "bdns-942425",
@@ -639,21 +649,25 @@
    "imp": "Consulta la convocatoria",
    "abre": "2026-11-16",
    "cierra": "2026-12-03",
-   "plazo": "Empieza el día siguiente a la publicación de la convocatoria en el BOP y termina el 3 de diciembre de 2026. No he visto la publicación en el BOP con su fecha.",
+   "plazo": "Según la BDNS, el plazo empieza el día siguiente a la publicación de la convocatoria en el BOP de Valencia y termina el 3 de diciembre de 2026. No he visto la publicación en el BOP, así que no se sabe con certeza el día de apertura.",
    "irpf": false,
    "fuente": "BDNS nº 942425",
    "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/942425",
-   "resumen": "El Ayuntamiento de Xirivella convoca ayudas para instalar ascensores y suprimir barreras arquitectónicas y mejorar la accesibilidad. Pueden pedirlas personas y comunidades que no tengan actividad económica. El presupuesto total es de 30.000 €. No he podido leer las bases, así que faltan los detalles.",
+   "resumen": "El Ayuntamiento de Xirivella convoca ayudas para instalar ascensores y quitar barreras arquitectónicas y así mejorar la accesibilidad. Pueden pedirlas personas físicas y jurídicas que no tengan actividad económica. El presupuesto total es de 30.000 €. No he podido leer las bases de 2026, así que faltan el importe por vivienda y los requisitos.",
    "req": [
-    "Ser persona física o jurídica sin actividad económica (comunidades de propietarios incluidas, según la BDNS).",
-    "Las bases concretas no se han podido leer: comprueba los requisitos en el texto oficial."
+    "Ser persona física o jurídica sin actividad económica.",
+    "La obra debe ser un ascensor o la supresión de barreras arquitectónicas en Xirivella.",
+    "Comprueba en las bases el resto de requisitos (no he podido leerlas)."
    ],
    "docs": [
-    "Consulta la documentación en la convocatoria oficial"
+    "Solicitud por la sede electrónica del Ayuntamiento.",
+    "Comprueba en las bases la lista completa de documentos."
    ],
    "pasos": [
-    "Mira las bases en la web del Ayuntamiento (www.xirivella.es).",
-    "Presenta la solicitud por la sede electrónica del Ayuntamiento antes del 3 de diciembre de 2026."
+    "Lee las bases en www.xirivella.es.",
+    "Prepara la documentación que piden las bases.",
+    "Presenta la solicitud en la sede electrónica antes del 3 de diciembre de 2026.",
+    "Justifica la obra y los gastos cuando te lo pidan."
    ],
    "_revisar": {
     "presupuesto_total": 30000,
@@ -662,24 +676,344 @@
     "beneficiarios": "PERSONAS FÍSICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA PERSONAS JURÍDICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
     "nota": "Revisa importe por vivienda, requisitos, documentos y pasos antes de aprobar.",
     "ia": {
-     "fecha": "2026-11-17",
-     "documento": "sin enlace a las bases",
+     "fecha": "2026-11-20",
+     "documento": "sin enlace a las bases (extracto; bases en Convocatoria publicada por el Ayuntamiento de Xirivella (Resolución nº 3711 de 16/11/2026). Falta confirmar el anuncio en el BOP de Valencia y las bases en www.xirivella.es.)",
      "recomendacion": "publicar",
-     "motivo": "Subvenciona instalar ascensores y quitar barreras arquitectónicas en viviendas y edificios de viviendas de Xirivella."
+     "motivo": "Subvenciona la instalación de ascensores y la eliminación de barreras arquitectónicas en viviendas y edificios, que son obras de accesibilidad."
     },
     "confirmar": [
-     "No se han podido leer las bases ni el edicto: faltan importe por vivienda, porcentaje, requisitos y documentos.",
-     "Comprobar la fecha de publicación en el BOP, que marca el inicio del plazo.",
-     "Comprobar la antigüedad del edificio, qué gastos se subvencionan y el periodo de las obras."
+     "Comprueba el importe máximo por vivienda o el porcentaje subvencionado, porque no aparece en la ficha.",
+     "Confirma la fecha de publicación en el BOP de Valencia y, con ella, el día de apertura del plazo.",
+     "Verifica los requisitos, los documentos y los gastos que se admiten (la convocatoria de 2025 cubría gastos desde el 1 de enero de 2024, pero hay que ver la de 2026).",
+     "Mira si los edificios o las comunidades de propietarios pueden pedirla y cómo."
     ],
     "espera": {
      "desde": "2026-11-17",
-     "intentos": 1,
-     "proxima": "2026-11-20"
-    }
+     "intentos": 2,
+     "proxima": "2026-11-25"
+    },
+    "referencia_bases": "Convocatoria publicada por el Ayuntamiento de Xirivella (Resolución nº 3711 de 16/11/2026). Falta confirmar el anuncio en el BOP de Valencia y las bases en www.xirivella.es."
    },
    "prov": "Valencia",
-   "muni": "Xirivella"
+   "muni": "Xirivella",
+   "sede": "https://sede.xirivella.es"
+  },
+  {
+   "id": "bdns-943447",
+   "estado": "espera",
+   "title": "Cambio de bañera por plato de ducha en Peligros",
+   "org": "PELIGROS · AYUNTAMIENTO DE PELIGROS",
+   "scope": "municipal",
+   "ccaa": "Andalucía",
+   "tipo": [
+    "accesibilidad",
+    "rehabilitacion"
+   ],
+   "dest": [
+    "vivienda"
+   ],
+   "importe": 0,
+   "imp": "No consta la cuantía por vivienda; el presupuesto total de la convocatoria es de 12.000 €",
+   "abre": "2026-11-19",
+   "cierra": null,
+   "plazo": "Empieza el día siguiente a publicar el extracto en el BOP y dura 10 días hábiles. No he visto esa publicación, así que no se sabe la fecha exacta.",
+   "irpf": false,
+   "fuente": "BDNS nº 943447",
+   "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/943447",
+   "resumen": "El Ayuntamiento de Peligros da ayudas para cambiar la bañera por un plato de ducha en tu vivienda. Es para personas mayores y personas con discapacidad. El presupuesto total es de 12.000 €. No he podido leer las bases, así que faltan los detalles.",
+   "req": [
+    "Tener vivienda en el municipio de Peligros.",
+    "Ser persona mayor o persona con discapacidad.",
+    "Ser persona física sin actividad económica.",
+    "Los demás requisitos (edad, grado de discapacidad, ingresos, residencia habitual) no constan."
+   ],
+   "docs": [
+    "Consulta la documentación en la convocatoria oficial"
+   ],
+   "pasos": [
+    "Espera a que se publique el extracto en el BOP de Sevilla.",
+    "Mira las bases en la sede electrónica del Ayuntamiento de Peligros.",
+    "Presenta la solicitud por la sede electrónica dentro de los 10 días hábiles.",
+    "Justifica la obra con la documentación que pidan las bases."
+   ],
+   "_revisar": {
+    "presupuesto_total": 12000,
+    "bases_reguladoras": "https://peligros.sedelectronica.es/info.0",
+    "abierta_segun_bdns": false,
+    "beneficiarios": "PERSONAS FÍSICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
+    "nota": "Revisa importe por vivienda, requisitos, documentos y pasos antes de aprobar.",
+    "bases_no_corresponden": true,
+    "referencia_bases": "Bases publicadas en la sede electrónica del Ayuntamiento de Peligros (documento «Bases platos ducha 19.11.2026»); extracto pendiente de publicar en el BOP.",
+    "ia": {
+     "fecha": "2026-11-20",
+     "documento": "el enlace de bases de la BDNS es genérico (ley, ordenanza general o portada) (extracto; bases en Bases publicadas en la sede electrónica del Ayuntamiento de Peligros (documento «Bases platos ducha 19.11.2026»); extracto pendiente de publicar en el BOP.)",
+     "recomendacion": "publicar",
+     "motivo": "Paga la obra de cambiar la bañera por un plato de ducha en viviendas de Peligros, una mejora de accesibilidad para personas mayores y con discapacidad."
+    },
+    "confirmar": [
+     "No he podido leer las bases: faltan importe por vivienda, porcentaje, requisitos y documentos.",
+     "Comprobar la fecha de publicación del extracto en el BOP, porque de ella depende el inicio del plazo.",
+     "Comprobar la edad mínima y el grado de discapacidad exigidos."
+    ],
+    "espera": {
+     "desde": "2026-11-20",
+     "intentos": 1,
+     "proxima": "2026-11-23"
+    }
+   },
+   "muni": "Peligros",
+   "edad": {
+    "min": 65
+   },
+   "sede": "https://peligros.sedelectronica.es/info.0"
+  },
+  {
+   "id": "bdns-943193",
+   "estado": "descartada",
+   "title": "Resolución de 18/11/2026 por la que se convocan para 2026, ayudas al arrendamiento de viviendas dirigidas a mujeres víctimas de violencia de género en CLM",
+   "org": "CASTILLA-LA MANCHA · DIRECCIÓN GENERAL DE VIVIENDA",
+   "scope": "autonomica",
+   "ccaa": "Castilla-La Mancha",
+   "tipo": [
+    "rehabilitacion"
+   ],
+   "dest": [
+    "vivienda"
+   ],
+   "importe": 0,
+   "imp": "Consulta la convocatoria",
+   "abre": "2026-11-19",
+   "cierra": "2026-12-15",
+   "plazo": "Consulta el plazo en la convocatoria",
+   "irpf": false,
+   "fuente": "BDNS nº 943193",
+   "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/943193",
+   "resumen": "Resolución de 18/11/2026 por la que se convocan para 2026, ayudas al arrendamiento de viviendas dirigidas a mujeres víctimas de violencia de género en CLM",
+   "req": [
+    "Consulta los requisitos en la convocatoria oficial"
+   ],
+   "docs": [
+    "Consulta la documentación en la convocatoria oficial"
+   ],
+   "pasos": [
+    "Lee la convocatoria oficial",
+    "Prepara la documentación",
+    "Presenta la solicitud en la sede del organismo"
+   ],
+   "_revisar": {
+    "presupuesto_total": 1150000,
+    "bases_reguladoras": "https//www.jccm.es",
+    "abierta_segun_bdns": false,
+    "beneficiarios": "PERSONAS FÍSICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
+    "nota": "Revisa importe por vivienda, requisitos, documentos y pasos antes de aprobar.",
+    "ia": {
+     "fecha": "2026-11-20",
+     "documento": "no se pudo descargar (unknown url type: 'https//www.jccm.es') (descartada con la pregunta rápida)",
+     "recomendacion": "descartar",
+     "motivo": "Es una ayuda al pago del alquiler de vivienda para mujeres víctimas de violencia de género, no financia obras ni construcción."
+    },
+    "confirmar": []
+   }
+  },
+  {
+   "id": "bdns-943459",
+   "estado": "descartada",
+   "title": "Aprobación bases reguladoras y convocatoria concursos navideños 2026 (Belenes, fachadas y balcones)",
+   "org": "ALCALÁ LA REAL · AYUNTAMIENTO DE ALCALÁ LA REAL",
+   "scope": "municipal",
+   "ccaa": "Andalucía",
+   "tipo": [
+    "eficiencia"
+   ],
+   "dest": [
+    "vivienda"
+   ],
+   "importe": 0,
+   "imp": "Consulta la convocatoria",
+   "abre": "2026-11-19",
+   "cierra": "2026-11-30",
+   "plazo": "Consulta el plazo en la convocatoria",
+   "irpf": false,
+   "fuente": "BDNS nº 943459",
+   "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/943459",
+   "resumen": "Aprobación bases reguladoras y convocatoria concursos navideños 2026 (Belenes, fachadas y balcones)",
+   "req": [
+    "Consulta los requisitos en la convocatoria oficial"
+   ],
+   "docs": [
+    "Consulta la documentación en la convocatoria oficial"
+   ],
+   "pasos": [
+    "Lee la convocatoria oficial",
+    "Prepara la documentación",
+    "Presenta la solicitud en la sede del organismo"
+   ],
+   "_revisar": {
+    "presupuesto_total": 5900,
+    "bases_reguladoras": "https://alcalalareal.sedelectronica.es/doc/5THNAWDEN5JCKJDKW3DFLEP6K/.2",
+    "abierta_segun_bdns": false,
+    "beneficiarios": "PERSONAS FÍSICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA PERSONAS JURÍDICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
+    "nota": "Revisa importe por vivienda, requisitos, documentos y pasos antes de aprobar.",
+    "ia": {
+     "fecha": "2026-11-20",
+     "documento": "no se pudo descargar (HTTP Error 302: The HTTP server returned a redirect error that would lead to an infinite loop.\nThe last 30x error message was:\nFound) (descartada con la pregunta rápida)",
+     "recomendacion": "descartar",
+     "motivo": "Se trata de premios de concursos navideños de belenes y decoración de fachadas y balcones, con finalidad cultural, que no financian obras de reforma, rehabilitación ni construcción en viviendas."
+    },
+    "confirmar": []
+   },
+   "prov": "Jaén",
+   "muni": "Alcalá La Real"
+  },
+  {
+   "id": "bdns-943335",
+   "estado": "descartada",
+   "title": "BASES Y CONVOCATORIA DEL CONCURSO DE FACHADAS Y JARDINES DE NAVIDAD 2026",
+   "org": "LARACHA, A · AYUNTAMIENTO DE A LARACHA",
+   "scope": "municipal",
+   "ccaa": "Galicia",
+   "tipo": [
+    "eficiencia"
+   ],
+   "dest": [
+    "vivienda"
+   ],
+   "importe": 0,
+   "imp": "Consulta la convocatoria",
+   "abre": "2026-11-19",
+   "cierra": "2026-12-20",
+   "plazo": "Consulta el plazo en la convocatoria",
+   "irpf": false,
+   "fuente": "BDNS nº 943335",
+   "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/943335",
+   "resumen": "BASES Y CONVOCATORIA DEL CONCURSO DE FACHADAS Y JARDINES DE NAVIDAD 2026",
+   "req": [
+    "Consulta los requisitos en la convocatoria oficial"
+   ],
+   "docs": [
+    "Consulta la documentación en la convocatoria oficial"
+   ],
+   "pasos": [
+    "Lee la convocatoria oficial",
+    "Prepara la documentación",
+    "Presenta la solicitud en la sede del organismo"
+   ],
+   "_revisar": {
+    "presupuesto_total": 0,
+    "bases_reguladoras": "https://sede.alaracha.gal/sxc/es/index.html",
+    "abierta_segun_bdns": false,
+    "beneficiarios": "PERSONAS FÍSICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA PERSONAS JURÍDICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
+    "nota": "Revisa importe por vivienda, requisitos, documentos y pasos antes de aprobar.",
+    "ia": {
+     "fecha": "2026-11-20",
+     "documento": "página web (descartada con la pregunta rápida)",
+     "recomendacion": "descartar",
+     "motivo": "Es un concurso de decoración navideña de fachadas y jardines (finalidad cultural) que premia la decoración, no financia obras de reforma, rehabilitación ni construcción en viviendas."
+    },
+    "confirmar": []
+   },
+   "prov": "A Coruña",
+   "muni": "A Laracha"
+  },
+  {
+   "id": "bdns-943165",
+   "estado": "descartada",
+   "title": "Convocatoria del VII Concurso de Decoración de Fachadas Navideñas",
+   "org": "SEGORBE · AYUNTAMIENTO DE SEGORBE",
+   "scope": "municipal",
+   "ccaa": "Comunitat Valenciana",
+   "tipo": [
+    "eficiencia"
+   ],
+   "dest": [
+    "vivienda"
+   ],
+   "importe": 0,
+   "imp": "Consulta la convocatoria",
+   "abre": "2026-11-20",
+   "cierra": "2026-12-04",
+   "plazo": "Consulta el plazo en la convocatoria",
+   "irpf": false,
+   "fuente": "BDNS nº 943165",
+   "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/943165",
+   "resumen": "Convocatoria del VII Concurso de Decoración de Fachadas Navideñas",
+   "req": [
+    "Consulta los requisitos en la convocatoria oficial"
+   ],
+   "docs": [
+    "Consulta la documentación en la convocatoria oficial"
+   ],
+   "pasos": [
+    "Lee la convocatoria oficial",
+    "Prepara la documentación",
+    "Presenta la solicitud en la sede del organismo"
+   ],
+   "_revisar": {
+    "presupuesto_total": 300,
+    "bases_reguladoras": "https://bop.dipcas.es/PortalBOP/boletin.do?fechaPublicacion=21/01/2016",
+    "abierta_segun_bdns": false,
+    "beneficiarios": "PERSONAS FÍSICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
+    "nota": "Revisa importe por vivienda, requisitos, documentos y pasos antes de aprobar.",
+    "ia": {
+     "fecha": "2026-11-20",
+     "documento": "página web (descartada con la pregunta rápida)",
+     "recomendacion": "descartar",
+     "motivo": "Es un concurso de decoración navideña de fachadas con premios (finalidad cultural), no una ayuda para pagar obras de reforma, rehabilitación o mejora de la vivienda."
+    },
+    "confirmar": []
+   },
+   "prov": "Castellón",
+   "muni": "Segorbe"
+  },
+  {
+   "id": "bdns-943152",
+   "estado": "descartada",
+   "title": "ACUERDO DE JUNTA DE GOBIERNO LOCAL DE 18 DE NOVIEMBRE DE 2026 DEL AYUNTAMIENTO DE ALMENDRALEJO, POR EL QUE SE APRUEBAN LAS BASES DE CONVOCATORIA DEL CONCURSO DE",
+   "org": "ALMENDRALEJO · AYUNTAMIENTO DE ALMENDRALEJO",
+   "scope": "municipal",
+   "ccaa": "Extremadura",
+   "tipo": [
+    "eficiencia"
+   ],
+   "dest": [
+    "vivienda"
+   ],
+   "importe": 0,
+   "imp": "Consulta la convocatoria",
+   "abre": "2026-11-19",
+   "cierra": null,
+   "plazo": "Consulta el plazo en la convocatoria",
+   "irpf": false,
+   "fuente": "BDNS nº 943152",
+   "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/943152",
+   "resumen": "ACUERDO DE JUNTA DE GOBIERNO LOCAL DE 18 DE NOVIEMBRE DE 2026 DEL AYUNTAMIENTO DE ALMENDRALEJO, POR EL QUE SE APRUEBAN LAS BASES DE CONVOCATORIA DEL CONCURSO DE DECORACIÓN DE CALLES, FACHADAS Y BALCONES – NAVIDAD 2026",
+   "req": [
+    "Consulta los requisitos en la convocatoria oficial"
+   ],
+   "docs": [
+    "Consulta la documentación en la convocatoria oficial"
+   ],
+   "pasos": [
+    "Lee la convocatoria oficial",
+    "Prepara la documentación",
+    "Presenta la solicitud en la sede del organismo"
+   ],
+   "_revisar": {
+    "presupuesto_total": 800,
+    "bases_reguladoras": "https://almendralejo.sedelectronica.es/transparency/da841f6e-cd11-475f-b242-68d709c284d3/",
+    "abierta_segun_bdns": false,
+    "beneficiarios": "PERSONAS FÍSICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA PERSONAS JURÍDICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
+    "nota": "Revisa importe por vivienda, requisitos, documentos y pasos antes de aprobar.",
+    "ia": {
+     "fecha": "2026-11-20",
+     "documento": "página web (descartada con la pregunta rápida)",
+     "recomendacion": "descartar",
+     "motivo": "Es un concurso de decoración navideña de calles, fachadas y balcones con premios (800 € en total), que no financia obras de reforma, rehabilitación ni construcción de viviendas."
+    },
+    "confirmar": []
+   },
+   "prov": "Badajoz",
+   "muni": "Almendralejo"
   }
  ],
  "boe": []
