@@ -23,7 +23,10 @@
   "mun-icio",
   "pev-rehab"
  ],
- "revision_avisadas": [],
+ "revision_avisadas": [
+  "bdns-943561",
+  "bdns-943697"
+ ],
  "auto_avisadas": [
   "bdns-940941",
   "bdns-941790",
