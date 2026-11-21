@@ -1,83 +1,29 @@
 {
- "fecha": "2026-11-20T06:19",
+ "fecha": "2026-11-21T06:07",
  "modelo": "claude-sonnet-5-5",
  "procesadas": [
   {
-   "id": "bdns-943447",
-   "documento": "el enlace de bases de la BDNS es genérico (ley, ordenanza general o portada) (extracto; bases en Bases publicadas en la sede electrónica del Ayuntamiento de Peligros (documento «Bases platos ducha 19.11.2026»); extracto pendiente de publicar en el BOP.)",
-   "coste_usd": 0.2345,
-   "recomendacion": "publicar"
-  },
-  {
-   "id": "bdns-943193",
-   "documento": "no se pudo descargar (unknown url type: 'https//www.jccm.es') (descartada con la pregunta rápida)",
-   "coste_usd": 0.0055,
-   "recomendacion": "descartar"
-  },
-  {
-   "id": "bdns-943459",
-   "documento": "no se pudo descargar (HTTP Error 302: The HTTP server returned a redirect error that would lead to an infinite loop.\nThe last 30x error message was:\nFound) (descartada con la pregunta rápida)",
-   "coste_usd": 0.0063,
-   "recomendacion": "descartar"
-  },
-  {
-   "id": "bdns-943335",
-   "documento": "página web (descartada con la pregunta rápida)",
-   "coste_usd": 0.0068,
-   "recomendacion": "descartar"
-  },
-  {
-   "id": "bdns-943165",
-   "documento": "página web (descartada con la pregunta rápida)",
-   "coste_usd": 0.0055,
-   "recomendacion": "descartar"
-  },
-  {
-   "id": "bdns-943152",
-   "documento": "página web (descartada con la pregunta rápida)",
-   "coste_usd": 0.0064,
-   "recomendacion": "descartar"
-  },
-  {
-   "id": "bdns-939709",
-   "documento": "el enlace de bases de la BDNS es genérico (ley, ordenanza general o portada) (extracto; bases en Bases reguladoras de las subvenciones para rehabilitación de viviendas privadas en San Bartolomé 2024-25, publicadas en el BOP de Las Palmas (número y fecha sin confirmar).)",
-   "coste_usd": 0.3355,
-   "recomendacion": "publicar"
-  },
-  {
-   "id": "bdns-939915",
-   "documento": "página web (no eran las bases de esta ayuda: buscada en internet)",
-   "coste_usd": 0.3783,
-   "recomendacion": "publicar"
-  },
-  {
-   "id": "bdns-941340",
-   "documento": "el enlace de bases de la BDNS es genérico (ley, ordenanza general o portada) (extracto; bases en Bases y convocatoria 2026 (Expte. 120/2026, Decreto 2026-0873) en la sede electrónica https://agullent.sedelectronica.es y en la BDNS (código 941340). Falta el anuncio en el BOP de Valencia.)",
-   "coste_usd": 0.4968,
-   "recomendacion": "publicar"
-  },
-  {
    "id": "bdns-942439",
-   "documento": "sin enlace a las bases (extracto; bases en Decreto 2026-4092 del Ayuntamiento de Tacoronte (aprobación de bases e inicio de la convocatoria), adjunto en la BDNS 942439; bases también en www.tacoronte.es)",
-   "coste_usd": 0.3036,
-   "recomendacion": "publicada sola (sin bases)"
+   "documento": "sin enlace a las bases (extracto; bases en Decreto 2026-4092 de aprobación de bases e inicio de convocatoria (adjunto en la BDNS); texto en www.tacoronte.es)",
+   "coste_usd": 0.3274,
+   "recomendacion": "corregida"
   },
   {
-   "id": "bdns-942250",
-   "documento": "PDF de 33 páginas (no eran las bases de esta ayuda: buscada en internet)",
-   "coste_usd": 0.2611,
-   "recomendacion": "publicar"
+   "id": "bdns-941790",
+   "documento": "página web (no eran las bases de esta ayuda: buscada en internet)",
+   "coste_usd": 0.3451,
+   "recomendacion": "corregida"
   },
   {
-   "id": "bdns-942425",
-   "documento": "sin enlace a las bases (extracto; bases en Convocatoria publicada por el Ayuntamiento de Xirivella (Resolución nº 3711 de 16/11/2026). Falta confirmar el anuncio en el BOP de Valencia y las bases en www.xirivella.es.)",
-   "coste_usd": 0.4211,
-   "recomendacion": "publicar"
+   "id": "bdns-943767",
+   "documento": "sin enlace a las bases (descartada con la pregunta rápida)",
+   "coste_usd": 0.0058,
+   "recomendacion": "descartar"
   }
  ],
  "errores": [],
- "coste_usd": 2.461,
- "pendientes_por_tope": 0,
- "gasto_mes_usd": 13.725,
+ "coste_usd": 0.678,
+ "pendientes_por_tope": 2,
+ "gasto_mes_usd": 14.403,
  "limite_mes_usd": 15.0
 }

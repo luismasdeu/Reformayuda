@@ -1,6 +1,6 @@
 {
  "_leeme": "Ayudas detectadas automáticamente en los boletines. Revísalas: pon \"estado\": \"aprobada\" o \"descartada\". Mira README.md.",
- "ultima_busqueda": "2026-11-20T06:19",
+ "ultima_busqueda": "2026-11-21T06:07",
  "candidatas": [
   {
    "id": "bdns-938584",
@@ -707,7 +707,151 @@
     "min": 65
    },
    "sede": "https://peligros.sedelectronica.es/info.0"
+  },
+  {
+   "id": "bdns-943767",
+   "estado": "descartada",
+   "title": "DECRETO DE ALCALDÍA 2026-1759 APRUEBA BASES Y CONVOCATORIA V CONCURSO DECORACION FACHADAS EN VIVIENDAS PARTICULARES NAVIDAD 2026 Y REYES MAGOS 2027",
+   "org": "ARCHIDONA · AYUNTAMIENTO DE ARCHIDONA",
+   "scope": "municipal",
+   "ccaa": "Andalucía",
+   "tipo": [
+    "eficiencia"
+   ],
+   "dest": [
+    "vivienda"
+   ],
+   "importe": 0,
+   "imp": "Consulta la convocatoria",
+   "abre": "2026-11-30",
+   "cierra": "2026-12-14",
+   "plazo": "Consulta el plazo en la convocatoria",
+   "irpf": false,
+   "fuente": "BDNS nº 943767",
+   "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/943767",
+   "resumen": "DECRETO DE ALCALDÍA 2026-1759 APRUEBA BASES Y CONVOCATORIA V CONCURSO DECORACION FACHADAS EN VIVIENDAS PARTICULARES NAVIDAD 2026 Y REYES MAGOS 2027",
+   "req": [
+    "Consulta los requisitos en la convocatoria oficial"
+   ],
+   "docs": [
+    "Consulta la documentación en la convocatoria oficial"
+   ],
+   "pasos": [
+    "Lee la convocatoria oficial",
+    "Prepara la documentación",
+    "Presenta la solicitud en la sede del organismo"
+   ],
+   "_revisar": {
+    "presupuesto_total": 570,
+    "bases_reguladoras": "www.sedeelectrónica.archidona.es",
+    "abierta_segun_bdns": false,
+    "beneficiarios": "PERSONAS FÍSICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
+    "nota": "Revisa importe por vivienda, requisitos, documentos y pasos antes de aprobar.",
+    "ia": {
+     "fecha": "2026-11-21",
+     "documento": "sin enlace a las bases (descartada con la pregunta rápida)",
+     "recomendacion": "descartar",
+     "motivo": "Es un concurso de decoración navideña de fachadas con premios (570 € de presupuesto), de finalidad cultural, que no financia obras de reforma, rehabilitación ni mejora de la vivienda."
+    },
+    "confirmar": []
+   },
+   "prov": "Málaga",
+   "muni": "Archidona"
+  },
+  {
+   "id": "bdns-943697",
+   "estado": "pendiente",
+   "title": "CONVOCATORIA DE SUBVENCIÓN PARA GASTOS DEL HOGAR A  NUEVOS PROPIETARIOS DE VIVIENDAS DEL CENTRO HISTORICO QUE TENGAN ENTRE 18 Y 40 AÑOS.",
+   "org": "VALLS · AYUNTAMIENTO DE VALLS",
+   "scope": "municipal",
+   "ccaa": "Cataluña",
+   "tipo": [
+    "rehabilitacion"
+   ],
+   "dest": [
+    "vivienda"
+   ],
+   "importe": 0,
+   "imp": "Consulta la convocatoria",
+   "abre": "2026-11-27",
+   "cierra": "2027-03-01",
+   "plazo": "Consulta el plazo en la convocatoria",
+   "irpf": false,
+   "fuente": "BDNS nº 943697",
+   "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/943697",
+   "resumen": "CONVOCATORIA DE SUBVENCIÓN PARA GASTOS DEL HOGAR A  NUEVOS PROPIETARIOS DE VIVIENDAS DEL CENTRO HISTORICO QUE TENGAN ENTRE 18 Y 40 AÑOS.",
+   "req": [
+    "Consulta los requisitos en la convocatoria oficial"
+   ],
+   "docs": [
+    "Consulta la documentación en la convocatoria oficial"
+   ],
+   "pasos": [
+    "Lee la convocatoria oficial",
+    "Prepara la documentación",
+    "Presenta la solicitud en la sede del organismo"
+   ],
+   "_revisar": {
+    "presupuesto_total": 7619.21,
+    "bases_reguladoras": "https://www.dipta.cat/bopt/web/anunci/229447/modificacio-de-les-bases-per-a-l-atorgament-de-subvencions-per-les-despeses-de-la-llar-de-noves-persones-propietaries-d-habitatges-en-el-centre-historic-a-partir-de-l-any-2023-i-que-tinguin-entre-18-i-40-a",
+    "abierta_segun_bdns": false,
+    "beneficiarios": "PERSONAS FÍSICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
+    "nota": "Revisa importe por vivienda, requisitos, documentos y pasos antes de aprobar."
+   },
+   "prov": "Tarragona",
+   "muni": "Valls"
+  },
+  {
+   "id": "bdns-943561",
+   "estado": "pendiente",
+   "title": "CONVOCATORIA DEL VII CONCURSO DE DECORACIÓN NAVIDEÑA EN BALCONES, VENTANAS Y FACHADAS EN VIVIENDAS DE TRES CANTOS 2026",
+   "org": "TRES CANTOS · AYUNTAMIENTO DE TRES CANTOS",
+   "scope": "municipal",
+   "ccaa": "Comunidad de Madrid",
+   "tipo": [
+    "ventanas",
+    "eficiencia"
+   ],
+   "dest": [
+    "vivienda"
+   ],
+   "importe": 0,
+   "imp": "Consulta la convocatoria",
+   "abre": "2026-11-24",
+   "cierra": "2026-12-13",
+   "plazo": "Consulta el plazo en la convocatoria",
+   "irpf": false,
+   "fuente": "BDNS nº 943561",
+   "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/943561",
+   "resumen": "CONVOCATORIA DEL VII CONCURSO DE DECORACIÓN NAVIDEÑA EN BALCONES, VENTANAS Y FACHADAS EN VIVIENDAS DE TRES CANTOS 2026",
+   "req": [
+    "Consulta los requisitos en la convocatoria oficial"
+   ],
+   "docs": [
+    "Consulta la documentación en la convocatoria oficial"
+   ],
+   "pasos": [
+    "Lee la convocatoria oficial",
+    "Prepara la documentación",
+    "Presenta la solicitud en la sede del organismo"
+   ],
+   "_revisar": {
+    "presupuesto_total": 1600,
+    "bases_reguladoras": "https://web.trescantos.es/contenido/fondo-documental/general_subvenciones.pdf",
+    "abierta_segun_bdns": false,
+    "beneficiarios": "PERSONAS FÍSICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA PERSONAS JURÍDICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
+    "nota": "Revisa importe por vivienda, requisitos, documentos y pasos antes de aprobar."
+   },
+   "muni": "Tres Cantos"
   }
  ],
- "boe": []
+ "boe": [
+  {
+   "id": "BOE-A-2026-24293",
+   "fecha": "2026-11-20",
+   "titulo": "Resolución de 18 de noviembre de 2026, del Congreso de los Diputados, por la que se ordena la publicación del Acuerdo de convalidación del Real Decreto-ley 32/2026, de 3 de noviembre, de ayudas a las víctimas del accidente ferroviario de Urda (Toledo) y por el que se garantiza la accesibilidad equitativa a bienes y servicios en situaciones de emergencia.",
+   "url": "https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-24293",
+   "pdf": "https://www.boe.es/boe/dias/2026/11/20/pdfs/BOE-A-2026-24293.pdf"
+  }
+ ]
 }

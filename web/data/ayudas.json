@@ -861,12 +861,12 @@
    "muni": "Villa Del Prado",
    "sede": "https://sede.villadelprado.es/eAdmin/Sede",
    "pendiente_bases": {
-    "intentos": 2,
-    "proxima": "2026-11-21"
+    "intentos": 3,
+    "proxima": "2026-12-01"
    },
    "revisada": "2026-11-13",
    "auto": "2026-11-13",
-   "ia": "2026-11-14"
+   "ia": "2026-11-21"
   },
   {
    "id": "bdns-940275",
@@ -936,7 +936,7 @@
    "imp": "Importe pendiente de publicar en las bases",
    "abre": "2026-11-20",
    "cierra": "2026-12-14",
-   "plazo": "Del 20 de noviembre al 14 de diciembre de 2026, según la BDNS.",
+   "plazo": "Del 20 de noviembre al 14 de diciembre de 2026, según la BDNS. No he podido comprobarlo en las bases.",
    "irpf": false,
    "fuente": "BDNS nº 942439",
    "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/942439",
@@ -955,11 +955,12 @@
    "prov": "Santa Cruz de Tenerife",
    "muni": "Tacoronte",
    "pendiente_bases": {
-    "intentos": 1,
-    "proxima": "2026-11-24"
+    "intentos": 2,
+    "proxima": "2026-11-28"
    },
    "revisada": "2026-11-20",
-   "auto": "2026-11-20"
+   "auto": "2026-11-20",
+   "ia": "2026-11-21"
   }
  ]
 }
