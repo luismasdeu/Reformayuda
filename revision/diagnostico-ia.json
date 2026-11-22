@@ -1,29 +1,10 @@
 {
- "fecha": "2026-11-21T06:07",
+ "fecha": "2026-11-22T06:09",
  "modelo": "claude-sonnet-5-5",
- "procesadas": [
-  {
-   "id": "bdns-942439",
-   "documento": "sin enlace a las bases (extracto; bases en Decreto 2026-4092 de aprobación de bases e inicio de convocatoria (adjunto en la BDNS); texto en www.tacoronte.es)",
-   "coste_usd": 0.3274,
-   "recomendacion": "corregida"
-  },
-  {
-   "id": "bdns-941790",
-   "documento": "página web (no eran las bases de esta ayuda: buscada en internet)",
-   "coste_usd": 0.3451,
-   "recomendacion": "corregida"
-  },
-  {
-   "id": "bdns-943767",
-   "documento": "sin enlace a las bases (descartada con la pregunta rápida)",
-   "coste_usd": 0.0058,
-   "recomendacion": "descartar"
-  }
- ],
+ "procesadas": [],
  "errores": [],
- "coste_usd": 0.678,
- "pendientes_por_tope": 2,
+ "coste_usd": 0.0,
+ "pendientes_por_tope": 3,
  "gasto_mes_usd": 14.403,
  "limite_mes_usd": 15.0
 }
