@@ -1,6 +1,6 @@
 {
  "_leeme": "Contadores anónimos por día (solo de quien acepta la medición anónima).",
- "actualizado": "2026-11-21T06:09",
+ "actualizado": "2026-11-22T06:09",
  "dias": {
   "2026-11-07": {
    "visitas": 2,
@@ -27,8 +27,8 @@
    "fichas": 2,
    "visitas": 1,
    "chat": 1,
-   "app": 1,
-   "nuevos": 1
+   "nuevos": 1,
+   "app": 1
   }
  }
 }
