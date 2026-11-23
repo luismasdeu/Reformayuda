@@ -53,7 +53,7 @@ Extrae los datos para una ficha que leerán particulares sin conocimientos legal
 - «req», «docs», «pasos»: listas de 3 a 7 frases cortas. En «pasos», el último suele ser justificar la obra.
 - «tipo»: elige entre """ + ", ".join(TIPOS) + """. «dest»: «vivienda» (particulares), «edificio» (comunidades de propietarios) o ambos.
 - «edad_min», «edad_max», «max_habitantes»: 0 si no hay límite.
-- «url_solicitud»: dirección de la sede electrónica o del trámite, solo si aparece en los documentos.
+- «url_solicitud»: dirección de la página concreta del trámite en la sede electrónica (la ficha del procedimiento donde se inicia la solicitud), no la portada de la sede ni la de la BDNS. Si solo encuentras la portada de la sede, ponla. Solo si aparece en fuentes oficiales.
 - «dudas»: lo que la persona que revisa debe comprobar en las bases (máximo 4 frases).
 - «referencia_bases»: si el documento es solo un extracto que remite a las bases publicadas en otro sitio (p. ej. «texto íntegro en el BOP nº 126 de 16/10/2026»), escribe dónde están (boletín, número y fecha). Si no, vacío.
 - «datos_no_oficiales»: true si algún dato de la ficha (importe, plazo, requisitos…) lo has sacado de prensa, blogs o webs no oficiales, o si solo lo has encontrado ahí.

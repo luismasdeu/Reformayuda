@@ -503,6 +503,27 @@ const TIPOS = {
   accesibilidad:{n:"Accesibilidad",l:"Ascensor y accesibilidad"}, rehabilitacion:{n:"Rehabilitar o reformar",l:"Rehabilitar o reformar la casa, el piso o el edificio"},
   construccion:{n:"Construir",l:"Construir vivienda"}
 };
+/* Dónde y cómo se pide cada ayuda. Las deducciones no se solicitan: van en la declaración de la Renta;
+   las bonificaciones de impuestos municipales se piden en el ayuntamiento. */
+const RENTA_WEB="https://sede.agenciatributaria.gob.es/Sede/Renta.html";
+const sedeGenerica=u=>{try{const x=new URL(u);return /^\/?(info\.0|eAdmin\/Sede|es\/?|sede\/?)?$/i.test(x.pathname.replace(/\/$/,""))||x.pathname==="/"}catch(e){return true}};
+const buscarSede=(...t)=>"https://www.google.com/search?q="+encodeURIComponent(t.filter(Boolean).join(" "));
+function comoPedir(a){
+  if(a.id==="irpf-ee"||a.como==="renta")return{modo:"renta",
+    texto:"Esta ayuda <b>no se solicita</b>: es una deducción que aplicas tú al hacer la <b>declaración de la Renta</b> del año en que pagaste la obra (se presenta de abril a junio del año siguiente). En Renta Web, ve al apartado de deducciones por obras de mejora de la eficiencia energética en vivienda e indica el importe, la referencia catastral y los datos de los certificados energéticos.",
+    botones:[["Abrir Renta Web (Agencia Tributaria)",RENTA_WEB],["Calcular mi deducción","#irpf"]]};
+  if(a.id==="mun-ibi"||a.id==="mun-icio"||a.como==="ayuntamiento"){const m=S.muni||"tu municipio";return{modo:"ayto",
+    texto:a.id==="mun-icio"?`Se pide en el <b>Ayuntamiento de ${esc(m)}</b>, normalmente <b>a la vez que la licencia o la declaración responsable</b> de la obra. Comprueba antes en su ordenanza fiscal si existe y qué porcentaje aplica.`
+      :`Se pide en el <b>Ayuntamiento de ${esc(m)}</b> (o en el organismo que cobra el IBI en tu provincia) <b>después de instalar y legalizar</b> las placas. Comprueba en su ordenanza fiscal si existe, el porcentaje y el plazo.`,
+    botones:[["Buscar el trámite en la sede de mi ayuntamiento",buscarSede("sede electrónica ayuntamiento",S.muni,a.id==="mun-icio"?"bonificación ICIO":"bonificación IBI placas solares")]]}}
+  if(/gestiona tu comunidad/i.test(a.org))return{modo:"sede",
+    texto:`El Estado pone el dinero, pero <b>la convocatoria y la solicitud son de tu comunidad autónoma</b> (${esc(S.ccaa)}). Busca en su sede electrónica la convocatoria de ayudas a la rehabilitación del Plan Estatal de Vivienda, o activa los avisos y te diremos cuándo sale. Te pedirá identificarte con <b>Cl@ve, certificado digital o DNI electrónico</b>.`,
+    botones:[["Buscar la convocatoria de mi comunidad",buscarSede(S.ccaa,"sede electrónica convocatoria ayudas rehabilitación Plan Estatal de Vivienda")],["Leer el plan en el BOE",a.url]]};
+  const generica=!a.sede||sedeGenerica(a.sede);
+  return{modo:"sede",generica,
+    texto:`Se presenta en la <b>sede electrónica</b> de ${esc(a.org.split("·")[0].trim())}. ${generica?`El enlace lleva a la portada de la sede: allí <b>busca el trámite</b> «${esc(a.title)}» o «subvención» del año.`:"El enlace lleva al trámite."} Te pedirá identificarte con <b>Cl@ve, certificado digital o DNI electrónico</b>.${a.scope==="municipal"?" Muchos ayuntamientos también la admiten en papel en su registro.":""}`,
+    botones:[[a.sede?"Ir a la sede para presentarla":"Buscar la sede para presentarla",a.sede||buscarSede(a.org.split("·")[0],"sede electrónica",a.title)],["Leer la convocatoria oficial",a.url]]};
+}
 const PERM={
   dr:{l:"Declaración responsable",c:"ok",d:"Presentas un papel en el ayuntamiento y puedes empezar"},
   dep:{l:"Depende de la obra",c:"warn",d:"Unas partes con declaración, otras con licencia"},
@@ -717,7 +738,7 @@ function openDrawer(id){if(id)contar("fichas");
    <div class="box"><h3>Cómo se pide</h3><ol class="steps">${a.pasos.map(p=>`<li>${esc(p)}</li>`).join("")}</ol></div>
    <div class="frow">
      <button class="btn brand" data-start="${a.id}" ${st.k==="cerrada"?"disabled":""}>${icon("send","ico","width:18px;height:18px")}Empezar solicitud</button>
-     <a class="btn alt" data-oficial href="${a.url}" target="_blank" rel="noopener">${icon("ext","ico","width:18px;height:18px")}Ver fuente oficial</a>
+     <a class="btn alt" data-oficial href="${a.url}" target="_blank" rel="noopener">${icon("ext","ico","width:18px;height:18px")}Ver convocatoria oficial</a>
      <button class="btn alt" data-fav="${a.id}" aria-pressed="${S.favs.has(a.id)}">${icon("heart","ico","width:18px;height:18px")}${S.favs.has(a.id)?"Guardada":"Guardar"}</button>
    </div>
    ${a.revisada?`<p class="muted" style="font-size:.8rem">Revisada por Obrayuda el ${fdate(a.revisada)}. Si ves algún error, escríbenos a <a href="mailto:contacto@obrayuda.es">contacto@obrayuda.es</a>.</p>`:""}`;
@@ -850,7 +871,9 @@ function renderWizard(){
        <button class="btn sm ${v?"alt":""}" data-have="${i}">${v?"Quitar":"Lo tengo"}</button></div>`}).join("")}`;
     body.querySelectorAll("[data-have]").forEach(b=>b.onclick=()=>{const i=b.dataset.have;w.docs[i]=w.docs[i]?false:true;saveW();renderWizard()});
   } else {
-    const sum=`SOLICITUD · ${a.title}
+    const cp=comoPedir(a);
+    const sum=`RESUMEN PARA PREPARAR TU SOLICITUD (no es la solicitud)
+${a.title}
 Organismo: ${a.org}
 Fuente: ${a.fuente}
 Plazo: ${a.cierra?"hasta "+fdate(a.cierra):a.plazo}
@@ -860,15 +883,22 @@ Permiso de obra: ${PERM[permLevel(a)].l}
 
 Requisitos confirmados: ${reqOk}/${a.req.length}
 Documentos:
-${a.docs.map((d,i)=>`  ${w.docs[i]?"[x]":"[ ]"} ${d}${typeof w.docs[i]==="string"?" ("+w.docs[i]+")":""}`).join("\n")}`;
+${a.docs.map((d,i)=>`  ${w.docs[i]?"[x]":"[ ]"} ${d}${typeof w.docs[i]==="string"?" ("+w.docs[i]+")":""}`).join("\n")}
+
+Convocatoria oficial: ${a.url}
+${cp.modo==="renta"?"Cómo se pide: en la declaración de la Renta (Renta Web)":cp.modo==="ayto"?"Dónde se pide: en el ayuntamiento":"Dónde se presenta: "+cp.botones[0][1]}
+
+Este texto es tu lista de comprobación: no sirve como solicitud. La solicitud se rellena y se firma en la sede oficial.`;
     const ready=done[0]&&done[1];
-    body.innerHTML=`<h2>Presenta tu solicitud</h2>
-     <div class="alert ${ready?"ok":"bad"}">${icon(ready?"check":"x","ico","width:18px;height:18px")}<span>${ready?"Todo listo. Copia el resumen y entra en la sede oficial para presentarla tú.":"Aún faltan pasos marcados sin ✓. Puedes presentarla igualmente, pero revisa lo pendiente."}</span></div>
+    body.innerHTML=`<h2>${cp.modo==="renta"?"Cómo se aplica":"Presenta tu solicitud"}</h2>
+     <div class="alert ${ready?"ok":"bad"}">${icon(ready?"check":"x","ico","width:18px;height:18px")}<span>${ready?"Todo listo.":"Aún faltan pasos marcados sin ✓. Revisa lo pendiente."}</span></div>
+     <div class="alert info"><span>${cp.texto}</span></div>
+     <div class="frow">${cp.botones.map(([t,u],i)=>u.startsWith("#")?`<a class="btn alt" href="${u}" data-go="${u.slice(1)}">${esc(t)}</a>`:`<a class="btn ${i?"alt":"brand"}" ${i?"":'id="w-sede"'} data-oficial href="${esc(u)}" target="_blank" rel="noopener">${icon("ext","ico","width:18px;height:18px")}${esc(t)}</a>`).join("")}</div>
+     <p class="muted" style="font-size:.85rem;margin-bottom:0">Tu lista de comprobación (para tenerla a mano mientras rellenas la solicitud; <b>no sirve como solicitud</b>):</p>
      <pre class="sum" id="w-sum">${esc(sum)}</pre>
-     <div class="frow"><button class="btn alt" id="w-copy">${icon("copy","ico","width:18px;height:18px")}Copiar resumen</button>
-       <a class="btn brand" id="w-sede" data-oficial href="${a.sede||a.url}" target="_blank" rel="noopener">${icon("ext","ico","width:18px;height:18px")}Ir a la sede oficial</a></div>
+     <div class="frow"><button class="btn alt" id="w-copy">${icon("copy","ico","width:18px;height:18px")}Copiar lista</button></div>
      <p class="muted" style="font-size:.85rem">Obrayuda no presenta la solicitud ni actúa en tu nombre. Te lo dejamos todo preparado y te llevamos a la sede del organismo; allí te identificas como te pida y la envías tú.</p>`;
-    $("#w-copy").onclick=()=>{navigator.clipboard?.writeText(sum).then(()=>toast("Resumen copiado"),()=>{const r=document.createRange();r.selectNodeContents($("#w-sum"));getSelection().removeAllRanges();getSelection().addRange(r);toast("Selecciona y copia el texto")})};
+    $("#w-copy").onclick=()=>{navigator.clipboard?.writeText(sum).then(()=>toast("Lista copiada"),()=>{const r=document.createRange();r.selectNodeContents($("#w-sum"));getSelection().removeAllRanges();getSelection().addRange(r);toast("Selecciona y copia el texto")})};
   }
   body.insertAdjacentHTML("beforeend",`<div class="frow" style="justify-content:space-between;margin-top:6px">
     <button class="btn alt" id="w-prev" ${S.wStep===0?"disabled":""}>← Atrás</button>
