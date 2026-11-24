@@ -56,7 +56,8 @@ EXCLUIR = ["alquiler", "arrendatari", "desahucio", "personal funcionario", "opos
            # ayudas para pagar la vivienda (alquiler, hipoteca, recibos), no para reformarla
            "rentas insuficientes", "monoparental", "gastos de vivienda", "gastos vivienda", "obligaciones derivadas",
            "gastos de la vivienda", "suministro", "recibos", "compra de vivienda", "adquisicion de vivienda",
-           "emergencia social", "pobreza", "jubilados y pensionistas", "pensionistas"]
+           "emergencia social", "pobreza", "jubilados y pensionistas", "pensionistas",
+           "concurso", "premio", "gastos del hogar", "ayudas sociales", "escasos recursos", "gastos por vivienda"]
 
 # Tipo de obra a partir de palabras clave.
 TIPOS = {

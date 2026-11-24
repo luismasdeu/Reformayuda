@@ -170,6 +170,11 @@ def main():
         except (messaging.UnregisteredError, messaging.SenderIdMismatchError) as e:
             if doc_id:
                 db.collection("suscripciones").document(doc_id).delete()
+            else:  # móvil del responsable que ya no recibe avisos: se quita y se vuelve a avisar de lo pendiente
+                admin = json.loads(ADMIN.read_text(encoding="utf-8"))
+                admin["tokens"] = [t for t in admin.get("tokens", []) if t != token]
+                ADMIN.write_text(json.dumps(admin, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
+                registro["revision_avisadas"] = []
             borradas += 1
             errores.append(f"{type(e).__name__}: {str(e)[:200]}")
         except Exception as e:  # un fallo con una persona no para el resto
