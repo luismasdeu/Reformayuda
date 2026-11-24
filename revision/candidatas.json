@@ -1,6 +1,6 @@
 {
  "_leeme": "Ayudas detectadas automáticamente en los boletines. Revísalas: pon \"estado\": \"aprobada\" o \"descartada\". Mira README.md.",
- "ultima_busqueda": "2026-11-23T06:21",
+ "ultima_busqueda": "2026-11-24T06:10",
  "candidatas": [
   {
    "id": "bdns-938584",
@@ -793,6 +793,134 @@
     "nota": "Revisa importe por vivienda, requisitos, documentos y pasos antes de aprobar."
    },
    "muni": "Tres Cantos"
+  },
+  {
+   "id": "bdns-944125",
+   "estado": "pendiente",
+   "title": "CONVOCATORIA DE AYUDAS SOCIALES DIRIGIDAS A LAS PERSONAS JUBILADAS DE SEDAVÍ CON ESCASOS RECURSOS PARA COLABORAR EN SUS GASTOS POR VIVIENDA HABITUAL 2026",
+   "org": "SEDAVÍ · AYUNTAMIENTO DE SEDAVÍ",
+   "scope": "municipal",
+   "ccaa": "Comunitat Valenciana",
+   "tipo": [
+    "rehabilitacion"
+   ],
+   "dest": [
+    "vivienda"
+   ],
+   "importe": 0,
+   "imp": "Consulta la convocatoria",
+   "abre": "2026-11-23",
+   "cierra": null,
+   "plazo": "Consulta el plazo en la convocatoria",
+   "irpf": false,
+   "fuente": "BDNS nº 944125",
+   "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/944125",
+   "resumen": "CONVOCATORIA DE AYUDAS SOCIALES DIRIGIDAS A LAS PERSONAS JUBILADAS DE SEDAVÍ CON ESCASOS RECURSOS PARA COLABORAR EN SUS GASTOS POR VIVIENDA HABITUAL 2026",
+   "req": [
+    "Consulta los requisitos en la convocatoria oficial"
+   ],
+   "docs": [
+    "Consulta la documentación en la convocatoria oficial"
+   ],
+   "pasos": [
+    "Lee la convocatoria oficial",
+    "Prepara la documentación",
+    "Presenta la solicitud en la sede del organismo"
+   ],
+   "_revisar": {
+    "presupuesto_total": 25000,
+    "bases_reguladoras": "https://bop.dival.es/bop/downloads?anuncioNumReg=2023/13632&lang=es",
+    "abierta_segun_bdns": false,
+    "beneficiarios": "PERSONAS FÍSICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
+    "nota": "Revisa importe por vivienda, requisitos, documentos y pasos antes de aprobar."
+   },
+   "prov": "Valencia",
+   "muni": "Sedaví"
+  },
+  {
+   "id": "bdns-944114",
+   "estado": "pendiente",
+   "title": "AYUDAS SOCIALES DIRIGIDAS A LOS/LAS VECINOS/AS DE SEDAVÍ EN POSESIÓN DE CERTIFICADO DE DISCAPACIDAD O UNIDADES FAMILIARES CON PERSONAS CON CERTIFICADO DE DISCAP",
+   "org": "SEDAVÍ · AYUNTAMIENTO DE SEDAVÍ",
+   "scope": "municipal",
+   "ccaa": "Comunitat Valenciana",
+   "tipo": [
+    "accesibilidad"
+   ],
+   "dest": [
+    "vivienda"
+   ],
+   "importe": 0,
+   "imp": "Consulta la convocatoria",
+   "abre": "2026-11-23",
+   "cierra": null,
+   "plazo": "Consulta el plazo en la convocatoria",
+   "irpf": false,
+   "fuente": "BDNS nº 944114",
+   "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/944114",
+   "resumen": "AYUDAS SOCIALES DIRIGIDAS A LOS/LAS VECINOS/AS DE SEDAVÍ EN POSESIÓN DE CERTIFICADO DE DISCAPACIDAD O UNIDADES FAMILIARES CON PERSONAS CON CERTIFICADO DE DISCAPACIDAD A SU CARGO Y ESCASOS RECURSOS PARA COLABORAR EN SUS GASTOS POR VIVIENDA HABITUAL 2026",
+   "req": [
+    "Consulta los requisitos en la convocatoria oficial"
+   ],
+   "docs": [
+    "Consulta la documentación en la convocatoria oficial"
+   ],
+   "pasos": [
+    "Lee la convocatoria oficial",
+    "Prepara la documentación",
+    "Presenta la solicitud en la sede del organismo"
+   ],
+   "_revisar": {
+    "presupuesto_total": 5000,
+    "bases_reguladoras": "https://bop.dival.es/bop/downloads?anuncioNumReg=2023/13634&lang=es",
+    "abierta_segun_bdns": false,
+    "beneficiarios": "PERSONAS FÍSICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
+    "nota": "Revisa importe por vivienda, requisitos, documentos y pasos antes de aprobar."
+   },
+   "prov": "Valencia",
+   "muni": "Sedaví"
+  },
+  {
+   "id": "bdns-943945",
+   "estado": "pendiente",
+   "title": "CONVOCATORIA PARA LA CONCESIÓN DE SUBVENCIONES MUNICIPALES PARA ACTUACIONES DE MEJORA DE LA EFICIENCIA ENERGÉTICA EN VIVIENDAS DEL TÉRMINO MUNICIPAL DE GETAFE, ",
+   "org": "GETAFE · AYUNTAMIENTO DE GETAFE",
+   "scope": "municipal",
+   "ccaa": "Comunidad de Madrid",
+   "tipo": [
+    "eficiencia"
+   ],
+   "dest": [
+    "vivienda"
+   ],
+   "importe": 0,
+   "imp": "Consulta la convocatoria",
+   "abre": "2026-11-23",
+   "cierra": null,
+   "plazo": "Consulta el plazo en la convocatoria",
+   "irpf": true,
+   "fuente": "BDNS nº 943945",
+   "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/943945",
+   "resumen": "CONVOCATORIA PARA LA CONCESIÓN DE SUBVENCIONES MUNICIPALES PARA ACTUACIONES DE MEJORA DE LA EFICIENCIA ENERGÉTICA EN VIVIENDAS DEL TÉRMINO MUNICIPAL DE GETAFE, 2ª CONVOCATORIA, EN RÉGIMEN DE TRAMITACIÓN ANTICIPADA",
+   "req": [
+    "Consulta los requisitos en la convocatoria oficial"
+   ],
+   "docs": [
+    "Consulta la documentación en la convocatoria oficial"
+   ],
+   "pasos": [
+    "Lee la convocatoria oficial",
+    "Prepara la documentación",
+    "Presenta la solicitud en la sede del organismo"
+   ],
+   "_revisar": {
+    "presupuesto_total": 650000,
+    "bases_reguladoras": "https://www.bocm.es/bocm/",
+    "abierta_segun_bdns": false,
+    "beneficiarios": "PERSONAS FÍSICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
+    "nota": "Revisa importe por vivienda, requisitos, documentos y pasos antes de aprobar."
+   },
+   "muni": "Getafe"
   }
  ],
  "boe": [

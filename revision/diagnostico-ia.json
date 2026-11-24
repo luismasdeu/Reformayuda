@@ -1,10 +1,10 @@
 {
- "fecha": "2026-11-23T06:21",
+ "fecha": "2026-11-24T06:10",
  "modelo": "claude-sonnet-5-5",
  "procesadas": [],
  "errores": [],
  "coste_usd": 0.0,
- "pendientes_por_tope": 5,
+ "pendientes_por_tope": 8,
  "gasto_mes_usd": 14.403,
  "limite_mes_usd": 15.0
 }
