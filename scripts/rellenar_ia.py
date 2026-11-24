@@ -454,8 +454,8 @@ def main():
     import anthropic
     cliente = anthropic.Anthropic()
     mes = dt.date.today().strftime("%Y-%m")
-    gasto = json.loads(GASTO.read_text(encoding="utf-8")) if GASTO.exists() else {"limite_usd": 15, "meses": {}}
-    limite = float(os.environ.get("IA_LIMITE_MES") or gasto.get("limite_usd", 15))
+    gasto = json.loads(GASTO.read_text(encoding="utf-8")) if GASTO.exists() else {"limite_usd": 20, "meses": {}}
+    limite = float(os.environ.get("IA_LIMITE_MES") or gasto.get("limite_usd", 20))
     ya = gasto["meses"].get(mes, 0.0)
     informe = {"fecha": dt.datetime.now().isoformat(timespec="minutes"), "modelo": MODELO,
                "procesadas": [], "errores": [], "coste_usd": 0.0, "pendientes_por_tope": 0}
@@ -510,7 +510,7 @@ def main():
 
     informe["coste_usd"] = round(informe["coste_usd"], 3)
     gasto["meses"][mes] = round(ya + informe["coste_usd"], 3)
-    gasto["limite_usd"] = gasto.get("limite_usd", 15)
+    gasto["limite_usd"] = gasto.get("limite_usd", 20)
     GASTO.write_text(json.dumps(gasto, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
     informe["gasto_mes_usd"], informe["limite_mes_usd"] = gasto["meses"][mes], limite
     if informe["pendientes_por_tope"]:

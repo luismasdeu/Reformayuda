@@ -83,6 +83,32 @@ def planificar(ayudas, subs, avisadas, hoy):
     return envios, [a["id"] for a in nuevas]
 
 
+def aviso_ia(registro, tokens):
+    """Aviso al responsable cuando la IA se para: tope mensual alcanzado o sin saldo en la API de Claude.
+    Una vez por motivo y mes."""
+    diag = RAIZ / "revision" / "diagnostico-ia.json"
+    if not diag.exists() or not tokens:
+        return []
+    d = json.loads(diag.read_text(encoding="utf-8"))
+    sin_saldo = any("credit" in e.lower() or "saldo" in e.lower() or "billing" in e.lower() for e in d.get("errores", []))
+    tope = d.get("pendientes_por_tope", 0) > 0
+    if not (sin_saldo or tope):
+        return []
+    clave = ("saldo" if sin_saldo else "tope") + "-" + dt.date.today().strftime("%Y-%m")
+    if clave in registro.get("avisos_ia", []):
+        return []
+    registro["avisos_ia"] = (registro.get("avisos_ia", []) + [clave])[-12:]
+    if sin_saldo:
+        datos = {"title": "La IA se ha quedado sin saldo",
+                 "body": "Las ayudas nuevas te llegarán sin rellenar. Recarga en console.anthropic.com (Billing) si quieres que siga.",
+                 "url": "https://console.anthropic.com/settings/billing", "tag": "ia"}
+    else:
+        datos = {"title": f"La IA ha llegado al tope del mes ({d.get('gasto_mes_usd')} de {d.get('limite_mes_usd')} $)",
+                 "body": "Hasta el día 1, las ayudas nuevas te llegarán sin rellenar. Si quieres subir el tope, cambia limite_usd en revision/gasto-ia.json.",
+                 "url": f"{DOMINIO}/revisar/", "tag": "ia"}
+    return [(None, t, datos) for t in tokens]
+
+
 def aviso_revision(registro, ayudas):
     """Aviso al responsable cuando hay candidatas nuevas por revisar o ayudas publicadas solas por la IA."""
     if not ADMIN.exists() or not CANDIDATAS.exists():
@@ -158,6 +184,8 @@ def main():
     else:
         envios, avisadas = planificar(ayudas, subs, set(registro["ids"]), hoy)
         envios += aviso_revision(registro, ayudas)
+        if ADMIN.exists():
+            envios += aviso_ia(registro, json.loads(ADMIN.read_text(encoding="utf-8")).get("tokens", []))
 
     ok = borradas = 0
     errores = []
