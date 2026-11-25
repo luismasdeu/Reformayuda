@@ -1,6 +1,6 @@
 {
  "_leeme": "Ayudas detectadas automáticamente en los boletines. Revísalas: pon \"estado\": \"aprobada\" o \"descartada\". Mira README.md.",
- "ultima_busqueda": "2026-11-24T06:10",
+ "ultima_busqueda": "2026-11-25T06:11",
  "candidatas": [
   {
    "id": "bdns-938584",
@@ -19,11 +19,11 @@
    "imp": "Consulta la convocatoria",
    "abre": "2026-11-05",
    "cierra": "2026-12-31",
-   "plazo": "La BDNS dice que el plazo es de 20 días desde la publicación en el BOP de Málaga y que acaba al agotarse el dinero. La fecha final que consta es el 31-12-2026. El presupuesto total es de 14.000 €.",
+   "plazo": "Según la BDNS, el plazo son 20 días desde la publicación en el BOPMA. El BOPMA publicó el edicto 4244/2026 el 5 de noviembre de 2026. La BDNS también indica fin de consignación presupuestaria y fecha final el 31 de diciembre de 2026. Hay que comprobar cuál se aplica.",
    "irpf": false,
    "fuente": "BDNS nº 938584",
    "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/938584",
-   "resumen": "El Ayuntamiento de Villanueva de Algaidas (Málaga) concede ayudas a particulares para recuperar y adecuar viviendas antiguas. No he podido leer las bases, así que faltan los detalles.",
+   "resumen": "El Ayuntamiento de Villanueva de Algaidas (Málaga) convoca ayudas para recuperar y adecuar viviendas antiguas. Las pueden pedir personas físicas. El presupuesto total es de 14.000 €. No he podido leer las bases, así que faltan los importes por vivienda y los requisitos.",
    "req": [
     "Consulta los requisitos en la convocatoria oficial"
    ],
@@ -42,23 +42,23 @@
     "beneficiarios": "PERSONAS FÍSICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
     "nota": "Revisa importe por vivienda, requisitos, documentos y pasos antes de aprobar.",
     "bases_no_corresponden": true,
-    "referencia_bases": "BOPMA, Edicto 4244/2026, hacia el 5 de noviembre de 2026 (fecha por confirmar)",
+    "referencia_bases": "BOPMA (Boletín Oficial de la Provincia de Málaga) de 5 de noviembre de 2026, edicto 4244/2026, convocatoria de ayudas para la recuperación y adecuación de viviendas antiguas.",
     "ia": {
-     "fecha": "2026-11-13",
-     "documento": "el enlace de bases de la BDNS es genérico (ley, ordenanza general o portada)",
+     "fecha": "2026-11-25",
+     "documento": "el enlace de bases de la BDNS es genérico (ley, ordenanza general o portada) (extracto; bases en BOPMA (Boletín Oficial de la Provincia de Málaga) de 5 de noviembre de 2026, edicto 4244/2026, convocatoria de ayudas para la recuperación y adecuación de viviendas antiguas.)",
      "recomendacion": "publicar",
-     "motivo": "La BDNS la describe como ayuda para recuperar y adecuar viviendas antiguas, algo que apunta a obras de rehabilitación, pero no he podido leer las bases."
+     "motivo": "Son ayudas del Ayuntamiento para recuperar y adecuar viviendas antiguas, es decir, para obras de rehabilitación en viviendas. Solo he podido confirmar el título de la convocatoria, no el contenido de las bases."
     },
     "confirmar": [
-     "No se han podido leer las bases ni el extracto: faltan el importe por vivienda, los requisitos, los documentos y los pasos.",
-     "Hay que comprobar la fecha de publicación en el BOP de Málaga, que marca la apertura del plazo, y si el plazo acaba el 31-12-2026 o al agotarse el dinero.",
-     "Hay que comprobar qué obras se pagan exactamente y si la ayuda es para obras o para otra cosa.",
-     "Los 14.000 € son el presupuesto total, no la cantidad por vivienda."
+     "No he podido leer las bases ni el edicto 4244/2026 del BOPMA: faltan importe por vivienda, porcentaje, requisitos y documentos.",
+     "Comprueba el plazo: la BDNS dice 20 días desde el BOPMA (5-11-2026), pero también fin de consignación y fecha final 2026-12-31.",
+     "Comprueba qué obras se subvencionan y si hay límites de antigüedad de la vivienda o de ingresos.",
+     "Falta la página concreta del trámite en la sede electrónica."
     ],
     "espera": {
      "desde": "2026-10-29",
-     "intentos": 4,
-     "proxima": "2026-11-23"
+     "intentos": 5,
+     "proxima": "2026-12-09"
     }
    },
    "prov": "Málaga",
@@ -67,7 +67,7 @@
   },
   {
    "id": "bdns-938805",
-   "estado": "espera",
+   "estado": "descartada",
    "title": "Accesibilidad y conservación de edificios en Vilafranca del Penedès",
    "org": "VILAFRANCA DEL PENEDÈS · AYUNTAMIENTO DE VILAFRANCA DEL PENEDÈS",
    "scope": "municipal",
@@ -81,34 +81,35 @@
     "edificio"
    ],
    "importe": 0,
-   "imp": "No consta en el extracto el importe por vivienda ni el porcentaje. El presupuesto total de la convocatoria es de 120.000 €.",
+   "imp": "Según la web municipal, hasta el 75 % del presupuesto en obras de accesibilidad. El máximo por vivienda no consta en lo que he podido leer.",
    "abre": "2026-11-04",
    "cierra": "2026-11-20",
-   "plazo": "Del 4 al 20 de noviembre de 2026, o antes si se agota el presupuesto. El plazo empezó el día siguiente a la publicación del anuncio en el BOP de Barcelona (3 de noviembre de 2026).",
+   "plazo": "Del 4 al 20 de noviembre de 2026, o antes si se agota el dinero. Empieza el día siguiente a la publicación en el BOP de Barcelona (3 de noviembre de 2026).",
    "irpf": false,
    "fuente": "BDNS nº 938805",
    "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/938805",
-   "resumen": "El Ayuntamiento de Vilafranca del Penedès da ayudas para obras que mejoren la accesibilidad y el estado de conservación de edificios de viviendas y locales comerciales del municipio. Hay 120.000 € en total. Las ayudas se dan por orden de solicitud, sin comparar unas con otras, hasta agotar el presupuesto. Se piden por internet en la sede electrónica del Ayuntamiento.",
+   "resumen": "El Ayuntamiento de Vilafranca del Penedès da ayudas para obras que mejoren la accesibilidad y el estado de conservación de edificios de viviendas y locales comerciales. Pueden pedirla propietarios, arrendatarios, usufructuarios y otros titulares que promuevan la obra. El presupuesto total es de 120.000 €. Se resuelve por orden de entrada, así que los fondos pueden acabarse antes del cierre.",
    "req": [
-    "Promover las obras como propietario/a, inquilino/a, usufructuario/a o con otro título legal similar.",
-    "Las obras deben ser en un edificio de viviendas o local comercial que ya exista en Vilafranca del Penedès.",
-    "Las obras deben mejorar la accesibilidad o el estado de conservación del edificio.",
-    "No estar en ninguna de las situaciones que impiden recibir subvenciones (art. 13.2 de la Ley 38/2003).",
-    "Pueden pedirla personas físicas o jurídicas, también quienes tengan actividad económica."
+    "Promover la obra como propietario, arrendatario, usufructuario u otro titular legal.",
+    "El edificio debe estar en Vilafranca del Penedès.",
+    "Más del 50 % del edificio sobre rasante debe ser vivienda (según la web municipal).",
+    "Tener hecha la ITE (inspección técnica del edificio) y un certificado energético previo (según la web municipal).",
+    "En obras dentro de la vivienda, tener más de 70 años o situación de dependencia (según la web municipal).",
+    "No tener ninguna prohibición para recibir subvenciones (art. 13.2 de la Ley 38/2003)."
    ],
    "docs": [
-    "Solicitud rellenada en el trámite online de la sede electrónica del Ayuntamiento.",
-    "Documento que acredite que eres propietario o titular de otro derecho sobre el inmueble.",
+    "Solicitud rellenada en el trámite de la sede electrónica.",
+    "Documento que acredite que eres propietario o titular del inmueble.",
     "Presupuesto o proyecto de las obras.",
-    "La lista exacta de documentos consta en las bases y no la he podido comprobar."
+    "ITE y certificado energético, si las bases los piden.",
+    "Documentos de identidad y, en su caso, de la comunidad o representante."
    ],
    "pasos": [
-    "Lee las bases publicadas en el BOP de Barcelona (4 de marzo de 2025) para ver qué obras valen.",
-    "Entra en la sede electrónica del Ayuntamiento (seu.vilafranca.cat) y busca el trámite de esta ayuda.",
-    "Rellena la solicitud y adjunta la documentación que piden las bases.",
-    "Si tienes dificultades con el trámite online, pide cita en la Oficina Local de Vivienda (tel. 93 818 06 54).",
-    "Presenta la solicitud antes del 20 de noviembre de 2026, o antes si se agota el dinero.",
-    "Justifica la obra cuando te lo pidan, según las bases."
+    "Comprueba en las bases que tu obra y tu edificio cumplen los requisitos.",
+    "Reúne los documentos y el presupuesto de la obra.",
+    "Presenta la solicitud en la sede electrónica del Ayuntamiento (seu.vilafranca.cat) del 4 al 20 de noviembre de 2026.",
+    "Si tienes dificultad con el trámite online, pide cita en la Oficina Local de Vivienda: 93 818 06 54.",
+    "Haz la obra y justifica el gasto cuando lo pida el Ayuntamiento."
    ],
    "_revisar": {
     "presupuesto_total": 120000,
@@ -118,23 +119,18 @@
     "nota": "Revisa importe por vivienda, requisitos, documentos y pasos antes de aprobar.",
     "bases_no_corresponden": true,
     "ia": {
-     "fecha": "2026-11-15",
-     "documento": "el enlace de bases de la BDNS es genérico (ley, ordenanza general o portada) (extracto; bases en BOP de Barcelona, CVE 202510039595, de 4 de marzo de 2025 (bases específicas) y CVE 202510145073, de 12 de septiembre de 2025 (Ordenanza General de Subvenciones))",
-     "recomendacion": "publicar",
-     "motivo": "Paga obras de accesibilidad y de conservación en edificios de viviendas (y locales comerciales) existentes en Vilafranca del Penedès."
+     "fecha": "2026-11-25",
+     "documento": "el enlace de bases de la BDNS es genérico (ley, ordenanza general o portada) (extracto; bases en Bases reguladoras publicadas en el BOP de Barcelona, CVE 202510039595, de 4 de marzo de 2025; Ordenanza General de Subvenciones en el BOP, CVE 202510145073, de 12 de septiembre de 2025.)",
+     "recomendacion": "descartar",
+     "motivo": "Cerró el 2026-11-20 sin que llegara a confirmarse la apertura."
     },
     "confirmar": [
-     "No he podido leer las bases (BOP CVE 202510039595 de 4/03/2025): faltan importe o porcentaje por actuación, requisitos concretos, obras subvencionables y documentos.",
-     "Comprueba si las bases limitan los beneficiarios (por ejemplo, si el edificio debe tener una antigüedad mínima) y si el solicitante con actividad económica tiene condiciones especiales.",
-     "Comprueba cómo afecta el título de inquilino o usufructuario (por ejemplo, si necesita permiso de la propiedad)."
+     "No he podido leer las bases del BOP (CVE 202510039595, 4/3/2025): comprueba el máximo por vivienda, los porcentajes y los gastos subvencionables.",
+     "Requisitos y documentos salen de la web municipal y del extracto; confirma la lista exacta de documentos y el procedimiento de justificación.",
+     "Comprueba si la edad de 70 años y la dependencia solo valen para obras interiores y si hay ayuda para conservación.",
+     "La URL es la portada de la sede; falta el enlace al trámite concreto."
     ],
-    "referencia_bases": "BOP de Barcelona, CVE 202510039595, de 4 de marzo de 2025 (bases específicas) y CVE 202510145073, de 12 de septiembre de 2025 (Ordenanza General de Subvenciones)",
-    "datos_no_oficiales": true,
-    "espera": {
-     "desde": "2026-11-07",
-     "intentos": 3,
-     "proxima": "2026-11-22"
-    }
+    "referencia_bases": "Bases reguladoras publicadas en el BOP de Barcelona, CVE 202510039595, de 4 de marzo de 2025; Ordenanza General de Subvenciones en el BOP, CVE 202510145073, de 12 de septiembre de 2025."
    },
    "prov": "Barcelona",
    "muni": "Vilafranca Del Penedès",
@@ -142,7 +138,7 @@
   },
   {
    "id": "bdns-938969",
-   "estado": "espera",
+   "estado": "descartada",
    "title": "Ascensores, portales y fachadas en edificios de Eibar",
    "org": "EIBAR · AYUNTAMIENTO DE EIBAR",
    "scope": "municipal",
@@ -152,37 +148,38 @@
     "rehabilitacion"
    ],
    "dest": [
-    "vivienda",
-    "edificio"
+    "edificio",
+    "vivienda"
    ],
    "importe": 0,
-   "imp": "No consta la cantidad por edificio ni el porcentaje en el anuncio. El presupuesto total de la convocatoria es de 150.000 €.",
-   "abre": "2026-11-09",
+   "imp": "El extracto indica 15.000 €, pero la versión en euskera dice 150.000 €. Parece que es el presupuesto total y no lo que recibe cada edificio. No consta la cuantía por vivienda ni el porcentaje.",
+   "abre": "2026-11-10",
    "cierra": "2026-11-20",
-   "plazo": "10 días hábiles desde el día siguiente a la publicación del extracto en el Boletín Oficial de Gipuzkoa (publicado el 06/11/2026). Según la BDNS, del 09/11/2026 al 20/11/2026.",
+   "plazo": "Empieza el día siguiente a publicarse el extracto en el BOG (6 de noviembre de 2026) y dura 10 días hábiles. La BDNS indica 9 a 20 de noviembre de 2026. Esas fechas no cuadran con el extracto y hay que comprobarlas.",
    "irpf": false,
    "fuente": "BDNS nº 938969",
    "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/938969",
-   "resumen": "El Ayuntamiento de Eibar da subvenciones para instalar o cambiar ascensores, mejorar el acceso a los portales y restaurar fachadas. Pueden pedirlas propietarios de edificios y comunidades de propietarios. Se conceden por orden de evaluación de cada solicitud, con un presupuesto total de 150.000 €.",
+   "resumen": "El Ayuntamiento de Eibar da subvenciones para instalar o sustituir ascensores, mejorar el acceso a los portales y restaurar fachadas. Pueden pedirlas propietarios de edificios y comunidades de propietarios. Las ayudas se conceden por orden de evaluación individual de cada solicitud. El presupuesto total es de 150.000 €. Las bases completas están en el Plan Estratégico de Subvenciones del Ayuntamiento, que no he podido leer.",
    "req": [
-    "Ser persona física o jurídica propietaria de un edificio, o una comunidad de propietarios que vaya a hacer la obra.",
-    "Que la obra sea instalar un ascensor, mejorar el acceso exterior a los portales o restaurar la fachada.",
-    "No estar en ninguna de las prohibiciones del artículo 13 de la Ley General de Subvenciones.",
-    "El edificio debe estar en Eibar."
+    "Ser persona física o jurídica propietaria de un edificio, o comunidad de propietarios que vaya a hacer la obra.",
+    "No estar en ninguna de las prohibiciones del artículo 13.2 y 13.3 de la Ley General de Subvenciones.",
+    "La obra debe ser de ascensor, accesibilidad exterior a portales o restauración de fachadas.",
+    "El edificio debe estar en Eibar. Las bases pueden fijar más condiciones, como antigüedad del edificio o licencia."
    ],
    "docs": [
-    "Solicitud oficial del Ayuntamiento (modelo de la convocatoria).",
-    "Documento de titular de la cuenta bancaria.",
-    "Acuerdo de la comunidad que aprueba las obras.",
-    "Nombramiento del presidente o presidenta de la comunidad.",
+    "Solicitud oficial firmada por el solicitante o su representante.",
+    "Documento con los datos de la cuenta bancaria (titular de cuenta).",
+    "Nombramiento del presidente o presidenta de la comunidad, si se pide como comunidad.",
+    "Acuerdo de la comunidad que aprueba hacer las obras.",
     "Lista de gastos e ingresos de la obra."
    ],
    "pasos": [
-    "Reúne a la comunidad y aprueba las obras.",
-    "Rellena la solicitud y los demás documentos de la web municipal.",
-    "Presenta la solicitud en el plazo: por internet en www.eibar.eus con certificado digital.",
-    "Si eres persona física, también puedes ir a PEGORA (Untzaga plaza 1) o a otros registros públicos.",
-    "Haz la obra y guarda las facturas para justificarla."
+    "Comprueba en las bases del Plan Estratégico de Subvenciones que tu obra entra en la ayuda.",
+    "Si eres comunidad, aprueba la obra en junta y nombra a la persona que presidirá.",
+    "Reúne los documentos: solicitud, cuenta bancaria, acuerdo de obra y lista de gastos e ingresos.",
+    "Presenta la solicitud en www.eibar.eus con certificado digital. Los particulares también pueden ir a PEGORA (plaza Untzaga 1) o a otros registros públicos.",
+    "Hazlo dentro del plazo de 10 días hábiles.",
+    "Cuando acabes la obra, justifica los gastos como te pidan las bases."
    ],
    "_revisar": {
     "presupuesto_total": 150000,
@@ -192,22 +189,17 @@
     "nota": "Revisa importe por vivienda, requisitos, documentos y pasos antes de aprobar.",
     "bases_no_corresponden": true,
     "ia": {
-     "fecha": "2026-11-15",
-     "documento": "página web (no eran las bases de esta ayuda: buscada en internet)",
-     "recomendacion": "publicar",
-     "motivo": "Subvenciona obras de ascensores, accesibilidad de portales y restauración de fachadas en edificios de viviendas de Eibar."
+     "fecha": "2026-11-25",
+     "documento": "no se pudo descargar (HTTP Error 403: Forbidden) (extracto; bases en Plan Estratégico de Subvenciones del Ayuntamiento de Eibar, anexo de subvenciones en vigor. Extracto en el BOG del 06/11/2026 (GAO-I-2026-07198).)",
+     "recomendacion": "descartar",
+     "motivo": "Cerró el 2026-11-20 sin que llegara a confirmarse la apertura."
     },
     "confirmar": [
-     "No se han leído las bases: comprueba el importe máximo o porcentaje por edificio y los gastos subvencionables.",
-     "El anuncio en español dice 15.000 € y en euskera 150.000 €; la BDNS indica presupuesto de 150.000 €.",
-     "Las fechas dadas (11-11 a 11-25) no coinciden con las de la BDNS (09-11 a 20-11); verifica la fecha de publicación del extracto.",
-     "Comprueba la fecha límite de las obras y si hay criterios de reparto."
+     "El extracto dice 15.000 € y la versión en euskera 150.000 €. Comprobar la cifra, y el porcentaje y máximo por edificio o vivienda en las bases.",
+     "El plazo debería empezar tras publicarse en el BOG. La BDNS da 9 a 20 de noviembre. Comprobar las fechas reales.",
+     "No se han leído las bases del Plan Estratégico. Faltan requisitos concretos, gastos subvencionables y la ficha del trámite."
     ],
-    "espera": {
-     "desde": "2026-10-31",
-     "intentos": 4,
-     "proxima": "2026-11-25"
-    }
+    "referencia_bases": "Plan Estratégico de Subvenciones del Ayuntamiento de Eibar, anexo de subvenciones en vigor. Extracto en el BOG del 06/11/2026 (GAO-I-2026-07198)."
    },
    "prov": "Gipuzkoa",
    "muni": "Eibar",
@@ -516,32 +508,33 @@
     "edificio"
    ],
    "importe": 0,
-   "imp": "El 15 % del coste subvencionable total de la obra (no consta el máximo por edificio)",
+   "imp": "El 15 % del coste subvencionable total de la obra (no consta el máximo por vivienda o edificio)",
    "abre": "2026-11-19",
    "cierra": "2027-02-19",
-   "plazo": "3 meses desde el día siguiente a la publicación del extracto en el BOP de Alicante. El anuncio salió en el BOP el 18/11/2026, así que el plazo iría del 19/11/2026 al 19/02/2027.",
+   "plazo": "3 meses desde el día siguiente a la publicación del extracto en el BOP de Alicante (publicado el 18/11/2026).",
    "irpf": false,
    "fuente": "BDNS nº 942250",
    "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/942250",
-   "resumen": "El Ayuntamiento de Elche da ayudas a comunidades de propietarios para obras de conservación, seguridad y accesibilidad en edificios de viviendas. También paga obras puntuales de ornato. La ayuda es el 15 % del coste subvencionable. El presupuesto total es de 700.000 €.",
+   "resumen": "El Ayuntamiento de Elche da ayudas a comunidades de propietarios para obras de conservación, seguridad de utilización y accesibilidad en edificios de viviendas. Se incluyen también obras puntuales de ornato (embellecimiento) del edificio. Las obras de conservación deben estar recogidas en el Informe de Evaluación del Edificio (IEE). Hay 700.000 € para toda la convocatoria.",
    "req": [
     "Ser comunidad de propietarios, agrupación de comunidades, cooperativa de edificio residencial colectivo o propietario único de un edificio de viviendas.",
     "El edificio debe estar en el término municipal de Elche.",
-    "Las obras deben ser de conservación señaladas en el Informe de Evaluación del Edificio (IEE), o de seguridad de utilización, accesibilidad u ornato puntual.",
+    "Las obras deben ser de conservación (según el IEE), de seguridad de utilización, de accesibilidad o de ornato puntual.",
     "No valen viviendas unifamiliares, residencias de estudiantes ni edificios de alquiler turístico.",
-    "Cumplir el resto de requisitos de la convocatoria."
+    "Cumplir el resto de requisitos de la convocatoria (hay que comprobarlos en las bases)."
    ],
    "docs": [
-    "No he podido leer las bases: la lista de documentos no consta en el anuncio.",
-    "Normalmente hará falta el Informe de Evaluación del Edificio (IEE).",
-    "Consulta en la convocatoria la lista completa de documentos."
+    "Documentos de la comunidad o del propietario que acrediten quién es el solicitante y su representante (por confirmar en las bases).",
+    "Informe de Evaluación del Edificio (IEE), si la obra es de conservación.",
+    "Presupuesto o proyecto de las obras (por confirmar en las bases).",
+    "Acuerdo de la comunidad para pedir la ayuda y hacer las obras (por confirmar en las bases)."
    ],
    "pasos": [
-    "Consulta la convocatoria y la Base 28 de ejecución del Presupuesto municipal.",
-    "Reúne la comunidad de propietarios y acuerda pedir la ayuda.",
-    "Prepara el Informe de Evaluación del Edificio y la documentación que pidan las bases.",
-    "Presenta la solicitud en la sede electrónica del Ayuntamiento de Elche (sede.elche.es) dentro del plazo.",
-    "Haz las obras y justifica el gasto como indiquen las bases."
+    "Comprueba que tu edificio y tu obra entran en la convocatoria.",
+    "Reúne el IEE, el presupuesto y los acuerdos de la comunidad.",
+    "Presenta la solicitud por la sede electrónica del Ayuntamiento de Elche antes del 19/02/2027.",
+    "Espera la resolución del Ayuntamiento.",
+    "Haz las obras y justifica el gasto en el plazo que indiquen las bases."
    ],
    "_revisar": {
     "presupuesto_total": 700000,
@@ -551,21 +544,22 @@
     "nota": "Revisa importe por vivienda, requisitos, documentos y pasos antes de aprobar.",
     "bases_no_corresponden": true,
     "ia": {
-     "fecha": "2026-11-20",
+     "fecha": "2026-11-25",
      "documento": "PDF de 33 páginas (no eran las bases de esta ayuda: buscada en internet)",
      "recomendacion": "publicar",
-     "motivo": "Paga obras de conservación, seguridad de utilización, accesibilidad y ornato en edificios de viviendas de Elche, para comunidades de propietarios."
+     "motivo": "Paga obras de conservación, seguridad de uso y accesibilidad en edificios de viviendas de Elche, para comunidades de propietarios."
     },
     "confirmar": [
-     "No he podido leer el texto completo de la convocatoria ni de las bases: faltan documentos, requisitos detallados y cómo se justifica la obra.",
-     "Comprueba si hay un máximo de ayuda por edificio o vivienda, y el plazo de ejecución de las obras.",
-     "Confirma que la fecha de apertura es el 19/11/2026 según el extracto publicado en el BOP del 18/11/2026."
+     "No he podido leer las bases (Base 28, BOP Alicante nº 17 de 27/01/2026) ni el extracto completo: faltan máximos por edificio, documentos exactos, gastos subvencionables y plazo para justificar.",
+     "Comprueba si el 15 % tiene un tope por vivienda o por edificio.",
+     "Busca la página concreta del trámite en la sede electrónica de Elche.",
+     "Confirma la fecha de apertura: se calcula como el día siguiente al anuncio del BOP del 18/11/2026."
     ],
     "datos_no_oficiales": true,
     "espera": {
      "desde": "2026-11-17",
-     "intentos": 2,
-     "proxima": "2026-11-25"
+     "intentos": 3,
+     "proxima": "2026-12-02"
     }
    },
    "prov": "Alicante",
@@ -590,25 +584,25 @@
    "imp": "Consulta la convocatoria",
    "abre": "2026-11-16",
    "cierra": "2026-12-03",
-   "plazo": "Según la BDNS, el plazo empieza el día siguiente a la publicación de la convocatoria en el BOP de Valencia y termina el 3 de diciembre de 2026. No he visto la publicación en el BOP, así que no se sabe con certeza el día de apertura.",
+   "plazo": "El plazo empieza el día siguiente a la publicación de la convocatoria en el BOP y termina el 3 de diciembre de 2026. No he visto la publicación en el BOP con su fecha.",
    "irpf": false,
    "fuente": "BDNS nº 942425",
    "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/942425",
-   "resumen": "El Ayuntamiento de Xirivella convoca ayudas para instalar ascensores y quitar barreras arquitectónicas y así mejorar la accesibilidad. Pueden pedirlas personas físicas y jurídicas que no tengan actividad económica. El presupuesto total es de 30.000 €. No he podido leer las bases de 2026, así que faltan el importe por vivienda y los requisitos.",
+   "resumen": "El Ayuntamiento de Xirivella convoca para 2026 ayudas para instalar ascensores y quitar barreras arquitectónicas, para favorecer la accesibilidad. Pueden pedirlas personas físicas y comunidades u otras personas jurídicas sin actividad económica. El presupuesto total es de 30.000 €. No se han podido leer las bases de 2026, así que faltan el importe por vivienda y los requisitos.",
    "req": [
-    "Ser persona física o jurídica sin actividad económica.",
-    "La obra debe ser un ascensor o la supresión de barreras arquitectónicas en Xirivella.",
-    "Comprueba en las bases el resto de requisitos (no he podido leerlas)."
+    "Ser persona física o persona jurídica (por ejemplo, una comunidad de propietarios) sin actividad económica.",
+    "Que la obra sea un ascensor o la supresión de barreras arquitectónicas en Xirivella.",
+    "Consulta en las bases el resto de requisitos, porque no se han podido leer."
    ],
    "docs": [
-    "Solicitud por la sede electrónica del Ayuntamiento.",
-    "Comprueba en las bases la lista completa de documentos."
+    "Solicitud en la sede electrónica del Ayuntamiento de Xirivella.",
+    "Consulta en las bases la lista de documentos, porque no se han podido leer."
    ],
    "pasos": [
-    "Lee las bases en www.xirivella.es.",
-    "Prepara la documentación que piden las bases.",
-    "Presenta la solicitud en la sede electrónica antes del 3 de diciembre de 2026.",
-    "Justifica la obra y los gastos cuando te lo pidan."
+    "Lee las bases y la convocatoria 2026 en la web o la sede del Ayuntamiento de Xirivella.",
+    "Presenta la solicitud por la sede electrónica antes del 3 de diciembre de 2026.",
+    "Aporta la documentación que piden las bases.",
+    "Justifica la obra y el gasto según las bases."
    ],
    "_revisar": {
     "presupuesto_total": 30000,
@@ -617,23 +611,23 @@
     "beneficiarios": "PERSONAS FÍSICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA PERSONAS JURÍDICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
     "nota": "Revisa importe por vivienda, requisitos, documentos y pasos antes de aprobar.",
     "ia": {
-     "fecha": "2026-11-20",
-     "documento": "sin enlace a las bases (extracto; bases en Convocatoria publicada por el Ayuntamiento de Xirivella (Resolución nº 3711 de 16/11/2026). Falta confirmar el anuncio en el BOP de Valencia y las bases en www.xirivella.es.)",
+     "fecha": "2026-11-25",
+     "documento": "sin enlace a las bases (extracto; bases en Convocatoria publicada en el BOP de Valencia. Resolución nº 3711 de 16/11/2026 del Ayuntamiento de Xirivella. No se ha comprobado el número ni la fecha del BOP.)",
      "recomendacion": "publicar",
-     "motivo": "Subvenciona la instalación de ascensores y la eliminación de barreras arquitectónicas en viviendas y edificios, que son obras de accesibilidad."
+     "motivo": "Subvenciona instalar ascensores y quitar barreras arquitectónicas, que son obras de accesibilidad en viviendas y edificios de viviendas."
     },
     "confirmar": [
-     "Comprueba el importe máximo por vivienda o el porcentaje subvencionado, porque no aparece en la ficha.",
-     "Confirma la fecha de publicación en el BOP de Valencia y, con ella, el día de apertura del plazo.",
-     "Verifica los requisitos, los documentos y los gastos que se admiten (la convocatoria de 2025 cubría gastos desde el 1 de enero de 2024, pero hay que ver la de 2026).",
-     "Mira si los edificios o las comunidades de propietarios pueden pedirla y cómo."
+     "No se han podido leer las bases ni la convocatoria de 2026. Faltan el importe por vivienda o el porcentaje, los requisitos y los documentos.",
+     "Comprueba la fecha de publicación en el BOP, porque el plazo empieza el día siguiente.",
+     "Comprueba qué gastos se pagan y desde qué fecha, porque en 2025 se pagaban gastos anteriores y puede cambiar.",
+     "Comprueba si pueden pedirla comunidades de propietarios y si hay límites de ingresos."
     ],
     "espera": {
      "desde": "2026-11-17",
-     "intentos": 2,
-     "proxima": "2026-11-25"
+     "intentos": 3,
+     "proxima": "2026-12-02"
     },
-    "referencia_bases": "Convocatoria publicada por el Ayuntamiento de Xirivella (Resolución nº 3711 de 16/11/2026). Falta confirmar el anuncio en el BOP de Valencia y las bases en www.xirivella.es."
+    "referencia_bases": "Convocatoria publicada en el BOP de Valencia. Resolución nº 3711 de 16/11/2026 del Ayuntamiento de Xirivella. No se ha comprobado el número ni la fecha del BOP."
    },
    "prov": "Valencia",
    "muni": "Xirivella",
@@ -647,8 +641,7 @@
    "scope": "municipal",
    "ccaa": "Andalucía",
    "tipo": [
-    "accesibilidad",
-    "rehabilitacion"
+    "accesibilidad"
    ],
    "dest": [
     "vivienda"
@@ -657,25 +650,25 @@
    "imp": "No consta la cuantía por vivienda; el presupuesto total de la convocatoria es de 12.000 €",
    "abre": "2026-11-19",
    "cierra": null,
-   "plazo": "Empieza el día siguiente a publicar el extracto en el BOP y dura 10 días hábiles. No he visto esa publicación, así que no se sabe la fecha exacta.",
+   "plazo": "Empieza el día siguiente a publicarse el extracto en el BOP (aún sin publicar). Dura 10 días hábiles.",
    "irpf": false,
    "fuente": "BDNS nº 943447",
    "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/943447",
-   "resumen": "El Ayuntamiento de Peligros da ayudas para cambiar la bañera por un plato de ducha en tu vivienda. Es para personas mayores y personas con discapacidad. El presupuesto total es de 12.000 €. No he podido leer las bases, así que faltan los detalles.",
+   "resumen": "El Ayuntamiento de Peligros da ayudas para cambiar la bañera por un plato de ducha en viviendas del municipio. Son para personas mayores y personas con discapacidad. El presupuesto total es de 12.000 €. No he podido leer las bases, así que faltan importe por vivienda y requisitos.",
    "req": [
-    "Tener vivienda en el municipio de Peligros.",
+    "Vivir en una vivienda situada en Peligros.",
     "Ser persona mayor o persona con discapacidad.",
-    "Ser persona física sin actividad económica.",
-    "Los demás requisitos (edad, grado de discapacidad, ingresos, residencia habitual) no constan."
+    "Cumplir el resto de requisitos de las bases (por confirmar)."
    ],
    "docs": [
-    "Consulta la documentación en la convocatoria oficial"
+    "Solicitud en la sede electrónica del Ayuntamiento de Peligros.",
+    "Documentación que piden las bases (por confirmar)."
    ],
    "pasos": [
-    "Espera a que se publique el extracto en el BOP de Sevilla.",
-    "Mira las bases en la sede electrónica del Ayuntamiento de Peligros.",
-    "Presenta la solicitud por la sede electrónica dentro de los 10 días hábiles.",
-    "Justifica la obra con la documentación que pidan las bases."
+    "Espera a que se publique el extracto en el BOP.",
+    "Lee las bases en la sede electrónica del Ayuntamiento de Peligros.",
+    "Presenta la solicitud en los 10 días hábiles siguientes.",
+    "Justifica la obra cuando te lo pidan."
    ],
    "_revisar": {
     "presupuesto_total": 12000,
@@ -684,22 +677,22 @@
     "beneficiarios": "PERSONAS FÍSICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
     "nota": "Revisa importe por vivienda, requisitos, documentos y pasos antes de aprobar.",
     "bases_no_corresponden": true,
-    "referencia_bases": "Bases publicadas en la sede electrónica del Ayuntamiento de Peligros (documento «Bases platos ducha 19.11.2026»); extracto pendiente de publicar en el BOP.",
+    "referencia_bases": "Bases publicadas en la sede electrónica del Ayuntamiento de Peligros (https://peligros.sedelectronica.es/info.0). Extracto pendiente de publicar en el BOP.",
     "ia": {
-     "fecha": "2026-11-20",
-     "documento": "el enlace de bases de la BDNS es genérico (ley, ordenanza general o portada) (extracto; bases en Bases publicadas en la sede electrónica del Ayuntamiento de Peligros (documento «Bases platos ducha 19.11.2026»); extracto pendiente de publicar en el BOP.)",
+     "fecha": "2026-11-25",
+     "documento": "el enlace de bases de la BDNS es genérico (ley, ordenanza general o portada) (extracto; bases en Bases publicadas en la sede electrónica del Ayuntamiento de Peligros (https://peligros.sedelectronica.es/info.0). Extracto pendiente de publicar en el BOP.)",
      "recomendacion": "publicar",
-     "motivo": "Paga la obra de cambiar la bañera por un plato de ducha en viviendas de Peligros, una mejora de accesibilidad para personas mayores y con discapacidad."
+     "motivo": "Paga la obra de cambiar la bañera por un plato de ducha (accesibilidad) en viviendas de Peligros de personas mayores o con discapacidad."
     },
     "confirmar": [
-     "No he podido leer las bases: faltan importe por vivienda, porcentaje, requisitos y documentos.",
-     "Comprobar la fecha de publicación del extracto en el BOP, porque de ella depende el inicio del plazo.",
-     "Comprobar la edad mínima y el grado de discapacidad exigidos."
+     "No se han podido leer las bases: faltan importe por vivienda, requisitos, edad mínima, documentos y forma de justificar.",
+     "Comprobar la fecha de publicación del extracto en el BOP, de la que depende la apertura y el cierre del plazo.",
+     "Comprobar si la fecha de apertura 2026-11-19 de la ficha es solo la de recepción en la BDNS."
     ],
     "espera": {
      "desde": "2026-11-20",
-     "intentos": 1,
-     "proxima": "2026-11-23"
+     "intentos": 2,
+     "proxima": "2026-11-30"
     }
    },
    "muni": "Peligros",
@@ -710,8 +703,8 @@
   },
   {
    "id": "bdns-943945",
-   "estado": "pendiente",
-   "title": "CONVOCATORIA PARA LA CONCESIÓN DE SUBVENCIONES MUNICIPALES PARA ACTUACIONES DE MEJORA DE LA EFICIENCIA ENERGÉTICA EN VIVIENDAS DEL TÉRMINO MUNICIPAL DE GETAFE, ",
+   "estado": "espera",
+   "title": "Eficiencia energética en viviendas de Getafe (2ª convocatoria)",
    "org": "GETAFE · AYUNTAMIENTO DE GETAFE",
    "scope": "municipal",
    "ccaa": "Comunidad de Madrid",
@@ -725,28 +718,51 @@
    "imp": "Consulta la convocatoria",
    "abre": "2026-11-23",
    "cierra": null,
-   "plazo": "Consulta el plazo en la convocatoria",
-   "irpf": true,
+   "plazo": "20 días hábiles desde el día siguiente a la publicación del anuncio en el BOCM. Todavía no he visto esa publicación, así que no se conoce la fecha exacta.",
+   "irpf": false,
    "fuente": "BDNS nº 943945",
    "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/943945",
-   "resumen": "CONVOCATORIA PARA LA CONCESIÓN DE SUBVENCIONES MUNICIPALES PARA ACTUACIONES DE MEJORA DE LA EFICIENCIA ENERGÉTICA EN VIVIENDAS DEL TÉRMINO MUNICIPAL DE GETAFE, 2ª CONVOCATORIA, EN RÉGIMEN DE TRAMITACIÓN ANTICIPADA",
+   "resumen": "El Ayuntamiento de Getafe da subvenciones a particulares para obras que mejoren la eficiencia energética de su vivienda. El presupuesto total es de 650.000 €. Es la 2ª convocatoria, en concurrencia competitiva y con tramitación anticipada. No he podido leer las bases, así que faltan importes y requisitos.",
    "req": [
-    "Consulta los requisitos en la convocatoria oficial"
+    "Ser persona física sin actividad económica.",
+    "La vivienda debe estar en el término municipal de Getafe.",
+    "Las obras deben mejorar la eficiencia energética de la vivienda.",
+    "Cumplir los demás requisitos de las bases, que aún hay que comprobar."
    ],
    "docs": [
-    "Consulta la documentación en la convocatoria oficial"
+    "Solicitud y anexos de la convocatoria (están en la BDNS).",
+    "Documentos que fijen las bases, por confirmar."
    ],
    "pasos": [
-    "Lee la convocatoria oficial",
-    "Prepara la documentación",
-    "Presenta la solicitud en la sede del organismo"
+    "Espera a que se publique el anuncio en el BOCM.",
+    "Lee las bases y los anexos de la convocatoria.",
+    "Presenta la solicitud con los anexos en la sede electrónica del Ayuntamiento de Getafe dentro de los 20 días hábiles.",
+    "Haz las obras y justifícalas según indiquen las bases."
    ],
    "_revisar": {
     "presupuesto_total": 650000,
     "bases_reguladoras": "https://www.bocm.es/bocm/",
     "abierta_segun_bdns": false,
     "beneficiarios": "PERSONAS FÍSICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
-    "nota": "Revisa importe por vivienda, requisitos, documentos y pasos antes de aprobar."
+    "nota": "Revisa importe por vivienda, requisitos, documentos y pasos antes de aprobar.",
+    "referencia_bases": "Bases de la 2ª convocatoria adjuntas en la BDNS (convocatoria 943945); anuncio pendiente en el BOCM.",
+    "ia": {
+     "fecha": "2026-11-25",
+     "documento": "no se pudo descargar (HTTP Error 404: Not Found) (extracto; bases en Bases de la 2ª convocatoria adjuntas en la BDNS (convocatoria 943945); anuncio pendiente en el BOCM.)",
+     "recomendacion": "publicar",
+     "motivo": "Son subvenciones municipales para obras de mejora de la eficiencia energética en viviendas de Getafe, y las pueden pedir personas físicas."
+    },
+    "confirmar": [
+     "No he podido leer las bases ni los anexos. Faltan la cuantía por vivienda, el porcentaje y el máximo.",
+     "Falta confirmar qué obras se subvencionan, los requisitos y los documentos exigidos.",
+     "Falta la fecha de publicación en el BOCM, de la que depende el inicio y el fin del plazo.",
+     "No he encontrado la página del trámite en la sede electrónica."
+    ],
+    "espera": {
+     "desde": "2026-11-25",
+     "intentos": 1,
+     "proxima": "2026-11-28"
+    }
    },
    "muni": "Getafe"
   }
