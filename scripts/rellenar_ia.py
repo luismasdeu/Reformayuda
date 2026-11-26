@@ -61,6 +61,13 @@ Extrae los datos para una ficha que leerán particulares sin conocimientos legal
 - «pendiente_publicacion»: true si el plazo empieza cuando se publique el extracto o la convocatoria en un boletín y no has visto esa publicación con su fecha (aunque se conozca la fecha de cierre), de modo que no se sabe con certeza el día de apertura. false si el plazo ya está abierto o tiene fecha de apertura conocida.
 - «claridad»: «clara» solo si has leído las bases o la convocatoria oficial y en ellas constan el importe por vivienda (o el porcentaje con su máximo), el plazo (fecha final o «hasta agotar fondos»), los requisitos y cómo se pide, y no hay nada importante que dudar. Si te falta cualquiera de esas cosas o has tenido que suponer algo, «dudosa». Las claras se publican sin revisión humana: ante la duda, «dudosa»."""
 
+# Programas con página propia en /programas/: si la ayuda es una convocatoria de uno de ellos, la página
+# del programa se actualiza sola al publicarla (estado «abierto», plazo y enlace a la ficha).
+PROGRAMAS = json.loads((RAIZ / "web" / "data" / "programas.json").read_text(encoding="utf-8"))["programas"] \
+    if (RAIZ / "web" / "data" / "programas.json").exists() else []
+INSTRUCCIONES += ("\n- «programa»: si esta convocatoria es una edición de uno de estos programas, pon su clave; si no, vacío. "
+                  + "; ".join(f"{p['slug']} = {p['nombre']} ({p['ambito']})" for p in PROGRAMAS))
+
 ESQUEMA = {
     "type": "object",
     "properties": {
@@ -86,13 +93,14 @@ ESQUEMA = {
         "dudas": {"type": "array", "items": {"type": "string"}},
         "claridad": {"type": "string", "enum": ["clara", "dudosa"]},
         "pendiente_publicacion": {"type": "boolean"},
+        "programa": {"type": "string", "enum": [""] + [p["slug"] for p in PROGRAMAS]},
         "datos_no_oficiales": {"type": "boolean"},
         "documento_corresponde": {"type": "boolean"},
         "referencia_bases": {"type": "string"},
     },
     "required": ["es_ayuda_para_obras_en_vivienda", "motivo", "title", "resumen", "imp", "importe", "abre", "cierra",
                  "plazo", "req", "docs", "pasos", "tipo", "dest", "edad_min", "edad_max", "max_habitantes", "irpf",
-                 "url_solicitud", "dudas", "claridad", "documento_corresponde", "referencia_bases", "pendiente_publicacion", "datos_no_oficiales"],
+                 "url_solicitud", "dudas", "claridad", "documento_corresponde", "referencia_bases", "pendiente_publicacion", "datos_no_oficiales", "programa"],
     "additionalProperties": False,
 }
 
@@ -241,6 +249,8 @@ def fecha_ok(v):
 def aplicar(c, d, completa):
     """Pasa los datos extraídos a la ayuda. Con completa=False (ayudas ya publicadas) se mantienen título,
     resumen, tipo y destinatarios, y el resto se sustituye por lo que diga la convocatoria."""
+    if d.get("programa"):
+        c["programa"] = d["programa"]
     for k in ("title", "resumen") if completa else ():
         if d.get(k):
             c[k] = d[k].strip()

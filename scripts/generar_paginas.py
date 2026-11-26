@@ -164,6 +164,10 @@ def lista(ayudas, vacio):
 
 # ---------- páginas ----------
 
+NOMBRE_PROG = {p["slug"]: p["nombre"] for p in json.loads((WEB / "data" / "programas.json").read_text(encoding="utf-8"))["programas"]} \
+    if (WEB / "data" / "programas.json").exists() else {}
+
+
 def pagina_ayuda(a, todas):
     est, txt = estado(a)
     tipos = ", ".join(TIPOS[t][0] for t in a["tipo"])
@@ -187,6 +191,7 @@ def pagina_ayuda(a, todas):
 <p class="lead">{e(a['resumen'])}</p>
 {'<p class="alerta">El plazo de esta ayuda ya ha terminado. Te dejamos la información por si vuelve a convocarse.</p>' if est == 'cerrada' else ''}
 <div class="tabla"><table>{tabla}</table></div>
+{f'<p>Forma parte del programa: <a href="/programas/{e(a["programa"])}/">{e(NOMBRE_PROG.get(a["programa"], a["programa"]))}</a>.</p>' if a.get("programa") else ""}
 <p><a class="btn grande" href="/?ayuda={e(a['id'])}">Prepárala paso a paso en la app</a> <a class="btn alt" href="{e(a['url'])}" rel="noopener" target="_blank">Ver la convocatoria oficial</a></p>
 <h2>Requisitos</h2><ul>{''.join(f'<li>{e(r)}</li>' for r in a['req'])}</ul>
 <h2>Documentos que necesitas</h2><ul>{''.join(f'<li>{e(r)}</li>' for r in a['docs'])}</ul>
@@ -293,20 +298,38 @@ def fecha_larga(iso):
     return f"{d.day} de {MESES[d.month - 1]} de {d.year}"
 
 
-def pagina_programa(p, por_id):
+def estado_programa(p, ayudas):
+    """El estado escrito a mano en programas.json, salvo que haya publicada una convocatoria del programa
+    (ayuda con «programa» = slug, que pone la IA): entonces manda lo que diga esa convocatoria."""
+    suyas = [a for a in ayudas if a.get("programa") == p["slug"]]
+    abiertas = [a for a in suyas if estado(a)[0] != "cerrada"]
+    if abiertas:
+        a = sorted(abiertas, key=lambda x: x.get("abre") or "")[-1]
+        _, txt = estado(a)
+        return ("abierta" if estado(a)[0] == "abierta" else "proxima", "Convocatoria abierta" if estado(a)[0] == "abierta" else "Abre pronto",
+                f"Hay una convocatoria publicada: «{a['title']}». {txt}. {a['imp']}.", a, max(a.get("revisada") or "", p["revisado"]))
+    if suyas:
+        a = sorted(suyas, key=lambda x: x.get("cierra") or "")[-1]
+        return ("cerrada", "Convocatoria cerrada", f"La última convocatoria («{a['title']}») cerró el {fecha(a['cierra'])}. "
+                "Te avisaremos cuando salga la siguiente.", a, max(a.get("revisada") or "", p["revisado"]))
     clase, etiqueta = ESTADO_PROG[p["estado"]]
+    return clase, etiqueta, p["estado_texto"], None, p["revisado"]
+
+
+def pagina_programa(p, por_id, ayudas=()):
+    clase, etiqueta, estado_texto, conv, revisado = estado_programa(p, ayudas)
     tipos = [TIPOS[t] for t in p["tipo"] if t in TIPOS]
-    rel = [por_id[i] for i in p.get("relacionadas", []) if i in por_id]
+    rel = [por_id[i] for i in p.get("relacionadas", []) if i in por_id and por_id[i] is not conv]
     quien = "".join(f"<li>{e(x)}</li>" for x in p["quien"])
     fuentes = "".join(f'<li><a href="{e(u)}" rel="noopener">{e(n)}</a></li>' for n, u in p["fuentes"])
     otras = "".join(f'<li><a href="{a["_ruta"]}">{e(a["title"])}</a>: {e(a["imp"])}</li>' for a in rel)
     por_tipo = " · ".join(f'<a href="/subvenciones/{s}/">{e(n)}</a>' for n, s, _ in tipos)
     cuerpo = f"""<h1>{e(p["titulo"])}</h1>
-<p><span class="estado {clase}">{etiqueta}</span> <span class="muted">Revisado el {fecha_larga(p["revisado"])}</span></p>
+<p><span class="estado {clase}">{etiqueta}</span> <span class="muted">Revisado el {fecha_larga(revisado)}</span></p>
 <p class="lead">{e(p["que"])}</p>
 <h2>¿Se puede pedir ahora?</h2>
-<p>{e(p["estado_texto"])}</p>
-<p><a class="btn grande" href="/">Avísame cuando salga una ayuda en mi zona</a></p>
+<p>{e(estado_texto)}</p>
+{f'<p><a class="btn grande" href="{conv["_ruta"]}">Ver la convocatoria: importe, plazo y cómo pedirla</a></p>' if conv and conv.get("_ruta") else '<p><a class="btn grande" href="/">Avísame cuando salga una ayuda en mi zona</a></p>'}
 <h2>Quién puede pedirla</h2><ul>{quien}</ul>
 <h2>Quién la da y cómo funciona</h2>
 <p><b>{e(p["organismo"])}</b>. Ámbito: {e(p["ambito"])}.</p>
@@ -317,9 +340,9 @@ def pagina_programa(p, por_id):
 <p class="muted">Obrayuda no es una web oficial: resume la información de estas fuentes. Lo que vale es lo que publica el boletín oficial.</p>"""
     ruta = f"/programas/{p['slug']}/"
     ld = {"@context": "https://schema.org", "@type": "Article", "headline": p["titulo"], "url": f"{DOMINIO}{ruta}",
-          "dateModified": p["revisado"], "about": p["nombre"], "inLanguage": "es",
+          "dateModified": revisado, "about": p["nombre"], "inLanguage": "es",
           "publisher": {"@type": "Organization", "name": "Obrayuda", "url": f"{DOMINIO}/"}}
-    return pagina(ruta, f"{p['titulo']} · Obrayuda", f"{p['nombre']}: {p['estado_texto'][:120]}",
+    return pagina(ruta, f"{p['titulo']} · Obrayuda", f"{p['nombre']}: {estado_texto[:120]}",
                   cuerpo, [("Inicio", "/"), ("Programas", "/programas/"), (p["nombre"], ruta)], ld)
 
 
@@ -329,9 +352,9 @@ def paginas_programas(ayudas):
         return []
     progs = json.loads(ruta_datos.read_text(encoding="utf-8"))["programas"]
     por_id = {a["id"]: a for a in ayudas}
-    rutas = [pagina_programa(p, por_id) for p in progs]
+    rutas = [pagina_programa(p, por_id, ayudas) for p in progs]
     filas = "".join(f'<li><a href="/programas/{p["slug"]}/"><b>{e(p["nombre"])}</b></a> · {e(p["ambito"])} · '
-                    f'<span class="estado {ESTADO_PROG[p["estado"]][0]}">{ESTADO_PROG[p["estado"]][1]}</span></li>' for p in progs)
+                    f'<span class="estado {estado_programa(p, ayudas)[0]}">{estado_programa(p, ayudas)[1]}</span></li>' for p in progs)
     cuerpo = f"""<h1>Programas de ayudas para la vivienda</h1>
 <p class="lead">Los programas de ayudas más conocidos para reformar, rehabilitar o mejorar la eficiencia de tu casa: qué son, a quién van dirigidos y si se pueden pedir ahora.</p>
 <ul>{filas}</ul>
