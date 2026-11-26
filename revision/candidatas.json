@@ -627,57 +627,6 @@
    "muni": "Getafe"
   },
   {
-   "id": "bdns-944854",
-   "estado": "descartada",
-   "title": "Resolución de 25 de noviembre de 2026, de la Secretaría de Estado de Vivienda y Agenda Urbana, por la que se convocan las ayudas para la difusión, el fomento y ",
-   "org": "MINISTERIO DE VIVIENDA Y AGENDA URBANA · DIRECCIÓN GENERAL DE AGENDA URBANA Y ARQUITECTURA",
-   "scope": "estatal",
-   "ccaa": "all",
-   "tipo": [
-    "rehabilitacion"
-   ],
-   "dest": [
-    "vivienda"
-   ],
-   "importe": 0,
-   "imp": "Consulta la convocatoria",
-   "abre": "2026-11-28",
-   "cierra": "2027-01-29",
-   "plazo": "Consulta el plazo en la convocatoria",
-   "irpf": false,
-   "fuente": "BDNS nº 944854",
-   "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/944854",
-   "resumen": "Resolución de 25 de noviembre de 2026, de la Secretaría de Estado de Vivienda y Agenda Urbana, por la que se convocan las ayudas para la difusión, el fomento y la investigación de la arquitectura correspondientes al año 2026.",
-   "req": [
-    "Consulta los requisitos en la convocatoria oficial"
-   ],
-   "docs": [
-    "Consulta la documentación en la convocatoria oficial"
-   ],
-   "pasos": [
-    "Lee la convocatoria oficial",
-    "Prepara la documentación",
-    "Presenta la solicitud en la sede del organismo"
-   ],
-   "_revisar": {
-    "presupuesto_total": 3000000,
-    "bases_reguladoras": "https://www.boe.es/buscar/doc.php?id=BOE-A-2025-21537",
-    "abierta_segun_bdns": false,
-    "beneficiarios": "PERSONAS FÍSICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA PERSONAS JURÍDICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA",
-    "nota": "Revisa importe por vivienda, requisitos, documentos y pasos antes de aprobar.",
-    "ia": {
-     "fecha": "2026-11-26",
-     "documento": "página web",
-     "recomendacion": "descartar",
-     "motivo": "Son ayudas para actividades de difusión, fomento e investigación de la arquitectura (cultura), no pagan obras en una vivienda ni en un edificio de viviendas."
-    },
-    "confirmar": [
-     "El documento adjunto solo modifica las bases de 2024 y no contiene la convocatoria de 2026.",
-     "La ayuda no parece financiar obras en viviendas: confirma que es cultural."
-    ]
-   }
-  },
-  {
    "id": "bdns-944688",
    "estado": "espera",
    "title": "Rehabilitación de viviendas privadas en Valsequillo de Gran Canaria",
