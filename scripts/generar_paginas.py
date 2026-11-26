@@ -371,7 +371,7 @@ def llms_txt(ayudas, faq, rutas_tipo, rutas_ccaa):
               f"- [App de Obrayuda]({DOMINIO}/): buscador, asistente de solicitud, calculadora del IRPF y avisos de plazos",
               f"- [Todas las ayudas]({DOMINIO}/subvenciones/): listado con importes y plazos",
               f"- [Preguntas frecuentes]({DOMINIO}/preguntas/): {len(faq['preguntas'])} respuestas sobre subvenciones, IRPF, licencias y comunidades",
-              f"- [Programas de ayudas]({DOMINIO}/programas/): Plan Renhata, PREE 5000, Next Generation, Plan Estatal de Vivienda y deducción del IRPF, con su estado actual", "",
+              f"- [Programas de ayudas]({DOMINIO}/programas/): Plan Renhata, Plan Rehabilita Madrid, ayudas FEDER de Castilla-La Mancha, PREE 5000, Next Generation, Plan Estatal de Vivienda y deducción del IRPF, con su estado actual", "",
               "## Ayudas por tipo de obra", ""]
     lineas += [f"- [{n}]({DOMINIO}{r})" for n, r in rutas_tipo]
     if rutas_ccaa:
@@ -419,6 +419,9 @@ def main():
         if sel:
             rutas_tipo.append((nombre, r))
 
+    guias = json.loads((WEB / "data" / "comunidades.json").read_text(encoding="utf-8"))["comunidades"] \
+        if (WEB / "data" / "comunidades.json").exists() else {}
+    progs = json.loads((WEB / "data" / "programas.json").read_text(encoding="utf-8"))["programas"]
     rutas_ccaa = []
     for c in CCAA:
         cs = slug(c)
@@ -429,11 +432,21 @@ def main():
         if tipos_con_propias:
             enlaces = "<h2>Por tipo de obra en " + e(c) + "</h2><ul class=\"enlaces\">" + "".join(
                 f'<li><a href="/subvenciones/{cs}/{TIPOS[t][1]}/">{e(TIPOS[t][0])}</a></li>' for t in tipos_con_propias) + "</ul>"
+        g = guias.get(c)
+        if g:
+            suyos = [p for p in progs if p.get("ccaa") == c]
+            enlaces = (f'<h2>Cómo funcionan las ayudas para reformar en {e(c)}</h2>'
+                       + "".join(f"<p>{e(t)}</p>" for t in g["texto"])
+                       + f'<p><b>Quién las gestiona:</b> {e(g["gestor"])}. Más información: <a href="{e(g["web"][1])}" rel="noopener">{e(g["web"][0])}</a>.</p>'
+                       + (('<h2>Programas en ' + e(c) + '</h2><ul class="enlaces">' + "".join(
+                           f'<li><a href="/programas/{p["slug"]}/">{e(p["nombre"])}</a></li>' for p in suyos) + "</ul>") if suyos else "")
+                       + f'<p class="muted">Información revisada el {fecha(g["revisado"])}. Lo que vale es lo publicado en el boletín oficial.</p>'
+                       + enlaces)
         r = pagina_listado(f"/subvenciones/{cs}/", f"Ayudas y subvenciones para reformar tu casa en {c} ({HOY.year})",
                            f"Ayudas para reformar, rehabilitar o construir vivienda en {c}: las de toda España y las de la comunidad, "
                            "las diputaciones y los ayuntamientos. En la app puedes filtrar por tu municipio.",
                            sel, [("Inicio", "/"), ("Ayudas", "/subvenciones/"), (c, f"/subvenciones/{cs}/")], enlaces,
-                           indexar=bool(propias))
+                           indexar=bool(propias) or bool(g))
         rutas.append(r)
         if propias:
             rutas_ccaa.append((c, r))

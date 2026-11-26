@@ -1,0 +1,55 @@
+{
+ "_leeme": "Guía fija por comunidad para las páginas /subvenciones/<comunidad>/. Solo datos comprobados en fuentes oficiales o en la prensa que cita la convocatoria; revisa «revisado» cuando cambien.",
+ "comunidades": {
+  "Cataluña": {
+   "revisado": "2026-11-26",
+   "gestor": "Agència de l'Habitatge de Catalunya (Generalitat) y los ayuntamientos",
+   "web": ["Ayudas a la rehabilitación de la Generalitat", "https://habitatge.gencat.cat/ca/ajuts/ajuts-rehabilitacio/"],
+   "texto": [
+    "En Cataluña las ayudas para obras en vivienda las convoca sobre todo la Agència de l'Habitatge de Catalunya, con varias líneas que se abren en momentos distintos del año: rehabilitación energética de edificios y viviendas (fondos europeos), rehabilitación de viviendas en municipios rurales para fomentar la repoblación, obras de adaptación en el interior de la vivienda de personas mayores y rehabilitación de edificios en barrios concretos.",
+    "En 2026, la línea de rehabilitación de viviendas en entornos rurales se dotó con 5 millones de euros para unos 590 municipios, y la de obras interiores para personas mayores tuvo plazo de julio a septiembre en las demarcaciones de Girona, Tarragona, Lleida y Terres de l'Ebre. Muchos ayuntamientos y la Diputació de Barcelona tienen además sus propios programas (fachadas, baños adaptados, cascos antiguos).",
+    "Las convocatorias se publican en el Diari Oficial de la Generalitat (DOGC) y en los boletines provinciales. Obrayuda las recoge cada mañana: activa los avisos para enterarte cuando abra una en tu municipio."
+   ]
+  },
+  "Comunidad de Madrid": {
+   "revisado": "2026-11-26",
+   "gestor": "Comunidad de Madrid (Consejería de Vivienda) y los ayuntamientos, con el Plan Rehabilita en la ciudad de Madrid",
+   "web": ["Sede electrónica de la Comunidad de Madrid", "https://sede.comunidad.madrid/"],
+   "texto": [
+    "En la Comunidad de Madrid conviven tres niveles de ayudas para obras en vivienda: las de la Comunidad, que reparte los fondos del Plan Estatal de Vivienda 2026-2030; las de los ayuntamientos; y, en la ciudad de Madrid, el Plan Rehabilita del Ayuntamiento, la convocatoria municipal más grande.",
+    "El Plan Rehabilita 2026 del Ayuntamiento de Madrid tuvo plazo del 3 de junio al 30 de septiembre de 2026, con 50 millones de euros para comunidades de propietarios y propietarios de viviendas unifamiliares (accesibilidad, conservación, eficiencia energética, salubridad y una nueva línea de embellecimiento). Suele convocarse cada año.",
+    "La Comunidad publica sus convocatorias en el BOCM y el Ayuntamiento de Madrid en el BOAM. En 2026 la Comunidad convocó además ayudas urgentes para reparar viviendas dañadas por los incendios de la Sierra Oeste."
+   ]
+  },
+  "Castilla-La Mancha": {
+   "revisado": "2026-11-26",
+   "gestor": "Junta de Comunidades de Castilla-La Mancha (Consejería de Fomento, Dirección General de Vivienda)",
+   "web": ["Vivienda de Castilla-La Mancha", "https://vivienda.castillalamancha.es/"],
+   "texto": [
+    "En Castilla-La Mancha la principal ayuda para obras en vivienda es la de rehabilitación y mejora de la eficiencia energética de viviendas y edificios, cofinanciada con fondos europeos FEDER. La convocatoria de 2026, publicada en el DOCM el 13 de octubre, cuenta con 50 millones de euros y admite solicitudes hasta el 30 de noviembre de 2026.",
+    "Según la nota oficial de la Junta, es para edificios anteriores a 2006 y la obra no puede empezar antes de pedir la ayuda. Tiene tres líneas: mejora de la envolvente (fachadas, cubiertas y ventanas, con un ahorro mínimo de energía del 40 %), energías renovables, y edificios protegidos o de consumo casi nulo. Cambiar las ventanas solo entra dentro de esas obras, no como ayuda suelta.",
+    "Además, muchos ayuntamientos de la región tienen sus propias ayudas y bonificaciones del IBI o del ICIO. Las convocatorias se publican en el DOCM y en los boletines provinciales."
+   ]
+  },
+  "Navarra": {
+   "revisado": "2026-11-26",
+   "gestor": "Gobierno de Navarra (Departamento de Vivienda) y las Oficinas de Rehabilitación de Vivienda (ORVE)",
+   "web": ["Gobierno de Navarra", "https://www.navarra.es"],
+   "texto": [
+    "En Navarra la rehabilitación de viviendas y edificios se apoya con la llamada rehabilitación protegida del Gobierno de Navarra. Las solicitudes no se presentan directamente: se tramitan a través de las Oficinas de Rehabilitación de Vivienda (ORVE), que asesoran gratis y preparan el expediente. El porcentaje de ayuda depende del tipo de obra, de los ingresos y, en los edificios, de si se instala ascensor o se eliminan todas las barreras.",
+    "En 2026 se abrió además, desde el 26 de agosto, una línea de la Bolsa de Alquiler para reformar viviendas que se ponen en alquiler, de 500 a 15.000 euros por vivienda, que terminaba al agotarse el presupuesto o como muy tarde el 1 de noviembre.",
+    "Navarra tiene su propio IRPF, así que la deducción estatal por obras de eficiencia energética no se aplica igual: consulta la Hacienda Foral. Las convocatorias se publican en el Boletín Oficial de Navarra (BON)."
+   ]
+  },
+  "Comunitat Valenciana": {
+   "revisado": "2026-11-26",
+   "gestor": "Generalitat Valenciana (Conselleria con competencias en vivienda) y los ayuntamientos",
+   "web": ["Ayudas de rehabilitación de la Generalitat", "https://habitatge.gva.es/es/web/arquitectura"],
+   "texto": [
+    "En la Comunitat Valenciana las ayudas para obras en vivienda llegan por varias vías: el Plan Renhata para reformar el interior de la vivienda (cocinas, baños y adaptaciones), que se convoca cada año; los programas de rehabilitación de edificios con fondos europeos, cuya convocatoria 2024-2026 cerró el 27 de febrero de 2026; y las ayudas del Plan Estatal de Vivienda 2026-2030.",
+    "En 2026 la Generalitat convocó, dentro del Plan Estatal, ayudas para rehabilitar viviendas vacías de edificios plurifamiliares que lleven al menos dos años sin habitar y se destinen después al alquiler social o asequible. Tras la DANA, también hay ayudas para reparar fachadas y ascensores dañados.",
+    "Las convocatorias se publican en el DOGV y en la sede electrónica de la Generalitat (sede.gva.es). Muchos ayuntamientos tienen además sus propias ayudas y bonificaciones."
+   ]
+  }
+ }
+}
