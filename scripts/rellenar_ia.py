@@ -37,7 +37,7 @@ MARGEN_POR_AYUDA = 0.60  # lo máximo que suele costar una ayuda: no se empieza 
 MODELO = os.environ.get("CLAUDE_MODEL") or "claude-sonnet-5-5"
 PRECIO = {"claude-opus-5-5": (4, 20), "claude-sonnet-5-5": (2, 10), "claude-haiku-5-5": (0.10, 0.50)}  # $ por millón (entrada, salida)
 MAX_PDF_PAGINAS = 40      # más páginas (p. ej. un boletín entero): solo se envía el texto de las páginas que hablan de la ayuda
-MAX_TEXTO = 120_000       # caracteres
+MAX_TEXTO = 80_000        # caracteres (unos 20.000 tokens)
 TIPOS = ["eficiencia", "solar", "aerotermia", "ventanas", "accesibilidad", "rehabilitacion", "construccion"]
 
 INSTRUCCIONES = """Ayudas a Obrayuda, una web gratuita que explica en lenguaje sencillo las ayudas públicas españolas para reformar o construir una vivienda. Recibes la ficha de la Base de Datos Nacional de Subvenciones (BDNS) de una convocatoria y, si se ha podido descargar, el texto de sus bases o del anuncio oficial.
@@ -146,6 +146,12 @@ def bloques_documento(url, pistas):
         return ([{"type": "text", "text": f"Texto de la página de las bases ({url}):\n\n{texto}"}] if len(texto) > 200 else []), "página web"
     from pypdf import PdfReader
     pdf = PdfReader(io.BytesIO(datos))
+    if len(pdf.pages) <= MAX_PDF_PAGINAS:
+        # Si el PDF tiene texto, se manda solo el texto: enviarlo como documento incluye la imagen de cada
+        # página y cuesta varias veces más. Solo los PDF escaneados (sin texto) van como documento.
+        texto = "\n\n".join(f"[Página {i + 1}]\n{(pg.extract_text() or '').strip()}" for i, pg in enumerate(pdf.pages))
+        if len(texto.replace("[Página", "")) > 1500 * min(len(pdf.pages), 3):
+            return [{"type": "text", "text": f"Texto de las bases ({url}):\n\n{texto[:MAX_TEXTO]}"}], f"PDF de {len(pdf.pages)} páginas (texto)"
     if len(pdf.pages) <= MAX_PDF_PAGINAS and len(datos) < 20_000_000:
         return [{"type": "document", "source": {"type": "base64", "media_type": "application/pdf",
                                                 "data": base64.standard_b64encode(datos).decode()}}], f"PDF de {len(pdf.pages)} páginas"
