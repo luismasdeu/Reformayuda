@@ -1,53 +1,23 @@
 {
- "fecha": "2026-11-25T06:11",
+ "fecha": "2026-11-26T15:20",
  "modelo": "claude-sonnet-5-5",
  "procesadas": [
   {
-   "id": "bdns-943945",
-   "documento": "no se pudo descargar (HTTP Error 404: Not Found) (extracto; bases en Bases de la 2ª convocatoria adjuntas en la BDNS (convocatoria 943945); anuncio pendiente en el BOCM.)",
-   "coste_usd": 0.379,
-   "recomendacion": "publicar"
-  },
-  {
-   "id": "bdns-938584",
-   "documento": "el enlace de bases de la BDNS es genérico (ley, ordenanza general o portada) (extracto; bases en BOPMA (Boletín Oficial de la Provincia de Málaga) de 5 de noviembre de 2026, edicto 4244/2026, convocatoria de ayudas para la recuperación y adecuación de viviendas antiguas.)",
-   "coste_usd": 0.2726,
-   "recomendacion": "publicar"
-  },
-  {
-   "id": "bdns-938805",
-   "documento": "el enlace de bases de la BDNS es genérico (ley, ordenanza general o portada) (extracto; bases en Bases reguladoras publicadas en el BOP de Barcelona, CVE 202510039595, de 4 de marzo de 2025; Ordenanza General de Subvenciones en el BOP, CVE 202510145073, de 12 de septiembre de 2025.)",
-   "coste_usd": 0.6618,
+   "id": "bdns-944854",
+   "documento": "página web",
+   "coste_usd": 0.0235,
    "recomendacion": "descartar"
   },
   {
-   "id": "bdns-938969",
-   "documento": "no se pudo descargar (HTTP Error 403: Forbidden) (extracto; bases en Plan Estratégico de Subvenciones del Ayuntamiento de Eibar, anexo de subvenciones en vigor. Extracto en el BOG del 06/11/2026 (GAO-I-2026-07198).)",
-   "coste_usd": 0.0833,
-   "recomendacion": "descartar"
-  },
-  {
-   "id": "bdns-942250",
-   "documento": "PDF de 33 páginas (no eran las bases de esta ayuda: buscada en internet)",
-   "coste_usd": 0.295,
-   "recomendacion": "publicar"
-  },
-  {
-   "id": "bdns-942425",
-   "documento": "sin enlace a las bases (extracto; bases en Convocatoria publicada en el BOP de Valencia. Resolución nº 3711 de 16/11/2026 del Ayuntamiento de Xirivella. No se ha comprobado el número ni la fecha del BOP.)",
-   "coste_usd": 0.3243,
-   "recomendacion": "publicar"
-  },
-  {
-   "id": "bdns-943447",
-   "documento": "el enlace de bases de la BDNS es genérico (ley, ordenanza general o portada) (extracto; bases en Bases publicadas en la sede electrónica del Ayuntamiento de Peligros (https://peligros.sedelectronica.es/info.0). Extracto pendiente de publicar en el BOP.)",
-   "coste_usd": 0.2401,
+   "id": "bdns-944688",
+   "documento": "no se pudo descargar (<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1011)>)",
+   "coste_usd": 0.1859,
    "recomendacion": "publicar"
   }
  ],
  "errores": [],
- "coste_usd": 2.256,
+ "coste_usd": 0.209,
  "pendientes_por_tope": 0,
- "gasto_mes_usd": 16.659,
+ "gasto_mes_usd": 16.868,
  "limite_mes_usd": 20.0
 }

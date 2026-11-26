@@ -1,6 +1,6 @@
 {
  "_leeme": "Ayudas detectadas automáticamente en los boletines. Revísalas: pon \"estado\": \"aprobada\" o \"descartada\". Mira README.md.",
- "ultima_busqueda": "2026-11-25T06:11",
+ "ultima_busqueda": "2026-11-26T15:20",
  "candidatas": [
   {
    "id": "bdns-938584",
@@ -625,6 +625,117 @@
     }
    },
    "muni": "Getafe"
+  },
+  {
+   "id": "bdns-944854",
+   "estado": "descartada",
+   "title": "Resolución de 25 de noviembre de 2026, de la Secretaría de Estado de Vivienda y Agenda Urbana, por la que se convocan las ayudas para la difusión, el fomento y ",
+   "org": "MINISTERIO DE VIVIENDA Y AGENDA URBANA · DIRECCIÓN GENERAL DE AGENDA URBANA Y ARQUITECTURA",
+   "scope": "estatal",
+   "ccaa": "all",
+   "tipo": [
+    "rehabilitacion"
+   ],
+   "dest": [
+    "vivienda"
+   ],
+   "importe": 0,
+   "imp": "Consulta la convocatoria",
+   "abre": "2026-11-28",
+   "cierra": "2027-01-29",
+   "plazo": "Consulta el plazo en la convocatoria",
+   "irpf": false,
+   "fuente": "BDNS nº 944854",
+   "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/944854",
+   "resumen": "Resolución de 25 de noviembre de 2026, de la Secretaría de Estado de Vivienda y Agenda Urbana, por la que se convocan las ayudas para la difusión, el fomento y la investigación de la arquitectura correspondientes al año 2026.",
+   "req": [
+    "Consulta los requisitos en la convocatoria oficial"
+   ],
+   "docs": [
+    "Consulta la documentación en la convocatoria oficial"
+   ],
+   "pasos": [
+    "Lee la convocatoria oficial",
+    "Prepara la documentación",
+    "Presenta la solicitud en la sede del organismo"
+   ],
+   "_revisar": {
+    "presupuesto_total": 3000000,
+    "bases_reguladoras": "https://www.boe.es/buscar/doc.php?id=BOE-A-2025-21537",
+    "abierta_segun_bdns": false,
+    "beneficiarios": "PERSONAS FÍSICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA PERSONAS JURÍDICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA",
+    "nota": "Revisa importe por vivienda, requisitos, documentos y pasos antes de aprobar.",
+    "ia": {
+     "fecha": "2026-11-26",
+     "documento": "página web",
+     "recomendacion": "descartar",
+     "motivo": "Son ayudas para actividades de difusión, fomento e investigación de la arquitectura (cultura), no pagan obras en una vivienda ni en un edificio de viviendas."
+    },
+    "confirmar": [
+     "El documento adjunto solo modifica las bases de 2024 y no contiene la convocatoria de 2026.",
+     "La ayuda no parece financiar obras en viviendas: confirma que es cultural."
+    ]
+   }
+  },
+  {
+   "id": "bdns-944688",
+   "estado": "espera",
+   "title": "Rehabilitación de viviendas privadas en Valsequillo de Gran Canaria",
+   "org": "VALSEQUILLO DE GRAN CANARIA · AYUNTAMIENTO DE VALSEQUILLO DE GRAN CANARIA",
+   "scope": "municipal",
+   "ccaa": "Canarias",
+   "tipo": [
+    "rehabilitacion"
+   ],
+   "dest": [
+    "vivienda"
+   ],
+   "importe": 0,
+   "imp": "Consulta la convocatoria",
+   "abre": "2026-11-25",
+   "cierra": null,
+   "plazo": "Según la BDNS, el plazo empieza el día siguiente a la publicación en el BOP y dura 20 días hábiles. No he visto esa publicación, así que no se conoce la fecha exacta.",
+   "irpf": false,
+   "fuente": "BDNS nº 944688",
+   "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/944688",
+   "resumen": "El Ayuntamiento de Valsequillo de Gran Canaria convoca ayudas para rehabilitar viviendas de titularidad privada en el municipio. Se concede por concurrencia competitiva. El presupuesto total es de 154.421,02 €. No he podido leer las bases, así que faltan la cuantía por vivienda y los requisitos.",
+   "req": [
+    "Consulta los requisitos en la convocatoria oficial"
+   ],
+   "docs": [
+    "Consulta la documentación en la convocatoria oficial"
+   ],
+   "pasos": [
+    "Lee la convocatoria oficial",
+    "Prepara la documentación",
+    "Presenta la solicitud en la sede del organismo"
+   ],
+   "_revisar": {
+    "presupuesto_total": 154421.02,
+    "bases_reguladoras": "https://valsequillodegrancanaria.sedelectronica.es/transparency",
+    "abierta_segun_bdns": false,
+    "beneficiarios": "PERSONAS FÍSICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
+    "nota": "Revisa importe por vivienda, requisitos, documentos y pasos antes de aprobar.",
+    "ia": {
+     "fecha": "2026-11-26",
+     "documento": "no se pudo descargar (<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1011)>)",
+     "recomendacion": "publicar",
+     "motivo": "Paga obras de rehabilitación de viviendas privadas en Valsequillo, dentro del Programa para Combatir la Despoblación en el Medio Rural, pero no he podido leer las bases de esta convocatoria."
+    },
+    "confirmar": [
+     "No se han podido leer las bases ni el decreto de convocatoria. Hay que comprobar el importe por vivienda, el porcentaje y el máximo.",
+     "Hay que comprobar los requisitos, los documentos y la fecha de publicación en el BOP, de la que dependen la apertura y el cierre del plazo.",
+     "Las únicas fuentes que encontré fueron prensa y webs sobre convocatorias anteriores (2024), que no he usado."
+    ],
+    "espera": {
+     "desde": "2026-11-26",
+     "intentos": 1,
+     "proxima": "2026-11-29"
+    }
+   },
+   "prov": "Las Palmas",
+   "muni": "Valsequillo De Gran Canaria",
+   "sede": "https://valsequillodegrancanaria.sedelectronica.es"
   }
  ],
  "boe": [
