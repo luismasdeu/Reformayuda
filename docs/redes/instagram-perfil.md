@@ -6,8 +6,8 @@
 **Categoría:** Aplicación (o Página web)
 **Enlaces:** 1) https://obrayuda.es  2) el canal de Telegram cuando exista
 
-**Biografía (144/150):**
+**Biografía (140/150):**
 
 🏠 Ayudas para reformar, rehabilitar o construir tu casa
-✅ Del BOE y boletines oficiales, cada mañana
-📲 App gratis (no oficial) · Busca la tuya 👇
+📰 Revisamos el BOE y los boletines cada mañana
+📲 App gratis · Busca las de tu zona 👇
