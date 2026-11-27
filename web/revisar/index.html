@@ -46,7 +46,7 @@ const GENERICO=/^Consulta /;
 const $=s=>document.querySelector(s);
 const esc=s=>String(s??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const guardado={get(k,d){try{return JSON.parse(localStorage.getItem("rfm_rev_"+k))??d}catch(e){return d}},set(k,v){try{localStorage.setItem("rfm_rev_"+k,JSON.stringify(v))}catch(e){}}};
-let token=guardado.get("token",""), datos=null, sha=null, descIA=[], autoIA=[], estad=null, props=[], resps=[];
+let token=guardado.get("token",""), datos=null, sha=null, descIA=[], autoIA=[], estad=null, props=[], resps=[], autoResps=[];
 // Las visitas de quien revisa no cuentan en la medición anónima (mismo navegador que obrayuda.es).
 try{localStorage.setItem("rfm_yo","1")}catch(e){}
 const estado=t=>$("#estado").textContent=t||"";
@@ -105,7 +105,7 @@ async function cargar(){
     try{descIA=((await leer(DESC)).json?.ia||[]).slice().reverse()}catch(e){descIA=[]}
     try{estad=(await leer(ESTAD)).json}catch(e){estad=null}
     try{props=((await leer(PROP)).json?.propuestas||[]).filter(x=>(x.estado||"pendiente")==="pendiente")}catch(e){props=[]}
-    try{resps=((await leer(RESP)).json?.respuestas||[]).filter(x=>x.estado==="pendiente"||x.estado==="error")}catch(e){resps=[]}
+    try{const rr=(await leer(RESP)).json?.respuestas||[];resps=rr.filter(x=>x.estado==="pendiente"||x.estado==="error");autoResps=rr.filter(x=>x.auto).slice(-15).reverse()}catch(e){resps=[]}
     try{autoIA=((await leer(AYUDAS)).json?.ayudas||[]).filter(a=>a.auto).sort((a,b)=>b.auto.localeCompare(a.auto))}catch(e){autoIA=[]}
     pintar()}
   catch(e){if(e.message==="token"){guardado.set("token","");pedirToken("La llave no funciona o ha caducado ("+ultimoError+"). Crea otra.")}else estado("No se ha podido cargar. Revisa la conexión y recarga.")}
@@ -151,8 +151,14 @@ function pintar(){
   enlazar();
 }
 // ---- respuestas a comentarios y mensajes de redes ----
+function autoHtml(){
+  if(!autoResps.length)return"";
+  return`<details class="card"><summary>Contestados solos por la IA (${autoResps.length})</summary>
+   <p class="meta">Mensajes privados de Instagram respondidos automáticamente. Si quieres seguir tú la conversación, hazlo desde la app de Instagram.</p>
+   ${autoResps.map(x=>`<div style="border-top:1px solid var(--line);padding:8px 0"><p class="meta" style="margin:0"><b>${esc(x.autor||"")}</b> · ${esc((x.fecha||"").replace("T"," "))}</p><p style="margin:4px 0;font-style:italic">«${esc(x.texto)}»</p><p style="margin:0;white-space:pre-line;font-size:.9rem">${esc(x.borrador)}</p></div>`).join("")}</details>`;
+}
 function respsHtml(){
-  if(!resps.length)return"";
+  if(!resps.length)return autoHtml();
   const red={instagram:"Instagram",facebook:"Facebook"};
   return`<details class="card" open><summary>Te han escrito en redes (${resps.length})</summary>
    <p class="meta">La IA ha preparado una respuesta. Cámbiala si quieres y pulsa Enviar: se publica en unos 15 minutos.${resps.some(x=>x.tipo==="mensaje")?" Los mensajes privados hay que contestarlos en menos de 24 horas.":""}</p>
@@ -161,7 +167,7 @@ function respsHtml(){
      <p style="margin:4px 0;font-style:italic">«${esc(x.texto)}»</p>
      ${x.estado==="error"?`<div class="aviso">No se pudo enviar: ${esc(x.error||"")}</div>`:""}
      <label class="f">Respuesta<textarea rows="4" data-resp-txt>${esc(x.final||x.borrador||"")}</textarea></label>
-     <div class="row" style="margin-top:6px"><button class="b ok" data-resp-ok="${esc(x.id)}">Enviar</button><button class="b no" data-resp-no="${esc(x.id)}">No contestar</button></div></div>`).join("")}</details>`;
+     <div class="row" style="margin-top:6px"><button class="b ok" data-resp-ok="${esc(x.id)}">Enviar</button><button class="b no" data-resp-no="${esc(x.id)}">No contestar</button></div></div>`).join("")}</details>${autoHtml()}`;
 }
 async function decidirResp(id,estadoNuevo,final){
   for(let i=0;i<3;i++){const f=await leer(RESP);const x=(f.json?.respuestas||[]).find(y=>y.id===id);if(!x)return;

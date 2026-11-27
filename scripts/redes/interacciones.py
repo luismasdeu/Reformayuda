@@ -13,7 +13,8 @@ Comentarios nuevos (de publicaciones de Obrayuda):
   · Agradecimientos y emojis → respuesta corta automática.
   · Spam (enlaces ajenos, cripto, insultos) → se oculta.
   · Preguntas → la IA prepara una respuesta y espera tu aprobación en obrayuda.es/revisar/.
-Mensajes privados nuevos (Instagram) → igual que las preguntas (borrador para aprobar).
+Mensajes privados nuevos (Instagram) → la IA contesta sola (información general, máximo 3 por persona y día);
+  si no puede, deja un borrador para aprobar.
 Las respuestas aprobadas en /revisar/ se envían en la siguiente pasada.
 
 Estado en revision/redes-interacciones.json y borradores en revision/redes-respuestas.json.
@@ -332,7 +333,21 @@ def main():
                               message=json.dumps(mensaje_seguir()), messaging_type="RESPONSE")
                         est["seguir"][usuario] = {"texto": t, "media": "", "fecha": ahora.isoformat(timespec="minutes")}
                     elif t.strip():
-                        nuevo_borrador("instagram", "mensaje", de["id"], usuario, t, "Mensaje privado a la cuenta de Obrayuda.")
+                        hoy_ = ahora.date().isoformat()
+                        cuenta = est.setdefault("auto_dm", {}).get(usuario, {})
+                        n = cuenta.get("n", 0) if cuenta.get("dia") == hoy_ else 0
+                        b = borrador(cliente, t, "Mensaje privado a la cuenta de Obrayuda.", gasto) if cliente and n < 3 else None
+                        if b and b["necesita_respuesta"] and b["respuesta"].strip():
+                            texto = b["respuesta"].strip() + "\n\n— Respuesta automática de Obrayuda"
+                            graph("POST", f"{pagina}/messages", token, recipient=json.dumps({"id": de["id"]}),
+                                  message=json.dumps({"text": texto}), messaging_type="RESPONSE")
+                            est["auto_dm"][usuario] = {"dia": hoy_, "n": n + 1}
+                            resp["respuestas"].append({"id": f"instagram-{msg['id']}", "red": "instagram", "tipo": "mensaje",
+                                                       "objetivo": de["id"], "autor": usuario, "texto": t, "borrador": texto,
+                                                       "estado": "enviada", "auto": True, "fecha": ahora.isoformat(timespec="minutes")})
+                            print("Respuesta automática a", usuario)
+                        elif not b or b["necesita_respuesta"]:
+                            nuevo_borrador("instagram", "mensaje", de["id"], usuario, t, "Mensaje privado a la cuenta de Obrayuda.")
                 except RuntimeError as ex:
                     print("Error con el mensaje", msg["id"], ex)
 
@@ -359,6 +374,7 @@ def main():
     # Guardar (los pendientes de seguir caducan a los 7 días; se guardan los últimos 3.000 ids vistos)
     limite = (ahora - dt.timedelta(days=7)).isoformat(timespec="minutes")
     est["seguir"] = {u: v for u, v in est["seguir"].items() if v["fecha"] >= limite}
+    est["auto_dm"] = {u: v for u, v in est.get("auto_dm", {}).items() if v.get("dia") == ahora.date().isoformat()}
     est["vistos"] = list(vistos)[-3000:]
     est["actualizado"] = ahora.isoformat(timespec="minutes")
     resp["respuestas"] = [r for r in resp["respuestas"] if r["estado"] in ("pendiente", "aprobada", "error")] + \
