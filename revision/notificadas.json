@@ -16,6 +16,7 @@
   "bdns-937771",
   "bdns-940275",
   "bdns-940941",
+  "bdns-941340",
   "bdns-941790",
   "bdns-942439",
   "irpf-ee",
@@ -23,9 +24,7 @@
   "mun-icio",
   "pev-rehab"
  ],
- "revision_avisadas": [
-  "bdns-941340"
- ],
+ "revision_avisadas": [],
  "auto_avisadas": [
   "bdns-940941",
   "bdns-941790",
