@@ -1,6 +1,6 @@
 {
  "_leeme": "Ayudas publicadas en la app. Edita con cuidado: el formato se comprueba antes de publicar (scripts/validar.py).",
- "actualizado": "2026-11-20",
+ "actualizado": "2026-11-27",
  "ayudas": [
   {
    "id": "pev-rehab",
@@ -962,6 +962,51 @@
    "revisada": "2026-11-20",
    "auto": "2026-11-20",
    "ia": "2026-11-21"
+  },
+  {
+   "id": "bdns-941340",
+   "title": "Rehabilitación de inmuebles en el casco urbano de Agullent",
+   "org": "AGULLENT · AYUNTAMIENTO DE AGULLENT",
+   "scope": "municipal",
+   "ccaa": "Comunitat Valenciana",
+   "tipo": [
+    "rehabilitacion"
+   ],
+   "dest": [
+    "vivienda",
+    "edificio"
+   ],
+   "importe": 8000,
+   "imp": "Hasta el 50 % de la obra (sin IVA) y un máximo de 8.000 € por vivienda, honorarios técnicos incluidos. Si es vivienda unifamiliar y vives en ella, el máximo sube un 25 %.",
+   "abre": "2026-11-21",
+   "cierra": "2026-12-10",
+   "plazo": "Hasta el 10/12/2026",
+   "irpf": false,
+   "fuente": "BDNS nº 941340",
+   "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/941340",
+   "resumen": "El Ayuntamiento de Agullent paga parte de las obras de rehabilitación de inmuebles del Centro Histórico y de los del casco urbano con más de 50 años. Pueden pedirla propietarios y comunidades de propietarios. La subvención cubre como máximo el 50 % del presupuesto de la obra, sin IVA.",
+   "req": [
+    "Ser propietario del inmueble o comunidad de propietarios.",
+    "El inmueble debe estar en el Área de Rehabilitación del Centro Histórico de Agullent o en el casco urbano y tener más de 50 años.",
+    "La subvención es como máximo el 50 % del presupuesto de la obra, sin IVA.",
+    "Para el aumento del 25 % debes vivir en la vivienda unifamiliar como residencia habitual."
+   ],
+   "docs": [
+    "Formulario de solicitud del Ayuntamiento.",
+    "Documentos que acrediten que eres propietario (los detalles están en las bases).",
+    "Presupuesto de las obras."
+   ],
+   "pasos": [
+    "Comprueba que tu inmueble está en la zona y tiene más de 50 años.",
+    "Descarga el formulario de solicitud en la sede electrónica del Ayuntamiento.",
+    "Presenta la solicitud con la documentación en 20 días naturales desde la publicación en el BOP.",
+    "Espera la resolución del Ayuntamiento.",
+    "Haz la obra y justifícala para cobrar la ayuda."
+   ],
+   "prov": "Valencia",
+   "muni": "Agullent",
+   "sede": "https://agullent.sedelectronica.es",
+   "revisada": "2026-11-27"
   }
  ]
 }
