@@ -77,6 +77,7 @@ function encaja(h, tags) {
 }
 
 // La IA mira las miniaturas y elige el clip que de verdad muestra lo que se dice (o ninguno)
+let avisos429 = 0;
 async function elegirConIA(s, candidatos) {
   const clave = process.env.ANTHROPIC_API_KEY;
   if (!clave || candidatos.length === 0) return candidatos.length ? 0 : -1;
@@ -95,10 +96,13 @@ async function elegirConIA(s, candidatos) {
     const r = await fetch("https://api.anthropic.com/v1/messages", {
       method: "POST",
       headers: { "x-api-key": clave, "anthropic-version": "2023-06-01", "content-type": "application/json" },
-      body: JSON.stringify({ model: process.env.CLAUDE_MODELO_FONDOS || "claude-haiku-5-5", max_tokens: 10, messages: [{ role: "user", content: contenido }] }),
+      body: JSON.stringify({ model: process.env.CLAUDE_MODELO_FONDOS || "claude-sonnet-5-5", max_tokens: 10, messages: [{ role: "user", content: contenido }] }),
     });
     const j = await r.json();
-    if (r.status === 429 || r.status === 529) { await new Promise((ok) => setTimeout(ok, 20000)); continue; }
+    if (r.status === 429 || r.status === 529) {
+      if (!avisos429++) console.error(`Límite de la API (${r.status}):`, JSON.stringify(j).slice(0, 300));
+      await new Promise((ok) => setTimeout(ok, 15000)); continue;
+    }
     if (!r.ok) throw new Error(JSON.stringify(j).slice(0, 200));
     const n = parseInt(String(j.content?.[0]?.text || "").match(/\d+/)?.[0] || "0", 10);
     return n >= 1 && n <= candidatos.length ? n - 1 : -1;
