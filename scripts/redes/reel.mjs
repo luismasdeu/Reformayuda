@@ -47,7 +47,7 @@ async function fondoVideo(q, minimo, tmp, i) {
   const clave = process.env.PIXABAY_API_KEY;
   if (!clave) return null;
   try {
-    const r = await fetch(`https://pixabay.com/api/videos/?key=${clave}&q=${encodeURIComponent(q)}&per_page=30&safesearch=true`);
+    const r = await fetch(`https://pixabay.com/api/videos/?key=${clave}&q=${encodeURIComponent(q)}&per_page=30&safesearch=true&video_type=film&min_width=1280`);
     if (!r.ok) throw new Error(`Pixabay ${r.status}`);
     const hits = (await r.json()).hits || [];
     const buenos = hits.filter((h) => !usados.has(h.id) && h.duration >= Math.min(minimo, 8));
