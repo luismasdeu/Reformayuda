@@ -59,7 +59,7 @@ const duracion = (f) => parseFloat(execFileSync("ffprobe", ["-v", "error", "-sho
 function voz(texto, voces, archivo) {
   // 1) Voz neuronal de Microsoft (edge-tts). 2) Si falla, Piper (sin conexión, modelo en PIPER_MODELO).
   try {
-    execFileSync("edge-tts", ["--voice", voces, "--rate", "+8%", "--text", texto, "--write-media", archivo], { stdio: "pipe", timeout: 60000 });
+    execFileSync("edge-tts", ["--voice", voces, "--rate", "+12%", "--text", texto, "--write-media", archivo], { stdio: "pipe", timeout: 60000 });
     if (fs.statSync(archivo).size > 1000) return archivo;
   } catch (e) { if (!avisado.edge) { avisado.edge = 1; console.error("edge-tts no disponible:", String(e.stderr || e).trim().split("\n").pop().slice(0, 160)); } }
   if (process.env.PIPER_MODELO) {
