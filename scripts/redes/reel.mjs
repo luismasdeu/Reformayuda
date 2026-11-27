@@ -23,45 +23,85 @@ const marca = (s = "") => esc(s).replace(/\*\*(.+?)\*\*/g, "<em>$1</em>").replac
 const FPS = 30;
 
 // ---------- fondos de vídeo ----------
+// Cada tema: búsquedas (de más a menos concreta) y etiquetas de Pixabay de las que el clip debe tener al menos una.
+const OBRA = ["renovation", "construction", "builder", "worker", "repair", "drill", "plaster", "brick", "tiles", "tiling", "paint", "painting", "carpenter", "contractor", "handyman", "tools", "remodeling", "renovate", "scaffolding", "workman", "craftsman"];
+const CASA = ["house", "home", "apartment", "building", "facade", "residential", "interior", "room", "flat", "villa"];
 const TEMAS = [
-  [/ventan/i, "window house"], [/tejad|cubierta|gotera/i, "roof tiles"], [/placa|solar|renovable/i, "solar panels roof"],
-  [/aerotermia|caldera|calefacci|radiador/i, "heating radiator home"], [/aisla|fachada|envolvente/i, "building facade"],
-  [/baño|ducha|bañera/i, "bathroom renovation"], [/cocina/i, "kitchen renovation"], [/ascensor|escaler|rampa/i, "elevator building"],
-  [/comunidad|edificio|vecin|junta|acta/i, "apartment building"], [/humedad|pared|pintar/i, "painting wall"],
-  [/construir|autoconstru|proyecto|licencia/i, "house construction"], [/mayor|padres|abuel/i, "elderly couple home"],
-  [/pueblo|rural/i, "village house"], [/papel|certificad|factura|document|justific|bases|solicit|sede/i, "documents paperwork"],
-  [/hacienda|renta|deduc|irpf|dinero|€|euros|pag/i, "euro coins"], [/ibi|icio|ayuntamiento|impuesto/i, "city hall"],
-  [/inund|dana/i, "flood street"], [/subvenci|ayuda|reforma|obra/i, "home renovation"], [/telegram|móvil|avisos|enteras/i, "smartphone hand"],
+  [/ventan/i, ["window installation", "window replacement", "installing window", "house window"], ["window", "windows"]],
+  [/tejad|cubierta|gotera|teja/i, ["roof repair", "roofer working", "roof tiles"], ["roof", "roofer", "roofing", "tiles"]],
+  [/placa|solar|renovable|autoconsumo/i, ["solar panels installation", "solar panels roof"], ["solar", "photovoltaic", "panel"]],
+  [/aerotermia|caldera|calefacci|radiador|bomba de calor/i, ["heat pump", "radiator heating", "boiler"], ["heating", "radiator", "heat", "boiler", "thermostat"]],
+  [/aisla|envolvente|frío|frio|calor/i, ["wall insulation", "insulation installation", "thermal insulation"], ["insulation", "insulating", "wool", "facade"]],
+  [/fachada/i, ["building facade renovation", "facade painting", "scaffolding building"], ["facade", "scaffolding", "building", "wall"]],
+  [/baño|ducha|bañera|plato de ducha/i, ["bathroom renovation", "shower installation", "bathroom tiles"], ["bathroom", "shower", "bath", "toilet", "tiles"]],
+  [/cocina/i, ["kitchen renovation", "kitchen installation"], ["kitchen"]],
+  [/ascensor|escaler|rampa|salvaescal|accesib|silla de ruedas|movilidad/i, ["elevator building", "wheelchair ramp", "stairs building"], ["elevator", "lift", "wheelchair", "ramp", "stairs", "staircase"]],
+  [/humedad|pared|pintar|pintura/i, ["painting wall", "wall repair", "plastering wall"], ["paint", "painting", "wall", "plaster"]],
+  [/construir|autoconstru|primera vivienda|licencia|proyecto/i, ["house construction", "building a house", "construction site"], ["construction", "building", "house", "site", "builder"]],
+  [/comunidad|edificio|vecin|junta|acta/i, ["apartment building", "residential building", "building facade"], ["building", "apartment", "residential", "facade"]],
+  [/mayor|padres|abuel/i, ["elderly couple home", "senior home"], ["elderly", "senior", "old", "grandparents"]],
+  [/pueblo|rural|campo/i, ["village house", "old stone house", "rural house"], ["village", "rural", "stone", "house", "countryside"]],
+  [/papel|certificad|factura|document|justific|bases|solicit|sede|trámite|tramite|formulario/i, ["documents paperwork", "filling form", "signing document"], ["document", "documents", "paper", "paperwork", "form", "signing", "office", "contract"]],
+  [/hacienda|renta|deduc|irpf|dinero|€|euros|devuelv|pag|ahorr|factura de la luz/i, ["euro coins", "euro banknotes", "euro money"], ["euro", "euros", "coins", "money", "banknotes", "cash"]],
+  [/ibi|icio|ayuntamiento|impuesto/i, ["city hall spain", "town hall building"], ["city hall", "town hall", "building", "government"]],
+  [/inund|dana/i, ["flood street", "flooded house"], ["flood", "flooding", "water"]],
+  [/telegram|móvil|movil|avisos|enteras|notifica/i, ["smartphone hand", "using phone"], ["phone", "smartphone", "mobile"]],
 ];
-const GENERICOS = ["home renovation", "house renovation interior", "construction site house", "builder renovation", "house exterior spain"];
+const GENERAL = [["home renovation", "house renovation", "renovation worker", "construction worker", "builder working"], [...OBRA, ...CASA]];
+const PROHIBIDAS = ["yoga", "fitness", "sport", "exercise", "gym", "dance", "dancing", "running", "laboratory", "lab", "science", "scientist", "medical",
+  "hospital", "doctor", "candle", "candles", "candlestick", "christmas", "fantasy", "abstract", "animation", "cartoon", "3d", "render", "space", "galaxy",
+  "stars", "night sky", "fireworks", "beach", "sea", "ocean", "forest", "animal", "dog", "cat", "bird", "food", "cooking", "wedding", "party", "fashion",
+  "model", "makeup", "beauty", "car", "cars", "factory", "industry", "industrial", "textile", "dollar", "dollars", "us dollar", "bitcoin", "crypto", "war",
+  "fire", "smoke", "explosion", "game", "gaming", "music", "concert", "church", "religion", "halloween", "horror", "drink", "alcohol", "bikini", "lingerie"];
+const USADOS_F = path.join(RAIZ, "revision", "redes-videos-usados.json");
+const usadosAntes = new Set(fs.existsSync(USADOS_F) ? JSON.parse(fs.readFileSync(USADOS_F, "utf8")).ids || [] : []);
 const usados = new Set();
 
-function tema(s, i) {
-  if (s.fondo) return s.fondo;
+function temaDe(s, guion) {
   const t = `${s.texto || ""} ${s.voz || ""}`;
-  for (const [re, q] of TEMAS) if (re.test(t)) return q;
-  return GENERICOS[i % GENERICOS.length];
+  for (const [re, q, tags] of TEMAS) if (re.test(t)) return [q, tags];
+  // Gancho y escenas sin tema claro: el tema del reel entero
+  const todo = guion.escenas.map((e) => `${e.texto || ""} ${e.voz || ""}`).join(" ");
+  for (const [re, q, tags] of TEMAS) if (re.test(todo) && !/hacienda|renta|deduc|dinero|€|euros|devuelv|pag/i.test(String(re))) return [q, tags];
+  return GENERAL;
 }
 
-async function fondoVideo(q, minimo, tmp, i) {
+function encaja(h, tags) {
+  const et = ` ${String(h.tags || "").toLowerCase()} `;
+  if (PROHIBIDAS.some((p) => et.includes(` ${p} `) || et.includes(` ${p},`) || et.includes(`,${p} `))) return false;
+  const lista = et.split(",").map((x) => x.trim());
+  return tags.some((tg) => lista.some((x) => x === tg || x.split(" ").includes(tg)));
+}
+
+async function fondoVideo(s, guion, minimo, tmp, i) {
   const clave = process.env.PIXABAY_API_KEY;
   if (!clave) return null;
-  try {
-    const r = await fetch(`https://pixabay.com/api/videos/?key=${clave}&q=${encodeURIComponent(q)}&per_page=30&safesearch=true&video_type=film&min_width=1280`);
-    if (!r.ok) throw new Error(`Pixabay ${r.status}`);
-    const hits = (await r.json()).hits || [];
-    const buenos = hits.filter((h) => !usados.has(h.id) && h.duration >= Math.min(minimo, 8));
-    const h = buenos[Math.floor(Math.random() * Math.min(buenos.length, 4))];  // entre los más populares (los más acertados)
-    if (!h) return null;
-    usados.add(h.id);
-    const v = h.videos.medium?.url ? h.videos.medium : h.videos.large || h.videos.small;
-    const destino = path.join(tmp, `f${i}.mp4`);
-    fs.writeFileSync(destino, Buffer.from(await (await fetch(v.url)).arrayBuffer()));
-    return destino;
-  } catch (e) {
-    console.error(`Sin vídeo de fondo para «${q}»:`, String(e).slice(0, 120));
-    return null;
+  const [busquedas, tags] = temaDe(s, guion);
+  for (const q of [...busquedas, ...(busquedas === GENERAL[0] ? [] : GENERAL[0])]) {
+    const exigidas = busquedas.includes(q) ? tags : GENERAL[1];
+    try {
+      const r = await fetch(`https://pixabay.com/api/videos/?key=${clave}&q=${encodeURIComponent(q)}&per_page=50&safesearch=true&video_type=film&min_width=1280`);
+      if (!r.ok) throw new Error(`Pixabay ${r.status}`);
+      const buenos = ((await r.json()).hits || []).filter((h) => !usados.has(h.id) && !usadosAntes.has(h.id) && h.duration >= Math.min(minimo, 8) && encaja(h, exigidas));
+      const h = buenos[Math.floor(Math.random() * Math.min(buenos.length, 3))];
+      if (!h) continue;
+      usados.add(h.id);
+      const v = h.videos.medium?.url ? h.videos.medium : h.videos.large || h.videos.small;
+      const destino = path.join(tmp, `f${i}.mp4`);
+      fs.writeFileSync(destino, Buffer.from(await (await fetch(v.url)).arrayBuffer()));
+      console.error(`Escena ${i + 1}: «${q}» → clip ${h.id} (${String(h.tags).slice(0, 60)})`);
+      return destino;
+    } catch (e) {
+      console.error(`Búsqueda «${q}» fallida:`, String(e).slice(0, 120));
+    }
   }
+  return null;
+}
+
+function guardarUsados() {
+  if (!usados.size || process.env.NO_APUNTAR_CLIPS) return;
+  const ids = [...usadosAntes, ...usados].slice(-1500);
+  fs.writeFileSync(USADOS_F, JSON.stringify({ ids }, null, 0) + "\n");
 }
 
 // ---------- voz ----------
@@ -213,7 +253,7 @@ for (const [i, s] of guion.escenas.entries()) {
   const caps = path.join(tmp, `caps${i}.txt`);
   fs.writeFileSync(caps, lista.map(([f, t]) => `file '${path.resolve(f)}'\nduration ${t.toFixed(3)}`).join("\n") + `\nfile '${path.resolve(lista.at(-1)[0])}'\n`);
 
-  const video = await fondoVideo(tema(s, i), d, tmp, i);
+  const video = await fondoVideo(s, guion, d, tmp, i);
   conVideo += video ? 1 : 0;
   const fondo = video ? ["-stream_loop", "-1", "-i", video] : ["-loop", "1", "-i", fondoMarca];
   const oscuro = s.tipo === "cta" ? "-0.22" : (s.tipo === "pregunta" || s.tipo === "golpe") ? "-0.2" : "-0.12";
@@ -238,5 +278,6 @@ execFileSync("ffmpeg", ["-y", "-loglevel", "error", "-f", "concat", "-safe", "0"
   "-map", "[v]", "-map", "0:a", "-c:v", "libx264", "-preset", "medium", "-crf", "21", "-c:a", "aac", "-b:a", "128k",
   "-movflags", "+faststart", path.join(salida, "reel.mp4")]);
 execFileSync("ffmpeg", ["-y", "-loglevel", "error", "-ss", "0.6", "-i", path.join(salida, "reel.mp4"), "-frames:v", "1", "-q:v", "3", path.join(salida, "portada.jpg")]);
+guardarUsados();
 fs.rmSync(tmp, { recursive: true, force: true });
 console.log(`Reel listo: ${path.join(salida, "reel.mp4")} · ${total.toFixed(1)} s · voz en ${conVoz}/${partes.length} · vídeo de fondo en ${conVideo}/${partes.length}`);
