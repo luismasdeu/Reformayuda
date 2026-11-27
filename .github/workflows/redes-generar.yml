@@ -33,11 +33,12 @@ jobs:
       - name: Generar si hace falta
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          META_PAGE_TOKEN: ${{ secrets.META_PAGE_TOKEN }}
           CLAUDE_MODEL: ${{ vars.CLAUDE_MODEL }}
         run: python scripts/redes/generar_contenido.py ${{ inputs.forzar && '--forzar' || '' }}
       - name: Guardar
         run: |
           git config user.name "reformayuda-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add revision/redes-propuestas.json revision/gasto-ia.json 2>/dev/null || true
+          git add revision/redes-propuestas.json revision/gasto-ia.json revision/redes-metricas.json 2>/dev/null || true
           git diff --cached --quiet || (git commit -m "Redes: propuestas de contenido de la IA" && git pull --rebase -q && git push)

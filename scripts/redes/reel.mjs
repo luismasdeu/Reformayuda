@@ -122,14 +122,27 @@ const CSS = `
 .subs{position:absolute;left:70px;right:150px;top:1060px;text-align:center;font-weight:800;font-size:104px;line-height:1.08;letter-spacing:-1px;text-transform:uppercase}
 .subs span{display:inline-block;margin:0 .2em;paint-order:stroke fill;-webkit-text-stroke:16px #000;text-shadow:0 6px 18px rgba(0,0,0,.55)}
 .subs span.on{color:#FFC23D}
+.banner{position:absolute;left:70px;top:230px;background:#E5322D;color:#fff;font:800 46px N;letter-spacing:2px;padding:12px 26px;border-radius:12px;box-shadow:0 8px 24px rgba(0,0,0,.35)}
+.titulo.caja{-webkit-text-stroke:0;text-shadow:none;color:#11302A;background:#fff;border-radius:26px;padding:26px 34px;font-size:78px;line-height:1.08}
+.titulo.caja em{color:#0D7A63}
+.sello{position:absolute;left:50%;top:470px;transform:translateX(-50%) rotate(-8deg);font:800 170px B;letter-spacing:4px;padding:10px 46px;border:14px solid;border-radius:30px;background:rgba(0,0,0,.35)}
+.sello.mito{color:#FF5A4F;border-color:#FF5A4F}.sello.verdad{color:#43D17A;border-color:#43D17A}
+.icono{position:absolute;left:50%;top:430px;transform:translateX(-50%);font-size:260px;line-height:1;filter:drop-shadow(0 10px 20px rgba(0,0,0,.5))}
+.num{position:absolute;left:50%;top:400px;transform:translateX(-50%);width:300px;height:300px;border-radius:50%;background:#FFC23D;color:#11302A;
+  font:800 210px B;display:flex;align-items:center;justify-content:center;box-shadow:0 14px 40px rgba(0,0,0,.4)}
 .cta{position:absolute;left:70px;right:150px;top:330px;background:#FFC23D;color:#11302A;border-radius:44px;padding:56px 54px;box-shadow:0 20px 50px rgba(0,0,0,.35)}
 .cta .t{font-weight:800;font-size:84px;line-height:1.05;letter-spacing:-1.5px}.cta em{font-style:normal;color:#0D7A63}
 .cta .b{margin-top:34px;display:inline-flex;gap:18px;align-items:center;background:#fff;border-radius:60px;padding:22px 40px;font:800 52px N}
 `;
 
-function capa(s, grupo, palabras, activa) {
+function capa(s, grupo, palabras, activa, estilo) {
   let arriba = "";
-  if (s.tipo === "gancho") arriba = `<div class="titulo">${marca(s.texto)}</div>`;
+  if (s.tipo === "gancho" && estilo === "noticia") arriba = `<div class="banner">${esc(s.banner || "🚨 ÚLTIMA HORA")}</div><div class="titulo" style="top:340px">${marca(s.texto)}</div>`;
+  else if (s.tipo === "gancho" && estilo === "pov") arriba = `<div class="titulo caja">${marca(s.texto.startsWith("POV") ? s.texto : "POV: " + s.texto)}</div>`;
+  else if (s.tipo === "gancho") arriba = `<div class="titulo">${marca(s.texto)}</div>`;
+  else if (s.veredicto) arriba = `<div class="sello ${/mito|falso/i.test(s.veredicto) ? "mito" : "verdad"}">${esc(s.veredicto.toUpperCase())}</div>`;
+  else if (s.marca === "mal" || s.marca === "bien") arriba = `<div class="icono">${s.marca === "mal" ? "❌" : "✅"}</div>`;
+  else if (estilo === "lista" && s.n) arriba = `<div class="num">${esc(s.n)}</div>`;
   else if (s.tipo === "cifra") arriba = `<div class="cifra">${esc(s.cifra || "")}</div>`;
   else if (s.tipo === "cta") arriba = `<div class="cta"><div class="t">${marca(s.texto)}</div><div class="b">💬 ${esc(s.palabra || "AYUDA")}</div></div>`;
   const subs = grupo ? `<div class="subs">${grupo.map((k) => `<span class="${k === activa ? "on" : ""}">${esc(palabras[k].w)}</span>`).join("")}</div>` : "";
@@ -173,7 +186,7 @@ for (const [i, s] of guion.escenas.entries()) {
   let n = 0;
   const imagen = async (grupo, activa) => {
     const f = path.join(tmp, `c${i}_${n++}.png`);
-    await pagina.setContent(capa(s, grupo, palabras, activa));
+    await pagina.setContent(capa(s, grupo, palabras, activa, guion.estilo || "subtitulos"));
     await pagina.evaluate(() => document.fonts.ready);
     await pagina.screenshot({ path: f, omitBackground: true });
     return f;

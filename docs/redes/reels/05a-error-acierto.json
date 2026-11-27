@@ -1,0 +1,42 @@
+{
+ "voz": "es-ES-XimenaNeural",
+ "estilo": "error",
+ "escenas": [
+  {
+   "tipo": "gancho",
+   "texto": "Así **sí** y así **no**: pedir una ayuda para tu obra",
+   "voz": "Así sí, y así no. Cómo pedir bien una ayuda para tu obra."
+  },
+  {
+   "tipo": "punto",
+   "texto": "Contratar y empezar **ya**",
+   "voz": "Así no: contratar al albañil y empezar ya.",
+   "marca": "mal"
+  },
+  {
+   "tipo": "punto",
+   "texto": "Leer las bases y **pedirla primero**",
+   "voz": "Así sí: leer las bases, y pedir la ayuda primero.",
+   "marca": "bien"
+  },
+  {
+   "tipo": "punto",
+   "texto": "Presupuesto «**todo incluido**»",
+   "voz": "Así no: un presupuesto de todo incluido.",
+   "marca": "mal"
+  },
+  {
+   "tipo": "punto",
+   "texto": "Presupuesto **desglosado** por partidas",
+   "voz": "Así sí: un presupuesto desglosado, partida por partida.",
+   "marca": "bien"
+  },
+  {
+   "tipo": "cta",
+   "texto": "Comenta **AYUDA** y te digo las de tu zona",
+   "voz": "Comenta ayuda, y te digo las de tu zona.",
+   "palabra": "AYUDA"
+  }
+ ],
+ "texto": "Así SÍ y así NO: cómo pedir una ayuda para tu obra ✅❌\n\nCada ayuda tiene sus bases: revisa siempre la convocatoria oficial.\n\n💬 Comenta AYUDA y te digo las de tu zona.\n🔎 obrayuda.es (enlace en el perfil)\n\n#subvenciones #reformas #consejos #ayudasvivienda #reformacasa"
+}

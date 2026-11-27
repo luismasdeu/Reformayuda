@@ -1,0 +1,36 @@
+{
+ "voz": "es-ES-XimenaNeural",
+ "estilo": "lista",
+ "escenas": [
+  {
+   "tipo": "gancho",
+   "texto": "**3 errores** que te dejan sin subvención",
+   "voz": "Tres errores que te dejan sin subvención. El número uno es el más común."
+  },
+  {
+   "tipo": "punto",
+   "texto": "Pagar la obra **en efectivo**",
+   "voz": "Tres. Pagar la obra en efectivo. Siempre con tarjeta o transferencia.",
+   "n": 3
+  },
+  {
+   "tipo": "punto",
+   "texto": "Tirar las **facturas** y justificantes",
+   "voz": "Dos. Tirar las facturas y los justificantes. Te los pedirán para justificar.",
+   "n": 2
+  },
+  {
+   "tipo": "punto",
+   "texto": "Empezar **antes de pedirla**",
+   "voz": "Y uno. Empezar la obra antes de pedir la ayuda. En muchas, eso te deja fuera.",
+   "n": 1
+  },
+  {
+   "tipo": "cta",
+   "texto": "Comenta **AYUDA** y te digo las de tu zona",
+   "voz": "Comenta ayuda, y te digo las de tu zona.",
+   "palabra": "AYUDA"
+  }
+ ],
+ "texto": "3 errores que te dejan sin subvención (el n.º 1 es el más común) 🚫\n\nCada ayuda tiene sus bases: revisa siempre la convocatoria oficial.\n\n💬 Comenta AYUDA y te digo las de tu zona.\n🔎 obrayuda.es (enlace en el perfil)\n\n#subvenciones #reformas #errores #ayudasvivienda #reformacasa"
+}

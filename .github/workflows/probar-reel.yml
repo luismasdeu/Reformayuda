@@ -32,7 +32,7 @@ jobs:
           PIXABAY_API_KEY: ${{ secrets.PIXABAY_API_KEY }}
         run: |
           mkdir -p docs/redes/pruebas
-          if [ "${{ inputs.guion }}" = todos ]; then L=$(ls docs/redes/reels/*.json); else L="docs/redes/reels/${{ inputs.guion }}.json"; fi
+          if [ "${{ inputs.guion }}" = todos ]; then L=$(ls docs/redes/reels/*.json); else L=$(for g in ${{ inputs.guion }}; do echo docs/redes/reels/$g.json; done); fi
           for g in $L; do n=$(basename $g .json); node scripts/redes/reel.mjs "$g" "/tmp/r/$n" && cp "/tmp/r/$n/reel.mp4" "docs/redes/pruebas/$n.mp4"; done
       - name: Guardar
         run: |

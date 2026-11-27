@@ -1,0 +1,36 @@
+{
+ "voz": "es-ES-XimenaNeural",
+ "estilo": "mito",
+ "escenas": [
+  {
+   "tipo": "gancho",
+   "texto": "¿**Mito o verdad**? 3 cosas que se oyen de las ayudas",
+   "voz": "Mito o verdad. Tres cosas que todo el mundo dice sobre las ayudas para obras."
+  },
+  {
+   "tipo": "punto",
+   "texto": "«Solo son para gente con pocos ingresos»",
+   "voz": "Solo son para gente con pocos ingresos. Mito. Muchas no miran la renta, sino el tipo de obra.",
+   "veredicto": "MITO"
+  },
+  {
+   "tipo": "punto",
+   "texto": "«Si ya empecé la obra, puedo perderla»",
+   "voz": "Si ya empecé la obra, puedo perderla. Verdad. En muchas, la obra no puede haber empezado.",
+   "veredicto": "VERDAD"
+  },
+  {
+   "tipo": "punto",
+   "texto": "«Hacienda no devuelve nada por las ventanas»",
+   "voz": "Hacienda no devuelve nada por cambiar las ventanas. Mito. Puede entrar en la deducción por eficiencia energética.",
+   "veredicto": "MITO"
+  },
+  {
+   "tipo": "cta",
+   "texto": "Comenta **AYUDA** y te digo las de tu zona",
+   "voz": "Comenta ayuda, y te digo las de tu zona.",
+   "palabra": "AYUDA"
+  }
+ ],
+ "texto": "¿Mito o verdad? 3 cosas que todo el mundo dice de las ayudas para obras 🤔\n\nCada ayuda tiene sus bases: revisa siempre la convocatoria oficial.\n\n💬 Comenta AYUDA y te digo las de tu zona.\n🔎 obrayuda.es (enlace en el perfil)\n\n#mitoverdad #ayudasvivienda #subvenciones #reformas #deduccionirpf"
+}

@@ -1,0 +1,33 @@
+{
+ "voz": "es-ES-XimenaNeural",
+ "estilo": "pov",
+ "escenas": [
+  {
+   "tipo": "gancho",
+   "texto": "te enteras de la ayuda **el día después de que cierre**",
+   "voz": "Te enteras de la ayuda para tu obra, el día después de que cierre."
+  },
+  {
+   "tipo": "punto",
+   "texto": "Las ayudas abren y cierran **en pocas semanas**",
+   "voz": "Pasa muchísimo. Las ayudas abren y cierran en pocas semanas."
+  },
+  {
+   "tipo": "punto",
+   "texto": "Y cada una sale **en un boletín distinto**",
+   "voz": "Y cada una sale en un boletín distinto: el del Estado, el de tu comunidad, el de tu provincia."
+  },
+  {
+   "tipo": "punto",
+   "texto": "Obrayuda las mira **cada mañana** por ti",
+   "voz": "Por eso Obrayuda los revisa cada mañana, y te avisa de las de tu zona."
+  },
+  {
+   "tipo": "cta",
+   "texto": "Comenta **AYUDA** y te digo las de tu zona",
+   "voz": "Comenta ayuda, y te digo las de tu zona.",
+   "palabra": "AYUDA"
+  }
+ ],
+ "texto": "POV: te enteras de la ayuda el día después de que cierre 😩\n\nCada ayuda tiene sus bases: revisa siempre la convocatoria oficial.\n\n💬 Comenta AYUDA y te digo las de tu zona.\n🔎 obrayuda.es (enlace en el perfil)\n\n#ayudasvivienda #subvenciones #reformas #pov #reformacasa"
+}

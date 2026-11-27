@@ -46,6 +46,15 @@ Reels (vídeos verticales de 20-30 s con voz y texto grande):
 - Escena final de llamada a la acción.
 - «texto_publicacion»: el texto que acompaña al reel en Instagram: primera línea gancho con un emoji, 3 viñetas, una línea «Cada ayuda tiene sus bases: revisa siempre la convocatoria oficial.», la llamada a comentar, «🔎 Busca las ayudas de tu zona en obrayuda.es (enlace en el perfil)» y como máximo 5 hashtags en una línea.
 
+Estilos de reel (reparte la tanda entre todos, y haz más de los que mejor funcionen según las métricas que te paso):
+- "subtitulos": consejo directo. Gancho fuerte y 3 escenas.
+- "noticia": algo que la gente debe saber ya (un plazo general, una norma, un error muy común). Banner de 2-3 palabras en "banner" (por ejemplo «⚠️ OJO», «🚨 IMPORTANTE»). Nunca inventes noticias ni fechas.
+- "mito": 3 escenas, cada una una creencia falsa o verdadera sobre ayudas u obras; pon en "veredicto" MITO o VERDAD y explica por qué en la voz.
+- "lista": «3 cosas que…», cuenta atrás: pon "n" = 3, 2, 1 en las escenas.
+- "pov": el gancho es una situación con la que la gente se identifica («POV: te enteras de la ayuda el día después de que cierre»). Texto del gancho en primera persona y corto.
+- "error": escenas alternas del error y de lo correcto; pon "marca" = "mal" o "bien".
+En los campos que no apliquen al estilo, deja cadena vacía ("") o 0.
+
 Carruseles (4-6 imágenes): portada con gancho, 2-4 diapositivas de lista (3 puntos cada una, máximo 90 caracteres) o de texto (máximo 300 caracteres), y llamada final. «texto_publicacion» como en los reels.
 """
 
@@ -55,12 +64,15 @@ ESQUEMA = {
     "properties": {
         "reels": {"type": "array", "items": {
             "type": "object", "additionalProperties": False,
-            "required": ["nombre", "emoji", "gancho", "voz_gancho", "escenas", "palabra", "cta", "voz_cta", "texto_publicacion"],
+            "required": ["nombre", "estilo", "banner", "emoji", "gancho", "voz_gancho", "escenas", "palabra", "cta", "voz_cta", "texto_publicacion"],
             "properties": {
                 "nombre": {"type": "string", "description": "slug corto en minúsculas con guiones"},
                 "emoji": TEXTO, "gancho": TEXTO, "voz_gancho": TEXTO,
+                "estilo": {"type": "string", "enum": ["subtitulos", "noticia", "mito", "lista", "pov", "error"]},
+                "banner": TEXTO,
                 "escenas": {"type": "array", "items": {"type": "object", "additionalProperties": False,
-                            "required": ["texto", "voz", "emoji"], "properties": {"texto": TEXTO, "voz": TEXTO, "emoji": TEXTO}}},
+                            "required": ["texto", "voz", "emoji", "veredicto", "marca", "n"],
+                            "properties": {"texto": TEXTO, "voz": TEXTO, "emoji": TEXTO, "veredicto": TEXTO, "marca": TEXTO, "n": {"type": "integer"}}}},
                 "palabra": TEXTO, "cta": TEXTO, "voz_cta": TEXTO, "texto_publicacion": TEXTO}}},
         "carruseles": {"type": "array", "items": {
             "type": "object", "additionalProperties": False,
@@ -101,10 +113,54 @@ def pendientes_de_publicar():
 
 
 def a_guion(r):
-    esc = [{"tipo": "gancho", "emoji": r["emoji"], "texto": r["gancho"], "voz": r["voz_gancho"]}]
-    esc += [{"tipo": "punto", "emoji": e["emoji"], "texto": e["texto"], "voz": e["voz"]} for e in r["escenas"][:4]]
+    gancho = {"tipo": "gancho", "emoji": r["emoji"], "texto": r["gancho"], "voz": r["voz_gancho"]}
+    if r.get("banner"):
+        gancho["banner"] = r["banner"]
+    esc = [gancho]
+    for e in r["escenas"][:4]:
+        x = {"tipo": "punto", "emoji": e["emoji"], "texto": e["texto"], "voz": e["voz"]}
+        for k in ("veredicto", "marca"):
+            if e.get(k):
+                x[k] = e[k]
+        if e.get("n"):
+            x["n"] = e["n"]
+        esc.append(x)
     esc.append({"tipo": "cta", "texto": r["cta"], "voz": r["voz_cta"], "palabra": r["palabra"].upper()})
-    return {"voz": "es-ES-XimenaNeural", "escenas": esc, "texto": r["texto_publicacion"]}
+    return {"voz": "es-ES-XimenaNeural", "estilo": r.get("estilo", "subtitulos"), "escenas": esc, "texto": r["texto_publicacion"]}
+
+
+def metricas():
+    """Visualizaciones, alcance, guardados y compartidos de cada publicación (Instagram), para aprender qué funciona."""
+    token = os.environ.get("META_PAGE_TOKEN", "").strip()
+    if not token:
+        return []
+    out = []
+    for p in redes.leer_registro()["publicadas"]:
+        if not p.get("instagram") or p["fecha"] < (dt.date.today() - dt.timedelta(days=60)).isoformat():
+            continue
+        try:
+            datos = redes.graph("GET", f"{p['instagram']}/insights", token, metric="views,reach,saved,shares,comments,likes").get("data", [])
+        except RuntimeError:
+            continue
+        m = {d["name"]: (d.get("values") or [{}])[0].get("value", d.get("total_value", {}).get("value", 0)) for d in datos}
+        out.append({"fecha": p["fecha"], "formato": p.get("formato", "carrusel"), "nombre": p["nombre"], **m})
+    return out
+
+
+def resumen_metricas(ms):
+    if not ms:
+        return "Aún no hay métricas: reparte la tanda entre todos los estilos para probar."
+    estilos = {}
+    for f in list(redes.REELS.glob("*.json")) + list(redes.BANCO.glob("*.json")):
+        d = json.loads(f.read_text(encoding="utf-8"))
+        estilos[f.stem] = (d.get("estilo") or ("carrusel" if "slides" in d else "subtitulos"),
+                           (d.get("escenas") or d.get("slides"))[0].get("texto") or d["slides"][0].get("titulo", ""))
+    filas = []
+    for m in sorted(ms, key=lambda x: -(x.get("shares", 0) * 3 + x.get("saved", 0) * 2 + x.get("views", 0) / 100)):
+        est, gancho = estilos.get(m["nombre"], ("ayuda concreta", m["nombre"]))
+        filas.append(f"{m['formato']} · estilo {est} · vistas {m.get('views', 0)} · guardados {m.get('saved', 0)} · "
+                     f"compartidos {m.get('shares', 0)} · «{str(gancho).replace('**', '')[:90]}»")
+    return "Métricas de lo publicado (de mejor a peor):\n" + "\n".join(filas[:25])
 
 
 def a_carrusel(c):
@@ -136,10 +192,15 @@ def main():
         print("Tope mensual de IA casi alcanzado: no genero contenido este mes.")
         return
 
+    ms = metricas()
+    if ms:
+        (RAIZ / "revision" / "redes-metricas.json").write_text(json.dumps({"fecha": dt.date.today().isoformat(), "publicaciones": ms},
+                                                                         ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
     pedir_r = TANDA_REELS if n_reels < MIN_REELS or forzar else 0
     pedir_c = TANDA_CARRUSELES if n_carr < MIN_CARRUSELES or forzar else 0
     peticion = (f"Escribe {pedir_r} reels y {pedir_c} carruseles nuevos.\n\n"
                 "Ya publicados o preparados (no repitas tema ni gancho):\n" + "\n".join(existentes()) +
+                "\n\n" + resumen_metricas(ms) +
                 "\n\nDatos fiables que puedes usar: deducción del IRPF por obras de eficiencia energética en vivienda del 20 % "
                 "(hasta 1.000 € al año) o del 40 % (hasta 3.000 € al año), y del 60 % en obras del edificio (hasta 9.000 € en total); "
                 "exige certificado energético antes y después, factura a tu nombre y pago no en efectivo. Bonificaciones municipales: "

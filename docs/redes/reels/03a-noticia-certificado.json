@@ -1,0 +1,34 @@
+{
+ "voz": "es-ES-XimenaNeural",
+ "estilo": "noticia",
+ "escenas": [
+  {
+   "tipo": "gancho",
+   "texto": "Si vas a reformar, **pide esto ANTES**",
+   "voz": "Atención si vas a reformar este año. Pide esto antes de empezar.",
+   "banner": "⚠️ IMPORTANTE"
+  },
+  {
+   "tipo": "punto",
+   "texto": "El **certificado energético** de tu vivienda",
+   "voz": "El certificado energético de tu vivienda. Lo hace un técnico y se registra en tu comunidad."
+  },
+  {
+   "tipo": "punto",
+   "texto": "Sin el de **antes**, no hay deducción",
+   "voz": "Sin el certificado de antes, no puedes demostrar la mejora, y te quedas sin la deducción."
+  },
+  {
+   "tipo": "punto",
+   "texto": "Hasta el **60 %** en obras del edificio",
+   "voz": "Y la deducción puede llegar al sesenta por ciento en obras del edificio."
+  },
+  {
+   "tipo": "cta",
+   "texto": "Comenta **AYUDA** y te digo las de tu zona",
+   "voz": "Comenta ayuda, y te digo las de tu zona.",
+   "palabra": "AYUDA"
+  }
+ ],
+ "texto": "⚠️ Si vas a reformar, pide el certificado energético ANTES de empezar\n\nCada ayuda tiene sus bases: revisa siempre la convocatoria oficial.\n\n💬 Comenta AYUDA y te digo las de tu zona.\n🔎 obrayuda.es (enlace en el perfil)\n\n#certificadoenergetico #deduccionirpf #reformas #ayudasvivienda #eficienciaenergetica"
+}
