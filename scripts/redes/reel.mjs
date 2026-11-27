@@ -60,7 +60,7 @@ function voz(texto, voces, archivo) {
   try {
     execFileSync("edge-tts", ["--voice", voces, "--rate", "+8%", "--text", texto, "--write-media", archivo], { stdio: "pipe", timeout: 60000 });
     if (fs.statSync(archivo).size > 1000) return true;
-  } catch { /* sin voz */ }
+  } catch (e) { console.error("Sin voz:", String(e.stderr || e).trim().split("\n").slice(-2).join(" ")); }
   return false;
 }
 
