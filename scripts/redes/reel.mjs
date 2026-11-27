@@ -24,7 +24,7 @@ const FPS = 30;
 
 // ---------- fondos de vídeo ----------
 // Cada tema: búsquedas (de más a menos concreta) y etiquetas de Pixabay de las que el clip debe tener al menos una.
-const OBRA = ["renovation", "construction", "builder", "worker", "repair", "drill", "plaster", "brick", "tiles", "tiling", "paint", "painting", "carpenter", "contractor", "handyman", "tools", "remodeling", "renovate", "scaffolding", "workman", "craftsman"];
+const OBRA = ["renovation", "construction", "builder", "construction worker", "repair", "drill", "plaster", "brick", "tiles", "tiling", "paint", "painting", "carpenter", "contractor", "handyman", "tools", "remodeling", "renovate", "scaffolding", "workman", "craftsman"];
 const CASA = ["house", "home", "apartment", "building", "facade", "residential", "interior", "room", "flat", "villa"];
 const TEMAS = [
   [/ventan/i, ["window installation", "installing window", "window replacement", "window frame worker", "carpenter window"],
@@ -54,7 +54,7 @@ const PROHIBIDAS = ["yoga", "fitness", "sport", "exercise", "gym", "dance", "dan
   "hospital", "doctor", "candle", "candles", "candlestick", "christmas", "fantasy", "abstract", "animation", "cartoon", "3d", "render", "space", "galaxy",
   "stars", "night sky", "fireworks", "beach", "sea", "ocean", "forest", "animal", "dog", "cat", "bird", "food", "cooking", "wedding", "party", "fashion",
   "model", "makeup", "beauty", "car", "cars", "factory", "industry", "industrial", "textile", "dollar", "dollars", "us dollar", "bitcoin", "crypto", "war",
-  "fire", "smoke", "explosion", "rain", "raindrop", "raindrops", "rainy", "weather", "storm", "snow", "drops", "droplets", "antique", "vintage", "calligraphy", "typewriter", "dictionary", "encyclopedia", "book", "books", "piggy bank", "gambling", "casino", "game", "gaming", "music", "concert", "church", "religion", "halloween", "horror", "drink", "alcohol", "bikini", "lingerie"];
+  "fire", "smoke", "explosion", "rain", "raindrop", "raindrops", "rainy", "weather", "storm", "snow", "drops", "droplets", "antique", "vintage", "calligraphy", "typewriter", "dictionary", "encyclopedia", "book", "books", "piggy bank", "gambling", "casino", "bees", "bee", "insects", "insect", "flowers", "tulips", "field", "agriculture", "farm", "skyscraper", "vietnam", "india", "toy", "game", "gaming", "music", "concert", "church", "religion", "halloween", "horror", "drink", "alcohol", "bikini", "lingerie"];
 const USADOS_F = path.join(RAIZ, "revision", "redes-videos-usados.json");
 const usadosAntes = new Set(fs.existsSync(USADOS_F) ? JSON.parse(fs.readFileSync(USADOS_F, "utf8")).ids || [] : []);
 const usados = new Set();
@@ -73,7 +73,37 @@ function encaja(h, tags) {
   if (PROHIBIDAS.some((p) => et.includes(` ${p} `) || et.includes(` ${p},`) || et.includes(`,${p} `))) return false;
   const lista = et.split(",").map((x) => x.trim());
   const tiene = (tg) => lista.some((x) => x === tg || x.split(" ").includes(tg));
-  return tags.some((tg) => tg.split("+").every(tiene));  // «a+b» = tiene que tener las dos
+  return tags.some((tg) => tg === "" || tg.split("+").every(tiene));  // «a+b» = tiene que tener las dos
+}
+
+// La IA mira las miniaturas y elige el clip que de verdad muestra lo que se dice (o ninguno)
+async function elegirConIA(s, candidatos) {
+  const clave = process.env.ANTHROPIC_API_KEY;
+  if (!clave || candidatos.length === 0) return candidatos.length ? 0 : -1;
+  const contenido = [];
+  candidatos.forEach((h, k) => {
+    const url = h.videos.medium?.thumbnail || h.videos.small?.thumbnail || h.videos.tiny?.thumbnail;
+    contenido.push({ type: "text", text: `Imagen ${k + 1}:` }, { type: "image", source: { type: "url", url } });
+  });
+  contenido.push({ type: "text", text:
+    `Es un reel de Obrayuda (ayudas para obras y reformas en viviendas, en España). En esta escena la voz dice: «${s.voz || s.texto.replace(/\*\*/g, "")}».\n` +
+    `¿Qué imagen muestra mejor y de forma clara lo que se dice (por ejemplo obreros cambiando ventanas, una obra en una casa, monedas de euro, papeles de un trámite, un edificio de viviendas)? ` +
+    `Descarta lo que no tenga relación directa: deporte, laboratorios, naturaleza, oficinas de rascacielos, animales, objetos decorativos, dólares, fábricas, otros países con aspecto muy distinto a España. ` +
+    `Responde SOLO con el número de la imagen, o 0 si ninguna encaja claramente.` });
+  try {
+    const r = await fetch("https://api.anthropic.com/v1/messages", {
+      method: "POST",
+      headers: { "x-api-key": clave, "anthropic-version": "2023-06-01", "content-type": "application/json" },
+      body: JSON.stringify({ model: process.env.CLAUDE_MODELO_FONDOS || "claude-haiku-5-5", max_tokens: 10, messages: [{ role: "user", content: contenido }] }),
+    });
+    const j = await r.json();
+    if (!r.ok) throw new Error(JSON.stringify(j).slice(0, 200));
+    const n = parseInt(String(j.content?.[0]?.text || "").match(/\d+/)?.[0] || "0", 10);
+    return n >= 1 && n <= candidatos.length ? n - 1 : -1;
+  } catch (e) {
+    console.error("La IA no ha podido elegir el fondo:", String(e).slice(0, 160));
+    return 0;
+  }
 }
 
 async function fondoVideo(s, guion, minimo, tmp, i) {
@@ -85,9 +115,12 @@ async function fondoVideo(s, guion, minimo, tmp, i) {
     try {
       const r = await fetch(`https://pixabay.com/api/videos/?key=${clave}&q=${encodeURIComponent(q)}&per_page=50&safesearch=true&video_type=film&min_width=1280`);
       if (!r.ok) throw new Error(`Pixabay ${r.status}`);
-      const buenos = ((await r.json()).hits || []).filter((h) => !usados.has(h.id) && !usadosAntes.has(h.id) && h.duration >= Math.min(minimo, 8) && encaja(h, exigidas));
-      const h = buenos[Math.floor(Math.random() * Math.min(buenos.length, 3))];
-      if (!h) continue;
+      const validos = ((await r.json()).hits || []).filter((h) => !usados.has(h.id) && !usadosAntes.has(h.id) && h.duration >= Math.min(minimo, 8) && encaja(h, [""]));
+      // Primero los que tienen las etiquetas del tema; la IA decide entre los 8 primeros
+      const candidatos = [...validos.filter((h) => encaja(h, exigidas)), ...validos.filter((h) => !encaja(h, exigidas))].slice(0, 8);
+      const k = await elegirConIA(s, candidatos);
+      if (k < 0) continue;
+      const h = candidatos[k];
       usados.add(h.id);
       const v = h.videos.medium?.url ? h.videos.medium : h.videos.large || h.videos.small;
       const destino = path.join(tmp, `f${i}.mp4`);

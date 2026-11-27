@@ -30,6 +30,7 @@ jobs:
       - name: Generar
         env:
           PIXABAY_API_KEY: ${{ secrets.PIXABAY_API_KEY }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: |
           mkdir -p docs/redes/pruebas
           if [ "${{ inputs.guion }}" = todos ]; then L=$(ls docs/redes/reels/*.json); else L=$(for g in ${{ inputs.guion }}; do echo docs/redes/reels/$g.json; done); fi
