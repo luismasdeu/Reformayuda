@@ -1,0 +1,11 @@
+# Muestra qué publicaciones ve Meta en Instagram y Facebook (no publica nada).
+name: Redes · comprobar
+on: workflow_dispatch
+jobs:
+  comprobar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - run: python scripts/redes/redes.py comprobar
+        env:
+          META_PAGE_TOKEN: ${{ secrets.META_PAGE_TOKEN }}

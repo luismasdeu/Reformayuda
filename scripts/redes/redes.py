@@ -391,7 +391,26 @@ def publicar(carpeta):
         sys.exit(1)
 
 
+def comprobar():
+    """Muestra qué ve Meta en la cuenta: publicaciones de Instagram y de la página."""
+    token = os.environ["META_PAGE_TOKEN"].strip()
+    pagina = graph("GET", "me", token, fields="id,name")
+    print("Página:", pagina["name"], pagina["id"])
+    ig = graph("GET", pagina["id"], token, fields="instagram_business_account{id,username,media_count}")
+    print("Instagram:", json.dumps(ig.get("instagram_business_account"), ensure_ascii=False))
+    cuenta = ig.get("instagram_business_account", {}).get("id")
+    if cuenta:
+        for m in graph("GET", f"{cuenta}/media", token, fields="id,media_type,permalink,timestamp").get("data", [])[:5]:
+            print("  IG:", m)
+    for p in graph("GET", f"{pagina['id']}/posts", token, fields="id,permalink_url,created_time,is_published").get("data", [])[:5]:
+        print("  FB:", p)
+    print("Permisos del token:", graph("GET", "me/permissions", token).get("data", "solo de página"))
+
+
 if __name__ == "__main__":
+    if sys.argv[1:2] == ["comprobar"]:
+        comprobar()
+        sys.exit(0)
     if len(sys.argv) >= 2 and sys.argv[1] == "planificar":
         planificar_reel() if sys.argv[2:3] == ["reel"] else planificar()
     elif len(sys.argv) >= 3 and sys.argv[1] == "publicar":
