@@ -290,12 +290,18 @@ def main():
                         graph("POST", c["id"], token, hide="true")
                         print("Oculto (spam):", t[:60])
                     elif es_palabra(t, claves):
-                        graph("POST", f"{c['id']}/replies", token, message=random.choice(
-                            ["¡Te lo mandamos por privado! 📩", "¡Hecho! Mira tus mensajes 📩", "¡Te lo enviamos por privado! 📩"]))
-                        graph("POST", f"{pagina}/messages", token, recipient=json.dumps({"comment_id": c["id"]}),
-                              message=json.dumps(mensaje_seguir()))
-                        est["seguir"][c["username"]] = {"texto": t, "media": m["id"], "fecha": ahora.isoformat(timespec="minutes")}
-                        print("Palabra clave de", c["username"], ":", t)
+                        try:
+                            graph("POST", f"{pagina}/messages", token, recipient=json.dumps({"comment_id": c["id"]}),
+                                  message=json.dumps(mensaje_seguir()))
+                            graph("POST", f"{c['id']}/replies", token, message=random.choice(
+                                ["¡Te lo mandamos por privado! 📩", "¡Hecho! Mira tus mensajes 📩", "¡Te lo enviamos por privado! 📩"]))
+                            est["seguir"][c["username"]] = {"texto": t, "media": m["id"], "fecha": ahora.isoformat(timespec="minutes")}
+                            print("Palabra clave de", c["username"], ": privado enviado")
+                        except RuntimeError as ex:
+                            # Sin permiso para escribir por privado a esa persona: se contesta en público con los enlaces
+                            graph("POST", f"{c['id']}/replies", token,
+                                  message="¡Aquí lo tienes! 🙌\n" + enlaces(t, m["id"]) + "\nY síguenos para no perderte las nuevas 😉")
+                            print("Palabra clave de", c["username"], ": respuesta pública (privado no permitido:", str(ex)[:120], ")")
                     elif GRACIAS.match(t):
                         graph("POST", f"{c['id']}/replies", token, message=random.choice(
                             ["¡Gracias! 🙌", "¡Gracias por comentar! 😊", "¡Nos alegra que te sirva! 🙌"]))
