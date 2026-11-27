@@ -149,12 +149,13 @@ def main():
 
     import anthropic
     cliente = anthropic.Anthropic()
-    r = cliente.beta.messages.create(
+    with cliente.beta.messages.stream(
         model=MODELO, max_tokens=32000, system=INSTRUCCIONES,
         messages=[{"role": "user", "content": peticion}],
         output_config={"effort": "medium", "format": {"type": "json_schema", "schema": ESQUEMA}},
         betas=["server-side-fallback-2026-07-01"], fallbacks="default",
-    )
+    ) as flujo:
+        r = flujo.get_final_message()
     if r.stop_reason in ("refusal", "max_tokens"):
         raise SystemExit(f"Respuesta incompleta ({r.stop_reason})")
     texto = [b.text for b in r.content if b.type == "text"][-1]
