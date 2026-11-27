@@ -1,0 +1,47 @@
+{
+ "slides": [
+  {
+   "tipo": "portada",
+   "ceja": "Ayuda abierta · Comunitat Valenciana",
+   "titulo": "Reparar fachadas dañadas por la **DANA**",
+   "cifra": "Hasta 6.000 €",
+   "sub": "Hasta el 100 % de la obra · Plazo hasta el 22 de diciembre"
+  },
+  {
+   "tipo": "lista",
+   "ceja": "Quién puede pedirla",
+   "titulo": "Requisitos",
+   "marcas": "check",
+   "puntos": [
+    "Edificios de viviendas con **daños visibles** de la DANA en la fachada",
+    "En los **municipios de los anexos III y IV** de las bases",
+    "Obras de **limpieza y reparación** (mínimo 300 €)",
+    "**Una ayuda por inmueble**; en comunidades la pide el presidente"
+   ]
+  },
+  {
+   "tipo": "texto",
+   "ceja": "Ojo",
+   "titulo": "Va por\n**orden de llegada**",
+   "texto": "Se concede según llegan las solicitudes completas, hasta agotar los 4 millones de euros de la convocatoria. Mejor no esperar al final del plazo."
+  },
+  {
+   "tipo": "lista",
+   "ceja": "Cómo pedirla",
+   "titulo": "Paso a paso",
+   "puntos": [
+    "Comprueba que tu municipio está en los anexos",
+    "Reúne presupuesto o factura y pruebas de los daños",
+    "Preséntala en la **sede electrónica de la Generalitat**",
+    "¿Sin certificado digital? Pide cita en una oficina **PROP**"
+   ],
+   "nota": "Fuente: BDNS n.º 935567 · Secretaría Autonómica de Vivienda. Obrayuda no es un organismo público."
+  },
+  {
+   "tipo": "cta",
+   "titulo": "Comenta **DANA**\ny te paso el enlace oficial",
+   "sub": "Compártelo con tu comunidad de vecinos."
+  }
+ ],
+ "texto": "Si tu edificio sufrió la DANA, la Generalitat paga hasta el 100 % de la fachada (máx. 6.000 €) 🏢\n\n✅ Edificios de viviendas con daños visibles de la DANA en la fachada\n✅ En los municipios de los anexos III y IV de las bases\n✅ Limpieza y reparación, desde 300 €\n📅 Plazo: hasta el 22 de diciembre de 2026\n⚠️ Va por orden de llegada hasta agotar 4 millones de euros\n\nSe pide en la sede electrónica de la Generalitat. Si no tienes certificado digital, pide cita en una oficina PROP.\n\n💬 Comenta DANA y te paso el enlace oficial.\n🔎 Todas las ayudas de tu zona: obrayuda.es (enlace en el perfil)\n\nFuente: BDNS n.º 935567. Obrayuda no es un organismo público.\n\n#dana #comunitatvalenciana #ayudasvivienda #subvenciones #comunidaddevecinos"
+}
