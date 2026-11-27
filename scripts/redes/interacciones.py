@@ -304,8 +304,14 @@ def main():
                     print("Error con el comentario", c["id"], ex)
 
         # 3) Mensajes privados de Instagram
-        convs = graph("GET", f"{pagina}/conversations", token, platform="instagram",
-                      fields="participants,messages.limit(5){id,message,from,created_time}", limit=20).get("data", [])
+        try:
+            convs = graph("GET", f"{pagina}/conversations", token, platform="instagram",
+                          fields="participants,messages.limit(5){id,message,from,created_time}", limit=20).get("data", [])
+            est.pop("aviso_mensajes", None)
+        except RuntimeError as ex:
+            convs = []
+            est["aviso_mensajes"] = "Activa en Instagram: Configuración → Mensajes y respuestas a historias → Herramientas conectadas → Permitir acceso a los mensajes."
+            print("Mensajes de Instagram no disponibles:", str(ex)[:200])
         for conv in convs:
             for msg in reversed(conv.get("messages", {}).get("data", [])):
                 de = msg.get("from", {})
