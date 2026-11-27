@@ -130,6 +130,12 @@ const CSS = `
 .icono{position:absolute;left:50%;top:430px;transform:translateX(-50%);font-size:260px;line-height:1;filter:drop-shadow(0 10px 20px rgba(0,0,0,.5))}
 .num{position:absolute;left:50%;top:400px;transform:translateX(-50%);width:300px;height:300px;border-radius:50%;background:#FFC23D;color:#11302A;
   font:800 210px B;display:flex;align-items:center;justify-content:center;box-shadow:0 14px 40px rgba(0,0,0,.4)}
+.gigante{position:absolute;left:60px;right:120px;top:0;bottom:0;display:flex;flex-direction:column;justify-content:center;padding-bottom:180px;
+  font-weight:800;font-size:132px;line-height:1.0;letter-spacing:-3px;text-align:left;paint-order:stroke fill;-webkit-text-stroke:18px rgba(0,0,0,.9);
+  text-shadow:0 8px 30px rgba(0,0,0,.55)}
+.gigante.larga{font-size:110px}.gigante em{font-style:normal;color:#FFC23D}
+.gigante.golpe{color:#FFC23D}.gigante.golpe em{color:#fff}
+.gigante .banner{position:static;align-self:flex-start;margin-bottom:34px;-webkit-text-stroke:0;text-shadow:none;letter-spacing:2px}
 .cta{position:absolute;left:70px;right:150px;top:330px;background:#FFC23D;color:#11302A;border-radius:44px;padding:56px 54px;box-shadow:0 20px 50px rgba(0,0,0,.35)}
 .cta .t{font-weight:800;font-size:84px;line-height:1.05;letter-spacing:-1.5px}.cta em{font-style:normal;color:#0D7A63}
 .cta .b{margin-top:34px;display:inline-flex;gap:18px;align-items:center;background:#fff;border-radius:60px;padding:22px 40px;font:800 52px N}
@@ -137,6 +143,12 @@ const CSS = `
 
 function capa(s, grupo, palabras, activa, estilo) {
   let arriba = "";
+  if (s.tipo === "pregunta" || s.tipo === "golpe") {  // gancho en dos golpes: texto enorme y solo, sin subtítulos
+    const largo = s.texto.replace(/\*\*/g, "").length > 60 ? " larga" : "";
+    const banner = s.banner ? `<div class="banner">${esc(s.banner)}</div>` : "";
+    return `<html><head><meta charset="utf-8"><style>${CSS}</style></head><body><div class="e"><div class="marca">${ICONO}<span>@obrayuda</span></div>` +
+      `<div class="gigante ${s.tipo === "golpe" ? "golpe" : ""}${largo}">${banner}<div>${marca(s.texto)}</div></div></div></body></html>`;
+  }
   if (s.tipo === "gancho" && estilo === "noticia") arriba = `<div class="banner">${esc(s.banner || "🚨 ÚLTIMA HORA")}</div><div class="titulo" style="top:340px">${marca(s.texto)}</div>`;
   else if (s.tipo === "gancho" && estilo === "pov") arriba = `<div class="titulo caja">${marca(s.texto.startsWith("POV") ? s.texto : "POV: " + s.texto)}</div>`;
   else if (s.tipo === "gancho") arriba = `<div class="titulo">${marca(s.texto)}</div>`;
@@ -204,7 +216,7 @@ for (const [i, s] of guion.escenas.entries()) {
   const video = await fondoVideo(tema(s, i), d, tmp, i);
   conVideo += video ? 1 : 0;
   const fondo = video ? ["-stream_loop", "-1", "-i", video] : ["-loop", "1", "-i", fondoMarca];
-  const oscuro = s.tipo === "cta" ? "-0.22" : "-0.12";
+  const oscuro = s.tipo === "cta" ? "-0.22" : (s.tipo === "pregunta" || s.tipo === "golpe") ? "-0.2" : "-0.12";
   const sonido = audio ? ["-i", audio] : ["-f", "lavfi", "-t", String(d), "-i", "anullsrc=r=44100:cl=stereo"];
   const mp4 = path.join(tmp, `e${i}.mp4`);
   execFileSync("ffmpeg", ["-y", "-loglevel", "error", ...fondo, ...sonido, "-f", "concat", "-safe", "0", "-i", caps,

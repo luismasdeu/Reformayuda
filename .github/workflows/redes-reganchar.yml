@@ -1,0 +1,22 @@
+name: Redes · rehacer ganchos
+on: workflow_dispatch
+permissions:
+  contents: write
+jobs:
+  ganchos:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+      - run: pip install --quiet anthropic==2.3.0
+      - run: python scripts/redes/reganchar.py
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          CLAUDE_MODEL: ${{ vars.CLAUDE_MODEL }}
+      - run: |
+          git config user.name "reformayuda-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/redes/reels
+          git diff --cached --quiet || (git commit -qm "Redes: ganchos nuevos (pregunta + golpe)" && (for i in 1 2 3; do git pull --rebase -q && git push -q && break; sleep 5; done))

@@ -1,10 +1,14 @@
 {
  "escenas": [
   {
-   "tipo": "gancho",
-   "emoji": "🚧",
-   "texto": "Si ya has empezado la obra, **puede que hayas perdido la ayuda**",
-   "voz": "Si ya has empezado la obra, puede que hayas perdido la ayuda."
+   "tipo": "pregunta",
+   "texto": "¿Pensabas pedir una **subvención** para tu reforma… y ya has empezado la obra?",
+   "voz": "¿Pensabas pedir una subvención para tu reforma, y ya has empezado la obra?"
+  },
+  {
+   "tipo": "golpe",
+   "texto": "Puede que ya hayas **perdido la ayuda**",
+   "voz": "Puede que ya hayas perdido la ayuda."
   },
   {
    "tipo": "punto",
