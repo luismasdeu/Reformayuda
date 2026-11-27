@@ -2,10 +2,14 @@
  "voz": "es-ES-XimenaNeural",
  "escenas": [
   {
-   "tipo": "gancho",
-   "emoji": "☀️",
-   "texto": "Placas solares: **3 ahorros** que casi nadie aprovecha",
-   "voz": "Placas solares. Tres ahorros que casi nadie aprovecha."
+   "tipo": "pregunta",
+   "texto": "¿Vas a poner placas solares en casa?",
+   "voz": "¿Vas a poner placas solares en casa?"
+  },
+  {
+   "tipo": "golpe",
+   "texto": "Hay **3 ahorros** que casi nadie aprovecha",
+   "voz": "Hay tres ahorros que casi nadie aprovecha."
   },
   {
    "tipo": "punto",

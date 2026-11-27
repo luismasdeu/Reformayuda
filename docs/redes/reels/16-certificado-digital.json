@@ -2,10 +2,14 @@
  "voz": "es-ES-XimenaNeural",
  "escenas": [
   {
-   "tipo": "gancho",
-   "emoji": "🔐",
-   "texto": "Sin **certificado digital**, pedir una ayuda es mucho más difícil",
-   "voz": "Sin certificado digital, pedir una ayuda es mucho más difícil."
+   "tipo": "pregunta",
+   "texto": "¿Vas a pedir una ayuda y no tienes certificado digital?",
+   "voz": "¿Vas a pedir una ayuda y no tienes certificado digital?"
+  },
+  {
+   "tipo": "golpe",
+   "texto": "Te puede **complicar** mucho el trámite",
+   "voz": "Te puede complicar mucho el trámite."
   },
   {
    "tipo": "punto",

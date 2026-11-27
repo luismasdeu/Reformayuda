@@ -2,10 +2,14 @@
  "voz": "es-ES-XimenaNeural",
  "escenas": [
   {
-   "tipo": "gancho",
-   "emoji": "📸",
-   "texto": "Haz **fotos** antes de empezar la obra",
-   "voz": "Antes de que entre el primer albañil, haz fotos. Te pueden ahorrar un disgusto."
+   "tipo": "pregunta",
+   "texto": "¿Vas a empezar una obra en casa?",
+   "voz": "¿Vas a empezar una obra en casa?"
+  },
+  {
+   "tipo": "golpe",
+   "texto": "Haz **fotos del antes** o te las pedirán",
+   "voz": "Haz fotos del antes, porque muchas ayudas te las piden."
   },
   {
    "tipo": "punto",

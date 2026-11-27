@@ -2,10 +2,14 @@
  "voz": "es-ES-XimenaNeural",
  "escenas": [
   {
-   "tipo": "gancho",
-   "emoji": "🔥",
-   "texto": "¿Vas a cambiar la caldera por **aerotermia**? Mira esto antes",
-   "voz": "¿Vas a cambiar la caldera por aerotermia? Mira esto antes de pagar."
+   "tipo": "pregunta",
+   "texto": "¿Vas a cambiar la caldera por aerotermia?",
+   "voz": "¿Vas a cambiar la caldera por aerotermia?"
+  },
+  {
+   "tipo": "golpe",
+   "texto": "Puede darte **deducción** en el IRPF",
+   "voz": "Puede darte derecho a deducción en el IRPF."
   },
   {
    "tipo": "punto",

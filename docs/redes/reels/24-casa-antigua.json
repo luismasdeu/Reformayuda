@@ -2,10 +2,14 @@
  "voz": "es-ES-XimenaNeural",
  "escenas": [
   {
-   "tipo": "gancho",
-   "emoji": "🏚️",
-   "texto": "¿Tu casa es **antigua**? Tienes más ayudas de las que crees",
-   "voz": "¿Tu casa es antigua? Puede que tengas más ayudas de las que crees."
+   "tipo": "pregunta",
+   "texto": "¿Vives en una casa antigua?",
+   "voz": "¿Vives en una casa antigua?"
+  },
+  {
+   "tipo": "golpe",
+   "texto": "Puedes tener **más ayudas** de las que crees",
+   "voz": "Puedes tener más ayudas de las que crees."
   },
   {
    "tipo": "punto",

@@ -2,10 +2,14 @@
  "voz": "es-ES-XimenaNeural",
  "escenas": [
   {
-   "tipo": "gancho",
-   "emoji": "🛁",
-   "texto": "¿Cambiar la bañera por un **plato de ducha**? Hay ayuntamientos que lo pagan",
-   "voz": "¿Vas a cambiar la bañera por un plato de ducha? Hay ayuntamientos que te ayudan a pagarlo."
+   "tipo": "pregunta",
+   "texto": "¿Quieres cambiar la bañera por un plato de ducha?",
+   "voz": "¿Quieres cambiar la bañera por un plato de ducha?"
+  },
+  {
+   "tipo": "golpe",
+   "texto": "Algunos ayuntamientos **te ayudan** a pagarlo",
+   "voz": "Algunos ayuntamientos te ayudan a pagarlo."
   },
   {
    "tipo": "punto",

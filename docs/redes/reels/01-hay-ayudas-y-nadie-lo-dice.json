@@ -1,10 +1,14 @@
 {
  "escenas": [
   {
-   "tipo": "gancho",
-   "emoji": "🏠",
-   "texto": "Hay ayudas para tu obra **y nadie te lo dice**",
-   "voz": "Hay ayudas para tu obra, y nadie te lo dice."
+   "tipo": "pregunta",
+   "texto": "¿Vas a reformar o a hacer obra en tu casa?",
+   "voz": "¿Vas a reformar o a hacer obra en tu casa?"
+  },
+  {
+   "tipo": "golpe",
+   "texto": "Hay ayudas y **nadie te lo dice**",
+   "voz": "Hay ayudas para tu obra y nadie te lo cuenta."
   },
   {
    "tipo": "punto",

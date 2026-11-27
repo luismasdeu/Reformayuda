@@ -2,10 +2,14 @@
  "voz": "es-ES-XimenaNeural",
  "escenas": [
   {
-   "tipo": "gancho",
-   "emoji": "🧾",
-   "texto": "Te dan la ayuda… **y luego te la quitan**. ¿Por qué?",
-   "voz": "Te conceden la ayuda, y luego te la quitan. ¿Por qué pasa?"
+   "tipo": "pregunta",
+   "texto": "¿Te han dado una ayuda para tu obra?",
+   "voz": "¿Te han dado una ayuda para tu obra?"
+  },
+  {
+   "tipo": "golpe",
+   "texto": "Pueden **quitártela** si no la justificas",
+   "voz": "Te la pueden quitar si no la justificas bien."
   },
   {
    "tipo": "punto",

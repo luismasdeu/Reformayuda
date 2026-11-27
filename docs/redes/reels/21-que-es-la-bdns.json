@@ -2,10 +2,14 @@
  "voz": "es-ES-XimenaNeural",
  "escenas": [
   {
-   "tipo": "gancho",
-   "emoji": "🔎",
-   "texto": "Todas las subvenciones de España están **en un mismo sitio**",
-   "voz": "¿Sabías que todas las subvenciones de España se registran en un mismo sitio?"
+   "tipo": "pregunta",
+   "texto": "¿Buscas subvenciones para tu obra y no sabes dónde?",
+   "voz": "¿Buscas subvenciones para tu obra y no sabes dónde?"
+  },
+  {
+   "tipo": "golpe",
+   "texto": "Hay un registro nacional: la **BDNS**",
+   "voz": "Hay un registro nacional de subvenciones: la BDNS."
   },
   {
    "tipo": "punto",

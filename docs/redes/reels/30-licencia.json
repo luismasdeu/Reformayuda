@@ -2,10 +2,14 @@
  "voz": "es-ES-XimenaNeural",
  "escenas": [
   {
-   "tipo": "gancho",
-   "emoji": "📑",
-   "texto": "Sin **licencia de obra**, te pueden negar la ayuda",
-   "voz": "Sin licencia de obra, te pueden negar la ayuda."
+   "tipo": "pregunta",
+   "texto": "¿Vas a empezar una obra sin licencia?",
+   "voz": "¿Vas a empezar una obra sin licencia?"
+  },
+  {
+   "tipo": "golpe",
+   "texto": "Te pueden **negar la ayuda**",
+   "voz": "Te pueden negar la ayuda."
   },
   {
    "tipo": "punto",

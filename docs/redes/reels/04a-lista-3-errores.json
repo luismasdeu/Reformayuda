@@ -3,9 +3,14 @@
  "estilo": "lista",
  "escenas": [
   {
-   "tipo": "gancho",
-   "texto": "**3 errores** que te dejan sin subvención",
-   "voz": "Tres errores que te dejan sin subvención. El número uno es el más común."
+   "tipo": "pregunta",
+   "texto": "¿Vas a pedir una subvención para tu obra?",
+   "voz": "¿Vas a pedir una subvención para tu obra?"
+  },
+  {
+   "tipo": "golpe",
+   "texto": "Estos **3 errores** te dejan sin ella",
+   "voz": "Estos tres errores te pueden dejar sin ella."
   },
   {
    "tipo": "punto",

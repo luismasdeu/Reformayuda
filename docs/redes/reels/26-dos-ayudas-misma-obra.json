@@ -2,10 +2,14 @@
  "voz": "es-ES-XimenaNeural",
  "escenas": [
   {
-   "tipo": "gancho",
-   "emoji": "🤔",
-   "texto": "¿Puedes pedir **dos ayudas** para la misma obra?",
-   "voz": "¿Puedes pedir dos ayudas para la misma obra?"
+   "tipo": "pregunta",
+   "texto": "¿Quieres pedir dos ayudas para la misma obra?",
+   "voz": "¿Quieres pedir dos ayudas para la misma obra?"
+  },
+  {
+   "tipo": "golpe",
+   "texto": "**Depende** de cada convocatoria",
+   "voz": "Depende de lo que diga cada convocatoria."
   },
   {
    "tipo": "punto",

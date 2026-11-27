@@ -2,10 +2,14 @@
  "voz": "es-ES-XimenaNeural",
  "escenas": [
   {
-   "tipo": "gancho",
-   "emoji": "🏢",
-   "texto": "¿Tu comunidad va a arreglar la fachada? **Cada vecino puede desgravarse**",
-   "voz": "¿Tu comunidad va a arreglar la fachada o la cubierta? Cada vecino puede desgravarse una parte."
+   "tipo": "pregunta",
+   "texto": "¿Tu comunidad va a arreglar la fachada?",
+   "voz": "¿Tu comunidad va a arreglar la fachada?"
+  },
+  {
+   "tipo": "golpe",
+   "texto": "Cada vecino puede **desgravarse** su parte",
+   "voz": "Cada vecino puede desgravarse su parte, si cumplís los requisitos."
   },
   {
    "tipo": "cifra",

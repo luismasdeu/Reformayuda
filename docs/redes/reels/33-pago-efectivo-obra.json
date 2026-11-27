@@ -2,10 +2,14 @@
  "voz": "es-ES-XimenaNeural",
  "escenas": [
   {
-   "tipo": "gancho",
-   "emoji": "💶",
-   "texto": "¿Vas a pagar la obra **en efectivo**? Cuidado",
-   "voz": "¿Te ofrecen un descuento por pagar la obra en efectivo? Cuidado, te puede salir caro."
+   "tipo": "pregunta",
+   "texto": "¿Vas a pagar la obra en efectivo?",
+   "voz": "¿Vas a pagar la obra en efectivo?"
+  },
+  {
+   "tipo": "golpe",
+   "texto": "Puedes **perder la deducción**",
+   "voz": "Puedes perder la deducción."
   },
   {
    "tipo": "punto",

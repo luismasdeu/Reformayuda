@@ -2,10 +2,14 @@
  "voz": "es-ES-XimenaNeural",
  "escenas": [
   {
-   "tipo": "gancho",
-   "emoji": "🧱",
-   "texto": "La obra que más baja la factura **no siempre son las placas**",
-   "voz": "La obra que más baja la factura no siempre son las placas solares."
+   "tipo": "pregunta",
+   "texto": "¿Quieres bajar la factura de la luz y la calefacción?",
+   "voz": "¿Quieres bajar la factura de la luz y la calefacción?"
+  },
+  {
+   "tipo": "golpe",
+   "texto": "No siempre son las **placas** lo que más ayuda",
+   "voz": "No siempre son las placas lo que más ayuda."
   },
   {
    "tipo": "punto",

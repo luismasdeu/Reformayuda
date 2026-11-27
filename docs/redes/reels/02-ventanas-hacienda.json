@@ -1,10 +1,14 @@
 {
  "escenas": [
   {
-   "tipo": "gancho",
-   "emoji": "🪟",
-   "texto": "¿Vas a cambiar las ventanas? **Hacienda te devuelve parte**",
-   "voz": "¿Vas a cambiar las ventanas? Hacienda te puede devolver parte del dinero. Pero casi todo el mundo la pierde por un error."
+   "tipo": "pregunta",
+   "texto": "¿Vas a cambiar las ventanas de tu casa?",
+   "voz": "¿Vas a cambiar las ventanas de tu casa?"
+  },
+  {
+   "tipo": "golpe",
+   "texto": "**Hacienda** te puede devolver parte",
+   "voz": "Hacienda te puede devolver una parte, si lo haces bien."
   },
   {
    "tipo": "cifra",

@@ -2,10 +2,14 @@
  "voz": "es-ES-XimenaNeural",
  "escenas": [
   {
-   "tipo": "gancho",
-   "emoji": "⏳",
-   "texto": "Acabas la obra, no la **justificas**… y pierdes la ayuda",
-   "voz": "Acabas la obra, te olvidas de justificarla y pierdes la ayuda. Pasa más de lo que crees."
+   "tipo": "pregunta",
+   "texto": "¿Has acabado la obra y no has justificado la ayuda?",
+   "voz": "¿Has acabado la obra y no has justificado la ayuda?"
+  },
+  {
+   "tipo": "golpe",
+   "texto": "Puedes **perderla**",
+   "voz": "Puedes perderla."
   },
   {
    "tipo": "punto",

@@ -2,10 +2,14 @@
  "voz": "es-ES-XimenaNeural",
  "escenas": [
   {
-   "tipo": "gancho",
-   "emoji": "🏛️",
-   "texto": "Antes de pedir la **licencia de obra**, pregunta esto en tu ayuntamiento",
-   "voz": "Antes de pedir la licencia de obra, pregunta esto en tu ayuntamiento."
+   "tipo": "pregunta",
+   "texto": "¿Vas a pedir licencia para una obra?",
+   "voz": "¿Vas a pedir licencia para una obra?"
+  },
+  {
+   "tipo": "golpe",
+   "texto": "Pregunta por la **bonificación del ICIO**",
+   "voz": "Pregunta en tu ayuntamiento por la bonificación del ICIO."
   },
   {
    "tipo": "punto",

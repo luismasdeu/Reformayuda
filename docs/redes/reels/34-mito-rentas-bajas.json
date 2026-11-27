@@ -2,10 +2,14 @@
  "voz": "es-ES-XimenaNeural",
  "escenas": [
   {
-   "tipo": "gancho",
-   "emoji": "🤔",
-   "texto": "¿Las ayudas son **solo para rentas bajas**? No siempre",
-   "voz": "¿Crees que las ayudas para obras son solo para rentas bajas? No siempre."
+   "tipo": "pregunta",
+   "texto": "¿Crees que las ayudas son solo para rentas bajas?",
+   "voz": "¿Crees que las ayudas son solo para rentas bajas?"
+  },
+  {
+   "tipo": "golpe",
+   "texto": "**No siempre**: depende de las bases",
+   "voz": "No siempre. Depende de las bases de cada ayuda."
   },
   {
    "tipo": "punto",

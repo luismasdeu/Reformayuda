@@ -2,10 +2,14 @@
  "voz": "es-ES-XimenaNeural",
  "escenas": [
   {
-   "tipo": "gancho",
-   "emoji": "🧱",
-   "texto": "¿Casa **fría en invierno** y calurosa en verano? Mira esto",
-   "voz": "¿Tu casa es un horno en verano y una nevera en invierno? Mira esto."
+   "tipo": "pregunta",
+   "texto": "¿Tu casa está fría en invierno y calurosa en verano?",
+   "voz": "¿Tu casa está fría en invierno y calurosa en verano?"
+  },
+  {
+   "tipo": "golpe",
+   "texto": "Aislar puede darte **deducción** en el IRPF",
+   "voz": "Aislar puede darte derecho a una deducción en el IRPF."
   },
   {
    "tipo": "punto",

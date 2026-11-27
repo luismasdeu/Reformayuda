@@ -1,10 +1,14 @@
 {
  "escenas": [
   {
-   "tipo": "gancho",
-   "emoji": "☀️",
-   "texto": "¿Pusiste placas solares y **sigues pagando el IBI entero**?",
-   "voz": "¿Pusiste placas solares, y sigues pagando el IBI entero?"
+   "tipo": "pregunta",
+   "texto": "¿Pusiste placas solares y sigues pagando el IBI entero?",
+   "voz": "¿Pusiste placas solares y sigues pagando el IBI entero?"
+  },
+  {
+   "tipo": "golpe",
+   "texto": "Muchos ayuntamientos **lo rebajan**",
+   "voz": "Muchos ayuntamientos te lo rebajan."
   },
   {
    "tipo": "cifra",

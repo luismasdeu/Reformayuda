@@ -2,10 +2,14 @@
  "voz": "es-ES-XimenaNeural",
  "escenas": [
   {
-   "tipo": "gancho",
-   "emoji": "🏡",
-   "texto": "¿Tienes una **casa en el pueblo** sin arreglar?",
-   "voz": "¿Tienes una casa en el pueblo sin arreglar? Esto te interesa."
+   "tipo": "pregunta",
+   "texto": "¿Tienes una casa en el pueblo sin arreglar?",
+   "voz": "¿Tienes una casa en el pueblo sin arreglar?"
+  },
+  {
+   "tipo": "golpe",
+   "texto": "Hay ayudas para **rehabilitar** en zonas rurales",
+   "voz": "Hay ayudas para rehabilitar en zonas rurales."
   },
   {
    "tipo": "punto",

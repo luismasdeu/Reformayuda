@@ -3,9 +3,14 @@
  "estilo": "mito",
  "escenas": [
   {
-   "tipo": "gancho",
-   "texto": "¿**Mito o verdad**? 3 cosas que se oyen de las ayudas",
-   "voz": "Mito o verdad. Tres cosas que todo el mundo dice sobre las ayudas para obras."
+   "tipo": "pregunta",
+   "texto": "¿Crees que las ayudas para obras no son para ti?",
+   "voz": "¿Crees que las ayudas para obras no son para ti?"
+  },
+  {
+   "tipo": "golpe",
+   "texto": "Hay **mitos** que te hacen perder dinero",
+   "voz": "Hay mitos que te pueden hacer perder dinero."
   },
   {
    "tipo": "punto",

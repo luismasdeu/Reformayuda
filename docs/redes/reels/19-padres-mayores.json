@@ -2,10 +2,14 @@
  "voz": "es-ES-XimenaNeural",
  "escenas": [
   {
-   "tipo": "gancho",
-   "emoji": "👵",
-   "texto": "¿Tus padres tienen más de 70 y su casa **no está adaptada**?",
-   "voz": "¿Tus padres tienen más de setenta años y su casa no está adaptada?"
+   "tipo": "pregunta",
+   "texto": "¿Tus padres son mayores y su casa no está adaptada?",
+   "voz": "¿Tus padres son mayores y su casa no está adaptada?"
+  },
+  {
+   "tipo": "golpe",
+   "texto": "Hay ayudas para **adaptar** la vivienda",
+   "voz": "Hay ayudas para adaptar su vivienda."
   },
   {
    "tipo": "punto",

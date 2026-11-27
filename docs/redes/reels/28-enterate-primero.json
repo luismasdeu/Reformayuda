@@ -2,10 +2,14 @@
  "voz": "es-ES-XimenaNeural",
  "escenas": [
   {
-   "tipo": "gancho",
-   "emoji": "🔔",
-   "texto": "Las ayudas abren y cierran en semanas. **Así te enteras el primer día**",
-   "voz": "Las ayudas abren y cierran en pocas semanas. Así te enteras el primer día."
+   "tipo": "pregunta",
+   "texto": "¿Te enteras tarde de las ayudas para obras?",
+   "voz": "¿Te enteras tarde de las ayudas para obras?"
+  },
+  {
+   "tipo": "golpe",
+   "texto": "Entérate **el primer día**",
+   "voz": "Entérate el primer día, gratis."
   },
   {
    "tipo": "punto",

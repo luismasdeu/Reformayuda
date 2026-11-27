@@ -3,9 +3,14 @@
  "estilo": "pov",
  "escenas": [
   {
-   "tipo": "gancho",
-   "texto": "te enteras de la ayuda **el día después de que cierre**",
-   "voz": "Te enteras de la ayuda para tu obra, el día después de que cierre."
+   "tipo": "pregunta",
+   "texto": "¿Te enteras de las ayudas para tu obra demasiado tarde?",
+   "voz": "¿Te enteras de las ayudas para tu obra demasiado tarde?"
+  },
+  {
+   "tipo": "golpe",
+   "texto": "Y **ya han cerrado**: pasa mucho",
+   "voz": "Y para entonces ya han cerrado. Pasa mucho."
   },
   {
    "tipo": "punto",

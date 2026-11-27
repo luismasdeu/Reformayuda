@@ -2,10 +2,14 @@
  "voz": "es-ES-XimenaNeural",
  "escenas": [
   {
-   "tipo": "gancho",
-   "emoji": "💧",
-   "texto": "¿Humedades en casa? **Pintar encima** no las arregla",
-   "voz": "¿Tienes humedades en casa? Pintar encima no las arregla, y puedes tirar el dinero."
+   "tipo": "pregunta",
+   "texto": "¿Tienes humedades en casa?",
+   "voz": "¿Tienes humedades en casa?"
+  },
+  {
+   "tipo": "golpe",
+   "texto": "Pintar encima **no las arregla**",
+   "voz": "Pintar encima no las arregla."
   },
   {
    "tipo": "punto",

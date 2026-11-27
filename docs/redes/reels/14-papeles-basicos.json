@@ -2,10 +2,14 @@
  "voz": "es-ES-XimenaNeural",
  "escenas": [
   {
-   "tipo": "gancho",
-   "emoji": "🗂️",
-   "texto": "Los papeles que te van a pedir en **casi cualquier subvención**",
-   "voz": "Estos son los papeles que te van a pedir en casi cualquier subvención para tu casa."
+   "tipo": "pregunta",
+   "texto": "¿Vas a pedir una subvención para tu obra?",
+   "voz": "¿Vas a pedir una subvención para tu obra?"
+  },
+  {
+   "tipo": "golpe",
+   "texto": "Sin estos **papeles** no te la tramitan",
+   "voz": "Sin estos papeles, casi seguro que no te la tramitan."
   },
   {
    "tipo": "punto",

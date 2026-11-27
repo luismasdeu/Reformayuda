@@ -1,10 +1,14 @@
 {
  "escenas": [
   {
-   "tipo": "gancho",
-   "emoji": "🏢",
-   "texto": "¿Tu edificio **no tiene ascensor**? Esto le interesa a tu comunidad",
-   "voz": "¿Tu edificio no tiene ascensor? Esto le interesa a tu comunidad."
+   "tipo": "pregunta",
+   "texto": "¿Tu edificio no tiene ascensor?",
+   "voz": "¿Tu edificio no tiene ascensor?"
+  },
+  {
+   "tipo": "golpe",
+   "texto": "Tu comunidad puede pedir **ayudas**",
+   "voz": "Tu comunidad puede pedir ayudas para instalarlo."
   },
   {
    "tipo": "punto",

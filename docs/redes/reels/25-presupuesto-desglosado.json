@@ -2,10 +2,14 @@
  "voz": "es-ES-XimenaNeural",
  "escenas": [
   {
-   "tipo": "gancho",
-   "emoji": "📋",
-   "texto": "Este presupuesto **te puede hacer perder la ayuda**",
-   "voz": "Un presupuesto así te puede hacer perder la ayuda."
+   "tipo": "pregunta",
+   "texto": "¿Te han dado un presupuesto «todo incluido»?",
+   "voz": "¿Te han dado un presupuesto todo incluido?"
+  },
+  {
+   "tipo": "golpe",
+   "texto": "Puede hacerte **perder la ayuda**",
+   "voz": "Puede hacerte perder la ayuda."
   },
   {
    "tipo": "punto",

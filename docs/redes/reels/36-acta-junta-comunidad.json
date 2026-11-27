@@ -2,10 +2,14 @@
  "voz": "es-ES-XimenaNeural",
  "escenas": [
   {
-   "tipo": "gancho",
-   "emoji": "📝",
-   "texto": "¿Tu comunidad quiere hacer obra? **Sin acuerdo** no hay ayuda",
-   "voz": "¿Tu comunidad quiere hacer obra? Sin acuerdo de la junta, muchas ayudas ni se pueden pedir."
+   "tipo": "pregunta",
+   "texto": "¿Tu comunidad quiere hacer obra y pedir ayuda?",
+   "voz": "¿Tu comunidad quiere hacer obra y pedir ayuda?"
+  },
+  {
+   "tipo": "golpe",
+   "texto": "Muchas piden el **acuerdo de junta**",
+   "voz": "Muchas piden el acuerdo de la junta."
   },
   {
    "tipo": "punto",

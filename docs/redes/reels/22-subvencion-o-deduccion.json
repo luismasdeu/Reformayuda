@@ -2,10 +2,14 @@
  "voz": "es-ES-XimenaNeural",
  "escenas": [
   {
-   "tipo": "gancho",
-   "emoji": "⚖️",
-   "texto": "Subvención y deducción **no son lo mismo**",
-   "voz": "Subvención y deducción no son lo mismo. Y conviene saber la diferencia."
+   "tipo": "pregunta",
+   "texto": "¿Sabes la diferencia entre subvención y deducción?",
+   "voz": "¿Sabes la diferencia entre subvención y deducción?"
+  },
+  {
+   "tipo": "golpe",
+   "texto": "Confundirlas te puede **costar dinero**",
+   "voz": "Confundirlas te puede costar dinero."
   },
   {
    "tipo": "punto",

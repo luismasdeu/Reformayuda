@@ -2,10 +2,14 @@
  "voz": "es-ES-XimenaNeural",
  "escenas": [
   {
-   "tipo": "gancho",
-   "emoji": "💳",
-   "texto": "Pagaste la obra… **pero la factura no está a tu nombre**",
-   "voz": "Pagaste la obra, pero la factura no está a tu nombre. Error."
+   "tipo": "pregunta",
+   "texto": "¿Has pagado una obra y la factura no va a tu nombre?",
+   "voz": "¿Has pagado una obra y la factura no va a tu nombre?"
+  },
+  {
+   "tipo": "golpe",
+   "texto": "Puedes **perder la ayuda**",
+   "voz": "Puedes perder la ayuda."
   },
   {
    "tipo": "punto",

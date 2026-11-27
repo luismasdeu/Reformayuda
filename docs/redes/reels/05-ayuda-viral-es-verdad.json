@@ -1,10 +1,14 @@
 {
  "escenas": [
   {
-   "tipo": "gancho",
-   "emoji": "🤔",
-   "texto": "¿Miles de euros para **reformar tu baño**? Antes de creértelo, mira esto",
-   "voz": "¿Has visto que dan miles de euros para reformar tu baño? Antes de creértelo, mira esto."
+   "tipo": "pregunta",
+   "texto": "¿Has visto que dan miles de euros para reformar el baño?",
+   "voz": "¿Has visto que dan miles de euros para reformar el baño?"
+  },
+  {
+   "tipo": "golpe",
+   "texto": "Muchas son **bulos o borradores**",
+   "voz": "Muchas son bulos o simples borradores, no ayudas abiertas."
   },
   {
    "tipo": "punto",

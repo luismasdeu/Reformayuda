@@ -2,10 +2,14 @@
  "voz": "es-ES-XimenaNeural",
  "escenas": [
   {
-   "tipo": "gancho",
-   "emoji": "📄",
-   "texto": "Lo primero que tienes que pedir antes de reformar **(y casi nadie lo hace)**",
-   "voz": "Esto es lo primero que tienes que pedir antes de reformar. Y casi nadie lo hace."
+   "tipo": "pregunta",
+   "texto": "¿Vas a reformar tu casa y quieres desgravar?",
+   "voz": "¿Vas a reformar tu casa y quieres desgravar?"
+  },
+  {
+   "tipo": "golpe",
+   "texto": "Sin **certificado energético** de antes, nada",
+   "voz": "Sin el certificado energético de antes, no hay deducción."
   },
   {
    "tipo": "punto",

@@ -3,10 +3,15 @@
  "estilo": "noticia",
  "escenas": [
   {
-   "tipo": "gancho",
-   "texto": "Si vas a reformar, **pide esto ANTES**",
-   "voz": "Atención si vas a reformar este año. Pide esto antes de empezar.",
+   "tipo": "pregunta",
+   "texto": "¿Vas a reformar tu vivienda este año?",
+   "voz": "¿Vas a reformar tu vivienda este año?",
    "banner": "⚠️ IMPORTANTE"
+  },
+  {
+   "tipo": "golpe",
+   "texto": "Sin el **certificado** de antes, no hay deducción",
+   "voz": "Sin el certificado energético de antes, no hay deducción."
   },
   {
    "tipo": "punto",

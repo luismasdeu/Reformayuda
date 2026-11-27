@@ -2,10 +2,14 @@
  "voz": "es-ES-XimenaNeural",
  "escenas": [
   {
-   "tipo": "gancho",
-   "emoji": "🚫",
-   "texto": "Si debes algo a Hacienda, **no te dan la subvención**",
-   "voz": "Si debes algo a Hacienda o a la Seguridad Social, no te dan la subvención."
+   "tipo": "pregunta",
+   "texto": "¿Debes algo a Hacienda y quieres pedir una ayuda?",
+   "voz": "¿Debes algo a Hacienda y quieres pedir una ayuda?"
+  },
+  {
+   "tipo": "golpe",
+   "texto": "Puedes **quedarte sin la subvención**",
+   "voz": "Puedes quedarte sin la subvención."
   },
   {
    "tipo": "punto",

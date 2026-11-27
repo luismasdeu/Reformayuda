@@ -3,9 +3,14 @@
  "estilo": "error",
  "escenas": [
   {
-   "tipo": "gancho",
-   "texto": "Así **sí** y así **no**: pedir una ayuda para tu obra",
-   "voz": "Así sí, y así no. Cómo pedir bien una ayuda para tu obra."
+   "tipo": "pregunta",
+   "texto": "¿Vas a pedir una ayuda para tu obra?",
+   "voz": "¿Vas a pedir una ayuda para tu obra?"
+  },
+  {
+   "tipo": "golpe",
+   "texto": "Un paso mal y **pierdes la ayuda**",
+   "voz": "Un solo paso mal dado y puedes perder la ayuda."
   },
   {
    "tipo": "punto",
