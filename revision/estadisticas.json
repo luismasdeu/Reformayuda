@@ -11,8 +11,8 @@
    "visitas": 1
   },
   "2026-11-11": {
-   "nuevos": 5,
    "fichas": 1,
+   "nuevos": 5,
    "visitas": 7
   },
   "2026-11-12": {
@@ -24,23 +24,23 @@
    "visitas": 1
   },
   "2026-11-19": {
-   "nuevos": 1,
    "fichas": 2,
-   "chat": 1,
+   "nuevos": 1,
+   "app": 1,
    "visitas": 1,
-   "app": 1
+   "chat": 1
   },
   "2026-11-23": {
    "nuevos": 1,
    "visitas": 1
   },
   "2026-11-25": {
-   "visitas": 1,
-   "app": 1
+   "app": 1,
+   "visitas": 1
   },
   "2026-11-27": {
-   "visitas": 1,
-   "app": 1
+   "app": 1,
+   "visitas": 1
   }
  }
 }
