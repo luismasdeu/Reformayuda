@@ -1,0 +1,36 @@
+{
+ "escenas": [
+  {
+   "tipo": "gancho",
+   "emoji": "🤔",
+   "texto": "¿Miles de euros para **reformar tu baño**? Antes de creértelo, mira esto",
+   "voz": "¿Has visto que dan miles de euros para reformar tu baño? Antes de creértelo, mira esto."
+  },
+  {
+   "tipo": "punto",
+   "n": 1,
+   "texto": "Muchas son **anuncios o borradores**, no ayudas abiertas",
+   "voz": "Muchas son anuncios o borradores, no ayudas que ya puedas pedir."
+  },
+  {
+   "tipo": "punto",
+   "n": 2,
+   "texto": "Lo oficial sale en el **BOE** o en el boletín de tu comunidad",
+   "voz": "Lo oficial sale en el BOE, o en el boletín de tu comunidad o de tu provincia."
+  },
+  {
+   "tipo": "punto",
+   "n": 3,
+   "texto": "En Obrayuda **solo publicamos** lo que ya está en el boletín",
+   "voz": "Por eso en Obrayuda solo publicamos lo que ya está en el boletín oficial."
+  },
+  {
+   "tipo": "cta",
+   "texto": "¿Has visto una y dudas? Comenta **VERDAD**",
+   "voz": "¿Has visto una ayuda y dudas? Comenta verdad, y la miramos.",
+   "palabra": "VERDAD"
+  }
+ ],
+ "texto": "¿Has visto un vídeo de «miles de euros para tu baño»? Antes de ilusionarte, compruébalo 🔍\n\nMuchas son anuncios o borradores. Lo oficial sale en el BOE o en el boletín de tu comunidad o provincia.\n\nEn Obrayuda solo publicamos lo que ya ha salido en el boletín oficial.\n\n💬 ¿Has visto una y dudas? Comenta VERDAD y la miramos.\n\n#bulos #ayudasvivienda #subvenciones #reformabaño #reformas",
+ "voz": "es-ES-ElviraNeural"
+}

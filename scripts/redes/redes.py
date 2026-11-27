@@ -8,11 +8,14 @@ Lo lanza .github/workflows/redes.yml una vez al día:
   (node scripts/redes/carrusel.mjs genera las imágenes y el workflow las sube al repositorio)
   python scripts/redes/redes.py publicar DIR → publica ese carrusel en Instagram y Facebook
 
-Calendario semanal:
-  lunes, miércoles y viernes → una ayuda abierta (la mejor que aún no se haya publicado)
-  martes, jueves y sábado    → un consejo del banco (docs/redes/banco/, en orden)
-  domingo                    → descanso
-Si un día no hay ayuda nueva, publica un consejo, y al revés.
+Calendario:
+  Carrusel (mediodía):
+    lunes, miércoles y viernes → una ayuda abierta (la mejor que aún no se haya publicado)
+    martes, jueves y sábado    → un consejo del banco (docs/redes/banco/, en orden)
+    domingo                    → descanso
+  Reel (tarde), todos los días: se alternan los guiones de docs/redes/reels/ (en orden)
+    y reels hechos solos con una ayuda abierta («Si vives en…, esto te interesa»).
+Si un día no hay de un tipo, se usa el otro.
 
 Una ayuda puede tener un carrusel hecho a mano en docs/redes/ayudas/<id>.json; si no,
 se genera solo con sus datos. Todo queda apuntado en revision/redes.json.
@@ -40,6 +43,7 @@ AYUDAS = RAIZ / "web" / "data" / "ayudas.json"
 REGISTRO = RAIZ / "revision" / "redes.json"
 BANCO = RAIZ / "docs" / "redes" / "banco"
 HECHAS_A_MANO = RAIZ / "docs" / "redes" / "ayudas"
+REELS = RAIZ / "docs" / "redes" / "reels"
 PUBLICADAS = RAIZ / "docs" / "redes" / "publicadas"
 API = "https://graph.facebook.com/" + (os.environ.get("META_API_VERSION") or "v27.0")
 DIAS_AYUDA, DIAS_CONSEJO = {0, 2, 4}, {1, 3, 5}
@@ -149,19 +153,31 @@ def spec_de_ayuda(a, d):
     return {"slides": slides, "texto": texto}
 
 
+def hechas(reg, formato):
+    return [p for p in reg["publicadas"] if p.get("formato", "carrusel") == formato and p.get("instagram")]
+
+
+def salida(carpeta):
+    print("Carpeta:", carpeta.relative_to(RAIZ))
+    if os.environ.get("GITHUB_OUTPUT"):
+        with open(os.environ["GITHUB_OUTPUT"], "a") as f:
+            f.write(f"carpeta={carpeta.relative_to(RAIZ)}\n")
+
+
 def planificar():
     d = hoy()
     reg = leer_registro()
-    if any(p["fecha"] == d.isoformat() and p.get("instagram") for p in reg["publicadas"]):
-        print("Hoy ya se ha publicado.")
+    previas = hechas(reg, "carrusel")
+    if any(p["fecha"] == d.isoformat() for p in previas):
+        print("Hoy ya se ha publicado el carrusel.")
         return
-    ya_ayudas = {p["ayuda"] for p in reg["publicadas"] if p.get("ayuda") and p.get("instagram")}
-    ya_banco = {p["nombre"] for p in reg["publicadas"] if p.get("tipo") == "consejo" and p.get("instagram")}
+    ya_ayudas = {p["ayuda"] for p in previas if p.get("ayuda")}
+    ya_banco = {p["nombre"] for p in previas if p.get("tipo") == "consejo"}
     banco = [f for f in sorted(BANCO.glob("*.json")) if f.stem not in ya_banco]
     ayudas = candidatas(json.loads(AYUDAS.read_text(encoding="utf-8"))["ayudas"], ya_ayudas, d)
 
     eleccion = None
-    if not any(p.get("instagram") for p in reg["publicadas"]) and banco:
+    if not previas and banco:
         eleccion = ("consejo", banco[0])  # la primera publicación: qué es Obrayuda
     elif d.weekday() == 6 and not os.environ.get("FORZAR"):
         print("Domingo: descanso.")
@@ -183,12 +199,62 @@ def planificar():
         spec = json.loads(a_mano.read_text(encoding="utf-8")) if a_mano.exists() else spec_de_ayuda(cosa, d)
     carpeta = PUBLICADAS / f"{d.isoformat()}-{nombre}"
     carpeta.mkdir(parents=True, exist_ok=True)
-    spec.update({"tipo": tipo, "nombre": nombre, "ayuda": ayuda, "fecha": d.isoformat()})
+    spec.update({"formato": "carrusel", "tipo": tipo, "nombre": nombre, "ayuda": ayuda, "fecha": d.isoformat()})
     (carpeta / "spec.json").write_text(json.dumps(spec, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
-    print(f"Hoy toca {tipo}: {nombre}")
-    if os.environ.get("GITHUB_OUTPUT"):
-        with open(os.environ["GITHUB_OUTPUT"], "a") as f:
-            f.write(f"carpeta={carpeta.relative_to(RAIZ)}\n")
+    print(f"Hoy toca carrusel ({tipo}): {nombre}")
+    salida(carpeta)
+
+
+# ---------- reels ----------
+
+def reel_de_ayuda(a, d):
+    """Reel corto hecho solo con los datos de una ayuda."""
+    zona = a.get("muni") or a.get("prov") or ("España" if a["ccaa"] == "all" else a["ccaa"])
+    gancho = "¿Vas a hacer obra en casa? **Esto te interesa**" if a["ccaa"] == "all" else f"Si vives en {zona}, **esto te interesa**"
+    escenas = [{"tipo": "gancho", "emoji": "📍" if a["ccaa"] != "all" else "🏠", "texto": gancho,
+                "voz": gancho.replace("**", "") + "."}]
+    c = cifra(a)
+    if c:
+        escenas.append({"tipo": "cifra", "texto": a["title"], "cifra": c,
+                        "voz": f"{a['title']}. {c.replace('Hasta', 'Hasta')}."})
+    else:
+        escenas.append({"tipo": "punto", "emoji": "💶", "texto": a["title"], "voz": a["title"] + "."})
+    for r in [r for r in a.get("req", []) if not GENERICO.match(r)][:2]:
+        escenas.append({"tipo": "punto", "emoji": "✅", "texto": corta(r, 95), "voz": corta(r, 160) + "."})
+    if a.get("cierra"):
+        escenas.append({"tipo": "punto", "emoji": "📅", "texto": plazo_texto(a, d),
+                        "voz": plazo_texto(a, d) + ". Mejor no esperes al último día."})
+    escenas.append({"tipo": "cta", "texto": "Comenta **AYUDA** y te paso el enlace oficial", "palabra": "AYUDA",
+                    "voz": "Comenta ayuda, y te paso el enlace oficial."})
+    return {"voz": "es-ES-ElviraNeural", "escenas": escenas, "texto": spec_de_ayuda(a, d)["texto"]}
+
+
+def planificar_reel():
+    d = hoy()
+    reg = leer_registro()
+    previas = hechas(reg, "reel")
+    if any(p["fecha"] == d.isoformat() for p in previas):
+        print("Hoy ya se ha publicado el reel.")
+        return
+    ya_guion = {p["nombre"] for p in previas if p.get("tipo") == "guion"}
+    ya_ayuda = {p["ayuda"] for p in previas if p.get("ayuda")}
+    guiones = [f for f in sorted(REELS.glob("*.json")) if f.stem not in ya_guion]
+    ayudas = candidatas(json.loads(AYUDAS.read_text(encoding="utf-8"))["ayudas"], ya_ayuda, d)
+    toca_guion = not previas or len(previas) % 2 == 0  # alterna: guion, ayuda, guion…
+    if guiones and (toca_guion or not ayudas):
+        nombre, guion, tipo, ayuda = guiones[0].stem, json.loads(guiones[0].read_text(encoding="utf-8")), "guion", None
+    elif ayudas:
+        a = ayudas[0]
+        nombre, guion, tipo, ayuda = a["id"], reel_de_ayuda(a, d), "ayuda", a["id"]
+    else:
+        print("No hay reel nuevo que publicar.")
+        return
+    carpeta = PUBLICADAS / f"{d.isoformat()}-reel-{nombre}"
+    carpeta.mkdir(parents=True, exist_ok=True)
+    guion.update({"formato": "reel", "tipo": tipo, "nombre": nombre, "ayuda": ayuda, "fecha": d.isoformat()})
+    (carpeta / "spec.json").write_text(json.dumps(guion, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
+    print(f"Hoy toca reel ({tipo}): {nombre}")
+    salida(carpeta)
 
 
 # ---------- publicar en Meta ----------
@@ -232,6 +298,49 @@ def publicar_instagram(token, ig, urls, texto):
     return graph("POST", f"{ig}/media_publish", token, creation_id=contenedor)["id"]
 
 
+def esperar_contenedor(token, contenedor, intentos=60, pausa=10):
+    for _ in range(intentos):
+        estado = graph("GET", contenedor, token, fields="status_code").get("status_code")
+        if estado == "FINISHED":
+            return
+        if estado in ("ERROR", "EXPIRED"):
+            raise RuntimeError(f"Instagram no pudo procesar el vídeo ({estado})")
+        time.sleep(pausa)
+    raise RuntimeError("Instagram tarda demasiado en procesar el vídeo")
+
+
+def publicar_reel_instagram(token, ig, video, texto):
+    datos = graph("POST", f"{ig}/media", token, media_type="REELS", upload_type="resumable",
+                  caption=texto, share_to_feed="true", thumb_offset="300")
+    cuerpo = video.read_bytes()
+    req = urllib.request.Request(datos["uri"], data=cuerpo, method="POST", headers={
+        "Authorization": f"OAuth {token}", "offset": "0", "file_size": str(len(cuerpo))})
+    try:
+        urllib.request.urlopen(req, timeout=300).read()
+    except urllib.error.HTTPError as ex:
+        raise RuntimeError(f"subida del vídeo: {ex.code} {ex.read().decode('utf-8', 'replace')[:300]}") from None
+    esperar_contenedor(token, datos["id"])
+    return graph("POST", f"{ig}/media_publish", token, creation_id=datos["id"])["id"]
+
+
+def publicar_video_facebook(token, pagina, video, texto):
+    limite = "----obrayuda" + str(int(time.time()))
+    partes = []
+    for k, v in (("access_token", token), ("description", texto)):
+        partes.append(f'--{limite}\r\nContent-Disposition: form-data; name="{k}"\r\n\r\n{v}\r\n'.encode())
+    partes.append(f'--{limite}\r\nContent-Disposition: form-data; name="source"; filename="reel.mp4"\r\n'
+                  f'Content-Type: video/mp4\r\n\r\n'.encode() + video.read_bytes() + b"\r\n")
+    partes.append(f"--{limite}--\r\n".encode())
+    url = API.replace("graph.facebook.com", "graph-video.facebook.com") + f"/{pagina}/videos"
+    req = urllib.request.Request(url, data=b"".join(partes),
+                                 headers={"Content-Type": f"multipart/form-data; boundary={limite}"})
+    try:
+        with urllib.request.urlopen(req, timeout=300) as r:
+            return json.loads(r.read())["id"]
+    except urllib.error.HTTPError as ex:
+        raise RuntimeError(f"vídeo de Facebook: {ex.code} {ex.read().decode('utf-8', 'replace')[:300]}") from None
+
+
 def publicar_facebook(token, pagina, urls, texto):
     fotos = [graph("POST", f"{pagina}/photos", token, url=u, published="false")["id"] for u in urls]
     datos = {f"attached_media[{i}]": json.dumps({"media_fbid": f}) for i, f in enumerate(fotos)}
@@ -242,27 +351,33 @@ def publicar(carpeta):
     token = os.environ.get("META_PAGE_TOKEN", "").strip()
     carpeta = RAIZ / carpeta
     spec = json.loads((carpeta / "spec.json").read_text(encoding="utf-8"))
-    repo = os.environ.get("GITHUB_REPOSITORY", "luismasdeu/Reformayuda")
-    base = f"https://raw.githubusercontent.com/{repo}/main/{carpeta.relative_to(RAIZ).as_posix()}"
-    urls = [f"{base}/{f.name}" for f in sorted(carpeta.glob("slide-*.jpg"))]
-    for u in urls:
-        esperar_url(u)
+    video = carpeta / "reel.mp4"
+    es_reel = spec.get("formato") == "reel"
+    urls = []
+    if not es_reel:
+        repo = os.environ.get("GITHUB_REPOSITORY", "luismasdeu/Reformayuda")
+        base = f"https://raw.githubusercontent.com/{repo}/main/{carpeta.relative_to(RAIZ).as_posix()}"
+        urls = [f"{base}/{f.name}" for f in sorted(carpeta.glob("slide-*.jpg"))]
+        for u in urls:
+            esperar_url(u)
     pagina = graph("GET", "me", token, fields="id,name")["id"]
     ig = graph("GET", pagina, token, fields="instagram_business_account").get("instagram_business_account", {}).get("id")
-    entrada = {"fecha": spec["fecha"], "nombre": spec["nombre"], "tipo": spec["tipo"]}
+    entrada = {"fecha": spec["fecha"], "formato": spec.get("formato", "carrusel"), "nombre": spec["nombre"], "tipo": spec["tipo"]}
     if spec.get("ayuda"):
         entrada["ayuda"] = spec["ayuda"]
     errores = []
     if ig:
         try:
-            entrada["instagram"] = publicar_instagram(token, ig, urls, spec["texto"])
+            entrada["instagram"] = (publicar_reel_instagram(token, ig, video, spec["texto"]) if es_reel
+                                    else publicar_instagram(token, ig, urls, spec["texto"]))
             print("Publicado en Instagram:", entrada["instagram"])
         except RuntimeError as ex:
             errores.append(f"Instagram: {ex}")
     else:
         errores.append("Instagram: la página no tiene una cuenta de Instagram vinculada")
     try:
-        entrada["facebook"] = publicar_facebook(token, pagina, urls, spec["texto"])
+        entrada["facebook"] = (publicar_video_facebook(token, pagina, video, spec["texto"]) if es_reel
+                               else publicar_facebook(token, pagina, urls, spec["texto"]))
         print("Publicado en Facebook:", entrada["facebook"])
     except RuntimeError as ex:
         errores.append(f"Facebook: {ex}")
@@ -278,7 +393,7 @@ def publicar(carpeta):
 
 if __name__ == "__main__":
     if len(sys.argv) >= 2 and sys.argv[1] == "planificar":
-        planificar()
+        planificar_reel() if sys.argv[2:3] == ["reel"] else planificar()
     elif len(sys.argv) >= 3 and sys.argv[1] == "publicar":
         publicar(sys.argv[2])
     else:

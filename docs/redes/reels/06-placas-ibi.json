@@ -1,0 +1,31 @@
+{
+ "escenas": [
+  {
+   "tipo": "gancho",
+   "emoji": "☀️",
+   "texto": "¿Pusiste placas solares y **sigues pagando el IBI entero**?",
+   "voz": "¿Pusiste placas solares, y sigues pagando el IBI entero?"
+  },
+  {
+   "tipo": "cifra",
+   "texto": "Muchos ayuntamientos lo rebajan",
+   "cifra": "hasta 50 %",
+   "pie": "durante **varios años**",
+   "voz": "Muchos ayuntamientos rebajan el IBI hasta un cincuenta por ciento, durante varios años."
+  },
+  {
+   "tipo": "punto",
+   "emoji": "🏛️",
+   "texto": "Depende de tu municipio: míralo en sus **ordenanzas fiscales**",
+   "voz": "Depende de tu municipio. Míralo en sus ordenanzas fiscales, o pregunta en el ayuntamiento."
+  },
+  {
+   "tipo": "cta",
+   "texto": "Comenta **IBI** y tu municipio",
+   "voz": "Comenta IBI y tu municipio, y te decimos dónde mirarlo.",
+   "palabra": "IBI"
+  }
+ ],
+ "texto": "¿Placas solares y sigues pagando el IBI entero? ☀️\n\nMuchos ayuntamientos bonifican el IBI hasta un 50 % durante varios años por instalar placas. Cada municipio decide si lo aplica y cuánto: míralo en sus ordenanzas fiscales.\n\n💬 Comenta IBI y tu municipio y te decimos dónde mirarlo.\n🔎 Más ayudas de tu zona: obrayuda.es\n\n#placassolares #ibi #autoconsumo #ayudasvivienda #ahorro",
+ "voz": "es-ES-ElviraNeural"
+}

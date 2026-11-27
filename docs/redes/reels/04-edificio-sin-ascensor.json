@@ -1,0 +1,36 @@
+{
+ "escenas": [
+  {
+   "tipo": "gancho",
+   "emoji": "🏢",
+   "texto": "¿Tu edificio **no tiene ascensor**? Esto le interesa a tu comunidad",
+   "voz": "¿Tu edificio no tiene ascensor? Esto le interesa a tu comunidad."
+  },
+  {
+   "tipo": "punto",
+   "emoji": "♿",
+   "texto": "Hay ayudas para **ascensores, rampas y salvaescaleras**",
+   "voz": "Hay ayudas para poner ascensor, rampas y salvaescaleras."
+  },
+  {
+   "tipo": "punto",
+   "emoji": "🤝",
+   "texto": "Las pide **la comunidad**, con la obra aprobada en junta",
+   "voz": "Las pide la comunidad de vecinos, con la obra aprobada en junta."
+  },
+  {
+   "tipo": "punto",
+   "emoji": "⚠️",
+   "texto": "Y casi siempre **antes de empezar** la obra",
+   "voz": "Y casi siempre, antes de empezar la obra."
+  },
+  {
+   "tipo": "cta",
+   "texto": "Comenta **EDIFICIO** y te digo las de tu zona",
+   "voz": "Comenta edificio, y te digo las de tu zona. Y compártelo en el grupo de tu comunidad.",
+   "palabra": "EDIFICIO"
+  }
+ ],
+ "texto": "¿Tu edificio no tiene ascensor? Hay ayudas para la comunidad 🏢\n\n♿ Ascensores, rampas y salvaescaleras\n🤝 Las pide la comunidad, con la obra aprobada en junta\n⚠️ Normalmente antes de empezar la obra\n\n📲 Compártelo en el grupo de tu comunidad.\n💬 Comenta EDIFICIO y te digo cuáles hay en tu zona.\n\n#comunidaddevecinos #ascensor #accesibilidad #ayudasvivienda #rehabilitacion",
+ "voz": "es-ES-ElviraNeural"
+}

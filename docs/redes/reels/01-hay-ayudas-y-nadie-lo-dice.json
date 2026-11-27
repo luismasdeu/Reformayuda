@@ -1,0 +1,36 @@
+{
+ "escenas": [
+  {
+   "tipo": "gancho",
+   "emoji": "🏠",
+   "texto": "Hay ayudas para tu obra **y nadie te lo dice**",
+   "voz": "Hay ayudas para tu obra, y nadie te lo dice."
+  },
+  {
+   "tipo": "punto",
+   "emoji": "📰",
+   "texto": "Las publican el Estado, tu comunidad, tu provincia y tu ayuntamiento… **cada una en su boletín**",
+   "voz": "Las publican el Estado, tu comunidad, tu provincia y tu ayuntamiento. Cada una en su boletín, y con su plazo."
+  },
+  {
+   "tipo": "punto",
+   "emoji": "⏰",
+   "texto": "Cuando te enteras, **muchas ya han cerrado**",
+   "voz": "Y cuando te enteras, muchas ya han cerrado."
+  },
+  {
+   "tipo": "punto",
+   "emoji": "🔎",
+   "texto": "Obrayuda las revisa **cada mañana** y te enseña las de tu zona",
+   "voz": "Obrayuda las revisa cada mañana y te enseña solo las de tu zona. Gratis."
+  },
+  {
+   "tipo": "cta",
+   "texto": "Comenta **AYUDA** y te digo las de tu provincia",
+   "voz": "Comenta ayuda, y te digo las de tu provincia.",
+   "palabra": "AYUDA"
+  }
+ ],
+ "texto": "Hay ayudas para tu obra… y casi nadie se entera a tiempo 👀\n\nVentanas, aislamiento, placas, baño adaptado, fachada, ascensor… Cada semana salen ayudas nuevas en decenas de boletines distintos.\n\nObrayuda los revisa cada mañana y te enseña solo las de tu zona.\n\n💬 Comenta AYUDA y tu provincia y te digo cuáles hay.\n🔎 obrayuda.es (enlace en el perfil)\n\n#ayudasvivienda #subvenciones #reformas #reformacasa #rehabilitacion",
+ "voz": "es-ES-ElviraNeural"
+}
