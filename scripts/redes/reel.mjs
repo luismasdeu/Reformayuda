@@ -57,12 +57,21 @@ function html(s) {
 const duracion = (f) => parseFloat(execFileSync("ffprobe", ["-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", f]).toString());
 
 function voz(texto, voces, archivo) {
+  // 1) Voz neuronal de Microsoft (edge-tts). 2) Si falla, Piper (sin conexión, modelo en PIPER_MODELO).
   try {
     execFileSync("edge-tts", ["--voice", voces, "--rate", "+8%", "--text", texto, "--write-media", archivo], { stdio: "pipe", timeout: 60000 });
-    if (fs.statSync(archivo).size > 1000) return true;
-  } catch (e) { console.error("Sin voz:", String(e.stderr || e).trim().split("\n").slice(-2).join(" ")); }
-  return false;
+    if (fs.statSync(archivo).size > 1000) return archivo;
+  } catch (e) { if (!avisado.edge) { avisado.edge = 1; console.error("edge-tts no disponible:", String(e.stderr || e).trim().split("\n").pop().slice(0, 160)); } }
+  if (process.env.PIPER_MODELO) {
+    const wav = archivo.replace(/\.mp3$/, ".wav");
+    try {
+      execFileSync("piper", ["-m", process.env.PIPER_MODELO, "-f", wav, "--length-scale", "0.92"], { input: texto, stdio: ["pipe", "pipe", "pipe"], timeout: 120000 });
+      if (fs.statSync(wav).size > 1000) return wav;
+    } catch (e) { if (!avisado.piper) { avisado.piper = 1; console.error("piper falló:", String(e.stderr || e).trim().split("\n").pop().slice(0, 160)); } }
+  }
+  return null;
 }
+const avisado = {};
 
 const [guionArchivo, salida] = process.argv.slice(2);
 if (!guionArchivo || !salida) { console.error("Uso: node scripts/redes/reel.mjs <guion.json> <carpeta>"); process.exit(1); }
@@ -80,15 +89,16 @@ for (const [i, s] of guion.escenas.entries()) {
   await pagina.evaluate(() => document.fonts.ready);
   await pagina.screenshot({ path: png });
   if (i === 0) await pagina.screenshot({ path: path.join(salida, "portada.jpg"), type: "jpeg", quality: 90 });
-  const hablado = voz(s.voz || s.texto.replace(/\*\*/g, ""), guion.voz || "es-ES-ElviraNeural", mp3);
+  const audioVoz = voz(s.voz || s.texto.replace(/\*\*/g, ""), guion.voz || "es-ES-ElviraNeural", mp3);
+  const hablado = Boolean(audioVoz);
   conVoz += hablado ? 1 : 0;
   const palabras = (s.voz || s.texto).split(/\s+/).length;
-  const d = Math.max(hablado ? duracion(mp3) + 0.35 : palabras / 2.6 + 0.6, s.tipo === "cta" ? 2.5 : 1.6);
+  const d = Math.max(hablado ? duracion(audioVoz) + 0.35 : palabras / 2.6 + 0.6, s.tipo === "cta" ? 2.5 : 1.6);
   const fr = Math.round(d * 30);
   // Entrada con un pequeño «zoom» (más marcado en el gancho) para que no sea una imagen quieta
   const z0 = i === 0 ? 1.12 : 1.05;
   const filtro = `scale=1188:2112,zoompan=z='max(${z0}-(${z0}-1)*on/12,1)+0.02*on/${fr}':x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)':d=${fr}:s=1080x1920:fps=30,format=yuv420p`;
-  const audio = hablado ? ["-i", mp3] : ["-f", "lavfi", "-t", String(d), "-i", "anullsrc=r=44100:cl=stereo"];
+  const audio = hablado ? ["-i", audioVoz] : ["-f", "lavfi", "-t", String(d), "-i", "anullsrc=r=44100:cl=stereo"];
   execFileSync("ffmpeg", ["-y", "-loglevel", "error", "-loop", "1", "-t", String(d), "-i", png, ...audio,
     "-filter_complex", `[0:v]${filtro}[v];[1:a]apad,atrim=0:${d},aresample=44100[a]`, "-map", "[v]", "-map", "[a]",
     "-t", String(d), "-c:v", "libx264", "-preset", "medium", "-crf", "20", "-c:a", "aac", "-b:a", "128k", "-ar", "44100", "-ac", "2", mp4]);
