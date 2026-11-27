@@ -82,10 +82,14 @@ async function elegirConIA(s, candidatos) {
   const clave = process.env.ANTHROPIC_API_KEY;
   if (!clave || candidatos.length === 0) return candidatos.length ? 0 : -1;
   const contenido = [];
-  candidatos.forEach((h, k) => {  // h = {tipo, h, mini}
-    const url = h.mini;
-    contenido.push({ type: "text", text: `Imagen ${k + 1}:` }, { type: "image", source: { type: "url", url } });
-  });
+  for (const [k, c] of candidatos.entries()) {  // c = {tipo, h, mini}: la miniatura se descarga y se envía en base64
+    try {
+      const r = await fetch(c.mini);
+      const tipo = (r.headers.get("content-type") || "image/jpeg").split(";")[0];
+      const datos = Buffer.from(await r.arrayBuffer()).toString("base64");
+      contenido.push({ type: "text", text: `Imagen ${k + 1}:` }, { type: "image", source: { type: "base64", media_type: tipo, data: datos } });
+    } catch { contenido.push({ type: "text", text: `Imagen ${k + 1}: (no disponible)` }); }
+  }
   contenido.push({ type: "text", text:
     `Es un reel de Obrayuda (ayudas para obras y reformas en viviendas, en España). En esta escena la voz dice: «${s.voz || s.texto.replace(/\*\*/g, "")}».\n` +
     `Algunas imágenes son fotogramas de vídeo y otras fotos. Elige la que mejor encaje con lo que se dice (por ejemplo: obreros o una obra en una casa, ventanas, monedas de euro, papeles de un trámite, un edificio de viviendas). ` +
