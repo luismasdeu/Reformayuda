@@ -360,7 +360,12 @@ def publicar(carpeta):
         urls = [f"{base}/{f.name}" for f in sorted(carpeta.glob("slide-*.jpg"))]
         for u in urls:
             esperar_url(u)
-    pagina = graph("GET", "me", token, fields="id,name")["id"]
+    yo = graph("GET", "me", token, fields="id,name")
+    esperada = os.environ.get("META_PAGINA") or "Obrayuda"
+    if esperada.lower() not in yo.get("name", "").lower():
+        print(f"El token es de la página «{yo.get('name')}», no de «{esperada}». No publico nada.")
+        sys.exit(1)
+    pagina = yo["id"]
     ig = graph("GET", pagina, token, fields="instagram_business_account").get("instagram_business_account", {}).get("id")
     entrada = {"fecha": spec["fecha"], "formato": spec.get("formato", "carrusel"), "nombre": spec["nombre"], "tipo": spec["tipo"]}
     if spec.get("ayuda"):
@@ -404,7 +409,6 @@ def comprobar():
             print("  IG:", m)
     for p in graph("GET", f"{pagina['id']}/posts", token, fields="id,permalink_url,created_time,is_published").get("data", [])[:5]:
         print("  FB:", p)
-    print("Permisos del token:", graph("GET", "me/permissions", token).get("data", "solo de página"))
 
 
 if __name__ == "__main__":

@@ -1,10 +1,9 @@
 {
- "publicadas": [
+ "publicadas": [],
+ "borradas_por_error": [
   {
    "fecha": "2026-11-27",
-   "formato": "carrusel",
-   "nombre": "01-que-es-obrayuda",
-   "tipo": "consejo",
+   "cuenta": "luismasdeuoficial",
    "instagram": "17880622380573891",
    "facebook": "628569057007904_122213616668866248"
   }
