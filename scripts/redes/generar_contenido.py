@@ -104,7 +104,7 @@ def a_guion(r):
     esc = [{"tipo": "gancho", "emoji": r["emoji"], "texto": r["gancho"], "voz": r["voz_gancho"]}]
     esc += [{"tipo": "punto", "emoji": e["emoji"], "texto": e["texto"], "voz": e["voz"]} for e in r["escenas"][:4]]
     esc.append({"tipo": "cta", "texto": r["cta"], "voz": r["voz_cta"], "palabra": r["palabra"].upper()})
-    return {"voz": "es-ES-ElviraNeural", "escenas": esc, "texto": r["texto_publicacion"]}
+    return {"voz": "es-ES-XimenaNeural", "escenas": esc, "texto": r["texto_publicacion"]}
 
 
 def a_carrusel(c):

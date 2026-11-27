@@ -3,7 +3,7 @@
 // Deja reel.mp4 y portada.jpg. La voz se hace con edge-tts (gratis, sin clave);
 // si no está disponible, el reel sale sin voz y con la duración calculada por palabras.
 //
-// Guion: { "voz": "es-ES-ElviraNeural", "escenas": [
+// Guion: { "voz": "es-ES-XimenaNeural", "escenas": [
 //   { "tipo": "gancho"|"punto"|"cifra"|"cta", "texto": "lo que se ve (**resaltado**)",
 //     "voz": "lo que se dice", "emoji": "🪟", "n": 1, "cifra": "9.000 €" } ] }
 import { createRequire } from "node:module";
@@ -89,7 +89,7 @@ for (const [i, s] of guion.escenas.entries()) {
   await pagina.evaluate(() => document.fonts.ready);
   await pagina.screenshot({ path: png });
   if (i === 0) await pagina.screenshot({ path: path.join(salida, "portada.jpg"), type: "jpeg", quality: 90 });
-  const audioVoz = voz(s.voz || s.texto.replace(/\*\*/g, ""), guion.voz || "es-ES-ElviraNeural", mp3);
+  const audioVoz = voz(s.voz || s.texto.replace(/\*\*/g, ""), guion.voz || "es-ES-XimenaNeural", mp3);
   const hablado = Boolean(audioVoz);
   conVoz += hablado ? 1 : 0;
   const palabras = (s.voz || s.texto).split(/\s+/).length;

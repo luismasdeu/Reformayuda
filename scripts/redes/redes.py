@@ -226,7 +226,7 @@ def reel_de_ayuda(a, d):
                         "voz": plazo_texto(a, d) + ". Mejor no esperes al último día."})
     escenas.append({"tipo": "cta", "texto": "Comenta **AYUDA** y te paso el enlace oficial", "palabra": "AYUDA",
                     "voz": "Comenta ayuda, y te paso el enlace oficial."})
-    return {"voz": "es-ES-ElviraNeural", "escenas": escenas, "texto": spec_de_ayuda(a, d)["texto"]}
+    return {"voz": "es-ES-XimenaNeural", "escenas": escenas, "texto": spec_de_ayuda(a, d)["texto"]}
 
 
 def planificar_reel():
