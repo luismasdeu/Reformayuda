@@ -74,7 +74,8 @@
   "bdns-943767",
   "bdns-944114",
   "bdns-944125",
-  "bdns-944854"
+  "bdns-944854",
+  "bdns-944969"
  ],
  "ia": [
   {
@@ -2225,6 +2226,56 @@
     "confirmar": [
      "El documento adjunto solo modifica las bases de 2024 y no contiene la convocatoria de 2026.",
      "La ayuda no parece financiar obras en viviendas: confirma que es cultural."
+    ]
+   }
+  },
+  {
+   "id": "bdns-944969",
+   "estado": "descartada",
+   "title": "Plan de accesibilidad en la justicia. Garantía de los derechos de las personas con discapacidad",
+   "org": "CANTABRIA · CONSEJERÍA PRESIDENCIA, JUSTICIA, SEGURIDAD Y SIMPLIFICACIÓN ADMINISTRATIVA",
+   "scope": "autonomica",
+   "ccaa": "Cantabria",
+   "tipo": [
+    "accesibilidad"
+   ],
+   "dest": [
+    "vivienda"
+   ],
+   "importe": 0,
+   "imp": "Consulta la convocatoria",
+   "abre": "2026-11-26",
+   "cierra": "2026-11-27",
+   "plazo": "Consulta el plazo en la convocatoria",
+   "irpf": false,
+   "fuente": "BDNS nº 944969",
+   "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/944969",
+   "resumen": "Plan de accesibilidad en la justicia. Garantía de los derechos de las personas con discapacidad",
+   "req": [
+    "Consulta los requisitos en la convocatoria oficial"
+   ],
+   "docs": [
+    "Consulta la documentación en la convocatoria oficial"
+   ],
+   "pasos": [
+    "Lee la convocatoria oficial",
+    "Prepara la documentación",
+    "Presenta la solicitud en la sede del organismo"
+   ],
+   "_revisar": {
+    "presupuesto_total": 30000,
+    "bases_reguladoras": "https://www.boe.es/boe/dias/2026/05/08/pdfs/BOE-A-2026-9962.pdf",
+    "abierta_segun_bdns": false,
+    "beneficiarios": "PERSONAS JURÍDICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
+    "nota": "Revisa importe por vivienda, requisitos, documentos y pasos antes de aprobar.",
+    "ia": {
+     "fecha": "2026-11-27",
+     "documento": "19 de 50 páginas",
+     "recomendacion": "descartar",
+     "motivo": "Es una subvención de concesión directa a una entidad (plan de accesibilidad en la justicia para personas con discapacidad), no ayuda a particulares para obras en su vivienda."
+    },
+    "confirmar": [
+     "El documento adjunto es la Ley de Presupuestos de Cantabria 2026 y no contiene las bases de esta ayuda."
     ]
    }
   }
