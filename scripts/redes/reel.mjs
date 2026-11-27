@@ -30,10 +30,10 @@ const TEMAS = [
   [/comunidad|edificio|vecin|junta|acta/i, "apartment building"], [/humedad|pared|pintar/i, "painting wall"],
   [/construir|autoconstru|proyecto|licencia/i, "house construction"], [/mayor|padres|abuel/i, "elderly couple home"],
   [/pueblo|rural/i, "village house"], [/papel|certificad|factura|document|justific|bases|solicit|sede/i, "documents paperwork"],
-  [/hacienda|renta|deduc|irpf|dinero|€|euros|pag/i, "money calculator"], [/ibi|icio|ayuntamiento|impuesto/i, "city hall"],
+  [/hacienda|renta|deduc|irpf|dinero|€|euros|pag/i, "euro coins"], [/ibi|icio|ayuntamiento|impuesto/i, "city hall"],
   [/inund|dana/i, "flood street"], [/telegram|móvil|avisos|enteras/i, "smartphone hand"],
 ];
-const GENERICOS = ["home renovation", "construction worker", "house interior renovation", "builder tools", "modern house"];
+const GENERICOS = ["house renovation worker", "construction worker house", "renovation interior wall", "builder tools", "house exterior"];
 const usados = new Set();
 
 function tema(s, i) {
