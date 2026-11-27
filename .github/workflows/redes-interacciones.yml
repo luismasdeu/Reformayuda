@@ -2,16 +2,15 @@
 # borradores de respuesta a preguntas (se aprueban en obrayuda.es/revisar/).
 name: Redes · comentarios y mensajes
 
+# Normalmente lo hace el Reloj (reloj.yml) cada 15 minutos; esto queda para lanzarlo a mano.
 on:
-  schedule:
-    - cron: "*/15 * * * *"
   workflow_dispatch:
 
 permissions:
   contents: write
 
 concurrency:
-  group: redes-interacciones
+  group: reloj-interacciones
   cancel-in-progress: false
 
 jobs:

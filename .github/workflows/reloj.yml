@@ -1,0 +1,41 @@
+# Reloj de Obrayuda (ver scripts/reloj.py): lanza cada tarea a su hora y revisa
+# comentarios y mensajes cada 15 minutos. Se relanza solo al terminar.
+# El «cron» de abajo solo sirve para volver a arrancarlo si alguna vez se parase.
+name: Reloj
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "41 */6 * * *"
+
+permissions:
+  contents: write
+  actions: write
+
+concurrency:
+  group: reloj
+  cancel-in-progress: false
+
+jobs:
+  reloj:
+    runs-on: ubuntu-latest
+    timeout-minutes: 355
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: main
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+      - run: pip install --quiet anthropic==2.3.0 firebase-admin==6.5.0
+      - name: Reloj
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          META_PAGE_TOKEN: ${{ secrets.META_PAGE_TOKEN }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          CLAUDE_MODEL: ${{ vars.CLAUDE_MODEL }}
+          FIREBASE_SERVICE_ACCOUNT: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
+        run: |
+          git config user.name "reformayuda-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          python scripts/reloj.py
