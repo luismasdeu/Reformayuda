@@ -396,6 +396,29 @@ def publicar(carpeta):
         sys.exit(1)
 
 
+def incorporar():
+    """Pasa a docs/redes/ las propuestas de contenido aprobadas en /revisar/ y las quita de la lista."""
+    ruta = RAIZ / "revision" / "redes-propuestas.json"
+    if not ruta.exists():
+        return
+    props = json.loads(ruta.read_text(encoding="utf-8"))
+    quedan, hechas_ahora = [], 0
+    for p in props["propuestas"]:
+        if p.get("estado") == "aprobada":
+            carpeta = REELS if p["formato"] == "reel" else BANCO
+            n = max([int(f.stem[:2]) for f in carpeta.glob("[0-9][0-9]-*.json")] or [0]) + 1
+            (carpeta / f"{n:02d}-{p['nombre']}.json").write_text(
+                json.dumps(p["contenido"], ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
+            hechas_ahora += 1
+        elif p.get("estado") == "descartada":
+            props["descartadas"] = props.get("descartadas", 0) + 1
+        else:
+            quedan.append(p)
+    props["propuestas"] = quedan
+    ruta.write_text(json.dumps(props, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
+    print(f"Incorporadas {hechas_ahora} propuestas aprobadas.")
+
+
 def comprobar():
     """Muestra qué ve Meta en la cuenta: publicaciones de Instagram y de la página."""
     token = os.environ["META_PAGE_TOKEN"].strip()
@@ -412,6 +435,9 @@ def comprobar():
 
 
 if __name__ == "__main__":
+    if sys.argv[1:2] == ["incorporar"]:
+        incorporar()
+        sys.exit(0)
     if sys.argv[1:2] == ["comprobar"]:
         comprobar()
         sys.exit(0)

@@ -47,6 +47,15 @@ jobs:
         with:
           python-version: "3.12"
 
+      - name: Incorporar el contenido aprobado en /revisar/
+        if: steps.meta.outputs.ok == 'true'
+        run: |
+          python scripts/redes/redes.py incorporar
+          git config user.name "reformayuda-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/redes revision/redes-propuestas.json 2>/dev/null || true
+          git diff --cached --quiet || (git commit -m "Redes: incorpora contenido aprobado" && git pull --rebase -q && git push)
+
       - name: Decidir qué toca hoy
         if: steps.meta.outputs.ok == 'true'
         id: plan

@@ -137,6 +137,24 @@ def aviso_revision(registro, ayudas):
     return [(None, t, datos) for t in tokens]
 
 
+def aviso_redes(registro):
+    """Aviso al responsable cuando la IA deja contenido nuevo para redes por revisar."""
+    ruta = RAIZ / "revision" / "redes-propuestas.json"
+    if not ADMIN.exists() or not ruta.exists():
+        return []
+    tokens = json.loads(ADMIN.read_text(encoding="utf-8")).get("tokens", [])
+    pend = [p["id"] for p in json.loads(ruta.read_text(encoding="utf-8")).get("propuestas", [])
+            if p.get("estado", "pendiente") == "pendiente"]
+    nuevas = [i for i in pend if i not in set(registro.get("redes_avisadas", []))]
+    registro["redes_avisadas"] = pend
+    if not nuevas or not tokens:
+        return []
+    datos = {"title": f"Contenido nuevo para redes: {len(nuevas)} por revisar",
+             "body": "La IA ha preparado reels y carruseles. Apruébalos para que entren en el calendario.",
+             "url": f"{DOMINIO}/revisar/", "tag": "redes"}
+    return [(None, t, datos) for t in tokens]
+
+
 def estadisticas(db, hoy):
     """Copia los contadores anónimos de los últimos 60 días (colección «visitas») a revision/estadisticas.json,
     para verlos en /revisar/. Son solo totales por día: no hay datos de nadie."""
@@ -184,6 +202,7 @@ def main():
     else:
         envios, avisadas = planificar(ayudas, subs, set(registro["ids"]), hoy)
         envios += aviso_revision(registro, ayudas)
+        envios += aviso_redes(registro)
         if ADMIN.exists():
             envios += aviso_ia(registro, json.loads(ADMIN.read_text(encoding="utf-8")).get("tokens", []))
 

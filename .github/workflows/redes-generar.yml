@@ -1,0 +1,43 @@
+# Cada lunes mira si quedan pocos reels o carruseles por publicar y, si hace falta,
+# la IA escribe una tanda nueva para revisar en obrayuda.es/revisar/.
+name: Redes · generar contenido
+
+on:
+  schedule:
+    - cron: "23 6 * * 1"   # lunes 07:23 (hora de España en invierno)
+  workflow_dispatch:
+    inputs:
+      forzar:
+        description: "Generar aunque queden suficientes"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: redes-generar
+  cancel-in-progress: false
+
+jobs:
+  generar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: main
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+      - run: pip install --quiet anthropic
+      - name: Generar si hace falta
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          CLAUDE_MODEL: ${{ vars.CLAUDE_MODEL }}
+        run: python scripts/redes/generar_contenido.py ${{ inputs.forzar && '--forzar' || '' }}
+      - name: Guardar
+        run: |
+          git config user.name "reformayuda-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add revision/redes-propuestas.json revision/gasto-ia.json 2>/dev/null || true
+          git diff --cached --quiet || (git commit -m "Redes: propuestas de contenido de la IA" && git pull --rebase -q && git push)
