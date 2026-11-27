@@ -31,9 +31,9 @@ const TEMAS = [
   [/construir|autoconstru|proyecto|licencia/i, "house construction"], [/mayor|padres|abuel/i, "elderly couple home"],
   [/pueblo|rural/i, "village house"], [/papel|certificad|factura|document|justific|bases|solicit|sede/i, "documents paperwork"],
   [/hacienda|renta|deduc|irpf|dinero|€|euros|pag/i, "euro coins"], [/ibi|icio|ayuntamiento|impuesto/i, "city hall"],
-  [/inund|dana/i, "flood street"], [/telegram|móvil|avisos|enteras/i, "smartphone hand"],
+  [/inund|dana/i, "flood street"], [/subvenci|ayuda|reforma|obra/i, "home renovation"], [/telegram|móvil|avisos|enteras/i, "smartphone hand"],
 ];
-const GENERICOS = ["house renovation worker", "construction worker house", "renovation interior wall", "builder tools", "house exterior"];
+const GENERICOS = ["home renovation", "house renovation interior", "construction site house", "builder renovation", "house exterior spain"];
 const usados = new Set();
 
 function tema(s, i) {
@@ -51,7 +51,7 @@ async function fondoVideo(q, minimo, tmp, i) {
     if (!r.ok) throw new Error(`Pixabay ${r.status}`);
     const hits = (await r.json()).hits || [];
     const buenos = hits.filter((h) => !usados.has(h.id) && h.duration >= Math.min(minimo, 8));
-    const h = buenos[Math.floor(Math.random() * Math.min(buenos.length, 8))];
+    const h = buenos[Math.floor(Math.random() * Math.min(buenos.length, 4))];  // entre los más populares (los más acertados)
     if (!h) return null;
     usados.add(h.id);
     const v = h.videos.medium?.url ? h.videos.medium : h.videos.large || h.videos.small;
@@ -131,10 +131,10 @@ const CSS = `
 .num{position:absolute;left:50%;top:400px;transform:translateX(-50%);width:300px;height:300px;border-radius:50%;background:#FFC23D;color:#11302A;
   font:800 210px B;display:flex;align-items:center;justify-content:center;box-shadow:0 14px 40px rgba(0,0,0,.4)}
 .gigante{position:absolute;left:60px;right:120px;top:0;bottom:0;display:flex;flex-direction:column;justify-content:center;padding-bottom:180px;
-  font-weight:800;font-size:132px;line-height:1.0;letter-spacing:-3px;text-align:left;paint-order:stroke fill;-webkit-text-stroke:18px rgba(0,0,0,.9);
+  font-weight:800;font-size:150px;line-height:.98;letter-spacing:-3px;text-align:left;paint-order:stroke fill;-webkit-text-stroke:18px rgba(0,0,0,.9);
   text-shadow:0 8px 30px rgba(0,0,0,.55)}
-.gigante.larga{font-size:110px}.gigante em{font-style:normal;color:#FFC23D}
-.gigante.golpe{color:#FFC23D}.gigante.golpe em{color:#fff}
+.gigante.larga{font-size:128px}.gigante em{font-style:normal;color:#FFC23D}
+.gigante.golpe{font-size:160px}.gigante.golpe.larga{font-size:136px}
 .gigante .banner{position:static;align-self:flex-start;margin-bottom:34px;-webkit-text-stroke:0;text-shadow:none;letter-spacing:2px}
 .cta{position:absolute;left:70px;right:150px;top:330px;background:#FFC23D;color:#11302A;border-radius:44px;padding:56px 54px;box-shadow:0 20px 50px rgba(0,0,0,.35)}
 .cta .t{font-weight:800;font-size:84px;line-height:1.05;letter-spacing:-1.5px}.cta em{font-style:normal;color:#0D7A63}
