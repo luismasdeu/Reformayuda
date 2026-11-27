@@ -133,7 +133,7 @@
    "id": "2026-11-27-r-dana-fachadas-valencia",
    "formato": "reel",
    "nombre": "dana-fachadas-valencia",
-   "estado": "pendiente",
+   "estado": "descartada",
    "fecha": "2026-11-27",
    "contenido": {
     "voz": "es-ES-ElviraNeural",
@@ -176,7 +176,7 @@
    "id": "2026-11-27-r-dana-ascensores-valencia",
    "formato": "reel",
    "nombre": "dana-ascensores-valencia",
-   "estado": "pendiente",
+   "estado": "descartada",
    "fecha": "2026-11-27",
    "contenido": {
     "voz": "es-ES-ElviraNeural",
@@ -219,7 +219,7 @@
    "id": "2026-11-27-r-incendios-sierra-oeste-madrid",
    "formato": "reel",
    "nombre": "incendios-sierra-oeste-madrid",
-   "estado": "pendiente",
+   "estado": "descartada",
    "fecha": "2026-11-27",
    "contenido": {
     "voz": "es-ES-ElviraNeural",
@@ -262,7 +262,7 @@
    "id": "2026-11-27-r-logrono-accesibilidad-interior",
    "formato": "reel",
    "nombre": "logrono-accesibilidad-interior",
-   "estado": "pendiente",
+   "estado": "descartada",
    "fecha": "2026-11-27",
    "contenido": {
     "voz": "es-ES-ElviraNeural",
@@ -305,7 +305,7 @@
    "id": "2026-11-27-r-barlovento-proyecto-autoconstruccion",
    "formato": "reel",
    "nombre": "barlovento-proyecto-autoconstruccion",
-   "estado": "pendiente",
+   "estado": "descartada",
    "fecha": "2026-11-27",
    "contenido": {
     "voz": "es-ES-ElviraNeural",
@@ -391,7 +391,7 @@
    "id": "2026-11-27-r-inundaciones-galar-navarra",
    "formato": "reel",
    "nombre": "inundaciones-galar-navarra",
-   "estado": "pendiente",
+   "estado": "descartada",
    "fecha": "2026-11-27",
    "contenido": {
     "voz": "es-ES-ElviraNeural",
@@ -520,7 +520,7 @@
    "id": "2026-11-27-r-plan-estatal-vivienda-edificios",
    "formato": "reel",
    "nombre": "plan-estatal-vivienda-edificios",
-   "estado": "pendiente",
+   "estado": "descartada",
    "fecha": "2026-11-27",
    "contenido": {
     "voz": "es-ES-ElviraNeural",
@@ -606,7 +606,7 @@
    "id": "2026-11-27-c-ayudas-catastrofes-abiertas",
    "formato": "carrusel",
    "nombre": "ayudas-catastrofes-abiertas",
-   "estado": "pendiente",
+   "estado": "descartada",
    "fecha": "2026-11-27",
    "contenido": {
     "slides": [
@@ -668,7 +668,7 @@
    "id": "2026-11-27-c-mitos-ayudas-obra",
    "formato": "carrusel",
    "nombre": "mitos-ayudas-obra",
-   "estado": "pendiente",
+   "estado": "descartada",
    "fecha": "2026-11-27",
    "contenido": {
     "slides": [
@@ -771,7 +771,7 @@
    "id": "2026-11-27-c-obra-comunidad-pasos",
    "formato": "carrusel",
    "nombre": "obra-comunidad-pasos",
-   "estado": "pendiente",
+   "estado": "descartada",
    "fecha": "2026-11-27",
    "contenido": {
     "slides": [
@@ -833,7 +833,7 @@
    "id": "2026-11-27-c-plan-estatal-2026-2030-obras",
    "formato": "carrusel",
    "nombre": "plan-estatal-2026-2030-obras",
-   "estado": "pendiente",
+   "estado": "descartada",
    "fecha": "2026-11-27",
    "contenido": {
     "slides": [

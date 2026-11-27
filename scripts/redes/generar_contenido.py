@@ -34,7 +34,8 @@ Escribes en español de España, cercano y claro, para personas de 30 a 65 años
 
 Reglas que no se pueden saltar:
 - Solo datos verdaderos y generales que se puedan comprobar en fuentes oficiales (leyes, Agencia Tributaria, BOE, convocatorias). Si no estás seguro de una cifra, no la pongas. Nada de prometer dinero a todo el mundo: di «puede», «muchas», «según la convocatoria».
-- No te inventes ayudas concretas, cifras ni plazos. Si mencionas una ayuda concreta, usa solo las de la lista de ayudas abiertas que te paso, con sus datos tal cual.
+- Contenido ATEMPORAL: consejos, errores, trámites, mitos, tipos de obra. NO hagas piezas sobre una ayuda concreta con plazo (esas se publican solas en otro formato) y no pongas fechas de cierre: se pueden publicar semanas después.
+- No te inventes cifras, normas ni plazos. No cites números de leyes o reales decretos. Las únicas cifras permitidas son las de la lista de datos fiables que te paso.
 - Nada sobre comprar una casa ya construida, alquiler, recibos o ayudas sociales: Obrayuda es solo de obras.
 - No repitas temas ni ganchos de la lista de ya publicados o preparados.
 - Cada pieza acaba invitando a comentar una PALABRA en mayúsculas (AYUDA, EDIFICIO, PLACAS, BAÑO, CONSTRUIR, MAYORES, ICIO, PUEBLO…).
@@ -137,13 +138,12 @@ def main():
 
     pedir_r = TANDA_REELS if n_reels < MIN_REELS or forzar else 0
     pedir_c = TANDA_CARRUSELES if n_carr < MIN_CARRUSELES or forzar else 0
-    ayudas = json.loads(redes.AYUDAS.read_text(encoding="utf-8"))["ayudas"]
-    abiertas = [{k: a.get(k) for k in ("title", "imp", "cierra", "ccaa", "muni", "fuente")}
-                for a in redes.candidatas(ayudas, set(), dt.date.today())][:15]
     peticion = (f"Escribe {pedir_r} reels y {pedir_c} carruseles nuevos.\n\n"
                 "Ya publicados o preparados (no repitas tema ni gancho):\n" + "\n".join(existentes()) +
-                "\n\nAyudas abiertas ahora en Obrayuda (solo si mencionas una concreta, con estos datos):\n" +
-                json.dumps(abiertas, ensure_ascii=False) +
+                "\n\nDatos fiables que puedes usar: deducción del IRPF por obras de eficiencia energética en vivienda del 20 % "
+                "(hasta 1.000 € al año) o del 40 % (hasta 3.000 € al año), y del 60 % en obras del edificio (hasta 9.000 € en total); "
+                "exige certificado energético antes y después, factura a tu nombre y pago no en efectivo. Bonificaciones municipales: "
+                "IBI hasta el 50 % por placas solares e ICIO hasta el 95 % en obras de eficiencia, renovables o accesibilidad, según cada ayuntamiento." +
                 "\n\nVaría los temas: tipos de obra (ventanas, aislamiento, cubierta, aerotermia, placas, baño, cocina adaptada, ascensor, fachada, humedades, autoconstrucción), "
                 "trámites (certificados, licencias, plazos, justificación), errores frecuentes, mitos, comunidades de vecinos, casas de pueblo y zonas rurales.")
 
