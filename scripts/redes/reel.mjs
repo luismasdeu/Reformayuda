@@ -42,9 +42,9 @@ const TEMAS = [
   [/comunidad|edificio|vecin|junta|acta/i, ["apartment building", "residential building", "building facade"], ["building", "apartment", "residential", "facade"]],
   [/mayor|padres|abuel/i, ["elderly couple home", "senior home"], ["elderly", "senior", "old", "grandparents"]],
   [/pueblo|rural|campo/i, ["village house", "old stone house", "rural house"], ["village", "rural", "stone", "house", "countryside"]],
-  [/reforma|obra|albañil|empez|contrat|presupuesto|constructor|ladrillo/i, ["renovation worker", "construction worker house", "home renovation", "builder working", "plastering wall"], OBRA],
   [/papel|certificad|factura|document|justific|bases|solicit|sede|trámite|tramite|formulario/i, ["documents paperwork", "filling form", "signing document"], ["document", "documents", "paper", "paperwork", "form", "signing", "office", "contract"]],
   [/hacienda|renta|deduc|irpf|dinero|€|euros|devuelv|pag|ahorr|factura de la luz/i, ["euro coins", "euro banknotes", "euro money"], ["euro", "euros", "coins", "money", "banknotes", "cash"]],
+  [/reforma|obra|albañil|empez|contrat|presupuesto|constructor|ladrillo/i, ["renovation worker", "construction worker house", "home renovation", "builder working", "plastering wall"], OBRA],
   [/ibi|icio|ayuntamiento|impuesto/i, ["city hall spain", "town hall building"], ["city hall", "town hall", "building", "government"]],
   [/inund|dana/i, ["flood street", "flooded house"], ["flood", "flooding", "water"]],
   [/telegram|móvil|movil|avisos|enteras|notifica/i, ["smartphone hand", "using phone"], ["phone", "smartphone", "mobile"]],
@@ -82,13 +82,13 @@ async function elegirConIA(s, candidatos) {
   const clave = process.env.ANTHROPIC_API_KEY;
   if (!clave || candidatos.length === 0) return candidatos.length ? 0 : -1;
   const contenido = [];
-  candidatos.forEach((h, k) => {
-    const url = h.videos.tiny?.thumbnail || h.videos.small?.thumbnail || h.videos.medium?.thumbnail;
+  candidatos.forEach((h, k) => {  // h = {tipo, h, mini}
+    const url = h.mini;
     contenido.push({ type: "text", text: `Imagen ${k + 1}:` }, { type: "image", source: { type: "url", url } });
   });
   contenido.push({ type: "text", text:
     `Es un reel de Obrayuda (ayudas para obras y reformas en viviendas, en España). En esta escena la voz dice: «${s.voz || s.texto.replace(/\*\*/g, "")}».\n` +
-    `Elige la imagen que mejor encaje con lo que se dice (por ejemplo: obreros o una obra en una casa, ventanas, monedas de euro, papeles de un trámite, un edificio de viviendas). ` +
+    `Algunas imágenes son fotogramas de vídeo y otras fotos. Elige la que mejor encaje con lo que se dice (por ejemplo: obreros o una obra en una casa, ventanas, monedas de euro, papeles de un trámite, un edificio de viviendas). ` +
     `No hace falta que sea exacta: vale cualquier imagen relacionada con obras, reformas, casas, dinero en euros o trámites. ` +
     `Responde 0 solo si todas son claramente ajenas al tema (deporte, laboratorio, naturaleza, animales, velas, dólares, fábricas…). ` +
     `Responde SOLO con el número.` });
@@ -124,15 +124,28 @@ async function fondoVideo(s, guion, minimo, tmp, i) {
       if (!r.ok) throw new Error(`Pixabay ${r.status}`);
       const validos = ((await r.json()).hits || []).filter((h) => !usados.has(h.id) && !usadosAntes.has(h.id) && h.duration >= Math.min(minimo, 8) && encaja(h, [""]));
       // Primero los que tienen las etiquetas del tema; la IA decide entre los 8 primeros
-      const candidatos = [...validos.filter((h) => encaja(h, exigidas)), ...validos.filter((h) => !encaja(h, exigidas))].slice(0, 6);
+      const vids = [...validos.filter((h) => encaja(h, exigidas)), ...validos.filter((h) => !encaja(h, exigidas))].slice(0, 4);
+      // Fotos verticales (Pixabay tiene muchas más fotos concretas que vídeos); se animan con zoom
+      const rf = await fetch(`https://pixabay.com/api/?key=${clave}&q=${encodeURIComponent(q)}&image_type=photo&orientation=vertical&per_page=40&safesearch=true&min_height=1600`);
+      const fotos = rf.ok ? ((await rf.json()).hits || []).filter((h) => !usados.has("f" + h.id) && !usadosAntes.has("f" + h.id) && encaja(h, [""]))
+        .sort((a, b) => encaja(b, exigidas) - encaja(a, exigidas)).slice(0, 4) : [];
+      const candidatos = [...vids.map((h) => ({ tipo: "video", h, mini: h.videos.tiny?.thumbnail || h.videos.small?.thumbnail })),
+                          ...fotos.map((h) => ({ tipo: "foto", h, mini: h.webformatURL }))];
       const k = await elegirConIA(s, candidatos);
       if (k < 0) continue;
-      const h = candidatos[k];
-      usados.add(h.id);
-      const v = h.videos.medium?.url ? h.videos.medium : h.videos.large || h.videos.small;
-      const destino = path.join(tmp, `f${i}.mp4`);
-      fs.writeFileSync(destino, Buffer.from(await (await fetch(v.url)).arrayBuffer()));
-      console.error(`Escena ${i + 1}: «${q}» → clip ${h.id} (${String(h.tags).slice(0, 60)})`);
+      const { tipo, h } = candidatos[k];
+      let destino;
+      if (tipo === "video") {
+        usados.add(h.id);
+        const v = h.videos.medium?.url ? h.videos.medium : h.videos.large || h.videos.small;
+        destino = path.join(tmp, `f${i}.mp4`);
+        fs.writeFileSync(destino, Buffer.from(await (await fetch(v.url)).arrayBuffer()));
+      } else {
+        usados.add("f" + h.id);
+        destino = path.join(tmp, `f${i}.jpg`);
+        fs.writeFileSync(destino, Buffer.from(await (await fetch(h.largeImageURL)).arrayBuffer()));
+      }
+      console.error(`Escena ${i + 1}: «${q}» → ${tipo} ${h.id} (${String(h.tags).slice(0, 60)})`);
       return destino;
     } catch (e) {
       console.error(`Búsqueda «${q}» fallida:`, String(e).slice(0, 120));
@@ -296,15 +309,20 @@ for (const [i, s] of guion.escenas.entries()) {
   const caps = path.join(tmp, `caps${i}.txt`);
   fs.writeFileSync(caps, lista.map(([f, t]) => `file '${path.resolve(f)}'\nduration ${t.toFixed(3)}`).join("\n") + `\nfile '${path.resolve(lista.at(-1)[0])}'\n`);
 
-  const video = await fondoVideo(s, guion, d, tmp, i);
+  const video = s.tipo === "cta" ? null : await fondoVideo(s, guion, d, tmp, i);
   conVideo += video ? 1 : 0;
-  const fondo = video ? ["-stream_loop", "-1", "-i", video] : ["-loop", "1", "-i", fondoMarca];
+  const esFoto = video && video.endsWith(".jpg");
+  const fondo = video && !esFoto ? ["-stream_loop", "-1", "-i", video] : ["-loop", "1", "-i", video || fondoMarca];
+  const fr = Math.round(d * FPS);
+  const base = esFoto
+    ? `scale=1296:2304:force_original_aspect_ratio=increase,crop=1296:2304,zoompan=z='1+0.10*on/${fr}':x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)':d=1:s=1080x1920:fps=${FPS},setsar=1`
+    : `scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1920,setsar=1,fps=${FPS}`;
   const oscuro = s.tipo === "cta" ? "-0.22" : (s.tipo === "pregunta" || s.tipo === "golpe") ? "-0.2" : "-0.12";
   const sonido = audio ? ["-i", audio] : ["-f", "lavfi", "-t", String(d), "-i", "anullsrc=r=44100:cl=stereo"];
   const mp4 = path.join(tmp, `e${i}.mp4`);
   execFileSync("ffmpeg", ["-y", "-loglevel", "error", ...fondo, ...sonido, "-f", "concat", "-safe", "0", "-i", caps,
     "-filter_complex",
-    `[0:v]scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1920,setsar=1,fps=${FPS},eq=brightness=${oscuro}:saturation=0.9[b];` +
+    `[0:v]${base},eq=brightness=${oscuro}:saturation=0.9[b];` +
     `[2:v]fps=${FPS},format=rgba[c];[b][c]overlay=0:0:format=auto,format=yuv420p[v];[1:a]apad,atrim=0:${d.toFixed(3)},aresample=44100[a]`,
     "-map", "[v]", "-map", "[a]", "-t", d.toFixed(3), "-r", String(FPS), "-c:v", "libx264", "-preset", "medium", "-crf", "21",
     "-c:a", "aac", "-b:a", "128k", "-ar", "44100", "-ac", "2", mp4]);
