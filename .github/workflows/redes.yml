@@ -76,6 +76,8 @@ jobs:
 
       - name: Generar el carrusel o el reel
         if: steps.plan.outputs.carpeta != ''
+        env:
+          PIXABAY_API_KEY: ${{ secrets.PIXABAY_API_KEY }}
         run: |
           C="${{ steps.plan.outputs.carpeta }}"
           if [ "$FORMATO" = reel ]; then node scripts/redes/reel.mjs "$C/spec.json" "$C"; else node scripts/redes/carrusel.mjs "$C/spec.json" "$C"; fi

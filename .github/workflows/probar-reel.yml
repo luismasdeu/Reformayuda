@@ -28,6 +28,8 @@ jobs:
           npm install --no-save --silent playwright@1.49.1
           npx playwright install --with-deps chromium > /dev/null
       - name: Generar
+        env:
+          PIXABAY_API_KEY: ${{ secrets.PIXABAY_API_KEY }}
         run: |
           mkdir -p docs/redes/pruebas
           if [ "${{ inputs.guion }}" = todos ]; then L=$(ls docs/redes/reels/*.json); else L="docs/redes/reels/${{ inputs.guion }}.json"; fi
