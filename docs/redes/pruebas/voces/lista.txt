@@ -1,0 +1,7 @@
+es-ES-AlvaroNeural                Male      General                Friendly, Positive
+es-ES-ElviraNeural                Female    General                Friendly, Positive
+es-ES-XimenaNeural                Female    General                Friendly, Positive
+es-MX-DaliaNeural                 Female    General                Friendly, Positive
+es-MX-JorgeNeural                 Male      General                Friendly, Positive
+es-US-AlonsoNeural                Male      General                Friendly, Positive
+es-US-PalomaNeural                Female    General                Friendly, Positive
