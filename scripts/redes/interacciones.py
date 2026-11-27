@@ -5,10 +5,10 @@ Lo lanza .github/workflows/redes-interacciones.yml cada 15 minutos.
 
 Comentarios nuevos (de publicaciones de Obrayuda):
   · Con la palabra clave (AYUDA, EDIFICIO, PLACAS…):
-      Instagram → respuesta pública «te lo mandamos por privado» + mensaje privado que invita a
-                  seguir la cuenta con un botón «Ya os sigo ✅». Al pulsarlo (o contestar) se
-                  comprueba si sigue la cuenta y se le envían los enlaces (si no sigue, se le
-                  recuerda con amabilidad y se le envían igualmente: Meta no permite obligar).
+      Instagram → respuesta pública «te lo mandamos por privado». El mensaje privado con los
+                  enlaces lo envía la automatización de Meta Business Suite («Mensaje de respuesta
+                  a comentario»), que sí llega a cualquier persona. (El flujo con el botón
+                  «Ya os sigo ✅» sigue aquí para cuando Meta apruebe los permisos avanzados.)
       Facebook  → respuesta pública con los enlaces.
   · Agradecimientos y emojis → respuesta corta automática.
   · Spam (enlaces ajenos, cripto, insultos) → se oculta.
@@ -291,18 +291,11 @@ def main():
                         graph("POST", c["id"], token, hide="true")
                         print("Oculto (spam):", t[:60])
                     elif es_palabra(t, claves):
-                        try:
-                            graph("POST", f"{pagina}/messages", token, recipient=json.dumps({"comment_id": c["id"]}),
-                                  message=json.dumps(mensaje_seguir()))
-                            graph("POST", f"{c['id']}/replies", token, message=random.choice(
-                                ["¡Te lo mandamos por privado! 📩", "¡Hecho! Mira tus mensajes 📩", "¡Te lo enviamos por privado! 📩"]))
-                            est["seguir"][c["username"]] = {"texto": t, "media": m["id"], "fecha": ahora.isoformat(timespec="minutes")}
-                            print("Palabra clave de", c["username"], ": privado enviado")
-                        except RuntimeError as ex:
-                            # Sin permiso para escribir por privado a esa persona: se contesta en público con los enlaces
-                            graph("POST", f"{c['id']}/replies", token,
-                                  message="¡Aquí lo tienes! 🙌\n" + enlaces(t, m["id"]) + "\nY síguenos para no perderte las nuevas 😉")
-                            print("Palabra clave de", c["username"], ": respuesta pública (privado no permitido:", str(ex)[:120], ")")
+                        # El mensaje privado lo envía la automatización de Meta Business Suite
+                        # («Mensaje de respuesta a comentario»); aquí solo se contesta en público.
+                        graph("POST", f"{c['id']}/replies", token, message=random.choice(
+                            ["¡Te lo mandamos por privado! 📩", "¡Hecho! Mira tus mensajes 📩", "¡Te lo enviamos por privado! 📩"]))
+                        print("Palabra clave de", c["username"], ": respuesta pública (el privado lo manda Meta)")
                     elif GRACIAS.match(t):
                         graph("POST", f"{c['id']}/replies", token, message=random.choice(
                             ["¡Gracias! 🙌", "¡Gracias por comentar! 😊", "¡Nos alegra que te sirva! 🙌"]))
