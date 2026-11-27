@@ -82,42 +82,45 @@ async function elegirConIA(s, candidatos) {
   if (!clave || candidatos.length === 0) return candidatos.length ? 0 : -1;
   const contenido = [];
   candidatos.forEach((h, k) => {
-    const url = h.videos.medium?.thumbnail || h.videos.small?.thumbnail || h.videos.tiny?.thumbnail;
+    const url = h.videos.tiny?.thumbnail || h.videos.small?.thumbnail || h.videos.medium?.thumbnail;
     contenido.push({ type: "text", text: `Imagen ${k + 1}:` }, { type: "image", source: { type: "url", url } });
   });
   contenido.push({ type: "text", text:
     `Es un reel de Obrayuda (ayudas para obras y reformas en viviendas, en España). En esta escena la voz dice: «${s.voz || s.texto.replace(/\*\*/g, "")}».\n` +
-    `¿Qué imagen muestra mejor y de forma clara lo que se dice (por ejemplo obreros cambiando ventanas, una obra en una casa, monedas de euro, papeles de un trámite, un edificio de viviendas)? ` +
-    `Descarta lo que no tenga relación directa: deporte, laboratorios, naturaleza, oficinas de rascacielos, animales, objetos decorativos, dólares, fábricas, otros países con aspecto muy distinto a España. ` +
-    `Responde SOLO con el número de la imagen, o 0 si ninguna encaja claramente.` });
-  try {
+    `Elige la imagen que mejor encaje con lo que se dice (por ejemplo: obreros o una obra en una casa, ventanas, monedas de euro, papeles de un trámite, un edificio de viviendas). ` +
+    `No hace falta que sea exacta: vale cualquier imagen relacionada con obras, reformas, casas, dinero en euros o trámites. ` +
+    `Responde 0 solo si todas son claramente ajenas al tema (deporte, laboratorio, naturaleza, animales, velas, dólares, fábricas…). ` +
+    `Responde SOLO con el número.` });
+  for (let intento = 0; intento < 4; intento++) try {
     const r = await fetch("https://api.anthropic.com/v1/messages", {
       method: "POST",
       headers: { "x-api-key": clave, "anthropic-version": "2023-06-01", "content-type": "application/json" },
       body: JSON.stringify({ model: process.env.CLAUDE_MODELO_FONDOS || "claude-haiku-5-5", max_tokens: 10, messages: [{ role: "user", content: contenido }] }),
     });
     const j = await r.json();
+    if (r.status === 429 || r.status === 529) { await new Promise((ok) => setTimeout(ok, 20000)); continue; }
     if (!r.ok) throw new Error(JSON.stringify(j).slice(0, 200));
     const n = parseInt(String(j.content?.[0]?.text || "").match(/\d+/)?.[0] || "0", 10);
     return n >= 1 && n <= candidatos.length ? n - 1 : -1;
   } catch (e) {
     console.error("La IA no ha podido elegir el fondo:", String(e).slice(0, 160));
-    return 0;
+    return -1;
   }
+  return -1;
 }
 
 async function fondoVideo(s, guion, minimo, tmp, i) {
   const clave = process.env.PIXABAY_API_KEY;
   if (!clave) return null;
   const [busquedas, tags] = temaDe(s, guion);
-  for (const q of [...busquedas, ...(busquedas === GENERAL[0] ? [] : GENERAL[0])]) {
+  for (const q of [...busquedas, ...(busquedas === GENERAL[0] ? [] : GENERAL[0])].slice(0, 5)) {
     const exigidas = busquedas.includes(q) ? tags : GENERAL[1];
     try {
       const r = await fetch(`https://pixabay.com/api/videos/?key=${clave}&q=${encodeURIComponent(q)}&per_page=50&safesearch=true&video_type=film&min_width=1280`);
       if (!r.ok) throw new Error(`Pixabay ${r.status}`);
       const validos = ((await r.json()).hits || []).filter((h) => !usados.has(h.id) && !usadosAntes.has(h.id) && h.duration >= Math.min(minimo, 8) && encaja(h, [""]));
       // Primero los que tienen las etiquetas del tema; la IA decide entre los 8 primeros
-      const candidatos = [...validos.filter((h) => encaja(h, exigidas)), ...validos.filter((h) => !encaja(h, exigidas))].slice(0, 8);
+      const candidatos = [...validos.filter((h) => encaja(h, exigidas)), ...validos.filter((h) => !encaja(h, exigidas))].slice(0, 6);
       const k = await elegirConIA(s, candidatos);
       if (k < 0) continue;
       const h = candidatos[k];
