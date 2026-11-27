@@ -1,0 +1,75 @@
+# Publica cada día un carrusel en Instagram y Facebook (ver scripts/redes/redes.py).
+name: Redes sociales
+
+on:
+  schedule:
+    - cron: "17 11 * * *"   # 12:17 en invierno / 13:17 en verano (hora de España)
+  workflow_dispatch:
+    inputs:
+      forzar:
+        description: "Publicar aunque sea domingo"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: redes
+  cancel-in-progress: false
+
+jobs:
+  publicar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: main
+
+      - name: Comprobar si Meta está configurado
+        id: meta
+        env:
+          META_PAGE_TOKEN: ${{ secrets.META_PAGE_TOKEN }}
+        run: |
+          if [ -n "$META_PAGE_TOKEN" ]; then echo "ok=true" >> "$GITHUB_OUTPUT"; else echo "Falta el secreto META_PAGE_TOKEN: no publico en redes."; echo "ok=false" >> "$GITHUB_OUTPUT"; fi
+
+      - uses: actions/setup-python@v6
+        if: steps.meta.outputs.ok == 'true'
+        with:
+          python-version: "3.12"
+
+      - name: Decidir qué toca hoy
+        if: steps.meta.outputs.ok == 'true'
+        id: plan
+        env:
+          TZ: Europe/Madrid
+          FORZAR: ${{ inputs.forzar && '1' || '' }}
+        run: python scripts/redes/redes.py planificar
+
+      - name: Generar las imágenes
+        if: steps.plan.outputs.carpeta != ''
+        run: |
+          npm install --no-save --silent playwright@1.49.1
+          npx playwright install --with-deps chromium > /dev/null
+          node scripts/redes/carrusel.mjs "${{ steps.plan.outputs.carpeta }}/spec.json" "${{ steps.plan.outputs.carpeta }}"
+
+      - name: Subir las imágenes (Instagram las descarga desde GitHub)
+        if: steps.plan.outputs.carpeta != ''
+        run: |
+          git config user.name "reformayuda-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add "${{ steps.plan.outputs.carpeta }}"
+          git commit -m "Redes: carrusel de $(date +%F)"
+          git pull --rebase -q && git push
+
+      - name: Publicar en Instagram y Facebook
+        if: steps.plan.outputs.carpeta != ''
+        env:
+          META_PAGE_TOKEN: ${{ secrets.META_PAGE_TOKEN }}
+        run: python scripts/redes/redes.py publicar "${{ steps.plan.outputs.carpeta }}"
+
+      - name: Guardar el registro
+        if: always() && steps.plan.outputs.carpeta != ''
+        run: |
+          git add revision/redes.json 2>/dev/null || true
+          git diff --cached --quiet || (git commit -m "Redes: registro $(date +%F)" && git pull --rebase -q && git push)

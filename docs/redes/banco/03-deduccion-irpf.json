@@ -1,0 +1,47 @@
+{
+ "slides": [
+  {
+   "tipo": "portada",
+   "ceja": "Hacienda te devuelve parte de la obra",
+   "titulo": "Deducción del IRPF por **eficiencia energética**",
+   "cifra": "Hasta 9.000 €",
+   "sub": "Para obras hechas hasta el 31 de diciembre de 2026 (en edificios puede haber ampliación)."
+  },
+  {
+   "tipo": "lista",
+   "ceja": "Tres tipos",
+   "titulo": "¿Cuánto te deduces?",
+   "puntos": [
+    "**20 %** (hasta 1.000 €): obras que reducen al menos un 7 % la calefacción y refrigeración de tu vivienda",
+    "**40 %** (hasta 3.000 €): obras que bajan un 30 % el consumo de energía o llegan a letra A o B",
+    "**60 %** (hasta 9.000 €): obras en el edificio de viviendas que consigan esa misma mejora"
+   ]
+  },
+  {
+   "tipo": "lista",
+   "ceja": "Sin esto no vale",
+   "titulo": "Requisitos",
+   "marcas": "check",
+   "puntos": [
+    "**Certificado energético** de antes y de después de la obra",
+    "Pagar con **tarjeta o transferencia**, nunca en efectivo",
+    "**Facturas** a tu nombre",
+    "Vivienda habitual o alquilada (20 % y 40 %)"
+   ]
+  },
+  {
+   "tipo": "texto",
+   "ceja": "Ojo con el plazo",
+   "titulo": "El certificado de antes, **antes de empezar**",
+   "texto": "Si cambias las ventanas o aíslas sin el certificado inicial, ya no se puede demostrar la mejora. La deducción se aplica en la renta del año en que se expide el certificado final.",
+   "nota": "Fuente: Ley del IRPF (DA 50.ª). Comprueba tu caso en la Agencia Tributaria. En el País Vasco y Navarra rige su propio IRPF."
+  },
+  {
+   "tipo": "cta",
+   "titulo": "Calcula cuánto\n**te devuelven**",
+   "sub": "En obrayuda.es tienes una calculadora gratis.",
+   "caja": "🧮 Calculadora del IRPF en obrayuda.es\n🔔 Avisos en Telegram: t.me/obrayuda"
+  }
+ ],
+ "texto": "¿Vas a cambiar las ventanas o aislar la casa? Hacienda te puede devolver hasta el 60 % 💶\n\nLa deducción del IRPF por obras de eficiencia energética tiene tres tipos:\n• 20 % (hasta 1.000 €) si reduces un 7 % la calefacción y refrigeración\n• 40 % (hasta 3.000 €) si bajas un 30 % el consumo o llegas a letra A o B\n• 60 % (hasta 9.000 €) por obras en el edificio de viviendas\n\n⚠️ Necesitas el certificado energético de ANTES y de DESPUÉS, pagar con tarjeta o transferencia y facturas a tu nombre.\n\n📅 Para obras hechas hasta el 31 de diciembre de 2026.\n\n🧮 Calcula cuánto te devuelven en obrayuda.es (enlace en el perfil)\n\nFuente: Ley del IRPF (DA 50.ª). En el País Vasco y Navarra rige su propio IRPF.\n\n#deduccionirpf #eficienciaenergetica #ventanas #rentaweb #ayudasvivienda"
+}

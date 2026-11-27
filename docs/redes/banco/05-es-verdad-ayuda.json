@@ -1,0 +1,44 @@
+{
+ "slides": [
+  {
+   "tipo": "portada",
+   "ceja": "Antes de compartirla",
+   "titulo": "¿Esa ayuda viral **es verdad**?",
+   "sub": "Cómo saberlo en 1 minuto."
+  },
+  {
+   "tipo": "lista",
+   "ceja": "Señales de alarma",
+   "titulo": "Desconfía si…",
+   "puntos": [
+    "Promete **lo mismo para todo el mundo**, sin requisitos",
+    "Dice «ya es oficial» pero **no enlaza al boletín**",
+    "Es un **anuncio o borrador**, no una convocatoria",
+    "Te piden **pagar** para tramitarla"
+   ]
+  },
+  {
+   "tipo": "lista",
+   "ceja": "Dónde comprobarlo",
+   "titulo": "Lo oficial está aquí",
+   "marcas": "check",
+   "puntos": [
+    "El **BOE** o el boletín de tu comunidad o provincia",
+    "La **Base de Datos Nacional de Subvenciones** (BDNS)",
+    "La **sede electrónica** del organismo que la da"
+   ]
+  },
+  {
+   "tipo": "texto",
+   "ceja": "Cómo lo hacemos",
+   "titulo": "En Obrayuda solo sale\nlo que está **en el boletín**",
+   "texto": "Si una ayuda solo se ha anunciado en prensa, esperamos a que se publique oficialmente. Así sabes que puedes pedirla de verdad."
+  },
+  {
+   "tipo": "cta",
+   "titulo": "¿Has visto una ayuda y dudas?\nComenta **VERDAD**",
+   "sub": "La miramos en el boletín."
+  }
+ ],
+ "texto": "¿Has visto un vídeo de «ayuda de miles de euros para tu baño»? Antes de ilusionarte, compruébalo 🔍\n\n🚩 Desconfía si promete lo mismo para todo el mundo, si no enlaza al boletín, si es solo un anuncio o borrador, o si te piden pagar para tramitarla.\n\n✅ Lo oficial está en el BOE o en el boletín de tu comunidad o provincia, en la BDNS y en la sede electrónica del organismo.\n\nEn Obrayuda solo publicamos lo que ya ha salido en el boletín oficial. Si solo está en prensa, esperamos.\n\n💬 ¿Has visto una ayuda y dudas? Comenta VERDAD y la miramos.\n🔎 Ayudas comprobadas de tu zona: obrayuda.es (enlace en el perfil)\n\n#bulos #ayudasvivienda #subvenciones #reformas #consejos"
+}

@@ -1,6 +1,6 @@
 // Genera las imágenes de un carrusel de Instagram (1080x1350) a partir de un JSON.
-// Uso: node scripts/redes/carrusel.mjs docs/redes/carruseles/<nombre>.json
-// Deja slide-01.png, slide-02.png… en docs/redes/carruseles/<nombre>/
+// Uso: node scripts/redes/carrusel.mjs <spec.json> [carpeta-de-salida]
+// Deja slide-01.jpg, slide-02.jpg… (JPEG, que es lo que admite la API de Instagram).
 import { createRequire } from "node:module";
 const { chromium } = createRequire(import.meta.url)("playwright");
 import fs from "node:fs";
@@ -77,7 +77,7 @@ function slide(s, i, n) {
 const archivo = process.argv[2];
 if (!archivo) { console.error("Uso: node scripts/redes/carrusel.mjs <spec.json>"); process.exit(1); }
 const spec = JSON.parse(fs.readFileSync(archivo, "utf8"));
-const salida = path.join(path.dirname(archivo), path.basename(archivo, ".json"));
+const salida = process.argv[3] || path.join(path.dirname(archivo), path.basename(archivo, ".json"));
 fs.mkdirSync(salida, { recursive: true });
 
 const navegador = await chromium.launch();
@@ -85,7 +85,7 @@ const pagina = await navegador.newPage({ viewport: { width: 1080, height: 1350 }
 for (const [i, s] of spec.slides.entries()) {
   await pagina.setContent(`<html><head><meta charset="utf-8"><style>${CSS}</style></head><body>${slide(s, i, spec.slides.length)}</body></html>`);
   await pagina.evaluate(() => document.fonts.ready);
-  await pagina.screenshot({ path: path.join(salida, `slide-${String(i + 1).padStart(2, "0")}.png`) });
+  await pagina.screenshot({ path: path.join(salida, `slide-${String(i + 1).padStart(2, "0")}.jpg`), type: "jpeg", quality: 92 });
 }
 await navegador.close();
 if (spec.texto) fs.writeFileSync(path.join(salida, "texto.txt"), spec.texto.trim() + "\n");

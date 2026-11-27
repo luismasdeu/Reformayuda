@@ -1,0 +1,43 @@
+{
+ "slides": [
+  {
+   "tipo": "portada",
+   "ceja": "Comunidades de vecinos",
+   "titulo": "¿Ascensor, fachada o tejado? **Hay ayudas para el edificio**"
+  },
+  {
+   "tipo": "lista",
+   "ceja": "Qué obras suelen tener ayuda",
+   "titulo": "En el edificio",
+   "marcas": "check",
+   "puntos": [
+    "**Accesibilidad**: ascensor, rampas, salvaescaleras",
+    "**Eficiencia**: fachada, cubierta, ventanas, calefacción",
+    "**Conservación**: estructura, tejado, humedades"
+   ]
+  },
+  {
+   "tipo": "lista",
+   "ceja": "Cómo se pide",
+   "titulo": "Paso a paso",
+   "puntos": [
+    "Se aprueba la obra en **junta de propietarios**",
+    "La pide la **comunidad**, normalmente el presidente o el administrador",
+    "Se presenta con proyecto o presupuesto **antes de empezar**"
+   ]
+  },
+  {
+   "tipo": "texto",
+   "ceja": "Además",
+   "titulo": "Cada vecino puede deducirse **hasta un 60 %** en la renta",
+   "texto": "Si la obra del edificio mejora su eficiencia energética, cada propietario puede aplicar la deducción del IRPF por la parte que paga.",
+   "nota": "Requisitos completos en la Agencia Tributaria."
+  },
+  {
+   "tipo": "cta",
+   "titulo": "Comparte esto en el\n**grupo de tu comunidad**",
+   "sub": "Y comenta EDIFICIO para ver las de tu zona."
+  }
+ ],
+ "texto": "¿Tu comunidad está pensando en poner ascensor o arreglar la fachada? Hay ayudas para el edificio 🏢\n\n✅ Accesibilidad: ascensor, rampas, salvaescaleras\n✅ Eficiencia: fachada, cubierta, ventanas, calefacción\n✅ Conservación: estructura, tejado, humedades\n\nLas pide la comunidad (presidente o administrador), con la obra aprobada en junta y ANTES de empezar.\n\nY si la obra mejora la eficiencia del edificio, cada vecino puede deducirse hasta un 60 % de su parte en la renta (consulta los plazos en la Agencia Tributaria).\n\n📲 Compártelo en el grupo de tu comunidad.\n💬 Comenta EDIFICIO y te decimos cuáles hay en tu zona.\n\n#comunidaddevecinos #ascensor #fachada #ayudasvivienda #rehabilitacion"
+}

@@ -1,0 +1,39 @@
+{
+ "slides": [
+  {
+   "tipo": "portada",
+   "ceja": "Las ayudas que casi nadie pide",
+   "titulo": "Tu ayuntamiento te puede **rebajar impuestos** por la obra",
+   "sub": "IBI e ICIO: dos bonificaciones que dependen de dónde vivas."
+  },
+  {
+   "tipo": "texto",
+   "ceja": "IBI",
+   "titulo": "Hasta un **50 %** menos de IBI",
+   "texto": "Muchos ayuntamientos rebajan el IBI durante varios años si instalas placas solares u otros sistemas de energía renovable en tu casa."
+  },
+  {
+   "tipo": "texto",
+   "ceja": "ICIO",
+   "titulo": "Hasta un **95 %** menos en el impuesto de obras",
+   "texto": "El ICIO es el impuesto que pagas al pedir la licencia. Muchos ayuntamientos lo bonifican en obras de eficiencia energética, renovables o accesibilidad."
+  },
+  {
+   "tipo": "lista",
+   "ceja": "Cómo saber si tu ayuntamiento lo tiene",
+   "titulo": "Míralo así",
+   "puntos": [
+    "Busca las **ordenanzas fiscales** de tu ayuntamiento (IBI e ICIO)",
+    "Comprueba el porcentaje, los años y los requisitos",
+    "Pídelo **al solicitar la licencia** o en el plazo que marque la ordenanza"
+   ],
+   "nota": "Lo permite la Ley de Haciendas Locales, pero cada ayuntamiento decide si lo aplica y cuánto."
+  },
+  {
+   "tipo": "cta",
+   "titulo": "Comenta **IBI**\ny tu municipio",
+   "sub": "Te decimos dónde mirarlo."
+  }
+ ],
+ "texto": "¿Placas solares, aislamiento o rampa? Tu ayuntamiento te puede rebajar impuestos 🏛️\n\n🔆 IBI: muchos ayuntamientos lo bonifican hasta un 50 % durante varios años si instalas placas solares.\n🧱 ICIO (el impuesto de la licencia de obra): bonificaciones de hasta el 95 % en obras de eficiencia, renovables o accesibilidad.\n\nCada ayuntamiento decide si lo aplica y cuánto, así que mira las ordenanzas fiscales de tu municipio antes de pedir la licencia.\n\n💬 Comenta IBI y tu municipio y te decimos dónde mirarlo.\n🔎 Más ayudas de tu zona: obrayuda.es (enlace en el perfil)\n\n#ibi #placassolares #autoconsumo #ayudasvivienda #reformas"
+}
