@@ -1,0 +1,28 @@
+# Genera muestras de las voces en español de edge-tts para elegir una.
+name: Probar voces
+on: workflow_dispatch
+permissions:
+  contents: write
+jobs:
+  voces:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+      - run: pip install --quiet edge-tts==7.3.1
+      - name: Muestras
+        run: |
+          mkdir -p docs/redes/pruebas/voces
+          edge-tts --list-voices | grep -E "^es-(ES|MX|US)" | tee docs/redes/pruebas/voces/lista.txt
+          T="¿Vas a cambiar las ventanas? Hacienda te puede devolver parte del dinero. Pero casi todo el mundo la pierde por un error muy tonto. Te lo cuento en diez segundos."
+          for v in $(edge-tts --list-voices | awk '/^es-ES/{print $1}'); do
+            edge-tts --voice "$v" --text "$T" --write-media "docs/redes/pruebas/voces/$v.mp3" || echo "falla $v"
+          done
+          ls -la docs/redes/pruebas/voces
+      - run: |
+          git config user.name "reformayuda-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -f docs/redes/pruebas/voces
+          git commit -qm "Redes: muestras de voces" && (for i in 1 2 3; do git pull --rebase -q && git push -q && break; sleep 5; done)

@@ -230,6 +230,9 @@ def reel_de_ayuda(a, d):
 
 
 def planificar_reel():
+    if (RAIZ / "docs" / "redes" / "PAUSA_REELS").exists() and not os.environ.get("FORZAR"):
+        print("Reels en pausa (borra docs/redes/PAUSA_REELS para reanudarlos).")
+        return
     d = hoy()
     reg = leer_registro()
     previas = hechas(reg, "reel")
