@@ -1,5 +1,14 @@
 {
- "publicadas": [],
+ "publicadas": [
+  {
+   "fecha": "2026-11-27",
+   "formato": "carrusel",
+   "nombre": "01-que-es-obrayuda",
+   "tipo": "consejo",
+   "instagram": "17945428389365412",
+   "facebook": "1378134662059664_122100262713563035"
+  }
+ ],
  "borradas_por_error": [
   {
    "fecha": "2026-11-27",
