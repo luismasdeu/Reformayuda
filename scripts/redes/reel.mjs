@@ -27,7 +27,8 @@ const FPS = 30;
 const OBRA = ["renovation", "construction", "builder", "worker", "repair", "drill", "plaster", "brick", "tiles", "tiling", "paint", "painting", "carpenter", "contractor", "handyman", "tools", "remodeling", "renovate", "scaffolding", "workman", "craftsman"];
 const CASA = ["house", "home", "apartment", "building", "facade", "residential", "interior", "room", "flat", "villa"];
 const TEMAS = [
-  [/ventan/i, ["window installation", "window replacement", "installing window", "house window"], ["window", "windows"]],
+  [/ventan/i, ["window installation", "installing window", "window replacement", "window frame worker", "carpenter window"],
+    ["window+installation", "window+install", "window+worker", "window+construction", "window+renovation", "window+carpenter", "window+repair", "window+builder", "window+frame", "windows+installation"]],
   [/tejad|cubierta|gotera|teja/i, ["roof repair", "roofer working", "roof tiles"], ["roof", "roofer", "roofing", "tiles"]],
   [/placa|solar|renovable|autoconsumo/i, ["solar panels installation", "solar panels roof"], ["solar", "photovoltaic", "panel"]],
   [/aerotermia|caldera|calefacci|radiador|bomba de calor/i, ["heat pump", "radiator heating", "boiler"], ["heating", "radiator", "heat", "boiler", "thermostat"]],
@@ -41,6 +42,7 @@ const TEMAS = [
   [/comunidad|edificio|vecin|junta|acta/i, ["apartment building", "residential building", "building facade"], ["building", "apartment", "residential", "facade"]],
   [/mayor|padres|abuel/i, ["elderly couple home", "senior home"], ["elderly", "senior", "old", "grandparents"]],
   [/pueblo|rural|campo/i, ["village house", "old stone house", "rural house"], ["village", "rural", "stone", "house", "countryside"]],
+  [/reforma|obra|albañil|empez|contrat|presupuesto|constructor|ladrillo/i, ["renovation worker", "construction worker house", "home renovation", "builder working", "plastering wall"], OBRA],
   [/papel|certificad|factura|document|justific|bases|solicit|sede|trámite|tramite|formulario/i, ["documents paperwork", "filling form", "signing document"], ["document", "documents", "paper", "paperwork", "form", "signing", "office", "contract"]],
   [/hacienda|renta|deduc|irpf|dinero|€|euros|devuelv|pag|ahorr|factura de la luz/i, ["euro coins", "euro banknotes", "euro money"], ["euro", "euros", "coins", "money", "banknotes", "cash"]],
   [/ibi|icio|ayuntamiento|impuesto/i, ["city hall spain", "town hall building"], ["city hall", "town hall", "building", "government"]],
@@ -52,7 +54,7 @@ const PROHIBIDAS = ["yoga", "fitness", "sport", "exercise", "gym", "dance", "dan
   "hospital", "doctor", "candle", "candles", "candlestick", "christmas", "fantasy", "abstract", "animation", "cartoon", "3d", "render", "space", "galaxy",
   "stars", "night sky", "fireworks", "beach", "sea", "ocean", "forest", "animal", "dog", "cat", "bird", "food", "cooking", "wedding", "party", "fashion",
   "model", "makeup", "beauty", "car", "cars", "factory", "industry", "industrial", "textile", "dollar", "dollars", "us dollar", "bitcoin", "crypto", "war",
-  "fire", "smoke", "explosion", "game", "gaming", "music", "concert", "church", "religion", "halloween", "horror", "drink", "alcohol", "bikini", "lingerie"];
+  "fire", "smoke", "explosion", "rain", "raindrop", "raindrops", "rainy", "weather", "storm", "snow", "drops", "droplets", "antique", "vintage", "calligraphy", "typewriter", "dictionary", "encyclopedia", "book", "books", "piggy bank", "gambling", "casino", "game", "gaming", "music", "concert", "church", "religion", "halloween", "horror", "drink", "alcohol", "bikini", "lingerie"];
 const USADOS_F = path.join(RAIZ, "revision", "redes-videos-usados.json");
 const usadosAntes = new Set(fs.existsSync(USADOS_F) ? JSON.parse(fs.readFileSync(USADOS_F, "utf8")).ids || [] : []);
 const usados = new Set();
@@ -62,7 +64,7 @@ function temaDe(s, guion) {
   for (const [re, q, tags] of TEMAS) if (re.test(t)) return [q, tags];
   // Gancho y escenas sin tema claro: el tema del reel entero
   const todo = guion.escenas.map((e) => `${e.texto || ""} ${e.voz || ""}`).join(" ");
-  for (const [re, q, tags] of TEMAS) if (re.test(todo) && !/hacienda|renta|deduc|dinero|€|euros|devuelv|pag/i.test(String(re))) return [q, tags];
+  for (const [re, q, tags] of TEMAS) if (re.test(todo) && !/hacienda|papel/i.test(String(re))) return [q, tags];
   return GENERAL;
 }
 
@@ -70,7 +72,8 @@ function encaja(h, tags) {
   const et = ` ${String(h.tags || "").toLowerCase()} `;
   if (PROHIBIDAS.some((p) => et.includes(` ${p} `) || et.includes(` ${p},`) || et.includes(`,${p} `))) return false;
   const lista = et.split(",").map((x) => x.trim());
-  return tags.some((tg) => lista.some((x) => x === tg || x.split(" ").includes(tg)));
+  const tiene = (tg) => lista.some((x) => x === tg || x.split(" ").includes(tg));
+  return tags.some((tg) => tg.split("+").every(tiene));  // «a+b» = tiene que tener las dos
 }
 
 async function fondoVideo(s, guion, minimo, tmp, i) {
