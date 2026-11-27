@@ -41,7 +41,7 @@ Reglas que no se pueden saltar:
 - Cada pieza acaba invitando a comentar una PALABRA en mayúsculas (AYUDA, EDIFICIO, PLACAS, BAÑO, CONSTRUIR, MAYORES, ICIO, PUEBLO…).
 
 Reels (vídeos verticales de 20-30 s con voz y texto grande):
-- Gancho en la primera escena: frase corta que pare el scroll (pregunta directa, error que te hace perder dinero, «nadie te lo dice», dato sorprendente). Resalta la parte clave entre **dobles asteriscos**.
+- El gancho son DOS clips con letra enorme. «pregunta» (máximo 80 caracteres): la persona se reconoce en 1 segundo y sabe de qué va («¿Vas a cambiar las ventanas este año?», «¿Pensabas pedir una subvención para tu reforma… y ya has empezado la obra?»). «golpe» (máximo 55 caracteres): lo que se juega («Puede que ya hayas **perdido la ayuda**», «Hacienda te devuelve hasta **3.000 €**»). Sigue las fórmulas virales de abajo. Resalta 1-3 palabras con **dobles asteriscos**.
 - 3 escenas de desarrollo, cada una con una idea. «texto» es lo que se ve (máximo 90 caracteres, con **resaltado**); «voz» es lo que se dice (natural, máximo 160 caracteres; escribe los números como se dicen si son porcentajes o cifras grandes).
 - Escena final de llamada a la acción.
 - «texto_publicacion»: el texto que acompaña al reel en Instagram: primera línea gancho con un emoji, 3 viñetas, una línea «Cada ayuda tiene sus bases: revisa siempre la convocatoria oficial.», la llamada a comentar, «🔎 Busca las ayudas de tu zona en obrayuda.es (enlace en el perfil)» y como máximo 5 hashtags en una línea.
@@ -64,10 +64,10 @@ ESQUEMA = {
     "properties": {
         "reels": {"type": "array", "items": {
             "type": "object", "additionalProperties": False,
-            "required": ["nombre", "estilo", "banner", "emoji", "gancho", "voz_gancho", "escenas", "palabra", "cta", "voz_cta", "texto_publicacion"],
+            "required": ["nombre", "estilo", "banner", "emoji", "pregunta", "voz_pregunta", "golpe", "voz_golpe", "escenas", "palabra", "cta", "voz_cta", "texto_publicacion"],
             "properties": {
                 "nombre": {"type": "string", "description": "slug corto en minúsculas con guiones"},
-                "emoji": TEXTO, "gancho": TEXTO, "voz_gancho": TEXTO,
+                "emoji": TEXTO, "pregunta": TEXTO, "voz_pregunta": TEXTO, "golpe": TEXTO, "voz_golpe": TEXTO,
                 "estilo": {"type": "string", "enum": ["subtitulos", "noticia", "mito", "lista", "pov", "error"]},
                 "banner": TEXTO,
                 "escenas": {"type": "array", "items": {"type": "object", "additionalProperties": False,
@@ -113,10 +113,10 @@ def pendientes_de_publicar():
 
 
 def a_guion(r):
-    gancho = {"tipo": "gancho", "emoji": r["emoji"], "texto": r["gancho"], "voz": r["voz_gancho"]}
+    pregunta = {"tipo": "pregunta", "texto": r["pregunta"], "voz": r["voz_pregunta"]}
     if r.get("banner"):
-        gancho["banner"] = r["banner"]
-    esc = [gancho]
+        pregunta["banner"] = r["banner"]
+    esc = [pregunta, {"tipo": "golpe", "texto": r["golpe"], "voz": r["voz_golpe"]}]
     for e in r["escenas"][:4]:
         x = {"tipo": "punto", "emoji": e["emoji"], "texto": e["texto"], "voz": e["voz"]}
         for k in ("veredicto", "marca"):
@@ -210,8 +210,9 @@ def main():
 
     import anthropic
     cliente = anthropic.Anthropic()
+    formulas = (RAIZ / "docs" / "redes" / "ganchos.md").read_text(encoding="utf-8") if (RAIZ / "docs" / "redes" / "ganchos.md").exists() else ""
     with cliente.beta.messages.stream(
-        model=MODELO, max_tokens=32000, system=INSTRUCCIONES,
+        model=MODELO, max_tokens=32000, system=INSTRUCCIONES + "\n\n" + formulas,
         messages=[{"role": "user", "content": peticion}],
         output_config={"effort": "medium", "format": {"type": "json_schema", "schema": ESQUEMA}},
         betas=["server-side-fallback-2026-07-01"], fallbacks="default",

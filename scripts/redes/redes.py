@@ -210,9 +210,14 @@ def planificar():
 def reel_de_ayuda(a, d):
     """Reel corto hecho solo con los datos de una ayuda."""
     zona = a.get("muni") or a.get("prov") or ("España" if a["ccaa"] == "all" else a["ccaa"])
-    gancho = "¿Vas a hacer obra en casa? **Esto te interesa**" if a["ccaa"] == "all" else f"Si vives en {zona}, **esto te interesa**"
-    escenas = [{"tipo": "gancho", "emoji": "📍" if a["ccaa"] != "all" else "🏠", "texto": gancho,
-                "voz": gancho.replace("**", "") + "."}]
+    obra = {"ventanas": "cambiar las ventanas", "solar": "poner placas solares", "aerotermia": "cambiar la calefacción",
+            "accesibilidad": "adaptar tu casa", "eficiencia": "mejorar el aislamiento", "construccion": "construir tu casa"}
+    que = next((obra[x] for x in a.get("tipo", []) if x in obra), "reformar tu casa")
+    pregunta = (f"¿Vas a {que}?" if a["ccaa"] == "all" else f"¿Vives en {zona} y vas a {que}?")
+    c0 = cifra(a)
+    golpe = (f"Te pueden dar **{c0.replace('Hasta ', 'hasta ')}**" if c0 else "Hay una **ayuda abierta** ahora")
+    escenas = [{"tipo": "pregunta", "texto": pregunta, "voz": pregunta},
+               {"tipo": "golpe", "texto": golpe, "voz": golpe.replace("**", "") + "."}]
     c = cifra(a)
     if c:
         escenas.append({"tipo": "cifra", "texto": a["title"], "cifra": c,
