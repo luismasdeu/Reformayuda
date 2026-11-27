@@ -1,0 +1,36 @@
+{
+ "voz": "es-ES-ElviraNeural",
+ "escenas": [
+  {
+   "tipo": "gancho",
+   "emoji": "📝",
+   "texto": "¿Tu comunidad quiere hacer obra? **Sin acuerdo** no hay ayuda",
+   "voz": "¿Tu comunidad quiere hacer obra? Sin acuerdo de la junta, muchas ayudas ni se pueden pedir."
+  },
+  {
+   "tipo": "punto",
+   "emoji": "🏢",
+   "texto": "Muchas convocatorias piden el **acuerdo de la junta**",
+   "voz": "Muchas convocatorias de ayudas para edificios piden que la junta de propietarios haya acordado la obra."
+  },
+  {
+   "tipo": "punto",
+   "emoji": "📝",
+   "texto": "Debe constar en el **acta** con obra y presupuesto",
+   "voz": "Ese acuerdo debe quedar por escrito en el acta, con la obra y el presupuesto."
+  },
+  {
+   "tipo": "punto",
+   "emoji": "🗣️",
+   "texto": "Habla con tu **administrador** con tiempo",
+   "voz": "Habla pronto con el administrador y pide que la obra y la ayuda se traten en la próxima junta."
+  },
+  {
+   "tipo": "cta",
+   "texto": "Comenta **ACTA** y te explicamos los pasos",
+   "voz": "Comenta acta y te cuento los pasos. Más en obrayuda punto es.",
+   "palabra": "ACTA"
+  }
+ ],
+ "texto": "📝 ¿Tu comunidad quiere hacer obra? Sin acuerdo, muchas ayudas no se pueden pedir.\n• Muchas convocatorias piden el acuerdo de la junta\n• Debe constar en acta, con la obra y el presupuesto\n• Habla con tu administrador con tiempo\nCada ayuda tiene sus bases: revisa siempre la convocatoria oficial.\n💬 Comenta ACTA y te explicamos los pasos.\n🔎 Busca las ayudas de tu zona en obrayuda.es (enlace en el perfil)\n#comunidaddevecinos #obras #ayudas #rehabilitacion #administrador"
+}

@@ -1,0 +1,55 @@
+{
+ "slides": [
+  {
+   "tipo": "portada",
+   "ceja": "ANTES DE FIRMAR",
+   "titulo": "Preguntas antes de contratar al constructor",
+   "sub": "Para que la obra no te deje sin ayuda"
+  },
+  {
+   "tipo": "lista",
+   "ceja": "PRESUPUESTO",
+   "titulo": "Pídelo bien hecho",
+   "marcas": "check",
+   "puntos": [
+    "Que detalle cada partida, con materiales y mano de obra",
+    "Que vaya a tu nombre y con fecha",
+    "Compara al menos dos o tres"
+   ]
+  },
+  {
+   "tipo": "lista",
+   "ceja": "FACTURA Y PAGO",
+   "titulo": "Habla de papeles",
+   "marcas": "check",
+   "puntos": [
+    "¿Me harás factura con IVA y mis datos?",
+    "¿Cómo se paga? Mejor transferencia o tarjeta, no efectivo",
+    "¿Me darás un justificante de cada pago?"
+   ]
+  },
+  {
+   "tipo": "lista",
+   "ceja": "PLAZOS Y LICENCIA",
+   "titulo": "Calendario",
+   "marcas": "check",
+   "puntos": [
+    "¿Quién tramita la licencia o la comunicación al ayuntamiento?",
+    "¿Cuándo empieza y cuándo termina la obra?",
+    "¿Qué garantía ofreces?"
+   ]
+  },
+  {
+   "tipo": "texto",
+   "ceja": "ANTES DE EMPEZAR",
+   "titulo": "Mira si hay ayuda",
+   "texto": "Algunas ayudas no admiten obras ya empezadas. Antes de firmar, mira la convocatoria y los requisitos que afectan al presupuesto, a las facturas y a los plazos."
+  },
+  {
+   "tipo": "cta",
+   "titulo": "Comenta PRESUPUESTO y te damos la lista",
+   "sub": "Guárdalo para cuando vayas a hacer obra."
+  }
+ ],
+ "texto": "🔨 Preguntas antes de contratar al constructor.\n• Pide un presupuesto detallado, a tu nombre y con fecha\n• Habla de factura y de cómo se paga: mejor transferencia o tarjeta\n• Pregunta por licencia, plazos y garantía\nCada ayuda tiene sus bases: revisa siempre la convocatoria oficial.\n💬 Comenta PRESUPUESTO y te damos la lista.\n🔎 Busca las ayudas de tu zona en obrayuda.es (enlace en el perfil)\n#obras #reformas #presupuesto #ayudas #consejos"
+}

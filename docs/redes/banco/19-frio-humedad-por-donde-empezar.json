@@ -1,0 +1,44 @@
+{
+ "slides": [
+  {
+   "tipo": "portada",
+   "ceja": "OBRA EN CASA",
+   "titulo": "Frío, calor o humedad: ¿por dónde empiezo?",
+   "sub": "Tres pasos antes de gastar un euro"
+  },
+  {
+   "tipo": "lista",
+   "ceja": "PRIMERO",
+   "titulo": "Averigua el problema",
+   "marcas": "check",
+   "puntos": [
+    "Pide a un técnico que mire la causa, no solo el síntoma",
+    "Gotera, condensación o filtración: no es lo mismo",
+    "Pintar encima casi nunca lo soluciona"
+   ]
+  },
+  {
+   "tipo": "lista",
+   "ceja": "DESPUÉS",
+   "titulo": "Mira por dónde se escapa el calor",
+   "marcas": "check",
+   "puntos": [
+    "Ventanas, paredes, tejado y suelo pierden calor",
+    "Aislar bien suele notarse en la factura",
+    "Pide presupuesto de cada mejora por separado"
+   ]
+  },
+  {
+   "tipo": "texto",
+   "ceja": "AYUDAS",
+   "titulo": "Antes de empezar",
+   "texto": "Hay una deducción del IRPF por eficiencia energética: 20, 40 o 60 % según la mejora, hasta 9.000 € de deducción y abierta hasta el 31 de diciembre de 2026. Mira sus requisitos antes de empezar."
+  },
+  {
+   "tipo": "cta",
+   "titulo": "Comenta HUMEDAD y te ayudamos a buscar",
+   "sub": "Guárdalo para cuando vayas a hacer obra."
+  }
+ ],
+ "texto": "🏠 Frío, calor o humedad: ¿por dónde empiezo?\n• Primero, averigua la causa del problema\n• Después, mira por dónde se escapa el calor\n• Antes de empezar, mira la deducción del IRPF por eficiencia energética\nCada ayuda tiene sus bases: revisa siempre la convocatoria oficial.\n💬 Comenta HUMEDAD y te ayudamos a buscar.\n🔎 Busca las ayudas de tu zona en obrayuda.es (enlace en el perfil)\n#obras #humedades #aislamiento #eficienciaenergetica #ayudas"
+}

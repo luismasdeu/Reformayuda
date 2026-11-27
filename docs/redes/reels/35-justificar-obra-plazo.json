@@ -1,0 +1,36 @@
+{
+ "voz": "es-ES-ElviraNeural",
+ "escenas": [
+  {
+   "tipo": "gancho",
+   "emoji": "⏳",
+   "texto": "Acabas la obra, no la **justificas**… y pierdes la ayuda",
+   "voz": "Acabas la obra, te olvidas de justificarla y pierdes la ayuda. Pasa más de lo que crees."
+  },
+  {
+   "tipo": "punto",
+   "emoji": "🧾",
+   "texto": "Muchas ayudas piden **demostrar** la obra y el pago",
+   "voz": "En muchas ayudas tienes que demostrar que hiciste la obra y que la pagaste."
+  },
+  {
+   "tipo": "punto",
+   "emoji": "⏳",
+   "texto": "Mira el **plazo de justificación** de tu convocatoria",
+   "voz": "Cada convocatoria marca un plazo para justificar. Si lo pasas, puedes perder la ayuda aunque la obra esté bien hecha."
+  },
+  {
+   "tipo": "punto",
+   "emoji": "📁",
+   "texto": "Prepara **facturas, pagos y fotos** desde el día uno",
+   "voz": "Ve guardando facturas, justificantes de pago y fotos desde el primer día."
+  },
+  {
+   "tipo": "cta",
+   "texto": "Comenta **JUSTIFICAR** y te damos la lista",
+   "voz": "Comenta justificar y te paso qué guardar. Más en obrayuda punto es.",
+   "palabra": "JUSTIFICAR"
+  }
+ ],
+ "texto": "⏳ Acabas la obra, no la justificas… y pierdes la ayuda.\n• Muchas ayudas piden demostrar la obra y el pago\n• Cada convocatoria marca su plazo de justificación\n• Guarda facturas, justificantes y fotos desde el primer día\nCada ayuda tiene sus bases: revisa siempre la convocatoria oficial.\n💬 Comenta JUSTIFICAR y te damos la lista.\n🔎 Busca las ayudas de tu zona en obrayuda.es (enlace en el perfil)\n#subvenciones #obras #reformas #ayudas #consejos"
+}

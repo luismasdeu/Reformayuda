@@ -1,0 +1,36 @@
+{
+ "voz": "es-ES-ElviraNeural",
+ "escenas": [
+  {
+   "tipo": "gancho",
+   "emoji": "🤔",
+   "texto": "¿Las ayudas son **solo para rentas bajas**? No siempre",
+   "voz": "¿Crees que las ayudas para obras son solo para rentas bajas? No siempre."
+  },
+  {
+   "tipo": "punto",
+   "emoji": "💰",
+   "texto": "Algunas ayudas **sí miran tus ingresos**",
+   "voz": "Algunas convocatorias sí piden no superar un límite de ingresos. Depende de cada una."
+  },
+  {
+   "tipo": "punto",
+   "emoji": "🏠",
+   "texto": "Otras piden **otros requisitos**: tipo de obra o zona",
+   "voz": "Otras no miran tanto tus ingresos, sino el tipo de obra, el edificio o la zona donde vives."
+  },
+  {
+   "tipo": "punto",
+   "emoji": "📄",
+   "texto": "Lo seguro: **lee las bases** de cada una",
+   "voz": "Lo único seguro es leer las bases de cada convocatoria. No des por hecho que no te toca."
+  },
+  {
+   "tipo": "cta",
+   "texto": "Comenta **BASES** y te enseñamos a leerlas",
+   "voz": "Comenta bases y te explico qué mirar. Más en obrayuda punto es.",
+   "palabra": "BASES"
+  }
+ ],
+ "texto": "🤔 ¿Las ayudas son solo para rentas bajas? No siempre.\n• Algunas convocatorias sí piden un límite de ingresos\n• Otras miran el tipo de obra, el edificio o la zona\n• No des por hecho que no te toca: lee las bases\nCada ayuda tiene sus bases: revisa siempre la convocatoria oficial.\n💬 Comenta BASES y te contamos qué mirar.\n🔎 Busca las ayudas de tu zona en obrayuda.es (enlace en el perfil)\n#ayudas #subvenciones #obras #reformas #mitos"
+}

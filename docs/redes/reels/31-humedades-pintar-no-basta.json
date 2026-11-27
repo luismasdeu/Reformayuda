@@ -1,0 +1,36 @@
+{
+ "voz": "es-ES-ElviraNeural",
+ "escenas": [
+  {
+   "tipo": "gancho",
+   "emoji": "💧",
+   "texto": "¿Humedades en casa? **Pintar encima** no las arregla",
+   "voz": "¿Tienes humedades en casa? Pintar encima no las arregla, y puedes tirar el dinero."
+  },
+  {
+   "tipo": "punto",
+   "emoji": "🔍",
+   "texto": "Primero averigua **de dónde viene** el agua",
+   "voz": "Antes de tocar nada, averigua el origen: una gotera, una tubería, la fachada o la condensación."
+  },
+  {
+   "tipo": "punto",
+   "emoji": "🏠",
+   "texto": "Arreglar la causa **puede entrar en una ayuda**",
+   "voz": "Si la solución es reparar fachada o tejado, hay convocatorias que pueden ayudar, según el caso."
+  },
+  {
+   "tipo": "punto",
+   "emoji": "⏰",
+   "texto": "Mira las ayudas **antes de empezar**",
+   "voz": "Y pregunta antes de empezar la obra, porque con la obra hecha puedes quedarte sin ayuda."
+  },
+  {
+   "tipo": "cta",
+   "texto": "Comenta **HUMEDAD** y te ayudamos a buscar",
+   "voz": "Comenta humedad y te cuento qué ayudas mirar. Y busca las de tu zona en obrayuda punto es.",
+   "palabra": "HUMEDAD"
+  }
+ ],
+ "texto": "💧 ¿Humedades? Pintar encima no las arregla.\n• Averigua primero de dónde viene el agua\n• Arreglar la causa puede entrar en alguna ayuda, según el caso\n• Pregunta por las ayudas antes de empezar la obra\nCada ayuda tiene sus bases: revisa siempre la convocatoria oficial.\n💬 Comenta HUMEDAD y te ayudamos a buscar.\n🔎 Busca las ayudas de tu zona en obrayuda.es (enlace en el perfil)\n#obras #reformas #humedades #ayudas #rehabilitacion"
+}

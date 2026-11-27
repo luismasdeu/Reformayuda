@@ -1,0 +1,36 @@
+{
+ "voz": "es-ES-ElviraNeural",
+ "escenas": [
+  {
+   "tipo": "gancho",
+   "emoji": "📸",
+   "texto": "Haz **fotos** antes de empezar la obra",
+   "voz": "Antes de que entre el primer albañil, haz fotos. Te pueden ahorrar un disgusto."
+  },
+  {
+   "tipo": "punto",
+   "emoji": "📷",
+   "texto": "Muchas ayudas piden **fotos del antes**",
+   "voz": "Muchas ayudas piden fotos del estado inicial para comprobar que la obra era necesaria."
+  },
+  {
+   "tipo": "punto",
+   "emoji": "🔨",
+   "texto": "Y también del **durante y el después**",
+   "voz": "Haz fotos mientras avanza la obra y cuando termine, desde los mismos ángulos."
+  },
+  {
+   "tipo": "punto",
+   "emoji": "☁️",
+   "texto": "Guárdalas con **fecha** y en la nube",
+   "voz": "Guárdalas con fecha y en la nube, junto a facturas y presupuestos, por si te las piden."
+  },
+  {
+   "tipo": "cta",
+   "texto": "Comenta **FOTOS** y te damos la lista",
+   "voz": "Comenta fotos y te paso qué fotografiar. Más en obrayuda punto es.",
+   "palabra": "FOTOS"
+  }
+ ],
+ "texto": "📸 Haz fotos antes de empezar la obra.\n• Muchas ayudas piden fotos del estado inicial\n• Haz también del durante y del después, desde los mismos ángulos\n• Guárdalas con fecha y en la nube, junto a facturas y presupuestos\nCada ayuda tiene sus bases: revisa siempre la convocatoria oficial.\n💬 Comenta FOTOS y te damos la lista.\n🔎 Busca las ayudas de tu zona en obrayuda.es (enlace en el perfil)\n#obras #reformas #subvenciones #consejos #ayudas"
+}

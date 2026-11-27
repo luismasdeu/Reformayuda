@@ -1,0 +1,36 @@
+{
+ "voz": "es-ES-ElviraNeural",
+ "escenas": [
+  {
+   "tipo": "gancho",
+   "emoji": "💶",
+   "texto": "¿Vas a pagar la obra **en efectivo**? Cuidado",
+   "voz": "¿Te ofrecen un descuento por pagar la obra en efectivo? Cuidado, te puede salir caro."
+  },
+  {
+   "tipo": "punto",
+   "emoji": "🧾",
+   "texto": "Para **desgravar**, el pago tiene que poder comprobarse",
+   "voz": "Para deducir una obra en el IRPF, el pago tiene que poder comprobarse: transferencia, tarjeta o similar."
+  },
+  {
+   "tipo": "punto",
+   "emoji": "🚫",
+   "texto": "El efectivo **puede dejarte sin la deducción**",
+   "voz": "Pagar en efectivo puede dejarte sin la deducción, aunque te hagan un buen descuento."
+  },
+  {
+   "tipo": "punto",
+   "emoji": "📁",
+   "texto": "Guarda **factura y justificante** a tu nombre",
+   "voz": "Guarda la factura y el justificante de cada pago a tu nombre. Hacienda puede pedírtelos."
+  },
+  {
+   "tipo": "cta",
+   "texto": "Comenta **PAGO** y te damos la lista",
+   "voz": "Comenta pago y te cuento cómo pagar la obra sin perder ayudas. Más en obrayuda punto es.",
+   "palabra": "PAGO"
+  }
+ ],
+ "texto": "💶 ¿Pagar la obra en efectivo? Ojo.\n• Para desgravar, el pago tiene que poder comprobarse\n• El efectivo puede dejarte sin la deducción\n• Guarda factura y justificante de cada pago a tu nombre\nCada ayuda tiene sus bases: revisa siempre la convocatoria oficial.\n💬 Comenta PAGO y te contamos más.\n🔎 Busca las ayudas de tu zona en obrayuda.es (enlace en el perfil)\n#obras #reformas #irpf #deducciones #ayudas"
+}
