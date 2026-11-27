@@ -145,6 +145,7 @@ def mensaje_seguir():
 
 def mensaje_enlaces(texto_comentario, media_id, sigue):
     inicio = ("¡Gracias por seguirnos! 🙌 Aquí lo tienes:" if sigue else
+              "¡Gracias! 🙌 Aquí lo tienes:" if sigue is None else
               "Parece que aún no nos sigues 🙂 Síguenos para no perderte las ayudas nuevas. ¡Aquí lo tienes igualmente!")
     return {"text": f"{inicio}\n\n{enlaces(texto_comentario, media_id)}\n\n"
                     "Cada ayuda tiene sus requisitos: revisa siempre la convocatoria oficial. Si tienes alguna duda, escríbenos por aquí."}
@@ -329,7 +330,10 @@ def main():
                 try:
                     pend = est["seguir"].get(usuario)
                     if pend and (SIGO.search(t) or es_palabra(t, claves) or not t.strip()):
-                        sigue = bool(graph("GET", de["id"], token, fields="is_user_follow_business").get("is_user_follow_business"))
+                        try:
+                            sigue = bool(graph("GET", de["id"], token, fields="is_user_follow_business").get("is_user_follow_business"))
+                        except RuntimeError:
+                            sigue = None  # Instagram no siempre deja comprobarlo
                         graph("POST", f"{pagina}/messages", token, recipient=json.dumps({"id": de["id"]}),
                               message=json.dumps(mensaje_enlaces(pend["texto"] + " " + t, pend["media"], sigue)), messaging_type="RESPONSE")
                         del est["seguir"][usuario]
