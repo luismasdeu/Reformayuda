@@ -1,0 +1,43 @@
+{
+ "voz": "es-ES-ElviraNeural",
+ "escenas": [
+  {
+   "tipo": "gancho",
+   "emoji": "🏢",
+   "texto": "¿Tu comunidad va a arreglar la fachada? **Cada vecino puede desgravarse**",
+   "voz": "¿Tu comunidad va a arreglar la fachada o la cubierta? Cada vecino puede desgravarse una parte."
+  },
+  {
+   "tipo": "cifra",
+   "texto": "Deducción en la renta por obras en el edificio:",
+   "cifra": "hasta 60 %",
+   "pie": "con límites por año",
+   "voz": "La deducción puede llegar al sesenta por ciento, con unos límites por año."
+  },
+  {
+   "tipo": "punto",
+   "texto": "Si la obra **mejora la eficiencia** del edificio…",
+   "voz": "Si la obra mejora la eficiencia energética del edificio,",
+   "emoji": "📉"
+  },
+  {
+   "tipo": "punto",
+   "texto": "…cada propietario puede deducirse **su parte**",
+   "voz": "cada propietario puede deducirse en la renta la parte que paga.",
+   "emoji": "👥"
+  },
+  {
+   "tipo": "punto",
+   "texto": "Necesitáis el **certificado energético** antes y después",
+   "voz": "Eso sí, necesitáis el certificado energético de antes y de después.",
+   "emoji": "📄"
+  },
+  {
+   "tipo": "cta",
+   "texto": "Comenta **EDIFICIO** y te digo las de tu zona",
+   "voz": "Comenta edificio, y te digo las de tu zona.",
+   "palabra": "EDIFICIO"
+  }
+ ],
+ "texto": "¿Tu comunidad va a arreglar la fachada? Cada vecino puede desgravarse 🏢\n\n💶 Deducción en la renta por obras en el edificio: hasta 60 % con límites por año\n• Si la obra mejora la eficiencia del edificio…\n• …cada propietario puede deducirse su parte\n• Necesitáis el certificado energético antes y después\n\nRequisitos y plazos en la Agencia Tributaria. Cada ayuda tiene sus bases: revisa siempre la convocatoria oficial.\n\n💬 Comenta EDIFICIO y te digo las de tu zona.\n🔎 Busca las ayudas de tu zona en obrayuda.es (enlace en el perfil)\n\n#comunidaddevecinos #fachada #deduccionirpf #eficienciaenergetica #ayudasvivienda"
+}

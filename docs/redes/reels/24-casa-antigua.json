@@ -1,0 +1,36 @@
+{
+ "voz": "es-ES-ElviraNeural",
+ "escenas": [
+  {
+   "tipo": "gancho",
+   "emoji": "🏚️",
+   "texto": "¿Tu casa es **antigua**? Tienes más ayudas de las que crees",
+   "voz": "¿Tu casa es antigua? Puede que tengas más ayudas de las que crees."
+  },
+  {
+   "tipo": "punto",
+   "texto": "Muchas ayudas son para edificios **de antes de cierto año**",
+   "voz": "Muchas ayudas de rehabilitación son para edificios de antes de cierto año.",
+   "emoji": "📅"
+  },
+  {
+   "tipo": "punto",
+   "texto": "Cuanto más mejora la obra la eficiencia, **más ayuda**",
+   "voz": "Y cuanto más mejora la obra la eficiencia, más ayuda suele haber.",
+   "emoji": "📈"
+  },
+  {
+   "tipo": "punto",
+   "texto": "Revisa el **año de construcción** en el catastro",
+   "voz": "Revisa el año de construcción en el catastro.",
+   "emoji": "🗺️"
+  },
+  {
+   "tipo": "cta",
+   "texto": "Comenta **AYUDA** y te digo las de tu zona",
+   "voz": "Comenta ayuda, y te digo las de tu zona.",
+   "palabra": "AYUDA"
+  }
+ ],
+ "texto": "¿Tu casa es antigua? Tienes más ayudas de las que crees 🏚️\n\n• Muchas ayudas son para edificios de antes de cierto año\n• Cuanto más mejora la obra la eficiencia, más ayuda\n• Revisa el año de construcción en el catastro\n\nCada ayuda tiene sus bases: revisa siempre la convocatoria oficial.\n\n💬 Comenta AYUDA y te digo las de tu zona.\n🔎 Busca las ayudas de tu zona en obrayuda.es (enlace en el perfil)\n\n#rehabilitacion #casaantigua #eficienciaenergetica #ayudasvivienda #reformas"
+}

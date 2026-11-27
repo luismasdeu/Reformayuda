@@ -1,0 +1,36 @@
+{
+ "voz": "es-ES-ElviraNeural",
+ "escenas": [
+  {
+   "tipo": "gancho",
+   "emoji": "💳",
+   "texto": "Pagaste la obra… **pero la factura no está a tu nombre**",
+   "voz": "Pagaste la obra, pero la factura no está a tu nombre. Error."
+  },
+  {
+   "tipo": "punto",
+   "texto": "La factura debe ir a nombre de **quien pide** la ayuda",
+   "voz": "La factura tiene que ir a nombre de quien pide la ayuda o la deducción.",
+   "emoji": "🧾"
+  },
+  {
+   "tipo": "punto",
+   "texto": "Y el pago, desde **su cuenta**, nunca en efectivo",
+   "voz": "Y el pago, desde su cuenta. Nunca en efectivo.",
+   "emoji": "💳"
+  },
+  {
+   "tipo": "punto",
+   "texto": "Si es una comunidad, **a nombre de la comunidad**",
+   "voz": "Si la obra es de la comunidad, a nombre de la comunidad.",
+   "emoji": "🏢"
+  },
+  {
+   "tipo": "cta",
+   "texto": "Comenta **AYUDA** y te digo las de tu zona",
+   "voz": "Comenta ayuda, y te digo las de tu zona.",
+   "palabra": "AYUDA"
+  }
+ ],
+ "texto": "Pagaste la obra… pero la factura no está a tu nombre 💳\n\n• La factura debe ir a nombre de quien pide la ayuda\n• Y el pago, desde su cuenta, nunca en efectivo\n• Si es una comunidad, a nombre de la comunidad\n\nCada ayuda tiene sus bases: revisa siempre la convocatoria oficial.\n\n💬 Comenta AYUDA y te digo las de tu zona.\n🔎 Busca las ayudas de tu zona en obrayuda.es (enlace en el perfil)\n\n#ayudasvivienda #subvenciones #reformas #reformacasa #consejos"
+}

@@ -1,0 +1,48 @@
+{
+ "slides": [
+  {
+   "tipo": "portada",
+   "ceja": "Ten esto preparado",
+   "titulo": "Los **papeles** que te pedirán en casi cualquier ayuda"
+  },
+  {
+   "tipo": "lista",
+   "ceja": "Tuyos",
+   "titulo": "Personales",
+   "marcas": "check",
+   "puntos": [
+    "**DNI** o NIE",
+    "Certificados de estar **al corriente** con Hacienda y la Seguridad Social",
+    "**Cuenta bancaria** a tu nombre"
+   ]
+  },
+  {
+   "tipo": "lista",
+   "ceja": "De la vivienda",
+   "titulo": "De la casa",
+   "marcas": "check",
+   "puntos": [
+    "**Referencia catastral**",
+    "Escritura o nota simple (según la ayuda)",
+    "**Empadronamiento**, si es vivienda habitual"
+   ]
+  },
+  {
+   "tipo": "lista",
+   "ceja": "De la obra",
+   "titulo": "De la obra",
+   "marcas": "check",
+   "puntos": [
+    "**Presupuesto desglosado**",
+    "Licencia o comunicación de obra",
+    "Certificado energético, si es de eficiencia"
+   ]
+  },
+  {
+   "tipo": "cta",
+   "titulo": "Comenta **AYUDA**\ny te digo las de tu zona",
+   "sub": "Guárdalo para cuando vayas a hacer obra."
+  }
+ ],
+ "texto": "Los papeles que te pedirán en casi cualquier ayuda 👇\n\nPersonales:\n• DNI o NIE\n• Certificados de estar al corriente con Hacienda y la Seguridad Social\n• Cuenta bancaria a tu nombre\n\nDe la casa:\n• Referencia catastral\n• Escritura o nota simple (según la ayuda)\n• Empadronamiento, si es vivienda habitual\n\nDe la obra:\n• Presupuesto desglosado\n• Licencia o comunicación de obra\n• Certificado energético, si es de eficiencia\n\nCada convocatoria pide sus propios documentos. Cada ayuda tiene sus bases: revisa siempre la convocatoria oficial.\n\n💬 Comenta AYUDA y te digo las de tu zona.\n🔎 obrayuda.es (enlace en el perfil)\n\n#ayudasvivienda #subvenciones #reformas #reformacasa #consejos"
+}

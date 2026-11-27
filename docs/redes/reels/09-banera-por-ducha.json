@@ -1,0 +1,36 @@
+{
+ "voz": "es-ES-ElviraNeural",
+ "escenas": [
+  {
+   "tipo": "gancho",
+   "emoji": "🛁",
+   "texto": "¿Cambiar la bañera por un **plato de ducha**? Hay ayuntamientos que lo pagan",
+   "voz": "¿Vas a cambiar la bañera por un plato de ducha? Hay ayuntamientos que te ayudan a pagarlo."
+  },
+  {
+   "tipo": "punto",
+   "texto": "Son ayudas de **accesibilidad** o de adaptación del baño",
+   "voz": "Suelen ser ayudas de accesibilidad o de adaptación del baño.",
+   "emoji": "♿"
+  },
+  {
+   "tipo": "punto",
+   "texto": "Muchas son para **mayores o personas con discapacidad**",
+   "voz": "Muchas son para personas mayores o con discapacidad, pero no todas.",
+   "emoji": "👵"
+  },
+  {
+   "tipo": "punto",
+   "texto": "Cada una tiene su plazo: **míralo antes de empezar**",
+   "voz": "Cada una tiene su plazo. Míralo antes de empezar la obra.",
+   "emoji": "📅"
+  },
+  {
+   "tipo": "cta",
+   "texto": "Comenta **BAÑO** y te digo las de tu zona",
+   "voz": "Comenta baño, y te digo las de tu zona.",
+   "palabra": "BAÑO"
+  }
+ ],
+ "texto": "¿Cambiar la bañera por un plato de ducha? Hay ayuntamientos que lo pagan 🛁\n\n• Son ayudas de accesibilidad o de adaptación del baño\n• Muchas son para mayores o personas con discapacidad\n• Cada una tiene su plazo: míralo antes de empezar\n\nCada ayuda tiene sus bases: revisa siempre la convocatoria oficial.\n\n💬 Comenta BAÑO y te digo las de tu zona.\n🔎 Busca las ayudas de tu zona en obrayuda.es (enlace en el perfil)\n\n#reformabaño #platodeducha #accesibilidad #ayudasvivienda #subvenciones"
+}

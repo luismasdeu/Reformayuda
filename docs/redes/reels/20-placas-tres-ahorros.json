@@ -1,0 +1,36 @@
+{
+ "voz": "es-ES-ElviraNeural",
+ "escenas": [
+  {
+   "tipo": "gancho",
+   "emoji": "☀️",
+   "texto": "Placas solares: **3 ahorros** que casi nadie aprovecha",
+   "voz": "Placas solares. Tres ahorros que casi nadie aprovecha."
+  },
+  {
+   "tipo": "punto",
+   "texto": "Rebaja del **IBI** en muchos ayuntamientos",
+   "voz": "Uno: la rebaja del IBI en muchos ayuntamientos.",
+   "n": 1
+  },
+  {
+   "tipo": "punto",
+   "texto": "Rebaja del **ICIO** al pedir la licencia",
+   "voz": "Dos: la rebaja del ICIO al pedir la licencia.",
+   "n": 2
+  },
+  {
+   "tipo": "punto",
+   "texto": "Y la **deducción del IRPF** si mejora la eficiencia",
+   "voz": "Y tres: la deducción del IRPF, si mejora la eficiencia de la vivienda.",
+   "n": 3
+  },
+  {
+   "tipo": "cta",
+   "texto": "Comenta **PLACAS** y te digo las de tu zona",
+   "voz": "Comenta placas, y te digo las de tu zona.",
+   "palabra": "PLACAS"
+  }
+ ],
+ "texto": "Placas solares: 3 ahorros que casi nadie aprovecha ☀️\n\n• Rebaja del IBI en muchos ayuntamientos\n• Rebaja del ICIO al pedir la licencia\n• Y la deducción del IRPF si mejora la eficiencia\n\nCada ayuda tiene sus bases: revisa siempre la convocatoria oficial.\n\n💬 Comenta PLACAS y te digo las de tu zona.\n🔎 Busca las ayudas de tu zona en obrayuda.es (enlace en el perfil)\n\n#placassolares #autoconsumo #ibi #ayudasvivienda #ahorroenergetico"
+}

@@ -1,0 +1,36 @@
+{
+ "voz": "es-ES-ElviraNeural",
+ "escenas": [
+  {
+   "tipo": "gancho",
+   "emoji": "🔎",
+   "texto": "Todas las subvenciones de España están **en un mismo sitio**",
+   "voz": "¿Sabías que todas las subvenciones de España se registran en un mismo sitio?"
+  },
+  {
+   "tipo": "punto",
+   "texto": "Se llama **BDNS**: Base de Datos Nacional de Subvenciones",
+   "voz": "Se llama BDNS. La Base de Datos Nacional de Subvenciones.",
+   "emoji": "🗄️"
+  },
+  {
+   "tipo": "punto",
+   "texto": "Pero tiene **miles** de convocatorias de todo tipo",
+   "voz": "El problema es que tiene miles de convocatorias de todo tipo.",
+   "emoji": "😵"
+  },
+  {
+   "tipo": "punto",
+   "texto": "Obrayuda filtra **solo las de obras** en vivienda",
+   "voz": "Obrayuda filtra solo las de obras en vivienda, y te enseña las de tu zona.",
+   "emoji": "🏠"
+  },
+  {
+   "tipo": "cta",
+   "texto": "Comenta **AYUDA** y te digo las de tu zona",
+   "voz": "Comenta ayuda, y te digo las de tu zona.",
+   "palabra": "AYUDA"
+  }
+ ],
+ "texto": "Todas las subvenciones de España están en un mismo sitio 🔎\n\n• Se llama BDNS: Base de Datos Nacional de Subvenciones\n• Pero tiene miles de convocatorias de todo tipo\n• Obrayuda filtra solo las de obras en vivienda\n\nCada ayuda tiene sus bases: revisa siempre la convocatoria oficial.\n\n💬 Comenta AYUDA y te digo las de tu zona.\n🔎 Busca las ayudas de tu zona en obrayuda.es (enlace en el perfil)\n\n#bdns #subvenciones #ayudasvivienda #reformas #sabiasque"
+}

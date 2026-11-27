@@ -1,0 +1,36 @@
+{
+ "voz": "es-ES-ElviraNeural",
+ "escenas": [
+  {
+   "tipo": "gancho",
+   "emoji": "🗂️",
+   "texto": "Los papeles que te van a pedir en **casi cualquier subvención**",
+   "voz": "Estos son los papeles que te van a pedir en casi cualquier subvención para tu casa."
+  },
+  {
+   "tipo": "punto",
+   "texto": "Tu **DNI** y la **referencia catastral** de la vivienda",
+   "voz": "Tu DNI y la referencia catastral de la vivienda.",
+   "n": 1
+  },
+  {
+   "tipo": "punto",
+   "texto": "Un **presupuesto desglosado** de la obra",
+   "voz": "Un presupuesto desglosado de la obra.",
+   "n": 2
+  },
+  {
+   "tipo": "punto",
+   "texto": "Estar **al corriente** con Hacienda y la Seguridad Social",
+   "voz": "Y estar al corriente con Hacienda y con la Seguridad Social.",
+   "n": 3
+  },
+  {
+   "tipo": "cta",
+   "texto": "Guárdalo y comenta **AYUDA**",
+   "voz": "Guárdalo, y comenta ayuda para ver las de tu zona.",
+   "palabra": "AYUDA"
+  }
+ ],
+ "texto": "Los papeles que te van a pedir en casi cualquier subvención 🗂️\n\n• Tu DNI y la referencia catastral de la vivienda\n• Un presupuesto desglosado de la obra\n• Estar al corriente con Hacienda y la Seguridad Social\n\nCada ayuda tiene sus bases: revisa siempre la convocatoria oficial.\n\n💬 Guárdalo y comenta AYUDA.\n🔎 Busca las ayudas de tu zona en obrayuda.es (enlace en el perfil)\n\n#ayudasvivienda #subvenciones #reformas #reformacasa #consejos"
+}

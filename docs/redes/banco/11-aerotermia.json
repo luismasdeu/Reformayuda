@@ -1,0 +1,37 @@
+{
+ "slides": [
+  {
+   "tipo": "portada",
+   "ceja": "Calefacción",
+   "titulo": "¿Aerotermia? **Lo que debes saber** antes"
+  },
+  {
+   "tipo": "lista",
+   "ceja": "Ayudas posibles",
+   "titulo": "Dónde mirar",
+   "marcas": "check",
+   "puntos": [
+    "**Deducción del IRPF** por eficiencia energética",
+    "Ayudas de **tu comunidad** para renovables y eficiencia",
+    "Bonificaciones del **ayuntamiento** (ICIO)"
+   ]
+  },
+  {
+   "tipo": "lista",
+   "ceja": "Requisitos habituales",
+   "titulo": "Lo que te pedirán",
+   "marcas": "check",
+   "puntos": [
+    "**Certificado energético** antes y después",
+    "Instalador **habilitado** y factura a tu nombre",
+    "Pago con **tarjeta o transferencia**"
+   ]
+  },
+  {
+   "tipo": "cta",
+   "titulo": "Comenta **AYUDA**\ny te digo las de tu zona",
+   "sub": "Guárdalo para cuando vayas a hacer obra."
+  }
+ ],
+ "texto": "¿Aerotermia? Lo que debes saber antes 👇\n\nDónde mirar:\n• Deducción del IRPF por eficiencia energética\n• Ayudas de tu comunidad para renovables y eficiencia\n• Bonificaciones del ayuntamiento (ICIO)\n\nLo que te pedirán:\n• Certificado energético antes y después\n• Instalador habilitado y factura a tu nombre\n• Pago con tarjeta o transferencia\n\nCada ayuda tiene sus bases: revisa siempre la convocatoria oficial.\n\n💬 Comenta AYUDA y te digo las de tu zona.\n🔎 obrayuda.es (enlace en el perfil)\n\n#aerotermia #eficienciaenergetica #deduccionirpf #ayudasvivienda #calefaccion"
+}

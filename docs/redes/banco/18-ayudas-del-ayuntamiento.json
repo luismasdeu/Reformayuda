@@ -1,0 +1,32 @@
+{
+ "slides": [
+  {
+   "tipo": "portada",
+   "ceja": "Las más olvidadas",
+   "titulo": "Cómo encontrar las ayudas de **tu ayuntamiento**"
+  },
+  {
+   "tipo": "lista",
+   "ceja": "Dónde mirar",
+   "titulo": "3 sitios",
+   "marcas": "check",
+   "puntos": [
+    "El **boletín de tu provincia** (BOP)",
+    "La **sede electrónica** del ayuntamiento",
+    "Las **ordenanzas fiscales** (IBI, ICIO)"
+   ]
+  },
+  {
+   "tipo": "texto",
+   "ceja": "O más fácil",
+   "titulo": "Te las **buscamos**",
+   "texto": "Obrayuda revisa cada mañana los boletines y te enseña las de tu municipio y tu provincia."
+  },
+  {
+   "tipo": "cta",
+   "titulo": "Comenta **AYUDA**\ny te digo las de tu zona",
+   "sub": "Guárdalo para cuando vayas a hacer obra."
+  }
+ ],
+ "texto": "Cómo encontrar las ayudas de tu ayuntamiento 👇\n\n3 sitios:\n• El boletín de tu provincia (BOP)\n• La sede electrónica del ayuntamiento\n• Las ordenanzas fiscales (IBI, ICIO)\n\nTe las buscamos: Obrayuda revisa cada mañana los boletines y te enseña las de tu municipio y tu provincia.\n\nCada ayuda tiene sus bases: revisa siempre la convocatoria oficial.\n\n💬 Comenta AYUDA y te digo las de tu zona.\n🔎 obrayuda.es (enlace en el perfil)\n\n#ayudasvivienda #subvenciones #reformas #reformacasa #consejos"
+}

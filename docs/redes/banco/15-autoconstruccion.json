@@ -1,0 +1,37 @@
+{
+ "slides": [
+  {
+   "tipo": "portada",
+   "ceja": "Construir tu casa",
+   "titulo": "¿**Autoconstrucción**? Ayudas que puedes pedir"
+  },
+  {
+   "tipo": "lista",
+   "ceja": "Posibles ayudas",
+   "titulo": "Dónde mirar",
+   "marcas": "check",
+   "puntos": [
+    "Ayuntamientos que pagan parte del **proyecto**",
+    "Bonificación del **ICIO** de la licencia",
+    "Ayudas autonómicas para **primera vivienda**"
+   ]
+  },
+  {
+   "tipo": "lista",
+   "ceja": "Requisitos habituales",
+   "titulo": "Suelen pedir",
+   "marcas": "check",
+   "puntos": [
+    "Que sea tu **primera y única vivienda**",
+    "**Empadronarte** y vivir en ella",
+    "Licencia de obra **antes de empezar**"
+   ]
+  },
+  {
+   "tipo": "cta",
+   "titulo": "Comenta **CONSTRUIR**\ny te digo las de tu zona",
+   "sub": "Guárdalo para cuando vayas a hacer obra."
+  }
+ ],
+ "texto": "¿Autoconstrucción? Ayudas que puedes pedir 👇\n\nDónde mirar:\n• Ayuntamientos que pagan parte del proyecto\n• Bonificación del ICIO de la licencia\n• Ayudas autonómicas para primera vivienda\n\nSuelen pedir:\n• Que sea tu primera y única vivienda\n• Empadronarte y vivir en ella\n• Licencia de obra antes de empezar\n\nCada ayuda tiene sus bases: revisa siempre la convocatoria oficial.\n\n💬 Comenta CONSTRUIR y te digo las de tu zona.\n🔎 obrayuda.es (enlace en el perfil)\n\n#autoconstruccion #construirunacasa #primeravivienda #ayudasvivienda #subvenciones"
+}

@@ -1,0 +1,36 @@
+{
+ "voz": "es-ES-ElviraNeural",
+ "escenas": [
+  {
+   "tipo": "gancho",
+   "emoji": "🧾",
+   "texto": "Te dan la ayuda… **y luego te la quitan**. ¿Por qué?",
+   "voz": "Te conceden la ayuda, y luego te la quitan. ¿Por qué pasa?"
+  },
+  {
+   "tipo": "punto",
+   "texto": "Porque **no se justificó** bien la obra",
+   "voz": "Porque no se justificó bien la obra.",
+   "emoji": "📂"
+  },
+  {
+   "tipo": "punto",
+   "texto": "Guarda **facturas y justificantes** de pago",
+   "voz": "Guarda todas las facturas y los justificantes de pago.",
+   "emoji": "🧾"
+  },
+  {
+   "tipo": "punto",
+   "texto": "Y presenta todo **dentro del plazo** de justificación",
+   "voz": "Y presenta todo dentro del plazo de justificación.",
+   "emoji": "📅"
+  },
+  {
+   "tipo": "cta",
+   "texto": "Comenta **AYUDA** y te digo las de tu zona",
+   "voz": "Comenta ayuda, y te digo las de tu zona.",
+   "palabra": "AYUDA"
+  }
+ ],
+ "texto": "Te dan la ayuda… y luego te la quitan. ¿Por qué? 🧾\n\n• Porque no se justificó bien la obra\n• Guarda facturas y justificantes de pago\n• Y presenta todo dentro del plazo de justificación\n\nCada ayuda tiene sus bases: revisa siempre la convocatoria oficial.\n\n💬 Comenta AYUDA y te digo las de tu zona.\n🔎 Busca las ayudas de tu zona en obrayuda.es (enlace en el perfil)\n\n#ayudasvivienda #subvenciones #reformas #reformacasa #consejos"
+}

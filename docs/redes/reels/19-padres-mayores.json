@@ -1,0 +1,36 @@
+{
+ "voz": "es-ES-ElviraNeural",
+ "escenas": [
+  {
+   "tipo": "gancho",
+   "emoji": "👵",
+   "texto": "¿Tus padres tienen más de 70 y su casa **no está adaptada**?",
+   "voz": "¿Tus padres tienen más de setenta años y su casa no está adaptada?"
+  },
+  {
+   "tipo": "punto",
+   "texto": "Hay ayudas para **adaptar el interior** de la vivienda",
+   "voz": "Hay ayudas para adaptar el interior de la vivienda.",
+   "emoji": "🛠️"
+  },
+  {
+   "tipo": "punto",
+   "texto": "Baño, puertas, **barreras**… según cada convocatoria",
+   "voz": "El baño, las puertas, las barreras. Según cada convocatoria.",
+   "emoji": "🚪"
+  },
+  {
+   "tipo": "punto",
+   "texto": "Las dan **ayuntamientos y comunidades**",
+   "voz": "Las dan ayuntamientos y comunidades autónomas.",
+   "emoji": "🏛️"
+  },
+  {
+   "tipo": "cta",
+   "texto": "Comenta **MAYORES** y te digo las de su zona",
+   "voz": "Comenta mayores, y te digo las de su zona.",
+   "palabra": "MAYORES"
+  }
+ ],
+ "texto": "¿Tus padres tienen más de 70 y su casa no está adaptada? 👵\n\n• Hay ayudas para adaptar el interior de la vivienda\n• Baño, puertas, barreras… según cada convocatoria\n• Las dan ayuntamientos y comunidades\n\nCada ayuda tiene sus bases: revisa siempre la convocatoria oficial.\n\n💬 Comenta MAYORES y te digo las de su zona.\n🔎 Busca las ayudas de tu zona en obrayuda.es (enlace en el perfil)\n\n#accesibilidad #personasmayores #adaptarvivienda #ayudasvivienda #subvenciones"
+}

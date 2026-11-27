@@ -1,0 +1,36 @@
+{
+ "voz": "es-ES-ElviraNeural",
+ "escenas": [
+  {
+   "tipo": "gancho",
+   "emoji": "🔥",
+   "texto": "¿Vas a cambiar la caldera por **aerotermia**? Mira esto antes",
+   "voz": "¿Vas a cambiar la caldera por aerotermia? Mira esto antes de pagar."
+  },
+  {
+   "tipo": "punto",
+   "texto": "Puede entrar en la **deducción del IRPF** por eficiencia energética",
+   "voz": "Puede entrar en la deducción del IRPF por eficiencia energética.",
+   "n": 1
+  },
+  {
+   "tipo": "punto",
+   "texto": "Necesitas el **certificado energético** de antes y de después",
+   "voz": "Pero necesitas el certificado energético de antes y de después de la obra.",
+   "n": 2
+  },
+  {
+   "tipo": "punto",
+   "texto": "Y mira si tu **comunidad o ayuntamiento** tiene ayudas abiertas",
+   "voz": "Y mira si tu comunidad o tu ayuntamiento tienen ayudas abiertas para renovables.",
+   "n": 3
+  },
+  {
+   "tipo": "cta",
+   "texto": "Comenta **AYUDA** y te digo las de tu zona",
+   "voz": "Comenta ayuda, y te digo las de tu zona.",
+   "palabra": "AYUDA"
+  }
+ ],
+ "texto": "¿Vas a cambiar la caldera por aerotermia? Mira esto antes 🔥\n\n• Puede entrar en la deducción del IRPF por eficiencia energética\n• Necesitas el certificado energético de antes y de después\n• Y mira si tu comunidad o ayuntamiento tiene ayudas abiertas\n\nCada ayuda tiene sus bases: revisa siempre la convocatoria oficial.\n\n💬 Comenta AYUDA y te digo las de tu zona.\n🔎 Busca las ayudas de tu zona en obrayuda.es (enlace en el perfil)\n\n#aerotermia #eficienciaenergetica #deduccionirpf #ayudasvivienda #calefaccion"
+}

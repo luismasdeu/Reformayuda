@@ -1,0 +1,36 @@
+{
+ "voz": "es-ES-ElviraNeural",
+ "escenas": [
+  {
+   "tipo": "gancho",
+   "emoji": "🧱",
+   "texto": "La obra que más baja la factura **no siempre son las placas**",
+   "voz": "La obra que más baja la factura no siempre son las placas solares."
+  },
+  {
+   "tipo": "punto",
+   "texto": "Aislar **fachada, cubierta y ventanas** reduce lo que gastas",
+   "voz": "Aislar la fachada, la cubierta y las ventanas reduce la energía que necesitas.",
+   "emoji": "🧱"
+  },
+  {
+   "tipo": "punto",
+   "texto": "Por eso muchas ayudas priorizan la **envolvente**",
+   "voz": "Por eso muchas ayudas priorizan la envolvente del edificio.",
+   "emoji": "🏠"
+  },
+  {
+   "tipo": "punto",
+   "texto": "Y luego, **renovables**: gastas aún menos",
+   "voz": "Y después, las renovables. Así gastas todavía menos.",
+   "emoji": "☀️"
+  },
+  {
+   "tipo": "cta",
+   "texto": "Comenta **AYUDA** y te digo las de tu zona",
+   "voz": "Comenta ayuda, y te digo las de tu zona.",
+   "palabra": "AYUDA"
+  }
+ ],
+ "texto": "La obra que más baja la factura no siempre son las placas 🧱\n\n• Aislar fachada, cubierta y ventanas reduce lo que gastas\n• Por eso muchas ayudas priorizan la envolvente\n• Y luego, renovables: gastas aún menos\n\nCada ayuda tiene sus bases: revisa siempre la convocatoria oficial.\n\n💬 Comenta AYUDA y te digo las de tu zona.\n🔎 Busca las ayudas de tu zona en obrayuda.es (enlace en el perfil)\n\n#eficienciaenergetica #ayudasvivienda #subvenciones #ahorroenergetico #reformas"
+}

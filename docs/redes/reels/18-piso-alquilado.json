@@ -1,0 +1,36 @@
+{
+ "voz": "es-ES-ElviraNeural",
+ "escenas": [
+  {
+   "tipo": "gancho",
+   "emoji": "🔑",
+   "texto": "¿Tienes un **piso alquilado**? También puedes desgravarte la obra",
+   "voz": "¿Tienes un piso alquilado? También puedes desgravarte la obra."
+  },
+  {
+   "tipo": "punto",
+   "texto": "La deducción del IRPF por eficiencia vale para la vivienda **que alquilas**",
+   "voz": "La deducción del IRPF por eficiencia energética también vale para la vivienda que tienes alquilada.",
+   "emoji": "🏠"
+  },
+  {
+   "tipo": "punto",
+   "texto": "Con **certificado energético** antes y después",
+   "voz": "Con el certificado energético de antes y de después.",
+   "emoji": "📄"
+  },
+  {
+   "tipo": "punto",
+   "texto": "Y pagando con **tarjeta o transferencia**",
+   "voz": "Y pagando siempre con tarjeta o transferencia.",
+   "emoji": "💳"
+  },
+  {
+   "tipo": "cta",
+   "texto": "Comenta **AYUDA** y te digo las de tu zona",
+   "voz": "Comenta ayuda, y te digo las de tu zona.",
+   "palabra": "AYUDA"
+  }
+ ],
+ "texto": "¿Tienes un piso alquilado? También puedes desgravarte la obra 🔑\n\n• La deducción del IRPF por eficiencia vale para la vivienda que alquilas\n• Con certificado energético antes y después\n• Y pagando con tarjeta o transferencia\n\nRequisitos en la Agencia Tributaria. Cada ayuda tiene sus bases: revisa siempre la convocatoria oficial.\n\n💬 Comenta AYUDA y te digo las de tu zona.\n🔎 Busca las ayudas de tu zona en obrayuda.es (enlace en el perfil)\n\n#deduccionirpf #rentaweb #ayudasvivienda #eficienciaenergetica #reformas"
+}

@@ -1,0 +1,36 @@
+{
+ "voz": "es-ES-ElviraNeural",
+ "escenas": [
+  {
+   "tipo": "gancho",
+   "emoji": "⚖️",
+   "texto": "Subvención y deducción **no son lo mismo**",
+   "voz": "Subvención y deducción no son lo mismo. Y conviene saber la diferencia."
+  },
+  {
+   "tipo": "punto",
+   "texto": "**Subvención**: te dan dinero tras pedirla y justificarla",
+   "voz": "La subvención: te dan dinero, después de pedirla y justificarla.",
+   "emoji": "💶"
+  },
+  {
+   "tipo": "punto",
+   "texto": "**Deducción**: pagas menos en la declaración de la renta",
+   "voz": "La deducción: pagas menos en la declaración de la renta.",
+   "emoji": "🧾"
+  },
+  {
+   "tipo": "punto",
+   "texto": "A veces se combinan: **mira cómo afecta** una a la otra",
+   "voz": "A veces se pueden combinar, pero mira cómo afecta una a la otra.",
+   "emoji": "🔗"
+  },
+  {
+   "tipo": "cta",
+   "texto": "Comenta **AYUDA** y te digo las de tu zona",
+   "voz": "Comenta ayuda, y te digo las de tu zona.",
+   "palabra": "AYUDA"
+  }
+ ],
+ "texto": "Subvención y deducción no son lo mismo ⚖️\n\n• Subvención: te dan dinero tras pedirla y justificarla\n• Deducción: pagas menos en la declaración de la renta\n• A veces se combinan: mira cómo afecta una a la otra\n\nCada ayuda tiene sus bases: revisa siempre la convocatoria oficial.\n\n💬 Comenta AYUDA y te digo las de tu zona.\n🔎 Busca las ayudas de tu zona en obrayuda.es (enlace en el perfil)\n\n#ayudasvivienda #subvenciones #reformas #reformacasa #consejos"
+}

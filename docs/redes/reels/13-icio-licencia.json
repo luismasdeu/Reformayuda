@@ -1,0 +1,36 @@
+{
+ "voz": "es-ES-ElviraNeural",
+ "escenas": [
+  {
+   "tipo": "gancho",
+   "emoji": "🏛️",
+   "texto": "Antes de pedir la **licencia de obra**, pregunta esto en tu ayuntamiento",
+   "voz": "Antes de pedir la licencia de obra, pregunta esto en tu ayuntamiento."
+  },
+  {
+   "tipo": "punto",
+   "texto": "¿Tenéis **bonificación del ICIO**?",
+   "voz": "¿Tenéis bonificación del ICIO?",
+   "emoji": "❓"
+  },
+  {
+   "tipo": "punto",
+   "texto": "Puede llegar **hasta el 95 %** en obras de eficiencia o accesibilidad",
+   "voz": "En obras de eficiencia, renovables o accesibilidad, puede llegar hasta el noventa y cinco por ciento.",
+   "emoji": "💶"
+  },
+  {
+   "tipo": "punto",
+   "texto": "Normalmente hay que pedirla **con la licencia**",
+   "voz": "Y normalmente hay que pedirla a la vez que la licencia.",
+   "emoji": "📝"
+  },
+  {
+   "tipo": "cta",
+   "texto": "Comenta **ICIO** y tu municipio",
+   "voz": "Comenta ICIO y tu municipio, y te decimos dónde mirarlo.",
+   "palabra": "ICIO"
+  }
+ ],
+ "texto": "Antes de pedir la licencia de obra, pregunta esto en tu ayuntamiento 🏛️\n\n• ¿Tenéis bonificación del ICIO?\n• Puede llegar hasta el 95 % en obras de eficiencia o accesibilidad\n• Normalmente hay que pedirla con la licencia\n\nCada ayuda tiene sus bases: revisa siempre la convocatoria oficial.\n\n💬 Comenta ICIO y tu municipio.\n🔎 Busca las ayudas de tu zona en obrayuda.es (enlace en el perfil)\n\n#licenciadeobra #icio #reformas #ayudasvivienda #ahorro"
+}

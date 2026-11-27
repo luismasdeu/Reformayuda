@@ -1,0 +1,36 @@
+{
+ "voz": "es-ES-ElviraNeural",
+ "escenas": [
+  {
+   "tipo": "gancho",
+   "emoji": "🤔",
+   "texto": "¿Puedes pedir **dos ayudas** para la misma obra?",
+   "voz": "¿Puedes pedir dos ayudas para la misma obra?"
+  },
+  {
+   "tipo": "punto",
+   "texto": "Depende: cada convocatoria dice si es **compatible**",
+   "voz": "Depende. Cada convocatoria dice si es compatible con otras.",
+   "emoji": "📜"
+  },
+  {
+   "tipo": "punto",
+   "texto": "Lo normal es que no puedan **superar el coste** de la obra",
+   "voz": "Lo normal es que, juntas, no puedan superar el coste de la obra.",
+   "emoji": "⚖️"
+  },
+  {
+   "tipo": "punto",
+   "texto": "En la renta, la parte subvencionada **no se deduce**",
+   "voz": "Y en la renta, la parte que te han subvencionado no se puede deducir.",
+   "emoji": "🧾"
+  },
+  {
+   "tipo": "cta",
+   "texto": "Comenta **AYUDA** y te digo las de tu zona",
+   "voz": "Comenta ayuda, y te digo las de tu zona.",
+   "palabra": "AYUDA"
+  }
+ ],
+ "texto": "¿Puedes pedir dos ayudas para la misma obra? 🤔\n\n• Depende: cada convocatoria dice si es compatible\n• Lo normal es que no puedan superar el coste de la obra\n• En la renta, la parte subvencionada no se deduce\n\nCada ayuda tiene sus bases: revisa siempre la convocatoria oficial.\n\n💬 Comenta AYUDA y te digo las de tu zona.\n🔎 Busca las ayudas de tu zona en obrayuda.es (enlace en el perfil)\n\n#ayudasvivienda #subvenciones #reformas #reformacasa #consejos"
+}

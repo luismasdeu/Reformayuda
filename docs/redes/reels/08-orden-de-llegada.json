@@ -1,0 +1,36 @@
+{
+ "voz": "es-ES-ElviraNeural",
+ "escenas": [
+  {
+   "tipo": "gancho",
+   "emoji": "⏱️",
+   "texto": "La ayuda estaba abierta… **y te quedaste sin ella**",
+   "voz": "La ayuda estaba abierta, y aun así te quedaste sin ella. ¿Por qué?"
+  },
+  {
+   "tipo": "punto",
+   "texto": "Muchas se reparten **por orden de llegada**",
+   "voz": "Muchas ayudas se reparten por orden de llegada.",
+   "n": 1
+  },
+  {
+   "tipo": "punto",
+   "texto": "Cuando se acaba el dinero, **se cierran** aunque quede plazo",
+   "voz": "Cuando se acaba el dinero, se cierran, aunque quede plazo.",
+   "n": 2
+  },
+  {
+   "tipo": "punto",
+   "texto": "Ten los papeles listos **antes** de que abra",
+   "voz": "Por eso conviene tener los papeles listos antes de que abra.",
+   "n": 3
+  },
+  {
+   "tipo": "cta",
+   "texto": "Comenta **AYUDA** y te aviso de las de tu zona",
+   "voz": "Comenta ayuda, y te aviso de las de tu zona.",
+   "palabra": "AYUDA"
+  }
+ ],
+ "texto": "La ayuda estaba abierta… y te quedaste sin ella ⏱️\n\n• Muchas se reparten por orden de llegada\n• Cuando se acaba el dinero, se cierran aunque quede plazo\n• Ten los papeles listos antes de que abra\n\nCada ayuda tiene sus bases: revisa siempre la convocatoria oficial.\n\n💬 Comenta AYUDA y te aviso de las de tu zona.\n🔎 Busca las ayudas de tu zona en obrayuda.es (enlace en el perfil)\n\n#ayudasvivienda #subvenciones #reformas #reformacasa #consejos"
+}

@@ -1,0 +1,36 @@
+{
+ "voz": "es-ES-ElviraNeural",
+ "escenas": [
+  {
+   "tipo": "gancho",
+   "emoji": "📄",
+   "texto": "Lo primero que tienes que pedir antes de reformar **(y casi nadie lo hace)**",
+   "voz": "Esto es lo primero que tienes que pedir antes de reformar. Y casi nadie lo hace."
+  },
+  {
+   "tipo": "punto",
+   "texto": "El **certificado de eficiencia energética** de tu vivienda",
+   "voz": "El certificado de eficiencia energética de tu vivienda.",
+   "emoji": "📄"
+  },
+  {
+   "tipo": "punto",
+   "texto": "Sin el de **antes**, no puedes demostrar que la obra mejora",
+   "voz": "Sin el certificado de antes, no puedes demostrar que la obra mejora la eficiencia.",
+   "emoji": "⚠️"
+  },
+  {
+   "tipo": "punto",
+   "texto": "Y sin eso, **adiós a la deducción** del IRPF",
+   "voz": "Y sin eso, adiós a la deducción del IRPF.",
+   "emoji": "💸"
+  },
+  {
+   "tipo": "cta",
+   "texto": "Comenta **AYUDA** y te digo las de tu zona",
+   "voz": "Comenta ayuda, y te digo las de tu zona.",
+   "palabra": "AYUDA"
+  }
+ ],
+ "texto": "Lo primero que tienes que pedir antes de reformar (y casi nadie lo hace) 📄\n\n• El certificado de eficiencia energética de tu vivienda\n• Sin el de antes, no puedes demostrar que la obra mejora\n• Y sin eso, adiós a la deducción del IRPF\n\nCada ayuda tiene sus bases: revisa siempre la convocatoria oficial.\n\n💬 Comenta AYUDA y te digo las de tu zona.\n🔎 Busca las ayudas de tu zona en obrayuda.es (enlace en el perfil)\n\n#deduccionirpf #rentaweb #ayudasvivienda #eficienciaenergetica #reformas"
+}

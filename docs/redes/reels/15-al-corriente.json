@@ -1,0 +1,36 @@
+{
+ "voz": "es-ES-ElviraNeural",
+ "escenas": [
+  {
+   "tipo": "gancho",
+   "emoji": "🚫",
+   "texto": "Si debes algo a Hacienda, **no te dan la subvención**",
+   "voz": "Si debes algo a Hacienda o a la Seguridad Social, no te dan la subvención."
+  },
+  {
+   "tipo": "punto",
+   "texto": "Estar **al corriente de pago** es requisito en casi todas",
+   "voz": "Estar al corriente de pago es requisito en casi todas las subvenciones.",
+   "emoji": "📋"
+  },
+  {
+   "tipo": "punto",
+   "texto": "Puedes pedir el **certificado** en la sede de Hacienda",
+   "voz": "Puedes pedir el certificado en la sede electrónica de Hacienda.",
+   "emoji": "💻"
+  },
+  {
+   "tipo": "punto",
+   "texto": "Si tienes algo pendiente, **arréglalo antes** de pedirla",
+   "voz": "Si tienes algo pendiente, arréglalo antes de pedir la ayuda.",
+   "emoji": "✅"
+  },
+  {
+   "tipo": "cta",
+   "texto": "Comenta **AYUDA** y te digo las de tu zona",
+   "voz": "Comenta ayuda, y te digo las de tu zona.",
+   "palabra": "AYUDA"
+  }
+ ],
+ "texto": "Si debes algo a Hacienda, no te dan la subvención 🚫\n\n• Estar al corriente de pago es requisito en casi todas\n• Puedes pedir el certificado en la sede de Hacienda\n• Si tienes algo pendiente, arréglalo antes de pedirla\n\nCada ayuda tiene sus bases: revisa siempre la convocatoria oficial.\n\n💬 Comenta AYUDA y te digo las de tu zona.\n🔎 Busca las ayudas de tu zona en obrayuda.es (enlace en el perfil)\n\n#ayudasvivienda #subvenciones #reformas #reformacasa #consejos"
+}

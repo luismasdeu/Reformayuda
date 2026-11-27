@@ -1,0 +1,36 @@
+{
+ "voz": "es-ES-ElviraNeural",
+ "escenas": [
+  {
+   "tipo": "gancho",
+   "emoji": "🏗️",
+   "texto": "¿Vas a **construir tu casa**? Hay ayudas que casi nadie conoce",
+   "voz": "¿Vas a construir tu casa? Hay ayudas que casi nadie conoce."
+  },
+  {
+   "tipo": "punto",
+   "texto": "Algunos ayuntamientos pagan parte del **proyecto** de autoconstrucción",
+   "voz": "Algunos ayuntamientos pagan parte del proyecto, si construyes tu primera vivienda.",
+   "emoji": "📐"
+  },
+  {
+   "tipo": "punto",
+   "texto": "Otros **bonifican el ICIO**, el impuesto de la licencia",
+   "voz": "Otros bonifican el ICIO, el impuesto de la licencia de obra.",
+   "emoji": "🏛️"
+  },
+  {
+   "tipo": "punto",
+   "texto": "Suelen pedir que sea tu **primera vivienda**",
+   "voz": "Suelen pedir que sea tu primera vivienda y que vivas en ella.",
+   "emoji": "🏠"
+  },
+  {
+   "tipo": "cta",
+   "texto": "Comenta **CONSTRUIR** y te digo las de tu zona",
+   "voz": "Comenta construir, y te digo las de tu zona.",
+   "palabra": "CONSTRUIR"
+  }
+ ],
+ "texto": "¿Vas a construir tu casa? Hay ayudas que casi nadie conoce 🏗️\n\n• Algunos ayuntamientos pagan parte del proyecto de autoconstrucción\n• Otros bonifican el ICIO, el impuesto de la licencia\n• Suelen pedir que sea tu primera vivienda\n\nCada ayuda tiene sus bases: revisa siempre la convocatoria oficial.\n\n💬 Comenta CONSTRUIR y te digo las de tu zona.\n🔎 Busca las ayudas de tu zona en obrayuda.es (enlace en el perfil)\n\n#autoconstruccion #construirunacasa #primeravivienda #ayudasvivienda #subvenciones"
+}

@@ -1,0 +1,36 @@
+{
+ "voz": "es-ES-ElviraNeural",
+ "escenas": [
+  {
+   "tipo": "gancho",
+   "emoji": "🔔",
+   "texto": "Las ayudas abren y cierran en semanas. **Así te enteras el primer día**",
+   "voz": "Las ayudas abren y cierran en pocas semanas. Así te enteras el primer día."
+  },
+  {
+   "tipo": "punto",
+   "texto": "Únete al canal de **Telegram** de Obrayuda",
+   "voz": "Únete al canal de Telegram de Obrayuda.",
+   "emoji": "📲"
+  },
+  {
+   "tipo": "punto",
+   "texto": "Cada mañana publicamos las **ayudas nuevas** del boletín",
+   "voz": "Cada mañana publicamos las ayudas nuevas que salen en el boletín.",
+   "emoji": "📰"
+  },
+  {
+   "tipo": "punto",
+   "texto": "Gratis y **sin escribirte con nadie**",
+   "voz": "Es gratis, y no tienes que hablar con nadie.",
+   "emoji": "✅"
+  },
+  {
+   "tipo": "cta",
+   "texto": "Enlace en el perfil: **t.me/obrayuda**",
+   "voz": "El enlace está en nuestro perfil. Te esperamos.",
+   "palabra": "TELEGRAM"
+  }
+ ],
+ "texto": "Las ayudas abren y cierran en semanas. Así te enteras el primer día 🔔\n\n• Únete al canal de Telegram de Obrayuda\n• Cada mañana publicamos las ayudas nuevas del boletín\n• Gratis y sin escribirte con nadie\n\nCada ayuda tiene sus bases: revisa siempre la convocatoria oficial.\n\n💬 Enlace en el perfil: t.me/obrayuda.\n🔎 Busca las ayudas de tu zona en obrayuda.es (enlace en el perfil)\n\n#ayudasvivienda #subvenciones #telegram #reformas #avisos"
+}

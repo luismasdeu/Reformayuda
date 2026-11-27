@@ -1,0 +1,36 @@
+{
+ "voz": "es-ES-ElviraNeural",
+ "escenas": [
+  {
+   "tipo": "gancho",
+   "emoji": "📋",
+   "texto": "Este presupuesto **te puede hacer perder la ayuda**",
+   "voz": "Un presupuesto así te puede hacer perder la ayuda."
+  },
+  {
+   "tipo": "punto",
+   "texto": "Muchas convocatorias piden el presupuesto **desglosado**",
+   "voz": "Muchas convocatorias piden el presupuesto desglosado, partida por partida.",
+   "emoji": "📋"
+  },
+  {
+   "tipo": "punto",
+   "texto": "Un «todo incluido» **no sirve** para saber qué se subvenciona",
+   "voz": "Un todo incluido no sirve para saber qué parte se subvenciona.",
+   "emoji": "❌"
+  },
+  {
+   "tipo": "punto",
+   "texto": "Pide al profesional que **separe** materiales y mano de obra",
+   "voz": "Pide al profesional que separe materiales, mano de obra e impuestos.",
+   "emoji": "✅"
+  },
+  {
+   "tipo": "cta",
+   "texto": "Comenta **AYUDA** y te digo las de tu zona",
+   "voz": "Comenta ayuda, y te digo las de tu zona.",
+   "palabra": "AYUDA"
+  }
+ ],
+ "texto": "Este presupuesto te puede hacer perder la ayuda 📋\n\n• Muchas convocatorias piden el presupuesto desglosado\n• Un «todo incluido» no sirve para saber qué se subvenciona\n• Pide al profesional que separe materiales y mano de obra\n\nCada ayuda tiene sus bases: revisa siempre la convocatoria oficial.\n\n💬 Comenta AYUDA y te digo las de tu zona.\n🔎 Busca las ayudas de tu zona en obrayuda.es (enlace en el perfil)\n\n#ayudasvivienda #subvenciones #reformas #reformacasa #consejos"
+}

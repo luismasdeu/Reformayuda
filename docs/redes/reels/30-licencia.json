@@ -1,0 +1,36 @@
+{
+ "voz": "es-ES-ElviraNeural",
+ "escenas": [
+  {
+   "tipo": "gancho",
+   "emoji": "📑",
+   "texto": "Sin **licencia de obra**, te pueden negar la ayuda",
+   "voz": "Sin licencia de obra, te pueden negar la ayuda."
+  },
+  {
+   "tipo": "punto",
+   "texto": "Muchas ayudas piden la **licencia o comunicación** de obra",
+   "voz": "Muchas ayudas piden la licencia o la comunicación previa de obra.",
+   "emoji": "📑"
+  },
+  {
+   "tipo": "punto",
+   "texto": "Pídela **antes de empezar**",
+   "voz": "Pídela antes de empezar.",
+   "emoji": "⏳"
+  },
+  {
+   "tipo": "punto",
+   "texto": "Y aprovecha para preguntar por la **rebaja del ICIO**",
+   "voz": "Y aprovecha para preguntar si hay rebaja del ICIO.",
+   "emoji": "💶"
+  },
+  {
+   "tipo": "cta",
+   "texto": "Comenta **AYUDA** y te digo las de tu zona",
+   "voz": "Comenta ayuda, y te digo las de tu zona.",
+   "palabra": "AYUDA"
+  }
+ ],
+ "texto": "Sin licencia de obra, te pueden negar la ayuda 📑\n\n• Muchas ayudas piden la licencia o comunicación de obra\n• Pídela antes de empezar\n• Y aprovecha para preguntar por la rebaja del ICIO\n\nCada ayuda tiene sus bases: revisa siempre la convocatoria oficial.\n\n💬 Comenta AYUDA y te digo las de tu zona.\n🔎 Busca las ayudas de tu zona en obrayuda.es (enlace en el perfil)\n\n#licenciadeobra #reformas #ayudasvivienda #subvenciones #consejos"
+}

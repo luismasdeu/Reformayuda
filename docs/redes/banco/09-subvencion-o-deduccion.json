@@ -1,0 +1,34 @@
+{
+ "slides": [
+  {
+   "tipo": "portada",
+   "ceja": "No es lo mismo",
+   "titulo": "¿**Subvención** o **deducción**?",
+   "sub": "Te lo explicamos en 3 imágenes."
+  },
+  {
+   "tipo": "texto",
+   "ceja": "Subvención",
+   "titulo": "Te **dan dinero**",
+   "texto": "La convoca un organismo (Estado, comunidad, ayuntamiento). La pides en un plazo, te la conceden y, tras justificar la obra, te pagan."
+  },
+  {
+   "tipo": "texto",
+   "ceja": "Deducción",
+   "titulo": "**Pagas menos** en la renta",
+   "texto": "No hay que pedirla en un plazo: se aplica al hacer la declaración, si cumples los requisitos. Por ejemplo, la deducción por obras de eficiencia energética."
+  },
+  {
+   "tipo": "texto",
+   "ceja": "¿Se pueden juntar?",
+   "titulo": "A veces **sí**",
+   "texto": "Depende de cada ayuda. En la renta, la parte de la obra que te han subvencionado no se puede deducir."
+  },
+  {
+   "tipo": "cta",
+   "titulo": "Comenta **AYUDA**\ny te digo las de tu zona",
+   "sub": "Guárdalo para cuando vayas a hacer obra."
+  }
+ ],
+ "texto": "¿Subvención o deducción? 👇\n\nTe dan dinero: La convoca un organismo (Estado, comunidad, ayuntamiento). La pides en un plazo, te la conceden y, tras justificar la obra, te pagan.\n\nPagas menos en la renta: No hay que pedirla en un plazo: se aplica al hacer la declaración, si cumples los requisitos. Por ejemplo, la deducción por obras de eficiencia energética.\n\nA veces sí: Depende de cada ayuda. En la renta, la parte de la obra que te han subvencionado no se puede deducir.\n\nCada ayuda tiene sus bases: revisa siempre la convocatoria oficial.\n\n💬 Comenta AYUDA y te digo las de tu zona.\n🔎 obrayuda.es (enlace en el perfil)\n\n#ayudasvivienda #subvenciones #reformas #reformacasa #consejos"
+}

@@ -1,0 +1,36 @@
+{
+ "voz": "es-ES-ElviraNeural",
+ "escenas": [
+  {
+   "tipo": "gancho",
+   "emoji": "🏡",
+   "texto": "¿Tienes una **casa en el pueblo** sin arreglar?",
+   "voz": "¿Tienes una casa en el pueblo sin arreglar? Esto te interesa."
+  },
+  {
+   "tipo": "punto",
+   "texto": "Algunas comunidades tienen ayudas para **rehabilitar en zonas rurales**",
+   "voz": "Algunas comunidades tienen ayudas para rehabilitar viviendas en zonas rurales.",
+   "emoji": "🌾"
+  },
+  {
+   "tipo": "punto",
+   "texto": "Suelen pedir que sea **vivienda habitual** o que se ponga en alquiler",
+   "voz": "Suelen pedir que sea vivienda habitual o que se ponga en alquiler.",
+   "emoji": "🔑"
+  },
+  {
+   "tipo": "punto",
+   "texto": "Mira también las del **ayuntamiento**",
+   "voz": "Y mira también las del ayuntamiento del pueblo.",
+   "emoji": "🏛️"
+  },
+  {
+   "tipo": "cta",
+   "texto": "Comenta **PUEBLO** y te digo las de tu zona",
+   "voz": "Comenta pueblo, y te digo las de tu zona.",
+   "palabra": "PUEBLO"
+  }
+ ],
+ "texto": "¿Tienes una casa en el pueblo sin arreglar? 🏡\n\n• Algunas comunidades tienen ayudas para rehabilitar en zonas rurales\n• Suelen pedir que sea vivienda habitual o que se ponga en alquiler\n• Mira también las del ayuntamiento\n\nCada ayuda tiene sus bases: revisa siempre la convocatoria oficial.\n\n💬 Comenta PUEBLO y te digo las de tu zona.\n🔎 Busca las ayudas de tu zona en obrayuda.es (enlace en el perfil)\n\n#casadepueblo #rehabilitacion #mundorural #ayudasvivienda #subvenciones"
+}

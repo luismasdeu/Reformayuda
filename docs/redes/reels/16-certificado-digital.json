@@ -1,0 +1,36 @@
+{
+ "voz": "es-ES-ElviraNeural",
+ "escenas": [
+  {
+   "tipo": "gancho",
+   "emoji": "🔐",
+   "texto": "Sin **certificado digital**, pedir una ayuda es mucho más difícil",
+   "voz": "Sin certificado digital, pedir una ayuda es mucho más difícil."
+  },
+  {
+   "tipo": "punto",
+   "texto": "Casi todas se presentan en la **sede electrónica**",
+   "voz": "Casi todas se presentan en la sede electrónica del organismo.",
+   "emoji": "💻"
+  },
+  {
+   "tipo": "punto",
+   "texto": "Puedes usar **certificado digital** o **Cl@ve**",
+   "voz": "Puedes usar certificado digital, o Clave.",
+   "emoji": "🔑"
+  },
+  {
+   "tipo": "punto",
+   "texto": "Si no tienes, pide **cita presencial**: muchas lo permiten",
+   "voz": "Si no tienes, pide cita presencial. Muchas lo permiten.",
+   "emoji": "🏢"
+  },
+  {
+   "tipo": "cta",
+   "texto": "Comenta **AYUDA** y te digo las de tu zona",
+   "voz": "Comenta ayuda, y te digo las de tu zona.",
+   "palabra": "AYUDA"
+  }
+ ],
+ "texto": "Sin certificado digital, pedir una ayuda es mucho más difícil 🔐\n\n• Casi todas se presentan en la sede electrónica\n• Puedes usar certificado digital o Cl@ve\n• Si no tienes, pide cita presencial: muchas lo permiten\n\nCada ayuda tiene sus bases: revisa siempre la convocatoria oficial.\n\n💬 Comenta AYUDA y te digo las de tu zona.\n🔎 Busca las ayudas de tu zona en obrayuda.es (enlace en el perfil)\n\n#ayudasvivienda #subvenciones #reformas #reformacasa #consejos"
+}
