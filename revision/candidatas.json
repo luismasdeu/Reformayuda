@@ -1,6 +1,6 @@
 {
  "_leeme": "Ayudas detectadas automáticamente en los boletines. Revísalas: pon \"estado\": \"aprobada\" o \"descartada\". Mira README.md.",
- "ultima_busqueda": "2026-11-26T15:20",
+ "ultima_busqueda": "2026-11-27T13:27",
  "candidatas": [
   {
    "id": "bdns-938584",
@@ -287,7 +287,7 @@
   },
   {
    "id": "bdns-941340",
-   "estado": "espera",
+   "estado": "pendiente",
    "title": "Rehabilitación de inmuebles en el casco urbano de Agullent",
    "org": "AGULLENT · AYUNTAMIENTO DE AGULLENT",
    "scope": "municipal",
@@ -296,32 +296,35 @@
     "rehabilitacion"
    ],
    "dest": [
-    "vivienda"
+    "vivienda",
+    "edificio"
    ],
-   "importe": 0,
-   "imp": "Consulta la convocatoria",
-   "abre": "2026-11-11",
-   "cierra": null,
-   "plazo": "Según la ficha de la BDNS, el plazo es de 20 días naturales. Empieza el día siguiente a la publicación de la convocatoria en el BOP de Valencia. Todavía no he visto esa publicación ni su fecha.",
+   "importe": 8000,
+   "imp": "Hasta el 50 % de la obra (sin IVA) y un máximo de 8.000 € por vivienda, honorarios técnicos incluidos. Si es vivienda unifamiliar y vives en ella, el máximo sube un 25 %.",
+   "abre": "2026-11-21",
+   "cierra": "2026-12-10",
+   "plazo": "20 días naturales desde el día siguiente a la publicación de la convocatoria en el BOP de Valencia. El anuncio se publicó el 20-11-2026, así que el plazo iría del 21-11-2026 al 10-12-2026 (fechas calculadas, hay que confirmarlas).",
    "irpf": false,
    "fuente": "BDNS nº 941340",
    "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/941340",
-   "resumen": "El Ayuntamiento de Agullent da ayudas económicas para hacer obras de rehabilitación en inmuebles del casco urbano. La convocatoria de 2026 tiene un presupuesto total de 90.000 €. Se concede por concurrencia competitiva. No he podido leer las bases, así que faltan los detalles.",
+   "resumen": "El Ayuntamiento de Agullent paga parte de las obras de rehabilitación de inmuebles del Centro Histórico y de los del casco urbano con más de 50 años. Pueden pedirla propietarios y comunidades de propietarios. La subvención cubre como máximo el 50 % del presupuesto de la obra, sin IVA.",
    "req": [
-    "Ser persona física sin actividad económica.",
-    "El inmueble debe estar en el casco urbano de Agullent.",
-    "Hacer obras de rehabilitación del inmueble.",
-    "El resto de requisitos están en las bases y no se han podido leer."
+    "Ser propietario del inmueble o comunidad de propietarios.",
+    "El inmueble debe estar en el Área de Rehabilitación del Centro Histórico de Agullent o en el casco urbano y tener más de 50 años.",
+    "La subvención es como máximo el 50 % del presupuesto de la obra, sin IVA.",
+    "Para el aumento del 25 % debes vivir en la vivienda unifamiliar como residencia habitual."
    ],
    "docs": [
-    "Formulario de solicitud de ayudas del Ayuntamiento.",
-    "El resto de documentos están en las bases y no se han podido leer."
+    "Formulario de solicitud del Ayuntamiento.",
+    "Documentos que acrediten que eres propietario (los detalles están en las bases).",
+    "Presupuesto de las obras."
    ],
    "pasos": [
-    "Espera a que se publique la convocatoria en el BOP de Valencia.",
-    "Descarga las bases y el formulario de solicitud en la sede electrónica del Ayuntamiento.",
-    "Presenta la solicitud en el plazo de 20 días naturales.",
-    "Justifica la obra cuando las bases lo pidan."
+    "Comprueba que tu inmueble está en la zona y tiene más de 50 años.",
+    "Descarga el formulario de solicitud en la sede electrónica del Ayuntamiento.",
+    "Presenta la solicitud con la documentación en 20 días naturales desde la publicación en el BOP.",
+    "Espera la resolución del Ayuntamiento.",
+    "Haz la obra y justifícala para cobrar la ayuda."
    ],
    "_revisar": {
     "presupuesto_total": 90000,
@@ -332,22 +335,16 @@
     "bases_no_corresponden": true,
     "referencia_bases": "Bases y convocatoria 2026 (Expte. 120/2026, Decreto 2026-0873) en la sede electrónica https://agullent.sedelectronica.es y en la BDNS (código 941340). Falta el anuncio en el BOP de Valencia.",
     "ia": {
-     "fecha": "2026-11-20",
-     "documento": "el enlace de bases de la BDNS es genérico (ley, ordenanza general o portada) (extracto; bases en Bases y convocatoria 2026 (Expte. 120/2026, Decreto 2026-0873) en la sede electrónica https://agullent.sedelectronica.es y en la BDNS (código 941340). Falta el anuncio en el BOP de Valencia.)",
+     "fecha": "2026-11-27",
+     "documento": "el enlace de bases de la BDNS es genérico (ley, ordenanza general o portada)",
      "recomendacion": "publicar",
-     "motivo": "Son ayudas del Ayuntamiento de Agullent para obras de rehabilitación de inmuebles del casco urbano, y los beneficiarios son personas físicas."
+     "motivo": "Subvenciona obras de rehabilitación de inmuebles del casco urbano de Agullent, para propietarios y comunidades de propietarios."
     },
     "confirmar": [
-     "No se han podido leer las bases ni el decreto 2026-0873. Faltan el importe por vivienda, el porcentaje, los requisitos, los documentos y cómo se solicita.",
-     "Comprueba la fecha de publicación en el BOP de Valencia para saber cuándo abre y cierra el plazo.",
-     "Comprueba qué inmuebles y qué obras entran (por ejemplo, si solo viviendas o también locales) y si hay requisitos de antigüedad o zona.",
-     "Las únicas fuentes que he podido leer son prensa y webs no oficiales, y no las he usado para ningún dato."
-    ],
-    "espera": {
-     "desde": "2026-11-12",
-     "intentos": 3,
-     "proxima": "2026-11-27"
-    }
+     "No he podido leer las bases completas: faltan documentación exacta, requisitos detallados y plazo de ejecución de las obras.",
+     "Confirma las fechas del plazo según la publicación en el BOP (20-11-2026).",
+     "Comprueba si la ayuda se aplica a obras ya iniciadas o hechas, y qué obras son subvencionables."
+    ]
    },
    "prov": "Valencia",
    "muni": "Agullent",
@@ -685,6 +682,119 @@
    "prov": "Las Palmas",
    "muni": "Valsequillo De Gran Canaria",
    "sede": "https://valsequillodegrancanaria.sedelectronica.es"
+  },
+  {
+   "id": "bdns-945088",
+   "estado": "espera",
+   "title": "Fachadas, cubiertas y accesibilidad en edificios de Iurreta",
+   "org": "IURRETA · AYUNTAMIENTO DE IURRETA",
+   "scope": "municipal",
+   "ccaa": "País Vasco",
+   "tipo": [
+    "accesibilidad",
+    "rehabilitacion"
+   ],
+   "dest": [
+    "edificio"
+   ],
+   "importe": 0,
+   "imp": "No consta en las fuentes oficiales leídas (presupuesto total de la convocatoria: 25.000 €)",
+   "abre": "2026-11-26",
+   "cierra": null,
+   "plazo": "Según la BDNS, empieza el día siguiente a la publicación en el BOB y dura 15 días hábiles desde el día siguiente a esa publicación. No he visto la publicación en el BOB ni su fecha.",
+   "irpf": false,
+   "fuente": "BDNS nº 945088",
+   "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/945088",
+   "resumen": "El Ayuntamiento de Iurreta convoca ayudas para rehabilitar fachadas y cubiertas y para quitar barreras arquitectónicas en edificios de viviendas del municipio. El presupuesto total es de 25.000 €. No he podido leer las bases oficiales, así que faltan los importes por edificio y los requisitos.",
+   "req": [
+    "Consulta los requisitos en la convocatoria oficial"
+   ],
+   "docs": [
+    "Consulta la documentación en la convocatoria oficial"
+   ],
+   "pasos": [
+    "Lee la convocatoria oficial",
+    "Prepara la documentación",
+    "Presenta la solicitud en la sede del organismo"
+   ],
+   "_revisar": {
+    "presupuesto_total": 25000,
+    "bases_reguladoras": "https://www.iurreta.eus/es-ES/Ayuntamiento/Subvenciones/Paginas/Urbanismo.aspx",
+    "abierta_segun_bdns": false,
+    "beneficiarios": "PERSONAS FÍSICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
+    "nota": "Revisa importe por vivienda, requisitos, documentos y pasos antes de aprobar.",
+    "referencia_bases": "Decreto de Alcaldía 1045-26, de 9 de noviembre, y corrección de errores 1090-26, de 19 de noviembre. Se publica en el BOB (sin fecha ni número) y en https://www.iurreta.eus/es-ES/Ayuntamiento/Subvenciones/Paginas/Urbanismo.aspx",
+    "ia": {
+     "fecha": "2026-11-27",
+     "documento": "no se pudo descargar (<urlopen error timed out>) (extracto; bases en Decreto de Alcaldía 1045-26, de 9 de noviembre, y corrección de errores 1090-26, de 19 de noviembre. Se publica en el BOB (sin fecha ni número) y en https://www.iurreta.eus/es-ES/Ayuntamiento/Subvenciones/Paginas/Urbanismo.aspx)",
+     "recomendacion": "publicar",
+     "motivo": "Subvenciona obras de fachadas, cubiertas y supresión de barreras arquitectónicas en edificios de viviendas (uso residencial colectivo) de Iurreta."
+    },
+    "confirmar": [
+     "No se han podido leer las bases (Decreto 1045-26 y corrección de errores 1090-26): faltan el importe o porcentaje máximo por edificio, los requisitos y los documentos.",
+     "Comprobar la fecha de publicación en el BOB, de la que dependen la apertura y el cierre del plazo.",
+     "Comprobar la página concreta del trámite en la sede electrónica; solo consta la portada.",
+     "Solo encontré prensa sobre ediciones anteriores. No la he usado, porque no es fuente oficial."
+    ],
+    "espera": {
+     "desde": "2026-11-27",
+     "intentos": 1,
+     "proxima": "2026-11-30"
+    }
+   },
+   "prov": "Bizkaia",
+   "muni": "Iurreta",
+   "sede": "https://www.egoitza.iurreta.eus"
+  },
+  {
+   "id": "bdns-944969",
+   "estado": "descartada",
+   "title": "Plan de accesibilidad en la justicia. Garantía de los derechos de las personas con discapacidad",
+   "org": "CANTABRIA · CONSEJERÍA PRESIDENCIA, JUSTICIA, SEGURIDAD Y SIMPLIFICACIÓN ADMINISTRATIVA",
+   "scope": "autonomica",
+   "ccaa": "Cantabria",
+   "tipo": [
+    "accesibilidad"
+   ],
+   "dest": [
+    "vivienda"
+   ],
+   "importe": 0,
+   "imp": "Consulta la convocatoria",
+   "abre": "2026-11-26",
+   "cierra": "2026-11-27",
+   "plazo": "Consulta el plazo en la convocatoria",
+   "irpf": false,
+   "fuente": "BDNS nº 944969",
+   "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/944969",
+   "resumen": "Plan de accesibilidad en la justicia. Garantía de los derechos de las personas con discapacidad",
+   "req": [
+    "Consulta los requisitos en la convocatoria oficial"
+   ],
+   "docs": [
+    "Consulta la documentación en la convocatoria oficial"
+   ],
+   "pasos": [
+    "Lee la convocatoria oficial",
+    "Prepara la documentación",
+    "Presenta la solicitud en la sede del organismo"
+   ],
+   "_revisar": {
+    "presupuesto_total": 30000,
+    "bases_reguladoras": "https://www.boe.es/boe/dias/2026/05/08/pdfs/BOE-A-2026-9962.pdf",
+    "abierta_segun_bdns": false,
+    "beneficiarios": "PERSONAS JURÍDICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
+    "nota": "Revisa importe por vivienda, requisitos, documentos y pasos antes de aprobar.",
+    "ia": {
+     "fecha": "2026-11-27",
+     "documento": "19 de 50 páginas",
+     "recomendacion": "descartar",
+     "motivo": "Es una subvención de concesión directa a una entidad (plan de accesibilidad en la justicia para personas con discapacidad), no ayuda a particulares para obras en su vivienda."
+    },
+    "confirmar": [
+     "El documento adjunto es la Ley de Presupuestos de Cantabria 2026 y no contiene las bases de esta ayuda."
+    ]
+   }
   }
  ],
  "boe": [
@@ -694,6 +804,13 @@
    "titulo": "Resolución de 18 de noviembre de 2026, del Congreso de los Diputados, por la que se ordena la publicación del Acuerdo de convalidación del Real Decreto-ley 32/2026, de 3 de noviembre, de ayudas a las víctimas del accidente ferroviario de Urda (Toledo) y por el que se garantiza la accesibilidad equitativa a bienes y servicios en situaciones de emergencia.",
    "url": "https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-24293",
    "pdf": "https://www.boe.es/boe/dias/2026/11/20/pdfs/BOE-A-2026-24293.pdf"
+  },
+  {
+   "id": "BOE-B-2026-39179",
+   "fecha": "2026-11-27",
+   "titulo": "Extracto de la Resolución de 25 de noviembre de 2026, de la Secretaría de Estado de Vivienda y Agenda Urbana, por la que se convocan las ayudas para las actividades que tengan por objeto la difusión, el fomento y la investigación de la arquitectura correspondientes al año 2026.",
+   "url": "https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-39179",
+   "pdf": "https://www.boe.es/boe/dias/2026/11/27/pdfs/BOE-B-2026-39179.pdf"
   }
  ]
 }

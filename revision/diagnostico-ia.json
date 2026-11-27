@@ -1,23 +1,29 @@
 {
- "fecha": "2026-11-26T15:20",
+ "fecha": "2026-11-27T13:27",
  "modelo": "claude-sonnet-5-5",
  "procesadas": [
   {
-   "id": "bdns-944854",
-   "documento": "página web",
-   "coste_usd": 0.0235,
+   "id": "bdns-945088",
+   "documento": "no se pudo descargar (<urlopen error timed out>) (extracto; bases en Decreto de Alcaldía 1045-26, de 9 de noviembre, y corrección de errores 1090-26, de 19 de noviembre. Se publica en el BOB (sin fecha ni número) y en https://www.iurreta.eus/es-ES/Ayuntamiento/Subvenciones/Paginas/Urbanismo.aspx)",
+   "coste_usd": 0.3456,
+   "recomendacion": "publicar"
+  },
+  {
+   "id": "bdns-944969",
+   "documento": "19 de 50 páginas",
+   "coste_usd": 0.0708,
    "recomendacion": "descartar"
   },
   {
-   "id": "bdns-944688",
-   "documento": "no se pudo descargar (<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1011)>)",
-   "coste_usd": 0.1859,
+   "id": "bdns-941340",
+   "documento": "el enlace de bases de la BDNS es genérico (ley, ordenanza general o portada)",
+   "coste_usd": 0.0363,
    "recomendacion": "publicar"
   }
  ],
  "errores": [],
- "coste_usd": 0.209,
+ "coste_usd": 0.453,
  "pendientes_por_tope": 0,
- "gasto_mes_usd": 16.868,
+ "gasto_mes_usd": 17.599,
  "limite_mes_usd": 20.0
 }
