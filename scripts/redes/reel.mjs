@@ -334,7 +334,8 @@ for (const [i, s] of guion.escenas.entries()) {
   const fondo = video && !esFoto ? ["-stream_loop", "-1", "-i", video] : ["-loop", "1", "-i", video || fondoMarca];
   const fr = Math.round(d * FPS);
   const base = esFoto
-    ? `scale=1296:2304:force_original_aspect_ratio=increase,crop=1296:2304,zoompan=z='1+0.10*on/${fr}':x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)':d=1:s=1080x1920:fps=${FPS},setsar=1`
+    // Se amplía 4 veces antes del zoom: así los saltos de 1 píxel del zoompan no se notan (sin «temblor»)
+    ? `scale=4320:7680:force_original_aspect_ratio=increase:flags=lanczos,crop=4320:7680,zoompan=z='1+0.06*on/${fr}':x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)':d=1:s=1080x1920:fps=${FPS},setsar=1`
     : `scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1920,setsar=1,fps=${FPS}`;
   const oscuro = s.tipo === "cta" ? "-0.22" : (s.tipo === "pregunta" || s.tipo === "golpe") ? "-0.2" : "-0.12";
   const sonido = audio ? ["-i", audio] : ["-f", "lavfi", "-t", String(d), "-i", "anullsrc=r=44100:cl=stereo"];
