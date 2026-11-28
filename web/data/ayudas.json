@@ -1,6 +1,6 @@
 {
  "_leeme": "Ayudas publicadas en la app. Edita con cuidado: el formato se comprueba antes de publicar (scripts/validar.py).",
- "actualizado": "2026-11-27",
+ "actualizado": "2026-11-28",
  "ayudas": [
   {
    "id": "pev-rehab",
@@ -1013,6 +1013,60 @@
    "muni": "Agullent",
    "sede": "https://agullent.sedelectronica.es",
    "revisada": "2026-11-27"
+  },
+  {
+   "id": "bdns-939227",
+   "title": "Fachadas de piedra natural en Vilalba dels Arcs",
+   "org": "VILALBA DELS ARCS · AYUNTAMIENTO DE VILALBA DELS ARCS",
+   "scope": "municipal",
+   "ccaa": "Cataluña",
+   "tipo": [
+    "rehabilitacion"
+   ],
+   "dest": [
+    "vivienda"
+   ],
+   "importe": 5000,
+   "imp": "El 40 % del presupuesto de ejecución material, con un máximo de 5.000 € por inmueble",
+   "abre": "2026-11-06",
+   "cierra": "2026-12-30",
+   "plazo": "Hasta el 30/12/2026",
+   "irpf": false,
+   "fuente": "BOPT 05/11/2026 (CVE 2026-10247) · Bases: BOPT 26/01/2026 (CVE 2026-00544) · BDNS nº 939227",
+   "url": "https://www.dipta.cat/bopt/web/anunci/366034/x",
+   "resumen": "El Ayuntamiento de Vilalba dels Arcs subvenciona recuperar, rehabilitar o revestir con piedra natural las fachadas de los inmuebles del casco urbano que se ven desde la calle, y recuperar elementos tradicionales (dinteles, marcos, cornisas, rejas, portaladas). Se concede por orden de llegada de las solicitudes completas, hasta agotar el presupuesto de 10.000 €.",
+   "req": [
+    "Ser propietario de un inmueble en el casco urbano de Vilalba dels Arcs, o presidente de la comunidad de propietarios.",
+    "La fachada tiene que verse desde la vía pública.",
+    "Obras: rehabilitar o reparar fachadas de piedra natural, quitar revestimientos impropios y revestir con piedra natural, o recuperar elementos tradicionales.",
+    "No se pagan los revestimientos que imitan la piedra sin serlo.",
+    "Las obras deben cumplir el POUM y el informe técnico municipal previo.",
+    "Tener la licencia de obras o la comunicación previa antes de empezar.",
+    "No estar en ninguna de las prohibiciones del artículo 13 de la Ley General de Subvenciones."
+   ],
+   "docs": [
+    "Solicitud en el modelo oficial de la sede electrónica municipal.",
+    "Documento que acredite que eres el propietario.",
+    "NIF de la persona solicitante.",
+    "Descripción de la obra y presupuesto detallado.",
+    "Fotografías del estado actual de la fachada.",
+    "Plano o croquis de la superficie de la obra.",
+    "Justificante de haber pedido la licencia o comunicación de obras.",
+    "Proyecto o memoria técnica, si hace falta.",
+    "Declaración de otras ayudas pedidas o recibidas para la misma obra."
+   ],
+   "pasos": [
+    "Pide la licencia o haz la comunicación previa de obras en el Ayuntamiento.",
+    "Presenta la solicitud con la documentación en la sede electrónica del Ayuntamiento antes del 30 de diciembre de 2026.",
+    "La arquitecta municipal revisa la obra; el Ayuntamiento resuelve en un máximo de 3 meses.",
+    "Haz la obra según el informe técnico municipal.",
+    "En los 3 meses siguientes al final de la obra, justifica con facturas, certificado final de obra, fotos y certificado bancario.",
+    "El Ayuntamiento paga por transferencia tras comprobar la obra (no hay anticipos)."
+   ],
+   "prov": "Tarragona",
+   "muni": "Vilalba Dels Arcs",
+   "sede": "https://vilalbadelsarcs.eadministracio.cat/info.0",
+   "revisada": "2026-11-28"
   }
  ]
 }
