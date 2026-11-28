@@ -1,0 +1,45 @@
+{
+ "escenas": [
+  {
+   "tipo": "pregunta",
+   "texto": "¿Pensabas pedir una **subvención** para tu reforma… y ya has empezado la obra?",
+   "voz": "¿Pensabas pedir una subvención para tu reforma, y ya has empezado la obra?"
+  },
+  {
+   "tipo": "golpe",
+   "texto": "Puede que ya hayas **perdido la ayuda**",
+   "voz": "Puede que ya hayas perdido la ayuda."
+  },
+  {
+   "tipo": "punto",
+   "n": 1,
+   "texto": "En muchas ayudas la obra **no puede haber empezado** cuando la pides",
+   "voz": "En muchas ayudas, la obra no puede haber empezado cuando presentas la solicitud."
+  },
+  {
+   "tipo": "punto",
+   "n": 2,
+   "texto": "Primero se **pide**, luego se **empieza**",
+   "voz": "Primero se pide la ayuda, y luego se empieza."
+  },
+  {
+   "tipo": "punto",
+   "n": 3,
+   "texto": "Míralo siempre en las **bases** antes de contratar",
+   "voz": "Míralo siempre en las bases, antes de contratar a nadie."
+  },
+  {
+   "tipo": "cta",
+   "texto": "Comenta **AYUDA** y te digo cuáles hay en tu zona",
+   "voz": "Comenta ayuda, y te digo cuáles hay en tu zona.",
+   "palabra": "AYUDA"
+  }
+ ],
+ "texto": "El error que más subvenciones hace perder: empezar la obra antes de pedirla 🚧\n\nEn muchas ayudas, la obra no puede haber empezado cuando presentas la solicitud. Primero se pide, luego se empieza.\n\nCada ayuda tiene sus bases, así que revísalas antes de contratar.\n\n💬 Comenta AYUDA y te digo cuáles hay en tu zona.\n🔎 obrayuda.es (enlace en el perfil)\n\n#subvenciones #reformas #reformacasa #ayudasvivienda #consejos",
+ "voz": "es-ES-XimenaNeural",
+ "formato": "reel",
+ "tipo": "guion",
+ "nombre": "03-ya-has-empezado-la-obra",
+ "ayuda": null,
+ "fecha": "2026-11-28"
+}
