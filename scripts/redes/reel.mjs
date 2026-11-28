@@ -353,18 +353,36 @@ const lista = path.join(tmp, "lista.txt");
 fs.writeFileSync(lista, partes.map((p) => `file '${path.resolve(p.mp4)}'`).join("\n"));
 const total = partes.reduce((a, p) => a + p.d, 0);
 
-// Efectos (hechos con ffmpeg): «whoosh» en cada cambio de escena y golpe grave al aparecer el golpe del gancho
-const whoosh = path.join(tmp, "whoosh.wav"), golpe = path.join(tmp, "golpe.wav");
-execFileSync("ffmpeg", ["-y", "-loglevel", "error", "-f", "lavfi", "-i", "anoisesrc=d=0.5:c=pink:a=0.6",
-  "-af", "highpass=f=500,lowpass=f=7000,afade=t=in:d=0.22,afade=t=out:st=0.22:d=0.28,volume=0.3", "-ar", "44100", "-ac", "2", whoosh]);
-execFileSync("ffmpeg", ["-y", "-loglevel", "error", "-f", "lavfi", "-i", "sine=f=55:d=0.7", "-f", "lavfi", "-i", "anoisesrc=d=0.08:c=brown:a=0.9",
-  "-filter_complex", "[0:a]afade=t=out:st=0.05:d=0.65,volume=1.6[a];[1:a]lowpass=f=900,volume=0.9[b];[a][b]amix=inputs=2:normalize=0", "-ar", "44100", "-ac", "2", golpe]);
+// Efectos (hechos con ffmpeg), variados: varios tipos de transición, un «riser» que sube antes del golpe
+// del gancho y un golpe grave al aparecer. No suenan en todos los cortes ni se repiten seguidos.
+const fx = (nombre, entradas, filtro) => {
+  const f = path.join(tmp, `${nombre}.wav`);
+  execFileSync("ffmpeg", ["-y", "-loglevel", "error", ...entradas, "-filter_complex", filtro, "-ar", "44100", "-ac", "2", f]);
+  return f;
+};
+const TRANSICIONES = [
+  fx("whoosh", ["-f", "lavfi", "-i", "anoisesrc=d=0.5:c=pink:a=0.6"], "highpass=f=500,lowpass=f=7000,afade=t=in:d=0.22,afade=t=out:st=0.22:d=0.28,volume=0.28"),
+  fx("swish", ["-f", "lavfi", "-i", "anoisesrc=d=0.3:c=white:a=0.5"], "bandpass=f=3500:w=2500,afade=t=in:d=0.08,afade=t=out:st=0.08:d=0.22,volume=0.22"),
+  fx("pop", ["-f", "lavfi", "-i", "sine=f=1250:d=0.12"], "afade=t=out:st=0.01:d=0.11,volume=0.35"),
+  fx("aire", ["-f", "lavfi", "-i", "anoisesrc=d=0.7:c=brown:a=0.8"], "lowpass=f=1800,afade=t=in:d=0.35,afade=t=out:st=0.35:d=0.35,volume=0.45"),
+  fx("tic", ["-f", "lavfi", "-i", "sine=f=2400:d=0.05", "-f", "lavfi", "-i", "sine=f=1800:d=0.05"], "[0:a][1:a]concat=n=2:v=0:a=1,afade=t=out:st=0.06:d=0.04,volume=0.25"),
+];
+const riser = fx("riser", ["-f", "lavfi", "-i", "anoisesrc=d=0.9:c=pink:a=0.5"], "highpass=f=1200,afade=t=in:d=0.85,afade=t=out:st=0.85:d=0.05,volume=0.35");
+const golpe = fx("golpe", ["-f", "lavfi", "-i", "sine=f=55:d=0.7", "-f", "lavfi", "-i", "anoisesrc=d=0.08:c=brown:a=0.9"],
+  "[0:a]afade=t=out:st=0.05:d=0.65,volume=1.4[a];[1:a]lowpass=f=900,volume=0.8[b];[a][b]amix=inputs=2:normalize=0");
 const inicios = []; let acum = 0;
 for (const [k, p] of partes.entries()) { inicios.push([k, acum]); acum += p.d; }
 const efectos = [];
+let anterior = -1, seguidos = 0;
 for (const [k, t0] of inicios) {
-  if (k > 0) efectos.push([whoosh, Math.max(t0 - 0.3, 0)]);  // termina antes de que empiece a hablar
-  if (guion.escenas[k].tipo === "golpe") efectos.push([golpe, t0]);
+  if (k === 0) continue;
+  const tipo = guion.escenas[k].tipo;
+  if (tipo === "golpe") { efectos.push([riser, Math.max(t0 - 0.85, 0)], [golpe, t0]); seguidos = 0; continue; }
+  // aproximadamente en la mitad de los cortes, nunca dos cortes seguidos sin nada ni el mismo efecto dos veces seguidas
+  if (seguidos === 0 && Math.random() < 0.5 && tipo !== "cta") { seguidos = 1; continue; }
+  let n; do { n = Math.floor(Math.random() * TRANSICIONES.length); } while (n === anterior);
+  anterior = n; seguidos = 0;
+  efectos.push([TRANSICIONES[n], Math.max(t0 - 0.3, 0)]);
 }
 // Música de fondo: una pista al azar de docs/redes/musica/ (libre de derechos), baja cuando habla la voz
 const carpetaMusica = path.join(RAIZ, "docs", "redes", "musica");
