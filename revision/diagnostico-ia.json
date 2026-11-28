@@ -1,10 +1,59 @@
 {
- "fecha": "2026-11-27T15:08",
+ "fecha": "2026-11-28T05:26",
  "modelo": "claude-sonnet-5-5",
- "procesadas": [],
+ "procesadas": [
+  {
+   "id": "bdns-940941",
+   "documento": "página web (no eran las bases de esta ayuda: buscada en internet)",
+   "coste_usd": 0.1392,
+   "recomendacion": "corregida"
+  },
+  {
+   "id": "bdns-942439",
+   "documento": "sin enlace a las bases",
+   "coste_usd": 0.1854,
+   "recomendacion": "corregida"
+  },
+  {
+   "id": "bdns-945392",
+   "documento": "página web",
+   "coste_usd": 0.0391,
+   "recomendacion": "descartar"
+  },
+  {
+   "id": "bdns-945337",
+   "documento": "no se pudo descargar (<urlopen error timed out>) (extracto; bases en Bases reguladoras en la web del Ayuntamiento de Iurreta (apartado Subvenciones, Urbanismo): https://www.iurreta.eus/es-ES/Ayuntamiento/Subvenciones/Paginas/Urbanismo.aspx. El extracto se publica en el BOB.)",
+   "coste_usd": 0.3408,
+   "recomendacion": "publicar"
+  },
+  {
+   "id": "bdns-945307",
+   "documento": "no se pudo descargar (<urlopen error timed out>) (descartada con la pregunta rápida)",
+   "coste_usd": 0.0066,
+   "recomendacion": "descartar"
+  },
+  {
+   "id": "bdns-945201",
+   "documento": "PDF de 46 páginas sin texto útil (descartada con la pregunta rápida)",
+   "coste_usd": 0.0059,
+   "recomendacion": "descartar"
+  },
+  {
+   "id": "bdns-939227",
+   "documento": "página web (extracto; bases en BOPT, 26/01/2026, registro 2026-00544 (aprobación definitiva de las bases))",
+   "coste_usd": 0.3135,
+   "recomendacion": "publicar"
+  },
+  {
+   "id": "bdns-943945",
+   "documento": "no se pudo descargar (HTTP Error 404: Not Found) (extracto; bases en Bases reguladoras: Ordenanza general de concesión de subvenciones; convocatoria con plazo a contar desde su publicación en el BOCM (fecha por confirmar).)",
+   "coste_usd": 0.3462,
+   "recomendacion": "publicar"
+  }
+ ],
  "errores": [],
- "coste_usd": 0.0,
+ "coste_usd": 1.377,
  "pendientes_por_tope": 0,
- "gasto_mes_usd": 17.599,
+ "gasto_mes_usd": 18.976,
  "limite_mes_usd": 20.0
 }

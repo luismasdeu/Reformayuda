@@ -1,6 +1,6 @@
 {
  "_leeme": "Ayudas detectadas automáticamente en los boletines. Revísalas: pon \"estado\": \"aprobada\" o \"descartada\". Mira README.md.",
- "ultima_busqueda": "2026-11-27T15:08",
+ "ultima_busqueda": "2026-11-28T05:26",
  "candidatas": [
   {
    "id": "bdns-938584",
@@ -67,8 +67,8 @@
   },
   {
    "id": "bdns-939227",
-   "estado": "espera",
-   "title": "Fachadas de piedra natural en el casco urbano de Vilalba dels Arcs",
+   "estado": "pendiente",
+   "title": "Fachadas de piedra natural en Vilalba dels Arcs",
    "org": "VILALBA DELS ARCS · AYUNTAMIENTO DE VILALBA DELS ARCS",
    "scope": "municipal",
    "ccaa": "Cataluña",
@@ -76,18 +76,17 @@
     "rehabilitacion"
    ],
    "dest": [
-    "vivienda",
-    "edificio"
+    "vivienda"
    ],
    "importe": 5000,
    "imp": "El 40 % del presupuesto de ejecución material, con un máximo de 5.000 € por inmueble y convocatoria",
    "abre": "2026-11-06",
    "cierra": "2026-12-30",
-   "plazo": "Empieza el día siguiente a la publicación de la convocatoria en el BOPT y termina el 30 de diciembre de 2026. Las ayudas se dan por orden de solicitud hasta agotar el crédito.",
+   "plazo": "Del 6 de noviembre al 30 de diciembre de 2026. La BDNS dice que empieza al día siguiente de publicarse la convocatoria en el BOPT. El presupuesto total es de 10.000 €.",
    "irpf": false,
    "fuente": "BDNS nº 939227",
    "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/939227",
-   "resumen": "El Ayuntamiento de Vilalba dels Arcs paga parte de las obras para recuperar, rehabilitar o revestir con piedra natural las fachadas visibles desde la calle en el casco urbano. También paga la recuperación de elementos tradicionales, como dinteles, molduras, cornisas, rejas y portadas. Se concede por orden de presentación hasta agotar el crédito de la convocatoria, que es de 10.000 €.",
+   "resumen": "El Ayuntamiento de Vilalba dels Arcs da ayudas a particulares para recuperar, rehabilitar o revestir con piedra natural las fachadas del casco antiguo. Incluye retirar revestimientos impropios. No he podido leer las bases, así que faltan importes y requisitos.",
    "req": [
     "Ser propietario de un inmueble en el casco urbano de Vilalba dels Arcs, o presidente de una comunidad de propietarios. Pueden ser personas físicas o jurídicas.",
     "La fachada debe verse desde la vía pública.",
@@ -120,28 +119,23 @@
     "abierta_segun_bdns": false,
     "beneficiarios": "PERSONAS FÍSICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
     "nota": "Revisa importe por vivienda, requisitos, documentos y pasos antes de aprobar.",
-    "referencia_bases": "Bases: aprobación definitiva en el BOPT de 26/01/2026 (registro 2026-00544); convocatoria en el BOPT de 05/11/2026.",
+    "referencia_bases": "BOPT, 26/01/2026, registro 2026-00544 (aprobación definitiva de las bases)",
     "ia": {
-     "fecha": "2026-11-18",
-     "documento": "página web (extracto; bases en Bases: aprobación definitiva en el BOPT de 26/01/2026 (registro 2026-00544); convocatoria en el BOPT de 05/11/2026.)",
+     "fecha": "2026-11-28",
+     "documento": "página web (extracto; bases en BOPT, 26/01/2026, registro 2026-00544 (aprobación definitiva de las bases))",
      "recomendacion": "publicar",
-     "motivo": "Paga obras de rehabilitación y recuperación de fachadas de piedra natural en inmuebles y comunidades de propietarios del casco urbano."
+     "motivo": "Subvenciona obras de rehabilitación y revestimiento de fachadas de viviendas con piedra natural en Vilalba dels Arcs, para particulares."
     },
     "confirmar": [
-     "No he visto el texto de la convocatoria en el BOPT del 05/11/2026. Hay que confirmar la fecha exacta de apertura del plazo.",
-     "Las bases no fijan el plazo máximo para ejecutar la obra. Puede estar en la convocatoria.",
-     "Falta la dirección de la sede electrónica para pedirla. Las bases solo dicen que está en la sede municipal.",
-     "No está claro si el casco urbano exige que el edificio sea de uso residencial."
+     "No he podido leer el texto de las bases: faltan importe o porcentaje por fachada, máximo, requisitos, documentos y forma de pedirla.",
+     "Comprueba la fecha exacta de publicación de la convocatoria en el BOPT (5 o 6 de noviembre de 2026) y, por tanto, el día de apertura.",
+     "Comprueba si la ayuda se limita al casco antiguo y si también pueden pedirla comunidades de propietarios."
     ],
-    "espera": {
-     "desde": "2026-11-03",
-     "intentos": 4,
-     "proxima": "2026-11-28"
-    },
     "bases_no_corresponden": true
    },
    "prov": "Tarragona",
-   "muni": "Vilalba Dels Arcs"
+   "muni": "Vilalba Dels Arcs",
+   "sede": "https://vilalbadelsarcs.eadministracio.cat/info.0"
   },
   {
    "id": "bdns-939709",
@@ -510,26 +504,25 @@
    "imp": "Consulta la convocatoria",
    "abre": "2026-11-23",
    "cierra": null,
-   "plazo": "20 días hábiles desde el día siguiente a la publicación del anuncio en el BOCM. Todavía no he visto esa publicación, así que no se conoce la fecha exacta.",
+   "plazo": "20 días hábiles a partir del día siguiente a la publicación en el BOCM. Aún no consta la fecha de publicación.",
    "irpf": false,
    "fuente": "BDNS nº 943945",
    "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/943945",
-   "resumen": "El Ayuntamiento de Getafe da subvenciones a particulares para obras que mejoren la eficiencia energética de su vivienda. El presupuesto total es de 650.000 €. Es la 2ª convocatoria, en concurrencia competitiva y con tramitación anticipada. No he podido leer las bases, así que faltan importes y requisitos.",
+   "resumen": "El Ayuntamiento de Getafe convoca una segunda tanda de subvenciones para obras que mejoren la eficiencia energética de viviendas del municipio. El presupuesto total es de 650.000 €. Las bases no se han podido leer, así que faltan los detalles. El plazo es de 20 días hábiles desde la publicación en el boletín de la Comunidad de Madrid (BOCM).",
    "req": [
-    "Ser persona física sin actividad económica.",
+    "Ser persona física sin actividad económica en esta ayuda.",
     "La vivienda debe estar en el término municipal de Getafe.",
-    "Las obras deben mejorar la eficiencia energética de la vivienda.",
-    "Cumplir los demás requisitos de las bases, que aún hay que comprobar."
+    "La obra debe mejorar la eficiencia energética de la vivienda."
    ],
    "docs": [
-    "Solicitud y anexos de la convocatoria (están en la BDNS).",
-    "Documentos que fijen las bases, por confirmar."
+    "Solicitud y anexos de la convocatoria (pendiente de comprobar en las bases).",
+    "Documentación de la obra, como presupuesto o memoria (pendiente de comprobar)."
    ],
    "pasos": [
-    "Espera a que se publique el anuncio en el BOCM.",
-    "Lee las bases y los anexos de la convocatoria.",
-    "Presenta la solicitud con los anexos en la sede electrónica del Ayuntamiento de Getafe dentro de los 20 días hábiles.",
-    "Haz las obras y justifícalas según indiquen las bases."
+    "Espera a que se publique la convocatoria en el BOCM.",
+    "Lee las bases y los anexos en la BDNS o en la sede del Ayuntamiento.",
+    "Presenta la solicitud con sus anexos dentro de los 20 días hábiles.",
+    "Justifica la obra cuando las bases lo pidan."
    ],
    "_revisar": {
     "presupuesto_total": 650000,
@@ -537,23 +530,22 @@
     "abierta_segun_bdns": false,
     "beneficiarios": "PERSONAS FÍSICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
     "nota": "Revisa importe por vivienda, requisitos, documentos y pasos antes de aprobar.",
-    "referencia_bases": "Bases de la 2ª convocatoria adjuntas en la BDNS (convocatoria 943945); anuncio pendiente en el BOCM.",
+    "referencia_bases": "Bases reguladoras: Ordenanza general de concesión de subvenciones; convocatoria con plazo a contar desde su publicación en el BOCM (fecha por confirmar).",
     "ia": {
-     "fecha": "2026-11-25",
-     "documento": "no se pudo descargar (HTTP Error 404: Not Found) (extracto; bases en Bases de la 2ª convocatoria adjuntas en la BDNS (convocatoria 943945); anuncio pendiente en el BOCM.)",
+     "fecha": "2026-11-28",
+     "documento": "no se pudo descargar (HTTP Error 404: Not Found) (extracto; bases en Bases reguladoras: Ordenanza general de concesión de subvenciones; convocatoria con plazo a contar desde su publicación en el BOCM (fecha por confirmar).)",
      "recomendacion": "publicar",
-     "motivo": "Son subvenciones municipales para obras de mejora de la eficiencia energética en viviendas de Getafe, y las pueden pedir personas físicas."
+     "motivo": "Subvenciones municipales para mejorar la eficiencia energética en viviendas de Getafe, abiertas a personas físicas."
     },
     "confirmar": [
-     "No he podido leer las bases ni los anexos. Faltan la cuantía por vivienda, el porcentaje y el máximo.",
-     "Falta confirmar qué obras se subvencionan, los requisitos y los documentos exigidos.",
-     "Falta la fecha de publicación en el BOCM, de la que depende el inicio y el fin del plazo.",
-     "No he encontrado la página del trámite en la sede electrónica."
+     "No se han podido leer las bases: faltan importe por vivienda, porcentaje, requisitos, documentos y cómo se solicita.",
+     "Comprobar la fecha de publicación en el BOCM y las fechas exactas de apertura y cierre.",
+     "Comprobar la URL del trámite en la sede electrónica del Ayuntamiento de Getafe."
     ],
     "espera": {
      "desde": "2026-11-25",
-     "intentos": 1,
-     "proxima": "2026-11-28"
+     "intentos": 2,
+     "proxima": "2026-12-03"
     }
    },
    "muni": "Getafe"
@@ -680,6 +672,223 @@
    "prov": "Bizkaia",
    "muni": "Iurreta",
    "sede": "https://www.egoitza.iurreta.eus"
+  },
+  {
+   "id": "bdns-945392",
+   "estado": "descartada",
+   "title": "Subvención directa destinada a la financiación de las actividades ordinarias del Consorcio de la Vivienda del Área Metropolitana de Barcelona durante el ejercic",
+   "org": "CATALUÑA · DEPARTAMENT DE TERRITORI, HABITATGE I TRANSICIÓ ECOLÒGICA",
+   "scope": "autonomica",
+   "ccaa": "Cataluña",
+   "tipo": [
+    "rehabilitacion"
+   ],
+   "dest": [
+    "vivienda"
+   ],
+   "importe": 0,
+   "imp": "Consulta la convocatoria",
+   "abre": "2026-11-27",
+   "cierra": null,
+   "plazo": "Consulta el plazo en la convocatoria",
+   "irpf": false,
+   "fuente": "BDNS nº 945392",
+   "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/945392",
+   "resumen": "Subvención directa destinada a la financiación de las actividades ordinarias del Consorcio de la Vivienda del Área Metropolitana de Barcelona durante el ejercicio 2025, incluyendo actuaciones de gestión y fomento de las políticas de vivienda,",
+   "req": [
+    "Consulta los requisitos en la convocatoria oficial"
+   ],
+   "docs": [
+    "Consulta la documentación en la convocatoria oficial"
+   ],
+   "pasos": [
+    "Lee la convocatoria oficial",
+    "Prepara la documentación",
+    "Presenta la solicitud en la sede del organismo"
+   ],
+   "_revisar": {
+    "presupuesto_total": 1691041.07,
+    "bases_reguladoras": "https://economia.gencat.cat/ca/ambits-actuacio/ajuts-subvencions/plans-estrategics/",
+    "abierta_segun_bdns": false,
+    "beneficiarios": "PERSONAS JURÍDICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
+    "nota": "Revisa importe por vivienda, requisitos, documentos y pasos antes de aprobar.",
+    "ia": {
+     "fecha": "2026-11-28",
+     "documento": "página web",
+     "recomendacion": "descartar",
+     "motivo": "Es una subvención directa a un consorcio público (Consorci de l'Habitatge de l'AMB) para sus actividades ordinarias, no una ayuda abierta a particulares para obras."
+    },
+    "confirmar": [
+     "La página de bases aportada es solo el listado general de planes estratégicos de subvenciones y no contiene datos de esta ayuda.",
+     "No se ha leído la resolución de concesión, solo la ficha de la BDNS."
+    ]
+   }
+  },
+  {
+   "id": "bdns-945337",
+   "estado": "espera",
+   "title": "Pozos sépticos en viviendas de Iurreta",
+   "org": "IURRETA · AYUNTAMIENTO DE IURRETA",
+   "scope": "municipal",
+   "ccaa": "País Vasco",
+   "tipo": [
+    "rehabilitacion"
+   ],
+   "dest": [
+    "vivienda"
+   ],
+   "importe": 0,
+   "imp": "No consta el importe por vivienda. Presupuesto total de la convocatoria: 6.000 €.",
+   "abre": "2026-11-27",
+   "cierra": null,
+   "plazo": "15 días hábiles desde el día siguiente a la publicación del extracto en el BOB. No he visto esa publicación, así que no se conoce la fecha exacta.",
+   "irpf": false,
+   "fuente": "BDNS nº 945337",
+   "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/945337",
+   "resumen": "El Ayuntamiento de Iurreta convoca para 2026 subvenciones para instalar y reformar pozos sépticos en viviendas del municipio. Pueden pedirlas personas físicas que no desarrollan actividad económica. El presupuesto total es de 6.000 €. Se concede por concurrencia competitiva. Las bases no se han podido leer, así que faltan importe por vivienda y requisitos.",
+   "req": [
+    "Ser persona física que no desarrolla actividad económica.",
+    "Tener la vivienda en el término municipal de Iurreta.",
+    "Hacer la obra de instalar o reformar un pozo séptico.",
+    "Consulta en las bases el resto de requisitos."
+   ],
+   "docs": [
+    "Solicitud con el modelo oficial (Anexo II).",
+    "Consulta en las bases el resto de documentos."
+   ],
+   "pasos": [
+    "Lee las bases en la web del Ayuntamiento de Iurreta (Subvenciones, Urbanismo).",
+    "Comprueba la fecha de publicación del extracto en el BOB.",
+    "Rellena el Anexo II de solicitud.",
+    "Preséntala en la sede electrónica del Ayuntamiento dentro del plazo.",
+    "Justifica la obra cuando te lo pidan."
+   ],
+   "_revisar": {
+    "presupuesto_total": 6000,
+    "bases_reguladoras": "https://www.iurreta.eus/es-ES/Ayuntamiento/Subvenciones/Paginas/Urbanismo.aspx",
+    "abierta_segun_bdns": false,
+    "beneficiarios": "PERSONAS FÍSICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
+    "nota": "Revisa importe por vivienda, requisitos, documentos y pasos antes de aprobar.",
+    "referencia_bases": "Bases reguladoras en la web del Ayuntamiento de Iurreta (apartado Subvenciones, Urbanismo): https://www.iurreta.eus/es-ES/Ayuntamiento/Subvenciones/Paginas/Urbanismo.aspx. El extracto se publica en el BOB.",
+    "ia": {
+     "fecha": "2026-11-28",
+     "documento": "no se pudo descargar (<urlopen error timed out>) (extracto; bases en Bases reguladoras en la web del Ayuntamiento de Iurreta (apartado Subvenciones, Urbanismo): https://www.iurreta.eus/es-ES/Ayuntamiento/Subvenciones/Paginas/Urbanismo.aspx. El extracto se publica en el BOB.)",
+     "recomendacion": "publicar",
+     "motivo": "Subvenciona instalar y reformar pozos sépticos (obra de saneamiento) en viviendas de Iurreta, pero no he podido leer las bases."
+    },
+    "confirmar": [
+     "Comprueba en las bases el importe o porcentaje por vivienda y su máximo.",
+     "Comprueba la fecha de publicación del extracto en el BOB y el plazo real.",
+     "Comprueba los requisitos, la documentación y si la ayuda cubre obra nueva y reforma."
+    ],
+    "espera": {
+     "desde": "2026-11-28",
+     "intentos": 1,
+     "proxima": "2026-12-01"
+    }
+   },
+   "prov": "Bizkaia",
+   "muni": "Iurreta",
+   "sede": "https://www.egoitza.iurreta.eus"
+  },
+  {
+   "id": "bdns-945307",
+   "estado": "descartada",
+   "title": "DECRETO 1043-26, de 9 de noviembre, y DECRETO 1086-26, de 19 de noviembre, Convocatoria subvención para la limpieza de pozos sépticos o instalaciones depuradora",
+   "org": "IURRETA · AYUNTAMIENTO DE IURRETA",
+   "scope": "municipal",
+   "ccaa": "País Vasco",
+   "tipo": [
+    "rehabilitacion"
+   ],
+   "dest": [
+    "vivienda"
+   ],
+   "importe": 0,
+   "imp": "Consulta la convocatoria",
+   "abre": "2026-11-27",
+   "cierra": null,
+   "plazo": "Consulta el plazo en la convocatoria",
+   "irpf": false,
+   "fuente": "BDNS nº 945307",
+   "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/945307",
+   "resumen": "DECRETO 1043-26, de 9 de noviembre, y DECRETO 1086-26, de 19 de noviembre, Convocatoria subvención para la limpieza de pozos sépticos o instalaciones depuradoras\nanálogas para el saneamiento de aguas residuales, en viviendas para el ejercicio 2026.",
+   "req": [
+    "Consulta los requisitos en la convocatoria oficial"
+   ],
+   "docs": [
+    "Consulta la documentación en la convocatoria oficial"
+   ],
+   "pasos": [
+    "Lee la convocatoria oficial",
+    "Prepara la documentación",
+    "Presenta la solicitud en la sede del organismo"
+   ],
+   "_revisar": {
+    "presupuesto_total": 1000,
+    "bases_reguladoras": "https://www.iurreta.eus/es-ES/Ayuntamiento/Subvenciones/Paginas/Urbanismo.aspx",
+    "abierta_segun_bdns": false,
+    "beneficiarios": "PERSONAS FÍSICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
+    "nota": "Revisa importe por vivienda, requisitos, documentos y pasos antes de aprobar.",
+    "ia": {
+     "fecha": "2026-11-28",
+     "documento": "no se pudo descargar (<urlopen error timed out>) (descartada con la pregunta rápida)",
+     "recomendacion": "descartar",
+     "motivo": "Subvenciona la limpieza (mantenimiento) de pozos sépticos o depuradoras en viviendas, un gasto de mantenimiento y no una obra de reforma, mejora o construcción."
+    },
+    "confirmar": []
+   },
+   "prov": "Bizkaia",
+   "muni": "Iurreta"
+  },
+  {
+   "id": "bdns-945201",
+   "estado": "descartada",
+   "title": "Subvenciones en régimen de concurrencia competitiva a favor de entidades sin finalidad de lucro que gestionan viviendas de inserción social, año 2027.",
+   "org": "DIPUTACIÓN PROV. DE BARCELONA · DIPUTACIÓN PROVINCIAL DE BARCELONA",
+   "scope": "provincial",
+   "ccaa": "Cataluña",
+   "tipo": [
+    "rehabilitacion"
+   ],
+   "dest": [
+    "vivienda"
+   ],
+   "importe": 0,
+   "imp": "Consulta la convocatoria",
+   "abre": "2026-12-04",
+   "cierra": "2027-01-18",
+   "plazo": "Consulta el plazo en la convocatoria",
+   "irpf": false,
+   "fuente": "BDNS nº 945201",
+   "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/945201",
+   "resumen": "Subvenciones en régimen de concurrencia competitiva a favor de entidades sin finalidad de lucro que gestionan viviendas de inserción social, año 2027.",
+   "req": [
+    "Consulta los requisitos en la convocatoria oficial"
+   ],
+   "docs": [
+    "Consulta la documentación en la convocatoria oficial"
+   ],
+   "pasos": [
+    "Lee la convocatoria oficial",
+    "Prepara la documentación",
+    "Presenta la solicitud en la sede del organismo"
+   ],
+   "_revisar": {
+    "presupuesto_total": 1000000,
+    "bases_reguladoras": "https://www.diba.cat/documents/446885/0/Ordenan%C3%A7a+General+Subvencions+17.pdf/01e71b5c-561b-4c94-a7a9-584247c623e5",
+    "abierta_segun_bdns": false,
+    "beneficiarios": "PERSONAS JURÍDICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
+    "nota": "Revisa importe por vivienda, requisitos, documentos y pasos antes de aprobar.",
+    "ia": {
+     "fecha": "2026-11-28",
+     "documento": "PDF de 46 páginas sin texto útil (descartada con la pregunta rápida)",
+     "recomendacion": "descartar",
+     "motivo": "Es una subvención dirigida solo a entidades sin ánimo de lucro que gestionan viviendas de inserción social, con finalidad de servicios sociales y no de financiar obras de reforma o construcción en vivienda."
+    },
+    "confirmar": []
+   },
+   "prov": "Barcelona"
   }
  ],
  "boe": [

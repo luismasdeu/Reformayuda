@@ -791,40 +791,46 @@
    "dest": [
     "edificio"
    ],
-   "importe": 0,
-   "imp": "Importe pendiente de publicar en las bases oficiales",
+   "importe": 8000,
+   "imp": "Hasta el 50 % de la obra, con un máximo de 4.000 € (8.000 € si incluye la primera instalación de ascensor)",
    "abre": "2026-10-20",
    "cierra": "2027-10-21",
-   "plazo": "La BDNS indica del 20/10/2026 al 21/10/2027. La web municipal indica del 19/11/2026 al 10/12/2026 y dice que el anuncio en el BOP llega «próximamente». Hay que confirmar las fechas.",
+   "plazo": "15 días hábiles desde el día siguiente a que se publique el extracto en el BOP de Valencia. No he visto esa publicación, así que no se sabe la fecha exacta.",
    "irpf": false,
    "fuente": "BDNS nº 940941",
    "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/940941",
    "resumen": "El Ayuntamiento de Torrent da subvenciones para mejorar la accesibilidad y restaurar fachadas en edificios residenciales. Presupuesto total de la convocatoria: 200.000 €. No he podido leer las bases oficiales, así que faltan los detalles: importe por vivienda, requisitos y trámite.",
    "req": [
-    "Ser persona propietaria o comunidad de propietarios del edificio.",
-    "Las obras de accesibilidad solo valen en edificios de varias viviendas y en sus elementos comunes.",
-    "Las obras de fachada valen en edificios de una o de varias viviendas.",
-    "El edificio debe ser residencial."
+    "Ser propietario del edificio o de una vivienda del edificio, o ser la comunidad de propietarios si la obra afecta a elementos comunes.",
+    "Edificio predominantemente residencial. Para fachadas, construido antes de 1998 según el Catastro.",
+    "Accesibilidad: solo en edificios de varias viviendas y en elementos comunes. El ascensor debe ser una primera instalación.",
+    "Obra terminada entre el 16/11/2024 y el último día del plazo de solicitud.",
+    "Tener licencia de obras o declaración responsable presentada antes de publicarse la convocatoria, salvo orden de ejecución.",
+    "Estar al corriente con Hacienda, la Seguridad Social y el Ayuntamiento de Torrent.",
+    "No haber recibido ayuda del Ayuntamiento de Torrent en años anteriores para lo mismo."
    ],
    "docs": [
-    "Consulta la documentación en la convocatoria oficial"
+    "Descripción de las obras.",
+    "Certificado final de obra de técnico competente (o certificado de fin de obra de la empresa contratista).",
+    "Facturas originales pagadas, con el justificante bancario de la transferencia.",
+    "Cuenta justificativa (Anexo I).",
+    "Ficha de mantenimiento de terceros.",
+    "Certificados de Hacienda y Seguridad Social, solo si te opones a que el Ayuntamiento los consulte."
    ],
    "pasos": [
-    "Espera a que se publique la convocatoria en el BOP.",
-    "Lee las bases en la web del Ayuntamiento de Torrent.",
-    "Presenta la solicitud en la sede electrónica con el trámite SUBV-004.",
-    "Justifica la obra realizada cuando te lo pidan."
+    "Haz la obra con licencia o declaración responsable previa.",
+    "Paga las facturas por transferencia bancaria.",
+    "Consigue el certificado final de obra.",
+    "Espera a que se publique el extracto en el BOP de Valencia.",
+    "Presenta la solicitud SUBV-004 en la sede electrónica del Ayuntamiento de Torrent (obligatorio por vía telemática si eres persona jurídica).",
+    "Adjunta la documentación que justifica la obra y los pagos."
    ],
    "prov": "Valencia",
    "muni": "Torrent",
-   "pendiente_bases": {
-    "intentos": 3,
-    "proxima": "2026-11-28"
-   },
    "revisada": "2026-11-10",
    "auto": "2026-11-10",
-   "ia": "2026-11-18",
-   "sede": "https://www.torrent.es/PortalCiudadano/tramites/tramite.do?formAction=btShow&lang=es&t=20006"
+   "ia": "2026-11-28",
+   "sede": "https://torrent.es/ayudas-y-subvenciones/todas-las-ayudas-y-subvenciones/"
   },
   {
    "id": "bdns-941790",
@@ -933,35 +939,35 @@
    "dest": [
     "vivienda"
    ],
-   "importe": 0,
-   "imp": "Importe pendiente de publicar en las bases",
+   "importe": 15000,
+   "imp": "Hasta 15.000 € por vivienda, salvo casos excepcionales",
    "abre": "2026-11-20",
    "cierra": "2026-12-14",
-   "plazo": "Del 20 de noviembre al 14 de diciembre de 2026, según la BDNS. No he podido comprobarlo en las bases.",
+   "plazo": "Según la BDNS, se abre el 20 de noviembre de 2026 y cierra el 14 de diciembre de 2026. La web del Ayuntamiento dice que el plazo empieza el lunes 23 de noviembre.",
    "irpf": false,
    "fuente": "BDNS nº 942439",
    "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/942439",
    "resumen": "El Ayuntamiento de Tacoronte convoca ayudas para rehabilitar viviendas. Van dirigidas a personas físicas sin actividad económica. El presupuesto total es de 125.000 €. No he podido leer las bases, así que faltan el importe por vivienda, los requisitos y los trámites.",
    "req": [
-    "Consulta los requisitos en la convocatoria oficial"
+    "Estar empadronado en Tacoronte.",
+    "Ser propietario, copropietario o usufructuario de la vivienda en la que harás las obras.",
+    "Que la vivienda esté en situación legal o se pueda legalizar.",
+    "Que sea tu residencia habitual y permanente."
    ],
    "docs": [
     "Consulta la documentación en la convocatoria oficial"
    ],
    "pasos": [
-    "Lee la convocatoria oficial",
-    "Prepara la documentación",
-    "Presenta la solicitud en la sede del organismo"
+    "Lee el anuncio en el BOP de Santa Cruz de Tenerife del 20 de noviembre de 2026 y sus anexos.",
+    "Reúne la documentación que piden las bases.",
+    "Presenta la solicitud con los anexos en el plazo, que termina el 14 de diciembre de 2026.",
+    "Justifica la obra cuando te lo pidan."
    ],
    "prov": "Santa Cruz de Tenerife",
    "muni": "Tacoronte",
-   "pendiente_bases": {
-    "intentos": 2,
-    "proxima": "2026-11-28"
-   },
    "revisada": "2026-11-20",
    "auto": "2026-11-20",
-   "ia": "2026-11-21"
+   "ia": "2026-11-28"
   },
   {
    "id": "bdns-941340",
