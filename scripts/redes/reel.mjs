@@ -27,8 +27,9 @@ const FPS = 30;
 const OBRA = ["renovation", "construction", "builder", "construction worker", "repair", "drill", "plaster", "brick", "tiles", "tiling", "paint", "painting", "carpenter", "contractor", "handyman", "tools", "remodeling", "renovate", "scaffolding", "workman", "craftsman"];
 const CASA = ["house", "home", "apartment", "building", "facade", "residential", "interior", "room", "flat", "villa"];
 const TEMAS = [
-  [/ventan/i, ["window installation", "installing window", "window replacement", "window frame worker", "carpenter window"],
-    ["window+installation", "window+install", "window+worker", "window+construction", "window+renovation", "window+carpenter", "window+repair", "window+builder", "window+frame", "windows+installation"]],
+  [/ventan/i, ["window installation", "pvc window", "aluminium window", "glazier", "new windows house", "scaffolding facade", "construction site building facade"],
+    ["window+installation", "window+install", "window+worker", "window+construction", "window+renovation", "window+carpenter", "window+repair", "window+builder", "window+frame", "windows+installation", "glazier", "scaffolding", "facade", "pvc", "aluminium"],
+    "ventanas nuevas o instalándose, un cristalero o carpintero, o una fachada en obra con andamios"],
   [/tejad|cubierta|gotera|teja/i, ["roof repair", "roofer working", "roof tiles"], ["roof", "roofer", "roofing", "tiles"]],
   [/placa|solar|renovable|autoconsumo/i, ["solar panels installation", "solar panels roof"], ["solar", "photovoltaic", "panel"]],
   [/aerotermia|caldera|calefacci|radiador|bomba de calor/i, ["heat pump", "radiator heating", "boiler"], ["heating", "radiator", "heat", "boiler", "thermostat"]],
@@ -54,7 +55,7 @@ const PROHIBIDAS = ["yoga", "fitness", "sport", "exercise", "gym", "dance", "dan
   "hospital", "doctor", "candle", "candles", "candlestick", "christmas", "fantasy", "abstract", "animation", "cartoon", "3d", "render", "space", "galaxy",
   "stars", "night sky", "fireworks", "beach", "sea", "ocean", "forest", "animal", "dog", "cat", "bird", "food", "cooking", "wedding", "party", "fashion",
   "model", "makeup", "beauty", "car", "cars", "factory", "industry", "industrial", "textile", "dollar", "dollars", "us dollar", "bitcoin", "crypto", "war",
-  "fire", "smoke", "explosion", "rain", "raindrop", "raindrops", "rainy", "weather", "storm", "snow", "drops", "droplets", "antique", "vintage", "calligraphy", "typewriter", "dictionary", "encyclopedia", "book", "books", "piggy bank", "gambling", "casino", "bees", "bee", "insects", "insect", "flowers", "tulips", "field", "agriculture", "farm", "skyscraper", "vietnam", "india", "toy", "game", "gaming", "music", "concert", "church", "religion", "halloween", "horror", "drink", "alcohol", "bikini", "lingerie"];
+  "fire", "smoke", "explosion", "rain", "raindrop", "raindrops", "rainy", "weather", "storm", "snow", "drops", "droplets", "antique", "vintage", "calligraphy", "typewriter", "dictionary", "encyclopedia", "book", "books", "ruins", "ruin", "burnt", "burned", "abandoned", "museum", "art", "gallery", "cemetery", "lost place", "decay", "piggy bank", "gambling", "casino", "bees", "bee", "insects", "insect", "flowers", "tulips", "field", "agriculture", "farm", "skyscraper", "vietnam", "india", "toy", "game", "gaming", "music", "concert", "church", "religion", "halloween", "horror", "drink", "alcohol", "bikini", "lingerie"];
 const USADOS_F = path.join(RAIZ, "revision", "redes-videos-usados.json");
 const usadosAntes = new Set(fs.existsSync(USADOS_F) ? JSON.parse(fs.readFileSync(USADOS_F, "utf8")).ids || [] : []);
 const usados = new Set();
@@ -70,8 +71,8 @@ function temaPrincipal(guion) {
 function temaDe(s, guion) {
   const t = `${s.texto || ""} ${s.voz || ""}`;
   const principal = temaPrincipal(guion);
-  if (principal && !(s.tipo === "cifra" || (DINERO.test(t) && s.tipo !== "golpe" && s.tipo !== "pregunta"))) return [principal[1], principal[2]];
-  for (const [re, q, tags] of TEMAS) if (re.test(t)) return [q, tags];
+  if (principal && !(s.tipo === "cifra" || (DINERO.test(t) && s.tipo !== "golpe" && s.tipo !== "pregunta"))) return [principal[1], principal[2], principal[3]];
+  for (const [re, q, tags, pista] of TEMAS) if (re.test(t)) return [q, tags, pista];
   const todo = guion.escenas.map((e) => `${e.texto || ""} ${e.voz || ""}`).join(" ");
   for (const [re, q, tags] of TEMAS) if (re.test(todo) && !/hacienda|papel/i.test(String(re))) return [q, tags];
   return GENERAL;
@@ -87,7 +88,7 @@ function encaja(h, tags) {
 
 // La IA mira las miniaturas y elige el clip que de verdad muestra lo que se dice (o ninguno)
 let avisos429 = 0;
-async function elegirConIA(s, candidatos) {
+async function elegirConIA(s, candidatos, pista) {
   const clave = process.env.ANTHROPIC_API_KEY;
   if (!clave || candidatos.length === 0) return candidatos.length ? 0 : -1;
   const contenido = [];
@@ -101,9 +102,10 @@ async function elegirConIA(s, candidatos) {
   }
   contenido.push({ type: "text", text:
     `Es un reel de Obrayuda (ayudas para obras y reformas en viviendas, en España). En esta escena la voz dice: «${s.voz || s.texto.replace(/\*\*/g, "")}».\n` +
+    (pista ? `Tiene que verse claramente: ${pista}. ` : "") +
     `Algunas imágenes son fotogramas de vídeo y otras fotos. Elige la que mejor encaje con lo que se dice (por ejemplo: obreros o una obra en una casa, ventanas, monedas de euro, papeles de un trámite, un edificio de viviendas). ` +
     `No hace falta que sea exacta: vale cualquier imagen relacionada con obras, reformas, casas, dinero en euros o trámites. ` +
-    `Responde 0 solo si todas son claramente ajenas al tema (deporte, laboratorio, naturaleza, animales, velas, dólares, fábricas…). ` +
+    `Responde 0 si ninguna encaja o si son ajenas al tema (deporte, laboratorio, naturaleza, animales, velas, dólares, fábricas, ruinas, casas quemadas o abandonadas, museos). ` +
     `Responde SOLO con el número.` });
   for (let intento = 0; intento < 4; intento++) try {
     const r = await fetch("https://api.anthropic.com/v1/messages", {
@@ -129,8 +131,8 @@ async function elegirConIA(s, candidatos) {
 async function fondoVideo(s, guion, minimo, tmp, i) {
   const clave = process.env.PIXABAY_API_KEY;
   if (!clave) return null;
-  const [busquedas, tags] = temaDe(s, guion);
-  for (const q of [...busquedas, ...(busquedas === GENERAL[0] ? [] : GENERAL[0])].slice(0, 5)) {
+  const [busquedas, tags, pista] = temaDe(s, guion);
+  for (const q of [...busquedas, ...(busquedas === GENERAL[0] ? [] : GENERAL[0])].slice(0, 8)) {
     const exigidas = busquedas.includes(q) ? tags : GENERAL[1];
     try {
       const r = await fetch(`https://pixabay.com/api/videos/?key=${clave}&q=${encodeURIComponent(q)}&per_page=50&safesearch=true&video_type=film&min_width=1280`);
@@ -145,7 +147,7 @@ async function fondoVideo(s, guion, minimo, tmp, i) {
         .sort((a, b) => encaja(b, exigidas) - encaja(a, exigidas)).slice(0, 4) : [];
       const candidatos = [...vids.map((h) => ({ tipo: "video", h, mini: h.videos.tiny?.thumbnail || h.videos.small?.thumbnail })),
                           ...fotos.map((h) => ({ tipo: "foto", h, mini: h.webformatURL }))];
-      const k = await elegirConIA(s, candidatos);
+      const k = await elegirConIA(s, candidatos, pista);
       if (k < 0) continue;
       const { tipo, h } = candidatos[k];
       let destino;
