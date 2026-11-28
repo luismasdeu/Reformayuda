@@ -1,0 +1,52 @@
+{
+ "slides": [
+  {
+   "tipo": "portada",
+   "ceja": "Antes de empezar la obra",
+   "titulo": "5 errores que te hacen **perder la subvención**",
+   "sub": "El n.º 1 lo comete casi todo el mundo."
+  },
+  {
+   "tipo": "texto",
+   "ceja": "Error 1",
+   "titulo": "Empezar la obra\n**antes de pedirla**",
+   "texto": "En muchas ayudas la obra no puede haber empezado cuando presentas la solicitud. Si ya has empezado, te la pueden denegar.",
+   "nota": "Mira siempre este punto en las bases antes de contratar."
+  },
+  {
+   "tipo": "texto",
+   "ceja": "Error 2",
+   "titulo": "Pagar\n**en efectivo**",
+   "texto": "La deducción del IRPF por eficiencia energética exige pagar con tarjeta, transferencia o cheque nominativo. Y las subvenciones suelen pedir el justificante bancario."
+  },
+  {
+   "tipo": "texto",
+   "ceja": "Error 3",
+   "titulo": "No pedir el **certificado energético** antes",
+   "texto": "Para la deducción del IRPF necesitas el certificado de eficiencia energética de antes y de después de la obra. El de antes no se puede hacer cuando ya has cambiado las ventanas."
+  },
+  {
+   "tipo": "texto",
+   "ceja": "Error 4",
+   "titulo": "Esperar al\n**último día**",
+   "texto": "Muchas ayudas se reparten por orden de llegada hasta agotar el dinero. Si la pides al final, puede que ya no quede."
+  },
+  {
+   "tipo": "texto",
+   "ceja": "Error 5",
+   "titulo": "Olvidarte de tu\n**ayuntamiento**",
+   "texto": "Además de las del Estado y tu comunidad, muchos ayuntamientos tienen sus propias ayudas y bonifican el IBI o el ICIO por obras de eficiencia o accesibilidad."
+  },
+  {
+   "tipo": "cta",
+   "titulo": "Comenta **AYUDA**\ny te digo cuáles hay en tu zona",
+   "sub": "Guárdalo para cuando vayas a reformar."
+  }
+ ],
+ "texto": "El error n.º 1 para perder una subvención: empezar la obra antes de pedirla 🚧\n\nGuarda este post antes de reformar:\n1️⃣ Empezar la obra antes de presentar la solicitud\n2️⃣ Pagar en efectivo\n3️⃣ No pedir el certificado energético antes de la obra\n4️⃣ Esperar al último día (muchas van por orden de llegada)\n5️⃣ No mirar las ayudas de tu ayuntamiento (IBI, ICIO…)\n\nCada ayuda tiene sus bases, así que revisa siempre la convocatoria oficial.\n\n🔎 Mira las de tu zona gratis en obrayuda.es (enlace en el perfil)\n💬 Comenta AYUDA y te digo cuáles hay en tu provincia.\n\n#subvenciones #reformas #ayudasvivienda #reformacasa #ahorroenergetico",
+ "formato": "carrusel",
+ "tipo": "consejo",
+ "nombre": "02-errores-subvencion",
+ "ayuda": null,
+ "fecha": "2026-11-28"
+}
