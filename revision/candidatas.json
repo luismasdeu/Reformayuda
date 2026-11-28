@@ -79,59 +79,55 @@
     "vivienda"
    ],
    "importe": 5000,
-   "imp": "El 40 % del presupuesto de ejecución material, con un máximo de 5.000 € por inmueble y convocatoria",
+   "imp": "El 40 % del presupuesto de ejecución material, con un máximo de 5.000 € por inmueble",
    "abre": "2026-11-06",
    "cierra": "2026-12-30",
-   "plazo": "Del 6 de noviembre al 30 de diciembre de 2026. La BDNS dice que empieza al día siguiente de publicarse la convocatoria en el BOPT. El presupuesto total es de 10.000 €.",
+   "plazo": "Del 6 de noviembre al 30 de diciembre de 2026 (la convocatoria salió en el BOPT el 5 de noviembre). Se concede por orden de llegada hasta agotar los 10.000 €.",
    "irpf": false,
-   "fuente": "BDNS nº 939227",
-   "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/939227",
-   "resumen": "El Ayuntamiento de Vilalba dels Arcs da ayudas a particulares para recuperar, rehabilitar o revestir con piedra natural las fachadas del casco antiguo. Incluye retirar revestimientos impropios. No he podido leer las bases, así que faltan importes y requisitos.",
+   "fuente": "BOPT 05/11/2026 (CVE 2026-10247) · Bases: BOPT 26/01/2026 (CVE 2026-00544) · BDNS nº 939227",
+   "url": "https://www.dipta.cat/bopt/web/anunci/366034/x",
+   "resumen": "El Ayuntamiento de Vilalba dels Arcs subvenciona recuperar, rehabilitar o revestir con piedra natural las fachadas de los inmuebles del casco urbano que se ven desde la calle, y recuperar elementos tradicionales (dinteles, marcos, cornisas, rejas, portaladas). Se concede por orden de llegada de las solicitudes completas, hasta agotar el presupuesto de 10.000 €.",
    "req": [
-    "Ser propietario de un inmueble en el casco urbano de Vilalba dels Arcs, o presidente de una comunidad de propietarios. Pueden ser personas físicas o jurídicas.",
-    "La fachada debe verse desde la vía pública.",
-    "La obra debe recuperar fachadas o elementos tradicionales de piedra natural, según el POUM y el informe técnico municipal.",
-    "No se pagan revestimientos que imiten la piedra sin serlo.",
-    "Tener la licencia de obras antes de empezar, o hacer la comunicación previa de obras.",
-    "No tener ninguna de las prohibiciones del artículo 13 de la Ley General de Subvenciones."
+    "Ser propietario de un inmueble en el casco urbano de Vilalba dels Arcs, o presidente de la comunidad de propietarios.",
+    "La fachada tiene que verse desde la vía pública.",
+    "Obras: rehabilitar o reparar fachadas de piedra natural, quitar revestimientos impropios y revestir con piedra natural, o recuperar elementos tradicionales.",
+    "No se pagan los revestimientos que imitan la piedra sin serlo.",
+    "Las obras deben cumplir el POUM y el informe técnico municipal previo.",
+    "Tener la licencia de obras o la comunicación previa antes de empezar.",
+    "No estar en ninguna de las prohibiciones del artículo 13 de la Ley General de Subvenciones."
    ],
    "docs": [
     "Solicitud en el modelo oficial de la sede electrónica municipal.",
-    "Documento que acredite que eres propietario de la finca y copia del NIF.",
+    "Documento que acredite que eres el propietario.",
+    "NIF de la persona solicitante.",
     "Descripción de la obra y presupuesto detallado.",
-    "Fotos del estado actual de la fachada y plano o croquis de la zona de obra.",
-    "Justificante de haber pedido la licencia o hecho la comunicación de obras.",
+    "Fotografías del estado actual de la fachada.",
+    "Plano o croquis de la superficie de la obra.",
+    "Justificante de haber pedido la licencia o comunicación de obras.",
     "Proyecto o memoria técnica, si hace falta.",
-    "Declaración de otras ayudas pedidas o recibidas para lo mismo."
+    "Declaración de otras ayudas pedidas o recibidas para la misma obra."
    ],
    "pasos": [
-    "Pide la licencia de obras o haz la comunicación previa de obras.",
-    "Presenta la solicitud con la documentación en la sede electrónica del Ayuntamiento durante el plazo abierto.",
-    "Corrige lo que te pidan si falta algo. Tienes 10 días hábiles.",
-    "El Ayuntamiento resuelve en un máximo de 3 meses. Si no contesta, se entiende denegada.",
-    "Haz la obra siguiendo los criterios técnicos sobre materiales y colores.",
-    "Justifica la obra en 3 meses desde que termine: facturas, certificado final de obra, fotos y certificado de titularidad bancaria.",
-    "Cobras por transferencia cuando el técnico municipal lo apruebe. No hay anticipos."
+    "Pide la licencia o haz la comunicación previa de obras en el Ayuntamiento.",
+    "Presenta la solicitud con la documentación en la sede electrónica del Ayuntamiento antes del 30 de diciembre de 2026.",
+    "La arquitecta municipal revisa la obra; el Ayuntamiento resuelve en un máximo de 3 meses.",
+    "Haz la obra según el informe técnico municipal.",
+    "En los 3 meses siguientes al final de la obra, justifica con facturas, certificado final de obra, fotos y certificado bancario.",
+    "El Ayuntamiento paga por transferencia tras comprobar la obra (no hay anticipos)."
    ],
    "_revisar": {
     "presupuesto_total": 10000,
     "bases_reguladoras": "https://www.dipta.cat/bopt/web/anunci/355603/bases-reguladores-per-a-la-concessio-de-subvencions-per-a-la-recuperacio-rehabilitacio-o-revestiment-de-facanes-amb-pedra-natural-aprovacio-definitiva-ajuntament-vilalba-dels-arcs",
-    "abierta_segun_bdns": false,
+    "abierta_segun_bdns": true,
     "beneficiarios": "PERSONAS FÍSICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
-    "nota": "Revisa importe por vivienda, requisitos, documentos y pasos antes de aprobar.",
-    "referencia_bases": "BOPT, 26/01/2026, registro 2026-00544 (aprobación definitiva de las bases)",
+    "nota": "Revisado con las bases y la convocatoria publicadas en el BOPT (28/11/2026).",
+    "referencia_bases": "Bases: BOPT 26/01/2026, CVE 2026-00544. Convocatoria: BOPT 05/11/2026, CVE 2026-10247.",
     "ia": {
      "fecha": "2026-11-28",
      "documento": "página web (extracto; bases en BOPT, 26/01/2026, registro 2026-00544 (aprobación definitiva de las bases))",
      "recomendacion": "publicar",
      "motivo": "Subvenciona obras de rehabilitación y revestimiento de fachadas de viviendas con piedra natural en Vilalba dels Arcs, para particulares."
-    },
-    "confirmar": [
-     "No he podido leer el texto de las bases: faltan importe o porcentaje por fachada, máximo, requisitos, documentos y forma de pedirla.",
-     "Comprueba la fecha exacta de publicación de la convocatoria en el BOPT (5 o 6 de noviembre de 2026) y, por tanto, el día de apertura.",
-     "Comprueba si la ayuda se limita al casco antiguo y si también pueden pedirla comunidades de propietarios."
-    ],
-    "bases_no_corresponden": true
+    }
    },
    "prov": "Tarragona",
    "muni": "Vilalba Dels Arcs",
