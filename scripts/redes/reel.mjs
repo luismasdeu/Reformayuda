@@ -302,8 +302,11 @@ for (const [i, s] of guion.escenas.entries()) {
     audio = path.join(tmp, `e${i}.wav`);
   } else audio = null;
   conVoz += audio ? 1 : 0;
-  const d = Math.max(audio ? duracion(audio) + 0.25 : texto.split(/\s+/).length / 2.6 + 0.6, s.tipo === "cta" ? 2.5 : 1.5);
+  // La voz entra un instante después del corte (para que el cambio de escena no tape la primera palabra)
+  const ENTRADA = i === 0 ? 0.05 : 0.3;
+  const d = Math.max(audio ? duracion(audio) + ENTRADA + 0.3 : texto.split(/\s+/).length / 2.6 + 0.6, s.tipo === "cta" ? 2.8 : 1.5);
   if (!palabras || !palabras.length) palabras = estimar(texto, d);
+  else palabras = palabras.map((p) => ({ ...p, ini: p.ini + ENTRADA, fin: p.fin + ENTRADA }));
 
   // Capas de subtítulos (una imagen por palabra) encadenadas con sus tiempos
   const grupos = trozos(palabras), lista = [];
@@ -339,7 +342,7 @@ for (const [i, s] of guion.escenas.entries()) {
   execFileSync("ffmpeg", ["-y", "-loglevel", "error", ...fondo, ...sonido, "-f", "concat", "-safe", "0", "-i", caps,
     "-filter_complex",
     `[0:v]${base},eq=brightness=${oscuro}:saturation=0.9[b];` +
-    `[2:v]fps=${FPS},format=rgba[c];[b][c]overlay=0:0:format=auto,format=yuv420p[v];[1:a]apad,atrim=0:${d.toFixed(3)},aresample=44100[a]`,
+    `[2:v]fps=${FPS},format=rgba[c];[b][c]overlay=0:0:format=auto,format=yuv420p[v];[1:a]adelay=${Math.round(ENTRADA * 1000)}|${Math.round(ENTRADA * 1000)},apad,atrim=0:${d.toFixed(3)},aresample=44100[a]`,
     "-map", "[v]", "-map", "[a]", "-t", d.toFixed(3), "-r", String(FPS), "-c:v", "libx264", "-preset", "medium", "-crf", "21",
     "-c:a", "aac", "-b:a", "128k", "-ar", "44100", "-ac", "2", mp4]);
   partes.push({ mp4, d });
@@ -353,14 +356,14 @@ const total = partes.reduce((a, p) => a + p.d, 0);
 // Efectos (hechos con ffmpeg): «whoosh» en cada cambio de escena y golpe grave al aparecer el golpe del gancho
 const whoosh = path.join(tmp, "whoosh.wav"), golpe = path.join(tmp, "golpe.wav");
 execFileSync("ffmpeg", ["-y", "-loglevel", "error", "-f", "lavfi", "-i", "anoisesrc=d=0.5:c=pink:a=0.6",
-  "-af", "highpass=f=500,lowpass=f=7000,afade=t=in:d=0.22,afade=t=out:st=0.22:d=0.28,volume=0.55", "-ar", "44100", "-ac", "2", whoosh]);
+  "-af", "highpass=f=500,lowpass=f=7000,afade=t=in:d=0.22,afade=t=out:st=0.22:d=0.28,volume=0.3", "-ar", "44100", "-ac", "2", whoosh]);
 execFileSync("ffmpeg", ["-y", "-loglevel", "error", "-f", "lavfi", "-i", "sine=f=55:d=0.7", "-f", "lavfi", "-i", "anoisesrc=d=0.08:c=brown:a=0.9",
   "-filter_complex", "[0:a]afade=t=out:st=0.05:d=0.65,volume=1.6[a];[1:a]lowpass=f=900,volume=0.9[b];[a][b]amix=inputs=2:normalize=0", "-ar", "44100", "-ac", "2", golpe]);
 const inicios = []; let acum = 0;
 for (const [k, p] of partes.entries()) { inicios.push([k, acum]); acum += p.d; }
 const efectos = [];
 for (const [k, t0] of inicios) {
-  if (k > 0) efectos.push([whoosh, Math.max(t0 - 0.2, 0)]);
+  if (k > 0) efectos.push([whoosh, Math.max(t0 - 0.3, 0)]);  // termina antes de que empiece a hablar
   if (guion.escenas[k].tipo === "golpe") efectos.push([golpe, t0]);
 }
 // Música de fondo: una pista al azar de docs/redes/musica/ (libre de derechos), baja cuando habla la voz
