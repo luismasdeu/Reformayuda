@@ -13,6 +13,14 @@ on:
         type: choice
         options: [reel, carrusel]
         default: reel
+      nombre:
+        description: "Reel concreto a publicar (nombre del guion, opcional)"
+        type: string
+        default: ""
+      usar_prueba:
+        description: "Usar el vídeo ya generado en docs/redes/pruebas/ si existe"
+        type: boolean
+        default: false
       forzar:
         description: "Publicar el carrusel aunque sea domingo"
         type: boolean
@@ -62,6 +70,7 @@ jobs:
         env:
           TZ: Europe/Madrid
           FORZAR: ${{ inputs.forzar && '1' || '' }}
+          NOMBRE: ${{ inputs.nombre }}
         run: python scripts/redes/redes.py planificar "$FORMATO"
 
       - name: Preparar las herramientas
@@ -81,7 +90,9 @@ jobs:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: |
           C="${{ steps.plan.outputs.carpeta }}"
-          if [ "$FORMATO" = reel ]; then node scripts/redes/reel.mjs "$C/spec.json" "$C"; else node scripts/redes/carrusel.mjs "$C/spec.json" "$C"; fi
+          P="docs/redes/pruebas/${{ inputs.nombre }}.mp4"
+          if [ "$FORMATO" = reel ] && [ "${{ inputs.usar_prueba }}" = true ] && [ -f "$P" ]; then cp "$P" "$C/reel.mp4"; echo "Uso el vídeo ya revisado: $P"
+          elif [ "$FORMATO" = reel ]; then node scripts/redes/reel.mjs "$C/spec.json" "$C"; else node scripts/redes/carrusel.mjs "$C/spec.json" "$C"; fi
 
       - name: Subir las imágenes (Instagram las descarga desde GitHub)
         if: steps.plan.outputs.carpeta != ''

@@ -235,6 +235,19 @@ def reel_de_ayuda(a, d):
 
 
 def planificar_reel():
+    if os.environ.get("NOMBRE"):  # publicar un guion concreto (lanzado a mano)
+        f = REELS / f"{os.environ['NOMBRE']}.json"
+        if not f.exists():
+            sys.exit(f"No existe el guion {f.name}")
+        d = hoy()
+        guion = json.loads(f.read_text(encoding="utf-8"))
+        carpeta = PUBLICADAS / f"{d.isoformat()}-reel-{f.stem}"
+        carpeta.mkdir(parents=True, exist_ok=True)
+        guion.update({"formato": "reel", "tipo": "guion", "nombre": f.stem, "ayuda": None, "fecha": d.isoformat()})
+        (carpeta / "spec.json").write_text(json.dumps(guion, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
+        print(f"Reel elegido a mano: {f.stem}")
+        salida(carpeta)
+        return
     if (RAIZ / "docs" / "redes" / "PAUSA_REELS").exists() and not os.environ.get("FORZAR"):
         print("Reels en pausa (borra docs/redes/PAUSA_REELS para reanudarlos).")
         return
