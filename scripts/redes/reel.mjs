@@ -59,10 +59,19 @@ const USADOS_F = path.join(RAIZ, "revision", "redes-videos-usados.json");
 const usadosAntes = new Set(fs.existsSync(USADOS_F) ? JSON.parse(fs.readFileSync(USADOS_F, "utf8")).ids || [] : []);
 const usados = new Set();
 
+const DINERO = /hacienda|renta|deduc|irpf|dinero|€|euros|devuelv|devolv|pag|ahorr/i;
+function temaPrincipal(guion) {
+  // El tema del gancho (pregunta) manda en todo el reel: si va de ventanas, todo va de ventanas
+  const p = guion.escenas.find((e) => e.tipo === "pregunta" || e.tipo === "gancho");
+  const t = p ? `${p.texto || ""} ${p.voz || ""}` : "";
+  for (const tm of TEMAS.slice(0, 14)) if (tm[0].test(t)) return tm;  // solo temas concretos (ventanas, tejado, baño…)
+  return null;
+}
 function temaDe(s, guion) {
   const t = `${s.texto || ""} ${s.voz || ""}`;
+  const principal = temaPrincipal(guion);
+  if (principal && !(s.tipo === "cifra" || (DINERO.test(t) && s.tipo !== "golpe" && s.tipo !== "pregunta"))) return [principal[1], principal[2]];
   for (const [re, q, tags] of TEMAS) if (re.test(t)) return [q, tags];
-  // Gancho y escenas sin tema claro: el tema del reel entero
   const todo = guion.escenas.map((e) => `${e.texto || ""} ${e.voz || ""}`).join(" ");
   for (const [re, q, tags] of TEMAS) if (re.test(todo) && !/hacienda|papel/i.test(String(re))) return [q, tags];
   return GENERAL;
@@ -131,7 +140,8 @@ async function fondoVideo(s, guion, minimo, tmp, i) {
       const vids = [...validos.filter((h) => encaja(h, exigidas)), ...validos.filter((h) => !encaja(h, exigidas))].slice(0, 4);
       // Fotos verticales (Pixabay tiene muchas más fotos concretas que vídeos); se animan con zoom
       const rf = await fetch(`https://pixabay.com/api/?key=${clave}&q=${encodeURIComponent(q)}&image_type=photo&orientation=vertical&per_page=40&safesearch=true&min_height=1600`);
-      const fotos = rf.ok ? ((await rf.json()).hits || []).filter((h) => !usados.has("f" + h.id) && !usadosAntes.has("f" + h.id) && encaja(h, [""]))
+      const serie = (h) => `s${h.user_id}-${String(h.tags).split(",")[0].trim()}`;
+      const fotos = rf.ok ? ((await rf.json()).hits || []).filter((h) => !usados.has("f" + h.id) && !usadosAntes.has("f" + h.id) && !usados.has(serie(h)) && !usadosAntes.has(serie(h)) && encaja(h, [""]))
         .sort((a, b) => encaja(b, exigidas) - encaja(a, exigidas)).slice(0, 4) : [];
       const candidatos = [...vids.map((h) => ({ tipo: "video", h, mini: h.videos.tiny?.thumbnail || h.videos.small?.thumbnail })),
                           ...fotos.map((h) => ({ tipo: "foto", h, mini: h.webformatURL }))];
@@ -145,7 +155,7 @@ async function fondoVideo(s, guion, minimo, tmp, i) {
         destino = path.join(tmp, `f${i}.mp4`);
         fs.writeFileSync(destino, Buffer.from(await (await fetch(v.url)).arrayBuffer()));
       } else {
-        usados.add("f" + h.id);
+        usados.add("f" + h.id); usados.add(`s${h.user_id}-${String(h.tags).split(",")[0].trim()}`);
         destino = path.join(tmp, `f${i}.jpg`);
         fs.writeFileSync(destino, Buffer.from(await (await fetch(h.largeImageURL)).arrayBuffer()));
       }
@@ -337,11 +347,42 @@ await navegador.close();
 const lista = path.join(tmp, "lista.txt");
 fs.writeFileSync(lista, partes.map((p) => `file '${path.resolve(p.mp4)}'`).join("\n"));
 const total = partes.reduce((a, p) => a + p.d, 0);
-execFileSync("ffmpeg", ["-y", "-loglevel", "error", "-f", "concat", "-safe", "0", "-i", lista,
-  "-f", "lavfi", "-i", `color=c=0xFFC23D:s=1080x12:r=${FPS}`,
-  "-filter_complex", `[0:v]drawbox=x=0:y=0:w=iw:h=12:color=white@0.25:t=fill[b];[b][1:v]overlay=x='-W+W*t/${total.toFixed(2)}':y=0:shortest=1[v]`,
-  "-map", "[v]", "-map", "0:a", "-c:v", "libx264", "-preset", "medium", "-crf", "21", "-c:a", "aac", "-b:a", "128k",
+
+// Efectos (hechos con ffmpeg): «whoosh» en cada cambio de escena y golpe grave al aparecer el golpe del gancho
+const whoosh = path.join(tmp, "whoosh.wav"), golpe = path.join(tmp, "golpe.wav");
+execFileSync("ffmpeg", ["-y", "-loglevel", "error", "-f", "lavfi", "-i", "anoisesrc=d=0.5:c=pink:a=0.6",
+  "-af", "highpass=f=500,lowpass=f=7000,afade=t=in:d=0.22,afade=t=out:st=0.22:d=0.28,volume=0.55", "-ar", "44100", "-ac", "2", whoosh]);
+execFileSync("ffmpeg", ["-y", "-loglevel", "error", "-f", "lavfi", "-i", "sine=f=55:d=0.7", "-f", "lavfi", "-i", "anoisesrc=d=0.08:c=brown:a=0.9",
+  "-filter_complex", "[0:a]afade=t=out:st=0.05:d=0.65,volume=1.6[a];[1:a]lowpass=f=900,volume=0.9[b];[a][b]amix=inputs=2:normalize=0", "-ar", "44100", "-ac", "2", golpe]);
+const inicios = []; let acum = 0;
+for (const [k, p] of partes.entries()) { inicios.push([k, acum]); acum += p.d; }
+const efectos = [];
+for (const [k, t0] of inicios) {
+  if (k > 0) efectos.push([whoosh, Math.max(t0 - 0.2, 0)]);
+  if (guion.escenas[k].tipo === "golpe") efectos.push([golpe, t0]);
+}
+// Música de fondo: una pista al azar de docs/redes/musica/ (libre de derechos), baja cuando habla la voz
+const carpetaMusica = path.join(RAIZ, "docs", "redes", "musica");
+const pistas = fs.existsSync(carpetaMusica) ? fs.readdirSync(carpetaMusica).filter((f) => /\.(mp3|m4a|wav|ogg)$/i.test(f)) : [];
+const musica = pistas.length ? path.join(carpetaMusica, pistas[Math.floor(Math.random() * pistas.length)]) : null;
+
+const entradas = ["-f", "concat", "-safe", "0", "-i", lista, "-f", "lavfi", "-i", `color=c=0xFFC23D:s=1080x12:r=${FPS}`];
+if (musica) entradas.push("-stream_loop", "-1", "-i", musica);
+efectos.forEach(([f]) => entradas.push("-i", f));
+const primeraFx = musica ? 3 : 2;
+let fa = `[0:a]asplit=2[voz][vozsc];`;
+const mezcla = ["[voz]"];
+if (musica) {
+  fa += `[2:a]atrim=0:${total.toFixed(2)},volume=0.22,afade=t=out:st=${Math.max(total - 1.5, 0).toFixed(2)}:d=1.5[m];[m][vozsc]sidechaincompress=threshold=0.03:ratio=6:attack=15:release=350[mus];`;
+  mezcla.push("[mus]");
+} else fa += `[vozsc]anullsink;`;
+efectos.forEach(([, t0], k) => { const ms = Math.round(t0 * 1000); fa += `[${primeraFx + k}:a]adelay=${ms}|${ms}[fx${k}];`; mezcla.push(`[fx${k}]`); });
+fa += `${mezcla.join("")}amix=inputs=${mezcla.length}:normalize=0:duration=first,alimiter=limit=0.95[a]`;
+execFileSync("ffmpeg", ["-y", "-loglevel", "error", ...entradas,
+  "-filter_complex", `[0:v]drawbox=x=0:y=0:w=iw:h=12:color=white@0.25:t=fill[b];[b][1:v]overlay=x='-W+W*t/${total.toFixed(2)}':y=0:shortest=1[v];${fa}`,
+  "-map", "[v]", "-map", "[a]", "-t", total.toFixed(2), "-c:v", "libx264", "-preset", "medium", "-crf", "21", "-c:a", "aac", "-b:a", "160k",
   "-movflags", "+faststart", path.join(salida, "reel.mp4")]);
+console.error(`Audio: ${efectos.length} efectos${musica ? ` y música «${path.basename(musica)}»` : " (sin música: añade pistas en docs/redes/musica/)"}`);
 execFileSync("ffmpeg", ["-y", "-loglevel", "error", "-ss", "0.6", "-i", path.join(salida, "reel.mp4"), "-frames:v", "1", "-q:v", "3", path.join(salida, "portada.jpg")]);
 guardarUsados();
 fs.rmSync(tmp, { recursive: true, force: true });
